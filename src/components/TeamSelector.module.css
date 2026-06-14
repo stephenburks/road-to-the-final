@@ -95,6 +95,12 @@
   font-weight: 600;
 }
 
+.focused:not(.disabled) {
+  background: rgba(99, 102, 241, 0.12);
+  outline: 2px solid var(--purple);
+  outline-offset: -2px;
+}
+
 .disabled {
   opacity: 0.38;
   cursor: default;
