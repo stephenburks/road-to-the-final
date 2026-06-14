@@ -12,7 +12,7 @@ const NODE_ICONS = {
 	final: '★',
 }
 
-function getNodeStyle(i, currentIdx, stage, team) {
+function getNodeStyle(i, currentIdx, stage, team, isAct) {
 	const isDone = i < currentIdx
 	const isCur = stage === team.currentStage
 	const isElim = team.eliminated && i === currentIdx
@@ -44,6 +44,15 @@ function getNodeStyle(i, currentIdx, stage, team) {
 			icon: NODE_ICONS[stage],
 		}
 	}
+	if (isAct) {
+		return {
+			bg: 'var(--purple-lo)',
+			border: 'var(--purple)',
+			color: '#a5b4fc',
+			shadow: '0 0 10px rgba(99,102,241,0.4)',
+			icon: NODE_ICONS[stage],
+		}
+	}
 	return {
 		bg: 'rgba(255,255,255,0.03)',
 		border: 'rgba(255,255,255,0.1)',
@@ -53,7 +62,7 @@ function getNodeStyle(i, currentIdx, stage, team) {
 	}
 }
 
-function getCardStyle(i, currentIdx, stage, team) {
+function getCardStyle(i, currentIdx, stage, team, isAct) {
 	const isDone = i < currentIdx
 	const isCur = stage === team.currentStage
 
@@ -71,6 +80,14 @@ function getCardStyle(i, currentIdx, stage, team) {
 			border: 'rgba(255,255,255,0.05)',
 			titleColor: '#86efac',
 			detColor: '#86efac',
+		}
+	}
+	if (isAct) {
+		return {
+			bg: 'var(--purple-lo)',
+			border: 'var(--purple-b)',
+			titleColor: '#c7d2fe',
+			detColor: '#818cf8',
 		}
 	}
 	return {
@@ -162,8 +179,8 @@ export default function RoadBracket({ team, activeStage, onStageSelect }) {
 					{STAGE_ORDER.map((stage, i) => {
 						const isAct = stage === activeStage
 						const path = team.path?.[stage]
-						const node = getNodeStyle(i, currentIdx, stage, team)
-						const card = getCardStyle(i, currentIdx, stage, team)
+						const node = getNodeStyle(i, currentIdx, stage, team, isAct)
+						const card = getCardStyle(i, currentIdx, stage, team, isAct)
 
 						return (
 							<button
