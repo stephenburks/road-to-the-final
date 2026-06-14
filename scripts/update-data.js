@@ -676,14 +676,30 @@ async function main() {
     const advanceProbs  = calcProbs(t.id, t.group, rawStandings, polyProbs);
     const teamPath      = buildPath(t.id, t.group, rawStandings);
     const possibleOpps  = buildOpponents(t.id, t.group, rawStandings, polyProbs);
-    const _played       = groupResults.filter(r => r.result).length;
-    const eliminated    = false; // script updates this when knockout results come in
+
+    // Compute mathematical elimination from group standings
+    let eliminated = false;
+    if (rawStandings?.[t.group]) {
+      const gRows = rawStandings[t.group];
+      const teamRow = gRows.find(r => r.teamId === t.id);
+      if (teamRow) {
+        const remainingMatches = 3 - teamRow.played;
+        const maxPossible = teamRow.pts + 3 * remainingMatches;
+        const sorted = [...gRows].sort((a, b) => b.pts - a.pts);
+        const secondPlacePts = sorted[1]?.pts ?? 0;
+        eliminated = remainingMatches > 0 && maxPossible < secondPlacePts;
+      }
+    }
+
+    // currentStage stays 'group_stage' during group play; advances to r32+
+    // when tournament data reflects knockout phase
+    const stage = 'group_stage';
 
     return {
       id: t.id, name: t.name, flag: t.flag,
       group: t.group, confederation: t.confederation, fifaRank: t.fifaRank,
       eliminated,
-      currentStage: 'group_stage',
+      currentStage: stage,
       groupResults,
       advanceProbabilities: advanceProbs,
       path: teamPath,
