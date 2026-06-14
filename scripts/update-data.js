@@ -616,6 +616,65 @@ function buildOpponents(teamId, group, opponentDesc, standings) {
 	return { r32: [], r16: [] }
 }
 
+const STAGE_ORDER = ['group_stage', 'r32', 'r16', 'qf', 'sf', 'final'];
+
+function determineCurrentStage(teamId, group, rawStandings, matchIndex) {
+	const groupRows = rawStandings?.[group];
+	if (!groupRows?.length) return 'group_stage';
+
+	const teamRow = groupRows.find(r => r.teamId === teamId);
+	if (!teamRow) return 'group_stage';
+
+	const played = teamRow.played ?? 0;
+	if (played < 3) return 'group_stage';
+
+	const pos = teamRow.pos ?? 4;
+	if (pos > 2) return 'group_stage';
+
+	const groupFinished = groupRows.every(r => (r.played ?? 0) >= 3);
+	if (!groupFinished) return 'group_stage';
+
+	const knockoutStages = ['r32', 'r16', 'qf', 'sf', 'final'];
+	for (const stage of knockoutStages) {
+		const pathKey = `${group}-${pos}`;
+		const bp = BRACKET_PATHS[pathKey];
+		if (!bp?.[stage]) continue;
+
+		const matchNum = bp[stage].match;
+		const match = findMatchByNumber(matchNum, matchIndex);
+		if (!match) continue;
+
+		const isTeamHome = nameToId(match.homeTeam?.name, match.homeTeam?.tla) === teamId;
+		const isTeamAway = nameToId(match.awayTeam?.name, match.awayTeam?.tla) === teamId;
+
+		if (match.status === 'FINISHED') {
+			if (isTeamHome || isTeamAway) {
+				const myGoals = isTeamHome ? match.score.fullTime.home : match.score.fullTime.away;
+				const oppGoals = isTeamHome ? match.score.fullTime.away : match.score.fullTime.home;
+				if (myGoals < oppGoals) {
+					return { stage, eliminated: true, eliminatedIn: stage };
+				}
+			}
+			continue;
+		}
+
+		if (isTeamHome || isTeamAway) {
+			return { stage, eliminated: false };
+		}
+
+		return { stage, eliminated: false };
+	}
+
+	return { stage: 'final', eliminated: false };
+}
+
+function findMatchByNumber(matchNum, matchIndex) {
+	for (const [key, m] of matchIndex.entries()) {
+		if (m.matchNumber === matchNum) return m;
+	}
+	return null;
+}
+
 function buildGroupStandings(group, rawStandings) {
   if (rawStandings[group]) {
     return rawStandings[group].map(row => {
@@ -732,24 +791,14 @@ async function main() {
     groupsData[g] = { standings: standArr, winProbabilities: winProbs };
   }
 
-  // Build team data — full recalc for active teams, carry-forward for others
+  // Build team data — full recalc for active teams, smart carry-forward for others
   const teams = ALL_TEAMS.map(t => {
     const existingTeam = existing?.teams?.find(e => e.id === t.id);
+    const isActive = hasActive && activeIds.has(t.id);
 
-    if (!hasActive || (!activeIds.has(t.id) && existingTeam)) {
-      // Carry forward — just preserve what we have
-      return existingTeam;
-    }
-
-    // Full recalculation
-    const existingGroupResults = existingTeam?.groupResults || []
-    const groupResults  = buildGroupResults(t.id, t.group, matchIndex, existingGroupResults)
-    const advanceProbs  = calcProbs(t.id, t.group, rawStandings, polyProbs)
-    const teamPath      = buildPath(t.id, t.group, rawStandings);
-    const possibleOpps  = buildOpponents(t.id, t.group, teamPath.r32?.opponentDesc ?? '', rawStandings);
-
-    // Compute mathematical elimination from group standings
+    // Group elimination: compute for everyone whenever standings exist
     let eliminated = false;
+    let groupEliminated = false;
     if (rawStandings?.[t.group]) {
       const gRows = rawStandings[t.group];
       const teamRow = gRows.find(r => r.teamId === t.id);
@@ -758,13 +807,40 @@ async function main() {
         const maxPossible = teamRow.pts + 3 * remainingMatches;
         const sorted = [...gRows].sort((a, b) => b.pts - a.pts);
         const secondPlacePts = sorted[1]?.pts ?? 0;
-        eliminated = remainingMatches > 0 && maxPossible < secondPlacePts;
+        groupEliminated = remainingMatches > 0 && maxPossible < secondPlacePts;
+        eliminated = groupEliminated;
       }
     }
 
-    // currentStage stays 'group_stage' during group play; advances to r32+
-    // when tournament data reflects knockout phase
-    const stage = 'group_stage';
+    // Knockout stage detection — only when tournament has knockout data
+    const stageResult = determineCurrentStage(t.id, t.group, rawStandings, matchIndex);
+    const stage = stageResult?.stage ?? 'group_stage';
+    if (stageResult?.eliminated) {
+      eliminated = true;
+    }
+
+    if (!isActive && existingTeam) {
+      // Carry forward but always update computed fields if standings exist
+      if (Object.keys(rawStandings).length > 0) {
+        const teamPath = buildPath(t.id, t.group, rawStandings);
+        const possibleOpps = buildOpponents(t.id, t.group, teamPath.r32?.opponentDesc ?? '', rawStandings);
+        return {
+          ...existingTeam,
+          eliminated,
+          currentStage: stage,
+          path: teamPath,
+          possibleOpponents: possibleOpps,
+        };
+      }
+      return { ...existingTeam, eliminated, currentStage: stage };
+    }
+
+    // Full recalculation
+    const existingGroupResults = existingTeam?.groupResults || []
+    const groupResults  = buildGroupResults(t.id, t.group, matchIndex, existingGroupResults)
+    const advanceProbs  = calcProbs(t.id, t.group, rawStandings, polyProbs)
+    const teamPath      = buildPath(t.id, t.group, rawStandings);
+    const possibleOpps  = buildOpponents(t.id, t.group, teamPath.r32?.opponentDesc ?? '', rawStandings);
 
     return {
       id: t.id, name: t.name, flag: t.flag,
@@ -784,20 +860,36 @@ async function main() {
   const today = todayStr();
   const now   = new Date().toISOString();
 
+  // Determine overall tournament stage from team data
+  const tournamentStage = teams.some(t => t.currentStage === 'final')
+    ? 'final'
+    : teams.some(t => ['qf', 'sf', 'final'].includes(t.currentStage))
+      ? teams.find(t => ['qf', 'sf', 'final'].includes(t.currentStage))?.currentStage ?? 'group_stage'
+      : teams.some(t => t.currentStage === 'r16') ? 'r16'
+        : teams.some(t => t.currentStage === 'r32') ? 'r32'
+          : 'group_stage';
+
+  const stageStatuses = {};
+  for (const s of STAGE_ORDER) {
+    const idx = STAGE_ORDER.indexOf(s);
+    const tIdx = STAGE_ORDER.indexOf(tournamentStage);
+    stageStatuses[s] = idx < tIdx ? 'done' : idx === tIdx ? 'active' : 'upcoming';
+  }
+
   const output = {
     lastUpdated:  now,
     snapshotDate: today,
     isHistorical: false,
     tournament: {
       name:         'FIFA World Cup 2026',
-      currentStage: 'group_stage',
+      currentStage: tournamentStage,
       stages: {
-        group_stage: { status:'active',   label:'Group Stage', date:'Jun 12–27' },
-        r32:         { status:'upcoming', label:'Round of 32', date:'Jun 28–Jul 2' },
-        r16:         { status:'future',   label:'Round of 16', date:'Jul 4–7' },
-        qf:          { status:'future',   label:'Quarterfinal','date':'Jul 9–11' },
-        sf:          { status:'future',   label:'Semifinal',   date:'Jul 14–15' },
-        final:       { status:'future',   label:'The Final',   date:'Jul 19' },
+        group_stage: { status: stageStatuses.group_stage ?? 'active',   label:'Group Stage', date:'Jun 12–27' },
+        r32:         { status: stageStatuses.r32         ?? 'upcoming', label:'Round of 32', date:'Jun 28–Jul 2' },
+        r16:         { status: stageStatuses.r16         ?? 'future',   label:'Round of 16', date:'Jul 4–7' },
+        qf:          { status: stageStatuses.qf          ?? 'future',   label:'Quarterfinal',date:'Jul 9–11' },
+        sf:          { status: stageStatuses.sf          ?? 'future',   label:'Semifinal',   date:'Jul 14–15' },
+        final:       { status: stageStatuses.final       ?? 'future',   label:'The Final',   date:'Jul 19' },
       },
     },
     groups: groupsData,

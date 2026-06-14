@@ -316,10 +316,10 @@ export default function OpponentWatchlist({ team, activeStage, data }) {
 
 			{activeStage === 'r32' && (hasFlat || hasScenarios) && (
 				<div className={styles.legend} role="note" aria-label="Difficulty key">
-					<span><span className="emoji" aria-hidden="true">🟢</span> Favorable</span>
-					<span><span className="emoji" aria-hidden="true">🟡</span> Moderate</span>
-					<span><span className="emoji" aria-hidden="true">🟠</span> Tough</span>
-					<span><span className="emoji" aria-hidden="true">🔴</span> Danger</span>
+					<span><span className={styles.legendPip} style={{ background: '#22C55E' }} /> Favorable</span>
+					<span><span className={styles.legendPip} style={{ background: '#F59E0B' }} /> Moderate</span>
+					<span><span className={styles.legendPip} style={{ background: '#FB923C' }} /> Tough</span>
+					<span><span className={styles.legendPip} style={{ background: '#EF4444' }} /> Danger</span>
 				</div>
 			)}
 		</section>

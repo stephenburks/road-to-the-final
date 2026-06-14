@@ -268,6 +268,15 @@
   flex-wrap: wrap;
 }
 
+.legendPip {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  vertical-align: middle;
+  margin-right: 3px;
+}
+
 @media (max-width: 600px) {
   .matchupRow { grid-template-columns: 1fr 80px 36px; }
   .calloutGrid { grid-template-columns: 1fr 1fr; }
