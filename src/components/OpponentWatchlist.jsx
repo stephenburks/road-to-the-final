@@ -203,6 +203,7 @@ export default function OpponentWatchlist({ team, activeStage, data }) {
 	const hasFlat = flatList.length > 0
 	const isLateStage = ['qf', 'sf', 'final'].includes(activeStage)
 	const r16WithPct = activeStage === 'r16' && flatList.some(o => o.pct != null)
+	const r16Feeder = activeStage === 'r16' ? getFeederGroup(team, data) : null
 	const maxPct = r16WithPct ? Math.max(...flatList.map(o => o.pct ?? 0), 1) : 1
 
 	return (
@@ -246,29 +247,24 @@ export default function OpponentWatchlist({ team, activeStage, data }) {
 			)}
 
 			{r16WithPct && (
-				<>
-					<MatchupMatrix flatList={flatList} team={team} maxPct={maxPct} data={data} />
-					{(() => {
-						const feeder = getFeederGroup(team, data)
-						if (!feeder) return null
-						return (
-							<div style={{ marginTop: 24 }}>
-								<div
-									style={{
-										fontFamily: 'var(--font-mono)',
-										fontSize: 9,
-										color: 'var(--text-dim)',
-										marginBottom: 8,
-										lineHeight: 1.5,
-									}}
-								>
-									Potential R16 opponent&rsquo;s group — if {team.name} wins Group {team.group}, they face the winner of Group {feeder.key}
-								</div>
-								<GroupTable groupKey={feeder.key} groupData={feeder.group} highlightTeamId={null} />
-							</div>
-						)
-					})()}
-				</>
+				<MatchupMatrix flatList={flatList} team={team} maxPct={maxPct} data={data} />
+			)}
+
+			{r16Feeder && (
+				<div style={{ marginTop: r16WithPct ? 24 : 0 }}>
+					<div
+						style={{
+							fontFamily: 'var(--font-mono)',
+							fontSize: 9,
+							color: 'var(--text-dim)',
+							marginBottom: 8,
+							lineHeight: 1.5,
+						}}
+					>
+						Potential R16 opponent&rsquo;s group — if {team.name} wins Group {team.group}, they face the winner of Group {r16Feeder.key}
+					</div>
+					<GroupTable groupKey={r16Feeder.key} groupData={r16Feeder.group} highlightTeamId={null} />
+				</div>
 			)}
 
 			{activeStage === 'r32' && (hasFlat || hasScenarios) && (
