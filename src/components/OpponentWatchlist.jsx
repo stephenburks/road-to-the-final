@@ -203,7 +203,8 @@ export default function OpponentWatchlist({ team, activeStage, data }) {
 	const hasFlat = flatList.length > 0
 	const isLateStage = ['qf', 'sf', 'final'].includes(activeStage)
 	const r16WithPct = activeStage === 'r16' && flatList.some(o => o.pct != null)
-	const r16Feeder = activeStage === 'r16' ? getFeederGroup(team, data) : null
+	const r32Feeder = activeStage === 'r32' ? getFeederGroup(team, 'r32', data) : null
+	const r16Feeder = activeStage === 'r16' ? getFeederGroup(team, 'r16', data) : null
 	const maxPct = r16WithPct ? Math.max(...flatList.map(o => o.pct ?? 0), 1) : 1
 
 	return (
@@ -243,6 +244,23 @@ export default function OpponentWatchlist({ team, activeStage, data }) {
 			{!isLateStage && !hasScenarios && hasFlat && !r16WithPct && (
 				<div className={styles.grid}>
 					{flatList.map((opp, i) => <OpponentCard key={i} opp={opp} />)}
+				</div>
+			)}
+
+			{r32Feeder && (
+				<div style={{ marginTop: 20 }}>
+					<div
+						style={{
+							fontFamily: 'var(--font-mono)',
+							fontSize: 9,
+							color: 'var(--text-dim)',
+							marginBottom: 8,
+							lineHeight: 1.5,
+						}}
+					>
+						Potential opponent&rsquo;s group — based on current standings: Group {r32Feeder.key}
+					</div>
+					<GroupTable groupKey={r32Feeder.key} groupData={r32Feeder.group} highlightTeamId={null} />
 				</div>
 			)}
 

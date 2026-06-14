@@ -559,47 +559,55 @@ function diffRating(rank) {
 function diffLabel(r) { return ['','Favorable','Favorable','Moderate','Tough','Danger'][r]||'Moderate'; }
 function diffColor(r) { return ['','#22C55E','#22C55E','#F59E0B','#FB923C','#EF4444'][r]||'#F59E0B'; }
 
-function buildOpponents(teamId, group, standings, _polyProbs) {
-  const rows = standings[group] || [];
-  const row  = rows.find(r => r.teamId === teamId);
-  const pos  = row?.pos ?? 1;
+function buildOpponents(teamId, group, opponentDesc, standings) {
+	const desc = opponentDesc ?? ''
 
-  // R32 pool varies by group finish
-  const poolMap = {
-    1: { A:['C','E','F','H','I'], B:['A','E','H','I','J'], C:['E','F','H','I','J'],
-         D:['B','E','F','I','J'], E:['B','E','F','I','J'], F:['D','I','J','L','C'],
-         G:['A','E','H','I','J'], H:['E','H','I','J','K'], I:['E','F','G','I','J'],
-         J:['C','E','F','H','I'], K:['E','H','I','J','K'], L:['K','L'] },
-    2: { A:['E','H','I','J','K'], B:['A','E','H','I','J'], C:['D'],
-         D:['C'], E:['J'], F:['K'], G:['D'], H:['L'], I:['J'],
-         J:['H'], K:['L'], L:['K'] },
-  };
+	const directMatch = desc.match(/Winner\s+Group\s+([A-L])|Runner-up\s+Group\s+([A-L])/i)
+	if (directMatch) {
+		const oppGroup = (directMatch[1] ?? directMatch[2]).toUpperCase()
+		const isWinner = !!directMatch[1]
+		const gRows = standings[oppGroup] || []
+		const target = isWinner ? gRows[0] : gRows[1]
+		const info = ALL_TEAMS.find(t => t.id === target?.teamId)
+		const rating = diffRating(info?.fifaRank)
+		const r32Opps = [{
+			group:       oppGroup,
+			likelyTeam:  info?.name || 'TBD',
+			flag:        info?.flag || '🏳️',
+			fifaRank:    info?.fifaRank || 50,
+			difficulty:  rating,
+			label:       diffLabel(rating),
+			color:       diffColor(rating),
+			note:        isWinner ? `Winner of Group ${oppGroup}` : `Runner-up of Group ${oppGroup}`,
+			pct:         null,
+		}]
+		return { r32: r32Opps, r16: [] }
+	}
 
-  const pool = (poolMap[Math.min(pos,2)] || poolMap[1])[group] || [];
+	const poolMatch = desc.match(/Best\s+3rd\s+from\s+(.+)/i)
+	if (poolMatch) {
+		const groups = poolMatch[1].split('/').map(g => g.trim())
+		const r32Opps = groups.map(g => {
+			const gRows   = standings[g] || []
+			const third   = gRows[2]
+			const info    = ALL_TEAMS.find(t => t.id === third?.teamId)
+			const rating  = diffRating(info?.fifaRank)
+			return {
+				group:       g,
+				likelyTeam:  info?.name || 'TBD',
+				flag:        info?.flag || '🏳️',
+				fifaRank:    info?.fifaRank || 50,
+				difficulty:  rating,
+				label:       diffLabel(rating),
+				color:       diffColor(rating),
+				note:        `3rd-place team from Group ${g}`,
+				pct:         null,
+			}
+		})
+		return { r32: r32Opps, r16: [] }
+	}
 
-  const r32Opps = pool.map(g => {
-    const gRows   = (standings[g] || []);
-    const third   = gRows[2]; // index 2 = 3rd place
-    const info    = ALL_TEAMS.find(t => t.id === third?.teamId);
-    const rating  = diffRating(info?.fifaRank);
-    return {
-      group:       g,
-      likelyTeam:  info?.name || 'TBD',
-      flag:        info?.flag || '🏳️',
-      fifaRank:    info?.fifaRank || 50,
-      difficulty:  rating,
-      label:       diffLabel(rating),
-      color:       diffColor(rating),
-      note:        `3rd-place team from Group ${g}`,
-      pct:         null,
-    };
-  });
-
-  // R16 opponents: from the bracket path
-  // Build based on group position (simplified — full bracket cross-ref in future)
-  const r16Opps = [];
-
-  return { r32: r32Opps, r16: r16Opps };
+	return { r32: [], r16: [] }
 }
 
 function buildGroupStandings(group, rawStandings) {
@@ -731,7 +739,7 @@ async function main() {
     const groupResults  = buildGroupResults(t.id, t.group, matchIndex);
     const advanceProbs  = calcProbs(t.id, t.group, rawStandings, polyProbs);
     const teamPath      = buildPath(t.id, t.group, rawStandings);
-    const possibleOpps  = buildOpponents(t.id, t.group, rawStandings, polyProbs);
+    const possibleOpps  = buildOpponents(t.id, t.group, teamPath.r32?.opponentDesc ?? '', rawStandings);
 
     // Compute mathematical elimination from group standings
     let eliminated = false;

@@ -153,7 +153,7 @@ function MatchCard({ match, teamFlag }) {
 
 export default function GroupStage({ team, data }) {
 	const myGroup = data?.groups?.[team.group]
-	const feeder = getFeederGroup(team, data)
+	const feeder = getFeederGroup(team, 'r16', data)
 
 	return (
 		<section className="wrap section" id="groups" aria-labelledby="groups-heading">
