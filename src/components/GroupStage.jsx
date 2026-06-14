@@ -152,12 +152,12 @@ function MatchCard({ match, teamFlag }) {
 }
 
 export default function GroupStage({ team, data }) {
-	const myGroup = data.groups?.[team.group]
+	const myGroup = data?.groups?.[team.group]
 	const r16Opps = team.possibleOpponents?.r16 ?? []
 	let feederGroup = null
 	let feederKey = null
 
-	if (r16Opps.length && data.groups) {
+	if (r16Opps.length && data?.groups) {
 		const r16Names = new Set(r16Opps.map(o => o.opponent).filter(Boolean))
 		for (const [key, g] of Object.entries(data.groups)) {
 			if (key === team.group) continue

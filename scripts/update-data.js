@@ -399,8 +399,8 @@ async function fetchPolymarketAll() {
 
 // ─── Build group results for a team from match data ──────────────────────────
 const GROUP_SCHEDULE = {
-  A:[{md:1,h:'mexico',     a:'southafrica',d:'2026-06-11',v:'Estadio Azteca, Mexico City'},
-     {md:1,h:'southkorea', a:'czechia',    d:'2026-06-11',v:'Estadio Akron, Zapopan'},
+   A:[{md:1,h:'mexico',     a:'southafrica',d:'2026-06-12',v:'Estadio Azteca, Mexico City'},
+      {md:1,h:'southkorea', a:'czechia',    d:'2026-06-12',v:'Estadio Akron, Zapopan'},
      {md:2,h:'czechia',    a:'southafrica',d:'2026-06-18',v:'Mercedes-Benz Stadium, Atlanta'},
      {md:2,h:'mexico',     a:'southkorea', d:'2026-06-18',v:'Estadio Akron, Zapopan'},
      {md:3,h:'czechia',    a:'mexico',     d:'2026-06-24',v:'Estadio Akron, Zapopan'},
@@ -809,12 +809,13 @@ async function main() {
   }
 
   // Build human-readable labels
+  const TOURNAMENT_START = '2026-06-12';
   mf.available.forEach((d, i) => {
     const isLatest = i === mf.available.length - 1;
-    const isFirst  = i === 0;
+    const isStart  = d === TOURNAMENT_START;
     mf.labels[d] = isLatest
       ? `${fmtLabel(d)} (Latest)`
-      : isFirst
+      : isStart
         ? `${fmtLabel(d)} (Tournament start)`
         : fmtLabel(d);
   });
