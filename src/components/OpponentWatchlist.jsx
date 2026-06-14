@@ -37,7 +37,7 @@ function OpponentCard({ opp, compact = false }) {
 				<div className={styles.topBar} style={{ background: opp.color }} aria-hidden="true" />
 			)}
 			<div className={styles.cardHeader}>
-				<span className={styles.flag} aria-hidden="true">{opp.flag ?? '🏳️'}</span>
+				<span className={`${styles.flag} emoji`} aria-hidden="true">{opp.flag ?? '🏳️'}</span>
 				{opp.group && <span className={styles.groupTag}>Grp {opp.group}</span>}
 			</div>
 			<div className={styles.teamName}>{teamName}</div>
@@ -80,7 +80,7 @@ function MatchupRow({ opp, team, maxPct, data }) {
 	return (
 		<div className={styles.matchupRow}>
 			<div className={styles.matchupTeams}>
-				<span aria-hidden="true">{opp.flag ?? '🏳️'}</span>
+				<span className="emoji" aria-hidden="true">{opp.flag ?? '🏳️'}</span>
 				<span className={styles.matchupName}>
 					{team.flag} {team.name} vs {name}
 					{tag && (
@@ -134,7 +134,7 @@ function MatchupMatrix({ flatList, team, maxPct, data }) {
 							border: `1px solid ${i === 0 ? 'rgba(99,102,241,0.3)' : 'rgba(255,255,255,0.07)'}`,
 						}}
 					>
-						<span style={{ fontSize: 22 }}>{opp.flag ?? '🏳️'}</span>
+						<span className="emoji" style={{ fontSize: 22 }}>{opp.flag ?? '🏳️'}</span>
 						<div>
 							<div className={styles.calloutVs}>{team.flag} vs {opp.opponent ?? opp.likelyTeam}</div>
 							<div className={styles.calloutPct} style={{ color: i === 0 ? '#a5b4fc' : 'var(--text-dim)' }}>
@@ -152,7 +152,7 @@ function MatchupMatrix({ flatList, team, maxPct, data }) {
 function FutureStagePlaceholder({ stage, path }) {
 	return (
 		<div className={styles.futurePlaceholder}>
-			<div className={styles.futureIcon} aria-hidden="true">⏳</div>
+			<div className={`${styles.futureIcon} emoji`} aria-hidden="true">⏳</div>
 			<div className={styles.futureText}>
 				<strong>{STAGE_LABELS[stage]} opponents update live</strong>
 				<p>
@@ -181,7 +181,7 @@ function VenueBanner({ stagePath, activeStage }) {
 			</div>
 			{stagePath.conditional && stagePath.conditionNote && (
 				<div className={styles.bannerConditionalNote}>
-					<span className={styles.conditionalIcon} aria-hidden="true">⚠️</span>
+					<span className={`${styles.conditionalIcon} emoji`} aria-hidden="true">⚠️</span>
 					{stagePath.conditionNote}
 				</div>
 			)}
@@ -315,10 +315,10 @@ export default function OpponentWatchlist({ team, activeStage, data }) {
 
 			{activeStage === 'r32' && (hasFlat || hasScenarios) && (
 				<div className={styles.legend} role="note" aria-label="Difficulty key">
-					<span>🟢 Favorable</span>
-					<span>🟡 Moderate</span>
-					<span>🟠 Tough</span>
-					<span>🔴 Danger</span>
+					<span><span className="emoji" aria-hidden="true">🟢</span> Favorable</span>
+					<span><span className="emoji" aria-hidden="true">🟡</span> Moderate</span>
+					<span><span className="emoji" aria-hidden="true">🟠</span> Tough</span>
+					<span><span className="emoji" aria-hidden="true">🔴</span> Danger</span>
 				</div>
 			)}
 		</section>

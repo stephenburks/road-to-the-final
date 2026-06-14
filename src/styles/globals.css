@@ -27,6 +27,7 @@
   --font-display: 'Space Grotesk', system-ui, sans-serif;
   --font-body:    'Inter', system-ui, sans-serif;
   --font-mono:    'JetBrains Mono', 'Fira Code', ui-monospace, monospace;
+  --font-emoji:   'Apple Color Emoji', 'Segoe UI Emoji', 'Noto Color Emoji', sans-serif;
 
   --radius: 10px;
   --max-width: 1100px;
@@ -118,6 +119,11 @@ img, svg {
   clip: rect(0, 0, 0, 0);
   white-space: nowrap;
   border-width: 0;
+}
+
+/* ─── Emoji rendering fallback ────────────────────────────────────────────── */
+.emoji {
+  font-family: var(--font-emoji);
 }
 
 /* ─── Scrollbar styling ──────────────────────────────────────────────────── */

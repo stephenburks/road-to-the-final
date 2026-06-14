@@ -13,7 +13,7 @@ export default function Disclaimer() {
     >
       <div className="wrap">
         <div className={styles.inner}>
-          <div className={styles.icon} aria-hidden="true">ℹ️</div>
+          <div className={`${styles.icon} emoji`} aria-hidden="true">ℹ️</div>
           <div className={styles.content}>
             <p className={styles.heading}>About the probabilities</p>
             <p className={styles.body}>

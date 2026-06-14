@@ -19,7 +19,7 @@ import EliminatedView   from './components/ui/EliminatedView'
 function HistoricalBanner({ date, label, onGoLive }) {
   return (
     <div role="alert" aria-live="polite" style={{ background:'rgba(245,158,11,0.07)', borderBottom:'1px solid rgba(245,158,11,0.2)', padding:'9px 20px', display:'flex', alignItems:'center', gap:10, fontSize:12, color:'#fcd34d', fontFamily:'var(--font-mono)' }}>
-      📅 Viewing snapshot from <strong>{label ?? date}</strong> — probabilities reflect that day
+      <span className="emoji" aria-hidden="true">📅</span> Viewing snapshot from <strong>{label ?? date}</strong> — probabilities reflect that day
       <button onClick={onGoLive} aria-label="Return to live data" style={{ marginLeft:'auto', padding:'3px 10px', borderRadius:5, border:'1px solid rgba(245,158,11,0.3)', color:'#fcd34d', fontSize:10, fontFamily:'var(--font-mono)', cursor:'pointer', background:'transparent' }}>
         ← Back to Live
       </button>
@@ -30,7 +30,7 @@ function HistoricalBanner({ date, label, onGoLive }) {
 function ErrorScreen({ message }) {
   return (
     <div role="alert" style={{ minHeight:'100vh', display:'flex', flexDirection:'column', alignItems:'center', justifyContent:'center', gap:12, fontFamily:'var(--font-mono)', color:'var(--red)', fontSize:12, textAlign:'center', padding:24 }}>
-      <span style={{ fontSize:28 }}>⚠️</span>
+      <span className="emoji" style={{ fontSize:28 }}>⚠️</span>
       <p>{message}</p>
       <p style={{ color:'var(--text-dim)', marginTop:8 }}>
         Run <code style={{ background:'rgba(255,255,255,0.06)', padding:'1px 6px', borderRadius:3 }}>npm run dev</code> to serve the app locally.

@@ -59,7 +59,7 @@ export function GroupTable({ groupKey, groupData, highlightTeamId }) {
 								<td style={{ color: 'var(--text-dim)', width: 22 }}>{row.pos}</td>
 								<td>
 									<div className={styles.teamCell}>
-										<span aria-hidden="true" style={{ fontSize: 15 }}>{row.flag ?? '🏳️'}</span>
+										<span aria-hidden="true" className="emoji" style={{ fontSize: 15 }}>{row.flag ?? '🏳️'}</span>
 										<span style={{ fontWeight: isSelected ? 700 : 500, color: isSelected ? '#c7d2fe' : '#d1d5db' }}>
 											{row.team}
 										</span>
@@ -133,7 +133,7 @@ function MatchCard({ match, teamFlag }) {
 			<div className={styles.matchTeams}>
 				<span aria-hidden="true" style={{ fontSize: 18 }}>{teamFlag}</span>
 				<span style={{ fontSize: 12, color: 'var(--text-lo)' }}>vs</span>
-				<span aria-hidden="true" style={{ fontSize: 18 }}>{match.opponentFlag ?? '🏳️'}</span>
+				<span aria-hidden="true" className="emoji" style={{ fontSize: 18 }}>{match.opponentFlag ?? '🏳️'}</span>
 				<span style={{ fontSize: 12, color: '#d1d5db', fontWeight: 600 }}>{match.opponent}</span>
 				{match.score && (
 					<span className={styles.score} aria-label={`Score: ${match.score}`}>
@@ -144,7 +144,7 @@ function MatchCard({ match, teamFlag }) {
 
 			{match.scorers?.length > 0 && (
 				<ul className={styles.scorers} aria-label="Goal scorers">
-					{match.scorers.map((s, j) => <li key={j}>⚽ {s}</li>)}
+					{match.scorers.map((s, j) => <li key={j}><span className="emoji" aria-hidden="true">⚽</span> {s}</li>)}
 				</ul>
 			)}
 

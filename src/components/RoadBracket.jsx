@@ -107,7 +107,7 @@ function BracketNode({ node }) {
 
 	return (
 		<div
-			className={styles.node}
+			className={`${styles.node} emoji`}
 			style={{
 				background: node.bg,
 				border: `2px solid ${node.border}`,
@@ -142,7 +142,7 @@ function BracketCard({ path, card, isAct, stage }) {
 			</div>
 			{path?.conditional && (
 				<div
-					className={styles.cardConditional}
+					className={styles.cardConditional + ' emoji'}
 					title={path.conditionNote ?? 'Venue depends on finishing position'}
 					aria-label={path.conditionNote ?? 'Conditional venue'}
 				>

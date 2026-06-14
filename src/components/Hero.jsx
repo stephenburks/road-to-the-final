@@ -55,7 +55,7 @@ export default function Hero({ team, activeStage, isHistorical }) {
 					<p className={styles.subtext}>{subtext}</p>
 					{conditionalNote && (
 						<p className={styles.conditionalNote} role="note">
-							<span aria-hidden="true">⚠️ </span>{conditionalNote}
+							<span aria-hidden="true" className="emoji">⚠️ </span>{conditionalNote}
 						</p>
 					)}
 

@@ -47,9 +47,9 @@ export default function StageTabs({ team, selectedStage, onSelect }) {
 							onKeyDown={e => handleKeyDown(e, stage)}
 							tabIndex={stage === selectedStage ? 0 : -1}
 						>
-							{(team.eliminated && i === currentIdx) && <span className={styles.icon} aria-hidden="true">✕</span>}
-							{(i < currentIdx && !(team.eliminated && i === currentIdx)) && <span className={styles.icon} aria-hidden="true">✓</span>}
-							{(stage === team.currentStage && !team.eliminated) && <span className={styles.pulse} aria-hidden="true">●</span>}
+							{(team.eliminated && i === currentIdx) && <span className={`${styles.icon} emoji`} aria-hidden="true">✕</span>}
+							{(i < currentIdx && !(team.eliminated && i === currentIdx)) && <span className={`${styles.icon} emoji`} aria-hidden="true">✓</span>}
+							{(stage === team.currentStage && !team.eliminated) && <span className={`${styles.pulse} emoji`} aria-hidden="true">●</span>}
 
 							<span className={styles.labelFull}>{STAGE_LABELS[stage]}</span>
 							<span className={styles.labelShort} aria-hidden="true">{STAGE_LABELS_SHORT[stage]}</span>
@@ -60,7 +60,7 @@ export default function StageTabs({ team, selectedStage, onSelect }) {
 								</span>
 							)}
 							{path?.conditional && stage !== team.currentStage && i >= currentIdx && (
-								<span className={styles.conditional} aria-label="Conditional on finishing position" title={path.conditionNote ?? 'Conditional venue'}>
+								<span className={`${styles.conditional} emoji`} aria-label="Conditional on finishing position" title={path.conditionNote ?? 'Conditional venue'}>
 									⚠
 								</span>
 							)}

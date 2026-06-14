@@ -22,7 +22,7 @@ function MatchRow({ match, teamFlag, isConditional = false }) {
       className={`${styles.matchRow} ${match.result ? styles.played : styles.upcoming} ${isConditional ? styles.conditional : ''}`}
       aria-label={`${match.result ? status.label : 'Upcoming'}: vs ${match.opponent ?? match.opponentDesc ?? 'TBD'}`}
     >
-      <div className={styles.matchStatus} aria-hidden="true">
+      <div className={`${styles.matchStatus} emoji`} aria-hidden="true">
         <span style={{ color: status.color }}>{status.icon}</span>
       </div>
 
@@ -33,7 +33,7 @@ function MatchRow({ match, teamFlag, isConditional = false }) {
           <>
             <span aria-hidden="true">{teamFlag}</span>
             <span className={styles.vs}>vs</span>
-            <span aria-hidden="true">{match.opponentFlag ?? '🏳️'}</span>
+            <span aria-hidden="true" className="emoji">{match.opponentFlag ?? '🏳️'}</span>
             <span className={styles.opponentName}>{match.opponent}</span>
           </>
         ) : (
@@ -140,7 +140,7 @@ export default function ScheduledMatches({ team }) {
       </div>
 
       <p className={styles.note} role="note">
-        ❓ Future matches are conditional on advancing from each stage.
+        <span className="emoji" aria-hidden="true">❓</span> Future matches are conditional on advancing from each stage.
         Venues and dates reflect the most likely path based on current group standings.
       </p>
     </section>
