@@ -53,6 +53,7 @@ export function useData(selectedDate) {
 
 	useEffect(() => {
 		if (selectedDate === 'live' || !selectedDate) {
+			// eslint-disable-next-line react-hooks/set-state-in-effect
 			setSnapData(null)
 			return
 		}

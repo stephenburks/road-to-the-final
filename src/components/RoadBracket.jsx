@@ -98,7 +98,7 @@ function getCardStyle(i, currentIdx, stage, team, isAct) {
 	}
 }
 
-function BracketNode({ node, isAct }) {
+function BracketNode({ node }) {
 	const fontSize = node.icon === '✕' || node.icon === '✓'
 		? '13px'
 		: node.color === '#052e16'

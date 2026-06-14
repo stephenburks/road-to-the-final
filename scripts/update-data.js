@@ -256,7 +256,7 @@ async function tryFetch(url, headers = {}) {
 // ─── Load existing live data (for carry-forward) ──────────────────────────────
 function loadExisting() {
   if (fs.existsSync(LIVE_PATH)) {
-    try { return JSON.parse(fs.readFileSync(LIVE_PATH, 'utf8')); } catch {}
+    try { return JSON.parse(fs.readFileSync(LIVE_PATH, 'utf8')); } catch { /* parsing failed */ }
   }
   return null;
 }
@@ -510,7 +510,7 @@ function diffRating(rank) {
 function diffLabel(r) { return ['','Favorable','Favorable','Moderate','Tough','Danger'][r]||'Moderate'; }
 function diffColor(r) { return ['','#22C55E','#22C55E','#F59E0B','#FB923C','#EF4444'][r]||'#F59E0B'; }
 
-function buildOpponents(teamId, group, standings, polyProbs) {
+function buildOpponents(teamId, group, standings, _polyProbs) {
   const rows = standings[group] || [];
   const row  = rows.find(r => r.teamId === teamId);
   const pos  = row?.pos ?? 1;
@@ -621,7 +621,7 @@ async function main() {
     const advanceProbs  = calcProbs(t.id, t.group, rawStandings, polyProbs);
     const teamPath      = buildPath(t.id, t.group, rawStandings);
     const possibleOpps  = buildOpponents(t.id, t.group, rawStandings, polyProbs);
-    const played        = groupResults.filter(r => r.result).length;
+    const _played       = groupResults.filter(r => r.result).length;
     const eliminated    = false; // script updates this when knockout results come in
 
     return {
