@@ -1,0 +1,128 @@
+import { useState, useEffect, useCallback, useMemo } from 'react'
+import { DEFAULT_TEAM } from './constants'
+import { readURLParams, writeURLParams, resolveActiveStage, lsGet, lsSet } from './utils'
+import { useData } from './hooks/useData'
+import Header           from './components/Header'
+import Nav              from './components/Nav'
+import StageTabs        from './components/StageTabs'
+import Hero             from './components/Hero'
+import RoadBracket      from './components/RoadBracket'
+import GroupStage       from './components/GroupStage'
+import OpponentWatchlist from './components/OpponentWatchlist'
+import ScheduledMatches from './components/ScheduledMatches'
+import Disclaimer       from './components/Disclaimer'
+import Footer           from './components/Footer'
+import Loading          from './components/ui/Loading'
+import EliminatedView   from './components/ui/EliminatedView'
+
+function HistoricalBanner({ date, label, onGoLive }) {
+  return (
+    <div role="alert" aria-live="polite" style={{ background:'rgba(245,158,11,0.07)', borderBottom:'1px solid rgba(245,158,11,0.2)', padding:'9px 20px', display:'flex', alignItems:'center', gap:10, fontSize:12, color:'#fcd34d', fontFamily:'var(--font-mono)' }}>
+      📅 Viewing snapshot from <strong>{label ?? date}</strong> — probabilities reflect that day
+      <button onClick={onGoLive} aria-label="Return to live data" style={{ marginLeft:'auto', padding:'3px 10px', borderRadius:5, border:'1px solid rgba(245,158,11,0.3)', color:'#fcd34d', fontSize:10, fontFamily:'var(--font-mono)', cursor:'pointer', background:'transparent' }}>
+        ← Back to Live
+      </button>
+    </div>
+  )
+}
+
+function ErrorScreen({ message }) {
+  return (
+    <div role="alert" style={{ minHeight:'100vh', display:'flex', flexDirection:'column', alignItems:'center', justifyContent:'center', gap:12, fontFamily:'var(--font-mono)', color:'var(--red)', fontSize:12, textAlign:'center', padding:24 }}>
+      <span style={{ fontSize:28 }}>⚠️</span>
+      <p>{message}</p>
+      <p style={{ color:'var(--text-dim)', marginTop:8 }}>
+        Run <code style={{ background:'rgba(255,255,255,0.06)', padding:'1px 6px', borderRadius:3 }}>npm run dev</code> to serve the app locally.
+      </p>
+    </div>
+  )
+}
+
+export default function App() {
+  const urlParams  = useMemo(() => readURLParams(), [])
+  const storedTeam = useMemo(() => lsGet('wc26_team'), [])
+
+  const [selectedTeamId, setSelectedTeamId] = useState(urlParams.team  ?? storedTeam ?? DEFAULT_TEAM)
+  const [selectedDate,   setSelectedDate]   = useState(urlParams.date  ?? 'live')
+  const [selectedStage,  setSelectedStage]  = useState(urlParams.stage ?? 'auto')
+
+  const { liveData, manifest, snapData, loadingSnap, error } = useData(selectedDate)
+
+  const data         = selectedDate === 'live' ? liveData : snapData
+  const isHistorical = selectedDate !== 'live'
+
+  const team = useMemo(
+    () => data?.teams?.find(t => t.id === selectedTeamId) ?? liveData?.teams?.find(t => t.id === DEFAULT_TEAM),
+    [data, liveData, selectedTeamId]
+  )
+
+  const activeStage = useMemo(() => resolveActiveStage(selectedStage, team), [selectedStage, team])
+
+  // Update page title
+  useEffect(() => {
+    if (!team) return
+    document.title = `${team.flag} ${team.name} • Road to the Final • World Cup 2026`
+  }, [team])
+
+  // Sync URL + localStorage
+  useEffect(() => {
+    if (!liveData) return
+    writeURLParams(selectedTeamId, selectedDate, selectedStage)
+    lsSet('wc26_team', selectedTeamId)
+  }, [selectedTeamId, selectedDate, selectedStage, liveData])
+
+  const handleTeamChange  = useCallback((id)    => { setSelectedTeamId(id); setSelectedStage('auto') }, [])
+  const handleDateChange  = useCallback((date)  => setSelectedDate(date), [])
+  const handleStageSelect = useCallback((stage) => setSelectedStage(stage), [])
+
+  if (error)     return <ErrorScreen message={error} />
+  if (!liveData) return <Loading message="Loading match data…" />
+  if (!team)     return <Loading message="Finding team data…" />
+
+  const snapLabel  = isHistorical ? (manifest?.labels?.[selectedDate] ?? selectedDate) : null
+  const showGroups = activeStage === 'group_stage'
+  const showElim   = team.eliminated
+
+  return (
+    <>
+      <Header
+        data={liveData}
+        selectedTeamId={selectedTeamId}
+        onTeamChange={handleTeamChange}
+        selectedDate={selectedDate}
+        onDateChange={handleDateChange}
+        manifest={manifest}
+      />
+      <Nav isHistorical={isHistorical} />
+
+      {isHistorical && snapLabel && (
+        <HistoricalBanner date={selectedDate} label={snapLabel} onGoLive={() => handleDateChange('live')} />
+      )}
+
+      {loadingSnap ? <Loading message="Loading historical snapshot…" /> : (
+        <main id="main-content">
+          <div className="wrap" style={{ paddingTop:22, paddingBottom:0 }}>
+            <StageTabs team={team} selectedStage={activeStage} onSelect={handleStageSelect} />
+          </div>
+
+          <Hero team={team} activeStage={activeStage} isHistorical={isHistorical} />
+          <RoadBracket team={team} activeStage={activeStage} onStageSelect={handleStageSelect} />
+
+          {showGroups && !showElim && <GroupStage team={team} data={data} />}
+
+          {showElim ? (
+            <EliminatedView team={team} />
+          ) : (
+            <>
+              <OpponentWatchlist team={team} activeStage={activeStage} />
+              <ScheduledMatches team={team} />
+            </>
+          )}
+        </main>
+      )}
+
+      <Disclaimer />
+      <Footer />
+    </>
+  )
+}

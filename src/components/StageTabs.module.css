@@ -1,0 +1,89 @@
+.outer {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 2px;
+  /* Hide scrollbar — momentum scroll still works */
+  scrollbar-width: none;
+}
+.outer::-webkit-scrollbar { display: none; }
+
+.inner {
+  display: flex;
+  gap: 4px;
+  min-width: max-content;
+}
+
+/* ── Base tab ── */
+.tab {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 6px 12px;
+  border-radius: 7px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.03em;
+  border: 1px solid transparent;
+  white-space: nowrap;
+  transition: background 0.15s, border-color 0.15s, color 0.15s;
+}
+
+/* ── State variants ── */
+.done {
+  color: var(--text-dim);
+  border-color: rgba(255, 255, 255, 0.06);
+  background: rgba(255, 255, 255, 0.02);
+}
+.done:hover {
+  border-color: rgba(255, 255, 255, 0.1);
+  color: var(--text-lo);
+}
+
+.current {
+  color: #86efac;
+  border-color: var(--green-b);
+  background: var(--green-lo);
+}
+
+.future {
+  color: var(--text-dim);
+  border-color: rgba(255, 255, 255, 0.05);
+  background: transparent;
+}
+.future:hover {
+  border-color: rgba(255, 255, 255, 0.1);
+  color: var(--text-lo);
+}
+
+.elim {
+  color: rgba(239, 68, 68, 0.6);
+  border-color: rgba(239, 68, 68, 0.15);
+  background: transparent;
+}
+
+/* Selected ring — drawn via focus-visible-like outline so it never clips */
+.selected {
+  outline: 2px solid rgba(99, 102, 241, 0.6) !important;
+  outline-offset: 2px;
+}
+
+/* ── Decorators ── */
+.icon  { font-size: 10px; }
+.pulse { font-size: 8px; color: var(--green); }
+.city  { font-size: 9px; color: var(--text-dim); }
+.conditional {
+  font-size: 9px;
+  color: var(--amber);
+  opacity: 0.7;
+  cursor: help;
+}
+
+/* ── Label swap: full on desktop, short on narrow viewports ── */
+.labelShort { display: none; }
+
+@media (max-width: 580px) {
+  .tab { padding: 6px 10px; gap: 4px; }
+  .labelFull  { display: none; }
+  .labelShort { display: inline; }
+  .city       { display: none; }
+}

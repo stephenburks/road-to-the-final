@@ -1,0 +1,88 @@
+.container {
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 14px;
+	padding: 32px 24px;
+	text-align: center;
+	color: var(--text);
+	font-family: var(--font-body);
+}
+
+.icon {
+	font-size: 36px;
+	line-height: 1;
+}
+
+.title {
+	margin: 0;
+	font-family: var(--font-display);
+	font-weight: 800;
+	font-size: 22px;
+	color: var(--text-hi);
+	letter-spacing: -0.01em;
+}
+
+.message {
+	margin: 0;
+	font-size: 13px;
+	color: var(--text-lo);
+	max-width: 380px;
+}
+
+.actions {
+	display: flex;
+	gap: 8px;
+	margin-top: 4px;
+}
+
+.button,
+.buttonGhost {
+	padding: 8px 14px;
+	border-radius: 7px;
+	font-family: var(--font-mono);
+	font-size: 11px;
+	font-weight: 600;
+	letter-spacing: 0.03em;
+	cursor: pointer;
+	transition: background 0.15s, border-color 0.15s, color 0.15s;
+}
+
+.button {
+	background: var(--purple-lo);
+	border: 1px solid var(--purple-b);
+	color: var(--text-hi);
+}
+
+.button:hover {
+	background: rgba(99, 102, 241, 0.18);
+}
+
+.buttonGhost {
+	background: transparent;
+	border: 1px solid var(--border);
+	color: var(--text-lo);
+}
+
+.buttonGhost:hover {
+	border-color: rgba(255, 255, 255, 0.18);
+	color: var(--text);
+}
+
+.detail {
+	margin: 12px 0 0;
+	max-width: 520px;
+	width: 100%;
+	padding: 10px 12px;
+	background: rgba(239, 68, 68, 0.06);
+	border: 1px solid rgba(239, 68, 68, 0.2);
+	border-radius: 6px;
+	font-family: var(--font-mono);
+	font-size: 11px;
+	color: #fca5a5;
+	text-align: left;
+	white-space: pre-wrap;
+	word-break: break-word;
+}

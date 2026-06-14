@@ -1,0 +1,151 @@
+/* ─── Design tokens ──────────────────────────────────────────────────────── */
+:root {
+  --bg: #080814;
+  --surface: rgba(255, 255, 255, 0.03);
+  --border: rgba(255, 255, 255, 0.07);
+  --text: #d1d5db;
+  --text-hi: #f2eee6;
+  --text-lo: #9ca3af;
+  --text-dim: #6b7280;  /* bumped from 4b5563 for WCAG AA contrast */
+
+  --purple: #6366f1;
+  --purple-lo: rgba(99, 102, 241, 0.12);
+  --purple-b: rgba(99, 102, 241, 0.28);
+
+  --green: #22c55e;
+  --green-lo: rgba(34, 197, 94, 0.08);
+  --green-b: rgba(34, 197, 94, 0.28);
+
+  --amber: #f59e0b;
+  --amber-lo: rgba(245, 158, 11, 0.08);
+  --amber-b: rgba(245, 158, 11, 0.28);
+
+  --red: #ef4444;
+  --orange: #fb923c;
+  --blue: #0ea5e9;
+
+  --font-display: 'Space Grotesk', system-ui, sans-serif;
+  --font-body:    'Inter', system-ui, sans-serif;
+  --font-mono:    'JetBrains Mono', 'Fira Code', ui-monospace, monospace;
+
+  --radius: 10px;
+  --max-width: 1100px;
+}
+
+/* ─── Reset ──────────────────────────────────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+  overflow-x: hidden;
+  line-height: 1.5;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font: inherit;
+  color: inherit;
+}
+
+img, svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* ─── Focus styles ───────────────────────────────────────────────────────── */
+/* Remove browser default outline for all elements */
+*:focus {
+  outline: none;
+}
+
+/* Show intentional focus ring for keyboard navigation only */
+*:focus-visible {
+  outline: 2px solid var(--purple);
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
+/* Stage tabs get green focus to match their active color */
+.stage-tab:focus-visible {
+  outline-color: var(--green);
+  outline-offset: 2px;
+}
+
+/* ─── Layout utilities ───────────────────────────────────────────────────── */
+.wrap {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.section {
+  padding-bottom: 64px;
+}
+
+/* ─── Typography scale ───────────────────────────────────────────────────── */
+.font-display { font-family: var(--font-display); }
+.font-mono    { font-family: var(--font-mono); }
+
+/* ─── Screen-reader only utility ─────────────────────────────────────────── */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* ─── Scrollbar styling ──────────────────────────────────────────────────── */
+::-webkit-scrollbar { width: 4px; height: 4px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: rgba(99, 102, 241, 0.3); border-radius: 2px; }
+
+/* ─── Animations ─────────────────────────────────────────────────────────── */
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.3; }
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ─── Reduced motion ─────────────────────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
