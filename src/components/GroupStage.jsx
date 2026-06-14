@@ -30,7 +30,6 @@ export function GroupTable({ groupKey, groupData, highlightTeamId }) {
 				<span className={styles.tableTitle}>Standings</span>
 			</div>
 
-			<div className={styles.tableWrap}>
 			<table aria-label={`Group ${groupKey} standings`}>
 				<thead>
 					<tr>
@@ -104,7 +103,6 @@ export function GroupTable({ groupKey, groupData, highlightTeamId }) {
 					})}
 				</tbody>
 			</table>
-			</div>
 		</div>
 	)
 }
