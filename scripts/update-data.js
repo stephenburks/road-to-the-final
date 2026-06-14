@@ -201,7 +201,23 @@ const BRACKET_PATHS = {
                   'atlanta'),
 };
 
-// Team name → ID mapping for football-data.org responses
+// TLA (Three-Letter Abbreviation) → internal ID (primary lookup, from football-data.org)
+const TLA_TO_ID = {
+	MEX:'mexico', RSA:'southafrica', KOR:'southkorea', CZE:'czechia',
+	CAN:'canada', BIH:'bosnia', QAT:'qatar', SUI:'switzerland',
+	BRA:'brazil', MAR:'morocco', HAI:'haiti', SCO:'scotland',
+	USA:'usa', PAR:'paraguay', AUS:'australia', TUR:'turkey',
+	GER:'germany', CUW:'curacao', CIV:'ivorycoast', ECU:'ecuador',
+	NED:'netherlands', JPN:'japan', SWE:'sweden', TUN:'tunisia',
+	BEL:'belgium', EGY:'egypt', IRN:'iran', NZL:'newzealand',
+	ESP:'spain', CPV:'capeverde', KSA:'saudiarabia', URU:'uruguay',
+	FRA:'france', SEN:'senegal', IRQ:'iraq', NOR:'norway',
+	ARG:'argentina', ALG:'algeria', AUT:'austria', JOR:'jordan',
+	POR:'portugal', COD:'drcongo', UZB:'uzbekistan', COL:'colombia',
+	ENG:'england', CRO:'croatia', GHA:'ghana', PAN:'panama',
+};
+
+// Team name → ID mapping (fallback when TLA is not available in API response)
 const NAME_TO_ID = {
   'United States':'usa','USA':'usa','Mexico':'mexico','Canada':'canada',
   'Brazil':'brazil','Argentina':'argentina','Colombia':'colombia','Ecuador':'ecuador',
@@ -222,7 +238,12 @@ const NAME_TO_ID = {
   'Haiti':'haiti','Panama':'panama','Curaçao':'curacao','Curacao':'curacao',
 };
 
-function nameToId(name) { return NAME_TO_ID[name] || null; }
+function nameToId(name, tla) {
+	if (tla && TLA_TO_ID[tla]) return TLA_TO_ID[tla];
+	const id = NAME_TO_ID[name] || null;
+	if (id && tla) log(`⚠  TLA '${tla}' not in TLA_TO_ID, resolved '${name}' via name fallback`);
+	return id;
+}
 
 function log(msg) { console.log(`[${new Date().toISOString()}] ${msg}`); }
 
@@ -275,8 +296,8 @@ async function fetchActiveTeamIds() {
 
   const ids = new Set();
   for (const m of data.matches) {
-    const hId = nameToId(m.homeTeam?.name);
-    const aId = nameToId(m.awayTeam?.name);
+    const hId = nameToId(m.homeTeam?.name, m.homeTeam?.tla);
+    const aId = nameToId(m.awayTeam?.name, m.awayTeam?.tla);
     if (hId) ids.add(hId);
     if (aId) ids.add(aId);
   }
@@ -295,7 +316,7 @@ async function fetchStandings() {
     if (!g) continue;
     groups[g] = s.table.map((row, i) => ({
       pos:    i + 1,
-      teamId: nameToId(row.team.name),
+      teamId: nameToId(row.team.name, row.team.tla),
       team:   row.team.name,
       played: row.playedGames,
       w: row.won, d: row.draw, l: row.lost,
@@ -591,8 +612,8 @@ async function main() {
   // Index matches by "homeId:awayId" for O(1) lookup
   const matchIndex = new Map();
   for (const m of allMatches) {
-    const hId = nameToId(m.homeTeam?.name);
-    const aId = nameToId(m.awayTeam?.name);
+    const hId = nameToId(m.homeTeam?.name, m.homeTeam?.tla);
+    const aId = nameToId(m.awayTeam?.name, m.awayTeam?.tla);
     if (hId && aId) matchIndex.set(`${hId}:${aId}`, m);
   }
 
