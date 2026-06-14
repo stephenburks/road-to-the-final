@@ -7,6 +7,7 @@ on:
 
 permissions:
   contents: write
+  issues: write
 
 jobs:
   update:
@@ -30,3 +31,24 @@ jobs:
           git add public/data/
           git diff --cached --quiet || git commit -m "chore: update world cup data"
           git push
+
+      - name: Notify on failure
+        if: failure()
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const { data: issues } = await github.rest.issues.listForRepo({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              state: 'open',
+              labels: 'data-update-failure'
+            });
+            if (issues.length === 0) {
+              await github.rest.issues.create({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                title: 'Data update failed',
+                body: 'The hourly data update script failed. Check the [Actions log](https://github.com/' + context.repo.owner + '/' + context.repo.repo + '/actions) for details.',
+                labels: ['data-update-failure']
+              });
+            }

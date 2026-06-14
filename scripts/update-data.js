@@ -263,14 +263,21 @@ function fmtLabel(dateStr) {
   });
 }
 
-async function tryFetch(url, headers = {}) {
+// Sentinel for network-level fetch failures (distinct from API response errors)
+const FETCH_ERROR = Symbol('fetch_error');
+
+async function tryFetch(url, headers = {}, timeoutMs = 10000) {
+  const controller = new AbortController();
+  const timer = setTimeout(() => controller.abort(), timeoutMs);
   try {
-    const res = await fetch(url, { headers });
+    const res = await fetch(url, { headers, signal: controller.signal });
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
     return await res.json();
   } catch (e) {
     log(`⚠  Fetch failed ${url}: ${e.message}`);
-    return null;
+    return FETCH_ERROR;
+  } finally {
+    clearTimeout(timer);
   }
 }
 
@@ -325,7 +332,7 @@ async function fetchActiveTeamIds() {
 // ─── Fetch all group standings ────────────────────────────────────────────────
 async function fetchStandings() {
   const data = await tryFetch(`${FD_BASE}/competitions/${WC_ID}/standings`, FD_HEADERS);
-  if (!data) return {};
+  if (!data || data === FETCH_ERROR) return {};
   validateStandingsResponse(data);
 
   const groups = {};
@@ -348,7 +355,7 @@ async function fetchStandings() {
 // ─── Fetch all match results ──────────────────────────────────────────────────
 async function fetchMatches() {
   const data = await tryFetch(`${FD_BASE}/competitions/${WC_ID}/matches`, FD_HEADERS);
-  if (!data) return [];
+  if (!data || data === FETCH_ERROR) return [];
   validateMatchesResponse(data);
   return data.matches;
 }
@@ -627,6 +634,12 @@ async function main() {
   const [rawStandings, allMatches, polyProbs] = hasActive
     ? await Promise.all([fetchStandings(), fetchMatches(), fetchPolymarketAll()])
     : [{}, [], {}];
+
+  if (hasActive) {
+    if (!Object.keys(rawStandings).length) log('⚠  No standings data returned — API may be unavailable');
+    if (!allMatches.length)             log('⚠  No match data returned — API may be unavailable');
+    if (!Object.keys(polyProbs).length) log('⚠  No Polymarket data returned — API may be unavailable');
+  }
 
   log(`Standings: ${Object.keys(rawStandings).length} groups | Matches: ${allMatches.length} | Polymarket: ${Object.keys(polyProbs).length} teams`);
 
