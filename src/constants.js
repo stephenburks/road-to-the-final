@@ -27,10 +27,11 @@ export const CONFEDERATIONS = ['UEFA', 'CONMEBOL', 'CONCACAF', 'AFC', 'CAF', 'OF
 /** Default team shown on first load */
 export const DEFAULT_TEAM = 'usa'
 
-/** API / data endpoints */
-export const LIVE_DATA_URL     = '/data/world-cup-2026.json'
-export const MANIFEST_URL      = '/data/snapshots/manifest.json'
-export const SNAPSHOT_URL      = (date) => `/data/snapshots/${date}.json`
+const BASE = import.meta.env.BASE_URL
+
+export const LIVE_DATA_URL  = `${BASE}data/world-cup-2026.json`
+export const MANIFEST_URL   = `${BASE}data/snapshots/manifest.json`
+export const SNAPSHOT_URL   = (date) => `${BASE}data/snapshots/${date}.json`
 
 /** Attribution */
 export const AUTHOR_NAME       = 'Stephen Burks'
