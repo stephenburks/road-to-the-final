@@ -473,7 +473,7 @@ const GROUP_SCHEDULE = {
      {md:3,h:'croatia',    a:'ghana',      d:'2026-06-27',v:'Lincoln Financial Field, Philadelphia'}],
 };
 
-function buildGroupResults(teamId, group, matchIndex) {
+function buildGroupResults(teamId, group, matchIndex, existingGroupResults = []) {
   const sched = GROUP_SCHEDULE[group] || [];
   return sched
     .filter(g => g.h === teamId || g.a === teamId)
@@ -491,9 +491,15 @@ function buildGroupResults(teamId, group, matchIndex) {
         result = myG > opG ? 'W' : myG < opG ? 'L' : 'D';
         score  = `${myG}-${opG}`;
       }
+
+      const existingMatch = existingGroupResults.find(
+        e => e.matchday === g.md && e.opponent === oppInfo.name
+      )
+
       return {
         matchday: g.md, opponent: oppInfo.name || oppId, opponentFlag: oppInfo.flag || '🏳️',
-        result, score, date: g.d, venue: g.v, scorers: [],
+        result, score, date: g.d, venue: g.v,
+        scorers: existingMatch?.scorers?.length ? existingMatch.scorers : [],
       };
     });
 }
@@ -736,8 +742,9 @@ async function main() {
     }
 
     // Full recalculation
-    const groupResults  = buildGroupResults(t.id, t.group, matchIndex);
-    const advanceProbs  = calcProbs(t.id, t.group, rawStandings, polyProbs);
+    const existingGroupResults = existingTeam?.groupResults || []
+    const groupResults  = buildGroupResults(t.id, t.group, matchIndex, existingGroupResults)
+    const advanceProbs  = calcProbs(t.id, t.group, rawStandings, polyProbs)
     const teamPath      = buildPath(t.id, t.group, rawStandings);
     const possibleOpps  = buildOpponents(t.id, t.group, teamPath.r32?.opponentDesc ?? '', rawStandings);
 

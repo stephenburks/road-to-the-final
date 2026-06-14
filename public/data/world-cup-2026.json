@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-14T22:02:46.042Z",
+  "lastUpdated": "2026-06-14T22:33:14.382Z",
   "snapshotDate": "2026-06-14",
   "isHistorical": false,
   "tournament": {
@@ -45,63 +45,63 @@
           "pos": 1,
           "teamId": "mexico",
           "team": "Mexico",
-          "played": 1,
-          "w": 1,
+          "flag": "🇲🇽",
+          "played": 0,
+          "w": 0,
           "d": 0,
           "l": 0,
-          "gf": 2,
+          "gf": 0,
           "ga": 0,
-          "gd": 2,
-          "pts": 3,
-          "flag": "🇲🇽"
+          "gd": 0,
+          "pts": 0
         },
         {
           "pos": 2,
           "teamId": "southkorea",
           "team": "South Korea",
-          "played": 1,
-          "w": 1,
+          "flag": "🇰🇷",
+          "played": 0,
+          "w": 0,
           "d": 0,
           "l": 0,
-          "gf": 2,
-          "ga": 1,
-          "gd": 1,
-          "pts": 3,
-          "flag": "🇰🇷"
+          "gf": 0,
+          "ga": 0,
+          "gd": 0,
+          "pts": 0
         },
         {
           "pos": 3,
           "teamId": "czechia",
           "team": "Czechia",
-          "played": 1,
+          "flag": "🇨🇿",
+          "played": 0,
           "w": 0,
           "d": 0,
-          "l": 1,
-          "gf": 1,
-          "ga": 2,
-          "gd": -1,
-          "pts": 0,
-          "flag": "🇨🇿"
+          "l": 0,
+          "gf": 0,
+          "ga": 0,
+          "gd": 0,
+          "pts": 0
         },
         {
           "pos": 4,
           "teamId": "southafrica",
           "team": "South Africa",
-          "played": 1,
+          "flag": "🇿🇦",
+          "played": 0,
           "w": 0,
           "d": 0,
-          "l": 1,
+          "l": 0,
           "gf": 0,
-          "ga": 2,
-          "gd": -2,
-          "pts": 0,
-          "flag": "🇿🇦"
+          "ga": 0,
+          "gd": 0,
+          "pts": 0
         }
       ],
       "winProbabilities": {
-        "mexico": 30,
-        "southkorea": 18,
-        "czechia": 4,
+        "mexico": 2,
+        "southkorea": 1,
+        "czechia": 1,
         "southafrica": 0
       }
     },
@@ -109,65 +109,65 @@
       "standings": [
         {
           "pos": 1,
-          "teamId": "switzerland",
-          "team": "Switzerland",
-          "played": 1,
+          "teamId": "canada",
+          "team": "Canada",
+          "flag": "🇨🇦",
+          "played": 0,
           "w": 0,
-          "d": 1,
+          "d": 0,
           "l": 0,
-          "gf": 1,
-          "ga": 1,
+          "gf": 0,
+          "ga": 0,
           "gd": 0,
-          "pts": 1,
-          "flag": "🇨🇭"
+          "pts": 0
         },
         {
           "pos": 2,
-          "teamId": "canada",
-          "team": "Canada",
-          "played": 1,
+          "teamId": "qatar",
+          "team": "Qatar",
+          "flag": "🇶🇦",
+          "played": 0,
           "w": 0,
-          "d": 1,
+          "d": 0,
           "l": 0,
-          "gf": 1,
-          "ga": 1,
+          "gf": 0,
+          "ga": 0,
           "gd": 0,
-          "pts": 1,
-          "flag": "🇨🇦"
+          "pts": 0
         },
         {
           "pos": 3,
-          "teamId": "qatar",
-          "team": "Qatar",
-          "played": 1,
+          "teamId": "switzerland",
+          "team": "Switzerland",
+          "flag": "🇨🇭",
+          "played": 0,
           "w": 0,
-          "d": 1,
+          "d": 0,
           "l": 0,
-          "gf": 1,
-          "ga": 1,
+          "gf": 0,
+          "ga": 0,
           "gd": 0,
-          "pts": 1,
-          "flag": "🇶🇦"
+          "pts": 0
         },
         {
           "pos": 4,
           "teamId": "bosnia",
           "team": "Bosnia & Herz.",
-          "played": 1,
+          "flag": "🇧🇦",
+          "played": 0,
           "w": 0,
-          "d": 1,
+          "d": 0,
           "l": 0,
-          "gf": 1,
-          "ga": 1,
+          "gf": 0,
+          "ga": 0,
           "gd": 0,
-          "pts": 1,
-          "flag": "🇧🇦"
+          "pts": 0
         }
       ],
       "winProbabilities": {
-        "switzerland": 30,
-        "canada": 15,
+        "canada": 1,
         "qatar": 0,
+        "switzerland": 2,
         "bosnia": 0
       }
     },
@@ -175,66 +175,66 @@
       "standings": [
         {
           "pos": 1,
-          "teamId": "scotland",
-          "team": "Scotland",
-          "played": 1,
-          "w": 1,
+          "teamId": "brazil",
+          "team": "Brazil",
+          "flag": "🇧🇷",
+          "played": 0,
+          "w": 0,
           "d": 0,
           "l": 0,
-          "gf": 1,
+          "gf": 0,
           "ga": 0,
-          "gd": 1,
-          "pts": 3,
-          "flag": "🏴󠁧󠁢󠁳󠁣󠁴󠁿"
+          "gd": 0,
+          "pts": 0
         },
         {
           "pos": 2,
-          "teamId": "morocco",
-          "team": "Morocco",
-          "played": 1,
+          "teamId": "haiti",
+          "team": "Haiti",
+          "flag": "🇭🇹",
+          "played": 0,
           "w": 0,
-          "d": 1,
+          "d": 0,
           "l": 0,
-          "gf": 1,
-          "ga": 1,
+          "gf": 0,
+          "ga": 0,
           "gd": 0,
-          "pts": 1,
-          "flag": "🇲🇦"
+          "pts": 0
         },
         {
           "pos": 3,
-          "teamId": "brazil",
-          "team": "Brazil",
-          "played": 1,
+          "teamId": "scotland",
+          "team": "Scotland",
+          "flag": "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
+          "played": 0,
           "w": 0,
-          "d": 1,
+          "d": 0,
           "l": 0,
-          "gf": 1,
-          "ga": 1,
+          "gf": 0,
+          "ga": 0,
           "gd": 0,
-          "pts": 1,
-          "flag": "🇧🇷"
+          "pts": 0
         },
         {
           "pos": 4,
-          "teamId": "haiti",
-          "team": "Haiti",
-          "played": 1,
+          "teamId": "morocco",
+          "team": "Morocco",
+          "flag": "🇲🇦",
+          "played": 0,
           "w": 0,
           "d": 0,
-          "l": 1,
+          "l": 0,
           "gf": 0,
-          "ga": 1,
-          "gd": -1,
-          "pts": 0,
-          "flag": "🇭🇹"
+          "ga": 0,
+          "gd": 0,
+          "pts": 0
         }
       ],
       "winProbabilities": {
-        "scotland": 11,
-        "morocco": 23,
-        "brazil": 14,
-        "haiti": 0
+        "brazil": 2,
+        "haiti": 0,
+        "scotland": 1,
+        "morocco": 2
       }
     },
     "D": {
@@ -243,63 +243,63 @@
           "pos": 1,
           "teamId": "usa",
           "team": "USA",
-          "played": 1,
-          "w": 1,
+          "flag": "🇺🇸",
+          "played": 0,
+          "w": 0,
           "d": 0,
           "l": 0,
-          "gf": 4,
-          "ga": 1,
-          "gd": 3,
-          "pts": 3,
-          "flag": "🇺🇸"
+          "gf": 0,
+          "ga": 0,
+          "gd": 0,
+          "pts": 0
         },
         {
           "pos": 2,
           "teamId": "australia",
           "team": "Australia",
-          "played": 1,
-          "w": 1,
+          "flag": "🇦🇺",
+          "played": 0,
+          "w": 0,
           "d": 0,
           "l": 0,
-          "gf": 2,
+          "gf": 0,
           "ga": 0,
-          "gd": 2,
-          "pts": 3,
-          "flag": "🇦🇺"
+          "gd": 0,
+          "pts": 0
         },
         {
           "pos": 3,
           "teamId": "turkey",
           "team": "Türkiye",
-          "played": 1,
+          "flag": "🇹🇷",
+          "played": 0,
           "w": 0,
           "d": 0,
-          "l": 1,
+          "l": 0,
           "gf": 0,
-          "ga": 2,
-          "gd": -2,
-          "pts": 0,
-          "flag": "🇹🇷"
+          "ga": 0,
+          "gd": 0,
+          "pts": 0
         },
         {
           "pos": 4,
           "teamId": "paraguay",
           "team": "Paraguay",
-          "played": 1,
+          "flag": "🇵🇾",
+          "played": 0,
           "w": 0,
           "d": 0,
-          "l": 1,
-          "gf": 1,
-          "ga": 4,
-          "gd": -3,
-          "pts": 0,
-          "flag": "🇵🇾"
+          "l": 0,
+          "gf": 0,
+          "ga": 0,
+          "gd": 0,
+          "pts": 0
         }
       ],
       "winProbabilities": {
-        "usa": 30,
-        "australia": 16,
-        "turkey": 8,
+        "usa": 2,
+        "australia": 1,
+        "turkey": 1,
         "paraguay": 1
       }
     },
@@ -309,20 +309,21 @@
           "pos": 1,
           "teamId": "germany",
           "team": "Germany",
-          "played": 1,
-          "w": 1,
+          "flag": "🇩🇪",
+          "played": 0,
+          "w": 0,
           "d": 0,
           "l": 0,
-          "gf": 7,
-          "ga": 1,
-          "gd": 6,
-          "pts": 3,
-          "flag": "🇩🇪"
+          "gf": 0,
+          "ga": 0,
+          "gd": 0,
+          "pts": 0
         },
         {
           "pos": 2,
-          "teamId": "ecuador",
-          "team": "Ecuador",
+          "teamId": "ivorycoast",
+          "team": "Ivory Coast",
+          "flag": "🇨🇮",
           "played": 0,
           "w": 0,
           "d": 0,
@@ -330,13 +331,13 @@
           "gf": 0,
           "ga": 0,
           "gd": 0,
-          "pts": 0,
-          "flag": "🇪🇨"
+          "pts": 0
         },
         {
           "pos": 3,
-          "teamId": "ivorycoast",
-          "team": "Ivory Coast",
+          "teamId": "ecuador",
+          "team": "Ecuador",
+          "flag": "🇪🇨",
           "played": 0,
           "w": 0,
           "d": 0,
@@ -344,28 +345,27 @@
           "gf": 0,
           "ga": 0,
           "gd": 0,
-          "pts": 0,
-          "flag": "🇨🇮"
+          "pts": 0
         },
         {
           "pos": 4,
           "teamId": "curacao",
           "team": "Curaçao",
-          "played": 1,
+          "flag": "🇨🇼",
+          "played": 0,
           "w": 0,
           "d": 0,
-          "l": 1,
-          "gf": 1,
-          "ga": 7,
-          "gd": -6,
-          "pts": 0,
-          "flag": "🇨🇼"
+          "l": 0,
+          "gf": 0,
+          "ga": 0,
+          "gd": 0,
+          "pts": 0
         }
       ],
       "winProbabilities": {
-        "germany": 30,
-        "ecuador": 18,
-        "ivorycoast": 2,
+        "germany": 2,
+        "ivorycoast": 0,
+        "ecuador": 1,
         "curacao": 0
       }
     },
@@ -373,36 +373,37 @@
       "standings": [
         {
           "pos": 1,
-          "teamId": "japan",
-          "team": "Japan",
-          "played": 1,
+          "teamId": "netherlands",
+          "team": "Netherlands",
+          "flag": "🇳🇱",
+          "played": 0,
           "w": 0,
-          "d": 1,
+          "d": 0,
           "l": 0,
-          "gf": 2,
-          "ga": 2,
+          "gf": 0,
+          "ga": 0,
           "gd": 0,
-          "pts": 1,
-          "flag": "🇯🇵"
+          "pts": 0
         },
         {
           "pos": 2,
-          "teamId": "netherlands",
-          "team": "Netherlands",
-          "played": 1,
+          "teamId": "sweden",
+          "team": "Sweden",
+          "flag": "🇸🇪",
+          "played": 0,
           "w": 0,
-          "d": 1,
+          "d": 0,
           "l": 0,
-          "gf": 2,
-          "ga": 2,
+          "gf": 0,
+          "ga": 0,
           "gd": 0,
-          "pts": 1,
-          "flag": "🇳🇱"
+          "pts": 0
         },
         {
           "pos": 3,
-          "teamId": "sweden",
-          "team": "Sweden",
+          "teamId": "tunisia",
+          "team": "Tunisia",
+          "flag": "🇹🇳",
           "played": 0,
           "w": 0,
           "d": 0,
@@ -410,13 +411,13 @@
           "gf": 0,
           "ga": 0,
           "gd": 0,
-          "pts": 0,
-          "flag": "🇸🇪"
+          "pts": 0
         },
         {
           "pos": 4,
-          "teamId": "tunisia",
-          "team": "Tunisia",
+          "teamId": "japan",
+          "team": "Japan",
+          "flag": "🇯🇵",
           "played": 0,
           "w": 0,
           "d": 0,
@@ -424,23 +425,23 @@
           "gf": 0,
           "ga": 0,
           "gd": 0,
-          "pts": 0,
-          "flag": "🇹🇳"
+          "pts": 0
         }
       ],
       "winProbabilities": {
-        "japan": 30,
-        "netherlands": 28,
-        "sweden": 6,
-        "tunisia": 1
+        "netherlands": 2,
+        "sweden": 1,
+        "tunisia": 1,
+        "japan": 2
       }
     },
     "G": {
       "standings": [
         {
           "pos": 1,
-          "teamId": "egypt",
-          "team": "Egypt",
+          "teamId": "belgium",
+          "team": "Belgium",
+          "flag": "🇧🇪",
           "played": 0,
           "w": 0,
           "d": 0,
@@ -448,13 +449,13 @@
           "gf": 0,
           "ga": 0,
           "gd": 0,
-          "pts": 0,
-          "flag": "🇪🇬"
+          "pts": 0
         },
         {
           "pos": 2,
-          "teamId": "belgium",
-          "team": "Belgium",
+          "teamId": "iran",
+          "team": "Iran",
+          "flag": "🇮🇷",
           "played": 0,
           "w": 0,
           "d": 0,
@@ -462,13 +463,13 @@
           "gf": 0,
           "ga": 0,
           "gd": 0,
-          "pts": 0,
-          "flag": "🇧🇪"
+          "pts": 0
         },
         {
           "pos": 3,
-          "teamId": "iran",
-          "team": "Iran",
+          "teamId": "newzealand",
+          "team": "New Zealand",
+          "flag": "🇳🇿",
           "played": 0,
           "w": 0,
           "d": 0,
@@ -476,13 +477,13 @@
           "gf": 0,
           "ga": 0,
           "gd": 0,
-          "pts": 0,
-          "flag": "🇮🇷"
+          "pts": 0
         },
         {
           "pos": 4,
-          "teamId": "newzealand",
-          "team": "New Zealand",
+          "teamId": "egypt",
+          "team": "Egypt",
+          "flag": "🇪🇬",
           "played": 0,
           "w": 0,
           "d": 0,
@@ -490,23 +491,23 @@
           "gf": 0,
           "ga": 0,
           "gd": 0,
-          "pts": 0,
-          "flag": "🇳🇿"
+          "pts": 0
         }
       ],
       "winProbabilities": {
-        "egypt": 16,
-        "belgium": 27,
-        "iran": 9,
-        "newzealand": 0
+        "belgium": 2,
+        "iran": 1,
+        "newzealand": 0,
+        "egypt": 1
       }
     },
     "H": {
       "standings": [
         {
           "pos": 1,
-          "teamId": "capeverde",
-          "team": "Cape Verde",
+          "teamId": "spain",
+          "team": "Spain",
+          "flag": "🇪🇸",
           "played": 0,
           "w": 0,
           "d": 0,
@@ -514,13 +515,13 @@
           "gf": 0,
           "ga": 0,
           "gd": 0,
-          "pts": 0,
-          "flag": "🇨🇻"
+          "pts": 0
         },
         {
           "pos": 2,
           "teamId": "saudiarabia",
           "team": "Saudi Arabia",
+          "flag": "🇸🇦",
           "played": 0,
           "w": 0,
           "d": 0,
@@ -528,13 +529,13 @@
           "gf": 0,
           "ga": 0,
           "gd": 0,
-          "pts": 0,
-          "flag": "🇸🇦"
+          "pts": 0
         },
         {
           "pos": 3,
-          "teamId": "spain",
-          "team": "Spain",
+          "teamId": "uruguay",
+          "team": "Uruguay",
+          "flag": "🇺🇾",
           "played": 0,
           "w": 0,
           "d": 0,
@@ -542,13 +543,13 @@
           "gf": 0,
           "ga": 0,
           "gd": 0,
-          "pts": 0,
-          "flag": "🇪🇸"
+          "pts": 0
         },
         {
           "pos": 4,
-          "teamId": "uruguay",
-          "team": "Uruguay",
+          "teamId": "capeverde",
+          "team": "Cape Verde",
+          "flag": "🇨🇻",
           "played": 0,
           "w": 0,
           "d": 0,
@@ -556,15 +557,14 @@
           "gf": 0,
           "ga": 0,
           "gd": 0,
-          "pts": 0,
-          "flag": "🇺🇾"
+          "pts": 0
         }
       ],
       "winProbabilities": {
-        "capeverde": 1,
-        "saudiarabia": 1,
-        "spain": 15,
-        "uruguay": 2
+        "spain": 2,
+        "saudiarabia": 0,
+        "uruguay": 2,
+        "capeverde": 0
       }
     },
     "I": {
@@ -573,6 +573,7 @@
           "pos": 1,
           "teamId": "france",
           "team": "France",
+          "flag": "🇫🇷",
           "played": 0,
           "w": 0,
           "d": 0,
@@ -580,13 +581,13 @@
           "gf": 0,
           "ga": 0,
           "gd": 0,
-          "pts": 0,
-          "flag": "🇫🇷"
+          "pts": 0
         },
         {
           "pos": 2,
           "teamId": "iraq",
           "team": "Iraq",
+          "flag": "🇮🇶",
           "played": 0,
           "w": 0,
           "d": 0,
@@ -594,13 +595,13 @@
           "gf": 0,
           "ga": 0,
           "gd": 0,
-          "pts": 0,
-          "flag": "🇮🇶"
+          "pts": 0
         },
         {
           "pos": 3,
           "teamId": "norway",
           "team": "Norway",
+          "flag": "🇳🇴",
           "played": 0,
           "w": 0,
           "d": 0,
@@ -608,13 +609,13 @@
           "gf": 0,
           "ga": 0,
           "gd": 0,
-          "pts": 0,
-          "flag": "🇳🇴"
+          "pts": 0
         },
         {
           "pos": 4,
           "teamId": "senegal",
           "team": "Senegal",
+          "flag": "🇸🇳",
           "played": 0,
           "w": 0,
           "d": 0,
@@ -622,14 +623,13 @@
           "gf": 0,
           "ga": 0,
           "gd": 0,
-          "pts": 0,
-          "flag": "🇸🇳"
+          "pts": 0
         }
       ],
       "winProbabilities": {
-        "france": 30,
-        "iraq": 1,
-        "norway": 6,
+        "france": 2,
+        "iraq": 0,
+        "norway": 1,
         "senegal": 2
       }
     },
@@ -637,8 +637,9 @@
       "standings": [
         {
           "pos": 1,
-          "teamId": "algeria",
-          "team": "Algeria",
+          "teamId": "argentina",
+          "team": "Argentina",
+          "flag": "🇦🇷",
           "played": 0,
           "w": 0,
           "d": 0,
@@ -646,13 +647,13 @@
           "gf": 0,
           "ga": 0,
           "gd": 0,
-          "pts": 0,
-          "flag": "🇩🇿"
+          "pts": 0
         },
         {
           "pos": 2,
-          "teamId": "argentina",
-          "team": "Argentina",
+          "teamId": "austria",
+          "team": "Austria",
+          "flag": "🇦🇹",
           "played": 0,
           "w": 0,
           "d": 0,
@@ -660,13 +661,13 @@
           "gf": 0,
           "ga": 0,
           "gd": 0,
-          "pts": 0,
-          "flag": "🇦🇷"
+          "pts": 0
         },
         {
           "pos": 3,
           "teamId": "jordan",
           "team": "Jordan",
+          "flag": "🇯🇴",
           "played": 0,
           "w": 0,
           "d": 0,
@@ -674,13 +675,13 @@
           "gf": 0,
           "ga": 0,
           "gd": 0,
-          "pts": 0,
-          "flag": "🇯🇴"
+          "pts": 0
         },
         {
           "pos": 4,
-          "teamId": "austria",
-          "team": "Austria",
+          "teamId": "algeria",
+          "team": "Algeria",
+          "flag": "🇩🇿",
           "played": 0,
           "w": 0,
           "d": 0,
@@ -688,23 +689,23 @@
           "gf": 0,
           "ga": 0,
           "gd": 0,
-          "pts": 0,
-          "flag": "🇦🇹"
+          "pts": 0
         }
       ],
       "winProbabilities": {
-        "algeria": 15,
-        "argentina": 30,
+        "argentina": 2,
+        "austria": 1,
         "jordan": 0,
-        "austria": 1
+        "algeria": 1
       }
     },
     "K": {
       "standings": [
         {
           "pos": 1,
-          "teamId": "drcongo",
-          "team": "DR Congo",
+          "teamId": "portugal",
+          "team": "Portugal",
+          "flag": "🇵🇹",
           "played": 0,
           "w": 0,
           "d": 0,
@@ -712,13 +713,13 @@
           "gf": 0,
           "ga": 0,
           "gd": 0,
-          "pts": 0,
-          "flag": "🇨🇩"
+          "pts": 0
         },
         {
           "pos": 2,
-          "teamId": "colombia",
-          "team": "Colombia",
+          "teamId": "uzbekistan",
+          "team": "Uzbekistan",
+          "flag": "🇺🇿",
           "played": 0,
           "w": 0,
           "d": 0,
@@ -726,13 +727,13 @@
           "gf": 0,
           "ga": 0,
           "gd": 0,
-          "pts": 0,
-          "flag": "🇨🇴"
+          "pts": 0
         },
         {
           "pos": 3,
-          "teamId": "portugal",
-          "team": "Portugal",
+          "teamId": "colombia",
+          "team": "Colombia",
+          "flag": "🇨🇴",
           "played": 0,
           "w": 0,
           "d": 0,
@@ -740,13 +741,13 @@
           "gf": 0,
           "ga": 0,
           "gd": 0,
-          "pts": 0,
-          "flag": "🇵🇹"
+          "pts": 0
         },
         {
           "pos": 4,
-          "teamId": "uzbekistan",
-          "team": "Uzbekistan",
+          "teamId": "drcongo",
+          "team": "DR Congo",
+          "flag": "🇨🇩",
           "played": 0,
           "w": 0,
           "d": 0,
@@ -754,15 +755,14 @@
           "gf": 0,
           "ga": 0,
           "gd": 0,
-          "pts": 0,
-          "flag": "🇺🇿"
+          "pts": 0
         }
       ],
       "winProbabilities": {
-        "drcongo": 1,
-        "colombia": 24,
-        "portugal": 13,
-        "uzbekistan": 0
+        "portugal": 2,
+        "uzbekistan": 0,
+        "colombia": 2,
+        "drcongo": 0
       }
     },
     "L": {
@@ -771,6 +771,7 @@
           "pos": 1,
           "teamId": "england",
           "team": "England",
+          "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
           "played": 0,
           "w": 0,
           "d": 0,
@@ -778,13 +779,13 @@
           "gf": 0,
           "ga": 0,
           "gd": 0,
-          "pts": 0,
-          "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿"
+          "pts": 0
         },
         {
           "pos": 2,
           "teamId": "ghana",
           "team": "Ghana",
+          "flag": "🇬🇭",
           "played": 0,
           "w": 0,
           "d": 0,
@@ -792,13 +793,13 @@
           "gf": 0,
           "ga": 0,
           "gd": 0,
-          "pts": 0,
-          "flag": "🇬🇭"
+          "pts": 0
         },
         {
           "pos": 3,
-          "teamId": "croatia",
-          "team": "Croatia",
+          "teamId": "panama",
+          "team": "Panama",
+          "flag": "🇵🇦",
           "played": 0,
           "w": 0,
           "d": 0,
@@ -806,13 +807,13 @@
           "gf": 0,
           "ga": 0,
           "gd": 0,
-          "pts": 0,
-          "flag": "🇭🇷"
+          "pts": 0
         },
         {
           "pos": 4,
-          "teamId": "panama",
-          "team": "Panama",
+          "teamId": "croatia",
+          "team": "Croatia",
+          "flag": "🇭🇷",
           "played": 0,
           "w": 0,
           "d": 0,
@@ -820,15 +821,14 @@
           "gf": 0,
           "ga": 0,
           "gd": 0,
-          "pts": 0,
-          "flag": "🇵🇦"
+          "pts": 0
         }
       ],
       "winProbabilities": {
-        "england": 30,
-        "ghana": 1,
-        "croatia": 12,
-        "panama": 0
+        "england": 2,
+        "ghana": 0,
+        "panama": 0,
+        "croatia": 2
       }
     }
   },
