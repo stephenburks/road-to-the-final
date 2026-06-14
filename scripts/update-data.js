@@ -274,6 +274,23 @@ async function tryFetch(url, headers = {}) {
   }
 }
 
+// ─── API response validators ──────────────────────────────────────────────────
+function validateStandingsResponse(data) {
+	if (!data || !Array.isArray(data.standings))
+		throw new Error('Invalid standings response: expected { standings: [...] }');
+	return data;
+}
+function validateMatchesResponse(data) {
+	if (!data || !Array.isArray(data.matches))
+		throw new Error('Invalid matches response: expected { matches: [...] }');
+	return data;
+}
+function validatePolymarketResponse(data) {
+	if (!Array.isArray(data))
+		throw new Error('Invalid polymarket response: expected array');
+	return data;
+}
+
 // ─── Load existing live data (for carry-forward) ──────────────────────────────
 function loadExisting() {
   if (fs.existsSync(LIVE_PATH)) {
@@ -309,6 +326,7 @@ async function fetchActiveTeamIds() {
 async function fetchStandings() {
   const data = await tryFetch(`${FD_BASE}/competitions/${WC_ID}/standings`, FD_HEADERS);
   if (!data) return {};
+  validateStandingsResponse(data);
 
   const groups = {};
   for (const s of (data.standings || [])) {
@@ -330,7 +348,9 @@ async function fetchStandings() {
 // ─── Fetch all match results ──────────────────────────────────────────────────
 async function fetchMatches() {
   const data = await tryFetch(`${FD_BASE}/competitions/${WC_ID}/matches`, FD_HEADERS);
-  return data?.matches || [];
+  if (!data) return [];
+  validateMatchesResponse(data);
+  return data.matches;
 }
 
 // ─── Polymarket: fetch group winner probabilities (Option B — always) ─────────
@@ -358,6 +378,7 @@ async function fetchPolymarketAll() {
   for (const slug of slugs) {
     const data = await tryFetch(`https://gamma-api.polymarket.com/markets?slug=${slug}&limit=1`);
     if (!data?.length) continue;
+    validatePolymarketResponse(data);
     for (const token of (data[0].tokens || [])) {
       const id  = nameToId(token.outcome);
       const pct = Math.round(parseFloat(token.price) * 100);
