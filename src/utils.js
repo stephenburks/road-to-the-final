@@ -34,13 +34,6 @@ export function formatUpdated(isoStr) {
 }
 
 /**
- * Format a goal difference as "+3" or "-1"
- */
-export function formatGD(n) {
-  return n > 0 ? `+${n}` : `${n}`
-}
-
-/**
  * Index of a stage in STAGE_ORDER, or -1
  */
 export function stageIndex(stage) {
