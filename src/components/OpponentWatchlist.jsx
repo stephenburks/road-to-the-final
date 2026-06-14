@@ -64,13 +64,38 @@ function OpponentCard({ opp, compact = false }) {
 	)
 }
 
-function MatchupRow({ opp, team, maxPct }) {
+function getGroupTag(teamName, data) {
+	if (!data?.groups || !teamName) return null
+	for (const [key, g] of Object.entries(data.groups)) {
+		const s = g.standings?.find(r => r.team === teamName)
+		if (s) return { group: key, pos: s.pos }
+	}
+	return null
+}
+
+function MatchupRow({ opp, team, maxPct, data }) {
 	const name = opp.opponent ?? opp.likelyTeam ?? 'TBD'
+	const tag = getGroupTag(name, data)
 	return (
 		<div className={styles.matchupRow}>
 			<div className={styles.matchupTeams}>
 				<span aria-hidden="true">{opp.flag ?? '🏳️'}</span>
-				<span className={styles.matchupName}>{team.flag} {team.name} vs {name}</span>
+				<span className={styles.matchupName}>
+					{team.flag} {team.name} vs {name}
+					{tag && (
+						<span
+							style={{
+								fontFamily: 'var(--font-mono)',
+								fontSize: 9,
+								color: 'var(--text-dim)',
+								marginLeft: 6,
+								whiteSpace: 'nowrap',
+							}}
+						>
+							G{tag.group}#{tag.pos}
+						</span>
+					)}
+				</span>
 			</div>
 			<div
 				className={styles.matchupTrack}
@@ -87,7 +112,7 @@ function MatchupRow({ opp, team, maxPct }) {
 	)
 }
 
-function MatchupMatrix({ flatList, team, maxPct }) {
+function MatchupMatrix({ flatList, team, maxPct, data }) {
 	const sorted = [...flatList].filter(o => o.pct != null).sort((a, b) => b.pct - a.pct)
 	const top4 = sorted.slice(0, 4)
 
@@ -95,7 +120,7 @@ function MatchupMatrix({ flatList, team, maxPct }) {
 		<div className={styles.matchupSection}>
 			<div className={styles.matchupList}>
 				{sorted.map((opp, i) => (
-					<MatchupRow key={i} opp={opp} team={team} maxPct={maxPct} />
+					<MatchupRow key={i} opp={opp} team={team} maxPct={maxPct} data={data} />
 				))}
 			</div>
 			<div className={styles.calloutGrid}>
@@ -166,7 +191,7 @@ function VenueBanner({ stagePath, activeStage }) {
 	)
 }
 
-export default function OpponentWatchlist({ team, activeStage }) {
+export default function OpponentWatchlist({ team, activeStage, data }) {
 	const stagePath = team.path?.[activeStage]
 	const oppData = team.possibleOpponents?.[activeStage]
 
@@ -219,7 +244,7 @@ export default function OpponentWatchlist({ team, activeStage }) {
 				</div>
 			)}
 
-			{r16WithPct && <MatchupMatrix flatList={flatList} team={team} maxPct={maxPct} />}
+			{r16WithPct && <MatchupMatrix flatList={flatList} team={team} maxPct={maxPct} data={data} />}
 
 			{activeStage === 'r32' && (hasFlat || hasScenarios) && (
 				<div className={styles.legend} role="note" aria-label="Difficulty key">

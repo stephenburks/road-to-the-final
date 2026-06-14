@@ -151,23 +151,33 @@ function MatchCard({ match, teamFlag }) {
 	)
 }
 
-export default function GroupStage({ team, data }) {
-	const myGroup = data?.groups?.[team.group]
-	const r16Opps = team.possibleOpponents?.r16 ?? []
-	let feederGroup = null
-	let feederKey = null
+function getFeederGroup(team, data) {
+	if (!data?.groups) return null
 
-	if (r16Opps.length && data?.groups) {
+	const desc = team.path?.r16?.opponentDesc ?? ''
+	const m = desc.match(/Winner\s+Group\s+([A-L])|Runner-up\s+Group\s+([A-L])/i)
+	const parsed = (m?.[1] ?? m?.[2])?.toUpperCase()
+	if (parsed && parsed !== team.group && data.groups[parsed]) {
+		return { key: parsed, group: data.groups[parsed] }
+	}
+
+	const r16Opps = team.possibleOpponents?.r16
+	if (r16Opps?.length) {
 		const r16Names = new Set(r16Opps.map(o => o.opponent).filter(Boolean))
 		for (const [key, g] of Object.entries(data.groups)) {
 			if (key === team.group) continue
 			if (g.standings?.some(s => r16Names.has(s.team))) {
-				feederGroup = g
-				feederKey = key
-				break
+				return { key, group: g }
 			}
 		}
 	}
+
+	return null
+}
+
+export default function GroupStage({ team, data }) {
+	const myGroup = data?.groups?.[team.group]
+	const feeder = getFeederGroup(team, data)
 
 	return (
 		<section className="wrap section" id="groups" aria-labelledby="groups-heading">
@@ -176,7 +186,7 @@ export default function GroupStage({ team, data }) {
 
 			<div className={styles.groupGrid}>
 				{myGroup && <GroupTable groupKey={team.group} groupData={myGroup} highlightTeamId={team.id} />}
-				{feederGroup && (
+				{feeder && (
 				<div>
 					<div
 						style={{
@@ -187,9 +197,9 @@ export default function GroupStage({ team, data }) {
 							lineHeight: 1.5,
 						}}
 					>
-						The table shows Group {feederKey} standings — if {team.name} wins Group {team.group}, the winner of Group {feederKey} would be their Round of 16 opponent.
+						The table shows Group {feeder.key} standings — if {team.name} wins Group {team.group}, the winner of Group {feeder.key} would be their Round of 16 opponent.
 					</div>
-					<GroupTable groupKey={feederKey} groupData={feederGroup} highlightTeamId={null} />
+					<GroupTable groupKey={feeder.key} groupData={feeder.group} highlightTeamId={null} />
 				</div>
 			)}
 			</div>

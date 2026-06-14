@@ -103,7 +103,7 @@ export default function App() {
             <EliminatedView team={team} />
           ) : (
             <>
-              <OpponentWatchlist team={team} activeStage={activeStage} />
+              <OpponentWatchlist team={team} activeStage={activeStage} data={data} />
               <ScheduledMatches team={team} />
             </>
           )}
