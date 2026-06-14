@@ -1,6 +1,7 @@
 import { useState, useRef, useCallback, useMemo } from 'react'
 import { CONFEDERATIONS } from '../constants'
 import { useClickOutside } from '../hooks/useClickOutside'
+import { useTeamSearch } from '../hooks/useTeamSearch'
 import styles from './TeamSelector.module.css'
 
 export default function TeamSelector({ teams, selectedId, onChange }) {
@@ -21,40 +22,7 @@ export default function TeamSelector({ teams, selectedId, onChange }) {
 		[teams, selectedId]
 	)
 
-	const grouped = useMemo(() => {
-		const q = query.toLowerCase()
-		const byConf = {}
-		CONFEDERATIONS.forEach(c => { byConf[c] = [] })
-		byConf['Eliminated'] = []
-
-		teams.forEach(t => {
-			if (q && !t.name.toLowerCase().includes(q) && !(t.confederation ?? '').toLowerCase().includes(q)) return
-			if (t.eliminated) {
-				byConf['Eliminated'].push(t)
-			} else {
-				const key = t.confederation ?? 'Other'
-				if (!byConf[key]) byConf[key] = []
-				byConf[key].push(t)
-			}
-		})
-
-		Object.values(byConf).forEach(arr => {
-			arr.sort((a, b) => (b.advanceProbabilities?.winner ?? 0) - (a.advanceProbabilities?.winner ?? 0))
-		})
-
-		return byConf
-	}, [teams, query])
-
-	const flatItems = useMemo(() => {
-		const items = []
-		for (const conf of [...CONFEDERATIONS, 'Eliminated']) {
-			const group = grouped[conf] ?? []
-			for (const t of group) {
-				items.push(t)
-			}
-		}
-		return items
-	}, [grouped])
+	const { grouped, flatItems } = useTeamSearch(teams, query, CONFEDERATIONS)
 
 	function handleOpen() {
 		setOpen(o => !o)
