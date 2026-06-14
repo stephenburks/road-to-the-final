@@ -176,7 +176,40 @@ export default function GroupStage({ team, data }) {
 
 			<div className={styles.groupGrid}>
 				{myGroup && <GroupTable groupKey={team.group} groupData={myGroup} highlightTeamId={team.id} />}
-				{feederGroup && <GroupTable groupKey={feederKey} groupData={feederGroup} highlightTeamId={null} />}
+				{feederGroup && (
+				<div>
+					<div
+						style={{
+							fontFamily: 'var(--font-mono)',
+							fontSize: 9,
+							color: 'var(--text-dim)',
+							marginBottom: 6,
+							lineHeight: 1.5,
+						}}
+					>
+						The table shows Group {feederKey} standings — if {team.name} wins Group {team.group}, the winner of Group {feederKey} would be their Round of 16 opponent.
+					</div>
+					<GroupTable groupKey={feederKey} groupData={feederGroup} highlightTeamId={null} />
+				</div>
+			)}
+			</div>
+
+			<div
+				role="note"
+				style={{
+					background: 'rgba(245,158,11,0.06)',
+					border: '1px solid rgba(245,158,11,0.15)',
+					color: '#fcd34d',
+					fontSize: 11,
+					padding: '10px 14px',
+					borderRadius: 8,
+					fontFamily: 'var(--font-mono)',
+					marginTop: 12,
+					marginBottom: 4,
+					lineHeight: 1.5,
+				}}
+			>
+				⚠️ Bracket path, opponent scenarios, and venues assume {team.name} finishes 1st in Group {team.group}. If they finish 2nd or 3rd, the Round of 16 opponent, subsequent knockout path, and venues will be different.
 			</div>
 
 			<div className={styles.matchGrid}>
