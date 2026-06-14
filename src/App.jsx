@@ -1,7 +1,8 @@
-import { useState, useEffect, useCallback, useMemo } from 'react'
+import { useMemo, useEffect } from 'react'
 import { DEFAULT_TEAM } from './constants'
-import { readURLParams, writeURLParams, resolveActiveStage, lsGet, lsSet } from './utils'
+import { resolveActiveStage } from './utils'
 import { useData } from './hooks/useData'
+import { useAppState } from './hooks/useAppState'
 import Header           from './components/Header'
 import Nav              from './components/Nav'
 import StageTabs        from './components/StageTabs'
@@ -39,17 +40,11 @@ function ErrorScreen({ message }) {
 }
 
 export default function App() {
-  const urlParams  = useMemo(() => readURLParams(), [])
-  const storedTeam = useMemo(() => lsGet('wc26_team'), [])
-
-  const [selectedTeamId, setSelectedTeamId] = useState(urlParams.team  ?? storedTeam ?? DEFAULT_TEAM)
-  const [selectedDate,   setSelectedDate]   = useState(urlParams.date  ?? 'live')
-  const [selectedStage,  setSelectedStage]  = useState(urlParams.stage ?? 'auto')
+  const { selectedTeamId, selectedDate, selectedStage, isHistorical, handleTeamChange, handleDateChange, handleStageSelect } = useAppState()
 
   const { liveData, manifest, snapData, loadingSnap, error } = useData(selectedDate)
 
-  const data         = selectedDate === 'live' ? liveData : snapData
-  const isHistorical = selectedDate !== 'live'
+  const data       = selectedDate === 'live' ? liveData : snapData
 
   const teamsMap = useMemo(() => {
     if (!data?.teams && !liveData?.teams) return new Map()
@@ -64,22 +59,10 @@ export default function App() {
 
   const activeStage = useMemo(() => resolveActiveStage(selectedStage, team), [selectedStage, team])
 
-  // Update page title
   useEffect(() => {
     if (!team) return
     document.title = `${team.flag} ${team.name} • Road to the Final • World Cup 2026`
   }, [team])
-
-  // Sync URL + localStorage
-  useEffect(() => {
-    if (!liveData) return
-    writeURLParams(selectedTeamId, selectedDate, selectedStage)
-    lsSet('wc26_team', selectedTeamId)
-  }, [selectedTeamId, selectedDate, selectedStage, liveData])
-
-  const handleTeamChange  = useCallback((id)    => { setSelectedTeamId(id); setSelectedStage('auto') }, [])
-  const handleDateChange  = useCallback((date)  => setSelectedDate(date), [])
-  const handleStageSelect = useCallback((stage) => setSelectedStage(stage), [])
 
   if (error)     return <ErrorScreen message={error} />
   if (!liveData) return <Loading message="Loading match data…" />
