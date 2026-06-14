@@ -87,130 +87,118 @@ const ALL_TEAMS = [
   { id:'panama',      name:'Panama',         flag:'🇵🇦', group:'L', confederation:'CONCACAF', fifaRank:76 },
 ];
 
+// ─── Shared knockout fixtures (eliminates duplication) ────────────────────────
+const SF_DALLAS  = { match:101, date:'2026-07-14', city:'Dallas',       venue:'AT&T Stadium',          opponentDesc:'Winner QF bracket' }
+const SF_ATLANTA = { match:102, date:'2026-07-15', city:'Atlanta',      venue:'Mercedes-Benz Stadium', opponentDesc:'Winner QF bracket' }
+const FINAL_FIX  = { match:104, date:'2026-07-19', city:'New Jersey',  venue:'MetLife Stadium',        opponentDesc:'Winner other SF' }
+
+const SF = { dallas: SF_DALLAS, atlanta: SF_ATLANTA }
+
+function makePath(r32, r16, qf, sfKey) {
+  return { r32, r16, qf, sf: SF[sfKey], final: FINAL_FIX }
+}
+
 // ─── Bracket path routing table ───────────────────────────────────────────────
 // Maps group-finish-position to the team's full knockout path.
 // Key: "GROUP-POSITION" (e.g. "D-1" = Group D winner)
+// sf/final shared via makePath(); only r32/r16/qf are unique per path.
 const BRACKET_PATHS = {
-  'A-1':{ r32:{match:79, date:'2026-06-28',city:'Mexico City',  venue:'Estadio Azteca',          opponentDesc:'Best 3rd from C/E/F/H/I'},
-          r16:{match:93, date:'2026-07-05',city:'Guadalajara',  venue:'Estadio Guadalajara',     opponentDesc:'Winner Match 79'},
-          qf: {match:97, date:'2026-07-09',city:'Guadalajara',  venue:'Estadio Guadalajara',     opponentDesc:'Winner Match 93'},
-          sf: {match:101,date:'2026-07-14',city:'Dallas',       venue:'AT&T Stadium',            opponentDesc:'Winner QF bracket'},
-          final:{match:104,date:'2026-07-19',city:'New Jersey',  venue:'MetLife Stadium',         opponentDesc:'Winner other SF'}},
-  'A-2':{ r32:{match:80, date:'2026-06-29',city:'Atlanta',      venue:'Mercedes-Benz Stadium',   opponentDesc:'Best 3rd from E/H/I/J/K'},
-          r16:{match:94, date:'2026-07-06',city:'Seattle',      venue:'Lumen Field',             opponentDesc:'Winner Match 80'},
-          qf: {match:98, date:'2026-07-10',city:'Los Angeles',  venue:'SoFi Stadium',            opponentDesc:'Winner Match 94'},
-          sf: {match:102,date:'2026-07-15',city:'Atlanta',      venue:'Mercedes-Benz Stadium',   opponentDesc:'Winner QF bracket'},
-          final:{match:104,date:'2026-07-19',city:'New Jersey',  venue:'MetLife Stadium',         opponentDesc:'Winner other SF'}},
-  'B-1':{ r32:{match:85, date:'2026-07-02',city:'Boston',       venue:'Gillette Stadium',        opponentDesc:'Best 3rd from E/F/G/I/J'},
-          r16:{match:96, date:'2026-07-07',city:'Vancouver',    venue:'BC Place',                opponentDesc:'Winner Match 85'},
-          qf: {match:100,date:'2026-07-11',city:'Kansas City',  venue:'Arrowhead Stadium',       opponentDesc:'Winner Match 96'},
-          sf: {match:101,date:'2026-07-14',city:'Dallas',       venue:'AT&T Stadium',            opponentDesc:'Winner QF bracket'},
-          final:{match:104,date:'2026-07-19',city:'New Jersey',  venue:'MetLife Stadium',         opponentDesc:'Winner other SF'}},
-  'B-2':{ r32:{match:82, date:'2026-07-01',city:'Seattle',      venue:'Lumen Field',             opponentDesc:'Best 3rd from A/E/H/I/J'},
-          r16:{match:94, date:'2026-07-06',city:'Seattle',      venue:'Lumen Field',             opponentDesc:'Winner Match 82'},
-          qf: {match:98, date:'2026-07-10',city:'Los Angeles',  venue:'SoFi Stadium',            opponentDesc:'Winner Match 94'},
-          sf: {match:102,date:'2026-07-15',city:'Atlanta',      venue:'Mercedes-Benz Stadium',   opponentDesc:'Winner QF bracket'},
-          final:{match:104,date:'2026-07-19',city:'New Jersey',  venue:'MetLife Stadium',         opponentDesc:'Winner other SF'}},
-  'C-1':{ r32:{match:87, date:'2026-07-03',city:'Kansas City',  venue:'Arrowhead Stadium',       opponentDesc:'Best 3rd from D/E/I/J/L'},
-          r16:{match:96, date:'2026-07-07',city:'Vancouver',    venue:'BC Place',                opponentDesc:'Winner Match 86'},
-          qf: {match:100,date:'2026-07-11',city:'Kansas City',  venue:'Arrowhead Stadium',       opponentDesc:'Winner Match 96'},
-          sf: {match:101,date:'2026-07-14',city:'Dallas',       venue:'AT&T Stadium',            opponentDesc:'Winner QF bracket'},
-          final:{match:104,date:'2026-07-19',city:'New Jersey',  venue:'MetLife Stadium',         opponentDesc:'Winner other SF'}},
-  'C-2':{ r32:{match:88, date:'2026-07-03',city:'Dallas',       venue:'AT&T Stadium',            opponentDesc:'Runner-up Group D'},
-          r16:{match:95, date:'2026-07-07',city:'Atlanta',      venue:'Mercedes-Benz Stadium',   opponentDesc:'Winner Match 87'},
-          qf: {match:99, date:'2026-07-11',city:'Miami',        venue:'Hard Rock Stadium',       opponentDesc:'Winner Match 95'},
-          sf: {match:102,date:'2026-07-15',city:'Atlanta',      venue:'Mercedes-Benz Stadium',   opponentDesc:'Winner QF bracket'},
-          final:{match:104,date:'2026-07-19',city:'New Jersey',  venue:'MetLife Stadium',         opponentDesc:'Winner other SF'}},
-  'D-1':{ r32:{match:81, date:'2026-07-01',city:'San Francisco',venue:"Levi's Stadium",          opponentDesc:'Best 3rd from B/E/F/I/J'},
-          r16:{match:94, date:'2026-07-06',city:'Seattle',      venue:'Lumen Field',             opponentDesc:'Winner Group G (Match 82)'},
-          qf: {match:98, date:'2026-07-10',city:'Los Angeles',  venue:'SoFi Stadium',            opponentDesc:'Winner Match 94'},
-          sf: {match:102,date:'2026-07-15',city:'Atlanta',      venue:'Mercedes-Benz Stadium',   opponentDesc:'Winner QF bracket'},
-          final:{match:104,date:'2026-07-19',city:'New Jersey',  venue:'MetLife Stadium',         opponentDesc:'Winner other SF'}},
-  'D-2':{ r32:{match:88, date:'2026-07-03',city:'Dallas',       venue:'AT&T Stadium',            opponentDesc:'Winner Group C'},
-          r16:{match:95, date:'2026-07-07',city:'Atlanta',      venue:'Mercedes-Benz Stadium',   opponentDesc:'Winner Match 87'},
-          qf: {match:99, date:'2026-07-11',city:'Miami',        venue:'Hard Rock Stadium',       opponentDesc:'Winner Match 95'},
-          sf: {match:102,date:'2026-07-15',city:'Atlanta',      venue:'Mercedes-Benz Stadium',   opponentDesc:'Winner QF bracket'},
-          final:{match:104,date:'2026-07-19',city:'New Jersey',  venue:'MetLife Stadium',         opponentDesc:'Winner other SF'}},
-  'E-1':{ r32:{match:81, date:'2026-07-01',city:'San Francisco',venue:"Levi's Stadium",          opponentDesc:'Best 3rd from B/E/F/I/J'},
-          r16:{match:94, date:'2026-07-06',city:'Seattle',      venue:'Lumen Field',             opponentDesc:'Winner Match 82'},
-          qf: {match:98, date:'2026-07-10',city:'Los Angeles',  venue:'SoFi Stadium',            opponentDesc:'Winner Match 94'},
-          sf: {match:102,date:'2026-07-15',city:'Atlanta',      venue:'Mercedes-Benz Stadium',   opponentDesc:'Winner QF bracket'},
-          final:{match:104,date:'2026-07-19',city:'New Jersey',  venue:'MetLife Stadium',         opponentDesc:'Winner other SF'}},
-  'E-2':{ r32:{match:86, date:'2026-07-02',city:'Miami',        venue:'Hard Rock Stadium',       opponentDesc:'Winner Group J'},
-          r16:{match:96, date:'2026-07-07',city:'Vancouver',    venue:'BC Place',                opponentDesc:'Winner Match 86'},
-          qf: {match:100,date:'2026-07-11',city:'Kansas City',  venue:'Arrowhead Stadium',       opponentDesc:'Winner Match 96'},
-          sf: {match:101,date:'2026-07-14',city:'Dallas',       venue:'AT&T Stadium',            opponentDesc:'Winner QF bracket'},
-          final:{match:104,date:'2026-07-19',city:'New Jersey',  venue:'MetLife Stadium',         opponentDesc:'Winner other SF'}},
-  'F-1':{ r32:{match:88, date:'2026-07-03',city:'Dallas',       venue:'AT&T Stadium',            opponentDesc:'Runner-up Group D'},
-          r16:{match:95, date:'2026-07-07',city:'Atlanta',      venue:'Mercedes-Benz Stadium',   opponentDesc:'Winner Match 87'},
-          qf: {match:99, date:'2026-07-11',city:'Miami',        venue:'Hard Rock Stadium',       opponentDesc:'Winner Match 95'},
-          sf: {match:102,date:'2026-07-15',city:'Atlanta',      venue:'Mercedes-Benz Stadium',   opponentDesc:'Winner QF bracket'},
-          final:{match:104,date:'2026-07-19',city:'New Jersey',  venue:'MetLife Stadium',         opponentDesc:'Winner other SF'}},
-  'F-2':{ r32:{match:87, date:'2026-07-03',city:'Kansas City',  venue:'Arrowhead Stadium',       opponentDesc:'Winner Group K'},
-          r16:{match:96, date:'2026-07-07',city:'Vancouver',    venue:'BC Place',                opponentDesc:'Winner Match 86'},
-          qf: {match:100,date:'2026-07-11',city:'Kansas City',  venue:'Arrowhead Stadium',       opponentDesc:'Winner Match 96'},
-          sf: {match:101,date:'2026-07-14',city:'Dallas',       venue:'AT&T Stadium',            opponentDesc:'Winner QF bracket'},
-          final:{match:104,date:'2026-07-19',city:'New Jersey',  venue:'MetLife Stadium',         opponentDesc:'Winner other SF'}},
-  'G-1':{ r32:{match:82, date:'2026-07-01',city:'Seattle',      venue:'Lumen Field',             opponentDesc:'Best 3rd from A/E/H/I/J'},
-          r16:{match:94, date:'2026-07-06',city:'Seattle',      venue:'Lumen Field',             opponentDesc:'Winner Group D (Match 81)'},
-          qf: {match:98, date:'2026-07-10',city:'Los Angeles',  venue:'SoFi Stadium',            opponentDesc:'Winner Match 94'},
-          sf: {match:102,date:'2026-07-15',city:'Atlanta',      venue:'Mercedes-Benz Stadium',   opponentDesc:'Winner QF bracket'},
-          final:{match:104,date:'2026-07-19',city:'New Jersey',  venue:'MetLife Stadium',         opponentDesc:'Winner other SF'}},
-  'G-2':{ r32:{match:88, date:'2026-07-03',city:'Dallas',       venue:'AT&T Stadium',            opponentDesc:'Runner-up Group D'},
-          r16:{match:95, date:'2026-07-07',city:'Atlanta',      venue:'Mercedes-Benz Stadium',   opponentDesc:'Winner Match 87'},
-          qf: {match:99, date:'2026-07-11',city:'Miami',        venue:'Hard Rock Stadium',       opponentDesc:'Winner Match 95'},
-          sf: {match:102,date:'2026-07-15',city:'Atlanta',      venue:'Mercedes-Benz Stadium',   opponentDesc:'Winner QF bracket'},
-          final:{match:104,date:'2026-07-19',city:'New Jersey',  venue:'MetLife Stadium',         opponentDesc:'Winner other SF'}},
-  'H-1':{ r32:{match:84, date:'2026-07-02',city:'Los Angeles',  venue:'SoFi Stadium',            opponentDesc:'Runner-up Group J'},
-          r16:{match:96, date:'2026-07-07',city:'Vancouver',    venue:'BC Place',                opponentDesc:'Winner Match 85'},
-          qf: {match:100,date:'2026-07-11',city:'Kansas City',  venue:'Arrowhead Stadium',       opponentDesc:'Winner Match 96'},
-          sf: {match:101,date:'2026-07-14',city:'Dallas',       venue:'AT&T Stadium',            opponentDesc:'Winner QF bracket'},
-          final:{match:104,date:'2026-07-19',city:'New Jersey',  venue:'MetLife Stadium',         opponentDesc:'Winner other SF'}},
-  'H-2':{ r32:{match:80, date:'2026-06-29',city:'Atlanta',      venue:'Mercedes-Benz Stadium',   opponentDesc:'Winner Group L'},
-          r16:{match:94, date:'2026-07-06',city:'Seattle',      venue:'Lumen Field',             opponentDesc:'Winner Match 80'},
-          qf: {match:98, date:'2026-07-10',city:'Los Angeles',  venue:'SoFi Stadium',            opponentDesc:'Winner Match 94'},
-          sf: {match:102,date:'2026-07-15',city:'Atlanta',      venue:'Mercedes-Benz Stadium',   opponentDesc:'Winner QF bracket'},
-          final:{match:104,date:'2026-07-19',city:'New Jersey',  venue:'MetLife Stadium',         opponentDesc:'Winner other SF'}},
-  'I-1':{ r32:{match:85, date:'2026-07-02',city:'Boston',       venue:'Gillette Stadium',        opponentDesc:'Best 3rd from E/F/G/I/J'},
-          r16:{match:96, date:'2026-07-07',city:'Vancouver',    venue:'BC Place',                opponentDesc:'Winner Match 85'},
-          qf: {match:100,date:'2026-07-11',city:'Kansas City',  venue:'Arrowhead Stadium',       opponentDesc:'Winner Match 96'},
-          sf: {match:101,date:'2026-07-14',city:'Dallas',       venue:'AT&T Stadium',            opponentDesc:'Winner QF bracket'},
-          final:{match:104,date:'2026-07-19',city:'New Jersey',  venue:'MetLife Stadium',         opponentDesc:'Winner other SF'}},
-  'I-2':{ r32:{match:86, date:'2026-07-02',city:'Miami',        venue:'Hard Rock Stadium',       opponentDesc:'Winner Group J'},
-          r16:{match:96, date:'2026-07-07',city:'Vancouver',    venue:'BC Place',                opponentDesc:'Winner Match 86'},
-          qf: {match:100,date:'2026-07-11',city:'Kansas City',  venue:'Arrowhead Stadium',       opponentDesc:'Winner Match 96'},
-          sf: {match:101,date:'2026-07-14',city:'Dallas',       venue:'AT&T Stadium',            opponentDesc:'Winner QF bracket'},
-          final:{match:104,date:'2026-07-19',city:'New Jersey',  venue:'MetLife Stadium',         opponentDesc:'Winner other SF'}},
-  'J-1':{ r32:{match:79, date:'2026-06-28',city:'Mexico City',  venue:'Estadio Azteca',          opponentDesc:'Best 3rd from C/E/F/H/I'},
-          r16:{match:93, date:'2026-07-05',city:'Guadalajara',  venue:'Estadio Guadalajara',     opponentDesc:'Winner Match 79'},
-          qf: {match:97, date:'2026-07-09',city:'Guadalajara',  venue:'Estadio Guadalajara',     opponentDesc:'Winner Match 93'},
-          sf: {match:101,date:'2026-07-14',city:'Dallas',       venue:'AT&T Stadium',            opponentDesc:'Winner QF bracket'},
-          final:{match:104,date:'2026-07-19',city:'New Jersey',  venue:'MetLife Stadium',         opponentDesc:'Winner other SF'}},
-  'J-2':{ r32:{match:84, date:'2026-07-02',city:'Los Angeles',  venue:'SoFi Stadium',            opponentDesc:'Winner Group H'},
-          r16:{match:96, date:'2026-07-07',city:'Vancouver',    venue:'BC Place',                opponentDesc:'Winner Match 85'},
-          qf: {match:100,date:'2026-07-11',city:'Kansas City',  venue:'Arrowhead Stadium',       opponentDesc:'Winner Match 96'},
-          sf: {match:101,date:'2026-07-14',city:'Dallas',       venue:'AT&T Stadium',            opponentDesc:'Winner QF bracket'},
-          final:{match:104,date:'2026-07-19',city:'New Jersey',  venue:'MetLife Stadium',         opponentDesc:'Winner other SF'}},
-  'K-1':{ r32:{match:80, date:'2026-06-29',city:'Atlanta',      venue:'Mercedes-Benz Stadium',   opponentDesc:'Best 3rd from E/H/I/J/K'},
-          r16:{match:94, date:'2026-07-06',city:'Seattle',      venue:'Lumen Field',             opponentDesc:'Winner Match 80'},
-          qf: {match:98, date:'2026-07-10',city:'Los Angeles',  venue:'SoFi Stadium',            opponentDesc:'Winner Match 94'},
-          sf: {match:102,date:'2026-07-15',city:'Atlanta',      venue:'Mercedes-Benz Stadium',   opponentDesc:'Winner QF bracket'},
-          final:{match:104,date:'2026-07-19',city:'New Jersey',  venue:'MetLife Stadium',         opponentDesc:'Winner other SF'}},
-  'K-2':{ r32:{match:83, date:'2026-06-29',city:'Toronto',      venue:'BMO Field',               opponentDesc:'Runner-up Group L'},
-          r16:{match:95, date:'2026-07-07',city:'Atlanta',      venue:'Mercedes-Benz Stadium',   opponentDesc:'Winner Match 83'},
-          qf: {match:99, date:'2026-07-11',city:'Miami',        venue:'Hard Rock Stadium',       opponentDesc:'Winner Match 95'},
-          sf: {match:102,date:'2026-07-15',city:'Atlanta',      venue:'Mercedes-Benz Stadium',   opponentDesc:'Winner QF bracket'},
-          final:{match:104,date:'2026-07-19',city:'New Jersey',  venue:'MetLife Stadium',         opponentDesc:'Winner other SF'}},
-  'L-1':{ r32:{match:83, date:'2026-06-29',city:'Toronto',      venue:'BMO Field',               opponentDesc:'Runner-up Group K'},
-          r16:{match:95, date:'2026-07-07',city:'Atlanta',      venue:'Mercedes-Benz Stadium',   opponentDesc:'Winner Match 83'},
-          qf: {match:99, date:'2026-07-11',city:'Miami',        venue:'Hard Rock Stadium',       opponentDesc:'Winner Match 95'},
-          sf: {match:102,date:'2026-07-15',city:'Atlanta',      venue:'Mercedes-Benz Stadium',   opponentDesc:'Winner QF bracket'},
-          final:{match:104,date:'2026-07-19',city:'New Jersey',  venue:'MetLife Stadium',         opponentDesc:'Winner other SF'}},
-  'L-2':{ r32:{match:80, date:'2026-06-29',city:'Atlanta',      venue:'Mercedes-Benz Stadium',   opponentDesc:'Winner Group K'},
-          r16:{match:94, date:'2026-07-06',city:'Seattle',      venue:'Lumen Field',             opponentDesc:'Winner Match 80'},
-          qf: {match:98, date:'2026-07-10',city:'Los Angeles',  venue:'SoFi Stadium',            opponentDesc:'Winner Match 94'},
-          sf: {match:102,date:'2026-07-15',city:'Atlanta',      venue:'Mercedes-Benz Stadium',   opponentDesc:'Winner QF bracket'},
-          final:{match:104,date:'2026-07-19',city:'New Jersey',  venue:'MetLife Stadium',         opponentDesc:'Winner other SF'}},
+  'A-1': makePath({match:79, date:'2026-06-28',city:'Mexico City',  venue:'Estadio Azteca',          opponentDesc:'Best 3rd from C/E/F/H/I'},
+                  {match:93, date:'2026-07-05',city:'Guadalajara',  venue:'Estadio Guadalajara',     opponentDesc:'Winner Match 79'},
+                  {match:97, date:'2026-07-09',city:'Guadalajara',  venue:'Estadio Guadalajara',     opponentDesc:'Winner Match 93'},
+                  'dallas'),
+  'A-2': makePath({match:80, date:'2026-06-29',city:'Atlanta',      venue:'Mercedes-Benz Stadium',   opponentDesc:'Best 3rd from E/H/I/J/K'},
+                  {match:94, date:'2026-07-06',city:'Seattle',      venue:'Lumen Field',             opponentDesc:'Winner Match 80'},
+                  {match:98, date:'2026-07-10',city:'Los Angeles',  venue:'SoFi Stadium',            opponentDesc:'Winner Match 94'},
+                  'atlanta'),
+  'B-1': makePath({match:85, date:'2026-07-02',city:'Boston',       venue:'Gillette Stadium',        opponentDesc:'Best 3rd from E/F/G/I/J'},
+                  {match:96, date:'2026-07-07',city:'Vancouver',    venue:'BC Place',                opponentDesc:'Winner Match 85'},
+                  {match:100,date:'2026-07-11',city:'Kansas City',  venue:'Arrowhead Stadium',       opponentDesc:'Winner Match 96'},
+                  'dallas'),
+  'B-2': makePath({match:82, date:'2026-07-01',city:'Seattle',      venue:'Lumen Field',             opponentDesc:'Best 3rd from A/E/H/I/J'},
+                  {match:94, date:'2026-07-06',city:'Seattle',      venue:'Lumen Field',             opponentDesc:'Winner Match 82'},
+                  {match:98, date:'2026-07-10',city:'Los Angeles',  venue:'SoFi Stadium',            opponentDesc:'Winner Match 94'},
+                  'atlanta'),
+  'C-1': makePath({match:87, date:'2026-07-03',city:'Kansas City',  venue:'Arrowhead Stadium',       opponentDesc:'Best 3rd from D/E/I/J/L'},
+                  {match:96, date:'2026-07-07',city:'Vancouver',    venue:'BC Place',                opponentDesc:'Winner Match 86'},
+                  {match:100,date:'2026-07-11',city:'Kansas City',  venue:'Arrowhead Stadium',       opponentDesc:'Winner Match 96'},
+                  'dallas'),
+  'C-2': makePath({match:88, date:'2026-07-03',city:'Dallas',       venue:'AT&T Stadium',            opponentDesc:'Runner-up Group D'},
+                  {match:95, date:'2026-07-07',city:'Atlanta',      venue:'Mercedes-Benz Stadium',   opponentDesc:'Winner Match 87'},
+                  {match:99, date:'2026-07-11',city:'Miami',        venue:'Hard Rock Stadium',       opponentDesc:'Winner Match 95'},
+                  'atlanta'),
+  'D-1': makePath({match:81, date:'2026-07-01',city:'San Francisco',venue:"Levi's Stadium",          opponentDesc:'Best 3rd from B/E/F/I/J'},
+                  {match:94, date:'2026-07-06',city:'Seattle',      venue:'Lumen Field',             opponentDesc:'Winner Group G (Match 82)'},
+                  {match:98, date:'2026-07-10',city:'Los Angeles',  venue:'SoFi Stadium',            opponentDesc:'Winner Match 94'},
+                  'atlanta'),
+  'D-2': makePath({match:88, date:'2026-07-03',city:'Dallas',       venue:'AT&T Stadium',            opponentDesc:'Winner Group C'},
+                  {match:95, date:'2026-07-07',city:'Atlanta',      venue:'Mercedes-Benz Stadium',   opponentDesc:'Winner Match 87'},
+                  {match:99, date:'2026-07-11',city:'Miami',        venue:'Hard Rock Stadium',       opponentDesc:'Winner Match 95'},
+                  'atlanta'),
+  'E-1': makePath({match:81, date:'2026-07-01',city:'San Francisco',venue:"Levi's Stadium",          opponentDesc:'Best 3rd from B/E/F/I/J'},
+                  {match:94, date:'2026-07-06',city:'Seattle',      venue:'Lumen Field',             opponentDesc:'Winner Match 82'},
+                  {match:98, date:'2026-07-10',city:'Los Angeles',  venue:'SoFi Stadium',            opponentDesc:'Winner Match 94'},
+                  'atlanta'),
+  'E-2': makePath({match:86, date:'2026-07-02',city:'Miami',        venue:'Hard Rock Stadium',       opponentDesc:'Winner Group J'},
+                  {match:96, date:'2026-07-07',city:'Vancouver',    venue:'BC Place',                opponentDesc:'Winner Match 86'},
+                  {match:100,date:'2026-07-11',city:'Kansas City',  venue:'Arrowhead Stadium',       opponentDesc:'Winner Match 96'},
+                  'dallas'),
+  'F-1': makePath({match:88, date:'2026-07-03',city:'Dallas',       venue:'AT&T Stadium',            opponentDesc:'Runner-up Group D'},
+                  {match:95, date:'2026-07-07',city:'Atlanta',      venue:'Mercedes-Benz Stadium',   opponentDesc:'Winner Match 87'},
+                  {match:99, date:'2026-07-11',city:'Miami',        venue:'Hard Rock Stadium',       opponentDesc:'Winner Match 95'},
+                  'atlanta'),
+  'F-2': makePath({match:87, date:'2026-07-03',city:'Kansas City',  venue:'Arrowhead Stadium',       opponentDesc:'Winner Group K'},
+                  {match:96, date:'2026-07-07',city:'Vancouver',    venue:'BC Place',                opponentDesc:'Winner Match 86'},
+                  {match:100,date:'2026-07-11',city:'Kansas City',  venue:'Arrowhead Stadium',       opponentDesc:'Winner Match 96'},
+                  'dallas'),
+  'G-1': makePath({match:82, date:'2026-07-01',city:'Seattle',      venue:'Lumen Field',             opponentDesc:'Best 3rd from A/E/H/I/J'},
+                  {match:94, date:'2026-07-06',city:'Seattle',      venue:'Lumen Field',             opponentDesc:'Winner Group D (Match 81)'},
+                  {match:98, date:'2026-07-10',city:'Los Angeles',  venue:'SoFi Stadium',            opponentDesc:'Winner Match 94'},
+                  'atlanta'),
+  'G-2': makePath({match:88, date:'2026-07-03',city:'Dallas',       venue:'AT&T Stadium',            opponentDesc:'Runner-up Group D'},
+                  {match:95, date:'2026-07-07',city:'Atlanta',      venue:'Mercedes-Benz Stadium',   opponentDesc:'Winner Match 87'},
+                  {match:99, date:'2026-07-11',city:'Miami',        venue:'Hard Rock Stadium',       opponentDesc:'Winner Match 95'},
+                  'atlanta'),
+  'H-1': makePath({match:84, date:'2026-07-02',city:'Los Angeles',  venue:'SoFi Stadium',            opponentDesc:'Runner-up Group J'},
+                  {match:96, date:'2026-07-07',city:'Vancouver',    venue:'BC Place',                opponentDesc:'Winner Match 85'},
+                  {match:100,date:'2026-07-11',city:'Kansas City',  venue:'Arrowhead Stadium',       opponentDesc:'Winner Match 96'},
+                  'dallas'),
+  'H-2': makePath({match:80, date:'2026-06-29',city:'Atlanta',      venue:'Mercedes-Benz Stadium',   opponentDesc:'Winner Group L'},
+                  {match:94, date:'2026-07-06',city:'Seattle',      venue:'Lumen Field',             opponentDesc:'Winner Match 80'},
+                  {match:98, date:'2026-07-10',city:'Los Angeles',  venue:'SoFi Stadium',            opponentDesc:'Winner Match 94'},
+                  'atlanta'),
+  'I-1': makePath({match:85, date:'2026-07-02',city:'Boston',       venue:'Gillette Stadium',        opponentDesc:'Best 3rd from E/F/G/I/J'},
+                  {match:96, date:'2026-07-07',city:'Vancouver',    venue:'BC Place',                opponentDesc:'Winner Match 85'},
+                  {match:100,date:'2026-07-11',city:'Kansas City',  venue:'Arrowhead Stadium',       opponentDesc:'Winner Match 96'},
+                  'dallas'),
+  'I-2': makePath({match:86, date:'2026-07-02',city:'Miami',        venue:'Hard Rock Stadium',       opponentDesc:'Winner Group J'},
+                  {match:96, date:'2026-07-07',city:'Vancouver',    venue:'BC Place',                opponentDesc:'Winner Match 86'},
+                  {match:100,date:'2026-07-11',city:'Kansas City',  venue:'Arrowhead Stadium',       opponentDesc:'Winner Match 96'},
+                  'dallas'),
+  'J-1': makePath({match:79, date:'2026-06-28',city:'Mexico City',  venue:'Estadio Azteca',          opponentDesc:'Best 3rd from C/E/F/H/I'},
+                  {match:93, date:'2026-07-05',city:'Guadalajara',  venue:'Estadio Guadalajara',     opponentDesc:'Winner Match 79'},
+                  {match:97, date:'2026-07-09',city:'Guadalajara',  venue:'Estadio Guadalajara',     opponentDesc:'Winner Match 93'},
+                  'dallas'),
+  'J-2': makePath({match:84, date:'2026-07-02',city:'Los Angeles',  venue:'SoFi Stadium',            opponentDesc:'Winner Group H'},
+                  {match:96, date:'2026-07-07',city:'Vancouver',    venue:'BC Place',                opponentDesc:'Winner Match 85'},
+                  {match:100,date:'2026-07-11',city:'Kansas City',  venue:'Arrowhead Stadium',       opponentDesc:'Winner Match 96'},
+                  'dallas'),
+  'K-1': makePath({match:80, date:'2026-06-29',city:'Atlanta',      venue:'Mercedes-Benz Stadium',   opponentDesc:'Best 3rd from E/H/I/J/K'},
+                  {match:94, date:'2026-07-06',city:'Seattle',      venue:'Lumen Field',             opponentDesc:'Winner Match 80'},
+                  {match:98, date:'2026-07-10',city:'Los Angeles',  venue:'SoFi Stadium',            opponentDesc:'Winner Match 94'},
+                  'atlanta'),
+  'K-2': makePath({match:83, date:'2026-06-29',city:'Toronto',      venue:'BMO Field',               opponentDesc:'Runner-up Group L'},
+                  {match:95, date:'2026-07-07',city:'Atlanta',      venue:'Mercedes-Benz Stadium',   opponentDesc:'Winner Match 83'},
+                  {match:99, date:'2026-07-11',city:'Miami',        venue:'Hard Rock Stadium',       opponentDesc:'Winner Match 95'},
+                  'atlanta'),
+  'L-1': makePath({match:83, date:'2026-06-29',city:'Toronto',      venue:'BMO Field',               opponentDesc:'Runner-up Group K'},
+                  {match:95, date:'2026-07-07',city:'Atlanta',      venue:'Mercedes-Benz Stadium',   opponentDesc:'Winner Match 83'},
+                  {match:99, date:'2026-07-11',city:'Miami',        venue:'Hard Rock Stadium',       opponentDesc:'Winner Match 95'},
+                  'atlanta'),
+  'L-2': makePath({match:80, date:'2026-06-29',city:'Atlanta',      venue:'Mercedes-Benz Stadium',   opponentDesc:'Winner Group K'},
+                  {match:94, date:'2026-07-06',city:'Seattle',      venue:'Lumen Field',             opponentDesc:'Winner Match 80'},
+                  {match:98, date:'2026-07-10',city:'Los Angeles',  venue:'SoFi Stadium',            opponentDesc:'Winner Match 94'},
+                  'atlanta'),
 };
 
 // Team name → ID mapping for football-data.org responses
@@ -436,7 +424,7 @@ const GROUP_SCHEDULE = {
      {md:3,h:'croatia',    a:'ghana',      d:'2026-06-27',v:'Lincoln Financial Field, Philadelphia'}],
 };
 
-function buildGroupResults(teamId, group, allMatches) {
+function buildGroupResults(teamId, group, matchIndex) {
   const sched = GROUP_SCHEDULE[group] || [];
   return sched
     .filter(g => g.h === teamId || g.a === teamId)
@@ -445,11 +433,7 @@ function buildGroupResults(teamId, group, allMatches) {
       const isHome  = g.h === teamId;
       const oppId   = isHome ? g.a : g.h;
       const oppInfo = ALL_TEAMS.find(t => t.id === oppId) || {};
-      const match   = allMatches.find(m => {
-        const hId = nameToId(m.homeTeam?.name);
-        const aId = nameToId(m.awayTeam?.name);
-        return hId === g.h && aId === g.a;
-      });
+      const match   = matchIndex.get(`${g.h}:${g.a}`);
 
       let result = null, score = null;
       if (match?.status === 'FINISHED') {
@@ -604,6 +588,14 @@ async function main() {
 
   log(`Standings: ${Object.keys(rawStandings).length} groups | Matches: ${allMatches.length} | Polymarket: ${Object.keys(polyProbs).length} teams`);
 
+  // Index matches by "homeId:awayId" for O(1) lookup
+  const matchIndex = new Map();
+  for (const m of allMatches) {
+    const hId = nameToId(m.homeTeam?.name);
+    const aId = nameToId(m.awayTeam?.name);
+    if (hId && aId) matchIndex.set(`${hId}:${aId}`, m);
+  }
+
   // Build group data
   const groupsData = {};
   for (const g of 'ABCDEFGHIJKL'.split('')) {
@@ -625,7 +617,7 @@ async function main() {
     }
 
     // Full recalculation
-    const groupResults  = buildGroupResults(t.id, t.group, allMatches);
+    const groupResults  = buildGroupResults(t.id, t.group, matchIndex);
     const advanceProbs  = calcProbs(t.id, t.group, rawStandings, polyProbs);
     const teamPath      = buildPath(t.id, t.group, rawStandings);
     const possibleOpps  = buildOpponents(t.id, t.group, rawStandings, polyProbs);
