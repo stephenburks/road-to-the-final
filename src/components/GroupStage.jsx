@@ -158,9 +158,10 @@ export default function GroupStage({ team, data }) {
 	let feederKey = null
 
 	if (r16Opps.length && data.groups) {
+		const r16Names = new Set(r16Opps.map(o => o.opponent).filter(Boolean))
 		for (const [key, g] of Object.entries(data.groups)) {
 			if (key === team.group) continue
-			if (g.standings?.some(s => r16Opps.some(o => o.opponent === s.team))) {
+			if (g.standings?.some(s => r16Names.has(s.team))) {
 				feederGroup = g
 				feederKey = key
 				break

@@ -51,9 +51,15 @@ export default function App() {
   const data         = selectedDate === 'live' ? liveData : snapData
   const isHistorical = selectedDate !== 'live'
 
+  const teamsMap = useMemo(() => {
+    if (!data?.teams && !liveData?.teams) return new Map()
+    const source = data?.teams ?? liveData?.teams ?? []
+    return new Map(source.map(t => [t.id, t]))
+  }, [data, liveData])
+
   const team = useMemo(
-    () => data?.teams?.find(t => t.id === selectedTeamId) ?? liveData?.teams?.find(t => t.id === DEFAULT_TEAM),
-    [data, liveData, selectedTeamId]
+    () => teamsMap.get(selectedTeamId) ?? teamsMap.get(DEFAULT_TEAM) ?? null,
+    [teamsMap, selectedTeamId]
   )
 
   const activeStage = useMemo(() => resolveActiveStage(selectedStage, team), [selectedStage, team])
