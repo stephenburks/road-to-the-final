@@ -263,6 +263,20 @@ export default function OpponentWatchlist({ team, activeStage, data }) {
 					<GroupTable groupKey={r32Feeder.key} groupData={r32Feeder.group} highlightTeamId={null} />
 				</div>
 			)}
+			{!r32Feeder && activeStage === 'r32' && (
+				<div
+					style={{
+						marginTop: 20,
+						fontFamily: 'var(--font-mono)',
+						fontSize: 10,
+						color: 'var(--text-dim)',
+						textAlign: 'center',
+						lineHeight: 1.5,
+					}}
+				>
+					Opponent pool spans multiple groups — will narrow as group stage standings update.
+				</div>
+			)}
 
 			{r16WithPct && (
 				<MatchupMatrix flatList={flatList} team={team} maxPct={maxPct} data={data} />
@@ -282,6 +296,20 @@ export default function OpponentWatchlist({ team, activeStage, data }) {
 						Potential R16 opponent&rsquo;s group — if {team.name} wins Group {team.group}, they face the winner of Group {r16Feeder.key}
 					</div>
 					<GroupTable groupKey={r16Feeder.key} groupData={r16Feeder.group} highlightTeamId={null} />
+				</div>
+			)}
+			{!r16Feeder && activeStage === 'r16' && (
+				<div
+					style={{
+						marginTop: r16WithPct ? 24 : 0,
+						fontFamily: 'var(--font-mono)',
+						fontSize: 10,
+						color: 'var(--text-dim)',
+						textAlign: 'center',
+						lineHeight: 1.5,
+					}}
+				>
+					Opponent depends on R32 results across multiple matches — will resolve as the knockout rounds progress.
 				</div>
 			)}
 

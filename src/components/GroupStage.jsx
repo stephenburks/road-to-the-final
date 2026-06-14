@@ -178,6 +178,21 @@ export default function GroupStage({ team, data }) {
 					<GroupTable groupKey={feeder.key} groupData={feeder.group} highlightTeamId={null} />
 				</div>
 			)}
+			{!feeder && (
+				<div
+					style={{
+						fontFamily: 'var(--font-mono)',
+						fontSize: 10,
+						color: 'var(--text-dim)',
+						textAlign: 'center',
+						lineHeight: 1.5,
+						alignSelf: 'center',
+						padding: '0 16px',
+					}}
+				>
+					The Round of 16 opponent isn&rsquo;t determined by a single group — depends on results from multiple R32 matches. Will update as the bracket fills in.
+				</div>
+			)}
 			</div>
 
 			<div
