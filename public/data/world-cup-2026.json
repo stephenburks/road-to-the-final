@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-14T20:15:04.131Z",
+  "lastUpdated": "2026-06-14T22:02:46.042Z",
   "snapshotDate": "2026-06-14",
   "isHistorical": false,
   "tournament": {
@@ -151,8 +151,8 @@
         },
         {
           "pos": 4,
-          "teamId": null,
-          "team": "Bosnia-Herzegovina",
+          "teamId": "bosnia",
+          "team": "Bosnia & Herz.",
           "played": 1,
           "w": 0,
           "d": 1,
@@ -161,14 +161,14 @@
           "ga": 1,
           "gd": 0,
           "pts": 1,
-          "flag": "🏳️"
+          "flag": "🇧🇦"
         }
       ],
       "winProbabilities": {
         "switzerland": 30,
         "canada": 15,
         "qatar": 0,
-        "null": 0
+        "bosnia": 0
       }
     },
     "C": {
@@ -379,8 +379,8 @@
           "w": 0,
           "d": 1,
           "l": 0,
-          "gf": 0,
-          "ga": 0,
+          "gf": 2,
+          "ga": 2,
           "gd": 0,
           "pts": 1,
           "flag": "🇯🇵"
@@ -393,8 +393,8 @@
           "w": 0,
           "d": 1,
           "l": 0,
-          "gf": 0,
-          "ga": 0,
+          "gf": 2,
+          "ga": 2,
           "gd": 0,
           "pts": 1,
           "flag": "🇳🇱"
@@ -505,8 +505,8 @@
       "standings": [
         {
           "pos": 1,
-          "teamId": null,
-          "team": "Cape Verde Islands",
+          "teamId": "capeverde",
+          "team": "Cape Verde",
           "played": 0,
           "w": 0,
           "d": 0,
@@ -515,7 +515,7 @@
           "ga": 0,
           "gd": 0,
           "pts": 0,
-          "flag": "🏳️"
+          "flag": "🇨🇻"
         },
         {
           "pos": 2,
@@ -561,7 +561,7 @@
         }
       ],
       "winProbabilities": {
-        "null": 1,
+        "capeverde": 1,
         "saudiarabia": 1,
         "spain": 15,
         "uruguay": 2
@@ -2146,17 +2146,6 @@
       "possibleOpponents": {
         "r32": [
           {
-            "group": "A",
-            "likelyTeam": "Czechia",
-            "flag": "🇨🇿",
-            "fifaRank": 37,
-            "difficulty": 2,
-            "label": "Favorable",
-            "color": "#22C55E",
-            "note": "3rd-place team from Group A",
-            "pct": null
-          },
-          {
             "group": "E",
             "likelyTeam": "Ivory Coast",
             "flag": "🇨🇮",
@@ -2168,14 +2157,25 @@
             "pct": null
           },
           {
-            "group": "H",
-            "likelyTeam": "Spain",
-            "flag": "🇪🇸",
-            "fifaRank": 1,
-            "difficulty": 5,
-            "label": "Danger",
-            "color": "#EF4444",
-            "note": "3rd-place team from Group H",
+            "group": "F",
+            "likelyTeam": "Sweden",
+            "flag": "🇸🇪",
+            "fifaRank": 29,
+            "difficulty": 3,
+            "label": "Moderate",
+            "color": "#F59E0B",
+            "note": "3rd-place team from Group F",
+            "pct": null
+          },
+          {
+            "group": "G",
+            "likelyTeam": "Iran",
+            "flag": "🇮🇷",
+            "fifaRank": 21,
+            "difficulty": 3,
+            "label": "Moderate",
+            "color": "#F59E0B",
+            "note": "3rd-place team from Group G",
             "pct": null
           },
           {
@@ -2307,13 +2307,13 @@
         "r32": [
           {
             "group": "D",
-            "likelyTeam": "Türkiye",
-            "flag": "🇹🇷",
-            "fifaRank": 25,
+            "likelyTeam": "Australia",
+            "flag": "🇦🇺",
+            "fifaRank": 26,
             "difficulty": 3,
             "label": "Moderate",
             "color": "#F59E0B",
-            "note": "3rd-place team from Group D",
+            "note": "Runner-up of Group D",
             "pct": null
           }
         ],
@@ -2423,13 +2423,13 @@
         "r32": [
           {
             "group": "D",
-            "likelyTeam": "Türkiye",
-            "flag": "🇹🇷",
-            "fifaRank": 25,
+            "likelyTeam": "Australia",
+            "flag": "🇦🇺",
+            "fifaRank": 26,
             "difficulty": 3,
             "label": "Moderate",
             "color": "#F59E0B",
-            "note": "3rd-place team from Group D",
+            "note": "Runner-up of Group D",
             "pct": null
           }
         ],
@@ -2539,13 +2539,13 @@
         "r32": [
           {
             "group": "D",
-            "likelyTeam": "Türkiye",
-            "flag": "🇹🇷",
-            "fifaRank": 25,
+            "likelyTeam": "Australia",
+            "flag": "🇦🇺",
+            "fifaRank": 26,
             "difficulty": 3,
             "label": "Moderate",
             "color": "#F59E0B",
-            "note": "3rd-place team from Group D",
+            "note": "Runner-up of Group D",
             "pct": null
           }
         ],
@@ -2654,6 +2654,17 @@
       "possibleOpponents": {
         "r32": [
           {
+            "group": "D",
+            "likelyTeam": "Türkiye",
+            "flag": "🇹🇷",
+            "fifaRank": 25,
+            "difficulty": 3,
+            "label": "Moderate",
+            "color": "#F59E0B",
+            "note": "3rd-place team from Group D",
+            "pct": null
+          },
+          {
             "group": "E",
             "likelyTeam": "Ivory Coast",
             "flag": "🇨🇮",
@@ -2662,28 +2673,6 @@
             "label": "Favorable",
             "color": "#22C55E",
             "note": "3rd-place team from Group E",
-            "pct": null
-          },
-          {
-            "group": "F",
-            "likelyTeam": "Sweden",
-            "flag": "🇸🇪",
-            "fifaRank": 29,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group F",
-            "pct": null
-          },
-          {
-            "group": "H",
-            "likelyTeam": "Spain",
-            "flag": "🇪🇸",
-            "fifaRank": 1,
-            "difficulty": 5,
-            "label": "Danger",
-            "color": "#EF4444",
-            "note": "3rd-place team from Group H",
             "pct": null
           },
           {
@@ -2706,6 +2695,17 @@
             "label": "Favorable",
             "color": "#22C55E",
             "note": "3rd-place team from Group J",
+            "pct": null
+          },
+          {
+            "group": "L",
+            "likelyTeam": "Croatia",
+            "flag": "🇭🇷",
+            "fifaRank": 10,
+            "difficulty": 5,
+            "label": "Danger",
+            "color": "#EF4444",
+            "note": "3rd-place team from Group L",
             "pct": null
           }
         ],
@@ -2975,13 +2975,13 @@
         "r32": [
           {
             "group": "C",
-            "likelyTeam": "Brazil",
-            "flag": "🇧🇷",
-            "fifaRank": 4,
-            "difficulty": 5,
-            "label": "Danger",
-            "color": "#EF4444",
-            "note": "3rd-place team from Group C",
+            "likelyTeam": "Scotland",
+            "flag": "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
+            "fifaRank": 39,
+            "difficulty": 2,
+            "label": "Favorable",
+            "color": "#22C55E",
+            "note": "Winner of Group C",
             "pct": null
           }
         ],
@@ -3091,13 +3091,13 @@
         "r32": [
           {
             "group": "C",
-            "likelyTeam": "Brazil",
-            "flag": "🇧🇷",
-            "fifaRank": 4,
-            "difficulty": 5,
-            "label": "Danger",
-            "color": "#EF4444",
-            "note": "3rd-place team from Group C",
+            "likelyTeam": "Scotland",
+            "flag": "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
+            "fifaRank": 39,
+            "difficulty": 2,
+            "label": "Favorable",
+            "color": "#22C55E",
+            "note": "Winner of Group C",
             "pct": null
           }
         ],
@@ -3207,13 +3207,13 @@
         "r32": [
           {
             "group": "C",
-            "likelyTeam": "Brazil",
-            "flag": "🇧🇷",
-            "fifaRank": 4,
-            "difficulty": 5,
-            "label": "Danger",
-            "color": "#EF4444",
-            "note": "3rd-place team from Group C",
+            "likelyTeam": "Scotland",
+            "flag": "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
+            "fifaRank": 39,
+            "difficulty": 2,
+            "label": "Favorable",
+            "color": "#22C55E",
+            "note": "Winner of Group C",
             "pct": null
           }
         ],
@@ -3483,13 +3483,13 @@
         "r32": [
           {
             "group": "J",
-            "likelyTeam": "Jordan",
-            "flag": "🇯🇴",
-            "fifaRank": 66,
-            "difficulty": 1,
-            "label": "Favorable",
-            "color": "#22C55E",
-            "note": "3rd-place team from Group J",
+            "likelyTeam": "Algeria",
+            "flag": "🇩🇿",
+            "fifaRank": 35,
+            "difficulty": 3,
+            "label": "Moderate",
+            "color": "#F59E0B",
+            "note": "Winner of Group J",
             "pct": null
           }
         ],
@@ -3599,13 +3599,13 @@
         "r32": [
           {
             "group": "J",
-            "likelyTeam": "Jordan",
-            "flag": "🇯🇴",
-            "fifaRank": 66,
-            "difficulty": 1,
-            "label": "Favorable",
-            "color": "#22C55E",
-            "note": "3rd-place team from Group J",
+            "likelyTeam": "Algeria",
+            "flag": "🇩🇿",
+            "fifaRank": 35,
+            "difficulty": 3,
+            "label": "Moderate",
+            "color": "#F59E0B",
+            "note": "Winner of Group J",
             "pct": null
           }
         ],
@@ -3715,13 +3715,13 @@
         "r32": [
           {
             "group": "J",
-            "likelyTeam": "Jordan",
-            "flag": "🇯🇴",
-            "fifaRank": 66,
-            "difficulty": 1,
-            "label": "Favorable",
-            "color": "#22C55E",
-            "note": "3rd-place team from Group J",
+            "likelyTeam": "Algeria",
+            "flag": "🇩🇿",
+            "fifaRank": 35,
+            "difficulty": 3,
+            "label": "Moderate",
+            "color": "#F59E0B",
+            "note": "Winner of Group J",
             "pct": null
           }
         ],
@@ -3742,8 +3742,8 @@
           "matchday": 1,
           "opponent": "Japan",
           "opponentFlag": "🇯🇵",
-          "result": null,
-          "score": null,
+          "result": "D",
+          "score": "2-2",
           "date": "2026-06-14",
           "venue": "Arrowhead Stadium, Kansas City",
           "scorers": []
@@ -3831,13 +3831,13 @@
         "r32": [
           {
             "group": "K",
-            "likelyTeam": "Portugal",
-            "flag": "🇵🇹",
-            "fifaRank": 6,
-            "difficulty": 5,
-            "label": "Danger",
-            "color": "#EF4444",
-            "note": "3rd-place team from Group K",
+            "likelyTeam": "DR Congo",
+            "flag": "🇨🇩",
+            "fifaRank": 56,
+            "difficulty": 1,
+            "label": "Favorable",
+            "color": "#22C55E",
+            "note": "Winner of Group K",
             "pct": null
           }
         ],
@@ -3858,8 +3858,8 @@
           "matchday": 1,
           "opponent": "Netherlands",
           "opponentFlag": "🇳🇱",
-          "result": null,
-          "score": null,
+          "result": "D",
+          "score": "2-2",
           "date": "2026-06-14",
           "venue": "Arrowhead Stadium, Kansas City",
           "scorers": []
@@ -3947,57 +3947,13 @@
         "r32": [
           {
             "group": "D",
-            "likelyTeam": "Türkiye",
-            "flag": "🇹🇷",
-            "fifaRank": 25,
+            "likelyTeam": "Australia",
+            "flag": "🇦🇺",
+            "fifaRank": 26,
             "difficulty": 3,
             "label": "Moderate",
             "color": "#F59E0B",
-            "note": "3rd-place team from Group D",
-            "pct": null
-          },
-          {
-            "group": "I",
-            "likelyTeam": "Norway",
-            "flag": "🇳🇴",
-            "fifaRank": 31,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group I",
-            "pct": null
-          },
-          {
-            "group": "J",
-            "likelyTeam": "Jordan",
-            "flag": "🇯🇴",
-            "fifaRank": 66,
-            "difficulty": 1,
-            "label": "Favorable",
-            "color": "#22C55E",
-            "note": "3rd-place team from Group J",
-            "pct": null
-          },
-          {
-            "group": "L",
-            "likelyTeam": "Croatia",
-            "flag": "🇭🇷",
-            "fifaRank": 10,
-            "difficulty": 5,
-            "label": "Danger",
-            "color": "#EF4444",
-            "note": "3rd-place team from Group L",
-            "pct": null
-          },
-          {
-            "group": "C",
-            "likelyTeam": "Brazil",
-            "flag": "🇧🇷",
-            "fifaRank": 4,
-            "difficulty": 5,
-            "label": "Danger",
-            "color": "#EF4444",
-            "note": "3rd-place team from Group C",
+            "note": "Runner-up of Group D",
             "pct": null
           }
         ],
