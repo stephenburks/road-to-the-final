@@ -1,4 +1,4 @@
-.outer { position: relative; }
+.outer { position: relative; max-width: 100%; overflow-x: hidden; }
 
 .connector {
   position: absolute;
@@ -53,6 +53,9 @@
   font-weight: 700;
   font-size: 11px;
   margin-bottom: 3px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .cardDate {
@@ -61,16 +64,25 @@
   color: var(--text-dim);
   letter-spacing: 0.04em;
   margin-bottom: 4px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .cardCity {
   font-size: 10px;
   margin-bottom: 3px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .cardDetail {
   font-size: 9px;
   font-family: var(--font-mono);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .cardConditional {
