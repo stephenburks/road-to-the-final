@@ -87,3 +87,27 @@ export function lsGet(key) {
 export function lsSet(key, value) {
   try { localStorage.setItem(key, value) } catch { /* noop */ }
 }
+
+export function getFeederGroup(team, data) {
+	if (!data?.groups) return null
+
+	const desc = team.path?.r16?.opponentDesc ?? ''
+	const m = desc.match(/Winner\s+Group\s+([A-L])|Runner-up\s+Group\s+([A-L])/i)
+	const parsed = (m?.[1] ?? m?.[2])?.toUpperCase()
+	if (parsed && parsed !== team.group && data.groups[parsed]) {
+		return { key: parsed, group: data.groups[parsed] }
+	}
+
+	const r16Opps = team.possibleOpponents?.r16
+	if (r16Opps?.length) {
+		const r16Names = new Set(r16Opps.map(o => o.opponent).filter(Boolean))
+		for (const [key, g] of Object.entries(data.groups)) {
+			if (key === team.group) continue
+			if (g.standings?.some(s => r16Names.has(s.team))) {
+				return { key, group: g }
+			}
+		}
+	}
+
+	return null
+}

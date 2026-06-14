@@ -1,6 +1,7 @@
 import { STAGE_LABELS } from '../constants'
-import { formatDate } from '../utils'
+import { formatDate, getFeederGroup } from '../utils'
 import SectionLabel from './ui/SectionLabel'
+import { GroupTable } from './GroupStage'
 import styles from './OpponentWatchlist.module.css'
 
 function DiffPips({ level, color, max = 5 }) {
@@ -244,7 +245,31 @@ export default function OpponentWatchlist({ team, activeStage, data }) {
 				</div>
 			)}
 
-			{r16WithPct && <MatchupMatrix flatList={flatList} team={team} maxPct={maxPct} data={data} />}
+			{r16WithPct && (
+				<>
+					<MatchupMatrix flatList={flatList} team={team} maxPct={maxPct} data={data} />
+					{(() => {
+						const feeder = getFeederGroup(team, data)
+						if (!feeder) return null
+						return (
+							<div style={{ marginTop: 24 }}>
+								<div
+									style={{
+										fontFamily: 'var(--font-mono)',
+										fontSize: 9,
+										color: 'var(--text-dim)',
+										marginBottom: 8,
+										lineHeight: 1.5,
+									}}
+								>
+									Potential R16 opponent&rsquo;s group — if {team.name} wins Group {team.group}, they face the winner of Group {feeder.key}
+								</div>
+								<GroupTable groupKey={feeder.key} groupData={feeder.group} highlightTeamId={null} />
+							</div>
+						)
+					})()}
+				</>
+			)}
 
 			{activeStage === 'r32' && (hasFlat || hasScenarios) && (
 				<div className={styles.legend} role="note" aria-label="Difficulty key">
