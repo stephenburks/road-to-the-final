@@ -1,4 +1,4 @@
-.outer { position: relative; max-width: 100%; overflow-x: hidden; }
+.outer { position: relative; max-width: 100%; overflow: hidden; }
 
 .connector {
   position: absolute;
@@ -49,40 +49,32 @@
 }
 
 .cardTitle {
-  font-family: var(--font-display);
-  font-weight: 700;
-  font-size: 11px;
-  margin-bottom: 3px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+	font-family: var(--font-display);
+	font-weight: 700;
+	font-size: 11px;
+	margin-bottom: 3px;
+	word-break: break-word;
 }
 
 .cardDate {
-  font-family: var(--font-mono);
-  font-size: 9px;
-  color: var(--text-dim);
-  letter-spacing: 0.04em;
-  margin-bottom: 4px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+	font-family: var(--font-mono);
+	font-size: 9px;
+	color: var(--text-dim);
+	letter-spacing: 0.04em;
+	margin-bottom: 4px;
+	word-break: break-word;
 }
 
 .cardCity {
-  font-size: 10px;
-  margin-bottom: 3px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+	font-size: 10px;
+	margin-bottom: 3px;
+	word-break: break-word;
 }
 
 .cardDetail {
-  font-size: 9px;
-  font-family: var(--font-mono);
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+	font-size: 9px;
+	font-family: var(--font-mono);
+	word-break: break-word;
 }
 
 .cardConditional {
@@ -96,6 +88,10 @@
 }
 
 @media (max-width: 900px) {
-  .grid { grid-template-columns: repeat(3, 1fr); }
-  .connector { display: none; }
+	.grid { grid-template-columns: repeat(3, 1fr); }
+	.connector { display: none; }
+}
+
+@media (max-width: 580px) {
+	.grid { grid-template-columns: repeat(2, 1fr); }
 }
