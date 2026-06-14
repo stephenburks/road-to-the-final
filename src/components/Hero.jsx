@@ -44,7 +44,7 @@ export default function Hero({ team, activeStage, isHistorical }) {
 
 	return (
 		<div className="wrap">
-			<section className={styles.hero} aria-labelledby="hero-heading">
+			<section className={styles.hero} id="hero" aria-labelledby="hero-heading">
 				<div className={styles.glow} aria-hidden="true" />
 
 				<div className={styles.inner}>
