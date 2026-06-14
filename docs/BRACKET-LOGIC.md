@@ -195,8 +195,8 @@ Legend:
 
 ---
 
-## What needs to be fixed
+## What was fixed (verified 2026-06-14)
 
-Based on the pattern above, there are **13 paths** where the **R32** opponent is a single specific group (Winner X or Runner-up X). These teams should show a single opponent card with the current standings leader/runner-up of that group. Currently the `buildOpponents()` function only builds 3rd-place pool entries, which is wrong for these 13 paths.
-
-The regex pattern in `getFeederGroup` needs to also handle R32 opponentDesc strings (not just R16). The same pattern applies — `Winner Group X` and `Runner-up Group X` appear in R32 opponentDesc strings too.
+- ✅ **R32 opponent building**: `buildOpponents()` now parses `opponentDesc` from `BRACKET_PATHS` and builds opponent lists for both single-group (`Winner Group X`, `Runner-up Group X`) and multi-group pool (`Best 3rd from ...`) R32 matchups — fixing the 13 paths that were previously missed.
+- ✅ **`getFeederGroup` handles R32 + R16**: The regex pattern in `getFeederGroup` (see `src/utils.js:94-96`) already handles any stage — the function accepts a `stage` parameter and reads `team.path?.[stage]?.opponentDesc`. It's called for both R32 and R16 in `OpponentWatchlist.jsx` (lines 206-207).
+- ⏸️ **R16 opponent probability lists**: `buildOpponents()` still returns `r16: []` — R16 probability computation via mapping R32 match slots to opposing R32 slots is deferred. The feeder group standings display provides a functional alternative for paths where R16 opponent is a single identifiable group.

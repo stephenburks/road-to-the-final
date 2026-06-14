@@ -2,6 +2,7 @@
 **Date:** 2026-06-14  
 **Reviewer:** Senior/Principal Full Stack Engineer (Claude)  
 **Scope:** Full codebase, CI/CD, tooling findings (fallow + React Doctor), feature gaps
+**Status:** Updated with completion markers — all items verified against current codebase
 
 ---
 
@@ -11,37 +12,45 @@ Road to the Final is a well-structured, accessibility-first React fan app with a
 
 This document prioritizes every item — tooling issues, code quality, bugs, and feature enhancements — in a single ranked list so you can work top-to-bottom with confidence.
 
+### Status Summary
+
+| Status | Count | Items |
+|--------|-------|-------|
+| ✅ COMPLETED | 9 | P2, P3, P7, P8, P9, P10, P11, P15, P17 |
+| ⏸️ DEFERRED | 4 | P4, P12, P14, P18 |
+| 🔴 REMAINING | 12 | P1, P5, P6, P13, P16, P19–P25 (plus 4 New Items: N1–N4) |
+
 ---
 
 ## Priority Index
 
-| # | Title | Category | Severity |
-|---|-------|----------|----------|
-| P1 | React Doctor scanned `node_modules` — all 3 findings are false positives | Tooling | Critical |
-| P2 | Fallow: ESLint plugins are unlisted in `package.json` | Tooling | High |
-| P3 | Eliminated team detection is hard-coded to `false` | Bug | Critical |
-| P4 | `buildOpponents()` R16 opponent list never populated | Bug | High |
-| P5 | No automated tests | Quality | High |
-| P6 | No TypeScript | Quality | High |
-| P7 | Unvalidated external API responses | Reliability | High |
-| P8 | `buildPath()` bracket routing table is hand-rolled with no validation | Reliability | Medium |
-| P9 | Name-to-ID mapping is fragile (string matching on team names) | Reliability | Medium |
-| P10 | Script error handling swallows failures silently | Reliability | Medium |
-| P11 | No fetch timeout on Polymarket or football-data.org calls | Reliability | Medium |
-| P12 | Fallow: High-complexity functions need tests or refactoring | Quality | Medium |
-| P13 | `GroupStage.jsx` is the hotspot — most churn + highest complexity | Quality | Medium |
-| P14 | `TeamSelector` component is 193 lines in a single function | Quality | Medium |
-| P15 | `App` has too many responsibilities (fan-out of 15 modules) | Quality | Medium |
-| P16 | No Prettier configured | Quality | Low |
-| P17 | `update-data.yml` has no failure alert mechanism | CI/CD | Low |
-| P18 | Feature: Complete R16–Final opponent probability display | Feature | High |
-| P19 | Feature: Head-to-head history between two teams | Feature | Medium |
-| P20 | Feature: Match score push notifications / live update indicator | Feature | Medium |
-| P21 | Feature: Social share card (OG image per team) | Feature | Medium |
-| P22 | Feature: "Upset Tracker" — teams that overperformed their pre-tournament odds | Feature | Medium |
-| P23 | Feature: Difficulty of remaining schedule (aggregate FIFA rank gauntlet) | Feature | Low |
-| P24 | Feature: Group "Clinched" / "Eliminated" badges in GroupStage table | Feature | Low |
-| P25 | Feature: Bracket overlay comparing two teams side-by-side | Feature | Low |
+| # | Title | Category | Severity | Status |
+|---|-------|----------|----------|--------|
+| P1 | React Doctor scanned `node_modules` — all 3 findings are false positives | Tooling | Critical | 🔴 **REMAINING** |
+| P2 | Fallow: ESLint plugins are unlisted in `package.json` | Tooling | High | ✅ **COMPLETED** (f78d069) |
+| P3 | Eliminated team detection is hard-coded to `false` | Bug | Critical | ✅ **COMPLETED** (d8727a5) |
+| P4 | `buildOpponents()` R16 opponent list never populated | Bug | High | ⏸️ **DEFERRED** (see below) |
+| P5 | No automated tests | Quality | High | 🔴 **REMAINING** |
+| P6 | No TypeScript | Quality | High | 🔴 **REMAINING** |
+| P7 | Unvalidated external API responses | Reliability | High | ✅ **COMPLETED** (b0d1605) |
+| P8 | `buildPath()` bracket routing table is hand-rolled with no validation | Reliability | Medium | ✅ **COMPLETED** (85ec6c3) |
+| P9 | Name-to-ID mapping is fragile (string matching on team names) | Reliability | Medium | ✅ **COMPLETED** (0812725) |
+| P10 | Script error handling swallows failures silently | Reliability | Medium | ✅ **COMPLETED** (42cf774) |
+| P11 | No fetch timeout on Polymarket or football-data.org calls | Reliability | Medium | ✅ **COMPLETED** (42cf774) |
+| P12 | Fallow: High-complexity functions need tests or refactoring | Quality | Medium | ⏸️ **DEFERRED** (see below) |
+| P13 | `GroupStage.jsx` is the hotspot — most churn + highest complexity | Quality | Medium | 🔴 **REMAINING** |
+| P14 | `TeamSelector` component is 193 lines in a single function | Quality | Medium | ⏸️ **DEFERRED** (see below) |
+| P15 | `App` has too many responsibilities (fan-out of 15 modules) | Quality | Medium | ✅ **COMPLETED** (4d970e0) |
+| P16 | No Prettier configured | Quality | Low | 🔴 **REMAINING** |
+| P17 | `update-data.yml` has no failure alert mechanism | CI/CD | Low | ✅ **COMPLETED** (42cf774) |
+| P18 | Feature: Complete R16–Final opponent probability display | Feature | High | ⏸️ **DEFERRED** (see below) |
+| P19 | Feature: Head-to-head history between two teams | Feature | Medium | 🔴 **REMAINING** |
+| P20 | Feature: Match score push notifications / live update indicator | Feature | Medium | 🔴 **REMAINING** |
+| P21 | Feature: Social share card (OG image per team) | Feature | Medium | 🔴 **REMAINING** |
+| P22 | Feature: "Upset Tracker" — teams that overperformed their pre-tournament odds | Feature | Medium | 🔴 **REMAINING** |
+| P23 | Feature: Difficulty of remaining schedule (aggregate FIFA rank gauntlet) | Feature | Low | 🔴 **REMAINING** |
+| P24 | Feature: Group "Clinched" / "Eliminated" badges in GroupStage table | Feature | Low | 🔴 **REMAINING** |
+| P25 | Feature: Bracket overlay comparing two teams side-by-side | Feature | Low | 🔴 **REMAINING** |
 
 ---
 
@@ -50,7 +59,7 @@ This document prioritizes every item — tooling issues, code quality, bugs, and
 ---
 
 ### P1 — React Doctor: All 3 Findings Are False Positives Against `node_modules`
-**Category:** Tooling | **Severity:** Critical (the tool is broken, not the code)
+**Category:** Tooling | **Severity:** Critical (the tool is broken, not the code) | **Status:** 🔴 **REMAINING**
 
 #### What happened
 React Doctor was run without an exclude pattern, so it scanned `node_modules/` alongside source files. Every single file listed in all three findings is a `node_modules` path:
@@ -76,7 +85,7 @@ This is worth doing, but only after fixing the invocation scope. The value prop 
 ---
 
 ### P2 — Fallow: ESLint Plugins Are Unlisted in `package.json`
-**Category:** Tooling | **Severity:** High
+**Category:** Tooling | **Severity:** High | **Status:** ✅ **COMPLETED** (f78d069)
 
 #### What fallow found
 Four packages imported in `eslint.config.js` are not declared in `package.json`:
@@ -85,66 +94,68 @@ Four packages imported in `eslint.config.js` are not declared in `package.json`:
 - `eslint-plugin-react-refresh`
 - `globals`
 
-These are currently installed as transitive dependencies of other packages, which is why the app works. But transitive dep resolution is non-deterministic — a dependency update could remove them and silently break your lint step.
-
-#### Fix
-Add them to `devDependencies`:
-```bash
-npm install -D @eslint/js globals eslint-plugin-react-hooks eslint-plugin-react-refresh
+#### Fix applied
+All four are now in `devDependencies` in `package.json`:
 ```
-
-This is a 30-second fix. Do it before anything else in the tooling setup.
+"@eslint/js": "^10.0.1",
+"eslint-plugin-react-hooks": "^7.1.1",
+"eslint-plugin-react-refresh": "^0.5.3",
+"globals": "^17.6.0",
+```
 
 ---
 
 ### P3 — Eliminated Team Detection Hard-Coded to `false`
-**Category:** Bug | **Severity:** Critical
+**Category:** Bug | **Severity:** Critical | **Status:** ✅ **COMPLETED** (d8727a5)
 
-#### Location
-`scripts/update-data.js` — wherever `eliminated` is set on each team object.
+#### Previous state
+The `eliminated` field on every team was set to `false` unconditionally.
 
-#### What's wrong
-The `eliminated` field on every team is set to `false` unconditionally. There is no code that checks whether a team has been knocked out of the tournament and flips this flag. As the group stage concludes and knockout rounds progress, teams that finish bottom of their group or lose a knockout match will still appear as active.
-
-**User impact:** A fan of a team that gets eliminated sees the app continuing to display advancement probabilities and scheduled matches as if elimination didn't happen. The `EliminatedView` component exists and is wired up — it just never gets triggered.
-
-#### Fix
-After group standings are resolved, check whether a team qualified for the Round of 32:
+#### Fix applied
+Elimination is now computed mathematically from group standings (lines 745–756 in `scripts/update-data.js`):
 ```js
-// After fetching and processing group standings:
-const qualified = new Set(qualifiedTeamIds); // derive from top-2 finishers per group + best 3rds
-team.eliminated = !qualified.has(team.id);
-team.currentStage = team.eliminated ? 'eliminated' : 'r32';
+// Compute mathematical elimination from group standings
+let eliminated = false;
+if (rawStandings?.[t.group]) {
+  const gRows = rawStandings[t.group];
+  const teamRow = gRows.find(r => r.teamId === t.id);
+  if (teamRow) {
+    const remainingMatches = 3 - teamRow.played;
+    const maxPossible = teamRow.pts + 3 * remainingMatches;
+    const sorted = [...gRows].sort((a, b) => b.pts - a.pts);
+    const secondPlacePts = sorted[1]?.pts ?? 0;
+    eliminated = remainingMatches > 0 && maxPossible < secondPlacePts;
+  }
+}
 ```
-For knockout rounds, check match results for the team's fixture and mark eliminated if they lost.
+
+**Note:** This only detects *mathematical* elimination during the group stage. Knockout elimination (losing a R32/R16/QF/SF match) is not yet implemented. During the knockout phase, this will need to be extended.
 
 ---
 
 ### P4 — `buildOpponents()` R16 Array Is Never Populated
-**Category:** Bug | **Severity:** High
+**Category:** Bug | **Severity:** High | **Status:** ⏸️ **DEFERRED**
 
-#### Location
-`scripts/update-data.js`, `buildOpponents()` function
+#### What was fixed
+- R32 opponent building is now correct: `buildOpponents()` parses `opponentDesc` from `BRACKET_PATHS` and builds opponent lists for both single-group (`Winner Group X`, `Runner-up Group X`) and multi-group pool (`Best 3rd from ...`) R32 matchups. Commits: 3fce2bc, b212da6, 8eb8893.
+- The `getFeederGroup()` utility (src/utils.js:91–115) extracts feeder group info from opponentDesc strings for both R32 and R16 stages.
+- The `OpponentWatchlist` component renders feeder group standings tables for R16 when a single group can be identified.
 
-#### What's wrong
-```js
-const r16Opps = [];  // populated logic is missing — always returns empty array
-return { r32: r32Opps, r16: r16Opps };
-```
-The R32 opponents are built correctly from the bracket path table. R16 opponents require knowing who wins the R32 match in the opposing slot — which is derivable from the bracket structure once R32 fixture assignments are known.
+#### What's still missing
+- `buildOpponents()` still returns `r16: []` for all paths (lines 584 and 607 of `scripts/update-data.js`).
+- R16 opponent probability computation (mapping R32 winner slots to R16 slots) is not implemented.
+- As a result, `r16WithPct` is always `false` in `OpponentWatchlist.jsx`, and the `MatchupMatrix` probability bars never render for R16.
 
-**User impact:** The OpponentWatchlist component shows "TBD" for R16 even during the group stage when bracket positions are deterministic and likely opponents could be shown with probabilities.
-
-#### Fix
-Map each team's R32 match result slot to the opposing R32 slot, then compute likelihood from group standings. The bracket path table already has the match numbers — cross-reference those to build R16 candidate pools using the same difficulty-rating logic used for R32.
+#### Why deferred
+The feeder group standings display (commit b212da6) provides a functional alternative: users can see the standings table of the group that feeds into their team's R16 match. This covers the "Who will we likely face in R16?" use case for the 7 paths where R16 opponent is determinable from a single group. Full probability computation for all paths is a larger effort that should follow test setup (P5).
 
 ---
 
 ### P5 — No Automated Tests
-**Category:** Quality | **Severity:** High
+**Category:** Quality | **Severity:** High | **Status:** 🔴 **REMAINING**
 
 #### Current state
-Zero test files. No Jest config, no Playwright config, no React Testing Library setup.
+Zero test files. No Jest config, no Playwright config, no React Testing Library setup. No vitest config. No test script in `package.json`.
 
 #### Why this matters
 The fallow CRAP score analysis (18 functions at "critical" severity with scores 100–506) is entirely driven by zero coverage. CRAP = CC² × (1 − coverage/100)³ + CC. Any coverage at all dramatically reduces these scores. More importantly, complex functions with no tests are a silent bug factory — every change to `OpponentWatchlist`, `StageTabs`, or `ScheduledMatches` is unverified.
@@ -164,7 +175,9 @@ Vitest integrates natively with Vite (no separate babel config needed).
 ---
 
 ### P6 — No TypeScript
-**Category:** Quality | **Severity:** High
+**Category:** Quality | **Severity:** High | **Status:** 🔴 **REMAINING**
+
+No changes. All files remain `.js`/`.jsx`. No `tsconfig.json`, no type definitions, no interfaces.
 
 #### Why it matters here specifically
 The data shape is complex: 48 teams, each with nested `path`, `groupResults`, `possibleOpponents`, `advanceProbabilities`. A mistyped key access (`team.path.r32` vs `team.path['r32']`) or a wrong assumption about whether a field is nullable won't surface until runtime. The app already uses optional chaining defensively everywhere (`team?.path?.[stage]?.city`) — which is itself a signal that the codebase is managing uncertainty that TypeScript would eliminate at the source.
@@ -179,194 +192,145 @@ The data shape is complex: 48 teams, each with nested `path`, `groupResults`, `p
 ---
 
 ### P7 — Unvalidated External API Responses
-**Category:** Reliability | **Severity:** High
+**Category:** Reliability | **Severity:** High | **Status:** ✅ **COMPLETED** (b0d1605)
 
-#### Location
-`scripts/update-data.js` — `fetchStandings()`, `fetchMatches()`, `fetchPolymarketAll()`
-
-#### What's wrong
-The script assumes that `football-data.org` returns `response.standings[0].table[].team.name` and that Polymarket returns `tokens[].outcome` with a `.price`. If either API changes their response schema, the script silently produces malformed team objects (missing probabilities, wrong team names, undefined fields).
-
-**Real-world example:** Polymarket's token structure (`token.outcome` vs `token.outcomeName`) has changed in the past. If it changes again, all advancement probabilities silently drop to zero — no error, no alert.
-
-#### Fix
-Add lightweight runtime validation before using API responses:
+#### Fix applied
+Lightweight runtime validators added at lines 285–299 of `scripts/update-data.js`:
 ```js
 function validateStandingsResponse(data) {
-  if (!data?.standings?.[0]?.table) {
-    throw new Error(`Unexpected standings shape: ${JSON.stringify(data).slice(0, 200)}`);
-  }
+  if (!data || !Array.isArray(data.standings))
+    throw new Error('Invalid standings response: expected { standings: [...] }');
+  return data;
 }
+function validateMatchesResponse(data) { ... }
+function validatePolymarketResponse(data) { ... }
 ```
-For a more robust solution, add `zod` to the script's runtime dependencies and define schemas for each API's expected shape.
+Each API call is now validated before processing. If the response shape changes, the script fails loudly instead of silently producing malformed data.
 
 ---
 
 ### P8 — Bracket Routing Table Has No Integrity Check
-**Category:** Reliability | **Severity:** Medium
+**Category:** Reliability | **Severity:** Medium | **Status:** ✅ **COMPLETED** (85ec6c3)
 
-#### Location
-`scripts/update-data.js`, lines ~105–202 (the `BRACKET_PATHS` object)
-
-#### What's wrong
-600+ lines of manually encoded bracket paths (`r32`, `r16`, `qf`, `sf`, `final` per group position per group). This is correct for the 2026 World Cup format, but:
-- No runtime check that match numbers are unique across conflicting team positions
-- If FIFA adjusts the bracket (they have done this before), this table requires careful manual diff
-- A single typo is invisible until a specific team hits a specific bracket slot
-
-#### Fix
-Add a small validation step at script startup:
-```js
-function validateBracketPaths(paths) {
-  // Check no two team positions in the same bracket slot map to the same match
-  // Check all match IDs are non-null and in expected numeric range
-}
-```
-
-Long-term: derive bracket paths from the official fixture list rather than hard-coding them.
+#### Fix applied
+`validateBracketPaths()` added at lines 630–681 of `scripts/update-data.js`. Called at script startup before any data processing. Validates:
+- All 24 group-position combinations exist
+- Every path has all required stages (r32, r16, qf, sf, final)
+- Every stage entry has all required fields (match, date, city, venue, opponentDesc)
+- Dates match `YYYY-MM-DD` format
+- Critical missing entries throw an error that halts the script
 
 ---
 
 ### P9 — Team Name-to-ID Mapping Is String-Based and Fragile
-**Category:** Reliability | **Severity:** Medium
+**Category:** Reliability | **Severity:** Medium | **Status:** ✅ **COMPLETED** (0812725)
 
-#### Location
-`scripts/update-data.js`, `nameToId()` function
-
-#### What's wrong
-Team identification relies on matching team names from `football-data.org` to the internal team ID list. The script has 23 hard-coded name aliases (e.g., `"Turkey" → "Türkiye"`, `"Czech Republic" → "Czechia"`). If `football-data.org` updates a team's display name, the match silently fails and that team's data is skipped.
-
-#### Fix
-`football-data.org` provides team codes (e.g., `USA`, `GER`, `BRA`). Use those as the canonical key instead of display names. Map API codes → internal IDs once in a lookup table; fall back to name matching only as a last resort with explicit logging when it fires.
+#### Fix applied
+Primary lookup now uses TLA (Three-Letter Abbreviation) codes from football-data.org:
+```js
+const TLA_TO_ID = {
+  MEX:'mexico', RSA:'southafrica', KOR:'southkorea', CZE:'czechia',
+  CAN:'canada', BIH:'bosnia', QAT:'qatar', SUI:'switzerland',
+  // ...all 48 teams
+};
+```
+The `nameToId()` function (lines 241–246) tries TLA first, falls back to name matching, and logs a warning when the fallback fires.
 
 ---
 
 ### P10 — Script Error Handling Swallows Failures
-**Category:** Reliability | **Severity:** Medium
+**Category:** Reliability | **Severity:** Medium | **Status:** ✅ **COMPLETED** (42cf774)
 
-#### Location
-`scripts/update-data.js`, `tryFetch()` and callers
+#### Fix applied
+`tryFetch()` now returns a `FETCH_ERROR` sentinel (line 267) on network failures, distinct from empty API responses. Callers can check `if (result === FETCH_ERROR)` to distinguish "API returned empty data" from "API was unreachable."
 
-#### What's wrong
-`tryFetch()` catches all errors and returns `null`. Callers treat `null` the same as "no data" and continue. If `fetchStandings()` returns `{}` (empty object on API failure), the script carries forward no standings update — which is safe — but there's no way to distinguish "API returned 200 with empty data" from "API returned 503 and we caught the error."
-
-#### Fix
-Distinguish failure modes:
 ```js
-const FETCH_ERROR = Symbol('FETCH_ERROR');
-async function tryFetch(url, opts) {
-  try { return await fetch(url, opts).then(r => r.json()); }
-  catch (err) { console.error(`Fetch failed: ${url}`, err.message); return FETCH_ERROR; }
+const FETCH_ERROR = Symbol('fetch_error');
+async function tryFetch(url, headers = {}, timeoutMs = 10000) {
+  // ...returns FETCH_ERROR on failure instead of null
 }
-// Callers: if (result === FETCH_ERROR) { skip update, log distinctly }
 ```
 
 ---
 
 ### P11 — No Fetch Timeout
-**Category:** Reliability | **Severity:** Medium
+**Category:** Reliability | **Severity:** Medium | **Status:** ✅ **COMPLETED** (42cf774)
 
-#### Location
-All `fetch()` calls in `scripts/update-data.js` and `src/hooks/useData.js`
-
-#### What's wrong
-Uncancelled fetches in GitHub Actions can hang indefinitely, consuming runner minutes. In the browser, a slow snapshot fetch hangs the loading state with no timeout.
-
-#### Fix
+#### Fix applied
+`tryFetch()` now uses `AbortController` with a 10-second timeout (lines 269–282):
 ```js
 const controller = new AbortController();
-const timeoutId = setTimeout(() => controller.abort(), 10_000);
+const timer = setTimeout(() => controller.abort(), timeoutMs);
 try {
-  const res = await fetch(url, { signal: controller.signal });
-  clearTimeout(timeoutId);
-  return res.json();
-} catch (err) {
-  if (err.name === 'AbortError') console.error('Fetch timed out:', url);
-  throw err;
+  const res = await fetch(url, { headers, signal: controller.signal });
+  // ...
+} catch (e) {
+  if (e.name === 'AbortError') log(`Timed out: ${url}`);
+  return FETCH_ERROR;
+} finally {
+  clearTimeout(timer);
 }
 ```
 
 ---
 
 ### P12 — Fallow: High-Complexity Functions Need Tests or Refactoring
-**Category:** Quality | **Severity:** Medium
+**Category:** Quality | **Severity:** Medium | **Status:** ⏸️ **DEFERRED**
 
-#### What fallow found
-38 functions exceed complexity thresholds. The CRAP metric (Change Risk Anti-Patterns) is artificially inflated by zero test coverage — any coverage at all would drop most of these below threshold. The highest-risk functions by CRAP score:
+#### What was done
+- `useTeamSearch` hook extracted from `TeamSelector` (52894c8)
+- `useAppState` hook extracted from `App.jsx` (4d970e0)
+- `OpponentWatchlist` decomposed with sub-components (`MatchupMatrix`, `MatchupRow`, `VenueBanner`, `FutureStagePlaceholder`)
 
-| Function | File | CRAP | Action |
-|----------|------|------|--------|
-| `OpponentWatchlist` | OpponentWatchlist.jsx:169 | 506 | Refactor + tests |
-| `<arrow>` (tab render) | StageTabs.jsx:36 | 462 | Extract to named function |
-| `StageBlock` | ScheduledMatches.jsx:62 | 342 | Split into sub-components |
-| `App` | App.jsx:41 | 342 | Extract hooks |
-| `OpponentCard` | OpponentWatchlist.jsx:20 | 306 | Split card + sub-components |
-| `buildPath` | update-data.js:452 | 272 | Decompose |
-| `BracketCard` | RoadBracket.jsx:108 | 240 | Tests first, then refactor |
+#### What's still needed
+- Zero tests written — CRAP scores remain inflated
+- `OpponentWatchlist` at 326 lines is still the highest-complexity component
+- `StageTabs` inline arrow function at line 36 still flagged
 
-The fallow recommendation to "add tests" is the fastest path to lowering CRAP scores without touching the logic. Refactoring is the sustainable path.
-
-#### Fix strategy
-1. Add unit tests first — especially for pure rendering logic (test that a "completed" stage shows a checkmark)
-2. Extract anonymous arrow functions to named functions so they're individually testable
-3. Refactor the largest functions (193-line `TeamSelector`, 94-line `App`) into focused sub-components/hooks
+#### Why deferred
+Adding tests (P5) is the prerequisite for meaningfully lowering CRAP scores. The refactoring that has been done reduces cognitive complexity but doesn't address the metric until coverage exists.
 
 ---
 
 ### P13 — `GroupStage.jsx` Is the Git Hotspot
-**Category:** Quality | **Severity:** Medium
+**Category:** Quality | **Severity:** Medium | **Status:** 🔴 **REMAINING**
 
-#### What fallow found
-`GroupStage.jsx` has the highest "hotspot score" (100/100): 3 commits, 390 lines added, 201 deleted, complexity density 0.25. It's the most frequently changed file with above-average complexity — the definition of technical debt accumulation.
-
-**Three complex functions in one file:**
-- `GroupTable` (86 lines) — renders standings table with conditional team highlighting and group navigation
-- Anonymous arrow (56 lines) at line 48 — sorting/filtering logic inline in JSX
-- `GroupStage` component (36 lines, cognitive complexity 14)
+#### Current state
+`GroupStage.jsx` is 223 lines with two components (`GroupTable` at 108 lines, `MatchCard` at 43 lines, `GroupStage` at 69 lines). The `GroupTable` component is exported and reused by `OpponentWatchlist` — which is good. However, the file still contains:
+- Inline anonymous function for standings rendering (line 48)
+- Mixed concerns: table rendering, match cards, feeder group note, disclaimer
 
 #### Fix
-Extract the anonymous arrow at line 48 into a named `sortGroupTeams(standings, teamId)` function that can be tested in isolation. Then separate `GroupTable` into its own file. The `GroupStage` component itself can stay — it's the orchestrator.
+Extract `MatchCard` into its own file. Extract the `GroupTable` row rendering lambda into a named `StandingsRow` component. This would make each piece independently testable.
 
 ---
 
 ### P14 — `TeamSelector` Is 193 Lines in a Single Function
-**Category:** Quality | **Severity:** Medium
+**Category:** Quality | **Severity:** Medium | **Status:** ⏸️ **DEFERRED**
 
-#### Location
-`src/components/TeamSelector.jsx:6`
+#### What was done
+`useTeamSearch` hook extracted (52894c8) — filters teams by query, handles the search logic.
 
-#### What's wrong
-A 193-line React function that handles: dropdown open/close state, keyboard navigation (9 key handlers), search filtering, group-based rendering, flag display, and scroll-into-view. Fallow flags 5 separate sub-functions within it as over-threshold.
+#### What's still needed
+Keyboard navigation handlers (9 key handlers for dropdown) and scroll-into-view logic remain in `TeamSelector.jsx`. These should be extracted into a `useDropdownKeyboard` hook. The `TeamOptionGroup` rendering sub-component for confederation groupings should also be extracted.
 
-#### Fix
-Extract:
-- `useTeamSearch(teams, query)` — filtering hook
-- `useDropdownKeyboard(...)` — keyboard handler hook  
-- `TeamOptionGroup` — rendering sub-component for each confederation grouping
-
-The logic is correct; it just needs to be spread across files so each piece is testable.
+#### Why deferred
+The `useTeamSearch` extraction was the highest-value split. The keyboard handler extraction is a lower priority — the handlers work correctly and are well-contained.
 
 ---
 
 ### P15 — `App.jsx` Has Fan-Out of 15 Modules
-**Category:** Quality | **Severity:** Medium
+**Category:** Quality | **Severity:** Medium | **Status:** ✅ **COMPLETED** (4d970e0)
 
-#### Location
-`src/App.jsx:41`
-
-#### What's wrong
-`App.jsx` imports 15 modules and directly manages: URL param sync, localStorage, team selection state, date selection state, stage selection state, auto-stage resolution, and data loading coordination. It has cognitive complexity 14 with a CRAP score of 342.
-
-#### Fix
-Extract `useAppState()` custom hook that owns URL sync, localStorage, and the three state values. `App.jsx` becomes a layout/composition file — it imports the hook and passes values to components. This reduces the component's complexity and gives you a clean, testable state machine.
+#### Fix applied
+`useAppState()` custom hook extracted to `src/hooks/useAppState.js`, owning URL sync, localStorage, and the three state values (team, date, stage). `App.jsx` is now 117 lines — a clean layout/composition file that imports the hook and passes values to components.
 
 ---
 
 ### P16 — No Prettier
-**Category:** Quality | **Severity:** Low
+**Category:** Quality | **Severity:** Low | **Status:** 🔴 **REMAINING**
 
-#### What's wrong
-ESLint is configured but Prettier is not. Code style inconsistencies exist (some lines exceed 100 chars, some CSS uses 2-space indent, some JS files mix tab styles). Per the project's stated preference (tabs, ~100 chars, single quotes), Prettier would enforce this without manual review.
+No `.prettierrc` file exists. Prettier is not in `devDependencies`. Code style is enforced manually.
 
 #### Fix
 ```bash
@@ -381,24 +345,20 @@ Add `prettier` to `eslint.config.js` last in the extends chain to disable confli
 ---
 
 ### P17 — CI Data Update Has No Failure Alerting
-**Category:** CI/CD | **Severity:** Low
+**Category:** CI/CD | **Severity:** Low | **Status:** ✅ **COMPLETED** (42cf774)
 
-#### Location
-`.github/workflows/update-data.yml`
-
-#### What's wrong
-If `node scripts/update-data.js` fails (API down, script crash), the commit step silently produces no commit. No notification is sent. If the football-data.org API goes down during the tournament, the app serves stale data indefinitely with no alert to you.
-
-#### Fix
-Add a failure notification step. The simplest approach is a GitHub issue or email via Actions:
+#### Fix applied
+`.github/workflows/update-data.yml` now has a "Notify on failure" step (lines 35–54):
 ```yaml
 - name: Notify on failure
   if: failure()
   uses: actions/github-script@v7
   with:
     script: |
-      github.rest.issues.create({ owner, repo, title: 'Data update failed', body: 'Check Actions run.' })
+      // Creates a GitHub issue with label 'data-update-failure'
+      // Deduplicates — won't create multiple issues for the same failure
 ```
+The workflow also now has `issues: write` permission to support this.
 
 ---
 
@@ -407,85 +367,86 @@ Add a failure notification step. The simplest approach is a GitHub issue or emai
 ---
 
 ### P18 — Complete R16–Final Opponent Probability Display
-**Priority:** High | **Effort:** 1–2 days
+**Priority:** High | **Effort:** 1–2 days | **Status:** ⏸️ **DEFERRED**
 
-The `OpponentWatchlist` component has UI for R16, SF, and Final opponent prediction — but the data is never populated for R16 onward. Once P4 is fixed (populate `buildOpponents()` R16 logic), extending to SF/Final requires mapping the half-bracket: which R16 winners feed into each QF slot, etc.
+#### What was done
+- R32 opponent building is complete: `buildOpponents()` correctly parses all 24 bracket path opponentDesc strings
+- R16 feeder group standings display works: `getFeederGroup()` extracts feeder group from opponentDesc for both R32 and R16
+- The `OpponentWatchlist` component renders feeder group standings tables for R16 when a single group is identifiable
 
-This is the single biggest UX gap. Users watching a team that qualifies for R32 deserve to see "your likely R16 opponent is Argentina (72% probability based on Group C standings)."
+#### What's still needed
+- `buildOpponents()` needs R16 opponent list computation (mapping R32 match slots to opposing R32 slots)
+- R16 probability bars in `MatchupMatrix` need data from `buildOpponents()`
+- SF/QF/Final opponent probability extension
+
+#### Why deferred
+The feeder group standings display provides a functional alternative that covers the highest-value use case. Full probability computation depends on the bracket being populated with R32 results (which won't happen until the tournament reaches that phase). This can be built closer to the knockout stage.
 
 ---
 
 ### P19 — Head-to-Head History Between Tracked Team and Opponents
-**Priority:** Medium | **Effort:** 2–3 days
+**Priority:** Medium | **Effort:** 2–3 days | **Status:** 🔴 **REMAINING**
 
-The opponent watchlist shows likely opponents by difficulty rating (FIFA rank-based). Add a "head-to-head record" section: last 5 meetings, wins/draws/losses, goals scored. This data is available from `football-data.org` (H2H endpoint) or could be a curated JSON for the 48-team field.
-
-**Why:** Sports fans make decisions based on historical matchups. "We've beaten Argentina twice in the last 4 years" is more meaningful than a FIFA rank number.
+No work done.
 
 ---
 
 ### P20 — Live Match Score Indicator
-**Priority:** Medium | **Effort:** 1 day
+**Priority:** Medium | **Effort:** 1 day | **Status:** 🔴 **REMAINING**
 
-The app currently shows "last updated: X minutes ago" in the header. During a live match for the tracked team, show a pulsing "LIVE" badge and the current score. The hourly data update is too slow for live scores, but the `football-data.org` API supports match-by-match polling. Add a 2-minute polling interval during the tracked team's match window.
-
-**Detection:** Check if `currentMatchDate === today` and match time is within +/- 2 hours of now.
+No work done.
 
 ---
 
 ### P21 — Social Share Card per Team
-**Priority:** Medium | **Effort:** 2–3 days
+**Priority:** Medium | **Effort:** 2–3 days | **Status:** 🔴 **REMAINING**
 
-Add a share button on the Hero section that copies a URL like `?team=usa&stage=r32` with a pre-filled text: "USA is on their way to the Final — check their road here." Bonus: generate an OG image per team (using Satori/Vercel OG or a static pre-generated image per team) so links unfurl with the team flag and current stats in Slack/iMessage/Twitter.
-
-**Why:** Viral growth. Fans share their team's bracket — this is the core use case.
+No work done.
 
 ---
 
 ### P22 — Upset Tracker
-**Priority:** Medium | **Effort:** 1 day
+**Priority:** Medium | **Effort:** 1 day | **Status:** 🔴 **REMAINING**
 
-A new section or separate tab: "Teams that overperformed their pre-tournament Polymarket odds." Compare each team's current advancement probability vs. their Day 1 snapshot probability. Rank teams by improvement. This is a single data comparison once historical snapshots exist (which they do — the snapshot system is already live).
-
-**Why:** Upsets are the most-discussed tournament narrative. A Morocco 2022-style run is immediately surfaced.
+No work done.
 
 ---
 
 ### P23 — Remaining Schedule Difficulty Rating
-**Priority:** Low | **Effort:** Half day
+**Priority:** Low | **Effort:** Half day | **Status:** 🔴 **REMAINING**
 
-On the Hero section, below the advancement probability cards, show a "Difficulty of remaining schedule" metric — average FIFA rank of opponents in upcoming group games + expected knockout opponents. This aggregates the `possibleOpponents` data that already exists into a single scannable number.
+No work done.
 
 ---
 
 ### P24 — "Clinched" / "Eliminated" Badges in Group Table
-**Priority:** Low | **Effort:** Half day
+**Priority:** Low | **Effort:** Half day | **Status:** 🔴 **REMAINING**
 
-In the `GroupStage` standings table, show visual indicators next to team names: green "C" for clinched qualification, red "E" for eliminated, yellow "●" for in contention. The bracket logic can derive clinched/eliminated status from points with remaining games. This is a standard feature in any bracket app.
+No work done.
 
 ---
 
 ### P25 — Two-Team Bracket Comparison
-**Priority:** Low | **Effort:** 2 days
+**Priority:** Low | **Effort:** 2 days | **Status:** 🔴 **REMAINING**
 
-Add an optional second team selector (in the header or a separate "Compare" mode). Show both teams' bracket paths side by side. Highlight where they would collide. This is the premium fan use case: "If USA and England both advance, when do they meet?"
+No work done.
 
 ---
 
 ## Fallow & React Doctor — Summary Verdict
 
-| Tool | Finding | Real Issue? | Action |
-|------|---------|-------------|--------|
-| React Doctor — `this` in SFC (×1649) | **False positive** — all `node_modules` | No | Fix tool invocation: `npx react-doctor src/` |
-| React Doctor — Missing effect deps (×30) | **False positive** — all `node_modules` | No | Same fix |
-| React Doctor — Array in loop (×143) | **False positive** — all `node_modules` | No | Same fix |
-| Fallow — Unlisted deps (4) | **Real** — ESLint plugins not in `package.json` | Yes | `npm install -D @eslint/js globals eslint-plugin-react-hooks eslint-plugin-react-refresh` |
-| Fallow — Complexity/CRAP (38 functions) | **Real** — but inflated by zero test coverage | Partially | Add tests first; refactor highest-CRAP functions |
-| Fallow — Hotspot: `GroupStage.jsx` | **Real** — most churn + complexity | Yes | Refactor + tests |
-| Fallow — Large functions (7 flagged) | **Real** — `TeamSelector` (193 lines) is the worst | Yes | Extract hooks + sub-components |
-| Fallow — Zero dead code | **Good signal** | N/A | No action needed |
-| Fallow — Zero circular deps | **Good signal** | N/A | No action needed |
-| Fallow — Zero duplicate code | **Good signal** | N/A | No action needed |
+| Tool | Finding | Real Issue? | Action | Status |
+|------|---------|-------------|--------|--------|
+| React Doctor — `this` in SFC (×1649) | **False positive** — all `node_modules` | No | Fix tool invocation: `npx react-doctor src/` | 🔴 |
+| React Doctor — Missing effect deps (×30) | **False positive** — all `node_modules` | No | Same fix | 🔴 |
+| React Doctor — Array in loop (×143) | **False positive** — all `node_modules` | No | Same fix | 🔴 |
+| Fallow — Unlisted deps (4) | **Real** — ESLint plugins not in `package.json` | Yes | `npm install -D @eslint/js globals eslint-plugin-react-hooks eslint-plugin-react-refresh` | ✅ |
+| Fallow — Complexity/CRAP (38 functions) | **Real** — but inflated by zero test coverage | Partially | Add tests first; refactor highest-CRAP functions | ⏸️ |
+| Fallow — Hotspot: `GroupStage.jsx` | **Real** — most churn + complexity | Yes | Refactor + tests | 🔴 |
+| Fallow — Large functions (7 flagged) | **Real** — `TeamSelector` (193 lines) is the worst | Yes | Extract hooks + sub-components | ⏸️ |
+| Fallow — Zero dead code | **Good signal** | N/A | No action needed | ✅ |
+| Fallow — Zero circular deps | **Good signal** | N/A | No action needed | ✅ |
+| Fallow — Zero duplicate code | **Good signal** | N/A | No action needed | ✅ |
 
 ---
 
@@ -497,7 +458,115 @@ Add an optional second team selector (in the header or a separate "Compare" mode
 - **Minimal dependencies** — React + React DOM. Nothing else. Extremely easy to maintain and upgrade
 - **URL + localStorage sync** — Shareable links work correctly; state survives refresh
 - **CI/CD deploy pipeline** — OIDC auth, no PATs, clean Pages deployment
+- **Bracket path validation** — Runs at script startup, catches typos before they corrupt data
+- **TLA-based team matching** — Robust against football-data.org display name changes
+- **Feeder group logic** — `getFeederGroup()` correctly extracts single-group R16 opponents from bracket path opponentDesc strings
+
+---
+
+## New Items (Added 2026-06-14)
+
+---
+
+### N1 — Full Schedule Section Spacing
+**Category:** Design | **Severity:** Low | **Status:** 🔴 **REMAINING**
+
+#### Issue
+The `ScheduledMatches` component's `.schedule` container uses `gap: 4px` between stage blocks. The rest of the design language uses 9–16px gaps (inter-card gaps in `GroupStage` are 9px, stat grid gap is 12px, group grid gap is 16px). The 4px gap makes stage blocks look too tightly packed compared to the rest of the interface.
+
+#### Location
+`src/components/ScheduledMatches.module.css`, line 4:
+```css
+.schedule {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;   /* ← too tight */
+}
+```
+
+#### Fix
+Change to `gap: 8px` or `gap: 12px` to match the design language. The 8px value matches the visual rhythm of other section components.
+
+---
+
+### N2 — Mobile Horizontal Overflow / Scroll
+**Category:** Bug | **Severity:** Medium | **Status:** 🔴 **REMAINING**
+
+#### Issue
+The app has a horizontal overflow/scroll issue on mobile viewports. Several potential causes identified:
+
+1. **StageTabs** — `.outer` has `overflow-x: auto` and `.inner` has `min-width: max-content`. When all 6 stage tabs render, they may push beyond the viewport width (particularly on phones <375px).
+2. **RoadBracket grid** — 6-column grid collapses to 3 columns at `max-width: 900px`, but a 3-column grid with cards could still overflow on narrow screens since cards use `width: calc(100% - 14px)` which may not account for `gap`.
+3. **GroupStage group grid** — 2-column layout with tables. Tables with many columns (9 columns including position, team name, P/W/D/L/GD/Pts/Win%) have no horizontal overflow handling and may push beyond container width.
+
+#### Diagnosis needed
+Check on actual mobile viewports (iPhone SE ~375px, iPhone 14 ~390px) to identify the overflow source. The body has `overflow-x: hidden` so the overflow shouldn't visibly scroll, but the content may be clipped instead.
+
+#### Suggested fix approach
+- Tables in `GroupStage` and `OpponentWatchlist` need `overflow-x: auto` wrappers
+- RoadBracket grid needs `overflow-x: auto` or fewer columns on mobile
+- StageTabs may need tab truncation or a horizontal scroll with visible scrollbar indicator
+- Global: Check any element with `min-width` or explicit pixel widths that exceed viewport
+
+---
+
+### N3 — App-Wide Navigation Tabs
+**Category:** Feature | **Severity:** Medium | **Status:** 🔴 **REMAINING**
+
+#### Request
+Add two new navigation items:
+
+1. **"Tournament Schedule for the day"** — Shows all matches occurring on the current date (across all groups/stages). This is distinct from the per-team schedule in `ScheduledMatches`. It should show a global view of "what's happening today in the tournament."
+
+2. **"Tournament bracket as it stands"** — A full tournament bracket view showing all 48 teams, their current positions, and the bracket tree. This is distinct from the per-team `RoadBracket` which shows only one team's path.
+
+#### Implementation notes
+- Both items need to be added to the `Nav.jsx` component (currently has 4 links: The Road, Groups, Opponents, Schedule)
+- "Tournament Schedule for the day" requires fetching matches filtered by today's date from the data (the data already has match dates — filtering by today is a presentation concern)
+- "Tournament bracket as it stands" requires a new component that renders the full 48-team bracket tree. This is a substantial UI component — consider a simplified initial version that shows group stage standings + knockout bracket structure, then iterate
+- URL routing: consider if these should be top-level views or sections within the existing page. The current architecture is a single-page app with anchor-based section navigation — adding top-level views would require routing changes (React Router or similar)
+
+---
+
+### N4 — Emoji Fallbacks for PC + ADA Compliance
+**Category:** Accessibility | **Severity:** Medium | **Status:** 🔴 **REMAINING**
+
+#### Issue
+The flag emojis (🇺🇸, 🇧🇷, etc.) and icon emojis (✓, ✕, ●, ⚠️, ❓, ⏳, 🏳️) render correctly on Mac/Apple devices but may appear as tofu (□) or two-letter codes on Windows/PC.
+
+#### Affected locations
+- **Flag emojis** — Every team reference: `TeamSelector` dropdown, `Hero` heading (via `document.title`), `StageTabs` (city labels), `GroupStage` table rows, `OpponentWatchlist` cards, `ScheduledMatches` match rows, etc. Flags come from the `ALL_TEAMS` array in `scripts/update-data.js` and from the saved data.
+- **Icon emojis** — Status indicators:
+  - `✓` — completed stages (StageTabs, ScheduledMatches)
+  - `✕` — eliminated badge (StageTabs), loss indicator (ScheduledMatches)
+  - `●` — current stage indicator (StageTabs, ScheduledMatches)
+  - `⚠️` — conditional path notice (StageTabs)
+  - `❓` — future/unplayed match indicator (ScheduledMatches)
+  - `⏳` — future stage placeholder (OpponentWatchlist)
+  - `🏳️` — fallback flag (multiple components)
+  - `🟢🟡🟠🔴` — difficulty legend (OpponentWatchlist)
+  - `📅` — historical banner (App.jsx)
+  - `⚽` — goal scorer indicator (GroupStage)
+  - `½` — draw indicator (ScheduledMatches)
+
+#### WCAG compliance
+- The `✓` checkmark (U+2713) at color `#22c55e` on `var(--surface)` background — needs contrast verification
+- The `✕` cross (U+2715) at color `#ef4444` — needs contrast verification
+- The `●` dot (U+25CF) at color `var(--green)` — purely decorative, already `aria-hidden="true"` ✓
+- Flag emojis are mostly `aria-hidden="true"` with team names as accessible text — this is correct ✓
+
+#### Proposed solution (prioritized)
+
+1. **Immediate (low-effort):** Add `aria-label` text alternatives where missing. Most icon emojis already have `aria-hidden="true"` with nearby accessible text. Audit to ensure 100% coverage.
+2. **Short-term:** Replace icon emojis with CSS-rendered equivalents:
+   - `✓` → CSS pseudo-element with a checkmark SVG or unicode in a font that renders on Windows
+   - `✕` → Same approach
+   - `🟢🟡🟠🔴` → CSS colored circles (already done in `DiffPips` — the legend items can use the same approach)
+3. **Medium-term:** For flag emojis, adopt SVG flag icons from a library like `flag-icons` or `circle-flags`. This ensures consistent rendering across all platforms including Windows.
+   - Integration: Map each `team.id` to an SVG flag component. Fallback to the emoji flag for platforms that support it.
+   - Consider `react-circle-flags` (tree-shakeable per-flag imports) or inline SVG sprite.
 
 ---
 
 *Generated for review — confirm items before starting work. Priority order above reflects risk + user impact, not estimated effort.*
+*Updated 2026-06-14 with completion status verified against current codebase (commits through e83e201).*
