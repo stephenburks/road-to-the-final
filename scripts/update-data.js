@@ -618,11 +618,67 @@ function buildGroupStandings(group, rawStandings) {
   });
 }
 
+// ─── Bracket path validation ──────────────────────────────────────────────────
+function validateBracketPaths() {
+	const groups = 'ABCDEFGHIJKL'.split('');
+	const positions = [1, 2];
+	const requiredKeys = ['r32', 'r16', 'qf', 'sf', 'final'];
+	const requiredFields = ['match', 'date', 'city', 'venue', 'opponentDesc'];
+	const datePattern = /^\d{4}-\d{2}-\d{2}$/;
+
+	const missing = [];
+	const badDates = [];
+	let hasCritical = false;
+
+	for (const g of groups) {
+		for (const p of positions) {
+			const key = `${g}-${p}`;
+			const entry = BRACKET_PATHS[key];
+
+			if (!entry) {
+				missing.push(key);
+				hasCritical = true;
+				continue;
+			}
+
+			for (const stage of requiredKeys) {
+				const stageEntry = entry[stage];
+				if (!stageEntry) {
+					missing.push(`${key}.${stage}`);
+					hasCritical = true;
+					continue;
+				}
+				for (const field of requiredFields) {
+					if (stageEntry[field] === undefined || stageEntry[field] === null) {
+						missing.push(`${key}.${stage}.${field}`);
+						hasCritical = true;
+					}
+				}
+				if (stageEntry.date && !datePattern.test(stageEntry.date)) {
+					badDates.push(`${key}.${stage}.date = "${stageEntry.date}"`);
+				}
+			}
+		}
+	}
+
+	if (badDates.length) {
+		log(`⚠  Bracket date format issues: ${badDates.join(', ')}`);
+	}
+	if (missing.length) {
+		log(`⚠  Bracket missing entries: ${missing.join(', ')}`);
+	}
+	if (hasCritical) {
+		throw new Error('Critical bracket path data missing — cannot proceed');
+	}
+}
+
 // ─── Main ─────────────────────────────────────────────────────────────────────
 async function main() {
   log('=== Road to the Final — Data Update ===');
   ensure(path.join(ROOT, 'public', 'data'));
   ensure(SNAP_DIR);
+
+  validateBracketPaths();
 
   const existing   = loadExisting();
   const activeIds  = await fetchActiveTeamIds();
