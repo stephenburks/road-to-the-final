@@ -1,5 +1,6 @@
 import { STAGE_LABELS } from '../constants'
 import { daysUntil, formatDate } from '../utils'
+import FlagIcon from './ui/FlagIcon'
 import styles from './Hero.module.css'
 
 const STAT_CARDS = [
@@ -11,7 +12,7 @@ const STAT_CARDS = [
 
 function getEyebrow(team, activeStage, isHistorical) {
 	if (team.eliminated) return `❌ ${team.name} — Eliminated`
-	return `${team.flag} ${team.name} · ${STAGE_LABELS[activeStage]}${isHistorical ? ' · Historical' : ''}`
+	return `${team.name} · ${STAGE_LABELS[activeStage]}${isHistorical ? ' · Historical' : ''}`
 }
 
 function getHeading(team, path) {
@@ -48,7 +49,10 @@ export default function Hero({ team, activeStage, isHistorical }) {
 				<div className={styles.glow} aria-hidden="true" />
 
 				<div className={styles.inner}>
-					<p className={styles.eyebrow}>{eyebrow}</p>
+					<p className={styles.eyebrow}>
+					{!team.eliminated && <><FlagIcon code={team.id} flag={team.flag} name={team.name} />{' '}</>}
+					{eyebrow}
+				</p>
 					<h1 id="hero-heading" className={styles.heading}>
 						{heading}{dateSuffix}
 					</h1>

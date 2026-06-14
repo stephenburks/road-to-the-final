@@ -1,6 +1,7 @@
 import { STAGE_LABELS } from '../constants'
 import { formatDate, getFeederGroup } from '../utils'
 import SectionLabel from './ui/SectionLabel'
+import FlagIcon from './ui/FlagIcon'
 import { GroupTable } from './GroupStage'
 import styles from './OpponentWatchlist.module.css'
 
@@ -37,7 +38,7 @@ function OpponentCard({ opp, compact = false }) {
 				<div className={styles.topBar} style={{ background: opp.color }} aria-hidden="true" />
 			)}
 			<div className={styles.cardHeader}>
-				<span className={`${styles.flag} emoji`} aria-hidden="true">{opp.flag ?? '🏳️'}</span>
+				<FlagIcon flag={opp.flag} />
 				{opp.group && <span className={styles.groupTag}>Grp {opp.group}</span>}
 			</div>
 			<div className={styles.teamName}>{teamName}</div>
@@ -80,9 +81,9 @@ function MatchupRow({ opp, team, maxPct, data }) {
 	return (
 		<div className={styles.matchupRow}>
 			<div className={styles.matchupTeams}>
-				<span className="emoji" aria-hidden="true">{opp.flag ?? '🏳️'}</span>
+				<FlagIcon flag={opp.flag} />
 				<span className={styles.matchupName}>
-					{team.flag} {team.name} vs {name}
+					<FlagIcon code={team.id} flag={team.flag} name={team.name} /> {team.name} vs {name}
 					{tag && (
 						<span
 							style={{
@@ -134,9 +135,9 @@ function MatchupMatrix({ flatList, team, maxPct, data }) {
 							border: `1px solid ${i === 0 ? 'rgba(99,102,241,0.3)' : 'rgba(255,255,255,0.07)'}`,
 						}}
 					>
-						<span className="emoji" style={{ fontSize: 22 }}>{opp.flag ?? '🏳️'}</span>
+						<FlagIcon flag={opp.flag} />
 						<div>
-							<div className={styles.calloutVs}>{team.flag} vs {opp.opponent ?? opp.likelyTeam}</div>
+							<div className={styles.calloutVs}><FlagIcon code={team.id} flag={team.flag} name={team.name} /> vs {opp.opponent ?? opp.likelyTeam}</div>
 							<div className={styles.calloutPct} style={{ color: i === 0 ? '#a5b4fc' : 'var(--text-dim)' }}>
 								{opp.pct}%
 							</div>

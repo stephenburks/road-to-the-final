@@ -61,7 +61,7 @@ export default function App() {
 
   useEffect(() => {
     if (!team) return
-    document.title = `${team.flag} ${team.name} • Road to the Final • World Cup 2026`
+    document.title = `${team.name} • Road to the Final • World Cup 2026`
   }, [team])
 
   if (error)     return <ErrorScreen message={error} />

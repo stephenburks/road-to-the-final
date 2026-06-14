@@ -2,6 +2,7 @@ import { useState, useRef, useCallback, useMemo } from 'react'
 import { CONFEDERATIONS } from '../constants'
 import { useClickOutside } from '../hooks/useClickOutside'
 import { useTeamSearch } from '../hooks/useTeamSearch'
+import FlagIcon from './ui/FlagIcon'
 import styles from './TeamSelector.module.css'
 
 export default function TeamSelector({ teams, selectedId, onChange }) {
@@ -90,7 +91,7 @@ export default function TeamSelector({ teams, selectedId, onChange }) {
 				aria-expanded={open}
 				aria-label={`Select team, current: ${selected?.name ?? 'none'}`}
 			>
-				<span className={styles.flag} aria-hidden="true">{selected?.flag ?? '🏳️'}</span>
+				<FlagIcon code={selected?.id} flag={selected?.flag} name={selected?.name} />
 				<span className={styles.name}>{selected?.name ?? 'Select team'}</span>
 				<span className={styles.arrow} aria-hidden="true">▾</span>
 			</button>
@@ -142,7 +143,7 @@ export default function TeamSelector({ teams, selectedId, onChange }) {
 													].join(' ')}
 													onClick={() => !team.eliminated && handleSelect(team.id)}
 												>
-													<span className={styles.optFlag} aria-hidden="true">{team.flag}</span>
+													<FlagIcon code={team.id} flag={team.flag} small />
 													<span className={styles.optName}>{team.name}</span>
 													{team.eliminated ? (
 														<span className={styles.elimTag} aria-label="Eliminated">OUT</span>

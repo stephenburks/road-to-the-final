@@ -1,5 +1,6 @@
 import { formatDate, getFeederGroup } from '../utils'
 import SectionLabel from './ui/SectionLabel'
+import FlagIcon from './ui/FlagIcon'
 import styles from './GroupStage.module.css'
 
 const BADGE_STYLES = {
@@ -57,8 +58,8 @@ export function GroupTable({ groupKey, groupData, highlightTeamId }) {
 							>
 								<td style={{ color: 'var(--text-dim)', width: 22 }}>{row.pos}</td>
 								<td>
-									<div className={styles.teamCell}>
-										<span aria-hidden="true" className="emoji" style={{ fontSize: 15 }}>{row.flag ?? '🏳️'}</span>
+								<div className={styles.teamCell}>
+									<FlagIcon code={row.teamId} flag={row.flag} small />
 										<span style={{ fontWeight: isSelected ? 700 : 500, color: isSelected ? '#c7d2fe' : '#d1d5db' }}>
 											{row.team}
 										</span>
@@ -107,7 +108,7 @@ export function GroupTable({ groupKey, groupData, highlightTeamId }) {
 	)
 }
 
-function MatchCard({ match, teamFlag }) {
+function MatchCard({ match, teamFlag, teamId }) {
 	const badgeStyle = match.result ? BADGE_STYLES[match.result] : { background: 'rgba(255,255,255,0.06)', color: 'var(--text-dim)' }
 	const isWin = match.result === 'W'
 	const isDraw = match.result === 'D'
@@ -129,9 +130,9 @@ function MatchCard({ match, teamFlag }) {
 			</div>
 
 			<div className={styles.matchTeams}>
-				<span aria-hidden="true" style={{ fontSize: 18 }}>{teamFlag}</span>
+				<FlagIcon code={teamId} flag={teamFlag} />
 				<span style={{ fontSize: 12, color: 'var(--text-lo)' }}>vs</span>
-				<span aria-hidden="true" className="emoji" style={{ fontSize: 18 }}>{match.opponentFlag ?? '🏳️'}</span>
+				<FlagIcon flag={match.opponentFlag} />
 				<span style={{ fontSize: 12, color: '#d1d5db', fontWeight: 600 }}>{match.opponent}</span>
 				{match.score && (
 					<span className={styles.score} aria-label={`Score: ${match.score}`}>
@@ -215,7 +216,7 @@ export default function GroupStage({ team, data }) {
 
 			<div className={styles.matchGrid}>
 				{(team.groupResults ?? []).map((match, i) => (
-					<MatchCard key={i} match={match} teamFlag={team.flag} />
+					<MatchCard key={i} match={match} teamFlag={team.flag} teamId={team.id} />
 				))}
 			</div>
 		</section>

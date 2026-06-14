@@ -1,0 +1,11 @@
+.wrap { display: inline-flex; align-items: center; gap: 3px; }
+.code {
+	font-family: var(--font-mono);
+	font-size: 9px;
+	font-weight: 700;
+	background: rgba(255, 255, 255, 0.08);
+	color: var(--text-dim);
+	padding: 1px 4px;
+	border-radius: 3px;
+	letter-spacing: 0.08em;
+}

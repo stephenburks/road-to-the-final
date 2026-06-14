@@ -1,4 +1,5 @@
 import { STAGE_LABELS } from '../../constants'
+import FlagIcon from './FlagIcon'
 import styles from './EliminatedView.module.css'
 
 /**
@@ -11,7 +12,7 @@ export default function EliminatedView({ team }) {
   return (
     <div className="wrap">
       <div className={styles.card} role="status">
-        <div className={styles.flag} aria-hidden="true">{team.flag}</div>
+        <FlagIcon code={team.id} flag={team.flag} name={team.name} />
         <h2 className={styles.title}>{team.name} · Journey Ended</h2>
         <p className={styles.subtitle}>
           Knocked out in the {stage}. Use the date selector above

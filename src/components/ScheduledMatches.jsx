@@ -1,6 +1,7 @@
 import { STAGE_ORDER, STAGE_LABELS } from '../constants'
 import { formatDate, stageIndex } from '../utils'
 import SectionLabel from './ui/SectionLabel'
+import FlagIcon from './ui/FlagIcon'
 import styles from './ScheduledMatches.module.css'
 
 /**
@@ -14,7 +15,7 @@ function matchStatus(result) {
 }
 
 /** A single match row */
-function MatchRow({ match, teamFlag, isConditional = false }) {
+function MatchRow({ match, teamFlag, teamId, isConditional = false }) {
   const status = matchStatus(match.result)
 
   return (
@@ -31,9 +32,9 @@ function MatchRow({ match, teamFlag, isConditional = false }) {
       <div className={styles.matchTeams}>
         {match.result ? (
           <>
-            <span aria-hidden="true">{teamFlag}</span>
+            <FlagIcon code={teamId} flag={teamFlag} />
             <span className={styles.vs}>vs</span>
-            <span aria-hidden="true" className="emoji">{match.opponentFlag ?? '🏳️'}</span>
+            <FlagIcon flag={match.opponentFlag} />
             <span className={styles.opponentName}>{match.opponent}</span>
           </>
         ) : (
@@ -80,7 +81,7 @@ function StageBlock({ stageKey, team }) {
           </span>
         </div>
         {results.map((match, i) => (
-          <MatchRow key={i} match={match} teamFlag={team.flag} />
+          <MatchRow key={i} match={match} teamFlag={team.flag} teamId={team.id} />
         ))}
       </div>
     )
@@ -111,6 +112,7 @@ function StageBlock({ stageKey, team }) {
       <MatchRow
         match={conditionalMatch}
         teamFlag={team.flag}
+        teamId={team.id}
         isConditional={isFuture || isCurrent}
       />
     </div>
