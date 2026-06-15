@@ -382,8 +382,9 @@ const ESPN_TEAM_MAP = {
 	'Haiti': 'haiti', 'Panama': 'panama', 'Curaçao': 'curacao',
 };
 
-async function fetchESPNScorers(dateFrom, dateTo) {
-	const scorers = {}; // { teamId: [{ name, minute, type, matchStr }] }
+async function fetchESPNEventDetails(dateFrom, dateTo) {
+	const scorers = {};
+	const cards = {};
 
 	const ESPN_BASE = 'https://site.web.api.espn.com/apis/site/v2/sports/soccer/fifa.world/scoreboard';
 
@@ -415,30 +416,42 @@ async function fetchESPNScorers(dateFrom, dateTo) {
 
 			const details = event.competitions?.[0]?.details || [];
 			for (const d of details) {
-				if (!d.scoringPlay) continue;
-				const ourId = teamIdByEspn[String(d.team?.id)];
-				if (!ourId) continue;
-				const athlete = d.athletesInvolved?.[0];
-				if (!athlete?.displayName) continue;
-				const type = d.type?.text || 'Goal';
-				const minute = d.clock?.displayValue || '?';
-				const label = type === 'Own Goal'
-					? `${athlete.displayName} OG ${minute}`
-					: type.includes('Penalty')
-						? `${athlete.displayName} ${minute} (P)`
-						: `${athlete.displayName} ${minute}`;
+				if (d.scoringPlay) {
+					const ourId = teamIdByEspn[String(d.team?.id)];
+					if (!ourId) continue;
+					const athlete = d.athletesInvolved?.[0];
+					if (!athlete?.displayName) continue;
+					const type = d.type?.text || 'Goal';
+					const minute = d.clock?.displayValue || '?';
+					const label = type === 'Own Goal'
+						? `${athlete.displayName} OG ${minute}`
+						: type.includes('Penalty')
+							? `${athlete.displayName} ${minute} (P)`
+							: `${athlete.displayName} ${minute}`;
 
-				if (!scorers[ourId]) scorers[ourId] = [];
-				scorers[ourId].push({ name: athlete.displayName, minute, type, matchStr, label, date: eventDate });
+					if (!scorers[ourId]) scorers[ourId] = [];
+					scorers[ourId].push({ name: athlete.displayName, minute, type, matchStr, label, date: eventDate });
+				} else if (d.yellowCard || d.redCard) {
+					const ourId = teamIdByEspn[String(d.team?.id)];
+					if (!ourId) continue;
+					const athlete = d.athletesInvolved?.[0];
+					if (!athlete?.displayName) continue;
+					const cardType = d.redCard ? 'red' : 'yellow';
+					const minute = d.clock?.displayValue || '?';
+
+					if (!cards[ourId]) cards[ourId] = [];
+					cards[ourId].push({ player: athlete.displayName, minute, type: cardType, date: eventDate });
+				}
 			}
 		}
 	}
 
 	if (fetched > 0) {
-		const total = Object.values(scorers).reduce((s, arr) => s + arr.length, 0);
-		log(`ESPN: ${total} scorer entries across ${Object.keys(scorers).length} teams (${fetched} dates)`);
+		const totalS = Object.values(scorers).reduce((s, arr) => s + arr.length, 0);
+		const totalC = Object.values(cards).reduce((s, arr) => s + arr.length, 0);
+		log(`ESPN: ${totalS} scorer + ${totalC} card entries across ${Object.keys(scorers).length}/${Object.keys(cards).length} teams (${fetched} dates)`);
 	}
-	return scorers;
+	return { scorers, cards };
 }
 
 // ─── Polymarket: fetch group winner probabilities (Option B — always) ─────────
@@ -580,6 +593,7 @@ function buildGroupResults(teamId, group, matchIndex, existingGroupResults = [])
         matchday: g.md, opponent: oppInfo.name || oppId, opponentFlag: oppInfo.flag || '🏳️',
         result, score, date: g.d, venue: g.v,
         scorers: existingMatch?.scorers?.length ? existingMatch.scorers : [],
+        cards: existingMatch?.cards?.length ? existingMatch.cards : [],
       };
     });
 }
@@ -865,6 +879,26 @@ function injectScorers(groupResults, espnScorers) {
   });
 }
 
+function injectCards(groupResults, espnCards) {
+  if (!espnCards?.length) return groupResults;
+  const entries = espnCards.map(c => ({ player: c.player, minute: c.minute, type: c.type }));
+  let assigned = false;
+  return groupResults.map(gr => {
+    if (gr.cards?.length > 0) return gr;
+    if (!gr.result) return gr;
+    const matchCards = espnCards.filter(c => c.date === gr.date);
+    if (matchCards.length > 0) {
+      assigned = true;
+      return { ...gr, cards: matchCards.map(c => ({ player: c.player, minute: c.minute, type: c.type })) };
+    }
+    if (!assigned) {
+      assigned = true;
+      return { ...gr, cards: entries };
+    }
+    return gr;
+  });
+}
+
 function isSingleGroupDegraded(groupData) {
   if (!groupData?.winProbabilities) return true;
   const total = Object.values(groupData.winProbabilities).reduce((s, v) => s + v, 0);
@@ -891,7 +925,7 @@ async function main() {
     : [{}, [], {}];
 
   // ESPN scorer data — always fetch (independent of football-data API)
-  const espnScorers = await fetchESPNScorers(yesterdayStr(), todayStr());
+  const { scorers: espnScorers, cards: espnCards } = await fetchESPNEventDetails(yesterdayStr(), todayStr());
 
   if (hasActive) {
     if (!Object.keys(rawStandings).length) log('⚠  No standings data returned — API may be unavailable');
@@ -985,22 +1019,31 @@ async function main() {
           currentStage: stage,
           path: teamPath,
           possibleOpponents: possibleOpps,
-          groupResults: injectScorers(existingTeam.groupResults || [], espnScorers[t.id]),
+          groupResults: injectCards(
+            injectScorers(existingTeam.groupResults || [], espnScorers[t.id]),
+            espnCards[t.id]
+          ),
         };
       }
       return {
         ...existingTeam,
         eliminated,
         currentStage: stage,
-        groupResults: injectScorers(existingTeam.groupResults || [], espnScorers[t.id]),
+        groupResults: injectCards(
+          injectScorers(existingTeam.groupResults || [], espnScorers[t.id]),
+          espnCards[t.id]
+        ),
       };
     }
 
     // Full recalculation
     const existingGroupResults = existingTeam?.groupResults || []
-    const groupResults  = injectScorers(
-      buildGroupResults(t.id, t.group, matchIndex, existingGroupResults),
-      espnScorers[t.id]
+    const groupResults  = injectCards(
+      injectScorers(
+        buildGroupResults(t.id, t.group, matchIndex, existingGroupResults),
+        espnScorers[t.id]
+      ),
+      espnCards[t.id]
     )
 
     // Preserve existing market-sourced probabilities when Poly is unavailable

@@ -4,6 +4,12 @@ export type Result = 'W' | 'D' | 'L' | null
 
 export type Difficulty = 1 | 2 | 3 | 4 | 5
 
+export interface Card {
+	player: string
+	minute: string
+	type: 'yellow' | 'red'
+}
+
 export interface GroupMatch {
 	matchday: number
 	opponent: string
@@ -13,6 +19,7 @@ export interface GroupMatch {
 	date: string
 	venue: string
 	scorers: string[]
+	cards: Card[]
 }
 
 export interface PathStage {

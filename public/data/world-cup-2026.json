@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-15T22:38:22.697Z",
+  "lastUpdated": "2026-06-15T22:50:53.585Z",
   "snapshotDate": "2026-06-15",
   "isHistorical": false,
   "sourceSummary": {
@@ -3057,7 +3057,14 @@
           "score": "0-2",
           "date": "2026-06-13",
           "venue": "BC Place, Vancouver",
-          "scorers": []
+          "scorers": [],
+          "cards": [
+            {
+              "player": "Yunus Akgün",
+              "minute": "86'",
+              "type": "yellow"
+            }
+          ]
         },
         {
           "matchday": 2,
@@ -3461,6 +3468,23 @@
           "venue": "Lincoln Financial Field, Philadelphia",
           "scorers": [
             "Amad Diallo 90''"
+          ],
+          "cards": [
+            {
+              "player": "Seko Fofana",
+              "minute": "28'",
+              "type": "yellow"
+            },
+            {
+              "player": "Franck Kessié",
+              "minute": "38'",
+              "type": "yellow"
+            },
+            {
+              "player": "Guela Doué",
+              "minute": "40'",
+              "type": "yellow"
+            }
           ]
         },
         {
@@ -3577,7 +3601,14 @@
           "score": "0-1",
           "date": "2026-06-14",
           "venue": "Lincoln Financial Field, Philadelphia",
-          "scorers": []
+          "scorers": [],
+          "cards": [
+            {
+              "player": "Jackson Porozo",
+              "minute": "73'",
+              "type": "yellow"
+            }
+          ]
         },
         {
           "matchday": 2,
@@ -3696,6 +3727,23 @@
           "scorers": [
             "Virgil van Dijk 51''",
             "Crysencio Summerville 64''"
+          ],
+          "cards": [
+            {
+              "player": "Crysencio Summerville",
+              "minute": "61'",
+              "type": "yellow"
+            },
+            {
+              "player": "Memphis Depay",
+              "minute": "83'",
+              "type": "yellow"
+            },
+            {
+              "player": "Micky van de Ven",
+              "minute": "90'+1'",
+              "type": "yellow"
+            }
           ]
         },
         {
@@ -4055,6 +4103,13 @@
           "venue": "Arrowhead Stadium, Kansas City",
           "scorers": [
             "Omar Rekik 43'"
+          ],
+          "cards": [
+            {
+              "player": "Rani Khedira",
+              "minute": "54'",
+              "type": "yellow"
+            }
           ]
         },
         {
@@ -4679,7 +4734,14 @@
           "score": "0-0",
           "date": "2026-06-15",
           "venue": "Mercedes-Benz Stadium, Atlanta",
-          "scorers": []
+          "scorers": [],
+          "cards": [
+            {
+              "player": "Pedri",
+              "minute": "90'+3'",
+              "type": "yellow"
+            }
+          ]
         },
         {
           "matchday": 2,
@@ -4795,7 +4857,14 @@
           "score": "0-0",
           "date": "2026-06-15",
           "venue": "Mercedes-Benz Stadium, Atlanta",
-          "scorers": []
+          "scorers": [],
+          "cards": [
+            {
+              "player": "Sidny Lopes Cabral",
+              "minute": "16'",
+              "type": "yellow"
+            }
+          ]
         },
         {
           "matchday": 2,

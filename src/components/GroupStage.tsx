@@ -156,6 +156,21 @@ function MatchCard({ match, teamFlag, teamId }: {
 				</ul>
 			)}
 
+			{match.cards?.length > 0 && (
+				<ul className={styles.cards} aria-label="Cards">
+					{match.cards.map((c, j) => (
+						<li key={j}>
+							<span
+								className={styles.cardIndicator}
+								style={{ background: c.type === 'red' ? '#ef4444' : '#eab308' }}
+								aria-hidden="true"
+							/>
+							{c.player} {c.minute}
+						</li>
+					))}
+				</ul>
+			)}
+
 			{!match.result && <div className={styles.venue}>{match.venue}</div>}
 		</div>
 	)
