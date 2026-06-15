@@ -50,7 +50,7 @@ const NAME_TO_ID = {
 	'Croatia': 'croatia', 'Ghana': 'ghana', 'Panama': 'panama',
 }
 
-export function resolveCode(code, opponentName) {
+function resolveCode(code, opponentName) {
 	if (code) return code
 	if (opponentName) return NAME_TO_ID[opponentName] || ''
 	return ''
