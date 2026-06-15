@@ -35,9 +35,7 @@ export default function DateSelector({ manifest, selectedDate, onChange }) {
 				aria-expanded={open}
 				aria-label={`Date view: ${label}`}
 			>
-				<span aria-hidden="true" fontSize="16px">
-					{isLive ? '📡' : '📅'}
-				</span>
+				<span aria-hidden="true">{isLive ? '📡' : '📅'}</span>
 				<span>{label}</span>
 				<span className={styles.arrow} aria-hidden="true">
 					▾
