@@ -58,7 +58,7 @@ function OpponentCard({ opp, compact = false }) {
 			{opp.altTeam && (
 				<div className={styles.alt}>
 					<span>or</span>
-					<span aria-hidden="true">{opp.altFlag}</span>
+					<FlagIcon flag={opp.altFlag} />
 					<span>{opp.altTeam}</span>
 				</div>
 			)}
