@@ -935,6 +935,14 @@ async function main() {
     lastUpdated:  now,
     snapshotDate: today,
     isHistorical: false,
+    sourceSummary: (() => {
+      const s = { market: 0, calculated: 0 };
+      for (const t of teams) {
+        if (t.advanceProbabilities?.source === 'market') s.market++;
+        else s.calculated++;
+      }
+      return s;
+    })(),
     tournament: {
       name:         'FIFA World Cup 2026',
       currentStage: tournamentStage,

@@ -1,7 +1,11 @@
 {
-  "lastUpdated": "2026-06-14T06:15:29.360Z",
-  "snapshotDate": "2026-06-13",
+  "lastUpdated": "2026-06-15T20:55:35.066Z",
+  "snapshotDate": "2026-06-11",
   "isHistorical": true,
+  "sourceSummary": {
+    "market": 0,
+    "calculated": 48
+  },
   "tournament": {
     "name": "FIFA World Cup 2026",
     "currentStage": "group_stage",
@@ -46,14 +50,14 @@
           "teamId": "mexico",
           "team": "Mexico",
           "flag": "🇲🇽",
-          "played": 1,
-          "w": 1,
+          "played": 0,
+          "w": 0,
           "d": 0,
           "l": 0,
-          "gf": 2,
+          "gf": 0,
           "ga": 0,
-          "gd": 2,
-          "pts": 3
+          "gd": 0,
+          "pts": 0
         },
         {
           "pos": 2,
@@ -88,13 +92,13 @@
           "teamId": "southafrica",
           "team": "South Africa",
           "flag": "🇿🇦",
-          "played": 1,
+          "played": 0,
           "w": 0,
           "d": 0,
-          "l": 1,
+          "l": 0,
           "gf": 0,
-          "ga": 2,
-          "gd": -2,
+          "ga": 0,
+          "gd": 0,
           "pts": 0
         }
       ],
@@ -112,28 +116,28 @@
           "teamId": "canada",
           "team": "Canada",
           "flag": "🇨🇦",
-          "played": 1,
+          "played": 0,
           "w": 0,
-          "d": 1,
+          "d": 0,
           "l": 0,
-          "gf": 1,
-          "ga": 1,
+          "gf": 0,
+          "ga": 0,
           "gd": 0,
-          "pts": 1
+          "pts": 0
         },
         {
           "pos": 2,
-          "teamId": "bosnia",
-          "team": "Bosnia & Herz.",
-          "flag": "🇧🇦",
-          "played": 1,
+          "teamId": "qatar",
+          "team": "Qatar",
+          "flag": "🇶🇦",
+          "played": 0,
           "w": 0,
-          "d": 1,
+          "d": 0,
           "l": 0,
-          "gf": 1,
-          "ga": 1,
+          "gf": 0,
+          "ga": 0,
           "gd": 0,
-          "pts": 1
+          "pts": 0
         },
         {
           "pos": 3,
@@ -151,9 +155,9 @@
         },
         {
           "pos": 4,
-          "teamId": "qatar",
-          "team": "Qatar",
-          "flag": "🇶🇦",
+          "teamId": "bosnia",
+          "team": "Bosnia & Herz.",
+          "flag": "🇧🇦",
           "played": 0,
           "w": 0,
           "d": 0,
@@ -166,75 +170,75 @@
       ],
       "winProbabilities": {
         "canada": 23,
-        "bosnia": 1,
+        "qatar": 1,
         "switzerland": 10,
-        "qatar": 0
+        "bosnia": 0
       }
     },
     "C": {
       "standings": [
         {
           "pos": 1,
-          "teamId": "scotland",
-          "team": "Scotland",
-          "flag": "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
-          "played": 1,
-          "w": 1,
-          "d": 0,
-          "l": 0,
-          "gf": 1,
-          "ga": 0,
-          "gd": 1,
-          "pts": 3
-        },
-        {
-          "pos": 2,
           "teamId": "brazil",
           "team": "Brazil",
           "flag": "🇧🇷",
-          "played": 1,
+          "played": 0,
           "w": 0,
-          "d": 1,
+          "d": 0,
           "l": 0,
-          "gf": 1,
-          "ga": 1,
+          "gf": 0,
+          "ga": 0,
           "gd": 0,
-          "pts": 1
+          "pts": 0
         },
         {
-          "pos": 3,
-          "teamId": "morocco",
-          "team": "Morocco",
-          "flag": "🇲🇦",
-          "played": 1,
-          "w": 0,
-          "d": 1,
-          "l": 0,
-          "gf": 1,
-          "ga": 1,
-          "gd": 0,
-          "pts": 1
-        },
-        {
-          "pos": 4,
+          "pos": 2,
           "teamId": "haiti",
           "team": "Haiti",
           "flag": "🇭🇹",
-          "played": 1,
+          "played": 0,
           "w": 0,
           "d": 0,
-          "l": 1,
+          "l": 0,
           "gf": 0,
-          "ga": 1,
-          "gd": -1,
+          "ga": 0,
+          "gd": 0,
+          "pts": 0
+        },
+        {
+          "pos": 3,
+          "teamId": "scotland",
+          "team": "Scotland",
+          "flag": "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
+          "played": 0,
+          "w": 0,
+          "d": 0,
+          "l": 0,
+          "gf": 0,
+          "ga": 0,
+          "gd": 0,
+          "pts": 0
+        },
+        {
+          "pos": 4,
+          "teamId": "morocco",
+          "team": "Morocco",
+          "flag": "🇲🇦",
+          "played": 0,
+          "w": 0,
+          "d": 0,
+          "l": 0,
+          "gf": 0,
+          "ga": 0,
+          "gd": 0,
           "pts": 0
         }
       ],
       "winProbabilities": {
-        "scotland": 11,
         "brazil": 30,
-        "morocco": 11,
-        "haiti": 0
+        "haiti": 1,
+        "scotland": 3,
+        "morocco": 2
       }
     },
     "D": {
@@ -244,41 +248,41 @@
           "teamId": "usa",
           "team": "USA",
           "flag": "🇺🇸",
-          "played": 1,
-          "w": 1,
+          "played": 0,
+          "w": 0,
           "d": 0,
           "l": 0,
-          "gf": 4,
-          "ga": 1,
-          "gd": 3,
-          "pts": 3
+          "gf": 0,
+          "ga": 0,
+          "gd": 0,
+          "pts": 0
         },
         {
           "pos": 2,
           "teamId": "australia",
           "team": "Australia",
           "flag": "🇦🇺",
-          "played": 1,
-          "w": 1,
+          "played": 0,
+          "w": 0,
           "d": 0,
           "l": 0,
-          "gf": 1,
+          "gf": 0,
           "ga": 0,
-          "gd": 1,
-          "pts": 3
+          "gd": 0,
+          "pts": 0
         },
         {
           "pos": 3,
           "teamId": "turkey",
           "team": "Türkiye",
           "flag": "🇹🇷",
-          "played": 1,
+          "played": 0,
           "w": 0,
           "d": 0,
-          "l": 1,
+          "l": 0,
           "gf": 0,
-          "ga": 1,
-          "gd": -1,
+          "ga": 0,
+          "gd": 0,
           "pts": 0
         },
         {
@@ -286,21 +290,21 @@
           "teamId": "paraguay",
           "team": "Paraguay",
           "flag": "🇵🇾",
-          "played": 1,
+          "played": 0,
           "w": 0,
           "d": 0,
-          "l": 1,
-          "gf": 1,
-          "ga": 4,
-          "gd": -3,
+          "l": 0,
+          "gf": 0,
+          "ga": 0,
+          "gd": 0,
           "pts": 0
         }
       ],
       "winProbabilities": {
-        "usa": 52,
-        "australia": 28,
-        "turkey": 14,
-        "paraguay": 6
+        "usa": 30,
+        "australia": 16,
+        "turkey": 8,
+        "paraguay": 1
       }
     },
     "E": {
@@ -847,14 +851,11 @@
           "matchday": 1,
           "opponent": "South Africa",
           "opponentFlag": "🇿🇦",
-          "result": "W",
-          "score": "2-0",
+          "result": null,
+          "score": null,
           "date": "2026-06-12",
           "venue": "Estadio Azteca, Mexico City",
-          "scorers": [
-            "Lozano 34'",
-            "Jiménez 67'"
-          ]
+          "scorers": []
         },
         {
           "matchday": 2,
@@ -878,21 +879,21 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 92,
-        "r16": 58,
-        "qf": 30,
+        "r32": 99,
+        "r16": 54,
+        "qf": 28,
         "sf": 14,
-        "final": 6,
-        "winner": 3,
-        "source": "market"
+        "final": 7,
+        "winner": 30,
+        "source": "calculated"
       },
       "path": {
         "group_stage": {
           "status": "active",
-          "city": "Mexico City · Zapopan · Atlanta",
+          "city": "Mexico City · Zapopan",
           "venue": "Various venues",
-          "date": "Jun 12–Jun 24",
-          "detail": "3pts after MD1"
+          "date": "Jun 12–24",
+          "detail": "0pts after MD0"
         },
         "r32": {
           "status": "upcoming",
@@ -936,58 +937,7 @@
         }
       },
       "possibleOpponents": {
-        "r32": [
-          {
-            "group": "B",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group B"
-          },
-          {
-            "group": "E",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group E"
-          },
-          {
-            "group": "H",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group H"
-          },
-          {
-            "group": "I",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group I"
-          },
-          {
-            "group": "J",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group J"
-          }
-        ],
+        "r32": [],
         "r16": []
       }
     },
@@ -1005,8 +955,8 @@
           "matchday": 1,
           "opponent": "Mexico",
           "opponentFlag": "🇲🇽",
-          "result": "L",
-          "score": "0-2",
+          "result": null,
+          "score": null,
           "date": "2026-06-12",
           "venue": "Estadio Azteca, Mexico City",
           "scorers": []
@@ -1033,52 +983,52 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 4,
-        "r16": 0,
-        "qf": 0,
-        "sf": 0,
-        "final": 0,
+        "r32": 5,
+        "r16": 3,
+        "qf": 2,
+        "sf": 1,
+        "final": 1,
         "winner": 0,
         "source": "calculated"
       },
       "path": {
         "group_stage": {
           "status": "active",
-          "city": "Mexico City · Zapopan · Atlanta",
+          "city": "Mexico City · Atlanta · Zapopan",
           "venue": "Various venues",
-          "date": "Jun 12–Jun 24",
-          "detail": "0pts after MD1"
+          "date": "Jun 12–24",
+          "detail": "0pts after MD0"
         },
         "r32": {
           "status": "upcoming",
-          "match": 79,
-          "date": "2026-06-28",
-          "city": "Mexico City",
-          "venue": "Estadio Azteca",
-          "opponentDesc": "Best 3rd from C/E/F/H/I"
+          "match": 80,
+          "date": "2026-06-29",
+          "city": "Atlanta",
+          "venue": "Mercedes-Benz Stadium",
+          "opponentDesc": "Best 3rd from E/H/I/J/K"
         },
         "r16": {
           "status": "future",
-          "match": 93,
-          "date": "2026-07-05",
-          "city": "Guadalajara",
-          "venue": "Estadio Guadalajara",
-          "opponentDesc": "Winner Match 79"
+          "match": 94,
+          "date": "2026-07-06",
+          "city": "Seattle",
+          "venue": "Lumen Field",
+          "opponentDesc": "Winner Match 80"
         },
         "qf": {
           "status": "future",
-          "match": 97,
-          "date": "2026-07-09",
-          "city": "Guadalajara",
-          "venue": "Estadio Guadalajara",
-          "opponentDesc": "Winner Match 93"
+          "match": 98,
+          "date": "2026-07-10",
+          "city": "Los Angeles",
+          "venue": "SoFi Stadium",
+          "opponentDesc": "Winner Match 94"
         },
         "sf": {
           "status": "future",
-          "match": 101,
-          "date": "2026-07-14",
-          "city": "Dallas",
-          "venue": "AT&T Stadium",
+          "match": 102,
+          "date": "2026-07-15",
+          "city": "Atlanta",
+          "venue": "Mercedes-Benz Stadium",
           "opponentDesc": "Winner QF bracket"
         },
         "final": {
@@ -1091,58 +1041,7 @@
         }
       },
       "possibleOpponents": {
-        "r32": [
-          {
-            "group": "B",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group B"
-          },
-          {
-            "group": "E",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group E"
-          },
-          {
-            "group": "H",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group H"
-          },
-          {
-            "group": "I",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group I"
-          },
-          {
-            "group": "J",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group J"
-          }
-        ],
+        "r32": [],
         "r16": []
       }
     },
@@ -1188,52 +1087,52 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 4,
-        "r16": 0,
-        "qf": 0,
-        "sf": 0,
-        "final": 0,
-        "winner": 0,
+        "r32": 70,
+        "r16": 39,
+        "qf": 20,
+        "sf": 10,
+        "final": 5,
+        "winner": 18,
         "source": "calculated"
       },
       "path": {
         "group_stage": {
           "status": "active",
-          "city": "Mexico City · Zapopan · Atlanta",
+          "city": "Zapopan",
           "venue": "Various venues",
-          "date": "Jun 12–Jun 24",
-          "detail": "Group A"
+          "date": "Jun 12–24",
+          "detail": "0pts after MD0"
         },
         "r32": {
           "status": "upcoming",
-          "match": 79,
-          "date": "2026-06-28",
-          "city": "Mexico City",
-          "venue": "Estadio Azteca",
-          "opponentDesc": "Best 3rd from C/E/F/H/I"
+          "match": 80,
+          "date": "2026-06-29",
+          "city": "Atlanta",
+          "venue": "Mercedes-Benz Stadium",
+          "opponentDesc": "Best 3rd from E/H/I/J/K"
         },
         "r16": {
           "status": "future",
-          "match": 93,
-          "date": "2026-07-05",
-          "city": "Guadalajara",
-          "venue": "Estadio Guadalajara",
-          "opponentDesc": "Winner Match 79"
+          "match": 94,
+          "date": "2026-07-06",
+          "city": "Seattle",
+          "venue": "Lumen Field",
+          "opponentDesc": "Winner Match 80"
         },
         "qf": {
           "status": "future",
-          "match": 97,
-          "date": "2026-07-09",
-          "city": "Guadalajara",
-          "venue": "Estadio Guadalajara",
-          "opponentDesc": "Winner Match 93"
+          "match": 98,
+          "date": "2026-07-10",
+          "city": "Los Angeles",
+          "venue": "SoFi Stadium",
+          "opponentDesc": "Winner Match 94"
         },
         "sf": {
           "status": "future",
-          "match": 101,
-          "date": "2026-07-14",
-          "city": "Dallas",
-          "venue": "AT&T Stadium",
+          "match": 102,
+          "date": "2026-07-15",
+          "city": "Atlanta",
+          "venue": "Mercedes-Benz Stadium",
           "opponentDesc": "Winner QF bracket"
         },
         "final": {
@@ -1246,58 +1145,7 @@
         }
       },
       "possibleOpponents": {
-        "r32": [
-          {
-            "group": "B",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group B"
-          },
-          {
-            "group": "E",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group E"
-          },
-          {
-            "group": "H",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group H"
-          },
-          {
-            "group": "I",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group I"
-          },
-          {
-            "group": "J",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group J"
-          }
-        ],
+        "r32": [],
         "r16": []
       }
     },
@@ -1343,52 +1191,52 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 4,
-        "r16": 0,
-        "qf": 0,
-        "sf": 0,
-        "final": 0,
-        "winner": 0,
+        "r32": 16,
+        "r16": 9,
+        "qf": 5,
+        "sf": 3,
+        "final": 2,
+        "winner": 4,
         "source": "calculated"
       },
       "path": {
         "group_stage": {
           "status": "active",
-          "city": "Mexico City · Zapopan · Atlanta",
+          "city": "Zapopan · Atlanta",
           "venue": "Various venues",
-          "date": "Jun 12–Jun 24",
-          "detail": "Group A"
+          "date": "Jun 12–24",
+          "detail": "0pts after MD0"
         },
         "r32": {
           "status": "upcoming",
-          "match": 79,
-          "date": "2026-06-28",
-          "city": "Mexico City",
-          "venue": "Estadio Azteca",
-          "opponentDesc": "Best 3rd from C/E/F/H/I"
+          "match": 80,
+          "date": "2026-06-29",
+          "city": "Atlanta",
+          "venue": "Mercedes-Benz Stadium",
+          "opponentDesc": "Best 3rd from E/H/I/J/K"
         },
         "r16": {
           "status": "future",
-          "match": 93,
-          "date": "2026-07-05",
-          "city": "Guadalajara",
-          "venue": "Estadio Guadalajara",
-          "opponentDesc": "Winner Match 79"
+          "match": 94,
+          "date": "2026-07-06",
+          "city": "Seattle",
+          "venue": "Lumen Field",
+          "opponentDesc": "Winner Match 80"
         },
         "qf": {
           "status": "future",
-          "match": 97,
-          "date": "2026-07-09",
-          "city": "Guadalajara",
-          "venue": "Estadio Guadalajara",
-          "opponentDesc": "Winner Match 93"
+          "match": 98,
+          "date": "2026-07-10",
+          "city": "Los Angeles",
+          "venue": "SoFi Stadium",
+          "opponentDesc": "Winner Match 94"
         },
         "sf": {
           "status": "future",
-          "match": 101,
-          "date": "2026-07-14",
-          "city": "Dallas",
-          "venue": "AT&T Stadium",
+          "match": 102,
+          "date": "2026-07-15",
+          "city": "Atlanta",
+          "venue": "Mercedes-Benz Stadium",
           "opponentDesc": "Winner QF bracket"
         },
         "final": {
@@ -1401,58 +1249,7 @@
         }
       },
       "possibleOpponents": {
-        "r32": [
-          {
-            "group": "B",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group B"
-          },
-          {
-            "group": "E",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group E"
-          },
-          {
-            "group": "H",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group H"
-          },
-          {
-            "group": "I",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group I"
-          },
-          {
-            "group": "J",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group J"
-          }
-        ],
+        "r32": [],
         "r16": []
       }
     },
@@ -1470,13 +1267,11 @@
           "matchday": 1,
           "opponent": "Bosnia & Herz.",
           "opponentFlag": "🇧🇦",
-          "result": "D",
-          "score": "1-1",
+          "result": null,
+          "score": null,
           "date": "2026-06-12",
           "venue": "BMO Field, Toronto",
-          "scorers": [
-            "Larin 61'"
-          ]
+          "scorers": []
         },
         {
           "matchday": 2,
@@ -1500,21 +1295,21 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 80,
-        "r16": 44,
-        "qf": 22,
-        "sf": 10,
-        "final": 4,
-        "winner": 2,
-        "source": "market"
+        "r32": 84,
+        "r16": 46,
+        "qf": 24,
+        "sf": 12,
+        "final": 6,
+        "winner": 23,
+        "source": "calculated"
       },
       "path": {
         "group_stage": {
           "status": "active",
-          "city": "Toronto · San Francisco · Vancouver",
+          "city": "Toronto · Vancouver",
           "venue": "Various venues",
-          "date": "Jun 12–Jun 24",
-          "detail": "1pts after MD1"
+          "date": "Jun 12–24",
+          "detail": "0pts after MD0"
         },
         "r32": {
           "status": "upcoming",
@@ -1558,58 +1353,7 @@
         }
       },
       "possibleOpponents": {
-        "r32": [
-          {
-            "group": "A",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group A"
-          },
-          {
-            "group": "E",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group E"
-          },
-          {
-            "group": "H",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group H"
-          },
-          {
-            "group": "I",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group I"
-          },
-          {
-            "group": "J",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group J"
-          }
-        ],
+        "r32": [],
         "r16": []
       }
     },
@@ -1627,13 +1371,11 @@
           "matchday": 1,
           "opponent": "Canada",
           "opponentFlag": "🇨🇦",
-          "result": "D",
-          "score": "1-1",
+          "result": null,
+          "score": null,
           "date": "2026-06-12",
           "venue": "BMO Field, Toronto",
-          "scorers": [
-            "Džeko 44'"
-          ]
+          "scorers": []
         },
         {
           "matchday": 2,
@@ -1657,52 +1399,52 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 4,
-        "r16": 0,
-        "qf": 0,
-        "sf": 0,
-        "final": 0,
+        "r32": 5,
+        "r16": 3,
+        "qf": 2,
+        "sf": 1,
+        "final": 1,
         "winner": 0,
         "source": "calculated"
       },
       "path": {
         "group_stage": {
           "status": "active",
-          "city": "Toronto · San Francisco · Vancouver",
+          "city": "Toronto · San Francisco · Seattle",
           "venue": "Various venues",
-          "date": "Jun 12–Jun 24",
-          "detail": "1pts after MD1"
+          "date": "Jun 12–24",
+          "detail": "0pts after MD0"
         },
         "r32": {
           "status": "upcoming",
-          "match": 85,
-          "date": "2026-07-02",
-          "city": "Boston",
-          "venue": "Gillette Stadium",
-          "opponentDesc": "Best 3rd from E/F/G/I/J"
+          "match": 82,
+          "date": "2026-07-01",
+          "city": "Seattle",
+          "venue": "Lumen Field",
+          "opponentDesc": "Best 3rd from A/E/H/I/J"
         },
         "r16": {
           "status": "future",
-          "match": 96,
-          "date": "2026-07-07",
-          "city": "Vancouver",
-          "venue": "BC Place",
-          "opponentDesc": "Winner Match 85"
+          "match": 94,
+          "date": "2026-07-06",
+          "city": "Seattle",
+          "venue": "Lumen Field",
+          "opponentDesc": "Winner Match 82"
         },
         "qf": {
           "status": "future",
-          "match": 100,
-          "date": "2026-07-11",
-          "city": "Kansas City",
-          "venue": "Arrowhead Stadium",
-          "opponentDesc": "Winner Match 96"
+          "match": 98,
+          "date": "2026-07-10",
+          "city": "Los Angeles",
+          "venue": "SoFi Stadium",
+          "opponentDesc": "Winner Match 94"
         },
         "sf": {
           "status": "future",
-          "match": 101,
-          "date": "2026-07-14",
-          "city": "Dallas",
-          "venue": "AT&T Stadium",
+          "match": 102,
+          "date": "2026-07-15",
+          "city": "Atlanta",
+          "venue": "Mercedes-Benz Stadium",
           "opponentDesc": "Winner QF bracket"
         },
         "final": {
@@ -1715,58 +1457,7 @@
         }
       },
       "possibleOpponents": {
-        "r32": [
-          {
-            "group": "A",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group A"
-          },
-          {
-            "group": "E",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group E"
-          },
-          {
-            "group": "H",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group H"
-          },
-          {
-            "group": "I",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group I"
-          },
-          {
-            "group": "J",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group J"
-          }
-        ],
+        "r32": [],
         "r16": []
       }
     },
@@ -1812,52 +1503,52 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 4,
-        "r16": 0,
-        "qf": 0,
-        "sf": 0,
-        "final": 0,
-        "winner": 0,
+        "r32": 23,
+        "r16": 13,
+        "qf": 7,
+        "sf": 4,
+        "final": 2,
+        "winner": 1,
         "source": "calculated"
       },
       "path": {
         "group_stage": {
           "status": "active",
-          "city": "Toronto · San Francisco · Vancouver",
+          "city": "San Francisco · Vancouver · Seattle",
           "venue": "Various venues",
-          "date": "Jun 12–Jun 24",
-          "detail": "Group B"
+          "date": "Jun 13–24",
+          "detail": "0pts after MD0"
         },
         "r32": {
           "status": "upcoming",
-          "match": 85,
-          "date": "2026-07-02",
-          "city": "Boston",
-          "venue": "Gillette Stadium",
-          "opponentDesc": "Best 3rd from E/F/G/I/J"
+          "match": 82,
+          "date": "2026-07-01",
+          "city": "Seattle",
+          "venue": "Lumen Field",
+          "opponentDesc": "Best 3rd from A/E/H/I/J"
         },
         "r16": {
           "status": "future",
-          "match": 96,
-          "date": "2026-07-07",
-          "city": "Vancouver",
-          "venue": "BC Place",
-          "opponentDesc": "Winner Match 85"
+          "match": 94,
+          "date": "2026-07-06",
+          "city": "Seattle",
+          "venue": "Lumen Field",
+          "opponentDesc": "Winner Match 82"
         },
         "qf": {
           "status": "future",
-          "match": 100,
-          "date": "2026-07-11",
-          "city": "Kansas City",
-          "venue": "Arrowhead Stadium",
-          "opponentDesc": "Winner Match 96"
+          "match": 98,
+          "date": "2026-07-10",
+          "city": "Los Angeles",
+          "venue": "SoFi Stadium",
+          "opponentDesc": "Winner Match 94"
         },
         "sf": {
           "status": "future",
-          "match": 101,
-          "date": "2026-07-14",
-          "city": "Dallas",
-          "venue": "AT&T Stadium",
+          "match": 102,
+          "date": "2026-07-15",
+          "city": "Atlanta",
+          "venue": "Mercedes-Benz Stadium",
           "opponentDesc": "Winner QF bracket"
         },
         "final": {
@@ -1870,58 +1561,7 @@
         }
       },
       "possibleOpponents": {
-        "r32": [
-          {
-            "group": "A",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group A"
-          },
-          {
-            "group": "E",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group E"
-          },
-          {
-            "group": "H",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group H"
-          },
-          {
-            "group": "I",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group I"
-          },
-          {
-            "group": "J",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group J"
-          }
-        ],
+        "r32": [],
         "r16": []
       }
     },
@@ -1967,52 +1607,52 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 4,
-        "r16": 0,
-        "qf": 0,
-        "sf": 0,
-        "final": 0,
-        "winner": 0,
+        "r32": 33,
+        "r16": 18,
+        "qf": 9,
+        "sf": 5,
+        "final": 3,
+        "winner": 10,
         "source": "calculated"
       },
       "path": {
         "group_stage": {
           "status": "active",
-          "city": "Toronto · San Francisco · Vancouver",
+          "city": "San Francisco · Vancouver",
           "venue": "Various venues",
-          "date": "Jun 12–Jun 24",
-          "detail": "Group B"
+          "date": "Jun 13–24",
+          "detail": "0pts after MD0"
         },
         "r32": {
           "status": "upcoming",
-          "match": 85,
-          "date": "2026-07-02",
-          "city": "Boston",
-          "venue": "Gillette Stadium",
-          "opponentDesc": "Best 3rd from E/F/G/I/J"
+          "match": 82,
+          "date": "2026-07-01",
+          "city": "Seattle",
+          "venue": "Lumen Field",
+          "opponentDesc": "Best 3rd from A/E/H/I/J"
         },
         "r16": {
           "status": "future",
-          "match": 96,
-          "date": "2026-07-07",
-          "city": "Vancouver",
-          "venue": "BC Place",
-          "opponentDesc": "Winner Match 85"
+          "match": 94,
+          "date": "2026-07-06",
+          "city": "Seattle",
+          "venue": "Lumen Field",
+          "opponentDesc": "Winner Match 82"
         },
         "qf": {
           "status": "future",
-          "match": 100,
-          "date": "2026-07-11",
-          "city": "Kansas City",
-          "venue": "Arrowhead Stadium",
-          "opponentDesc": "Winner Match 96"
+          "match": 98,
+          "date": "2026-07-10",
+          "city": "Los Angeles",
+          "venue": "SoFi Stadium",
+          "opponentDesc": "Winner Match 94"
         },
         "sf": {
           "status": "future",
-          "match": 101,
-          "date": "2026-07-14",
-          "city": "Dallas",
-          "venue": "AT&T Stadium",
+          "match": 102,
+          "date": "2026-07-15",
+          "city": "Atlanta",
+          "venue": "Mercedes-Benz Stadium",
           "opponentDesc": "Winner QF bracket"
         },
         "final": {
@@ -2025,58 +1665,7 @@
         }
       },
       "possibleOpponents": {
-        "r32": [
-          {
-            "group": "A",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group A"
-          },
-          {
-            "group": "E",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group E"
-          },
-          {
-            "group": "H",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group H"
-          },
-          {
-            "group": "I",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group I"
-          },
-          {
-            "group": "J",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group J"
-          }
-        ],
+        "r32": [],
         "r16": []
       }
     },
@@ -2094,13 +1683,11 @@
           "matchday": 1,
           "opponent": "Morocco",
           "opponentFlag": "🇲🇦",
-          "result": "D",
-          "score": "1-1",
+          "result": null,
+          "score": null,
           "date": "2026-06-13",
           "venue": "MetLife Stadium, New Jersey",
-          "scorers": [
-            "Vinícius Jr 55'"
-          ]
+          "scorers": []
         },
         {
           "matchday": 2,
@@ -2124,21 +1711,21 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 96,
-        "r16": 72,
-        "qf": 46,
-        "sf": 26,
-        "final": 14,
-        "winner": 8,
-        "source": "market"
+        "r32": 99,
+        "r16": 54,
+        "qf": 28,
+        "sf": 14,
+        "final": 7,
+        "winner": 30,
+        "source": "calculated"
       },
       "path": {
         "group_stage": {
           "status": "active",
-          "city": "New Jersey · Boston · Philadelphia",
+          "city": "New Jersey · Philadelphia · Miami",
           "venue": "Various venues",
-          "date": "Jun 13–Jun 24",
-          "detail": "1pts after MD1"
+          "date": "Jun 13–24",
+          "detail": "0pts after MD0"
         },
         "r32": {
           "status": "upcoming",
@@ -2182,58 +1769,7 @@
         }
       },
       "possibleOpponents": {
-        "r32": [
-          {
-            "group": "E",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group E"
-          },
-          {
-            "group": "F",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group F"
-          },
-          {
-            "group": "H",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group H"
-          },
-          {
-            "group": "I",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group I"
-          },
-          {
-            "group": "J",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group J"
-          }
-        ],
+        "r32": [],
         "r16": []
       }
     },
@@ -2251,13 +1787,11 @@
           "matchday": 1,
           "opponent": "Brazil",
           "opponentFlag": "🇧🇷",
-          "result": "D",
-          "score": "1-1",
+          "result": null,
+          "score": null,
           "date": "2026-06-13",
           "venue": "MetLife Stadium, New Jersey",
-          "scorers": [
-            "Saibari 22'"
-          ]
+          "scorers": []
         },
         {
           "matchday": 2,
@@ -2281,52 +1815,52 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 72,
-        "r16": 40,
-        "qf": 22,
-        "sf": 10,
-        "final": 5,
+        "r32": 11,
+        "r16": 6,
+        "qf": 3,
+        "sf": 2,
+        "final": 1,
         "winner": 2,
-        "source": "market"
+        "source": "calculated"
       },
       "path": {
         "group_stage": {
           "status": "active",
-          "city": "New Jersey · Boston · Philadelphia",
+          "city": "New Jersey · Boston · Atlanta",
           "venue": "Various venues",
-          "date": "Jun 13–Jun 24",
-          "detail": "1pts after MD1"
+          "date": "Jun 13–24",
+          "detail": "0pts after MD0"
         },
         "r32": {
           "status": "upcoming",
-          "match": 87,
+          "match": 88,
           "date": "2026-07-03",
-          "city": "Kansas City",
-          "venue": "Arrowhead Stadium",
-          "opponentDesc": "Best 3rd from D/E/I/J/L"
+          "city": "Dallas",
+          "venue": "AT&T Stadium",
+          "opponentDesc": "Runner-up Group D"
         },
         "r16": {
           "status": "future",
-          "match": 96,
+          "match": 95,
           "date": "2026-07-07",
-          "city": "Vancouver",
-          "venue": "BC Place",
-          "opponentDesc": "Winner Match 86"
+          "city": "Atlanta",
+          "venue": "Mercedes-Benz Stadium",
+          "opponentDesc": "Winner Match 87"
         },
         "qf": {
           "status": "future",
-          "match": 100,
+          "match": 99,
           "date": "2026-07-11",
-          "city": "Kansas City",
-          "venue": "Arrowhead Stadium",
-          "opponentDesc": "Winner Match 96"
+          "city": "Miami",
+          "venue": "Hard Rock Stadium",
+          "opponentDesc": "Winner Match 95"
         },
         "sf": {
           "status": "future",
-          "match": 101,
-          "date": "2026-07-14",
-          "city": "Dallas",
-          "venue": "AT&T Stadium",
+          "match": 102,
+          "date": "2026-07-15",
+          "city": "Atlanta",
+          "venue": "Mercedes-Benz Stadium",
           "opponentDesc": "Winner QF bracket"
         },
         "final": {
@@ -2339,58 +1873,7 @@
         }
       },
       "possibleOpponents": {
-        "r32": [
-          {
-            "group": "E",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group E"
-          },
-          {
-            "group": "F",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group F"
-          },
-          {
-            "group": "H",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group H"
-          },
-          {
-            "group": "I",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group I"
-          },
-          {
-            "group": "J",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group J"
-          }
-        ],
+        "r32": [],
         "r16": []
       }
     },
@@ -2408,8 +1891,8 @@
           "matchday": 1,
           "opponent": "Scotland",
           "opponentFlag": "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
-          "result": "L",
-          "score": "0-1",
+          "result": null,
+          "score": null,
           "date": "2026-06-13",
           "venue": "Gillette Stadium, Boston",
           "scorers": []
@@ -2436,52 +1919,52 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 4,
-        "r16": 0,
-        "qf": 0,
-        "sf": 0,
-        "final": 0,
-        "winner": 0,
+        "r32": 23,
+        "r16": 13,
+        "qf": 7,
+        "sf": 4,
+        "final": 2,
+        "winner": 1,
         "source": "calculated"
       },
       "path": {
         "group_stage": {
           "status": "active",
-          "city": "New Jersey · Boston · Philadelphia",
+          "city": "Boston · Philadelphia · Atlanta",
           "venue": "Various venues",
-          "date": "Jun 13–Jun 24",
-          "detail": "0pts after MD1"
+          "date": "Jun 13–24",
+          "detail": "0pts after MD0"
         },
         "r32": {
           "status": "upcoming",
-          "match": 87,
+          "match": 88,
           "date": "2026-07-03",
-          "city": "Kansas City",
-          "venue": "Arrowhead Stadium",
-          "opponentDesc": "Best 3rd from D/E/I/J/L"
+          "city": "Dallas",
+          "venue": "AT&T Stadium",
+          "opponentDesc": "Runner-up Group D"
         },
         "r16": {
           "status": "future",
-          "match": 96,
+          "match": 95,
           "date": "2026-07-07",
-          "city": "Vancouver",
-          "venue": "BC Place",
-          "opponentDesc": "Winner Match 86"
+          "city": "Atlanta",
+          "venue": "Mercedes-Benz Stadium",
+          "opponentDesc": "Winner Match 87"
         },
         "qf": {
           "status": "future",
-          "match": 100,
+          "match": 99,
           "date": "2026-07-11",
-          "city": "Kansas City",
-          "venue": "Arrowhead Stadium",
-          "opponentDesc": "Winner Match 96"
+          "city": "Miami",
+          "venue": "Hard Rock Stadium",
+          "opponentDesc": "Winner Match 95"
         },
         "sf": {
           "status": "future",
-          "match": 101,
-          "date": "2026-07-14",
-          "city": "Dallas",
-          "venue": "AT&T Stadium",
+          "match": 102,
+          "date": "2026-07-15",
+          "city": "Atlanta",
+          "venue": "Mercedes-Benz Stadium",
           "opponentDesc": "Winner QF bracket"
         },
         "final": {
@@ -2494,58 +1977,7 @@
         }
       },
       "possibleOpponents": {
-        "r32": [
-          {
-            "group": "E",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group E"
-          },
-          {
-            "group": "F",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group F"
-          },
-          {
-            "group": "H",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group H"
-          },
-          {
-            "group": "I",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group I"
-          },
-          {
-            "group": "J",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group J"
-          }
-        ],
+        "r32": [],
         "r16": []
       }
     },
@@ -2563,13 +1995,11 @@
           "matchday": 1,
           "opponent": "Haiti",
           "opponentFlag": "🇭🇹",
-          "result": "W",
-          "score": "1-0",
+          "result": null,
+          "score": null,
           "date": "2026-06-13",
           "venue": "Gillette Stadium, Boston",
-          "scorers": [
-            "McGinn 28'"
-          ]
+          "scorers": []
         },
         {
           "matchday": 2,
@@ -2593,52 +2023,52 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 78,
-        "r16": 32,
-        "qf": 14,
-        "sf": 6,
-        "final": 2,
-        "winner": 1,
-        "source": "market"
+        "r32": 13,
+        "r16": 7,
+        "qf": 4,
+        "sf": 2,
+        "final": 1,
+        "winner": 3,
+        "source": "calculated"
       },
       "path": {
         "group_stage": {
           "status": "active",
-          "city": "New Jersey · Boston · Philadelphia",
+          "city": "Boston · Miami",
           "venue": "Various venues",
-          "date": "Jun 13–Jun 24",
-          "detail": "3pts after MD1"
+          "date": "Jun 13–24",
+          "detail": "0pts after MD0"
         },
         "r32": {
           "status": "upcoming",
-          "match": 87,
+          "match": 88,
           "date": "2026-07-03",
-          "city": "Kansas City",
-          "venue": "Arrowhead Stadium",
-          "opponentDesc": "Best 3rd from D/E/I/J/L"
+          "city": "Dallas",
+          "venue": "AT&T Stadium",
+          "opponentDesc": "Runner-up Group D"
         },
         "r16": {
           "status": "future",
-          "match": 96,
+          "match": 95,
           "date": "2026-07-07",
-          "city": "Vancouver",
-          "venue": "BC Place",
-          "opponentDesc": "Winner Match 86"
+          "city": "Atlanta",
+          "venue": "Mercedes-Benz Stadium",
+          "opponentDesc": "Winner Match 87"
         },
         "qf": {
           "status": "future",
-          "match": 100,
+          "match": 99,
           "date": "2026-07-11",
-          "city": "Kansas City",
-          "venue": "Arrowhead Stadium",
-          "opponentDesc": "Winner Match 96"
+          "city": "Miami",
+          "venue": "Hard Rock Stadium",
+          "opponentDesc": "Winner Match 95"
         },
         "sf": {
           "status": "future",
-          "match": 101,
-          "date": "2026-07-14",
-          "city": "Dallas",
-          "venue": "AT&T Stadium",
+          "match": 102,
+          "date": "2026-07-15",
+          "city": "Atlanta",
+          "venue": "Mercedes-Benz Stadium",
           "opponentDesc": "Winner QF bracket"
         },
         "final": {
@@ -2651,58 +2081,7 @@
         }
       },
       "possibleOpponents": {
-        "r32": [
-          {
-            "group": "E",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group E"
-          },
-          {
-            "group": "F",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group F"
-          },
-          {
-            "group": "H",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group H"
-          },
-          {
-            "group": "I",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group I"
-          },
-          {
-            "group": "J",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group J"
-          }
-        ],
+        "r32": [],
         "r16": []
       }
     },
@@ -2720,16 +2099,11 @@
           "matchday": 1,
           "opponent": "Paraguay",
           "opponentFlag": "🇵🇾",
-          "result": "W",
-          "score": "4-1",
+          "result": null,
+          "score": null,
           "date": "2026-06-12",
           "venue": "SoFi Stadium, Los Angeles",
-          "scorers": [
-            "Bobadilla OG 7'",
-            "Balogun 31'",
-            "Balogun 45+5'",
-            "Reyna 90+8'"
-          ]
+          "scorers": []
         },
         {
           "matchday": 2,
@@ -2753,21 +2127,21 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 94,
-        "r16": 38,
-        "qf": 22,
-        "sf": 11,
-        "final": 5,
-        "winner": 3,
-        "source": "market"
+        "r32": 99,
+        "r16": 54,
+        "qf": 28,
+        "sf": 14,
+        "final": 7,
+        "winner": 30,
+        "source": "calculated"
       },
       "path": {
         "group_stage": {
           "status": "active",
-          "city": "Los Angeles · Vancouver · Seattle",
+          "city": "Los Angeles · Seattle",
           "venue": "Various venues",
-          "date": "Jun 12–Jun 25",
-          "detail": "3pts after MD1"
+          "date": "Jun 12–25",
+          "detail": "0pts after MD0"
         },
         "r32": {
           "status": "upcoming",
@@ -2811,58 +2185,7 @@
         }
       },
       "possibleOpponents": {
-        "r32": [
-          {
-            "group": "B",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group B"
-          },
-          {
-            "group": "E",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group E"
-          },
-          {
-            "group": "F",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group F"
-          },
-          {
-            "group": "I",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group I"
-          },
-          {
-            "group": "J",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group J"
-          }
-        ],
+        "r32": [],
         "r16": []
       }
     },
@@ -2880,13 +2203,11 @@
           "matchday": 1,
           "opponent": "USA",
           "opponentFlag": "🇺🇸",
-          "result": "L",
-          "score": "1-4",
+          "result": null,
+          "score": null,
           "date": "2026-06-12",
           "venue": "SoFi Stadium, Los Angeles",
-          "scorers": [
-            "Mauricio 73'"
-          ]
+          "scorers": []
         },
         {
           "matchday": 2,
@@ -2910,45 +2231,45 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 30,
-        "r16": 8,
-        "qf": 3,
+        "r32": 8,
+        "r16": 4,
+        "qf": 2,
         "sf": 1,
-        "final": 0,
-        "winner": 0,
-        "source": "market"
+        "final": 1,
+        "winner": 1,
+        "source": "calculated"
       },
       "path": {
         "group_stage": {
           "status": "active",
-          "city": "Los Angeles · Vancouver · Seattle",
+          "city": "Los Angeles · San Francisco",
           "venue": "Various venues",
-          "date": "Jun 12–Jun 25",
-          "detail": "0pts after MD1"
+          "date": "Jun 12–25",
+          "detail": "0pts after MD0"
         },
         "r32": {
           "status": "upcoming",
-          "match": 81,
-          "date": "2026-07-01",
-          "city": "San Francisco",
-          "venue": "Levi's Stadium",
-          "opponentDesc": "Best 3rd from B/E/F/I/J"
+          "match": 88,
+          "date": "2026-07-03",
+          "city": "Dallas",
+          "venue": "AT&T Stadium",
+          "opponentDesc": "Winner Group C"
         },
         "r16": {
           "status": "future",
-          "match": 94,
-          "date": "2026-07-06",
-          "city": "Seattle",
-          "venue": "Lumen Field",
-          "opponentDesc": "Winner Group G (Match 82)"
+          "match": 95,
+          "date": "2026-07-07",
+          "city": "Atlanta",
+          "venue": "Mercedes-Benz Stadium",
+          "opponentDesc": "Winner Match 87"
         },
         "qf": {
           "status": "future",
-          "match": 98,
-          "date": "2026-07-10",
-          "city": "Los Angeles",
-          "venue": "SoFi Stadium",
-          "opponentDesc": "Winner Match 94"
+          "match": 99,
+          "date": "2026-07-11",
+          "city": "Miami",
+          "venue": "Hard Rock Stadium",
+          "opponentDesc": "Winner Match 95"
         },
         "sf": {
           "status": "future",
@@ -2968,58 +2289,7 @@
         }
       },
       "possibleOpponents": {
-        "r32": [
-          {
-            "group": "B",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group B"
-          },
-          {
-            "group": "E",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group E"
-          },
-          {
-            "group": "F",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group F"
-          },
-          {
-            "group": "I",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group I"
-          },
-          {
-            "group": "J",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group J"
-          }
-        ],
+        "r32": [],
         "r16": []
       }
     },
@@ -3037,13 +2307,11 @@
           "matchday": 1,
           "opponent": "Türkiye",
           "opponentFlag": "🇹🇷",
-          "result": "W",
-          "score": "1-0",
+          "result": null,
+          "score": null,
           "date": "2026-06-13",
           "venue": "BC Place, Vancouver",
-          "scorers": [
-            "Irankunda 28'"
-          ]
+          "scorers": []
         },
         {
           "matchday": 2,
@@ -3067,45 +2335,45 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 82,
-        "r16": 28,
-        "qf": 14,
-        "sf": 6,
-        "final": 3,
-        "winner": 1,
-        "source": "market"
+        "r32": 65,
+        "r16": 36,
+        "qf": 19,
+        "sf": 10,
+        "final": 5,
+        "winner": 16,
+        "source": "calculated"
       },
       "path": {
         "group_stage": {
           "status": "active",
-          "city": "Los Angeles · Vancouver · Seattle",
+          "city": "Vancouver · Seattle · San Francisco",
           "venue": "Various venues",
-          "date": "Jun 12–Jun 25",
-          "detail": "3pts after MD1"
+          "date": "Jun 13–25",
+          "detail": "0pts after MD0"
         },
         "r32": {
           "status": "upcoming",
-          "match": 81,
-          "date": "2026-07-01",
-          "city": "San Francisco",
-          "venue": "Levi's Stadium",
-          "opponentDesc": "Best 3rd from B/E/F/I/J"
+          "match": 88,
+          "date": "2026-07-03",
+          "city": "Dallas",
+          "venue": "AT&T Stadium",
+          "opponentDesc": "Winner Group C"
         },
         "r16": {
           "status": "future",
-          "match": 94,
-          "date": "2026-07-06",
-          "city": "Seattle",
-          "venue": "Lumen Field",
-          "opponentDesc": "Winner Group G (Match 82)"
+          "match": 95,
+          "date": "2026-07-07",
+          "city": "Atlanta",
+          "venue": "Mercedes-Benz Stadium",
+          "opponentDesc": "Winner Match 87"
         },
         "qf": {
           "status": "future",
-          "match": 98,
-          "date": "2026-07-10",
-          "city": "Los Angeles",
-          "venue": "SoFi Stadium",
-          "opponentDesc": "Winner Match 94"
+          "match": 99,
+          "date": "2026-07-11",
+          "city": "Miami",
+          "venue": "Hard Rock Stadium",
+          "opponentDesc": "Winner Match 95"
         },
         "sf": {
           "status": "future",
@@ -3125,58 +2393,7 @@
         }
       },
       "possibleOpponents": {
-        "r32": [
-          {
-            "group": "B",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group B"
-          },
-          {
-            "group": "E",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group E"
-          },
-          {
-            "group": "F",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group F"
-          },
-          {
-            "group": "I",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group I"
-          },
-          {
-            "group": "J",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group J"
-          }
-        ],
+        "r32": [],
         "r16": []
       }
     },
@@ -3194,8 +2411,8 @@
           "matchday": 1,
           "opponent": "Australia",
           "opponentFlag": "🇦🇺",
-          "result": "L",
-          "score": "0-1",
+          "result": null,
+          "score": null,
           "date": "2026-06-13",
           "venue": "BC Place, Vancouver",
           "scorers": []
@@ -3222,45 +2439,45 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 55,
-        "r16": 20,
-        "qf": 9,
+        "r32": 27,
+        "r16": 15,
+        "qf": 8,
         "sf": 4,
         "final": 2,
-        "winner": 1,
-        "source": "market"
+        "winner": 8,
+        "source": "calculated"
       },
       "path": {
         "group_stage": {
           "status": "active",
-          "city": "Los Angeles · Vancouver · Seattle",
+          "city": "Vancouver · San Francisco · Los Angeles",
           "venue": "Various venues",
-          "date": "Jun 12–Jun 25",
-          "detail": "0pts after MD1"
+          "date": "Jun 13–25",
+          "detail": "0pts after MD0"
         },
         "r32": {
           "status": "upcoming",
-          "match": 81,
-          "date": "2026-07-01",
-          "city": "San Francisco",
-          "venue": "Levi's Stadium",
-          "opponentDesc": "Best 3rd from B/E/F/I/J"
+          "match": 88,
+          "date": "2026-07-03",
+          "city": "Dallas",
+          "venue": "AT&T Stadium",
+          "opponentDesc": "Winner Group C"
         },
         "r16": {
           "status": "future",
-          "match": 94,
-          "date": "2026-07-06",
-          "city": "Seattle",
-          "venue": "Lumen Field",
-          "opponentDesc": "Winner Group G (Match 82)"
+          "match": 95,
+          "date": "2026-07-07",
+          "city": "Atlanta",
+          "venue": "Mercedes-Benz Stadium",
+          "opponentDesc": "Winner Match 87"
         },
         "qf": {
           "status": "future",
-          "match": 98,
-          "date": "2026-07-10",
-          "city": "Los Angeles",
-          "venue": "SoFi Stadium",
-          "opponentDesc": "Winner Match 94"
+          "match": 99,
+          "date": "2026-07-11",
+          "city": "Miami",
+          "venue": "Hard Rock Stadium",
+          "opponentDesc": "Winner Match 95"
         },
         "sf": {
           "status": "future",
@@ -3280,58 +2497,7 @@
         }
       },
       "possibleOpponents": {
-        "r32": [
-          {
-            "group": "B",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group B"
-          },
-          {
-            "group": "E",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group E"
-          },
-          {
-            "group": "F",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group F"
-          },
-          {
-            "group": "I",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group I"
-          },
-          {
-            "group": "J",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group J"
-          }
-        ],
+        "r32": [],
         "r16": []
       }
     },
@@ -3377,21 +2543,21 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 97,
-        "r16": 70,
-        "qf": 42,
-        "sf": 22,
-        "final": 11,
-        "winner": 6,
-        "source": "market"
+        "r32": 99,
+        "r16": 54,
+        "qf": 28,
+        "sf": 14,
+        "final": 7,
+        "winner": 30,
+        "source": "calculated"
       },
       "path": {
         "group_stage": {
           "status": "active",
-          "city": "Houston · Philadelphia · Atlanta",
+          "city": "Houston · Atlanta · New Jersey",
           "venue": "Various venues",
-          "date": "Jun 14–Jun 25",
-          "detail": "Group E"
+          "date": "Jun 14–25",
+          "detail": "0pts after MD0"
         },
         "r32": {
           "status": "upcoming",
@@ -3407,7 +2573,7 @@
           "date": "2026-07-06",
           "city": "Seattle",
           "venue": "Lumen Field",
-          "opponentDesc": "Winner Match 81 vs Match 82"
+          "opponentDesc": "Winner Match 82"
         },
         "qf": {
           "status": "future",
@@ -3435,58 +2601,7 @@
         }
       },
       "possibleOpponents": {
-        "r32": [
-          {
-            "group": "B",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group B"
-          },
-          {
-            "group": "E",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group E"
-          },
-          {
-            "group": "F",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group F"
-          },
-          {
-            "group": "I",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group I"
-          },
-          {
-            "group": "J",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group J"
-          }
-        ],
+        "r32": [],
         "r16": []
       }
     },
@@ -3532,52 +2647,52 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 4,
-        "r16": 0,
-        "qf": 0,
-        "sf": 0,
-        "final": 0,
+        "r32": 5,
+        "r16": 3,
+        "qf": 2,
+        "sf": 1,
+        "final": 1,
         "winner": 0,
         "source": "calculated"
       },
       "path": {
         "group_stage": {
           "status": "active",
-          "city": "Houston · Philadelphia · Atlanta",
+          "city": "Houston · New Jersey · Philadelphia",
           "venue": "Various venues",
-          "date": "Jun 14–Jun 25",
-          "detail": "Group E"
+          "date": "Jun 14–25",
+          "detail": "0pts after MD0"
         },
         "r32": {
           "status": "upcoming",
-          "match": 81,
-          "date": "2026-07-01",
-          "city": "San Francisco",
-          "venue": "Levi's Stadium",
-          "opponentDesc": "Best 3rd from B/E/F/I/J"
+          "match": 86,
+          "date": "2026-07-02",
+          "city": "Miami",
+          "venue": "Hard Rock Stadium",
+          "opponentDesc": "Winner Group J"
         },
         "r16": {
           "status": "future",
-          "match": 94,
-          "date": "2026-07-06",
-          "city": "Seattle",
-          "venue": "Lumen Field",
-          "opponentDesc": "Winner Match 81 vs Match 82"
+          "match": 96,
+          "date": "2026-07-07",
+          "city": "Vancouver",
+          "venue": "BC Place",
+          "opponentDesc": "Winner Match 86"
         },
         "qf": {
           "status": "future",
-          "match": 98,
-          "date": "2026-07-10",
-          "city": "Los Angeles",
-          "venue": "SoFi Stadium",
-          "opponentDesc": "Winner Match 94"
+          "match": 100,
+          "date": "2026-07-11",
+          "city": "Kansas City",
+          "venue": "Arrowhead Stadium",
+          "opponentDesc": "Winner Match 96"
         },
         "sf": {
           "status": "future",
-          "match": 102,
-          "date": "2026-07-15",
-          "city": "Atlanta",
-          "venue": "Mercedes-Benz Stadium",
+          "match": 101,
+          "date": "2026-07-14",
+          "city": "Dallas",
+          "venue": "AT&T Stadium",
           "opponentDesc": "Winner QF bracket"
         },
         "final": {
@@ -3590,58 +2705,7 @@
         }
       },
       "possibleOpponents": {
-        "r32": [
-          {
-            "group": "B",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group B"
-          },
-          {
-            "group": "E",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group E"
-          },
-          {
-            "group": "F",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group F"
-          },
-          {
-            "group": "I",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group I"
-          },
-          {
-            "group": "J",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group J"
-          }
-        ],
+        "r32": [],
         "r16": []
       }
     },
@@ -3687,52 +2751,52 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 4,
-        "r16": 0,
-        "qf": 0,
-        "sf": 0,
-        "final": 0,
-        "winner": 0,
+        "r32": 34,
+        "r16": 19,
+        "qf": 10,
+        "sf": 5,
+        "final": 3,
+        "winner": 5,
         "source": "calculated"
       },
       "path": {
         "group_stage": {
           "status": "active",
-          "city": "Houston · Philadelphia · Atlanta",
+          "city": "Philadelphia · Atlanta",
           "venue": "Various venues",
-          "date": "Jun 14–Jun 25",
-          "detail": "Group E"
+          "date": "Jun 14–25",
+          "detail": "0pts after MD0"
         },
         "r32": {
           "status": "upcoming",
-          "match": 81,
-          "date": "2026-07-01",
-          "city": "San Francisco",
-          "venue": "Levi's Stadium",
-          "opponentDesc": "Best 3rd from B/E/F/I/J"
+          "match": 86,
+          "date": "2026-07-02",
+          "city": "Miami",
+          "venue": "Hard Rock Stadium",
+          "opponentDesc": "Winner Group J"
         },
         "r16": {
           "status": "future",
-          "match": 94,
-          "date": "2026-07-06",
-          "city": "Seattle",
-          "venue": "Lumen Field",
-          "opponentDesc": "Winner Match 81 vs Match 82"
+          "match": 96,
+          "date": "2026-07-07",
+          "city": "Vancouver",
+          "venue": "BC Place",
+          "opponentDesc": "Winner Match 86"
         },
         "qf": {
           "status": "future",
-          "match": 98,
-          "date": "2026-07-10",
-          "city": "Los Angeles",
-          "venue": "SoFi Stadium",
-          "opponentDesc": "Winner Match 94"
+          "match": 100,
+          "date": "2026-07-11",
+          "city": "Kansas City",
+          "venue": "Arrowhead Stadium",
+          "opponentDesc": "Winner Match 96"
         },
         "sf": {
           "status": "future",
-          "match": 102,
-          "date": "2026-07-15",
-          "city": "Atlanta",
-          "venue": "Mercedes-Benz Stadium",
+          "match": 101,
+          "date": "2026-07-14",
+          "city": "Dallas",
+          "venue": "AT&T Stadium",
           "opponentDesc": "Winner QF bracket"
         },
         "final": {
@@ -3745,58 +2809,7 @@
         }
       },
       "possibleOpponents": {
-        "r32": [
-          {
-            "group": "B",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group B"
-          },
-          {
-            "group": "E",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group E"
-          },
-          {
-            "group": "F",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group F"
-          },
-          {
-            "group": "I",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group I"
-          },
-          {
-            "group": "J",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group J"
-          }
-        ],
+        "r32": [],
         "r16": []
       }
     },
@@ -3842,52 +2855,52 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 4,
-        "r16": 0,
-        "qf": 0,
-        "sf": 0,
-        "final": 0,
-        "winner": 0,
+        "r32": 27,
+        "r16": 15,
+        "qf": 8,
+        "sf": 4,
+        "final": 2,
+        "winner": 8,
         "source": "calculated"
       },
       "path": {
         "group_stage": {
           "status": "active",
-          "city": "Houston · Philadelphia · Atlanta",
+          "city": "Philadelphia · New Jersey",
           "venue": "Various venues",
-          "date": "Jun 14–Jun 25",
-          "detail": "Group E"
+          "date": "Jun 14–25",
+          "detail": "0pts after MD0"
         },
         "r32": {
           "status": "upcoming",
-          "match": 81,
-          "date": "2026-07-01",
-          "city": "San Francisco",
-          "venue": "Levi's Stadium",
-          "opponentDesc": "Best 3rd from B/E/F/I/J"
+          "match": 86,
+          "date": "2026-07-02",
+          "city": "Miami",
+          "venue": "Hard Rock Stadium",
+          "opponentDesc": "Winner Group J"
         },
         "r16": {
           "status": "future",
-          "match": 94,
-          "date": "2026-07-06",
-          "city": "Seattle",
-          "venue": "Lumen Field",
-          "opponentDesc": "Winner Match 81 vs Match 82"
+          "match": 96,
+          "date": "2026-07-07",
+          "city": "Vancouver",
+          "venue": "BC Place",
+          "opponentDesc": "Winner Match 86"
         },
         "qf": {
           "status": "future",
-          "match": 98,
-          "date": "2026-07-10",
-          "city": "Los Angeles",
-          "venue": "SoFi Stadium",
-          "opponentDesc": "Winner Match 94"
+          "match": 100,
+          "date": "2026-07-11",
+          "city": "Kansas City",
+          "venue": "Arrowhead Stadium",
+          "opponentDesc": "Winner Match 96"
         },
         "sf": {
           "status": "future",
-          "match": 102,
-          "date": "2026-07-15",
-          "city": "Atlanta",
-          "venue": "Mercedes-Benz Stadium",
+          "match": 101,
+          "date": "2026-07-14",
+          "city": "Dallas",
+          "venue": "AT&T Stadium",
           "opponentDesc": "Winner QF bracket"
         },
         "final": {
@@ -3900,58 +2913,7 @@
         }
       },
       "possibleOpponents": {
-        "r32": [
-          {
-            "group": "B",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group B"
-          },
-          {
-            "group": "E",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group E"
-          },
-          {
-            "group": "F",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group F"
-          },
-          {
-            "group": "I",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group I"
-          },
-          {
-            "group": "J",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group J"
-          }
-        ],
+        "r32": [],
         "r16": []
       }
     },
@@ -3997,21 +2959,21 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 96,
-        "r16": 68,
-        "qf": 40,
-        "sf": 20,
-        "final": 10,
-        "winner": 5,
-        "source": "market"
+        "r32": 99,
+        "r16": 54,
+        "qf": 28,
+        "sf": 14,
+        "final": 7,
+        "winner": 30,
+        "source": "calculated"
       },
       "path": {
         "group_stage": {
           "status": "active",
-          "city": "Kansas City · Dallas",
+          "city": "Kansas City",
           "venue": "Various venues",
-          "date": "Jun 14–Jun 25",
-          "detail": "Group F"
+          "date": "Jun 14–25",
+          "detail": "0pts after MD0"
         },
         "r32": {
           "status": "upcoming",
@@ -4055,58 +3017,7 @@
         }
       },
       "possibleOpponents": {
-        "r32": [
-          {
-            "group": "C",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group C"
-          },
-          {
-            "group": "D",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group D"
-          },
-          {
-            "group": "I",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group I"
-          },
-          {
-            "group": "J",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group J"
-          },
-          {
-            "group": "L",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group L"
-          }
-        ],
+        "r32": [],
         "r16": []
       }
     },
@@ -4152,52 +3063,52 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 80,
-        "r16": 42,
-        "qf": 20,
-        "sf": 9,
-        "final": 4,
+        "r32": 11,
+        "r16": 6,
+        "qf": 3,
+        "sf": 2,
+        "final": 1,
         "winner": 2,
-        "source": "market"
+        "source": "calculated"
       },
       "path": {
         "group_stage": {
           "status": "active",
           "city": "Kansas City · Dallas",
           "venue": "Various venues",
-          "date": "Jun 14–Jun 25",
-          "detail": "Group F"
+          "date": "Jun 14–25",
+          "detail": "0pts after MD0"
         },
         "r32": {
           "status": "upcoming",
-          "match": 88,
+          "match": 87,
           "date": "2026-07-03",
-          "city": "Dallas",
-          "venue": "AT&T Stadium",
-          "opponentDesc": "Runner-up Group D"
+          "city": "Kansas City",
+          "venue": "Arrowhead Stadium",
+          "opponentDesc": "Winner Group K"
         },
         "r16": {
           "status": "future",
-          "match": 95,
+          "match": 96,
           "date": "2026-07-07",
-          "city": "Atlanta",
-          "venue": "Mercedes-Benz Stadium",
-          "opponentDesc": "Winner Match 87"
+          "city": "Vancouver",
+          "venue": "BC Place",
+          "opponentDesc": "Winner Match 86"
         },
         "qf": {
           "status": "future",
-          "match": 99,
+          "match": 100,
           "date": "2026-07-11",
-          "city": "Miami",
-          "venue": "Hard Rock Stadium",
-          "opponentDesc": "Winner Match 95"
+          "city": "Kansas City",
+          "venue": "Arrowhead Stadium",
+          "opponentDesc": "Winner Match 96"
         },
         "sf": {
           "status": "future",
-          "match": 102,
-          "date": "2026-07-15",
-          "city": "Atlanta",
-          "venue": "Mercedes-Benz Stadium",
+          "match": 101,
+          "date": "2026-07-14",
+          "city": "Dallas",
+          "venue": "AT&T Stadium",
           "opponentDesc": "Winner QF bracket"
         },
         "final": {
@@ -4210,58 +3121,7 @@
         }
       },
       "possibleOpponents": {
-        "r32": [
-          {
-            "group": "C",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group C"
-          },
-          {
-            "group": "D",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group D"
-          },
-          {
-            "group": "I",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group I"
-          },
-          {
-            "group": "J",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group J"
-          },
-          {
-            "group": "L",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group L"
-          }
-        ],
+        "r32": [],
         "r16": []
       }
     },
@@ -4307,12 +3167,12 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 4,
-        "r16": 0,
-        "qf": 0,
-        "sf": 0,
-        "final": 0,
-        "winner": 0,
+        "r32": 59,
+        "r16": 32,
+        "qf": 17,
+        "sf": 9,
+        "final": 5,
+        "winner": 14,
         "source": "calculated"
       },
       "path": {
@@ -4320,39 +3180,39 @@
           "status": "active",
           "city": "Kansas City · Dallas",
           "venue": "Various venues",
-          "date": "Jun 14–Jun 25",
-          "detail": "Group F"
+          "date": "Jun 14–25",
+          "detail": "0pts after MD0"
         },
         "r32": {
           "status": "upcoming",
-          "match": 88,
+          "match": 87,
           "date": "2026-07-03",
-          "city": "Dallas",
-          "venue": "AT&T Stadium",
-          "opponentDesc": "Runner-up Group D"
+          "city": "Kansas City",
+          "venue": "Arrowhead Stadium",
+          "opponentDesc": "Winner Group K"
         },
         "r16": {
           "status": "future",
-          "match": 95,
+          "match": 96,
           "date": "2026-07-07",
-          "city": "Atlanta",
-          "venue": "Mercedes-Benz Stadium",
-          "opponentDesc": "Winner Match 87"
+          "city": "Vancouver",
+          "venue": "BC Place",
+          "opponentDesc": "Winner Match 86"
         },
         "qf": {
           "status": "future",
-          "match": 99,
+          "match": 100,
           "date": "2026-07-11",
-          "city": "Miami",
-          "venue": "Hard Rock Stadium",
-          "opponentDesc": "Winner Match 95"
+          "city": "Kansas City",
+          "venue": "Arrowhead Stadium",
+          "opponentDesc": "Winner Match 96"
         },
         "sf": {
           "status": "future",
-          "match": 102,
-          "date": "2026-07-15",
-          "city": "Atlanta",
-          "venue": "Mercedes-Benz Stadium",
+          "match": 101,
+          "date": "2026-07-14",
+          "city": "Dallas",
+          "venue": "AT&T Stadium",
           "opponentDesc": "Winner QF bracket"
         },
         "final": {
@@ -4365,58 +3225,7 @@
         }
       },
       "possibleOpponents": {
-        "r32": [
-          {
-            "group": "C",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group C"
-          },
-          {
-            "group": "D",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group D"
-          },
-          {
-            "group": "I",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group I"
-          },
-          {
-            "group": "J",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group J"
-          },
-          {
-            "group": "L",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group L"
-          }
-        ],
+        "r32": [],
         "r16": []
       }
     },
@@ -4462,52 +3271,52 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 4,
-        "r16": 0,
-        "qf": 0,
-        "sf": 0,
-        "final": 0,
-        "winner": 0,
+        "r32": 16,
+        "r16": 9,
+        "qf": 5,
+        "sf": 3,
+        "final": 2,
+        "winner": 4,
         "source": "calculated"
       },
       "path": {
         "group_stage": {
           "status": "active",
-          "city": "Kansas City · Dallas",
+          "city": "Kansas City",
           "venue": "Various venues",
-          "date": "Jun 14–Jun 25",
-          "detail": "Group F"
+          "date": "Jun 14–25",
+          "detail": "0pts after MD0"
         },
         "r32": {
           "status": "upcoming",
-          "match": 88,
+          "match": 87,
           "date": "2026-07-03",
-          "city": "Dallas",
-          "venue": "AT&T Stadium",
-          "opponentDesc": "Runner-up Group D"
+          "city": "Kansas City",
+          "venue": "Arrowhead Stadium",
+          "opponentDesc": "Winner Group K"
         },
         "r16": {
           "status": "future",
-          "match": 95,
+          "match": 96,
           "date": "2026-07-07",
-          "city": "Atlanta",
-          "venue": "Mercedes-Benz Stadium",
-          "opponentDesc": "Winner Match 87"
+          "city": "Vancouver",
+          "venue": "BC Place",
+          "opponentDesc": "Winner Match 86"
         },
         "qf": {
           "status": "future",
-          "match": 99,
+          "match": 100,
           "date": "2026-07-11",
-          "city": "Miami",
-          "venue": "Hard Rock Stadium",
-          "opponentDesc": "Winner Match 95"
+          "city": "Kansas City",
+          "venue": "Arrowhead Stadium",
+          "opponentDesc": "Winner Match 96"
         },
         "sf": {
           "status": "future",
-          "match": 102,
-          "date": "2026-07-15",
-          "city": "Atlanta",
-          "venue": "Mercedes-Benz Stadium",
+          "match": 101,
+          "date": "2026-07-14",
+          "city": "Dallas",
+          "venue": "AT&T Stadium",
           "opponentDesc": "Winner QF bracket"
         },
         "final": {
@@ -4520,58 +3329,7 @@
         }
       },
       "possibleOpponents": {
-        "r32": [
-          {
-            "group": "C",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group C"
-          },
-          {
-            "group": "D",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group D"
-          },
-          {
-            "group": "I",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group I"
-          },
-          {
-            "group": "J",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group J"
-          },
-          {
-            "group": "L",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group L"
-          }
-        ],
+        "r32": [],
         "r16": []
       }
     },
@@ -4617,21 +3375,21 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 96,
-        "r16": 72,
-        "qf": 44,
-        "sf": 24,
-        "final": 13,
-        "winner": 7,
-        "source": "market"
+        "r32": 99,
+        "r16": 54,
+        "qf": 28,
+        "sf": 14,
+        "final": 7,
+        "winner": 30,
+        "source": "calculated"
       },
       "path": {
         "group_stage": {
           "status": "active",
           "city": "Seattle · Los Angeles · Vancouver",
           "venue": "Various venues",
-          "date": "Jun 15–Jun 26",
-          "detail": "Group G"
+          "date": "Jun 15–26",
+          "detail": "0pts after MD0"
         },
         "r32": {
           "status": "upcoming",
@@ -4675,58 +3433,7 @@
         }
       },
       "possibleOpponents": {
-        "r32": [
-          {
-            "group": "A",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group A"
-          },
-          {
-            "group": "E",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group E"
-          },
-          {
-            "group": "H",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group H"
-          },
-          {
-            "group": "I",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group I"
-          },
-          {
-            "group": "J",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group J"
-          }
-        ],
+        "r32": [],
         "r16": []
       }
     },
@@ -4772,45 +3479,45 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 4,
-        "r16": 0,
-        "qf": 0,
-        "sf": 0,
-        "final": 0,
-        "winner": 0,
+        "r32": 8,
+        "r16": 4,
+        "qf": 2,
+        "sf": 1,
+        "final": 1,
+        "winner": 1,
         "source": "calculated"
       },
       "path": {
         "group_stage": {
           "status": "active",
-          "city": "Seattle · Los Angeles · Vancouver",
+          "city": "Seattle · Vancouver",
           "venue": "Various venues",
-          "date": "Jun 15–Jun 26",
-          "detail": "Group G"
+          "date": "Jun 15–26",
+          "detail": "0pts after MD0"
         },
         "r32": {
           "status": "upcoming",
-          "match": 82,
-          "date": "2026-07-01",
-          "city": "Seattle",
-          "venue": "Lumen Field",
-          "opponentDesc": "Best 3rd from A/E/H/I/J"
+          "match": 88,
+          "date": "2026-07-03",
+          "city": "Dallas",
+          "venue": "AT&T Stadium",
+          "opponentDesc": "Runner-up Group D"
         },
         "r16": {
           "status": "future",
-          "match": 94,
-          "date": "2026-07-06",
-          "city": "Seattle",
-          "venue": "Lumen Field",
-          "opponentDesc": "Winner Group D (Match 81)"
+          "match": 95,
+          "date": "2026-07-07",
+          "city": "Atlanta",
+          "venue": "Mercedes-Benz Stadium",
+          "opponentDesc": "Winner Match 87"
         },
         "qf": {
           "status": "future",
-          "match": 98,
-          "date": "2026-07-10",
-          "city": "Los Angeles",
-          "venue": "SoFi Stadium",
-          "opponentDesc": "Winner Match 94"
+          "match": 99,
+          "date": "2026-07-11",
+          "city": "Miami",
+          "venue": "Hard Rock Stadium",
+          "opponentDesc": "Winner Match 95"
         },
         "sf": {
           "status": "future",
@@ -4830,58 +3537,7 @@
         }
       },
       "possibleOpponents": {
-        "r32": [
-          {
-            "group": "A",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group A"
-          },
-          {
-            "group": "E",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group E"
-          },
-          {
-            "group": "H",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group H"
-          },
-          {
-            "group": "I",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group I"
-          },
-          {
-            "group": "J",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group J"
-          }
-        ],
+        "r32": [],
         "r16": []
       }
     },
@@ -4927,45 +3583,45 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 4,
-        "r16": 0,
-        "qf": 0,
-        "sf": 0,
-        "final": 0,
-        "winner": 0,
+        "r32": 73,
+        "r16": 40,
+        "qf": 21,
+        "sf": 11,
+        "final": 6,
+        "winner": 19,
         "source": "calculated"
       },
       "path": {
         "group_stage": {
           "status": "active",
-          "city": "Seattle · Los Angeles · Vancouver",
+          "city": "Los Angeles · Seattle",
           "venue": "Various venues",
-          "date": "Jun 15–Jun 26",
-          "detail": "Group G"
+          "date": "Jun 15–26",
+          "detail": "0pts after MD0"
         },
         "r32": {
           "status": "upcoming",
-          "match": 82,
-          "date": "2026-07-01",
-          "city": "Seattle",
-          "venue": "Lumen Field",
-          "opponentDesc": "Best 3rd from A/E/H/I/J"
+          "match": 88,
+          "date": "2026-07-03",
+          "city": "Dallas",
+          "venue": "AT&T Stadium",
+          "opponentDesc": "Runner-up Group D"
         },
         "r16": {
           "status": "future",
-          "match": 94,
-          "date": "2026-07-06",
-          "city": "Seattle",
-          "venue": "Lumen Field",
-          "opponentDesc": "Winner Group D (Match 81)"
+          "match": 95,
+          "date": "2026-07-07",
+          "city": "Atlanta",
+          "venue": "Mercedes-Benz Stadium",
+          "opponentDesc": "Winner Match 87"
         },
         "qf": {
           "status": "future",
-          "match": 98,
-          "date": "2026-07-10",
-          "city": "Los Angeles",
-          "venue": "SoFi Stadium",
-          "opponentDesc": "Winner Match 94"
+          "match": 99,
+          "date": "2026-07-11",
+          "city": "Miami",
+          "venue": "Hard Rock Stadium",
+          "opponentDesc": "Winner Match 95"
         },
         "sf": {
           "status": "future",
@@ -4985,58 +3641,7 @@
         }
       },
       "possibleOpponents": {
-        "r32": [
-          {
-            "group": "A",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group A"
-          },
-          {
-            "group": "E",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group E"
-          },
-          {
-            "group": "H",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group H"
-          },
-          {
-            "group": "I",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group I"
-          },
-          {
-            "group": "J",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group J"
-          }
-        ],
+        "r32": [],
         "r16": []
       }
     },
@@ -5082,45 +3687,45 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 4,
-        "r16": 0,
-        "qf": 0,
-        "sf": 0,
-        "final": 0,
+        "r32": 5,
+        "r16": 3,
+        "qf": 2,
+        "sf": 1,
+        "final": 1,
         "winner": 0,
         "source": "calculated"
       },
       "path": {
         "group_stage": {
           "status": "active",
-          "city": "Seattle · Los Angeles · Vancouver",
+          "city": "Los Angeles · Vancouver",
           "venue": "Various venues",
-          "date": "Jun 15–Jun 26",
-          "detail": "Group G"
+          "date": "Jun 15–26",
+          "detail": "0pts after MD0"
         },
         "r32": {
           "status": "upcoming",
-          "match": 82,
-          "date": "2026-07-01",
-          "city": "Seattle",
-          "venue": "Lumen Field",
-          "opponentDesc": "Best 3rd from A/E/H/I/J"
+          "match": 88,
+          "date": "2026-07-03",
+          "city": "Dallas",
+          "venue": "AT&T Stadium",
+          "opponentDesc": "Runner-up Group D"
         },
         "r16": {
           "status": "future",
-          "match": 94,
-          "date": "2026-07-06",
-          "city": "Seattle",
-          "venue": "Lumen Field",
-          "opponentDesc": "Winner Group D (Match 81)"
+          "match": 95,
+          "date": "2026-07-07",
+          "city": "Atlanta",
+          "venue": "Mercedes-Benz Stadium",
+          "opponentDesc": "Winner Match 87"
         },
         "qf": {
           "status": "future",
-          "match": 98,
-          "date": "2026-07-10",
-          "city": "Los Angeles",
-          "venue": "SoFi Stadium",
-          "opponentDesc": "Winner Match 94"
+          "match": 99,
+          "date": "2026-07-11",
+          "city": "Miami",
+          "venue": "Hard Rock Stadium",
+          "opponentDesc": "Winner Match 95"
         },
         "sf": {
           "status": "future",
@@ -5140,58 +3745,7 @@
         }
       },
       "possibleOpponents": {
-        "r32": [
-          {
-            "group": "A",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group A"
-          },
-          {
-            "group": "E",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group E"
-          },
-          {
-            "group": "H",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group H"
-          },
-          {
-            "group": "I",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group I"
-          },
-          {
-            "group": "J",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group J"
-          }
-        ],
+        "r32": [],
         "r16": []
       }
     },
@@ -5238,20 +3792,20 @@
       ],
       "advanceProbabilities": {
         "r32": 99,
-        "r16": 86,
-        "qf": 62,
-        "sf": 40,
-        "final": 24,
-        "winner": 14,
-        "source": "market"
+        "r16": 54,
+        "qf": 28,
+        "sf": 14,
+        "final": 7,
+        "winner": 30,
+        "source": "calculated"
       },
       "path": {
         "group_stage": {
           "status": "active",
-          "city": "Atlanta · Miami · Houston",
+          "city": "Atlanta · Guadalajara",
           "venue": "Various venues",
-          "date": "Jun 15–Jun 26",
-          "detail": "Group H"
+          "date": "Jun 15–26",
+          "detail": "0pts after MD0"
         },
         "r32": {
           "status": "upcoming",
@@ -5295,58 +3849,7 @@
         }
       },
       "possibleOpponents": {
-        "r32": [
-          {
-            "group": "E",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group E"
-          },
-          {
-            "group": "H",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group H"
-          },
-          {
-            "group": "I",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group I"
-          },
-          {
-            "group": "J",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group J"
-          },
-          {
-            "group": "K",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group K"
-          }
-        ],
+        "r32": [],
         "r16": []
       }
     },
@@ -5392,11 +3895,11 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 4,
-        "r16": 0,
-        "qf": 0,
-        "sf": 0,
-        "final": 0,
+        "r32": 5,
+        "r16": 3,
+        "qf": 2,
+        "sf": 1,
+        "final": 1,
         "winner": 0,
         "source": "calculated"
       },
@@ -5405,39 +3908,39 @@
           "status": "active",
           "city": "Atlanta · Miami · Houston",
           "venue": "Various venues",
-          "date": "Jun 15–Jun 26",
-          "detail": "Group H"
+          "date": "Jun 15–26",
+          "detail": "0pts after MD0"
         },
         "r32": {
           "status": "upcoming",
-          "match": 84,
-          "date": "2026-07-02",
-          "city": "Los Angeles",
-          "venue": "SoFi Stadium",
-          "opponentDesc": "Runner-up Group J"
+          "match": 80,
+          "date": "2026-06-29",
+          "city": "Atlanta",
+          "venue": "Mercedes-Benz Stadium",
+          "opponentDesc": "Winner Group L"
         },
         "r16": {
           "status": "future",
-          "match": 96,
-          "date": "2026-07-07",
-          "city": "Vancouver",
-          "venue": "BC Place",
-          "opponentDesc": "Winner Match 85"
+          "match": 94,
+          "date": "2026-07-06",
+          "city": "Seattle",
+          "venue": "Lumen Field",
+          "opponentDesc": "Winner Match 80"
         },
         "qf": {
           "status": "future",
-          "match": 100,
-          "date": "2026-07-11",
-          "city": "Kansas City",
-          "venue": "Arrowhead Stadium",
-          "opponentDesc": "Winner Match 96"
+          "match": 98,
+          "date": "2026-07-10",
+          "city": "Los Angeles",
+          "venue": "SoFi Stadium",
+          "opponentDesc": "Winner Match 94"
         },
         "sf": {
           "status": "future",
-          "match": 101,
-          "date": "2026-07-14",
-          "city": "Dallas",
-          "venue": "AT&T Stadium",
+          "match": 102,
+          "date": "2026-07-15",
+          "city": "Atlanta",
+          "venue": "Mercedes-Benz Stadium",
           "opponentDesc": "Winner QF bracket"
         },
         "final": {
@@ -5450,58 +3953,7 @@
         }
       },
       "possibleOpponents": {
-        "r32": [
-          {
-            "group": "E",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group E"
-          },
-          {
-            "group": "H",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group H"
-          },
-          {
-            "group": "I",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group I"
-          },
-          {
-            "group": "J",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group J"
-          },
-          {
-            "group": "K",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group K"
-          }
-        ],
+        "r32": [],
         "r16": []
       }
     },
@@ -5547,52 +3999,52 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 4,
-        "r16": 0,
-        "qf": 0,
-        "sf": 0,
-        "final": 0,
-        "winner": 0,
+        "r32": 23,
+        "r16": 13,
+        "qf": 7,
+        "sf": 4,
+        "final": 2,
+        "winner": 1,
         "source": "calculated"
       },
       "path": {
         "group_stage": {
           "status": "active",
-          "city": "Atlanta · Miami · Houston",
+          "city": "Miami · Atlanta · Houston",
           "venue": "Various venues",
-          "date": "Jun 15–Jun 26",
-          "detail": "Group H"
+          "date": "Jun 15–26",
+          "detail": "0pts after MD0"
         },
         "r32": {
           "status": "upcoming",
-          "match": 84,
-          "date": "2026-07-02",
-          "city": "Los Angeles",
-          "venue": "SoFi Stadium",
-          "opponentDesc": "Runner-up Group J"
+          "match": 80,
+          "date": "2026-06-29",
+          "city": "Atlanta",
+          "venue": "Mercedes-Benz Stadium",
+          "opponentDesc": "Winner Group L"
         },
         "r16": {
           "status": "future",
-          "match": 96,
-          "date": "2026-07-07",
-          "city": "Vancouver",
-          "venue": "BC Place",
-          "opponentDesc": "Winner Match 85"
+          "match": 94,
+          "date": "2026-07-06",
+          "city": "Seattle",
+          "venue": "Lumen Field",
+          "opponentDesc": "Winner Match 80"
         },
         "qf": {
           "status": "future",
-          "match": 100,
-          "date": "2026-07-11",
-          "city": "Kansas City",
-          "venue": "Arrowhead Stadium",
-          "opponentDesc": "Winner Match 96"
+          "match": 98,
+          "date": "2026-07-10",
+          "city": "Los Angeles",
+          "venue": "SoFi Stadium",
+          "opponentDesc": "Winner Match 94"
         },
         "sf": {
           "status": "future",
-          "match": 101,
-          "date": "2026-07-14",
-          "city": "Dallas",
-          "venue": "AT&T Stadium",
+          "match": 102,
+          "date": "2026-07-15",
+          "city": "Atlanta",
+          "venue": "Mercedes-Benz Stadium",
           "opponentDesc": "Winner QF bracket"
         },
         "final": {
@@ -5605,58 +4057,7 @@
         }
       },
       "possibleOpponents": {
-        "r32": [
-          {
-            "group": "E",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group E"
-          },
-          {
-            "group": "H",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group H"
-          },
-          {
-            "group": "I",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group I"
-          },
-          {
-            "group": "J",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group J"
-          },
-          {
-            "group": "K",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group K"
-          }
-        ],
+        "r32": [],
         "r16": []
       }
     },
@@ -5702,52 +4103,52 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 4,
-        "r16": 0,
-        "qf": 0,
-        "sf": 0,
-        "final": 0,
-        "winner": 0,
+        "r32": 33,
+        "r16": 18,
+        "qf": 9,
+        "sf": 5,
+        "final": 3,
+        "winner": 10,
         "source": "calculated"
       },
       "path": {
         "group_stage": {
           "status": "active",
-          "city": "Atlanta · Miami · Houston",
+          "city": "Miami · Guadalajara",
           "venue": "Various venues",
-          "date": "Jun 15–Jun 26",
-          "detail": "Group H"
+          "date": "Jun 15–26",
+          "detail": "0pts after MD0"
         },
         "r32": {
           "status": "upcoming",
-          "match": 84,
-          "date": "2026-07-02",
-          "city": "Los Angeles",
-          "venue": "SoFi Stadium",
-          "opponentDesc": "Runner-up Group J"
+          "match": 80,
+          "date": "2026-06-29",
+          "city": "Atlanta",
+          "venue": "Mercedes-Benz Stadium",
+          "opponentDesc": "Winner Group L"
         },
         "r16": {
           "status": "future",
-          "match": 96,
-          "date": "2026-07-07",
-          "city": "Vancouver",
-          "venue": "BC Place",
-          "opponentDesc": "Winner Match 85"
+          "match": 94,
+          "date": "2026-07-06",
+          "city": "Seattle",
+          "venue": "Lumen Field",
+          "opponentDesc": "Winner Match 80"
         },
         "qf": {
           "status": "future",
-          "match": 100,
-          "date": "2026-07-11",
-          "city": "Kansas City",
-          "venue": "Arrowhead Stadium",
-          "opponentDesc": "Winner Match 96"
+          "match": 98,
+          "date": "2026-07-10",
+          "city": "Los Angeles",
+          "venue": "SoFi Stadium",
+          "opponentDesc": "Winner Match 94"
         },
         "sf": {
           "status": "future",
-          "match": 101,
-          "date": "2026-07-14",
-          "city": "Dallas",
-          "venue": "AT&T Stadium",
+          "match": 102,
+          "date": "2026-07-15",
+          "city": "Atlanta",
+          "venue": "Mercedes-Benz Stadium",
           "opponentDesc": "Winner QF bracket"
         },
         "final": {
@@ -5760,58 +4161,7 @@
         }
       },
       "possibleOpponents": {
-        "r32": [
-          {
-            "group": "E",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group E"
-          },
-          {
-            "group": "H",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group H"
-          },
-          {
-            "group": "I",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group I"
-          },
-          {
-            "group": "J",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group J"
-          },
-          {
-            "group": "K",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group K"
-          }
-        ],
+        "r32": [],
         "r16": []
       }
     },
@@ -5857,21 +4207,21 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 98,
-        "r16": 78,
-        "qf": 52,
-        "sf": 30,
-        "final": 17,
-        "winner": 9,
-        "source": "market"
+        "r32": 99,
+        "r16": 54,
+        "qf": 28,
+        "sf": 14,
+        "final": 7,
+        "winner": 30,
+        "source": "calculated"
       },
       "path": {
         "group_stage": {
           "status": "active",
-          "city": "New Jersey · Boston · Philadelphia",
+          "city": "New Jersey · Philadelphia · Boston",
           "venue": "Various venues",
-          "date": "Jun 16–Jun 26",
-          "detail": "Group I"
+          "date": "Jun 16–26",
+          "detail": "0pts after MD0"
         },
         "r32": {
           "status": "upcoming",
@@ -5915,58 +4265,7 @@
         }
       },
       "possibleOpponents": {
-        "r32": [
-          {
-            "group": "E",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group E"
-          },
-          {
-            "group": "F",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group F"
-          },
-          {
-            "group": "G",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group G"
-          },
-          {
-            "group": "I",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group I"
-          },
-          {
-            "group": "J",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group J"
-          }
-        ],
+        "r32": [],
         "r16": []
       }
     },
@@ -6012,29 +4311,29 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 4,
-        "r16": 0,
-        "qf": 0,
-        "sf": 0,
-        "final": 0,
-        "winner": 0,
+        "r32": 11,
+        "r16": 6,
+        "qf": 3,
+        "sf": 2,
+        "final": 1,
+        "winner": 2,
         "source": "calculated"
       },
       "path": {
         "group_stage": {
           "status": "active",
-          "city": "New Jersey · Boston · Philadelphia",
+          "city": "New Jersey · Toronto",
           "venue": "Various venues",
-          "date": "Jun 16–Jun 26",
-          "detail": "Group I"
+          "date": "Jun 16–26",
+          "detail": "0pts after MD0"
         },
         "r32": {
           "status": "upcoming",
-          "match": 85,
+          "match": 86,
           "date": "2026-07-02",
-          "city": "Boston",
-          "venue": "Gillette Stadium",
-          "opponentDesc": "Best 3rd from E/F/G/I/J"
+          "city": "Miami",
+          "venue": "Hard Rock Stadium",
+          "opponentDesc": "Winner Group J"
         },
         "r16": {
           "status": "future",
@@ -6042,7 +4341,7 @@
           "date": "2026-07-07",
           "city": "Vancouver",
           "venue": "BC Place",
-          "opponentDesc": "Winner Match 85"
+          "opponentDesc": "Winner Match 86"
         },
         "qf": {
           "status": "future",
@@ -6070,58 +4369,7 @@
         }
       },
       "possibleOpponents": {
-        "r32": [
-          {
-            "group": "E",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group E"
-          },
-          {
-            "group": "F",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group F"
-          },
-          {
-            "group": "G",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group G"
-          },
-          {
-            "group": "I",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group I"
-          },
-          {
-            "group": "J",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group J"
-          }
-        ],
+        "r32": [],
         "r16": []
       }
     },
@@ -6167,29 +4415,29 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 4,
-        "r16": 0,
-        "qf": 0,
-        "sf": 0,
-        "final": 0,
-        "winner": 0,
+        "r32": 23,
+        "r16": 13,
+        "qf": 7,
+        "sf": 4,
+        "final": 2,
+        "winner": 1,
         "source": "calculated"
       },
       "path": {
         "group_stage": {
           "status": "active",
-          "city": "New Jersey · Boston · Philadelphia",
+          "city": "Boston · Philadelphia · Toronto",
           "venue": "Various venues",
-          "date": "Jun 16–Jun 26",
-          "detail": "Group I"
+          "date": "Jun 16–26",
+          "detail": "0pts after MD0"
         },
         "r32": {
           "status": "upcoming",
-          "match": 85,
+          "match": 86,
           "date": "2026-07-02",
-          "city": "Boston",
-          "venue": "Gillette Stadium",
-          "opponentDesc": "Best 3rd from E/F/G/I/J"
+          "city": "Miami",
+          "venue": "Hard Rock Stadium",
+          "opponentDesc": "Winner Group J"
         },
         "r16": {
           "status": "future",
@@ -6197,7 +4445,7 @@
           "date": "2026-07-07",
           "city": "Vancouver",
           "venue": "BC Place",
-          "opponentDesc": "Winner Match 85"
+          "opponentDesc": "Winner Match 86"
         },
         "qf": {
           "status": "future",
@@ -6225,58 +4473,7 @@
         }
       },
       "possibleOpponents": {
-        "r32": [
-          {
-            "group": "E",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group E"
-          },
-          {
-            "group": "F",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group F"
-          },
-          {
-            "group": "G",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group G"
-          },
-          {
-            "group": "I",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group I"
-          },
-          {
-            "group": "J",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group J"
-          }
-        ],
+        "r32": [],
         "r16": []
       }
     },
@@ -6322,29 +4519,29 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 78,
-        "r16": 40,
-        "qf": 20,
-        "sf": 9,
-        "final": 4,
-        "winner": 2,
-        "source": "market"
+        "r32": 22,
+        "r16": 12,
+        "qf": 6,
+        "sf": 3,
+        "final": 2,
+        "winner": 6,
+        "source": "calculated"
       },
       "path": {
         "group_stage": {
           "status": "active",
-          "city": "New Jersey · Boston · Philadelphia",
+          "city": "Boston · New Jersey",
           "venue": "Various venues",
-          "date": "Jun 16–Jun 26",
-          "detail": "Group I"
+          "date": "Jun 16–26",
+          "detail": "0pts after MD0"
         },
         "r32": {
           "status": "upcoming",
-          "match": 85,
+          "match": 86,
           "date": "2026-07-02",
-          "city": "Boston",
-          "venue": "Gillette Stadium",
-          "opponentDesc": "Best 3rd from E/F/G/I/J"
+          "city": "Miami",
+          "venue": "Hard Rock Stadium",
+          "opponentDesc": "Winner Group J"
         },
         "r16": {
           "status": "future",
@@ -6352,7 +4549,7 @@
           "date": "2026-07-07",
           "city": "Vancouver",
           "venue": "BC Place",
-          "opponentDesc": "Winner Match 85"
+          "opponentDesc": "Winner Match 86"
         },
         "qf": {
           "status": "future",
@@ -6380,58 +4577,7 @@
         }
       },
       "possibleOpponents": {
-        "r32": [
-          {
-            "group": "E",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group E"
-          },
-          {
-            "group": "F",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group F"
-          },
-          {
-            "group": "G",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group G"
-          },
-          {
-            "group": "I",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group I"
-          },
-          {
-            "group": "J",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group J"
-          }
-        ],
+        "r32": [],
         "r16": []
       }
     },
@@ -6478,20 +4624,20 @@
       ],
       "advanceProbabilities": {
         "r32": 99,
-        "r16": 82,
-        "qf": 58,
-        "sf": 34,
-        "final": 19,
-        "winner": 11,
-        "source": "market"
+        "r16": 54,
+        "qf": 28,
+        "sf": 14,
+        "final": 7,
+        "winner": 30,
+        "source": "calculated"
       },
       "path": {
         "group_stage": {
           "status": "active",
-          "city": "Kansas City · San Francisco · Los Angeles",
+          "city": "Kansas City · Los Angeles · Dallas",
           "venue": "Various venues",
-          "date": "Jun 16–Jun 27",
-          "detail": "Group J"
+          "date": "Jun 16–27",
+          "detail": "0pts after MD0"
         },
         "r32": {
           "status": "upcoming",
@@ -6535,58 +4681,7 @@
         }
       },
       "possibleOpponents": {
-        "r32": [
-          {
-            "group": "C",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group C"
-          },
-          {
-            "group": "E",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group E"
-          },
-          {
-            "group": "F",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group F"
-          },
-          {
-            "group": "H",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group H"
-          },
-          {
-            "group": "I",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group I"
-          }
-        ],
+        "r32": [],
         "r16": []
       }
     },
@@ -6632,45 +4727,45 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 4,
-        "r16": 0,
-        "qf": 0,
-        "sf": 0,
-        "final": 0,
-        "winner": 0,
+        "r32": 8,
+        "r16": 4,
+        "qf": 2,
+        "sf": 1,
+        "final": 1,
+        "winner": 1,
         "source": "calculated"
       },
       "path": {
         "group_stage": {
           "status": "active",
-          "city": "Kansas City · San Francisco · Los Angeles",
+          "city": "Kansas City",
           "venue": "Various venues",
-          "date": "Jun 16–Jun 27",
-          "detail": "Group J"
+          "date": "Jun 16–27",
+          "detail": "0pts after MD0"
         },
         "r32": {
           "status": "upcoming",
-          "match": 79,
-          "date": "2026-06-28",
-          "city": "Mexico City",
-          "venue": "Estadio Azteca",
-          "opponentDesc": "Best 3rd from C/E/F/H/I"
+          "match": 84,
+          "date": "2026-07-02",
+          "city": "Los Angeles",
+          "venue": "SoFi Stadium",
+          "opponentDesc": "Winner Group H"
         },
         "r16": {
           "status": "future",
-          "match": 93,
-          "date": "2026-07-05",
-          "city": "Guadalajara",
-          "venue": "Estadio Guadalajara",
-          "opponentDesc": "Winner Match 79"
+          "match": 96,
+          "date": "2026-07-07",
+          "city": "Vancouver",
+          "venue": "BC Place",
+          "opponentDesc": "Winner Match 85"
         },
         "qf": {
           "status": "future",
-          "match": 97,
-          "date": "2026-07-09",
-          "city": "Guadalajara",
-          "venue": "Estadio Guadalajara",
-          "opponentDesc": "Winner Match 93"
+          "match": 100,
+          "date": "2026-07-11",
+          "city": "Kansas City",
+          "venue": "Arrowhead Stadium",
+          "opponentDesc": "Winner Match 96"
         },
         "sf": {
           "status": "future",
@@ -6690,58 +4785,7 @@
         }
       },
       "possibleOpponents": {
-        "r32": [
-          {
-            "group": "C",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group C"
-          },
-          {
-            "group": "E",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group E"
-          },
-          {
-            "group": "F",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group F"
-          },
-          {
-            "group": "H",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group H"
-          },
-          {
-            "group": "I",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group I"
-          }
-        ],
+        "r32": [],
         "r16": []
       }
     },
@@ -6787,45 +4831,45 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 4,
-        "r16": 0,
-        "qf": 0,
-        "sf": 0,
-        "final": 0,
-        "winner": 0,
+        "r32": 68,
+        "r16": 37,
+        "qf": 19,
+        "sf": 10,
+        "final": 5,
+        "winner": 17,
         "source": "calculated"
       },
       "path": {
         "group_stage": {
           "status": "active",
-          "city": "Kansas City · San Francisco · Los Angeles",
+          "city": "San Francisco · Los Angeles · Kansas City",
           "venue": "Various venues",
-          "date": "Jun 16–Jun 27",
-          "detail": "Group J"
+          "date": "Jun 16–27",
+          "detail": "0pts after MD0"
         },
         "r32": {
           "status": "upcoming",
-          "match": 79,
-          "date": "2026-06-28",
-          "city": "Mexico City",
-          "venue": "Estadio Azteca",
-          "opponentDesc": "Best 3rd from C/E/F/H/I"
+          "match": 84,
+          "date": "2026-07-02",
+          "city": "Los Angeles",
+          "venue": "SoFi Stadium",
+          "opponentDesc": "Winner Group H"
         },
         "r16": {
           "status": "future",
-          "match": 93,
-          "date": "2026-07-05",
-          "city": "Guadalajara",
-          "venue": "Estadio Guadalajara",
-          "opponentDesc": "Winner Match 79"
+          "match": 96,
+          "date": "2026-07-07",
+          "city": "Vancouver",
+          "venue": "BC Place",
+          "opponentDesc": "Winner Match 85"
         },
         "qf": {
           "status": "future",
-          "match": 97,
-          "date": "2026-07-09",
-          "city": "Guadalajara",
-          "venue": "Estadio Guadalajara",
-          "opponentDesc": "Winner Match 93"
+          "match": 100,
+          "date": "2026-07-11",
+          "city": "Kansas City",
+          "venue": "Arrowhead Stadium",
+          "opponentDesc": "Winner Match 96"
         },
         "sf": {
           "status": "future",
@@ -6845,58 +4889,7 @@
         }
       },
       "possibleOpponents": {
-        "r32": [
-          {
-            "group": "C",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group C"
-          },
-          {
-            "group": "E",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group E"
-          },
-          {
-            "group": "F",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group F"
-          },
-          {
-            "group": "H",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group H"
-          },
-          {
-            "group": "I",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group I"
-          }
-        ],
+        "r32": [],
         "r16": []
       }
     },
@@ -6942,45 +4935,45 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 4,
-        "r16": 0,
-        "qf": 0,
-        "sf": 0,
-        "final": 0,
+        "r32": 5,
+        "r16": 3,
+        "qf": 2,
+        "sf": 1,
+        "final": 1,
         "winner": 0,
         "source": "calculated"
       },
       "path": {
         "group_stage": {
           "status": "active",
-          "city": "Kansas City · San Francisco · Los Angeles",
+          "city": "San Francisco · Kansas City · Dallas",
           "venue": "Various venues",
-          "date": "Jun 16–Jun 27",
-          "detail": "Group J"
+          "date": "Jun 16–27",
+          "detail": "0pts after MD0"
         },
         "r32": {
           "status": "upcoming",
-          "match": 79,
-          "date": "2026-06-28",
-          "city": "Mexico City",
-          "venue": "Estadio Azteca",
-          "opponentDesc": "Best 3rd from C/E/F/H/I"
+          "match": 84,
+          "date": "2026-07-02",
+          "city": "Los Angeles",
+          "venue": "SoFi Stadium",
+          "opponentDesc": "Winner Group H"
         },
         "r16": {
           "status": "future",
-          "match": 93,
-          "date": "2026-07-05",
-          "city": "Guadalajara",
-          "venue": "Estadio Guadalajara",
-          "opponentDesc": "Winner Match 79"
+          "match": 96,
+          "date": "2026-07-07",
+          "city": "Vancouver",
+          "venue": "BC Place",
+          "opponentDesc": "Winner Match 85"
         },
         "qf": {
           "status": "future",
-          "match": 97,
-          "date": "2026-07-09",
-          "city": "Guadalajara",
-          "venue": "Estadio Guadalajara",
-          "opponentDesc": "Winner Match 93"
+          "match": 100,
+          "date": "2026-07-11",
+          "city": "Kansas City",
+          "venue": "Arrowhead Stadium",
+          "opponentDesc": "Winner Match 96"
         },
         "sf": {
           "status": "future",
@@ -7000,58 +4993,7 @@
         }
       },
       "possibleOpponents": {
-        "r32": [
-          {
-            "group": "C",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group C"
-          },
-          {
-            "group": "E",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group E"
-          },
-          {
-            "group": "F",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group F"
-          },
-          {
-            "group": "H",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group H"
-          },
-          {
-            "group": "I",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group I"
-          }
-        ],
+        "r32": [],
         "r16": []
       }
     },
@@ -7097,21 +5039,21 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 97,
-        "r16": 74,
-        "qf": 46,
-        "sf": 26,
-        "final": 14,
-        "winner": 7,
-        "source": "market"
+        "r32": 99,
+        "r16": 54,
+        "qf": 28,
+        "sf": 14,
+        "final": 7,
+        "winner": 30,
+        "source": "calculated"
       },
       "path": {
         "group_stage": {
           "status": "active",
-          "city": "Houston · Mexico City · Miami",
+          "city": "Houston · Miami",
           "venue": "Various venues",
-          "date": "Jun 17–Jun 27",
-          "detail": "Group K"
+          "date": "Jun 17–27",
+          "detail": "0pts after MD0"
         },
         "r32": {
           "status": "upcoming",
@@ -7155,58 +5097,7 @@
         }
       },
       "possibleOpponents": {
-        "r32": [
-          {
-            "group": "E",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group E"
-          },
-          {
-            "group": "H",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group H"
-          },
-          {
-            "group": "I",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group I"
-          },
-          {
-            "group": "J",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group J"
-          },
-          {
-            "group": "K",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group K"
-          }
-        ],
+        "r32": [],
         "r16": []
       }
     },
@@ -7252,45 +5143,45 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 4,
-        "r16": 0,
-        "qf": 0,
-        "sf": 0,
-        "final": 0,
+        "r32": 5,
+        "r16": 3,
+        "qf": 2,
+        "sf": 1,
+        "final": 1,
         "winner": 0,
         "source": "calculated"
       },
       "path": {
         "group_stage": {
           "status": "active",
-          "city": "Houston · Mexico City · Miami",
+          "city": "Houston · Mexico City · Atlanta",
           "venue": "Various venues",
-          "date": "Jun 17–Jun 27",
-          "detail": "Group K"
+          "date": "Jun 17–27",
+          "detail": "0pts after MD0"
         },
         "r32": {
           "status": "upcoming",
-          "match": 80,
+          "match": 83,
           "date": "2026-06-29",
-          "city": "Atlanta",
-          "venue": "Mercedes-Benz Stadium",
-          "opponentDesc": "Best 3rd from E/H/I/J/K"
+          "city": "Toronto",
+          "venue": "BMO Field",
+          "opponentDesc": "Runner-up Group L"
         },
         "r16": {
           "status": "future",
-          "match": 94,
-          "date": "2026-07-06",
-          "city": "Seattle",
-          "venue": "Lumen Field",
-          "opponentDesc": "Winner Match 80"
+          "match": 95,
+          "date": "2026-07-07",
+          "city": "Atlanta",
+          "venue": "Mercedes-Benz Stadium",
+          "opponentDesc": "Winner Match 83"
         },
         "qf": {
           "status": "future",
-          "match": 98,
-          "date": "2026-07-10",
-          "city": "Los Angeles",
-          "venue": "SoFi Stadium",
-          "opponentDesc": "Winner Match 94"
+          "match": 99,
+          "date": "2026-07-11",
+          "city": "Miami",
+          "venue": "Hard Rock Stadium",
+          "opponentDesc": "Winner Match 95"
         },
         "sf": {
           "status": "future",
@@ -7310,58 +5201,7 @@
         }
       },
       "possibleOpponents": {
-        "r32": [
-          {
-            "group": "E",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group E"
-          },
-          {
-            "group": "H",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group H"
-          },
-          {
-            "group": "I",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group I"
-          },
-          {
-            "group": "J",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group J"
-          },
-          {
-            "group": "K",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group K"
-          }
-        ],
+        "r32": [],
         "r16": []
       }
     },
@@ -7407,45 +5247,45 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 4,
-        "r16": 0,
-        "qf": 0,
-        "sf": 0,
-        "final": 0,
-        "winner": 0,
+        "r32": 23,
+        "r16": 13,
+        "qf": 7,
+        "sf": 4,
+        "final": 2,
+        "winner": 1,
         "source": "calculated"
       },
       "path": {
         "group_stage": {
           "status": "active",
-          "city": "Houston · Mexico City · Miami",
+          "city": "Mexico City · Houston · Atlanta",
           "venue": "Various venues",
-          "date": "Jun 17–Jun 27",
-          "detail": "Group K"
+          "date": "Jun 17–27",
+          "detail": "0pts after MD0"
         },
         "r32": {
           "status": "upcoming",
-          "match": 80,
+          "match": 83,
           "date": "2026-06-29",
-          "city": "Atlanta",
-          "venue": "Mercedes-Benz Stadium",
-          "opponentDesc": "Best 3rd from E/H/I/J/K"
+          "city": "Toronto",
+          "venue": "BMO Field",
+          "opponentDesc": "Runner-up Group L"
         },
         "r16": {
           "status": "future",
-          "match": 94,
-          "date": "2026-07-06",
-          "city": "Seattle",
-          "venue": "Lumen Field",
-          "opponentDesc": "Winner Match 80"
+          "match": 95,
+          "date": "2026-07-07",
+          "city": "Atlanta",
+          "venue": "Mercedes-Benz Stadium",
+          "opponentDesc": "Winner Match 83"
         },
         "qf": {
           "status": "future",
-          "match": 98,
-          "date": "2026-07-10",
-          "city": "Los Angeles",
-          "venue": "SoFi Stadium",
-          "opponentDesc": "Winner Match 94"
+          "match": 99,
+          "date": "2026-07-11",
+          "city": "Miami",
+          "venue": "Hard Rock Stadium",
+          "opponentDesc": "Winner Match 95"
         },
         "sf": {
           "status": "future",
@@ -7465,58 +5305,7 @@
         }
       },
       "possibleOpponents": {
-        "r32": [
-          {
-            "group": "E",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group E"
-          },
-          {
-            "group": "H",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group H"
-          },
-          {
-            "group": "I",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group I"
-          },
-          {
-            "group": "J",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group J"
-          },
-          {
-            "group": "K",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group K"
-          }
-        ],
+        "r32": [],
         "r16": []
       }
     },
@@ -7562,45 +5351,45 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 92,
-        "r16": 60,
-        "qf": 34,
-        "sf": 16,
-        "final": 7,
-        "winner": 4,
-        "source": "market"
+        "r32": 36,
+        "r16": 20,
+        "qf": 10,
+        "sf": 5,
+        "final": 3,
+        "winner": 11,
+        "source": "calculated"
       },
       "path": {
         "group_stage": {
           "status": "active",
-          "city": "Houston · Mexico City · Miami",
+          "city": "Mexico City · Miami",
           "venue": "Various venues",
-          "date": "Jun 17–Jun 27",
-          "detail": "Group K"
+          "date": "Jun 17–27",
+          "detail": "0pts after MD0"
         },
         "r32": {
           "status": "upcoming",
-          "match": 80,
+          "match": 83,
           "date": "2026-06-29",
-          "city": "Atlanta",
-          "venue": "Mercedes-Benz Stadium",
-          "opponentDesc": "Best 3rd from E/H/I/J/K"
+          "city": "Toronto",
+          "venue": "BMO Field",
+          "opponentDesc": "Runner-up Group L"
         },
         "r16": {
           "status": "future",
-          "match": 94,
-          "date": "2026-07-06",
-          "city": "Seattle",
-          "venue": "Lumen Field",
-          "opponentDesc": "Winner Match 80"
+          "match": 95,
+          "date": "2026-07-07",
+          "city": "Atlanta",
+          "venue": "Mercedes-Benz Stadium",
+          "opponentDesc": "Winner Match 83"
         },
         "qf": {
           "status": "future",
-          "match": 98,
-          "date": "2026-07-10",
-          "city": "Los Angeles",
-          "venue": "SoFi Stadium",
-          "opponentDesc": "Winner Match 94"
+          "match": 99,
+          "date": "2026-07-11",
+          "city": "Miami",
+          "venue": "Hard Rock Stadium",
+          "opponentDesc": "Winner Match 95"
         },
         "sf": {
           "status": "future",
@@ -7620,58 +5409,7 @@
         }
       },
       "possibleOpponents": {
-        "r32": [
-          {
-            "group": "E",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group E"
-          },
-          {
-            "group": "H",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group H"
-          },
-          {
-            "group": "I",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group I"
-          },
-          {
-            "group": "J",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group J"
-          },
-          {
-            "group": "K",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group K"
-          }
-        ],
+        "r32": [],
         "r16": []
       }
     },
@@ -7717,21 +5455,21 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 97,
-        "r16": 74,
-        "qf": 46,
-        "sf": 26,
-        "final": 14,
-        "winner": 7,
-        "source": "market"
+        "r32": 99,
+        "r16": 54,
+        "qf": 28,
+        "sf": 14,
+        "final": 7,
+        "winner": 30,
+        "source": "calculated"
       },
       "path": {
         "group_stage": {
           "status": "active",
-          "city": "Dallas · Toronto · Philadelphia",
+          "city": "Dallas · Philadelphia · New Jersey",
           "venue": "Various venues",
-          "date": "Jun 17–Jun 27",
-          "detail": "Group L"
+          "date": "Jun 17–27",
+          "detail": "0pts after MD0"
         },
         "r32": {
           "status": "upcoming",
@@ -7775,28 +5513,7 @@
         }
       },
       "possibleOpponents": {
-        "r32": [
-          {
-            "group": "K",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group K"
-          },
-          {
-            "group": "L",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group L"
-          }
-        ],
+        "r32": [],
         "r16": []
       }
     },
@@ -7842,45 +5559,45 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 82,
-        "r16": 44,
-        "qf": 22,
-        "sf": 10,
-        "final": 4,
+        "r32": 11,
+        "r16": 6,
+        "qf": 3,
+        "sf": 2,
+        "final": 1,
         "winner": 2,
-        "source": "market"
+        "source": "calculated"
       },
       "path": {
         "group_stage": {
           "status": "active",
           "city": "Dallas · Toronto · Philadelphia",
           "venue": "Various venues",
-          "date": "Jun 17–Jun 27",
-          "detail": "Group L"
+          "date": "Jun 17–27",
+          "detail": "0pts after MD0"
         },
         "r32": {
           "status": "upcoming",
-          "match": 83,
+          "match": 80,
           "date": "2026-06-29",
-          "city": "Toronto",
-          "venue": "BMO Field",
-          "opponentDesc": "Runner-up Group K"
+          "city": "Atlanta",
+          "venue": "Mercedes-Benz Stadium",
+          "opponentDesc": "Winner Group K"
         },
         "r16": {
           "status": "future",
-          "match": 95,
-          "date": "2026-07-07",
-          "city": "Atlanta",
-          "venue": "Mercedes-Benz Stadium",
-          "opponentDesc": "Winner Match 83"
+          "match": 94,
+          "date": "2026-07-06",
+          "city": "Seattle",
+          "venue": "Lumen Field",
+          "opponentDesc": "Winner Match 80"
         },
         "qf": {
           "status": "future",
-          "match": 99,
-          "date": "2026-07-11",
-          "city": "Miami",
-          "venue": "Hard Rock Stadium",
-          "opponentDesc": "Winner Match 95"
+          "match": 98,
+          "date": "2026-07-10",
+          "city": "Los Angeles",
+          "venue": "SoFi Stadium",
+          "opponentDesc": "Winner Match 94"
         },
         "sf": {
           "status": "future",
@@ -7900,28 +5617,7 @@
         }
       },
       "possibleOpponents": {
-        "r32": [
-          {
-            "group": "K",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group K"
-          },
-          {
-            "group": "L",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group L"
-          }
-        ],
+        "r32": [],
         "r16": []
       }
     },
@@ -7967,45 +5663,45 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 4,
-        "r16": 0,
-        "qf": 0,
-        "sf": 0,
-        "final": 0,
-        "winner": 0,
+        "r32": 23,
+        "r16": 13,
+        "qf": 7,
+        "sf": 4,
+        "final": 2,
+        "winner": 1,
         "source": "calculated"
       },
       "path": {
         "group_stage": {
           "status": "active",
-          "city": "Dallas · Toronto · Philadelphia",
+          "city": "Toronto · Philadelphia",
           "venue": "Various venues",
-          "date": "Jun 17–Jun 27",
-          "detail": "Group L"
+          "date": "Jun 17–27",
+          "detail": "0pts after MD0"
         },
         "r32": {
           "status": "upcoming",
-          "match": 83,
+          "match": 80,
           "date": "2026-06-29",
-          "city": "Toronto",
-          "venue": "BMO Field",
-          "opponentDesc": "Runner-up Group K"
+          "city": "Atlanta",
+          "venue": "Mercedes-Benz Stadium",
+          "opponentDesc": "Winner Group K"
         },
         "r16": {
           "status": "future",
-          "match": 95,
-          "date": "2026-07-07",
-          "city": "Atlanta",
-          "venue": "Mercedes-Benz Stadium",
-          "opponentDesc": "Winner Match 83"
+          "match": 94,
+          "date": "2026-07-06",
+          "city": "Seattle",
+          "venue": "Lumen Field",
+          "opponentDesc": "Winner Match 80"
         },
         "qf": {
           "status": "future",
-          "match": 99,
-          "date": "2026-07-11",
-          "city": "Miami",
-          "venue": "Hard Rock Stadium",
-          "opponentDesc": "Winner Match 95"
+          "match": 98,
+          "date": "2026-07-10",
+          "city": "Los Angeles",
+          "venue": "SoFi Stadium",
+          "opponentDesc": "Winner Match 94"
         },
         "sf": {
           "status": "future",
@@ -8025,28 +5721,7 @@
         }
       },
       "possibleOpponents": {
-        "r32": [
-          {
-            "group": "K",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group K"
-          },
-          {
-            "group": "L",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group L"
-          }
-        ],
+        "r32": [],
         "r16": []
       }
     },
@@ -8092,45 +5767,45 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 4,
-        "r16": 0,
-        "qf": 0,
-        "sf": 0,
-        "final": 0,
+        "r32": 5,
+        "r16": 3,
+        "qf": 2,
+        "sf": 1,
+        "final": 1,
         "winner": 0,
         "source": "calculated"
       },
       "path": {
         "group_stage": {
           "status": "active",
-          "city": "Dallas · Toronto · Philadelphia",
+          "city": "Toronto · New Jersey",
           "venue": "Various venues",
-          "date": "Jun 17–Jun 27",
-          "detail": "Group L"
+          "date": "Jun 17–27",
+          "detail": "0pts after MD0"
         },
         "r32": {
           "status": "upcoming",
-          "match": 83,
+          "match": 80,
           "date": "2026-06-29",
-          "city": "Toronto",
-          "venue": "BMO Field",
-          "opponentDesc": "Runner-up Group K"
+          "city": "Atlanta",
+          "venue": "Mercedes-Benz Stadium",
+          "opponentDesc": "Winner Group K"
         },
         "r16": {
           "status": "future",
-          "match": 95,
-          "date": "2026-07-07",
-          "city": "Atlanta",
-          "venue": "Mercedes-Benz Stadium",
-          "opponentDesc": "Winner Match 83"
+          "match": 94,
+          "date": "2026-07-06",
+          "city": "Seattle",
+          "venue": "Lumen Field",
+          "opponentDesc": "Winner Match 80"
         },
         "qf": {
           "status": "future",
-          "match": 99,
-          "date": "2026-07-11",
-          "city": "Miami",
-          "venue": "Hard Rock Stadium",
-          "opponentDesc": "Winner Match 95"
+          "match": 98,
+          "date": "2026-07-10",
+          "city": "Los Angeles",
+          "venue": "SoFi Stadium",
+          "opponentDesc": "Winner Match 94"
         },
         "sf": {
           "status": "future",
@@ -8150,34 +5825,9 @@
         }
       },
       "possibleOpponents": {
-        "r32": [
-          {
-            "group": "K",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group K"
-          },
-          {
-            "group": "L",
-            "likelyTeam": "TBD",
-            "flag": "🏳️",
-            "fifaRank": 50,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group L"
-          }
-        ],
+        "r32": [],
         "r16": []
       }
     }
-  ],
-  "sourceSummary": {
-    "market": 21,
-    "calculated": 27
-  }
+  ]
 }

@@ -8293,5 +8293,9 @@
         "r16": []
       }
     }
-  ]
+  ],
+  "sourceSummary": {
+    "market": 21,
+    "calculated": 27
+  }
 }
