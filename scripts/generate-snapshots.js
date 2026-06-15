@@ -403,8 +403,14 @@ function log(msg) { console.log(`[${new Date().toISOString()}] ${msg}`); }
 function main() {
   log('=== Generate Missing Snapshots ===');
 
-  // Generate Jun 11 (tournament start — no matches)
-  log('Generating 2026-06-11 (Tournament Start)');
+  // Generate Jun 10 (pre-tournament — 0 matches, clean slate)
+  log('Generating 2026-06-10 (Pre-tournament)');
+  const s10 = generateSnapshot('2026-06-10', new Map());
+  fs.writeFileSync(path.join(SNAP_DIR, '2026-06-10.json'), JSON.stringify(s10, null, 2));
+  log('✅ Jun 10 saved — 0/' + s10.teams.length + ' teams with results');
+
+  // Generate Jun 11 (after Day 1 — 2 matches)
+  log('Generating 2026-06-11 (After Day 1)');
   const s11 = generateSnapshot('2026-06-11', DAY1_RESULTS);
   fs.writeFileSync(path.join(SNAP_DIR, '2026-06-11.json'), JSON.stringify(s11, null, 2));
   const s11Results = s11.teams.filter(t => t.groupResults.some(g => g.result)).length;
@@ -425,27 +431,26 @@ function main() {
   }
 
   // Update manifest
-  const TOURNAMENT_START = '2026-06-11';
   const mf = fs.existsSync(MF_PATH)
     ? JSON.parse(fs.readFileSync(MF_PATH, 'utf8'))
     : { available: [], labels: {} };
 
-  for (const d of ['2026-06-11', '2026-06-12']) {
+  for (const d of ['2026-06-10', '2026-06-11', '2026-06-12']) {
     if (!mf.available.includes(d)) mf.available.push(d);
   }
   mf.available.sort();
 
   mf.available.forEach((d, i) => {
     const isLatest = i === mf.available.length - 1;
-    const isStart = d === TOURNAMENT_START;
+    const isEarliest = i === 0;
     mf.labels[d] = isLatest
       ? `${fmtLabel(d)} (Latest)`
-      : isStart
-        ? `${fmtLabel(d)} (Tournament start)`
+      : isEarliest
+        ? `${fmtLabel(d)} (Pre-tournament)`
         : fmtLabel(d);
   });
 
-  mf.earliest = TOURNAMENT_START;
+  mf.earliest = mf.available[0];
   mf.latest = mf.available[mf.available.length - 1];
   mf.generated = new Date().toISOString();
 

@@ -1,6 +1,6 @@
 {
-  "lastUpdated": "2026-06-15T21:08:15.522Z",
-  "snapshotDate": "2026-06-12",
+  "lastUpdated": "2026-06-15T21:08:15.517Z",
+  "snapshotDate": "2026-06-10",
   "isHistorical": true,
   "sourceSummary": {
     "market": 0,
@@ -50,14 +50,14 @@
           "teamId": "mexico",
           "team": "Mexico",
           "flag": "🇲🇽",
-          "played": 1,
-          "w": 1,
+          "played": 0,
+          "w": 0,
           "d": 0,
           "l": 0,
-          "gf": 2,
+          "gf": 0,
           "ga": 0,
-          "gd": 2,
-          "pts": 3
+          "gd": 0,
+          "pts": 0
         },
         {
           "pos": 2,
@@ -92,13 +92,13 @@
           "teamId": "southafrica",
           "team": "South Africa",
           "flag": "🇿🇦",
-          "played": 1,
+          "played": 0,
           "w": 0,
           "d": 0,
-          "l": 1,
+          "l": 0,
           "gf": 0,
-          "ga": 2,
-          "gd": -2,
+          "ga": 0,
+          "gd": 0,
           "pts": 0
         }
       ],
@@ -116,31 +116,17 @@
           "teamId": "canada",
           "team": "Canada",
           "flag": "🇨🇦",
-          "played": 1,
+          "played": 0,
           "w": 0,
-          "d": 1,
+          "d": 0,
           "l": 0,
-          "gf": 1,
-          "ga": 1,
+          "gf": 0,
+          "ga": 0,
           "gd": 0,
-          "pts": 1
+          "pts": 0
         },
         {
           "pos": 2,
-          "teamId": "bosnia",
-          "team": "Bosnia & Herz.",
-          "flag": "🇧🇦",
-          "played": 1,
-          "w": 0,
-          "d": 1,
-          "l": 0,
-          "gf": 1,
-          "ga": 1,
-          "gd": 0,
-          "pts": 1
-        },
-        {
-          "pos": 3,
           "teamId": "qatar",
           "team": "Qatar",
           "flag": "🇶🇦",
@@ -154,10 +140,24 @@
           "pts": 0
         },
         {
-          "pos": 4,
+          "pos": 3,
           "teamId": "switzerland",
           "team": "Switzerland",
           "flag": "🇨🇭",
+          "played": 0,
+          "w": 0,
+          "d": 0,
+          "l": 0,
+          "gf": 0,
+          "ga": 0,
+          "gd": 0,
+          "pts": 0
+        },
+        {
+          "pos": 4,
+          "teamId": "bosnia",
+          "team": "Bosnia & Herz.",
+          "flag": "🇧🇦",
           "played": 0,
           "w": 0,
           "d": 0,
@@ -170,9 +170,9 @@
       ],
       "winProbabilities": {
         "canada": 23,
-        "bosnia": 1,
-        "qatar": 0,
-        "switzerland": 2
+        "qatar": 1,
+        "switzerland": 10,
+        "bosnia": 0
       }
     },
     "C": {
@@ -248,14 +248,14 @@
           "teamId": "usa",
           "team": "USA",
           "flag": "🇺🇸",
-          "played": 1,
-          "w": 1,
+          "played": 0,
+          "w": 0,
           "d": 0,
           "l": 0,
-          "gf": 4,
-          "ga": 1,
-          "gd": 3,
-          "pts": 3
+          "gf": 0,
+          "ga": 0,
+          "gd": 0,
+          "pts": 0
         },
         {
           "pos": 2,
@@ -290,13 +290,13 @@
           "teamId": "paraguay",
           "team": "Paraguay",
           "flag": "🇵🇾",
-          "played": 1,
+          "played": 0,
           "w": 0,
           "d": 0,
-          "l": 1,
-          "gf": 1,
-          "ga": 4,
-          "gd": -3,
+          "l": 0,
+          "gf": 0,
+          "ga": 0,
+          "gd": 0,
           "pts": 0
         }
       ],
@@ -851,8 +851,8 @@
           "matchday": 1,
           "opponent": "South Africa",
           "opponentFlag": "🇿🇦",
-          "result": "W",
-          "score": "2-0",
+          "result": null,
+          "score": null,
           "date": "2026-06-11",
           "venue": "Estadio Azteca, Mexico City",
           "scorers": []
@@ -893,7 +893,7 @@
           "city": "Mexico City · Zapopan",
           "venue": "Various venues",
           "date": "Jun 11–24",
-          "detail": "3pts after MD1"
+          "detail": "0pts after MD0"
         },
         "r32": {
           "status": "upcoming",
@@ -955,8 +955,8 @@
           "matchday": 1,
           "opponent": "Mexico",
           "opponentFlag": "🇲🇽",
-          "result": "L",
-          "score": "0-2",
+          "result": null,
+          "score": null,
           "date": "2026-06-11",
           "venue": "Estadio Azteca, Mexico City",
           "scorers": []
@@ -997,7 +997,7 @@
           "city": "Mexico City · Atlanta · Zapopan",
           "venue": "Various venues",
           "date": "Jun 11–24",
-          "detail": "0pts after MD1"
+          "detail": "0pts after MD0"
         },
         "r32": {
           "status": "upcoming",
@@ -1267,8 +1267,8 @@
           "matchday": 1,
           "opponent": "Bosnia & Herz.",
           "opponentFlag": "🇧🇦",
-          "result": "D",
-          "score": "1-1",
+          "result": null,
+          "score": null,
           "date": "2026-06-12",
           "venue": "BMO Field, Toronto",
           "scorers": []
@@ -1309,7 +1309,7 @@
           "city": "Toronto · Vancouver",
           "venue": "Various venues",
           "date": "Jun 12–24",
-          "detail": "1pt after MD1"
+          "detail": "0pts after MD0"
         },
         "r32": {
           "status": "upcoming",
@@ -1371,8 +1371,8 @@
           "matchday": 1,
           "opponent": "Canada",
           "opponentFlag": "🇨🇦",
-          "result": "D",
-          "score": "1-1",
+          "result": null,
+          "score": null,
           "date": "2026-06-12",
           "venue": "BMO Field, Toronto",
           "scorers": []
@@ -1399,12 +1399,12 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 23,
-        "r16": 13,
-        "qf": 7,
-        "sf": 4,
-        "final": 2,
-        "winner": 1,
+        "r32": 5,
+        "r16": 3,
+        "qf": 2,
+        "sf": 1,
+        "final": 1,
+        "winner": 0,
         "source": "calculated"
       },
       "path": {
@@ -1413,7 +1413,7 @@
           "city": "Toronto · San Francisco · Seattle",
           "venue": "Various venues",
           "date": "Jun 12–24",
-          "detail": "1pt after MD1"
+          "detail": "0pts after MD0"
         },
         "r32": {
           "status": "upcoming",
@@ -1503,12 +1503,12 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 5,
-        "r16": 3,
-        "qf": 2,
-        "sf": 1,
-        "final": 1,
-        "winner": 0,
+        "r32": 23,
+        "r16": 13,
+        "qf": 7,
+        "sf": 4,
+        "final": 2,
+        "winner": 1,
         "source": "calculated"
       },
       "path": {
@@ -1607,12 +1607,12 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 11,
-        "r16": 6,
-        "qf": 3,
-        "sf": 2,
-        "final": 1,
-        "winner": 2,
+        "r32": 33,
+        "r16": 18,
+        "qf": 9,
+        "sf": 5,
+        "final": 3,
+        "winner": 10,
         "source": "calculated"
       },
       "path": {
@@ -2099,8 +2099,8 @@
           "matchday": 1,
           "opponent": "Paraguay",
           "opponentFlag": "🇵🇾",
-          "result": "W",
-          "score": "4-1",
+          "result": null,
+          "score": null,
           "date": "2026-06-12",
           "venue": "SoFi Stadium, Los Angeles",
           "scorers": []
@@ -2141,7 +2141,7 @@
           "city": "Los Angeles · Seattle",
           "venue": "Various venues",
           "date": "Jun 12–25",
-          "detail": "3pts after MD1"
+          "detail": "0pts after MD0"
         },
         "r32": {
           "status": "upcoming",
@@ -2203,8 +2203,8 @@
           "matchday": 1,
           "opponent": "USA",
           "opponentFlag": "🇺🇸",
-          "result": "L",
-          "score": "1-4",
+          "result": null,
+          "score": null,
           "date": "2026-06-12",
           "venue": "SoFi Stadium, Los Angeles",
           "scorers": []
@@ -2245,7 +2245,7 @@
           "city": "Los Angeles · San Francisco",
           "venue": "Various venues",
           "date": "Jun 12–25",
-          "detail": "0pts after MD1"
+          "detail": "0pts after MD0"
         },
         "r32": {
           "status": "upcoming",

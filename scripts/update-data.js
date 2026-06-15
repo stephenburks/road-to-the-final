@@ -979,14 +979,13 @@ async function main() {
   }
 
   // Build human-readable labels
-  const TOURNAMENT_START = '2026-06-11';
   mf.available.forEach((d, i) => {
     const isLatest = i === mf.available.length - 1;
-    const isStart  = d === TOURNAMENT_START;
+    const isEarliest = i === 0;
     mf.labels[d] = isLatest
       ? `${fmtLabel(d)} (Latest)`
-      : isStart
-        ? `${fmtLabel(d)} (Tournament start)`
+      : isEarliest
+        ? `${fmtLabel(d)} (Pre-tournament)`
         : fmtLabel(d);
   });
 
