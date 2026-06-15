@@ -1,23 +1,29 @@
-import { Component } from 'react'
+import { Component, type ReactNode, type ErrorInfo } from 'react'
 import styles from './ErrorBoundary.module.css'
+
+interface ErrorBoundaryProps {
+	children: ReactNode
+}
+
+interface ErrorBoundaryState {
+	error: Error | null
+}
 
 /**
  * Top-level error boundary. Prevents a single bad render (e.g. malformed team
- * data) from blanking the whole page. Catches render-time errors only —
- * async/event-handler errors still need their own try/catch.
+ * data) from blanking the whole page.
  */
-export default class ErrorBoundary extends Component {
-	constructor(props) {
+export default class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
+	constructor(props: ErrorBoundaryProps) {
 		super(props)
 		this.state = { error: null }
 	}
 
-	static getDerivedStateFromError(error) {
+	static getDerivedStateFromError(error: Error): ErrorBoundaryState {
 		return { error }
 	}
 
-	componentDidCatch(error, info) {
-		// Surface for ops debugging — Sentry/etc would hook in here.
+	componentDidCatch(error: Error, info: ErrorInfo) {
 		console.error('[ErrorBoundary]', error, info)
 	}
 
@@ -26,7 +32,6 @@ export default class ErrorBoundary extends Component {
 	}
 
 	handleReset = () => {
-		// Strip query params and reload — recovers from a bad team/date/stage URL.
 		window.history.replaceState({}, '', window.location.pathname)
 		this.setState({ error: null })
 		window.location.reload()
@@ -37,10 +42,10 @@ export default class ErrorBoundary extends Component {
 
 		return (
 			<div className={styles.container} role="alert">
-				<span className={styles.icon} aria-hidden="true">⚠️</span>
+				<span className={styles.icon} aria-hidden="true">{'\u26A0\uFE0F'}</span>
 				<h1 className={styles.title}>Something broke</h1>
 				<p className={styles.message}>
-					The app hit an unexpected error and couldn't render.
+					The app hit an unexpected error and couldn&apos;t render.
 				</p>
 				<div className={styles.actions}>
 					<button type="button" className={styles.button} onClick={this.handleReload}>

@@ -1,4 +1,5 @@
 import { STAGE_LABELS } from '../../constants'
+import type { Team } from '../../types'
 import FlagIcon from './FlagIcon'
 import styles from './EliminatedView.module.css'
 
@@ -6,7 +7,7 @@ import styles from './EliminatedView.module.css'
  * Shown when the selected team has been knocked out.
  * Encourages the user to try the historical view.
  */
-export default function EliminatedView({ team }) {
+export default function EliminatedView({ team }: { team: Team }) {
   const stage = STAGE_LABELS[team.currentStage] ?? 'the tournament'
 
   return (
