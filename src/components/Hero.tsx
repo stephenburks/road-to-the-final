@@ -41,6 +41,8 @@ export default function Hero({ team, activeStage, isHistorical }: HeroProps) {
 	const path = team.path?.[activeStage]
 	const ap = team.advanceProbabilities ?? {}
 	const days = daysUntil(path?.date)
+	const source = ap.source
+	const sourceLabel = isHistorical ? 'As of snapshot' : source === 'market' ? 'Market estimate' : 'Calculated'
 
 	const eyebrow = getEyebrow(team, activeStage, isHistorical)
 	const heading = getHeading(team, path)
@@ -85,7 +87,7 @@ export default function Hero({ team, activeStage, isHistorical }: HeroProps) {
 									</div>
 									<div className={styles.statLabel}>{card.label}</div>
 									<div className={styles.statSub}>
-										{isHistorical ? 'As of snapshot' : 'Probability'}
+										{sourceLabel}
 									</div>
 								</div>
 							))}
