@@ -1,9 +1,19 @@
 import { useMemo } from 'react'
+import type { Team } from '../types'
 
-export function useTeamSearch(teams, query, confederations) {
-	const grouped = useMemo(() => {
+interface GroupedTeams {
+	[key: string]: Team[]
+}
+
+interface UseTeamSearchReturn {
+	grouped: GroupedTeams
+	flatItems: Team[]
+}
+
+export function useTeamSearch(teams: Team[], query: string, confederations: readonly string[]): UseTeamSearchReturn {
+	const grouped = useMemo((): GroupedTeams => {
 		const q = query.toLowerCase()
-		const byConf = {}
+		const byConf: GroupedTeams = {}
 		confederations.forEach(c => { byConf[c] = [] })
 		byConf['Eliminated'] = []
 
@@ -27,7 +37,7 @@ export function useTeamSearch(teams, query, confederations) {
 	}, [teams, query, confederations])
 
 	const flatItems = useMemo(() => {
-		const items = []
+		const items: Team[] = []
 		for (const conf of [...confederations, 'Eliminated']) {
 			const group = grouped[conf] ?? []
 			for (const t of group) {
