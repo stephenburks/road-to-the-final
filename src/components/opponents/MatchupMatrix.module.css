@@ -1,0 +1,72 @@
+/* ── R16 Matchup matrix ── */
+.matchupSection { display: flex; flex-direction: column; gap: 20px; }
+
+.matchupList { display: flex; flex-direction: column; gap: 7px; }
+
+.matchupRow {
+	display: grid;
+	grid-template-columns: 1fr 180px 44px;
+	align-items: center;
+	gap: 10px;
+}
+
+.matchupTeams {
+	display: flex;
+	align-items: center;
+	gap: 6px;
+	font-size: 12px;
+	min-width: 0;
+}
+
+.matchupName {
+	color: #c7d2fe;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.matchupTrack {
+	height: 6px;
+	background: rgba(255, 255, 255, 0.06);
+	border-radius: 3px;
+	overflow: hidden;
+}
+
+.matchupFill {
+	height: 100%;
+	background: var(--purple);
+	border-radius: 3px;
+	transition: width 0.5s ease;
+}
+
+.matchupPct {
+	font-family: var(--font-mono);
+	font-size: 11px;
+	font-weight: 700;
+	color: #a5b4fc;
+	text-align: right;
+}
+
+/* ── R16 callout cards ── */
+.calloutGrid {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+	gap: 9px;
+}
+
+.calloutCard {
+	border-radius: 8px;
+	padding: 12px 13px;
+	display: flex;
+	align-items: flex-start;
+	gap: 9px;
+}
+
+.calloutVs   { font-size: 11px; color: var(--text-lo); margin-bottom: 3px; }
+.calloutPct  { font-family: var(--font-display); font-weight: 800; font-size: 1.2rem; }
+.calloutNote { font-size: 9px; color: var(--text-dim); margin-top: 3px; line-height: 1.4; }
+
+@media (max-width: 600px) {
+	.matchupRow { grid-template-columns: 1fr 80px 36px; }
+	.calloutGrid { grid-template-columns: 1fr 1fr; }
+}

@@ -32,65 +32,6 @@
 	text-align: center;
 }
 
-.node {
-	width: 44px;
-	height: 44px;
-	border-radius: 50%;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	font-family: var(--font-mono);
-	font-weight: 700;
-	margin-bottom: 12px;
-	transition: box-shadow 0.3s;
-}
-
-.card {
-	border-radius: 9px;
-	padding: 10px 11px;
-	width: calc(100% - 14px);
-	text-align: center;
-}
-
-.cardTitle {
-	font-family: var(--font-display);
-	font-weight: 700;
-	font-size: 11px;
-	margin-bottom: 3px;
-	word-break: break-word;
-}
-
-.cardDate {
-	font-family: var(--font-mono);
-	font-size: 9px;
-	color: var(--text-dim);
-	letter-spacing: 0.04em;
-	margin-bottom: 4px;
-	word-break: break-word;
-}
-
-.cardCity {
-	font-size: 10px;
-	margin-bottom: 3px;
-	word-break: break-word;
-}
-
-.cardDetail {
-	font-size: 9px;
-	font-family: var(--font-mono);
-	word-break: break-word;
-}
-
-.cardConditional {
-	margin-top: 5px;
-	font-size: 8px;
-	font-family: var(--font-mono);
-	color: var(--amber);
-	letter-spacing: 0.06em;
-	opacity: 0.8;
-	cursor: help;
-}
-
 @media (max-width: 900px) {
 	.grid {
 		grid-template-columns: repeat(3, 1fr);

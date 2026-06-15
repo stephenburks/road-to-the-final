@@ -95,6 +95,15 @@ export function lsSet(key: string, value: string): void {
   try { localStorage.setItem(key, value) } catch { /* noop */ }
 }
 
+export function getGroupTag(teamName: string, data: AppData | null): { group: string; pos: number } | null {
+	if (!data?.groups || !teamName) return null
+	for (const [key, g] of Object.entries(data.groups)) {
+		const s = g.standings?.find(r => r.team === teamName)
+		if (s) return { group: key, pos: s.pos }
+	}
+	return null
+}
+
 export function getFeederGroup(team: Team, stage: Stage, data: AppData | null): { key: string; group: GroupData } | null {
   if (!data?.groups) return null
 
