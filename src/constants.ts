@@ -1,4 +1,4 @@
-import type { Stage, SnapshotManifest } from './types'
+import type { Stage } from './types'
 
 /** Ordered list of tournament stages */
 export const STAGE_ORDER: readonly Stage[] = ['group_stage', 'r32', 'r16', 'qf', 'sf', 'final']

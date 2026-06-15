@@ -1,7 +1,7 @@
 import { CircleFlag } from 'react-circle-flags'
 import styles from './FlagIcon.module.css'
 
-const ID_TO_ISO = {
+const ID_TO_ISO: Record<string, string> = {
 	mexico: 'mx', southafrica: 'za', southkorea: 'kr', czechia: 'cz',
 	canada: 'ca', bosnia: 'ba', qatar: 'qa', switzerland: 'ch',
 	brazil: 'br', morocco: 'ma', haiti: 'ht', scotland: 'gb-sct',
@@ -16,7 +16,7 @@ const ID_TO_ISO = {
 	england: 'gb-eng', croatia: 'hr', ghana: 'gh', panama: 'pa',
 }
 
-const ID_TO_TLA = {
+const ID_TO_TLA: Record<string, string> = {
 	mexico: 'MEX', southafrica: 'RSA', southkorea: 'KOR', czechia: 'CZE',
 	canada: 'CAN', bosnia: 'BIH', qatar: 'QAT', switzerland: 'SUI',
 	brazil: 'BRA', morocco: 'MAR', haiti: 'HAI', scotland: 'SCO',
@@ -50,13 +50,21 @@ const NAME_TO_ID = {
 	'Croatia': 'croatia', 'Ghana': 'ghana', 'Panama': 'panama',
 }
 
-function resolveCode(code, opponentName) {
+function resolveCode(code?: string, opponentName?: string): string {
 	if (code) return code
-	if (opponentName) return NAME_TO_ID[opponentName] || ''
+	if (opponentName) return (NAME_TO_ID as Record<string, string>)[opponentName] || ''
 	return ''
 }
 
-export default function FlagIcon({ code, flag, name, small, opponent }) {
+interface FlagIconProps {
+	code?: string
+	flag?: string
+	name?: string
+	small?: boolean
+	opponent?: string
+}
+
+export default function FlagIcon({ code, flag, name, small, opponent }: FlagIconProps) {
 	const resolvedCode = resolveCode(code, opponent)
 	const iso = ID_TO_ISO[resolvedCode]
 	const tla = ID_TO_TLA[resolvedCode] || ''

@@ -1,8 +1,15 @@
 import { STAGE_ORDER, STAGE_LABELS, STAGE_LABELS_SHORT } from '../constants'
+import type { Stage, Team } from '../types'
 import { stageIndex } from '../utils'
 import styles from './StageTabs.module.css'
 
-function getTabClasses(styles, i, currentIdx, stage, team, selectedStage) {
+interface StageTabsProps {
+	team: Team
+	selectedStage: Stage
+	onSelect: (stage: Stage) => void
+}
+
+function getTabClasses(styles: Record<string, string>, i: number, currentIdx: number, stage: string, team: Team, selectedStage: string) {
 	const isDone = i < currentIdx
 	const isCur = stage === team.currentStage
 	const isElim = team.eliminated && i === currentIdx
@@ -18,10 +25,10 @@ function getTabClasses(styles, i, currentIdx, stage, team, selectedStage) {
 	].filter(Boolean).join(' ')
 }
 
-export default function StageTabs({ team, selectedStage, onSelect }) {
+export default function StageTabs({ team, selectedStage, onSelect }: StageTabsProps) {
 	const currentIdx = stageIndex(team.currentStage ?? 'group_stage')
 
-	function handleKeyDown(e, stage) {
+	function handleKeyDown(e: React.KeyboardEvent<HTMLButtonElement>, stage: Stage) {
 		const idx = STAGE_ORDER.indexOf(stage)
 		if (e.key === 'ArrowRight' && idx < STAGE_ORDER.length - 1) {
 			onSelect(STAGE_ORDER[idx + 1])

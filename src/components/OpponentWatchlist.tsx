@@ -1,11 +1,12 @@
 import { STAGE_LABELS } from '../constants'
+import type { Stage, Team, AppData, Opponent } from '../types'
 import { formatDate, getFeederGroup } from '../utils'
 import SectionLabel from './ui/SectionLabel'
 import FlagIcon from './ui/FlagIcon'
 import { GroupTable } from './GroupStage'
 import styles from './OpponentWatchlist.module.css'
 
-function DiffPips({ level, color, max = 5 }) {
+function DiffPips({ level, color, max = 5 }: { level: number; color: string; max?: number }) {
 	return (
 		<div className={styles.pips} aria-label={`Difficulty ${level} out of ${max}`}>
 			{Array.from({ length: max }).map((_, i) => (
@@ -19,10 +20,10 @@ function DiffPips({ level, color, max = 5 }) {
 	)
 }
 
-function OpponentCard({ opp, compact = false }) {
-	const borderColor = opp.difficulty >= 5
+function OpponentCard({ opp, compact = false }: { opp: Opponent; compact?: boolean }) {
+	const borderColor = (opp.difficulty ?? 0) >= 5
 		? 'rgba(239,68,68,0.22)'
-		: opp.difficulty >= 4
+		: (opp.difficulty ?? 0) >= 4
 			? 'rgba(251,146,60,0.16)'
 			: 'rgba(255,255,255,0.07)'
 
@@ -45,8 +46,8 @@ function OpponentCard({ opp, compact = false }) {
 			{opp.fifaRank && <div className={styles.rank}>FIFA #{opp.fifaRank}</div>}
 			{opp.difficulty != null && (
 				<div className={styles.diffRow}>
-					<span className={styles.diffLabel} style={{ color: opp.color ?? 'var(--amber)' }}>{opp.label}</span>
-					<DiffPips level={opp.difficulty} color={opp.color} />
+					<span className={styles.diffLabel} style={{ color: opp.color ?? 'var(--amber)' }}>{opp.label ?? ''}</span>
+					<DiffPips level={opp.difficulty} color={opp.color ?? 'var(--amber)'} />
 				</div>
 			)}
 			{opp.pct != null && (
@@ -66,7 +67,7 @@ function OpponentCard({ opp, compact = false }) {
 	)
 }
 
-function getGroupTag(teamName, data) {
+function getGroupTag(teamName: string, data: AppData): { group: string; pos: number } | null {
 	if (!data?.groups || !teamName) return null
 	for (const [key, g] of Object.entries(data.groups)) {
 		const s = g.standings?.find(r => r.team === teamName)
@@ -75,7 +76,12 @@ function getGroupTag(teamName, data) {
 	return null
 }
 
-function MatchupRow({ opp, team, maxPct, data }) {
+function MatchupRow({ opp, team, maxPct, data }: {
+	opp: Opponent
+	team: Team
+	maxPct: number
+	data: AppData
+}) {
 	const name = opp.opponent ?? opp.likelyTeam ?? 'TBD'
 	const tag = getGroupTag(name, data)
 	return (
@@ -102,20 +108,25 @@ function MatchupRow({ opp, team, maxPct, data }) {
 			<div
 				className={styles.matchupTrack}
 				role="progressbar"
-				aria-valuenow={opp.pct}
+				aria-valuenow={opp.pct ?? 0}
 				aria-valuemin={0}
 				aria-valuemax={100}
 				aria-label={`${opp.pct}% probability`}
 			>
-				<div className={styles.matchupFill} style={{ width: `${(opp.pct / maxPct) * 100}%` }} />
+				<div className={styles.matchupFill} style={{ width: `${((opp.pct ?? 0) / maxPct) * 100}%` }} />
 			</div>
 			<div className={styles.matchupPct}>{opp.pct}%</div>
 		</div>
 	)
 }
 
-function MatchupMatrix({ flatList, team, maxPct, data }) {
-	const sorted = [...flatList].filter(o => o.pct != null).sort((a, b) => b.pct - a.pct)
+function MatchupMatrix({ flatList, team, maxPct, data }: {
+	flatList: Opponent[]
+	team: Team
+	maxPct: number
+	data: AppData
+}) {
+	const sorted = [...flatList].filter(o => o.pct != null).sort((a, b) => (b.pct ?? 0) - (a.pct ?? 0))
 	const top4 = sorted.slice(0, 4)
 
 	return (
@@ -150,7 +161,7 @@ function MatchupMatrix({ flatList, team, maxPct, data }) {
 	)
 }
 
-function FutureStagePlaceholder({ stage, path }) {
+function FutureStagePlaceholder({ stage, path }: { stage: Stage; path?: Team['path'][keyof Team['path']] | null }) {
 	return (
 		<div className={styles.futurePlaceholder}>
 			<div className={`${styles.futureIcon} emoji`} aria-hidden="true">⏳</div>
@@ -168,7 +179,10 @@ function FutureStagePlaceholder({ stage, path }) {
 	)
 }
 
-function VenueBanner({ stagePath, activeStage }) {
+function VenueBanner({ stagePath, activeStage }: {
+	stagePath: NonNullable<Team['path'][keyof Team['path']]>
+	activeStage: Stage
+}) {
 	return (
 		<div
 			className={`${styles.banner} ${stagePath.conditional ? styles.bannerConditional : ''}`}
@@ -193,14 +207,18 @@ function VenueBanner({ stagePath, activeStage }) {
 	)
 }
 
-export default function OpponentWatchlist({ team, activeStage, data }) {
+export default function OpponentWatchlist({ team, activeStage, data }: {
+	team: Team
+	activeStage: Stage
+	data: AppData
+}) {
 	const stagePath = team.path?.[activeStage]
-	const oppData = team.possibleOpponents?.[activeStage]
+	const oppData = (team.possibleOpponents as Record<string, unknown>)[activeStage] as Record<string, unknown> | undefined
 
 	if (activeStage === 'group_stage') return null
 
-	const hasScenarios = Array.isArray(oppData?.scenarios)
-	const flatList = Array.isArray(oppData) ? oppData : []
+	const hasScenarios = Array.isArray((oppData as Record<string, unknown> | undefined)?.scenarios)
+	const flatList = (Array.isArray(oppData) ? oppData : []) as Opponent[]
 	const hasFlat = flatList.length > 0
 	const isLateStage = ['qf', 'sf', 'final'].includes(activeStage)
 	const r16WithPct = activeStage === 'r16' && flatList.some(o => o.pct != null)
@@ -221,24 +239,26 @@ export default function OpponentWatchlist({ team, activeStage, data }) {
 
 			{!isLateStage && hasScenarios && (
 				<div className={styles.scenarios}>
-					{oppData.scenarios.map((scenario, i) => (
+					{(oppData as Record<string, unknown>).scenarios instanceof Array
+						? ((oppData as Record<string, unknown>).scenarios as Array<Record<string, unknown>>).map((scenario: Record<string, unknown>, i: number) => (
 						<div key={i} className={styles.scenario}>
 							<div className={styles.scenarioHeader}>
-								<span className={styles.scenarioLabel}>{scenario.condition}</span>
-								<span className={styles.scenarioProb}>{scenario.probability}% likely</span>
+								<span className={styles.scenarioLabel}>{scenario.condition as string}</span>
+								<span className={styles.scenarioProb}>{scenario.probability as number}% likely</span>
 							</div>
-							{scenario.venue && (
+							{Boolean(scenario.venue) && (
 								<div className={styles.scenarioMeta}>
-									{scenario.date ? `${formatDate(scenario.date)} · ` : ''}{scenario.venue}
+									{(scenario.date ? `${formatDate(scenario.date as string)} \u00B7 ` : '') + (scenario.venue as string)}
 								</div>
 							)}
 							<div className={styles.grid}>
-								{(scenario.opponents ?? []).map((opp, j) => (
-									<OpponentCard key={j} opp={opp} />
+								{((scenario.opponents as unknown[]) ?? []).map((opp: unknown, j: number) => (
+									<OpponentCard key={j} opp={opp as Opponent} />
 								))}
 							</div>
 						</div>
-					))}
+					))
+					: null}
 				</div>
 			)}
 

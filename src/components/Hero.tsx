@@ -1,4 +1,5 @@
 import { STAGE_LABELS } from '../constants'
+import type { Stage, Team, AdvanceProbabilities } from '../types'
 import { daysUntil, formatDate } from '../utils'
 import FlagIcon from './ui/FlagIcon'
 import styles from './Hero.module.css'
@@ -10,27 +11,33 @@ const STAT_CARDS = [
 	{ key: 'final', label: 'Reach the Final', color: '#ef4444', bg: 'rgba(239,68,68,0.08)', border: 'rgba(239,68,68,0.2)' },
 ]
 
-function getEyebrow(team, activeStage, isHistorical) {
-	if (team.eliminated) return `❌ ${team.name} — Eliminated`
-	return `${team.name} · ${STAGE_LABELS[activeStage]}${isHistorical ? ' · Historical' : ''}`
+function getEyebrow(team: Team, activeStage: string, isHistorical: boolean) {
+	if (team.eliminated) return `\u274C ${team.name} \u2014 Eliminated`
+	return `${team.name} \u00B7 ${STAGE_LABELS[activeStage as Stage]}${isHistorical ? ' \u00B7 Historical' : ''}`
 }
 
-function getHeading(team, path) {
+function getHeading(team: Team, path: { city?: string } | null | undefined) {
 	if (team.eliminated) return 'Journey Ended'
-	return path?.city ?? '—'
+	return path?.city ?? '\u2014'
 }
 
-function getSubtext(team, activeStage, days) {
+function getSubtext(team: Team, activeStage: string, days: number | null) {
 	if (team.eliminated) {
 		return `${team.name} were knocked out in the ${STAGE_LABELS[team.currentStage ?? 'r32']}.`
 	}
 	if (days !== null) {
-		return `${STAGE_LABELS[activeStage]} is ${Math.max(days, 0)} day${days !== 1 ? 's' : ''} away.`
+		return `${STAGE_LABELS[activeStage as Stage]} is ${Math.max(days, 0)} day${days !== 1 ? 's' : ''} away.`
 	}
-	return `Next: ${team.path?.[activeStage]?.date ?? '—'}`
+	return `Next: ${team.path?.[activeStage as Stage]?.date ?? '\u2014'}`
 }
 
-export default function Hero({ team, activeStage, isHistorical }) {
+interface HeroProps {
+	team: Team
+	activeStage: Stage
+	isHistorical: boolean
+}
+
+export default function Hero({ team, activeStage, isHistorical }: HeroProps) {
 	const path = team.path?.[activeStage]
 	const ap = team.advanceProbabilities ?? {}
 	const days = daysUntil(path?.date)
@@ -71,10 +78,10 @@ export default function Hero({ team, activeStage, isHistorical }) {
 									role="listitem"
 									className={styles.statCard}
 									style={{ background: card.bg, border: `1px solid ${card.border}` }}
-									aria-label={`${card.label}: ${ap[card.key] ?? 0}%`}
+									aria-label={`${card.label}: ${ap[card.key as keyof AdvanceProbabilities] ?? 0}%`}
 								>
 									<div className={styles.statValue} style={{ color: card.color }}>
-										{ap[card.key] ?? 0}%
+										{ap[card.key as keyof AdvanceProbabilities] ?? 0}%
 									</div>
 									<div className={styles.statLabel}>{card.label}</div>
 									<div className={styles.statSub}>

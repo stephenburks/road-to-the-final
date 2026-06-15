@@ -16,7 +16,7 @@ import Footer           from './components/Footer'
 import Loading          from './components/ui/Loading'
 import EliminatedView   from './components/ui/EliminatedView'
 
-function HistoricalBanner({ date, label, onGoLive }) {
+function HistoricalBanner({ date, label, onGoLive }: { date: string; label: string; onGoLive: () => void }) {
   return (
     <div role="alert" aria-live="polite" style={{ background:'rgba(245,158,11,0.07)', borderBottom:'1px solid rgba(245,158,11,0.2)', padding:'9px 20px', display:'flex', alignItems:'center', gap:10, fontSize:12, color:'#fcd34d', fontFamily:'var(--font-mono)' }}>
       <span className="emoji" aria-hidden="true">📅</span> Viewing snapshot from <strong>{label ?? date}</strong> — probabilities reflect that day
@@ -27,7 +27,7 @@ function HistoricalBanner({ date, label, onGoLive }) {
   )
 }
 
-function ErrorScreen({ message }) {
+function ErrorScreen({ message }: { message: string }) {
   return (
     <div role="alert" style={{ minHeight:'100vh', display:'flex', flexDirection:'column', alignItems:'center', justifyContent:'center', gap:12, fontFamily:'var(--font-mono)', color:'var(--red)', fontSize:12, textAlign:'center', padding:24 }}>
       <span className="emoji" style={{ fontSize:28 }}>⚠️</span>
@@ -67,6 +67,7 @@ export default function App() {
   if (error)     return <ErrorScreen message={error} />
   if (!liveData) return <Loading message="Loading match data…" />
   if (!team)     return <Loading message="Finding team data…" />
+  if (!data)     return <Loading message="Loading data…" />
 
   const snapLabel  = isHistorical ? (manifest?.labels?.[selectedDate] ?? selectedDate) : null
   const showGroups = activeStage === 'group_stage'

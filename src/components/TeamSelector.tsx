@@ -1,16 +1,23 @@
 import { useState, useRef, useCallback, useMemo } from 'react'
 import { CONFEDERATIONS } from '../constants'
+import type { Team } from '../types'
 import { useClickOutside } from '../hooks/useClickOutside'
 import { useTeamSearch } from '../hooks/useTeamSearch'
 import FlagIcon from './ui/FlagIcon'
 import styles from './TeamSelector.module.css'
 
-export default function TeamSelector({ teams, selectedId, onChange }) {
+interface TeamSelectorProps {
+	teams: Team[]
+	selectedId: string
+	onChange: (id: string) => void
+}
+
+export default function TeamSelector({ teams, selectedId, onChange }: TeamSelectorProps) {
 	const [open, setOpen]   = useState(false)
 	const [query, setQuery] = useState('')
 	const [focusedIdx, setFocusedIdx] = useState(-1)
-	const ref               = useRef(null)
-	const inputRef          = useRef(null)
+	const ref               = useRef<HTMLDivElement>(null)
+	const inputRef          = useRef<HTMLInputElement>(null)
 
 	const close = useCallback(() => {
 		setOpen(false)
@@ -32,14 +39,14 @@ export default function TeamSelector({ teams, selectedId, onChange }) {
 		setTimeout(() => inputRef.current?.focus(), 50)
 	}
 
-	function handleSelect(id) {
+	function handleSelect(id: string) {
 		onChange(id)
 		setOpen(false)
 		setQuery('')
 		setFocusedIdx(-1)
 	}
 
-	function handleKeyDown(e) {
+	function handleKeyDown(e: React.KeyboardEvent) {
 		if (e.key === 'Escape') {
 			setOpen(false)
 			setFocusedIdx(-1)

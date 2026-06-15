@@ -1,7 +1,17 @@
+import type { AppData, SnapshotManifest } from '../types'
 import { formatUpdated } from '../utils'
 import TeamSelector from './TeamSelector'
 import DateSelector from './DateSelector'
 import styles from './Header.module.css'
+
+interface HeaderProps {
+  data: AppData
+  selectedTeamId: string
+  onTeamChange: (id: string) => void
+  selectedDate: string
+  onDateChange: (date: string) => void
+  manifest: SnapshotManifest | null
+}
 
 /**
  * Site header with logo, date picker, and team selector.
@@ -13,7 +23,7 @@ export default function Header({
   selectedDate,
   onDateChange,
   manifest,
-}) {
+}: HeaderProps) {
   return (
     <div className="wrap">
       <header className={styles.header}>

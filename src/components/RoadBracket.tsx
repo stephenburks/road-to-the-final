@@ -1,9 +1,10 @@
 import { STAGE_ORDER, STAGE_LABELS } from '../constants'
+import type { Stage, Team } from '../types'
 import { stageIndex, formatDate } from '../utils'
 import SectionLabel from './ui/SectionLabel'
 import styles from './RoadBracket.module.css'
 
-const NODE_ICONS = {
+const NODE_ICONS: Record<string, string> = {
 	group_stage: 'GS',
 	r32: '32',
 	r16: '16',
@@ -12,7 +13,15 @@ const NODE_ICONS = {
 	final: '★',
 }
 
-function getNodeStyle(i, currentIdx, stage, team, isAct) {
+interface NodeStyle {
+	bg: string
+	border: string
+	color: string
+	shadow: string
+	icon: string
+}
+
+function getNodeStyle(i: number, currentIdx: number, stage: string, team: Team, isAct: boolean): NodeStyle {
 	const isDone = i < currentIdx
 	const isCur = stage === team.currentStage
 	const isElim = team.eliminated && i === currentIdx
@@ -62,7 +71,14 @@ function getNodeStyle(i, currentIdx, stage, team, isAct) {
 	}
 }
 
-function getCardStyle(i, currentIdx, stage, team, isAct) {
+interface CardStyle {
+	bg: string
+	border: string
+	titleColor: string
+	detColor: string
+}
+
+function getCardStyle(i: number, currentIdx: number, stage: string, team: Team, isAct: boolean): CardStyle {
 	const isDone = i < currentIdx
 	const isCur = stage === team.currentStage
 
@@ -98,7 +114,7 @@ function getCardStyle(i, currentIdx, stage, team, isAct) {
 	}
 }
 
-function BracketNode({ node }) {
+function BracketNode({ node }: { node: NodeStyle & { isAct?: boolean } }) {
 	const fontSize = node.icon === '✕' || node.icon === '✓'
 		? '13px'
 		: node.color === '#052e16'
@@ -122,7 +138,12 @@ function BracketNode({ node }) {
 	)
 }
 
-function BracketCard({ path, card, isAct, stage }) {
+function BracketCard({ path, card, isAct, stage }: {
+	path: Team['path'][keyof Team['path']] | null
+	card: CardStyle
+	isAct: boolean
+	stage: Stage
+}) {
 	return (
 		<div
 			className={styles.card}
@@ -153,7 +174,11 @@ function BracketCard({ path, card, isAct, stage }) {
 	)
 }
 
-export default function RoadBracket({ team, activeStage, onStageSelect }) {
+export default function RoadBracket({ team, activeStage, onStageSelect }: {
+	team: Team
+	activeStage: Stage
+	onStageSelect: (stage: Stage) => void
+}) {
 	const currentIdx = stageIndex(team.currentStage ?? 'group_stage')
 	const completePct = Math.min((currentIdx / 5) * 100, 100)
 
@@ -191,7 +216,7 @@ export default function RoadBracket({ team, activeStage, onStageSelect }) {
 								className={styles.stage}
 								onClick={() => onStageSelect(stage)}
 							>
-								<BracketNode node={node} isAct={isAct} />
+								<BracketNode node={node} />
 								<BracketCard path={path} card={card} isAct={isAct} stage={stage} />
 							</button>
 						)

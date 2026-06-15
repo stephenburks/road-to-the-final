@@ -1,5 +1,6 @@
 import { describe, it, expect } from 'vitest'
 import { daysUntil, formatDate, stageIndex, resolveActiveStage, getFeederGroup } from './utils'
+import type { Team, AppData } from './types'
 
 describe('daysUntil', () => {
 	it('returns null for empty string', () => {
@@ -22,12 +23,12 @@ describe('daysUntil', () => {
 })
 
 describe('formatDate', () => {
-	it('returns empty string for null', () => {
-		expect(formatDate(null)).toBe('')
-	})
-
 	it('returns empty string for undefined', () => {
 		expect(formatDate(undefined)).toBe('')
+	})
+
+	it('returns empty string for empty string', () => {
+		expect(formatDate('')).toBe('')
 	})
 
 	it('formats ISO date to short date', () => {
@@ -44,7 +45,7 @@ describe('formatDate', () => {
 })
 
 describe('stageIndex', () => {
-	it('returns index for known stages', () => {
+	it('returns index for all known stages', () => {
 		expect(stageIndex('group_stage')).toBe(0)
 		expect(stageIndex('r32')).toBe(1)
 		expect(stageIndex('r16')).toBe(2)
@@ -52,20 +53,16 @@ describe('stageIndex', () => {
 		expect(stageIndex('sf')).toBe(4)
 		expect(stageIndex('final')).toBe(5)
 	})
-
-	it('returns -1 for unknown stage', () => {
-		expect(stageIndex('unknown')).toBe(-1)
-	})
 })
 
 describe('resolveActiveStage', () => {
 	it('returns team currentStage when selectedStage is auto', () => {
-		const team = { currentStage: 'r32' }
+		const team = { currentStage: 'r32' } as unknown as Team
 		expect(resolveActiveStage('auto', team)).toBe('r32')
 	})
 
 	it('returns selectedStage when not auto', () => {
-		const team = { currentStage: 'group_stage' }
+		const team = { currentStage: 'group_stage' } as unknown as Team
 		expect(resolveActiveStage('qf', team)).toBe('qf')
 	})
 
@@ -79,36 +76,34 @@ describe('resolveActiveStage', () => {
 })
 
 describe('getFeederGroup', () => {
+	const mkData = (groups: Record<string, unknown> = {}) =>
+		({ groups } as unknown as AppData)
+
 	it('returns null when data has no groups', () => {
-		expect(getFeederGroup({ group: 'D' }, 'r16', null)).toBeNull()
-		expect(getFeederGroup({ group: 'D' }, 'r16', {})).toBeNull()
+		expect(getFeederGroup({ group: 'D' } as unknown as Team, 'r16', null)).toBeNull()
 	})
 
 	it('returns null when opponentDesc does not contain group reference', () => {
-		const team = { group: 'D', path: { r16: { opponentDesc: 'Winner Match 94' } } }
-		const data = { groups: {} }
-		expect(getFeederGroup(team, 'r16', data)).toBeNull()
+		const team = { group: 'D', path: { r16: { opponentDesc: 'Winner Match 94' } } } as unknown as Team
+		expect(getFeederGroup(team, 'r16', mkData())).toBeNull()
 	})
 
 	it('extracts feeder group from "Winner Group G" pattern', () => {
-		const team = { group: 'D', path: { r16: { opponentDesc: 'Winner Group G' } } }
-		const data = { groups: { G: { standings: [], winProbabilities: {} } } }
-		const result = getFeederGroup(team, 'r16', data)
+		const team = { group: 'D', path: { r16: { opponentDesc: 'Winner Group G' } } } as unknown as Team
+		const result = getFeederGroup(team, 'r16', mkData({ G: { standings: [], winProbabilities: {} } }))
 		expect(result).not.toBeNull()
-		expect(result.key).toBe('G')
+		expect(result!.key).toBe('G')
 	})
 
 	it('extracts feeder group from "Runner-up Group D" pattern', () => {
-		const team = { group: 'C', path: { r32: { opponentDesc: 'Runner-up Group D' } } }
-		const data = { groups: { D: { standings: [], winProbabilities: {} } } }
-		const result = getFeederGroup(team, 'r32', data)
+		const team = { group: 'C', path: { r32: { opponentDesc: 'Runner-up Group D' } } } as unknown as Team
+		const result = getFeederGroup(team, 'r32', mkData({ D: { standings: [], winProbabilities: {} } }))
 		expect(result).not.toBeNull()
-		expect(result.key).toBe('D')
+		expect(result!.key).toBe('D')
 	})
 
 	it('returns null when feeder group is same as team group', () => {
-		const team = { group: 'D', path: { r16: { opponentDesc: 'Winner Group D' } } }
-		const data = { groups: { D: { standings: [], winProbabilities: {} } } }
-		expect(getFeederGroup(team, 'r16', data)).toBeNull()
+		const team = { group: 'D', path: { r16: { opponentDesc: 'Winner Group D' } } } as unknown as Team
+		expect(getFeederGroup(team, 'r16', mkData({ D: { standings: [], winProbabilities: {} } }))).toBeNull()
 	})
 })

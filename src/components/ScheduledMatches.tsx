@@ -1,4 +1,5 @@
 import { STAGE_ORDER, STAGE_LABELS } from '../constants'
+import type { Stage, Team, GroupMatch } from '../types'
 import { formatDate, stageIndex } from '../utils'
 import SectionLabel from './ui/SectionLabel'
 import FlagIcon from './ui/FlagIcon'
@@ -7,16 +8,31 @@ import styles from './ScheduledMatches.module.css'
 /**
  * Determines the status icon and style for a match row.
  */
-function matchStatus(result) {
+function matchStatus(result: GroupMatch['result']) {
   if (result === 'W') return { icon: '✓', color: '#22c55e', label: 'Win' }
   if (result === 'D') return { icon: '½', color: '#a8a29e', label: 'Draw' }
   if (result === 'L') return { icon: '✗', color: '#ef4444', label: 'Loss' }
   return { icon: '?', color: 'var(--text-dim)', label: 'Upcoming' }
 }
 
+interface MatchRowProps {
+	match: {
+		result?: GroupMatch['result']
+		opponent?: string | null
+		opponentDesc?: string | null
+		opponentFlag?: string
+		date?: string
+		score?: string | null
+		venue?: string
+	}
+	teamFlag: string
+	teamId: string
+	isConditional?: boolean
+}
+
 /** A single match row */
-function MatchRow({ match, teamFlag, teamId, isConditional = false }) {
-  const status = matchStatus(match.result)
+function MatchRow({ match, teamFlag, teamId, isConditional = false }: MatchRowProps) {
+  const status = matchStatus(match.result ?? null)
 
   return (
     <div
@@ -34,7 +50,7 @@ function MatchRow({ match, teamFlag, teamId, isConditional = false }) {
           <>
             <FlagIcon code={teamId} flag={teamFlag} />
             <span className={styles.vs}>vs</span>
-            <FlagIcon flag={match.opponentFlag} opponent={match.opponent} />
+            <FlagIcon flag={match.opponentFlag} opponent={match.opponent ?? undefined} />
             <span className={styles.opponentName}>{match.opponent}</span>
           </>
         ) : (
@@ -59,8 +75,13 @@ function MatchRow({ match, teamFlag, teamId, isConditional = false }) {
   )
 }
 
+interface StageBlockProps {
+	stageKey: Stage
+	team: Team
+}
+
 /** A stage block (Group Stage, R32, etc.) */
-function StageBlock({ stageKey, team }) {
+function StageBlock({ stageKey, team }: StageBlockProps) {
   const path = team.path?.[stageKey]
   const currentIdx = stageIndex(team.currentStage ?? 'group_stage')
   const stageIdx2  = stageIndex(stageKey)
@@ -123,7 +144,7 @@ function StageBlock({ stageKey, team }) {
  * Full schedule section — all matches from group stage through the final,
  * with conditional future matches shown clearly as tentative.
  */
-export default function ScheduledMatches({ team }) {
+export default function ScheduledMatches({ team }: { team: Team }) {
   return (
     <section
       className="wrap section"

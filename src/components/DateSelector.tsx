@@ -1,18 +1,23 @@
 import { useState, useRef, useCallback } from 'react'
 import { useClickOutside } from '../hooks/useClickOutside'
+import type { SnapshotManifest } from '../types'
 import styles from './DateSelector.module.css'
 
 /**
  * Dropdown to switch between live data and historical snapshots.
  * Hidden when no snapshots are available yet.
- *
- * @param {object}   manifest     - { available[], labels{} } from manifest.json
- * @param {string}   selectedDate - 'live' or 'YYYY-MM-DD'
- * @param {function} onChange     - called with new date string or 'live'
  */
-export default function DateSelector({ manifest, selectedDate, onChange }) {
+export default function DateSelector({
+	manifest,
+	selectedDate,
+	onChange,
+}: {
+	manifest: SnapshotManifest | null
+	selectedDate: string
+	onChange: (value: string) => void
+}) {
 	const [open, setOpen] = useState(false)
-	const ref = useRef(null)
+	const ref = useRef<HTMLDivElement>(null)
 	const close = useCallback(() => setOpen(false), [])
 	useClickOutside(ref, close)
 
@@ -21,7 +26,7 @@ export default function DateSelector({ manifest, selectedDate, onChange }) {
 	const isLive = selectedDate === 'live'
 	const label = isLive ? 'Live' : (manifest.labels?.[selectedDate] ?? selectedDate)
 
-	function handleSelect(value) {
+	function handleSelect(value: string) {
 		onChange(value)
 		setOpen(false)
 	}

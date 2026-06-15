@@ -3,7 +3,7 @@ import styles from './Nav.module.css'
 /**
  * Sticky navigation bar with section links and live/historical badge.
  */
-export default function Nav({ isHistorical }) {
+export default function Nav({ isHistorical }: { isHistorical: boolean }) {
   return (
     <nav className={styles.nav} aria-label="Site navigation">
       <div className={styles.inner}>

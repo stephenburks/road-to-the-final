@@ -1,3 +1,4 @@
+import type { GroupData, Team, AppData, GroupMatch } from '../types'
 import { formatDate, getFeederGroup } from '../utils'
 import SectionLabel from './ui/SectionLabel'
 import FlagIcon from './ui/FlagIcon'
@@ -21,7 +22,11 @@ const CARD_BORDER = {
 	D: 'rgba(99,102,241,0.15)',
 }
 
-export function GroupTable({ groupKey, groupData, highlightTeamId }) {
+export function GroupTable({ groupKey, groupData, highlightTeamId }: {
+	groupKey: string
+	groupData: GroupData
+	highlightTeamId: string | null
+}) {
 	const probs = groupData.winProbabilities ?? {}
 
 	return (
@@ -48,7 +53,7 @@ export function GroupTable({ groupKey, groupData, highlightTeamId }) {
 				<tbody>
 					{(groupData.standings ?? []).map((row, i) => {
 						const isSelected = row.teamId === highlightTeamId
-						const wp = probs[row.teamId] ?? 0
+						const wp = row.teamId ? (probs[row.teamId] ?? 0) : 0
 
 						return (
 							<tr
@@ -59,7 +64,7 @@ export function GroupTable({ groupKey, groupData, highlightTeamId }) {
 								<td style={{ color: 'var(--text-dim)', width: 22 }}>{row.pos}</td>
 								<td>
 								<div className={styles.teamCell}>
-									<FlagIcon code={row.teamId} flag={row.flag} small />
+									<FlagIcon code={row.teamId ?? undefined} flag={row.flag} small />
 										<span style={{ fontWeight: isSelected ? 700 : 500, color: isSelected ? '#c7d2fe' : '#d1d5db' }}>
 											{row.team}
 										</span>
@@ -108,11 +113,15 @@ export function GroupTable({ groupKey, groupData, highlightTeamId }) {
 	)
 }
 
-function MatchCard({ match, teamFlag, teamId }) {
-	const badgeStyle = match.result ? BADGE_STYLES[match.result] : { background: 'rgba(255,255,255,0.06)', color: 'var(--text-dim)' }
+function MatchCard({ match, teamFlag, teamId }: {
+	match: GroupMatch
+	teamFlag: string
+	teamId: string
+}) {
+	const badgeStyle = match.result ? BADGE_STYLES[match.result as keyof typeof BADGE_STYLES] : { background: 'rgba(255,255,255,0.06)', color: 'var(--text-dim)' }
 	const isWin = match.result === 'W'
 	const isDraw = match.result === 'D'
-	const resultLabel = RESULT_LABELS[match.result] ?? 'To be played'
+	const resultLabel = match.result ? (RESULT_LABELS[match.result as keyof typeof RESULT_LABELS] ?? 'To be played') : 'To be played'
 
 	return (
 		<div
@@ -152,7 +161,7 @@ function MatchCard({ match, teamFlag, teamId }) {
 	)
 }
 
-export default function GroupStage({ team, data }) {
+export default function GroupStage({ team, data }: { team: Team; data: AppData }) {
 	const myGroup = data?.groups?.[team.group]
 	const feeder = getFeederGroup(team, 'r16', data)
 

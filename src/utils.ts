@@ -46,8 +46,8 @@ export function stageIndex(stage: Stage): number {
  * - if selectedStage is 'auto', use the team's currentStage
  * - otherwise use selectedStage
  */
-export function resolveActiveStage(selectedStage: string, team: Team | null | undefined): string {
-  return selectedStage === 'auto' ? (team?.currentStage ?? 'group_stage') : selectedStage
+export function resolveActiveStage(selectedStage: string, team: Team | null | undefined): Stage {
+  return (selectedStage === 'auto' ? (team?.currentStage ?? 'group_stage') : selectedStage) as Stage
 }
 
 interface URLParams {
