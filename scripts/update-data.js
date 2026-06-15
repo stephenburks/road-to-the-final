@@ -366,20 +366,11 @@ async function fetchPolymarketAll() {
   const probs = {};
 
   // These slugs cover the major markets. Polymarket may add more during tournament.
+  const GROUP_LETTERS = 'ABCDEFGHIJKL'.split('');
   const slugs = [
     'world-cup-2026-winner',
-    'world-cup-group-d-winner',
-    'fifa-world-cup-group-g-winner',
-    'world-cup-group-b-winner',
-    'world-cup-group-e-winner',
-    'world-cup-group-f-winner',
-    'world-cup-group-h-winner',
-    'world-cup-group-i-winner',
-    'world-cup-group-j-winner',
-    'world-cup-group-k-winner',
-    'world-cup-group-l-winner',
-    'world-cup-group-a-winner',
-    'world-cup-group-c-winner',
+    ...GROUP_LETTERS.map(g => `world-cup-group-${g.toLowerCase()}-winner`),
+    ...GROUP_LETTERS.map(g => `fifa-world-cup-group-${g.toLowerCase()}-winner`),
   ];
 
   for (const slug of slugs) {
@@ -535,14 +526,31 @@ function calcProbs(teamId, group, standings, polyProbs) {
   // Fallback: derive from group position + FIFA ranking.
   const rows   = standings[group] || [];
   const row    = rows.find(r => r.teamId === teamId);
-  const pos    = row?.pos ?? 4;
   const poly   = polyProbs[teamId];
   const base   = ALL_TEAMS.find(t => t.id === teamId)?.fifaRank ?? 50;
 
-  // Ranking-based probability seed (rough heuristic)
+  const hasStandings = rows.length > 0;
+  const pos = hasStandings ? (row?.pos ?? 4) : 4;
   const rankScore = Math.max(1, 50 - base);
-  const posMult   = { 1: 1.0, 2: 0.65, 3: 0.3, 4: 0.05 }[pos] ?? 0.5;
-  const seed      = Math.round(rankScore * posMult);
+
+  // When standings exist, scale by actual group position.
+  // When no standings (API down), use ranking-based tiers to avoid near-zero.
+  let seed;
+  if (hasStandings) {
+    const posMult = { 1: 1.0, 2: 0.65, 3: 0.3, 4: 0.05 }[pos] ?? 0.5;
+    seed = Math.round(rankScore * posMult);
+  } else {
+    const tiers = [
+      { max: 10, pct: 25 },
+      { max: 20, pct: 18 },
+      { max: 30, pct: 12 },
+      { max: 40, pct: 8  },
+      { max: 50, pct: 5  },
+      { max: Infinity, pct: 2 },
+    ];
+    const tier = tiers.find(t => base <= t.max);
+    seed = tier ? Math.round(tier.pct * (rankScore / 50)) : 2;
+  }
 
   const winner = poly ?? Math.min(seed, 30);
   const r32    = Math.min(Math.round(winner * 2.8 + (pos <= 2 ? 20 : 5)), 99);
@@ -745,6 +753,15 @@ function validateBracketPaths() {
 	}
 }
 
+function isGroupDataDegraded(groups) {
+  if (!groups) return true;
+  for (const g of Object.values(groups)) {
+    const total = Object.values(g.winProbabilities || {}).reduce((s, v) => s + v, 0);
+    if (total < 10) return true;
+  }
+  return false;
+}
+
 // ─── Main ─────────────────────────────────────────────────────────────────────
 async function main() {
   log('=== Road to the Final — Data Update ===');
@@ -791,10 +808,11 @@ async function main() {
       });
       groupsData[g] = { standings: standArr, winProbabilities: winProbs };
     }
-  } else if (existing?.groups) {
+  } else if (existing?.groups && !isGroupDataDegraded(existing.groups)) {
     log('No new standings — carrying forward group data');
     Object.assign(groupsData, existing.groups);
   } else {
+    if (existing?.groups) log('Existing group data degraded — rebuilding with ranking estimates');
     for (const g of 'ABCDEFGHIJKL'.split('')) {
       const standArr = buildGroupStandings(g, rawStandings);
       const winProbs = {};

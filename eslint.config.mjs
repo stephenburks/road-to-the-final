@@ -42,6 +42,10 @@ export default defineConfig([
   },
   {
     files: ['scripts/**/*.js'],
+    extends: [js.configs.recommended],
+    rules: {
+      'no-unused-vars': ['error', { argsIgnorePattern: '^_', varsIgnorePattern: '^_' }],
+    },
     languageOptions: {
       globals: globals.node,
     },

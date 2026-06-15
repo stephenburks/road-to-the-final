@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-15T20:05:32.162Z",
+  "lastUpdated": "2026-06-15T20:19:18.364Z",
   "snapshotDate": "2026-06-15",
   "isHistorical": false,
   "tournament": {
@@ -45,63 +45,63 @@
           "pos": 1,
           "teamId": "mexico",
           "team": "Mexico",
-          "played": 1,
-          "w": 1,
+          "flag": "🇲🇽",
+          "played": 0,
+          "w": 0,
           "d": 0,
           "l": 0,
-          "gf": 2,
+          "gf": 0,
           "ga": 0,
-          "gd": 2,
-          "pts": 3,
-          "flag": "🇲🇽"
+          "gd": 0,
+          "pts": 0
         },
         {
           "pos": 2,
           "teamId": "southkorea",
           "team": "South Korea",
-          "played": 1,
-          "w": 1,
+          "flag": "🇰🇷",
+          "played": 0,
+          "w": 0,
           "d": 0,
           "l": 0,
-          "gf": 2,
-          "ga": 1,
-          "gd": 1,
-          "pts": 3,
-          "flag": "🇰🇷"
+          "gf": 0,
+          "ga": 0,
+          "gd": 0,
+          "pts": 0
         },
         {
           "pos": 3,
           "teamId": "czechia",
           "team": "Czechia",
-          "played": 1,
+          "flag": "🇨🇿",
+          "played": 0,
           "w": 0,
           "d": 0,
-          "l": 1,
-          "gf": 1,
-          "ga": 2,
-          "gd": -1,
-          "pts": 0,
-          "flag": "🇨🇿"
+          "l": 0,
+          "gf": 0,
+          "ga": 0,
+          "gd": 0,
+          "pts": 0
         },
         {
           "pos": 4,
           "teamId": "southafrica",
           "team": "South Africa",
-          "played": 1,
+          "flag": "🇿🇦",
+          "played": 0,
           "w": 0,
           "d": 0,
-          "l": 1,
+          "l": 0,
           "gf": 0,
-          "ga": 2,
-          "gd": -2,
-          "pts": 0,
-          "flag": "🇿🇦"
+          "ga": 0,
+          "gd": 0,
+          "pts": 0
         }
       ],
       "winProbabilities": {
-        "mexico": 30,
-        "southkorea": 18,
-        "czechia": 4,
+        "mexico": 13,
+        "southkorea": 7,
+        "czechia": 2,
         "southafrica": 0
       }
     },
@@ -109,65 +109,65 @@
       "standings": [
         {
           "pos": 1,
-          "teamId": "switzerland",
-          "team": "Switzerland",
-          "played": 1,
+          "teamId": "canada",
+          "team": "Canada",
+          "flag": "🇨🇦",
+          "played": 0,
           "w": 0,
-          "d": 1,
+          "d": 0,
           "l": 0,
-          "gf": 1,
-          "ga": 1,
+          "gf": 0,
+          "ga": 0,
           "gd": 0,
-          "pts": 1,
-          "flag": "🇨🇭"
+          "pts": 0
         },
         {
           "pos": 2,
-          "teamId": "canada",
-          "team": "Canada",
-          "played": 1,
+          "teamId": "qatar",
+          "team": "Qatar",
+          "flag": "🇶🇦",
+          "played": 0,
           "w": 0,
-          "d": 1,
+          "d": 0,
           "l": 0,
-          "gf": 1,
-          "ga": 1,
+          "gf": 0,
+          "ga": 0,
           "gd": 0,
-          "pts": 1,
-          "flag": "🇨🇦"
+          "pts": 0
         },
         {
           "pos": 3,
-          "teamId": "qatar",
-          "team": "Qatar",
-          "played": 1,
+          "teamId": "switzerland",
+          "team": "Switzerland",
+          "flag": "🇨🇭",
+          "played": 0,
           "w": 0,
-          "d": 1,
+          "d": 0,
           "l": 0,
-          "gf": 1,
-          "ga": 1,
+          "gf": 0,
+          "ga": 0,
           "gd": 0,
-          "pts": 1,
-          "flag": "🇶🇦"
+          "pts": 0
         },
         {
           "pos": 4,
           "teamId": "bosnia",
           "team": "Bosnia & Herz.",
-          "played": 1,
+          "flag": "🇧🇦",
+          "played": 0,
           "w": 0,
-          "d": 1,
+          "d": 0,
           "l": 0,
-          "gf": 1,
-          "ga": 1,
+          "gf": 0,
+          "ga": 0,
           "gd": 0,
-          "pts": 1,
-          "flag": "🇧🇦"
+          "pts": 0
         }
       ],
       "winProbabilities": {
-        "switzerland": 30,
-        "canada": 15,
+        "canada": 6,
         "qatar": 0,
+        "switzerland": 12,
         "bosnia": 0
       }
     },
@@ -175,66 +175,66 @@
       "standings": [
         {
           "pos": 1,
-          "teamId": "scotland",
-          "team": "Scotland",
-          "played": 1,
-          "w": 1,
+          "teamId": "brazil",
+          "team": "Brazil",
+          "flag": "🇧🇷",
+          "played": 0,
+          "w": 0,
           "d": 0,
           "l": 0,
-          "gf": 1,
+          "gf": 0,
           "ga": 0,
-          "gd": 1,
-          "pts": 3,
-          "flag": "🏴󠁧󠁢󠁳󠁣󠁴󠁿"
+          "gd": 0,
+          "pts": 0
         },
         {
           "pos": 2,
-          "teamId": "morocco",
-          "team": "Morocco",
-          "played": 1,
+          "teamId": "haiti",
+          "team": "Haiti",
+          "flag": "🇭🇹",
+          "played": 0,
           "w": 0,
-          "d": 1,
+          "d": 0,
           "l": 0,
-          "gf": 1,
-          "ga": 1,
+          "gf": 0,
+          "ga": 0,
           "gd": 0,
-          "pts": 1,
-          "flag": "🇲🇦"
+          "pts": 0
         },
         {
           "pos": 3,
-          "teamId": "brazil",
-          "team": "Brazil",
-          "played": 1,
+          "teamId": "scotland",
+          "team": "Scotland",
+          "flag": "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
+          "played": 0,
           "w": 0,
-          "d": 1,
+          "d": 0,
           "l": 0,
-          "gf": 1,
-          "ga": 1,
+          "gf": 0,
+          "ga": 0,
           "gd": 0,
-          "pts": 1,
-          "flag": "🇧🇷"
+          "pts": 0
         },
         {
           "pos": 4,
-          "teamId": "haiti",
-          "team": "Haiti",
-          "played": 1,
+          "teamId": "morocco",
+          "team": "Morocco",
+          "flag": "🇲🇦",
+          "played": 0,
           "w": 0,
           "d": 0,
-          "l": 1,
+          "l": 0,
           "gf": 0,
-          "ga": 1,
-          "gd": -1,
-          "pts": 0,
-          "flag": "🇭🇹"
+          "ga": 0,
+          "gd": 0,
+          "pts": 0
         }
       ],
       "winProbabilities": {
-        "scotland": 11,
-        "morocco": 23,
-        "brazil": 14,
-        "haiti": 0
+        "brazil": 23,
+        "haiti": 0,
+        "scotland": 2,
+        "morocco": 13
       }
     },
     "D": {
@@ -243,64 +243,64 @@
           "pos": 1,
           "teamId": "usa",
           "team": "USA",
-          "played": 1,
-          "w": 1,
+          "flag": "🇺🇸",
+          "played": 0,
+          "w": 0,
           "d": 0,
           "l": 0,
-          "gf": 4,
-          "ga": 1,
-          "gd": 3,
-          "pts": 3,
-          "flag": "🇺🇸"
+          "gf": 0,
+          "ga": 0,
+          "gd": 0,
+          "pts": 0
         },
         {
           "pos": 2,
           "teamId": "australia",
           "team": "Australia",
-          "played": 1,
-          "w": 1,
+          "flag": "🇦🇺",
+          "played": 0,
+          "w": 0,
           "d": 0,
           "l": 0,
-          "gf": 2,
+          "gf": 0,
           "ga": 0,
-          "gd": 2,
-          "pts": 3,
-          "flag": "🇦🇺"
+          "gd": 0,
+          "pts": 0
         },
         {
           "pos": 3,
           "teamId": "turkey",
           "team": "Türkiye",
-          "played": 1,
+          "flag": "🇹🇷",
+          "played": 0,
           "w": 0,
           "d": 0,
-          "l": 1,
+          "l": 0,
           "gf": 0,
-          "ga": 2,
-          "gd": -2,
-          "pts": 0,
-          "flag": "🇹🇷"
+          "ga": 0,
+          "gd": 0,
+          "pts": 0
         },
         {
           "pos": 4,
           "teamId": "paraguay",
           "team": "Paraguay",
-          "played": 1,
+          "flag": "🇵🇾",
+          "played": 0,
           "w": 0,
           "d": 0,
-          "l": 1,
-          "gf": 1,
-          "ga": 4,
-          "gd": -3,
-          "pts": 0,
-          "flag": "🇵🇾"
+          "l": 0,
+          "gf": 0,
+          "ga": 0,
+          "gd": 0,
+          "pts": 0
         }
       ],
       "winProbabilities": {
-        "usa": 30,
-        "australia": 16,
-        "turkey": 8,
-        "paraguay": 1
+        "usa": 13,
+        "australia": 6,
+        "turkey": 6,
+        "paraguay": 2
       }
     },
     "E": {
@@ -309,63 +309,63 @@
           "pos": 1,
           "teamId": "germany",
           "team": "Germany",
-          "played": 1,
-          "w": 1,
+          "flag": "🇩🇪",
+          "played": 0,
+          "w": 0,
           "d": 0,
           "l": 0,
-          "gf": 7,
-          "ga": 1,
-          "gd": 6,
-          "pts": 3,
-          "flag": "🇩🇪"
+          "gf": 0,
+          "ga": 0,
+          "gd": 0,
+          "pts": 0
         },
         {
           "pos": 2,
           "teamId": "ivorycoast",
           "team": "Ivory Coast",
-          "played": 1,
-          "w": 1,
+          "flag": "🇨🇮",
+          "played": 0,
+          "w": 0,
           "d": 0,
           "l": 0,
-          "gf": 1,
+          "gf": 0,
           "ga": 0,
-          "gd": 1,
-          "pts": 3,
-          "flag": "🇨🇮"
+          "gd": 0,
+          "pts": 0
         },
         {
           "pos": 3,
           "teamId": "ecuador",
           "team": "Ecuador",
-          "played": 1,
+          "flag": "🇪🇨",
+          "played": 0,
           "w": 0,
           "d": 0,
-          "l": 1,
+          "l": 0,
           "gf": 0,
-          "ga": 1,
-          "gd": -1,
-          "pts": 0,
-          "flag": "🇪🇨"
+          "ga": 0,
+          "gd": 0,
+          "pts": 0
         },
         {
           "pos": 4,
           "teamId": "curacao",
           "team": "Curaçao",
-          "played": 1,
+          "flag": "🇨🇼",
+          "played": 0,
           "w": 0,
           "d": 0,
-          "l": 1,
-          "gf": 1,
-          "ga": 7,
-          "gd": -6,
-          "pts": 0,
-          "flag": "🇨🇼"
+          "l": 0,
+          "gf": 0,
+          "ga": 0,
+          "gd": 0,
+          "pts": 0
         }
       ],
       "winProbabilities": {
-        "germany": 30,
-        "ivorycoast": 5,
-        "ecuador": 8,
+        "germany": 21,
+        "ivorycoast": 1,
+        "ecuador": 6,
         "curacao": 0
       }
     },
@@ -373,88 +373,89 @@
       "standings": [
         {
           "pos": 1,
-          "teamId": "sweden",
-          "team": "Sweden",
-          "played": 1,
-          "w": 1,
+          "teamId": "netherlands",
+          "team": "Netherlands",
+          "flag": "🇳🇱",
+          "played": 0,
+          "w": 0,
           "d": 0,
           "l": 0,
-          "gf": 5,
-          "ga": 1,
-          "gd": 4,
-          "pts": 3,
-          "flag": "🇸🇪"
+          "gf": 0,
+          "ga": 0,
+          "gd": 0,
+          "pts": 0
         },
         {
           "pos": 2,
-          "teamId": "japan",
-          "team": "Japan",
-          "played": 1,
+          "teamId": "sweden",
+          "team": "Sweden",
+          "flag": "🇸🇪",
+          "played": 0,
           "w": 0,
-          "d": 1,
+          "d": 0,
           "l": 0,
-          "gf": 2,
-          "ga": 2,
+          "gf": 0,
+          "ga": 0,
           "gd": 0,
-          "pts": 1,
-          "flag": "🇯🇵"
+          "pts": 0
         },
         {
           "pos": 3,
-          "teamId": "netherlands",
-          "team": "Netherlands",
-          "played": 1,
+          "teamId": "tunisia",
+          "team": "Tunisia",
+          "flag": "🇹🇳",
+          "played": 0,
           "w": 0,
-          "d": 1,
+          "d": 0,
           "l": 0,
-          "gf": 2,
-          "ga": 2,
+          "gf": 0,
+          "ga": 0,
           "gd": 0,
-          "pts": 1,
-          "flag": "🇳🇱"
+          "pts": 0
         },
         {
           "pos": 4,
-          "teamId": "tunisia",
-          "team": "Tunisia",
-          "played": 1,
+          "teamId": "japan",
+          "team": "Japan",
+          "flag": "🇯🇵",
+          "played": 0,
           "w": 0,
           "d": 0,
-          "l": 1,
-          "gf": 1,
-          "ga": 5,
-          "gd": -4,
-          "pts": 0,
-          "flag": "🇹🇳"
+          "l": 0,
+          "gf": 0,
+          "ga": 0,
+          "gd": 0,
+          "pts": 0
         }
       ],
       "winProbabilities": {
-        "sweden": 21,
-        "japan": 24,
-        "netherlands": 13,
-        "tunisia": 1
+        "netherlands": 22,
+        "sweden": 5,
+        "tunisia": 2,
+        "japan": 13
       }
     },
     "G": {
       "standings": [
         {
           "pos": 1,
-          "teamId": "egypt",
-          "team": "Egypt",
-          "played": 1,
-          "w": 1,
+          "teamId": "belgium",
+          "team": "Belgium",
+          "flag": "🇧🇪",
+          "played": 0,
+          "w": 0,
           "d": 0,
           "l": 0,
-          "gf": 1,
+          "gf": 0,
           "ga": 0,
-          "gd": 1,
-          "pts": 3,
-          "flag": "🇪🇬"
+          "gd": 0,
+          "pts": 0
         },
         {
           "pos": 2,
           "teamId": "iran",
           "team": "Iran",
+          "flag": "🇮🇷",
           "played": 0,
           "w": 0,
           "d": 0,
@@ -462,13 +463,13 @@
           "gf": 0,
           "ga": 0,
           "gd": 0,
-          "pts": 0,
-          "flag": "🇮🇷"
+          "pts": 0
         },
         {
           "pos": 3,
           "teamId": "newzealand",
           "team": "New Zealand",
+          "flag": "🇳🇿",
           "played": 0,
           "w": 0,
           "d": 0,
@@ -476,65 +477,65 @@
           "gf": 0,
           "ga": 0,
           "gd": 0,
-          "pts": 0,
-          "flag": "🇳🇿"
+          "pts": 0
         },
         {
           "pos": 4,
-          "teamId": "belgium",
-          "team": "Belgium",
-          "played": 1,
+          "teamId": "egypt",
+          "team": "Egypt",
+          "flag": "🇪🇬",
+          "played": 0,
           "w": 0,
           "d": 0,
-          "l": 1,
+          "l": 0,
           "gf": 0,
-          "ga": 1,
-          "gd": -1,
-          "pts": 0,
-          "flag": "🇧🇪"
+          "ga": 0,
+          "gd": 0,
+          "pts": 0
         }
       ],
       "winProbabilities": {
-        "egypt": 16,
-        "iran": 19,
+        "belgium": 21,
+        "iran": 7,
         "newzealand": 0,
-        "belgium": 2
+        "egypt": 3
       }
     },
     "H": {
       "standings": [
         {
           "pos": 1,
-          "teamId": "capeverde",
-          "team": "Cape Verde",
-          "played": 1,
+          "teamId": "spain",
+          "team": "Spain",
+          "flag": "🇪🇸",
+          "played": 0,
           "w": 0,
-          "d": 1,
+          "d": 0,
           "l": 0,
           "gf": 0,
           "ga": 0,
           "gd": 0,
-          "pts": 1,
-          "flag": "🇨🇻"
+          "pts": 0
         },
         {
           "pos": 2,
-          "teamId": "spain",
-          "team": "Spain",
-          "played": 1,
+          "teamId": "saudiarabia",
+          "team": "Saudi Arabia",
+          "flag": "🇸🇦",
+          "played": 0,
           "w": 0,
-          "d": 1,
+          "d": 0,
           "l": 0,
           "gf": 0,
           "ga": 0,
           "gd": 0,
-          "pts": 1,
-          "flag": "🇪🇸"
+          "pts": 0
         },
         {
           "pos": 3,
-          "teamId": "saudiarabia",
-          "team": "Saudi Arabia",
+          "teamId": "uruguay",
+          "team": "Uruguay",
+          "flag": "🇺🇾",
           "played": 0,
           "w": 0,
           "d": 0,
@@ -542,13 +543,13 @@
           "gf": 0,
           "ga": 0,
           "gd": 0,
-          "pts": 0,
-          "flag": "🇸🇦"
+          "pts": 0
         },
         {
           "pos": 4,
-          "teamId": "uruguay",
-          "team": "Uruguay",
+          "teamId": "capeverde",
+          "team": "Cape Verde",
+          "flag": "🇨🇻",
           "played": 0,
           "w": 0,
           "d": 0,
@@ -556,15 +557,14 @@
           "gf": 0,
           "ga": 0,
           "gd": 0,
-          "pts": 0,
-          "flag": "🇺🇾"
+          "pts": 0
         }
       ],
       "winProbabilities": {
-        "capeverde": 1,
-        "spain": 30,
+        "spain": 25,
         "saudiarabia": 0,
-        "uruguay": 2
+        "uruguay": 12,
+        "capeverde": 0
       }
     },
     "I": {
@@ -573,6 +573,7 @@
           "pos": 1,
           "teamId": "france",
           "team": "France",
+          "flag": "🇫🇷",
           "played": 0,
           "w": 0,
           "d": 0,
@@ -580,13 +581,13 @@
           "gf": 0,
           "ga": 0,
           "gd": 0,
-          "pts": 0,
-          "flag": "🇫🇷"
+          "pts": 0
         },
         {
           "pos": 2,
           "teamId": "iraq",
           "team": "Iraq",
+          "flag": "🇮🇶",
           "played": 0,
           "w": 0,
           "d": 0,
@@ -594,13 +595,13 @@
           "gf": 0,
           "ga": 0,
           "gd": 0,
-          "pts": 0,
-          "flag": "🇮🇶"
+          "pts": 0
         },
         {
           "pos": 3,
           "teamId": "norway",
           "team": "Norway",
+          "flag": "🇳🇴",
           "played": 0,
           "w": 0,
           "d": 0,
@@ -608,13 +609,13 @@
           "gf": 0,
           "ga": 0,
           "gd": 0,
-          "pts": 0,
-          "flag": "🇳🇴"
+          "pts": 0
         },
         {
           "pos": 4,
           "teamId": "senegal",
           "team": "Senegal",
+          "flag": "🇸🇳",
           "played": 0,
           "w": 0,
           "d": 0,
@@ -622,23 +623,23 @@
           "gf": 0,
           "ga": 0,
           "gd": 0,
-          "pts": 0,
-          "flag": "🇸🇳"
+          "pts": 0
         }
       ],
       "winProbabilities": {
-        "france": 30,
-        "iraq": 1,
-        "norway": 6,
-        "senegal": 2
+        "france": 24,
+        "iraq": 0,
+        "norway": 3,
+        "senegal": 13
       }
     },
     "J": {
       "standings": [
         {
           "pos": 1,
-          "teamId": "algeria",
-          "team": "Algeria",
+          "teamId": "argentina",
+          "team": "Argentina",
+          "flag": "🇦🇷",
           "played": 0,
           "w": 0,
           "d": 0,
@@ -646,13 +647,13 @@
           "gf": 0,
           "ga": 0,
           "gd": 0,
-          "pts": 0,
-          "flag": "🇩🇿"
+          "pts": 0
         },
         {
           "pos": 2,
-          "teamId": "argentina",
-          "team": "Argentina",
+          "teamId": "austria",
+          "team": "Austria",
+          "flag": "🇦🇹",
           "played": 0,
           "w": 0,
           "d": 0,
@@ -660,13 +661,13 @@
           "gf": 0,
           "ga": 0,
           "gd": 0,
-          "pts": 0,
-          "flag": "🇦🇷"
+          "pts": 0
         },
         {
           "pos": 3,
           "teamId": "jordan",
           "team": "Jordan",
+          "flag": "🇯🇴",
           "played": 0,
           "w": 0,
           "d": 0,
@@ -674,13 +675,13 @@
           "gf": 0,
           "ga": 0,
           "gd": 0,
-          "pts": 0,
-          "flag": "🇯🇴"
+          "pts": 0
         },
         {
           "pos": 4,
-          "teamId": "austria",
-          "team": "Austria",
+          "teamId": "algeria",
+          "team": "Algeria",
+          "flag": "🇩🇿",
           "played": 0,
           "w": 0,
           "d": 0,
@@ -688,23 +689,23 @@
           "gf": 0,
           "ga": 0,
           "gd": 0,
-          "pts": 0,
-          "flag": "🇦🇹"
+          "pts": 0
         }
       ],
       "winProbabilities": {
-        "algeria": 15,
-        "argentina": 30,
+        "argentina": 24,
+        "austria": 6,
         "jordan": 0,
-        "austria": 1
+        "algeria": 2
       }
     },
     "K": {
       "standings": [
         {
           "pos": 1,
-          "teamId": "drcongo",
-          "team": "DR Congo",
+          "teamId": "portugal",
+          "team": "Portugal",
+          "flag": "🇵🇹",
           "played": 0,
           "w": 0,
           "d": 0,
@@ -712,13 +713,13 @@
           "gf": 0,
           "ga": 0,
           "gd": 0,
-          "pts": 0,
-          "flag": "🇨🇩"
+          "pts": 0
         },
         {
           "pos": 2,
-          "teamId": "colombia",
-          "team": "Colombia",
+          "teamId": "uzbekistan",
+          "team": "Uzbekistan",
+          "flag": "🇺🇿",
           "played": 0,
           "w": 0,
           "d": 0,
@@ -726,13 +727,13 @@
           "gf": 0,
           "ga": 0,
           "gd": 0,
-          "pts": 0,
-          "flag": "🇨🇴"
+          "pts": 0
         },
         {
           "pos": 3,
-          "teamId": "portugal",
-          "team": "Portugal",
+          "teamId": "colombia",
+          "team": "Colombia",
+          "flag": "🇨🇴",
           "played": 0,
           "w": 0,
           "d": 0,
@@ -740,13 +741,13 @@
           "gf": 0,
           "ga": 0,
           "gd": 0,
-          "pts": 0,
-          "flag": "🇵🇹"
+          "pts": 0
         },
         {
           "pos": 4,
-          "teamId": "uzbekistan",
-          "team": "Uzbekistan",
+          "teamId": "drcongo",
+          "team": "DR Congo",
+          "flag": "🇨🇩",
           "played": 0,
           "w": 0,
           "d": 0,
@@ -754,15 +755,14 @@
           "gf": 0,
           "ga": 0,
           "gd": 0,
-          "pts": 0,
-          "flag": "🇺🇿"
+          "pts": 0
         }
       ],
       "winProbabilities": {
-        "drcongo": 1,
-        "colombia": 24,
-        "portugal": 13,
-        "uzbekistan": 0
+        "portugal": 22,
+        "uzbekistan": 0,
+        "colombia": 13,
+        "drcongo": 0
       }
     },
     "L": {
@@ -771,6 +771,7 @@
           "pos": 1,
           "teamId": "england",
           "team": "England",
+          "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
           "played": 0,
           "w": 0,
           "d": 0,
@@ -778,13 +779,13 @@
           "gf": 0,
           "ga": 0,
           "gd": 0,
-          "pts": 0,
-          "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿"
+          "pts": 0
         },
         {
           "pos": 2,
           "teamId": "ghana",
           "team": "Ghana",
+          "flag": "🇬🇭",
           "played": 0,
           "w": 0,
           "d": 0,
@@ -792,13 +793,13 @@
           "gf": 0,
           "ga": 0,
           "gd": 0,
-          "pts": 0,
-          "flag": "🇬🇭"
+          "pts": 0
         },
         {
           "pos": 3,
-          "teamId": "croatia",
-          "team": "Croatia",
+          "teamId": "panama",
+          "team": "Panama",
+          "flag": "🇵🇦",
           "played": 0,
           "w": 0,
           "d": 0,
@@ -806,13 +807,13 @@
           "gf": 0,
           "ga": 0,
           "gd": 0,
-          "pts": 0,
-          "flag": "🇭🇷"
+          "pts": 0
         },
         {
           "pos": 4,
-          "teamId": "panama",
-          "team": "Panama",
+          "teamId": "croatia",
+          "team": "Croatia",
+          "flag": "🇭🇷",
           "played": 0,
           "w": 0,
           "d": 0,
@@ -820,15 +821,14 @@
           "gf": 0,
           "ga": 0,
           "gd": 0,
-          "pts": 0,
-          "flag": "🇵🇦"
+          "pts": 0
         }
       ],
       "winProbabilities": {
-        "england": 30,
-        "ghana": 1,
-        "croatia": 12,
-        "panama": 0
+        "england": 23,
+        "ghana": 0,
+        "panama": 0,
+        "croatia": 20
       }
     }
   },
@@ -891,7 +891,7 @@
           "status": "active",
           "city": "Mexico City · Zapopan",
           "venue": "Various venues",
-          "date": "Jun 12–24",
+          "date": "Jun 12–Jun 24",
           "detail": "3pts after MD1"
         },
         "r32": {
@@ -900,7 +900,9 @@
           "date": "2026-06-28",
           "city": "Mexico City",
           "venue": "Estadio Azteca",
-          "opponentDesc": "Best 3rd from C/E/F/H/I"
+          "opponentDesc": "Best 3rd from C/E/F/H/I",
+          "conditional": true,
+          "conditionNote": "Venue assumes Mexico win Group A. Runner-up path leads to a different venue and date."
         },
         "r16": {
           "status": "future",
@@ -908,7 +910,9 @@
           "date": "2026-07-05",
           "city": "Guadalajara",
           "venue": "Estadio Guadalajara",
-          "opponentDesc": "Winner Match 79"
+          "opponentDesc": "Winner Match 79",
+          "conditional": true,
+          "conditionNote": "Venue assumes Mexico win Group A and all preceding knockout rounds. Actual venue may differ."
         },
         "qf": {
           "status": "future",
@@ -916,7 +920,9 @@
           "date": "2026-07-09",
           "city": "Guadalajara",
           "venue": "Estadio Guadalajara",
-          "opponentDesc": "Winner Match 93"
+          "opponentDesc": "Winner Match 93",
+          "conditional": true,
+          "conditionNote": "Venue assumes Mexico win Group A and all preceding knockout rounds. Actual venue may differ."
         },
         "sf": {
           "status": "future",
@@ -924,7 +930,9 @@
           "date": "2026-07-14",
           "city": "Dallas",
           "venue": "AT&T Stadium",
-          "opponentDesc": "Winner QF bracket"
+          "opponentDesc": "Winner QF bracket",
+          "conditional": true,
+          "conditionNote": "Venue assumes Mexico win Group A and all preceding knockout rounds. Actual venue may differ."
         },
         "final": {
           "status": "future",
@@ -932,68 +940,80 @@
           "date": "2026-07-19",
           "city": "New Jersey",
           "venue": "MetLife Stadium",
-          "opponentDesc": "Winner other SF"
+          "opponentDesc": "Winner other SF",
+          "conditional": true,
+          "conditionNote": "Venue assumes Mexico win Group A and all preceding knockout rounds. Actual venue may differ."
         }
       },
       "possibleOpponents": {
         "r32": [
           {
             "group": "C",
-            "likelyTeam": "Brazil",
-            "flag": "🇧🇷",
-            "fifaRank": 4,
-            "difficulty": 5,
-            "label": "Danger",
-            "color": "#EF4444",
-            "note": "3rd-place team from Group C",
-            "pct": null
+            "likelyTeam": "Morocco",
+            "altTeam": "Haiti",
+            "flag": "🇲🇦",
+            "altFlag": "🇭🇹",
+            "fifaRank": 14,
+            "difficulty": 4,
+            "label": "Tough",
+            "color": "#FB923C",
+            "note": "Morocco (#14) would be a very difficult R32 for Mexico."
           },
           {
             "group": "E",
-            "likelyTeam": "Ecuador",
-            "flag": "🇪🇨",
-            "fifaRank": 23,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group E",
-            "pct": null
-          },
-          {
-            "group": "F",
-            "likelyTeam": "Netherlands",
-            "flag": "🇳🇱",
-            "fifaRank": 7,
-            "difficulty": 5,
-            "label": "Danger",
-            "color": "#EF4444",
-            "note": "3rd-place team from Group F",
-            "pct": null
+            "likelyTeam": "Ivory Coast",
+            "altTeam": "Curaçao",
+            "flag": "🇨🇮",
+            "altFlag": "🇨🇼",
+            "fifaRank": 42,
+            "difficulty": 2,
+            "label": "Favorable",
+            "color": "#22C55E",
+            "note": "Manageable for Mexico on home soil."
           },
           {
             "group": "H",
             "likelyTeam": "Saudi Arabia",
+            "altTeam": "Uruguay",
             "flag": "🇸🇦",
+            "altFlag": "🇺🇾",
             "fifaRank": 55,
             "difficulty": 2,
             "label": "Favorable",
             "color": "#22C55E",
-            "note": "3rd-place team from Group H",
-            "pct": null
-          },
-          {
-            "group": "I",
-            "likelyTeam": "Norway",
-            "flag": "🇳🇴",
-            "fifaRank": 31,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group I",
-            "pct": null
+            "note": "Saudi Arabia or Uruguay. Mexico favorites."
           }
         ],
-        "r16": []
+        "r16": [
+          {
+            "opponent": "Spain",
+            "flag": "🇪🇸",
+            "dPct": 92,
+            "gPct": 65,
+            "pct": 38
+          },
+          {
+            "opponent": "Uruguay",
+            "flag": "🇺🇾",
+            "dPct": 92,
+            "gPct": 20,
+            "pct": 12
+          },
+          {
+            "opponent": "Cape Verde",
+            "flag": "🇨🇻",
+            "dPct": 92,
+            "gPct": 10,
+            "pct": 6
+          },
+          {
+            "opponent": "Saudi Arabia",
+            "flag": "🇸🇦",
+            "dPct": 92,
+            "gPct": 5,
+            "pct": 3
+          }
+        ]
       }
     },
     {
@@ -1051,40 +1071,48 @@
           "status": "active",
           "city": "Mexico City · Atlanta · Zapopan",
           "venue": "Various venues",
-          "date": "Jun 12–24",
+          "date": "Jun 12–Jun 24",
           "detail": "0pts after MD1"
         },
         "r32": {
           "status": "upcoming",
-          "match": 80,
-          "date": "2026-06-29",
-          "city": "Atlanta",
-          "venue": "Mercedes-Benz Stadium",
-          "opponentDesc": "Best 3rd from E/H/I/J/K"
+          "match": 79,
+          "date": "2026-06-28",
+          "city": "Mexico City",
+          "venue": "Estadio Azteca",
+          "opponentDesc": "Best 3rd from C/E/F/H/I",
+          "conditional": true,
+          "conditionNote": "Venue assumes South Africa win Group A. Runner-up path leads to a different venue and date."
         },
         "r16": {
           "status": "future",
-          "match": 94,
-          "date": "2026-07-06",
-          "city": "Seattle",
-          "venue": "Lumen Field",
-          "opponentDesc": "Winner Match 80"
+          "match": 93,
+          "date": "2026-07-05",
+          "city": "Guadalajara",
+          "venue": "Estadio Guadalajara",
+          "opponentDesc": "Winner Match 79",
+          "conditional": true,
+          "conditionNote": "Venue assumes South Africa win Group A and all preceding knockout rounds. Actual venue may differ."
         },
         "qf": {
           "status": "future",
-          "match": 98,
-          "date": "2026-07-10",
-          "city": "Los Angeles",
-          "venue": "SoFi Stadium",
-          "opponentDesc": "Winner Match 94"
+          "match": 97,
+          "date": "2026-07-09",
+          "city": "Guadalajara",
+          "venue": "Estadio Guadalajara",
+          "opponentDesc": "Winner Match 93",
+          "conditional": true,
+          "conditionNote": "Venue assumes South Africa win Group A and all preceding knockout rounds. Actual venue may differ."
         },
         "sf": {
           "status": "future",
-          "match": 102,
-          "date": "2026-07-15",
-          "city": "Atlanta",
-          "venue": "Mercedes-Benz Stadium",
-          "opponentDesc": "Winner QF bracket"
+          "match": 101,
+          "date": "2026-07-14",
+          "city": "Dallas",
+          "venue": "AT&T Stadium",
+          "opponentDesc": "Winner QF bracket",
+          "conditional": true,
+          "conditionNote": "Venue assumes South Africa win Group A and all preceding knockout rounds. Actual venue may differ."
         },
         "final": {
           "status": "future",
@@ -1092,65 +1120,62 @@
           "date": "2026-07-19",
           "city": "New Jersey",
           "venue": "MetLife Stadium",
-          "opponentDesc": "Winner other SF"
+          "opponentDesc": "Winner other SF",
+          "conditional": true,
+          "conditionNote": "Venue assumes South Africa win Group A and all preceding knockout rounds. Actual venue may differ."
         }
       },
       "possibleOpponents": {
         "r32": [
           {
-            "group": "E",
-            "likelyTeam": "Ecuador",
-            "flag": "🇪🇨",
-            "fifaRank": 23,
+            "group": "B",
+            "likelyTeam": "TBD",
+            "flag": "🏳️",
+            "fifaRank": 50,
             "difficulty": 3,
             "label": "Moderate",
             "color": "#F59E0B",
-            "note": "3rd-place team from Group E",
-            "pct": null
+            "note": "3rd-place team from Group B"
+          },
+          {
+            "group": "E",
+            "likelyTeam": "TBD",
+            "flag": "🏳️",
+            "fifaRank": 50,
+            "difficulty": 3,
+            "label": "Moderate",
+            "color": "#F59E0B",
+            "note": "3rd-place team from Group E"
           },
           {
             "group": "H",
-            "likelyTeam": "Saudi Arabia",
-            "flag": "🇸🇦",
-            "fifaRank": 55,
-            "difficulty": 2,
-            "label": "Favorable",
-            "color": "#22C55E",
-            "note": "3rd-place team from Group H",
-            "pct": null
-          },
-          {
-            "group": "I",
-            "likelyTeam": "Norway",
-            "flag": "🇳🇴",
-            "fifaRank": 31,
+            "likelyTeam": "TBD",
+            "flag": "🏳️",
+            "fifaRank": 50,
             "difficulty": 3,
             "label": "Moderate",
             "color": "#F59E0B",
-            "note": "3rd-place team from Group I",
-            "pct": null
+            "note": "3rd-place team from Group H"
+          },
+          {
+            "group": "I",
+            "likelyTeam": "TBD",
+            "flag": "🏳️",
+            "fifaRank": 50,
+            "difficulty": 3,
+            "label": "Moderate",
+            "color": "#F59E0B",
+            "note": "3rd-place team from Group I"
           },
           {
             "group": "J",
-            "likelyTeam": "Jordan",
-            "flag": "🇯🇴",
-            "fifaRank": 66,
-            "difficulty": 1,
-            "label": "Favorable",
-            "color": "#22C55E",
-            "note": "3rd-place team from Group J",
-            "pct": null
-          },
-          {
-            "group": "K",
-            "likelyTeam": "Portugal",
-            "flag": "🇵🇹",
-            "fifaRank": 6,
-            "difficulty": 5,
-            "label": "Danger",
-            "color": "#EF4444",
-            "note": "3rd-place team from Group K",
-            "pct": null
+            "likelyTeam": "TBD",
+            "flag": "🏳️",
+            "fifaRank": 50,
+            "difficulty": 3,
+            "label": "Moderate",
+            "color": "#F59E0B",
+            "note": "3rd-place team from Group J"
           }
         ],
         "r16": []
@@ -1211,40 +1236,48 @@
           "status": "active",
           "city": "Zapopan",
           "venue": "Various venues",
-          "date": "Jun 12–24",
-          "detail": "3pts after MD1"
+          "date": "Jun 12–Jun 24",
+          "detail": "Group A"
         },
         "r32": {
           "status": "upcoming",
-          "match": 80,
-          "date": "2026-06-29",
-          "city": "Atlanta",
-          "venue": "Mercedes-Benz Stadium",
-          "opponentDesc": "Best 3rd from E/H/I/J/K"
+          "match": 79,
+          "date": "2026-06-28",
+          "city": "Mexico City",
+          "venue": "Estadio Azteca",
+          "opponentDesc": "Best 3rd from C/E/F/H/I",
+          "conditional": true,
+          "conditionNote": "Venue assumes South Korea win Group A. Runner-up path leads to a different venue and date."
         },
         "r16": {
           "status": "future",
-          "match": 94,
-          "date": "2026-07-06",
-          "city": "Seattle",
-          "venue": "Lumen Field",
-          "opponentDesc": "Winner Match 80"
+          "match": 93,
+          "date": "2026-07-05",
+          "city": "Guadalajara",
+          "venue": "Estadio Guadalajara",
+          "opponentDesc": "Winner Match 79",
+          "conditional": true,
+          "conditionNote": "Venue assumes South Korea win Group A and all preceding knockout rounds. Actual venue may differ."
         },
         "qf": {
           "status": "future",
-          "match": 98,
-          "date": "2026-07-10",
-          "city": "Los Angeles",
-          "venue": "SoFi Stadium",
-          "opponentDesc": "Winner Match 94"
+          "match": 97,
+          "date": "2026-07-09",
+          "city": "Guadalajara",
+          "venue": "Estadio Guadalajara",
+          "opponentDesc": "Winner Match 93",
+          "conditional": true,
+          "conditionNote": "Venue assumes South Korea win Group A and all preceding knockout rounds. Actual venue may differ."
         },
         "sf": {
           "status": "future",
-          "match": 102,
-          "date": "2026-07-15",
-          "city": "Atlanta",
-          "venue": "Mercedes-Benz Stadium",
-          "opponentDesc": "Winner QF bracket"
+          "match": 101,
+          "date": "2026-07-14",
+          "city": "Dallas",
+          "venue": "AT&T Stadium",
+          "opponentDesc": "Winner QF bracket",
+          "conditional": true,
+          "conditionNote": "Venue assumes South Korea win Group A and all preceding knockout rounds. Actual venue may differ."
         },
         "final": {
           "status": "future",
@@ -1252,65 +1285,62 @@
           "date": "2026-07-19",
           "city": "New Jersey",
           "venue": "MetLife Stadium",
-          "opponentDesc": "Winner other SF"
+          "opponentDesc": "Winner other SF",
+          "conditional": true,
+          "conditionNote": "Venue assumes South Korea win Group A and all preceding knockout rounds. Actual venue may differ."
         }
       },
       "possibleOpponents": {
         "r32": [
           {
-            "group": "E",
-            "likelyTeam": "Ecuador",
-            "flag": "🇪🇨",
-            "fifaRank": 23,
+            "group": "B",
+            "likelyTeam": "TBD",
+            "flag": "🏳️",
+            "fifaRank": 50,
             "difficulty": 3,
             "label": "Moderate",
             "color": "#F59E0B",
-            "note": "3rd-place team from Group E",
-            "pct": null
+            "note": "3rd-place team from Group B"
+          },
+          {
+            "group": "E",
+            "likelyTeam": "TBD",
+            "flag": "🏳️",
+            "fifaRank": 50,
+            "difficulty": 3,
+            "label": "Moderate",
+            "color": "#F59E0B",
+            "note": "3rd-place team from Group E"
           },
           {
             "group": "H",
-            "likelyTeam": "Saudi Arabia",
-            "flag": "🇸🇦",
-            "fifaRank": 55,
-            "difficulty": 2,
-            "label": "Favorable",
-            "color": "#22C55E",
-            "note": "3rd-place team from Group H",
-            "pct": null
-          },
-          {
-            "group": "I",
-            "likelyTeam": "Norway",
-            "flag": "🇳🇴",
-            "fifaRank": 31,
+            "likelyTeam": "TBD",
+            "flag": "🏳️",
+            "fifaRank": 50,
             "difficulty": 3,
             "label": "Moderate",
             "color": "#F59E0B",
-            "note": "3rd-place team from Group I",
-            "pct": null
+            "note": "3rd-place team from Group H"
+          },
+          {
+            "group": "I",
+            "likelyTeam": "TBD",
+            "flag": "🏳️",
+            "fifaRank": 50,
+            "difficulty": 3,
+            "label": "Moderate",
+            "color": "#F59E0B",
+            "note": "3rd-place team from Group I"
           },
           {
             "group": "J",
-            "likelyTeam": "Jordan",
-            "flag": "🇯🇴",
-            "fifaRank": 66,
-            "difficulty": 1,
-            "label": "Favorable",
-            "color": "#22C55E",
-            "note": "3rd-place team from Group J",
-            "pct": null
-          },
-          {
-            "group": "K",
-            "likelyTeam": "Portugal",
-            "flag": "🇵🇹",
-            "fifaRank": 6,
-            "difficulty": 5,
-            "label": "Danger",
-            "color": "#EF4444",
-            "note": "3rd-place team from Group K",
-            "pct": null
+            "likelyTeam": "TBD",
+            "flag": "🏳️",
+            "fifaRank": 50,
+            "difficulty": 3,
+            "label": "Moderate",
+            "color": "#F59E0B",
+            "note": "3rd-place team from Group J"
           }
         ],
         "r16": []
@@ -1371,40 +1401,48 @@
           "status": "active",
           "city": "Zapopan · Atlanta",
           "venue": "Various venues",
-          "date": "Jun 12–24",
-          "detail": "0pts after MD1"
+          "date": "Jun 12–Jun 24",
+          "detail": "Group A"
         },
         "r32": {
           "status": "upcoming",
-          "match": 80,
-          "date": "2026-06-29",
-          "city": "Atlanta",
-          "venue": "Mercedes-Benz Stadium",
-          "opponentDesc": "Best 3rd from E/H/I/J/K"
+          "match": 79,
+          "date": "2026-06-28",
+          "city": "Mexico City",
+          "venue": "Estadio Azteca",
+          "opponentDesc": "Best 3rd from C/E/F/H/I",
+          "conditional": true,
+          "conditionNote": "Venue assumes Czechia win Group A. Runner-up path leads to a different venue and date."
         },
         "r16": {
           "status": "future",
-          "match": 94,
-          "date": "2026-07-06",
-          "city": "Seattle",
-          "venue": "Lumen Field",
-          "opponentDesc": "Winner Match 80"
+          "match": 93,
+          "date": "2026-07-05",
+          "city": "Guadalajara",
+          "venue": "Estadio Guadalajara",
+          "opponentDesc": "Winner Match 79",
+          "conditional": true,
+          "conditionNote": "Venue assumes Czechia win Group A and all preceding knockout rounds. Actual venue may differ."
         },
         "qf": {
           "status": "future",
-          "match": 98,
-          "date": "2026-07-10",
-          "city": "Los Angeles",
-          "venue": "SoFi Stadium",
-          "opponentDesc": "Winner Match 94"
+          "match": 97,
+          "date": "2026-07-09",
+          "city": "Guadalajara",
+          "venue": "Estadio Guadalajara",
+          "opponentDesc": "Winner Match 93",
+          "conditional": true,
+          "conditionNote": "Venue assumes Czechia win Group A and all preceding knockout rounds. Actual venue may differ."
         },
         "sf": {
           "status": "future",
-          "match": 102,
-          "date": "2026-07-15",
-          "city": "Atlanta",
-          "venue": "Mercedes-Benz Stadium",
-          "opponentDesc": "Winner QF bracket"
+          "match": 101,
+          "date": "2026-07-14",
+          "city": "Dallas",
+          "venue": "AT&T Stadium",
+          "opponentDesc": "Winner QF bracket",
+          "conditional": true,
+          "conditionNote": "Venue assumes Czechia win Group A and all preceding knockout rounds. Actual venue may differ."
         },
         "final": {
           "status": "future",
@@ -1412,65 +1450,62 @@
           "date": "2026-07-19",
           "city": "New Jersey",
           "venue": "MetLife Stadium",
-          "opponentDesc": "Winner other SF"
+          "opponentDesc": "Winner other SF",
+          "conditional": true,
+          "conditionNote": "Venue assumes Czechia win Group A and all preceding knockout rounds. Actual venue may differ."
         }
       },
       "possibleOpponents": {
         "r32": [
           {
-            "group": "E",
-            "likelyTeam": "Ecuador",
-            "flag": "🇪🇨",
-            "fifaRank": 23,
+            "group": "B",
+            "likelyTeam": "TBD",
+            "flag": "🏳️",
+            "fifaRank": 50,
             "difficulty": 3,
             "label": "Moderate",
             "color": "#F59E0B",
-            "note": "3rd-place team from Group E",
-            "pct": null
+            "note": "3rd-place team from Group B"
+          },
+          {
+            "group": "E",
+            "likelyTeam": "TBD",
+            "flag": "🏳️",
+            "fifaRank": 50,
+            "difficulty": 3,
+            "label": "Moderate",
+            "color": "#F59E0B",
+            "note": "3rd-place team from Group E"
           },
           {
             "group": "H",
-            "likelyTeam": "Saudi Arabia",
-            "flag": "🇸🇦",
-            "fifaRank": 55,
-            "difficulty": 2,
-            "label": "Favorable",
-            "color": "#22C55E",
-            "note": "3rd-place team from Group H",
-            "pct": null
-          },
-          {
-            "group": "I",
-            "likelyTeam": "Norway",
-            "flag": "🇳🇴",
-            "fifaRank": 31,
+            "likelyTeam": "TBD",
+            "flag": "🏳️",
+            "fifaRank": 50,
             "difficulty": 3,
             "label": "Moderate",
             "color": "#F59E0B",
-            "note": "3rd-place team from Group I",
-            "pct": null
+            "note": "3rd-place team from Group H"
+          },
+          {
+            "group": "I",
+            "likelyTeam": "TBD",
+            "flag": "🏳️",
+            "fifaRank": 50,
+            "difficulty": 3,
+            "label": "Moderate",
+            "color": "#F59E0B",
+            "note": "3rd-place team from Group I"
           },
           {
             "group": "J",
-            "likelyTeam": "Jordan",
-            "flag": "🇯🇴",
-            "fifaRank": 66,
-            "difficulty": 1,
-            "label": "Favorable",
-            "color": "#22C55E",
-            "note": "3rd-place team from Group J",
-            "pct": null
-          },
-          {
-            "group": "K",
-            "likelyTeam": "Portugal",
-            "flag": "🇵🇹",
-            "fifaRank": 6,
-            "difficulty": 5,
-            "label": "Danger",
-            "color": "#EF4444",
-            "note": "3rd-place team from Group K",
-            "pct": null
+            "likelyTeam": "TBD",
+            "flag": "🏳️",
+            "fifaRank": 50,
+            "difficulty": 3,
+            "label": "Moderate",
+            "color": "#F59E0B",
+            "note": "3rd-place team from Group J"
           }
         ],
         "r16": []
@@ -1533,40 +1568,48 @@
           "status": "active",
           "city": "Toronto · Vancouver",
           "venue": "Various venues",
-          "date": "Jun 12–24",
-          "detail": "1pt after MD1"
+          "date": "Jun 12–Jun 24",
+          "detail": "1pts after MD1"
         },
         "r32": {
           "status": "upcoming",
-          "match": 82,
-          "date": "2026-07-01",
-          "city": "Seattle",
-          "venue": "Lumen Field",
-          "opponentDesc": "Best 3rd from A/E/H/I/J"
+          "match": 85,
+          "date": "2026-07-02",
+          "city": "Boston",
+          "venue": "Gillette Stadium",
+          "opponentDesc": "Best 3rd from E/F/G/I/J",
+          "conditional": true,
+          "conditionNote": "Venue assumes Canada win Group B. Runner-up path leads to a different venue and date."
         },
         "r16": {
           "status": "future",
-          "match": 94,
-          "date": "2026-07-06",
-          "city": "Seattle",
-          "venue": "Lumen Field",
-          "opponentDesc": "Winner Match 82"
+          "match": 96,
+          "date": "2026-07-07",
+          "city": "Vancouver",
+          "venue": "BC Place",
+          "opponentDesc": "Winner Match 85",
+          "conditional": true,
+          "conditionNote": "Venue assumes Canada win Group B and all preceding knockout rounds. Actual venue may differ."
         },
         "qf": {
           "status": "future",
-          "match": 98,
-          "date": "2026-07-10",
-          "city": "Los Angeles",
-          "venue": "SoFi Stadium",
-          "opponentDesc": "Winner Match 94"
+          "match": 100,
+          "date": "2026-07-11",
+          "city": "Kansas City",
+          "venue": "Arrowhead Stadium",
+          "opponentDesc": "Winner Match 96",
+          "conditional": true,
+          "conditionNote": "Venue assumes Canada win Group B and all preceding knockout rounds. Actual venue may differ."
         },
         "sf": {
           "status": "future",
-          "match": 102,
-          "date": "2026-07-15",
-          "city": "Atlanta",
-          "venue": "Mercedes-Benz Stadium",
-          "opponentDesc": "Winner QF bracket"
+          "match": 101,
+          "date": "2026-07-14",
+          "city": "Dallas",
+          "venue": "AT&T Stadium",
+          "opponentDesc": "Winner QF bracket",
+          "conditional": true,
+          "conditionNote": "Venue assumes Canada win Group B and all preceding knockout rounds. Actual venue may differ."
         },
         "final": {
           "status": "future",
@@ -1574,68 +1617,104 @@
           "date": "2026-07-19",
           "city": "New Jersey",
           "venue": "MetLife Stadium",
-          "opponentDesc": "Winner other SF"
+          "opponentDesc": "Winner other SF",
+          "conditional": true,
+          "conditionNote": "Venue assumes Canada win Group B and all preceding knockout rounds. Actual venue may differ."
         }
       },
       "possibleOpponents": {
         "r32": [
           {
             "group": "A",
-            "likelyTeam": "Czechia",
-            "flag": "🇨🇿",
-            "fifaRank": 37,
-            "difficulty": 2,
-            "label": "Favorable",
-            "color": "#22C55E",
-            "note": "3rd-place team from Group A",
-            "pct": null
-          },
-          {
-            "group": "E",
-            "likelyTeam": "Ecuador",
-            "flag": "🇪🇨",
-            "fifaRank": 23,
+            "likelyTeam": "South Korea",
+            "altTeam": "Czechia",
+            "flag": "🇰🇷",
+            "altFlag": "🇨🇿",
+            "fifaRank": 22,
             "difficulty": 3,
             "label": "Moderate",
             "color": "#F59E0B",
-            "note": "3rd-place team from Group E",
-            "pct": null
+            "note": "South Korea likely 3rd. A real test for Canada."
+          },
+          {
+            "group": "E",
+            "likelyTeam": "Ivory Coast",
+            "altTeam": "Curaçao",
+            "flag": "🇨🇮",
+            "altFlag": "🇨🇼",
+            "fifaRank": 42,
+            "difficulty": 2,
+            "label": "Favorable",
+            "color": "#22C55E",
+            "note": "Very winnable for Canada."
           },
           {
             "group": "H",
             "likelyTeam": "Saudi Arabia",
+            "altTeam": "Uruguay",
             "flag": "🇸🇦",
+            "altFlag": "🇺🇾",
             "fifaRank": 55,
             "difficulty": 2,
             "label": "Favorable",
             "color": "#22C55E",
-            "note": "3rd-place team from Group H",
-            "pct": null
+            "note": "Saudi Arabia or Uruguay. Canada favorites."
           },
           {
             "group": "I",
-            "likelyTeam": "Norway",
-            "flag": "🇳🇴",
-            "fifaRank": 31,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group I",
-            "pct": null
+            "likelyTeam": "Senegal",
+            "altTeam": "Iraq",
+            "flag": "🇸🇳",
+            "altFlag": "🇮🇶",
+            "fifaRank": 14,
+            "difficulty": 5,
+            "label": "Danger",
+            "color": "#EF4444",
+            "note": "Senegal (#14) would be very difficult for Canada."
           },
           {
             "group": "J",
-            "likelyTeam": "Jordan",
-            "flag": "🇯🇴",
-            "fifaRank": 66,
-            "difficulty": 1,
-            "label": "Favorable",
-            "color": "#22C55E",
-            "note": "3rd-place team from Group J",
-            "pct": null
+            "likelyTeam": "Austria",
+            "altTeam": "Algeria",
+            "flag": "🇦🇹",
+            "altFlag": "🇩🇿",
+            "fifaRank": 24,
+            "difficulty": 4,
+            "label": "Tough",
+            "color": "#FB923C",
+            "note": "Austria or Algeria. Either a big ask for Canada."
           }
         ],
-        "r16": []
+        "r16": [
+          {
+            "opponent": "Belgium",
+            "flag": "🇧🇪",
+            "dPct": 80,
+            "gPct": 68,
+            "pct": 30
+          },
+          {
+            "opponent": "Egypt",
+            "flag": "🇪🇬",
+            "dPct": 80,
+            "gPct": 19,
+            "pct": 9
+          },
+          {
+            "opponent": "Iran",
+            "flag": "🇮🇷",
+            "dPct": 80,
+            "gPct": 10,
+            "pct": 5
+          },
+          {
+            "opponent": "New Zealand",
+            "flag": "🇳🇿",
+            "dPct": 80,
+            "gPct": 3,
+            "pct": 2
+          }
+        ]
       }
     },
     {
@@ -1695,40 +1774,48 @@
           "status": "active",
           "city": "Toronto · San Francisco · Seattle",
           "venue": "Various venues",
-          "date": "Jun 12–24",
-          "detail": "1pt after MD1"
+          "date": "Jun 12–Jun 24",
+          "detail": "1pts after MD1"
         },
         "r32": {
           "status": "upcoming",
-          "match": 82,
-          "date": "2026-07-01",
-          "city": "Seattle",
-          "venue": "Lumen Field",
-          "opponentDesc": "Best 3rd from A/E/H/I/J"
+          "match": 85,
+          "date": "2026-07-02",
+          "city": "Boston",
+          "venue": "Gillette Stadium",
+          "opponentDesc": "Best 3rd from E/F/G/I/J",
+          "conditional": true,
+          "conditionNote": "Venue assumes Bosnia & Herz. win Group B. Runner-up path leads to a different venue and date."
         },
         "r16": {
           "status": "future",
-          "match": 94,
-          "date": "2026-07-06",
-          "city": "Seattle",
-          "venue": "Lumen Field",
-          "opponentDesc": "Winner Match 82"
+          "match": 96,
+          "date": "2026-07-07",
+          "city": "Vancouver",
+          "venue": "BC Place",
+          "opponentDesc": "Winner Match 85",
+          "conditional": true,
+          "conditionNote": "Venue assumes Bosnia & Herz. win Group B and all preceding knockout rounds. Actual venue may differ."
         },
         "qf": {
           "status": "future",
-          "match": 98,
-          "date": "2026-07-10",
-          "city": "Los Angeles",
-          "venue": "SoFi Stadium",
-          "opponentDesc": "Winner Match 94"
+          "match": 100,
+          "date": "2026-07-11",
+          "city": "Kansas City",
+          "venue": "Arrowhead Stadium",
+          "opponentDesc": "Winner Match 96",
+          "conditional": true,
+          "conditionNote": "Venue assumes Bosnia & Herz. win Group B and all preceding knockout rounds. Actual venue may differ."
         },
         "sf": {
           "status": "future",
-          "match": 102,
-          "date": "2026-07-15",
-          "city": "Atlanta",
-          "venue": "Mercedes-Benz Stadium",
-          "opponentDesc": "Winner QF bracket"
+          "match": 101,
+          "date": "2026-07-14",
+          "city": "Dallas",
+          "venue": "AT&T Stadium",
+          "opponentDesc": "Winner QF bracket",
+          "conditional": true,
+          "conditionNote": "Venue assumes Bosnia & Herz. win Group B and all preceding knockout rounds. Actual venue may differ."
         },
         "final": {
           "status": "future",
@@ -1736,65 +1823,62 @@
           "date": "2026-07-19",
           "city": "New Jersey",
           "venue": "MetLife Stadium",
-          "opponentDesc": "Winner other SF"
+          "opponentDesc": "Winner other SF",
+          "conditional": true,
+          "conditionNote": "Venue assumes Bosnia & Herz. win Group B and all preceding knockout rounds. Actual venue may differ."
         }
       },
       "possibleOpponents": {
         "r32": [
           {
             "group": "A",
-            "likelyTeam": "Czechia",
-            "flag": "🇨🇿",
-            "fifaRank": 37,
-            "difficulty": 2,
-            "label": "Favorable",
-            "color": "#22C55E",
-            "note": "3rd-place team from Group A",
-            "pct": null
+            "likelyTeam": "TBD",
+            "flag": "🏳️",
+            "fifaRank": 50,
+            "difficulty": 3,
+            "label": "Moderate",
+            "color": "#F59E0B",
+            "note": "3rd-place team from Group A"
           },
           {
             "group": "E",
-            "likelyTeam": "Ecuador",
-            "flag": "🇪🇨",
-            "fifaRank": 23,
+            "likelyTeam": "TBD",
+            "flag": "🏳️",
+            "fifaRank": 50,
             "difficulty": 3,
             "label": "Moderate",
             "color": "#F59E0B",
-            "note": "3rd-place team from Group E",
-            "pct": null
+            "note": "3rd-place team from Group E"
           },
           {
             "group": "H",
-            "likelyTeam": "Saudi Arabia",
-            "flag": "🇸🇦",
-            "fifaRank": 55,
-            "difficulty": 2,
-            "label": "Favorable",
-            "color": "#22C55E",
-            "note": "3rd-place team from Group H",
-            "pct": null
-          },
-          {
-            "group": "I",
-            "likelyTeam": "Norway",
-            "flag": "🇳🇴",
-            "fifaRank": 31,
+            "likelyTeam": "TBD",
+            "flag": "🏳️",
+            "fifaRank": 50,
             "difficulty": 3,
             "label": "Moderate",
             "color": "#F59E0B",
-            "note": "3rd-place team from Group I",
-            "pct": null
+            "note": "3rd-place team from Group H"
+          },
+          {
+            "group": "I",
+            "likelyTeam": "TBD",
+            "flag": "🏳️",
+            "fifaRank": 50,
+            "difficulty": 3,
+            "label": "Moderate",
+            "color": "#F59E0B",
+            "note": "3rd-place team from Group I"
           },
           {
             "group": "J",
-            "likelyTeam": "Jordan",
-            "flag": "🇯🇴",
-            "fifaRank": 66,
-            "difficulty": 1,
-            "label": "Favorable",
-            "color": "#22C55E",
-            "note": "3rd-place team from Group J",
-            "pct": null
+            "likelyTeam": "TBD",
+            "flag": "🏳️",
+            "fifaRank": 50,
+            "difficulty": 3,
+            "label": "Moderate",
+            "color": "#F59E0B",
+            "note": "3rd-place team from Group J"
           }
         ],
         "r16": []
@@ -1914,23 +1998,23 @@
           },
           {
             "group": "E",
-            "likelyTeam": "Ecuador",
-            "flag": "🇪🇨",
-            "fifaRank": 23,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
+            "likelyTeam": "Ivory Coast",
+            "flag": "🇨🇮",
+            "fifaRank": 42,
+            "difficulty": 2,
+            "label": "Favorable",
+            "color": "#22C55E",
             "note": "3rd-place team from Group E",
             "pct": null
           },
           {
             "group": "H",
-            "likelyTeam": "Saudi Arabia",
-            "flag": "🇸🇦",
-            "fifaRank": 55,
-            "difficulty": 2,
-            "label": "Favorable",
-            "color": "#22C55E",
+            "likelyTeam": "Spain",
+            "flag": "🇪🇸",
+            "fifaRank": 1,
+            "difficulty": 5,
+            "label": "Danger",
+            "color": "#EF4444",
             "note": "3rd-place team from Group H",
             "pct": null
           },
@@ -2063,34 +2147,34 @@
         "r32": [
           {
             "group": "E",
-            "likelyTeam": "Ecuador",
-            "flag": "🇪🇨",
-            "fifaRank": 23,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
+            "likelyTeam": "Ivory Coast",
+            "flag": "🇨🇮",
+            "fifaRank": 42,
+            "difficulty": 2,
+            "label": "Favorable",
+            "color": "#22C55E",
             "note": "3rd-place team from Group E",
             "pct": null
           },
           {
             "group": "F",
-            "likelyTeam": "Netherlands",
-            "flag": "🇳🇱",
-            "fifaRank": 7,
-            "difficulty": 5,
-            "label": "Danger",
-            "color": "#EF4444",
+            "likelyTeam": "Sweden",
+            "flag": "🇸🇪",
+            "fifaRank": 29,
+            "difficulty": 3,
+            "label": "Moderate",
+            "color": "#F59E0B",
             "note": "3rd-place team from Group F",
             "pct": null
           },
           {
             "group": "G",
-            "likelyTeam": "New Zealand",
-            "flag": "🇳🇿",
-            "fifaRank": 86,
-            "difficulty": 1,
-            "label": "Favorable",
-            "color": "#22C55E",
+            "likelyTeam": "Iran",
+            "flag": "🇮🇷",
+            "fifaRank": 21,
+            "difficulty": 3,
+            "label": "Moderate",
+            "color": "#F59E0B",
             "note": "3rd-place team from Group G",
             "pct": null
           },
@@ -2516,13 +2600,13 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 51,
-        "r16": 28,
-        "qf": 15,
-        "sf": 8,
-        "final": 4,
-        "winner": 11,
-        "source": "calculated"
+        "r32": 78,
+        "r16": 32,
+        "qf": 14,
+        "sf": 6,
+        "final": 2,
+        "winner": 1,
+        "source": "market"
       },
       "path": {
         "group_stage": {
@@ -2588,12 +2672,12 @@
           },
           {
             "group": "E",
-            "likelyTeam": "Ecuador",
-            "flag": "🇪🇨",
-            "fifaRank": 23,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
+            "likelyTeam": "Ivory Coast",
+            "flag": "🇨🇮",
+            "fifaRank": 42,
+            "difficulty": 2,
+            "label": "Favorable",
+            "color": "#22C55E",
             "note": "3rd-place team from Group E",
             "pct": null
           },
@@ -2753,23 +2837,23 @@
           },
           {
             "group": "E",
-            "likelyTeam": "Ecuador",
-            "flag": "🇪🇨",
-            "fifaRank": 23,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
+            "likelyTeam": "Ivory Coast",
+            "flag": "🇨🇮",
+            "fifaRank": 42,
+            "difficulty": 2,
+            "label": "Favorable",
+            "color": "#22C55E",
             "note": "3rd-place team from Group E",
             "pct": null
           },
           {
             "group": "F",
-            "likelyTeam": "Netherlands",
-            "flag": "🇳🇱",
-            "fifaRank": 7,
-            "difficulty": 5,
-            "label": "Danger",
-            "color": "#EF4444",
+            "likelyTeam": "Sweden",
+            "flag": "🇸🇪",
+            "fifaRank": 29,
+            "difficulty": 3,
+            "label": "Moderate",
+            "color": "#F59E0B",
             "note": "3rd-place team from Group F",
             "pct": null
           },
@@ -2961,13 +3045,13 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 65,
-        "r16": 36,
-        "qf": 19,
-        "sf": 10,
-        "final": 5,
-        "winner": 16,
-        "source": "calculated"
+        "r32": 82,
+        "r16": 28,
+        "qf": 14,
+        "sf": 6,
+        "final": 3,
+        "winner": 1,
+        "source": "market"
       },
       "path": {
         "group_stage": {
@@ -3077,13 +3161,13 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 27,
-        "r16": 15,
-        "qf": 8,
+        "r32": 55,
+        "r16": 20,
+        "qf": 9,
         "sf": 4,
         "final": 2,
-        "winner": 8,
-        "source": "calculated"
+        "winner": 1,
+        "source": "market"
       },
       "path": {
         "group_stage": {
@@ -3193,13 +3277,13 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 99,
-        "r16": 54,
-        "qf": 28,
-        "sf": 14,
-        "final": 7,
-        "winner": 30,
-        "source": "calculated"
+        "r32": 97,
+        "r16": 70,
+        "qf": 42,
+        "sf": 22,
+        "final": 11,
+        "winner": 6,
+        "source": "market"
       },
       "path": {
         "group_stage": {
@@ -3265,23 +3349,23 @@
           },
           {
             "group": "E",
-            "likelyTeam": "Ecuador",
-            "flag": "🇪🇨",
-            "fifaRank": 23,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
+            "likelyTeam": "Ivory Coast",
+            "flag": "🇨🇮",
+            "fifaRank": 42,
+            "difficulty": 2,
+            "label": "Favorable",
+            "color": "#22C55E",
             "note": "3rd-place team from Group E",
             "pct": null
           },
           {
             "group": "F",
-            "likelyTeam": "Netherlands",
-            "flag": "🇳🇱",
-            "fifaRank": 7,
-            "difficulty": 5,
-            "label": "Danger",
-            "color": "#EF4444",
+            "likelyTeam": "Sweden",
+            "flag": "🇸🇪",
+            "fifaRank": 29,
+            "difficulty": 3,
+            "label": "Moderate",
+            "color": "#F59E0B",
             "note": "3rd-place team from Group F",
             "pct": null
           },
@@ -3441,8 +3525,8 @@
           "matchday": 1,
           "opponent": "Ecuador",
           "opponentFlag": "🇪🇨",
-          "result": "W",
-          "score": "1-0",
+          "result": null,
+          "score": null,
           "date": "2026-06-14",
           "venue": "Lincoln Financial Field, Philadelphia",
           "scorers": []
@@ -3469,12 +3553,12 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 34,
-        "r16": 19,
-        "qf": 10,
-        "sf": 5,
-        "final": 3,
-        "winner": 5,
+        "r32": 11,
+        "r16": 6,
+        "qf": 3,
+        "sf": 2,
+        "final": 1,
+        "winner": 2,
         "source": "calculated"
       },
       "path": {
@@ -3483,7 +3567,7 @@
           "city": "Philadelphia · Atlanta",
           "venue": "Various venues",
           "date": "Jun 14–25",
-          "detail": "3pts after MD1"
+          "detail": "1pt after MD1"
         },
         "r32": {
           "status": "upcoming",
@@ -3557,8 +3641,8 @@
           "matchday": 1,
           "opponent": "Ivory Coast",
           "opponentFlag": "🇨🇮",
-          "result": "L",
-          "score": "0-1",
+          "result": null,
+          "score": null,
           "date": "2026-06-14",
           "venue": "Lincoln Financial Field, Philadelphia",
           "scorers": []
@@ -3585,12 +3669,12 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 27,
-        "r16": 15,
-        "qf": 8,
-        "sf": 4,
-        "final": 2,
-        "winner": 8,
+        "r32": 70,
+        "r16": 39,
+        "qf": 20,
+        "sf": 10,
+        "final": 5,
+        "winner": 18,
         "source": "calculated"
       },
       "path": {
@@ -3599,7 +3683,7 @@
           "city": "Philadelphia · New Jersey",
           "venue": "Various venues",
           "date": "Jun 14–25",
-          "detail": "0pts after MD1"
+          "detail": "1pt after MD1"
         },
         "r32": {
           "status": "upcoming",
@@ -3701,13 +3785,13 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 41,
-        "r16": 23,
-        "qf": 12,
-        "sf": 6,
-        "final": 3,
-        "winner": 13,
-        "source": "calculated"
+        "r32": 96,
+        "r16": 68,
+        "qf": 40,
+        "sf": 20,
+        "final": 10,
+        "winner": 5,
+        "source": "market"
       },
       "path": {
         "group_stage": {
@@ -3817,13 +3901,13 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 87,
-        "r16": 48,
-        "qf": 25,
-        "sf": 13,
-        "final": 7,
-        "winner": 24,
-        "source": "calculated"
+        "r32": 80,
+        "r16": 42,
+        "qf": 20,
+        "sf": 9,
+        "final": 4,
+        "winner": 2,
+        "source": "market"
       },
       "path": {
         "group_stage": {
@@ -3832,122 +3916,6 @@
           "venue": "Various venues",
           "date": "Jun 14–25",
           "detail": "1pt after MD1"
-        },
-        "r32": {
-          "status": "upcoming",
-          "match": 87,
-          "date": "2026-07-03",
-          "city": "Kansas City",
-          "venue": "Arrowhead Stadium",
-          "opponentDesc": "Winner Group K"
-        },
-        "r16": {
-          "status": "future",
-          "match": 96,
-          "date": "2026-07-07",
-          "city": "Vancouver",
-          "venue": "BC Place",
-          "opponentDesc": "Winner Match 86"
-        },
-        "qf": {
-          "status": "future",
-          "match": 100,
-          "date": "2026-07-11",
-          "city": "Kansas City",
-          "venue": "Arrowhead Stadium",
-          "opponentDesc": "Winner Match 96"
-        },
-        "sf": {
-          "status": "future",
-          "match": 101,
-          "date": "2026-07-14",
-          "city": "Dallas",
-          "venue": "AT&T Stadium",
-          "opponentDesc": "Winner QF bracket"
-        },
-        "final": {
-          "status": "future",
-          "match": 104,
-          "date": "2026-07-19",
-          "city": "New Jersey",
-          "venue": "MetLife Stadium",
-          "opponentDesc": "Winner other SF"
-        }
-      },
-      "possibleOpponents": {
-        "r32": [
-          {
-            "group": "K",
-            "likelyTeam": "DR Congo",
-            "flag": "🇨🇩",
-            "fifaRank": 56,
-            "difficulty": 1,
-            "label": "Favorable",
-            "color": "#22C55E",
-            "note": "Winner of Group K",
-            "pct": null
-          }
-        ],
-        "r16": []
-      }
-    },
-    {
-      "id": "sweden",
-      "name": "Sweden",
-      "flag": "🇸🇪",
-      "group": "F",
-      "confederation": "UEFA",
-      "fifaRank": 29,
-      "eliminated": false,
-      "currentStage": "group_stage",
-      "groupResults": [
-        {
-          "matchday": 1,
-          "opponent": "Tunisia",
-          "opponentFlag": "🇹🇳",
-          "result": "W",
-          "score": "5-1",
-          "date": "2026-06-14",
-          "venue": "Arrowhead Stadium, Kansas City",
-          "scorers": []
-        },
-        {
-          "matchday": 2,
-          "opponent": "Netherlands",
-          "opponentFlag": "🇳🇱",
-          "result": null,
-          "score": null,
-          "date": "2026-06-20",
-          "venue": "Arrowhead Stadium, Kansas City",
-          "scorers": []
-        },
-        {
-          "matchday": 3,
-          "opponent": "Japan",
-          "opponentFlag": "🇯🇵",
-          "result": null,
-          "score": null,
-          "date": "2026-06-25",
-          "venue": "AT&T Stadium, Dallas",
-          "scorers": []
-        }
-      ],
-      "advanceProbabilities": {
-        "r32": 79,
-        "r16": 43,
-        "qf": 22,
-        "sf": 11,
-        "final": 6,
-        "winner": 21,
-        "source": "calculated"
-      },
-      "path": {
-        "group_stage": {
-          "status": "active",
-          "city": "Kansas City · Dallas",
-          "venue": "Various venues",
-          "date": "Jun 14–25",
-          "detail": "3pts after MD1"
         },
         "r32": {
           "status": "upcoming",
@@ -4008,6 +3976,122 @@
       }
     },
     {
+      "id": "sweden",
+      "name": "Sweden",
+      "flag": "🇸🇪",
+      "group": "F",
+      "confederation": "UEFA",
+      "fifaRank": 29,
+      "eliminated": false,
+      "currentStage": "group_stage",
+      "groupResults": [
+        {
+          "matchday": 1,
+          "opponent": "Tunisia",
+          "opponentFlag": "🇹🇳",
+          "result": null,
+          "score": null,
+          "date": "2026-06-14",
+          "venue": "Arrowhead Stadium, Kansas City",
+          "scorers": []
+        },
+        {
+          "matchday": 2,
+          "opponent": "Netherlands",
+          "opponentFlag": "🇳🇱",
+          "result": null,
+          "score": null,
+          "date": "2026-06-20",
+          "venue": "Arrowhead Stadium, Kansas City",
+          "scorers": []
+        },
+        {
+          "matchday": 3,
+          "opponent": "Japan",
+          "opponentFlag": "🇯🇵",
+          "result": null,
+          "score": null,
+          "date": "2026-06-25",
+          "venue": "AT&T Stadium, Dallas",
+          "scorers": []
+        }
+      ],
+      "advanceProbabilities": {
+        "r32": 22,
+        "r16": 12,
+        "qf": 6,
+        "sf": 3,
+        "final": 2,
+        "winner": 6,
+        "source": "calculated"
+      },
+      "path": {
+        "group_stage": {
+          "status": "active",
+          "city": "Kansas City · Dallas",
+          "venue": "Various venues",
+          "date": "Jun 14–25",
+          "detail": "0pts after MD0"
+        },
+        "r32": {
+          "status": "upcoming",
+          "match": 87,
+          "date": "2026-07-03",
+          "city": "Kansas City",
+          "venue": "Arrowhead Stadium",
+          "opponentDesc": "Winner Group K"
+        },
+        "r16": {
+          "status": "future",
+          "match": 96,
+          "date": "2026-07-07",
+          "city": "Vancouver",
+          "venue": "BC Place",
+          "opponentDesc": "Winner Match 86"
+        },
+        "qf": {
+          "status": "future",
+          "match": 100,
+          "date": "2026-07-11",
+          "city": "Kansas City",
+          "venue": "Arrowhead Stadium",
+          "opponentDesc": "Winner Match 96"
+        },
+        "sf": {
+          "status": "future",
+          "match": 101,
+          "date": "2026-07-14",
+          "city": "Dallas",
+          "venue": "AT&T Stadium",
+          "opponentDesc": "Winner QF bracket"
+        },
+        "final": {
+          "status": "future",
+          "match": 104,
+          "date": "2026-07-19",
+          "city": "New Jersey",
+          "venue": "MetLife Stadium",
+          "opponentDesc": "Winner other SF"
+        }
+      },
+      "possibleOpponents": {
+        "r32": [
+          {
+            "group": "K",
+            "likelyTeam": "DR Congo",
+            "flag": "🇨🇩",
+            "fifaRank": 56,
+            "difficulty": 1,
+            "label": "Favorable",
+            "color": "#22C55E",
+            "note": "Winner of Group K",
+            "pct": null
+          }
+        ],
+        "r16": []
+      }
+    },
+    {
       "id": "tunisia",
       "name": "Tunisia",
       "flag": "🇹🇳",
@@ -4021,8 +4105,8 @@
           "matchday": 1,
           "opponent": "Sweden",
           "opponentFlag": "🇸🇪",
-          "result": "L",
-          "score": "1-5",
+          "result": null,
+          "score": null,
           "date": "2026-06-14",
           "venue": "Arrowhead Stadium, Kansas City",
           "scorers": []
@@ -4063,7 +4147,7 @@
           "city": "Kansas City",
           "venue": "Various venues",
           "date": "Jun 14–25",
-          "detail": "0pts after MD1"
+          "detail": "0pts after MD0"
         },
         "r32": {
           "status": "upcoming",
@@ -4165,13 +4249,13 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 11,
-        "r16": 6,
-        "qf": 3,
-        "sf": 2,
-        "final": 1,
-        "winner": 2,
-        "source": "calculated"
+        "r32": 96,
+        "r16": 72,
+        "qf": 44,
+        "sf": 24,
+        "final": 13,
+        "winner": 7,
+        "source": "market"
       },
       "path": {
         "group_stage": {
@@ -4179,7 +4263,7 @@
           "city": "Seattle · Los Angeles · Vancouver",
           "venue": "Various venues",
           "date": "Jun 15–26",
-          "detail": "0pts after MD1"
+          "detail": "0pts after MD0"
         },
         "r32": {
           "status": "upcoming",
@@ -4295,7 +4379,7 @@
           "city": "Seattle · Vancouver",
           "venue": "Various venues",
           "date": "Jun 15–26",
-          "detail": "3pts after MD1"
+          "detail": "0pts after MD0"
         },
         "r32": {
           "status": "upcoming",
@@ -4353,23 +4437,23 @@
           },
           {
             "group": "E",
-            "likelyTeam": "Ecuador",
-            "flag": "🇪🇨",
-            "fifaRank": 23,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
+            "likelyTeam": "Ivory Coast",
+            "flag": "🇨🇮",
+            "fifaRank": 42,
+            "difficulty": 2,
+            "label": "Favorable",
+            "color": "#22C55E",
             "note": "3rd-place team from Group E",
             "pct": null
           },
           {
             "group": "H",
-            "likelyTeam": "Saudi Arabia",
-            "flag": "🇸🇦",
-            "fifaRank": 55,
-            "difficulty": 2,
-            "label": "Favorable",
-            "color": "#22C55E",
+            "likelyTeam": "Spain",
+            "flag": "🇪🇸",
+            "fifaRank": 1,
+            "difficulty": 5,
+            "label": "Danger",
+            "color": "#EF4444",
             "note": "3rd-place team from Group H",
             "pct": null
           },
@@ -4454,32 +4538,38 @@
           "status": "active",
           "city": "Los Angeles · Seattle",
           "venue": "Various venues",
-          "date": "Jun 15–26",
-          "detail": "0pts after MD0"
+          "date": "Jun 15–Jun 26",
+          "detail": "Group G"
         },
         "r32": {
           "status": "upcoming",
-          "match": 88,
-          "date": "2026-07-03",
-          "city": "Dallas",
-          "venue": "AT&T Stadium",
-          "opponentDesc": "Runner-up Group D"
+          "match": 82,
+          "date": "2026-07-01",
+          "city": "Seattle",
+          "venue": "Lumen Field",
+          "opponentDesc": "Best 3rd from A/E/H/I/J",
+          "conditional": true,
+          "conditionNote": "Venue assumes Iran win Group G. Runner-up path leads to a different venue and date."
         },
         "r16": {
           "status": "future",
-          "match": 95,
-          "date": "2026-07-07",
-          "city": "Atlanta",
-          "venue": "Mercedes-Benz Stadium",
-          "opponentDesc": "Winner Match 87"
+          "match": 94,
+          "date": "2026-07-06",
+          "city": "Seattle",
+          "venue": "Lumen Field",
+          "opponentDesc": "Winner Group D (Match 81)",
+          "conditional": true,
+          "conditionNote": "Venue assumes Iran win Group G and all preceding knockout rounds. Actual venue may differ."
         },
         "qf": {
           "status": "future",
-          "match": 99,
-          "date": "2026-07-11",
-          "city": "Miami",
-          "venue": "Hard Rock Stadium",
-          "opponentDesc": "Winner Match 95"
+          "match": 98,
+          "date": "2026-07-10",
+          "city": "Los Angeles",
+          "venue": "SoFi Stadium",
+          "opponentDesc": "Winner Match 94",
+          "conditional": true,
+          "conditionNote": "Venue assumes Iran win Group G and all preceding knockout rounds. Actual venue may differ."
         },
         "sf": {
           "status": "future",
@@ -4487,7 +4577,9 @@
           "date": "2026-07-15",
           "city": "Atlanta",
           "venue": "Mercedes-Benz Stadium",
-          "opponentDesc": "Winner QF bracket"
+          "opponentDesc": "Winner QF bracket",
+          "conditional": true,
+          "conditionNote": "Venue assumes Iran win Group G and all preceding knockout rounds. Actual venue may differ."
         },
         "final": {
           "status": "future",
@@ -4495,21 +4587,62 @@
           "date": "2026-07-19",
           "city": "New Jersey",
           "venue": "MetLife Stadium",
-          "opponentDesc": "Winner other SF"
+          "opponentDesc": "Winner other SF",
+          "conditional": true,
+          "conditionNote": "Venue assumes Iran win Group G and all preceding knockout rounds. Actual venue may differ."
         }
       },
       "possibleOpponents": {
         "r32": [
           {
-            "group": "D",
-            "likelyTeam": "Australia",
-            "flag": "🇦🇺",
-            "fifaRank": 26,
+            "group": "A",
+            "likelyTeam": "TBD",
+            "flag": "🏳️",
+            "fifaRank": 50,
             "difficulty": 3,
             "label": "Moderate",
             "color": "#F59E0B",
-            "note": "Runner-up of Group D",
-            "pct": null
+            "note": "3rd-place team from Group A"
+          },
+          {
+            "group": "E",
+            "likelyTeam": "TBD",
+            "flag": "🏳️",
+            "fifaRank": 50,
+            "difficulty": 3,
+            "label": "Moderate",
+            "color": "#F59E0B",
+            "note": "3rd-place team from Group E"
+          },
+          {
+            "group": "H",
+            "likelyTeam": "TBD",
+            "flag": "🏳️",
+            "fifaRank": 50,
+            "difficulty": 3,
+            "label": "Moderate",
+            "color": "#F59E0B",
+            "note": "3rd-place team from Group H"
+          },
+          {
+            "group": "I",
+            "likelyTeam": "TBD",
+            "flag": "🏳️",
+            "fifaRank": 50,
+            "difficulty": 3,
+            "label": "Moderate",
+            "color": "#F59E0B",
+            "note": "3rd-place team from Group I"
+          },
+          {
+            "group": "J",
+            "likelyTeam": "TBD",
+            "flag": "🏳️",
+            "fifaRank": 50,
+            "difficulty": 3,
+            "label": "Moderate",
+            "color": "#F59E0B",
+            "note": "3rd-place team from Group J"
           }
         ],
         "r16": []
@@ -4570,32 +4703,38 @@
           "status": "active",
           "city": "Los Angeles · Vancouver",
           "venue": "Various venues",
-          "date": "Jun 15–26",
-          "detail": "0pts after MD0"
+          "date": "Jun 15–Jun 26",
+          "detail": "Group G"
         },
         "r32": {
           "status": "upcoming",
-          "match": 88,
-          "date": "2026-07-03",
-          "city": "Dallas",
-          "venue": "AT&T Stadium",
-          "opponentDesc": "Runner-up Group D"
+          "match": 82,
+          "date": "2026-07-01",
+          "city": "Seattle",
+          "venue": "Lumen Field",
+          "opponentDesc": "Best 3rd from A/E/H/I/J",
+          "conditional": true,
+          "conditionNote": "Venue assumes New Zealand win Group G. Runner-up path leads to a different venue and date."
         },
         "r16": {
           "status": "future",
-          "match": 95,
-          "date": "2026-07-07",
-          "city": "Atlanta",
-          "venue": "Mercedes-Benz Stadium",
-          "opponentDesc": "Winner Match 87"
+          "match": 94,
+          "date": "2026-07-06",
+          "city": "Seattle",
+          "venue": "Lumen Field",
+          "opponentDesc": "Winner Group D (Match 81)",
+          "conditional": true,
+          "conditionNote": "Venue assumes New Zealand win Group G and all preceding knockout rounds. Actual venue may differ."
         },
         "qf": {
           "status": "future",
-          "match": 99,
-          "date": "2026-07-11",
-          "city": "Miami",
-          "venue": "Hard Rock Stadium",
-          "opponentDesc": "Winner Match 95"
+          "match": 98,
+          "date": "2026-07-10",
+          "city": "Los Angeles",
+          "venue": "SoFi Stadium",
+          "opponentDesc": "Winner Match 94",
+          "conditional": true,
+          "conditionNote": "Venue assumes New Zealand win Group G and all preceding knockout rounds. Actual venue may differ."
         },
         "sf": {
           "status": "future",
@@ -4603,7 +4742,9 @@
           "date": "2026-07-15",
           "city": "Atlanta",
           "venue": "Mercedes-Benz Stadium",
-          "opponentDesc": "Winner QF bracket"
+          "opponentDesc": "Winner QF bracket",
+          "conditional": true,
+          "conditionNote": "Venue assumes New Zealand win Group G and all preceding knockout rounds. Actual venue may differ."
         },
         "final": {
           "status": "future",
@@ -4611,21 +4752,62 @@
           "date": "2026-07-19",
           "city": "New Jersey",
           "venue": "MetLife Stadium",
-          "opponentDesc": "Winner other SF"
+          "opponentDesc": "Winner other SF",
+          "conditional": true,
+          "conditionNote": "Venue assumes New Zealand win Group G and all preceding knockout rounds. Actual venue may differ."
         }
       },
       "possibleOpponents": {
         "r32": [
           {
-            "group": "D",
-            "likelyTeam": "Australia",
-            "flag": "🇦🇺",
-            "fifaRank": 26,
+            "group": "A",
+            "likelyTeam": "TBD",
+            "flag": "🏳️",
+            "fifaRank": 50,
             "difficulty": 3,
             "label": "Moderate",
             "color": "#F59E0B",
-            "note": "Runner-up of Group D",
-            "pct": null
+            "note": "3rd-place team from Group A"
+          },
+          {
+            "group": "E",
+            "likelyTeam": "TBD",
+            "flag": "🏳️",
+            "fifaRank": 50,
+            "difficulty": 3,
+            "label": "Moderate",
+            "color": "#F59E0B",
+            "note": "3rd-place team from Group E"
+          },
+          {
+            "group": "H",
+            "likelyTeam": "TBD",
+            "flag": "🏳️",
+            "fifaRank": 50,
+            "difficulty": 3,
+            "label": "Moderate",
+            "color": "#F59E0B",
+            "note": "3rd-place team from Group H"
+          },
+          {
+            "group": "I",
+            "likelyTeam": "TBD",
+            "flag": "🏳️",
+            "fifaRank": 50,
+            "difficulty": 3,
+            "label": "Moderate",
+            "color": "#F59E0B",
+            "note": "3rd-place team from Group I"
+          },
+          {
+            "group": "J",
+            "likelyTeam": "TBD",
+            "flag": "🏳️",
+            "fifaRank": 50,
+            "difficulty": 3,
+            "label": "Moderate",
+            "color": "#F59E0B",
+            "note": "3rd-place team from Group J"
           }
         ],
         "r16": []
@@ -4645,8 +4827,8 @@
           "matchday": 1,
           "opponent": "Cape Verde",
           "opponentFlag": "🇨🇻",
-          "result": "D",
-          "score": "0-0",
+          "result": null,
+          "score": null,
           "date": "2026-06-15",
           "venue": "Mercedes-Benz Stadium, Atlanta",
           "scorers": []
@@ -4674,12 +4856,12 @@
       ],
       "advanceProbabilities": {
         "r32": 99,
-        "r16": 54,
-        "qf": 28,
-        "sf": 14,
-        "final": 7,
-        "winner": 30,
-        "source": "calculated"
+        "r16": 86,
+        "qf": 62,
+        "sf": 40,
+        "final": 24,
+        "winner": 14,
+        "source": "market"
       },
       "path": {
         "group_stage": {
@@ -4687,7 +4869,7 @@
           "city": "Atlanta · Guadalajara",
           "venue": "Various venues",
           "date": "Jun 15–26",
-          "detail": "1pt after MD1"
+          "detail": "0pts after MD0"
         },
         "r32": {
           "status": "upcoming",
@@ -4761,8 +4943,8 @@
           "matchday": 1,
           "opponent": "Spain",
           "opponentFlag": "🇪🇸",
-          "result": "D",
-          "score": "0-0",
+          "result": null,
+          "score": null,
           "date": "2026-06-15",
           "venue": "Mercedes-Benz Stadium, Atlanta",
           "scorers": []
@@ -4803,7 +4985,7 @@
           "city": "Atlanta · Miami · Houston",
           "venue": "Various venues",
           "date": "Jun 15–26",
-          "detail": "1pt after MD1"
+          "detail": "0pts after MD0"
         },
         "r32": {
           "status": "upcoming",
@@ -4905,12 +5087,12 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 5,
-        "r16": 3,
-        "qf": 2,
-        "sf": 1,
-        "final": 1,
-        "winner": 0,
+        "r32": 23,
+        "r16": 13,
+        "qf": 7,
+        "sf": 4,
+        "final": 2,
+        "winner": 1,
         "source": "calculated"
       },
       "path": {
@@ -5150,8 +5332,8 @@
           "status": "active",
           "city": "New Jersey · Philadelphia · Boston",
           "venue": "Various venues",
-          "date": "Jun 16–26",
-          "detail": "0pts after MD0"
+          "date": "Jun 16–Jun 26",
+          "detail": "Group I"
         },
         "r32": {
           "status": "upcoming",
@@ -5159,7 +5341,9 @@
           "date": "2026-07-02",
           "city": "Boston",
           "venue": "Gillette Stadium",
-          "opponentDesc": "Best 3rd from E/F/G/I/J"
+          "opponentDesc": "Best 3rd from E/F/G/I/J",
+          "conditional": true,
+          "conditionNote": "Venue assumes France win Group I. Runner-up path leads to a different venue and date."
         },
         "r16": {
           "status": "future",
@@ -5167,7 +5351,9 @@
           "date": "2026-07-07",
           "city": "Vancouver",
           "venue": "BC Place",
-          "opponentDesc": "Winner Match 85"
+          "opponentDesc": "Winner Match 85",
+          "conditional": true,
+          "conditionNote": "Venue assumes France win Group I and all preceding knockout rounds. Actual venue may differ."
         },
         "qf": {
           "status": "future",
@@ -5175,7 +5361,9 @@
           "date": "2026-07-11",
           "city": "Kansas City",
           "venue": "Arrowhead Stadium",
-          "opponentDesc": "Winner Match 96"
+          "opponentDesc": "Winner Match 96",
+          "conditional": true,
+          "conditionNote": "Venue assumes France win Group I and all preceding knockout rounds. Actual venue may differ."
         },
         "sf": {
           "status": "future",
@@ -5183,7 +5371,9 @@
           "date": "2026-07-14",
           "city": "Dallas",
           "venue": "AT&T Stadium",
-          "opponentDesc": "Winner QF bracket"
+          "opponentDesc": "Winner QF bracket",
+          "conditional": true,
+          "conditionNote": "Venue assumes France win Group I and all preceding knockout rounds. Actual venue may differ."
         },
         "final": {
           "status": "future",
@@ -5191,68 +5381,92 @@
           "date": "2026-07-19",
           "city": "New Jersey",
           "venue": "MetLife Stadium",
-          "opponentDesc": "Winner other SF"
+          "opponentDesc": "Winner other SF",
+          "conditional": true,
+          "conditionNote": "Venue assumes France win Group I and all preceding knockout rounds. Actual venue may differ."
         }
       },
       "possibleOpponents": {
         "r32": [
           {
             "group": "E",
-            "likelyTeam": "Ecuador",
-            "flag": "🇪🇨",
-            "fifaRank": 23,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group E",
-            "pct": null
+            "likelyTeam": "Ivory Coast",
+            "altTeam": "Curaçao",
+            "flag": "🇨🇮",
+            "altFlag": "🇨🇼",
+            "fifaRank": 42,
+            "difficulty": 1,
+            "label": "Favorable",
+            "color": "#22C55E",
+            "note": "Very manageable for France."
           },
           {
             "group": "F",
-            "likelyTeam": "Netherlands",
-            "flag": "🇳🇱",
-            "fifaRank": 7,
-            "difficulty": 5,
-            "label": "Danger",
-            "color": "#EF4444",
-            "note": "3rd-place team from Group F",
-            "pct": null
+            "likelyTeam": "Sweden",
+            "altTeam": "Tunisia",
+            "flag": "🇸🇪",
+            "altFlag": "🇹🇳",
+            "fifaRank": 29,
+            "difficulty": 2,
+            "label": "Favorable",
+            "color": "#22C55E",
+            "note": "Sweden or Tunisia. France heavy favorites."
           },
           {
             "group": "G",
-            "likelyTeam": "New Zealand",
-            "flag": "🇳🇿",
-            "fifaRank": 86,
-            "difficulty": 1,
+            "likelyTeam": "Iran",
+            "altTeam": "New Zealand",
+            "flag": "🇮🇷",
+            "altFlag": "🇳🇿",
+            "fifaRank": 21,
+            "difficulty": 2,
             "label": "Favorable",
             "color": "#22C55E",
-            "note": "3rd-place team from Group G",
-            "pct": null
-          },
-          {
-            "group": "I",
-            "likelyTeam": "Norway",
-            "flag": "🇳🇴",
-            "fifaRank": 31,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group I",
-            "pct": null
+            "note": "Iran or New Zealand. France should handle either."
           },
           {
             "group": "J",
-            "likelyTeam": "Jordan",
-            "flag": "🇯🇴",
-            "fifaRank": 66,
-            "difficulty": 1,
-            "label": "Favorable",
-            "color": "#22C55E",
-            "note": "3rd-place team from Group J",
-            "pct": null
+            "likelyTeam": "Austria",
+            "altTeam": "Algeria",
+            "flag": "🇦🇹",
+            "altFlag": "🇩🇿",
+            "fifaRank": 24,
+            "difficulty": 3,
+            "label": "Moderate",
+            "color": "#F59E0B",
+            "note": "Austria or Algeria. Either a genuine test for France."
           }
         ],
-        "r16": []
+        "r16": [
+          {
+            "opponent": "Canada",
+            "flag": "🇨🇦",
+            "dPct": 98,
+            "gPct": 45,
+            "pct": 28
+          },
+          {
+            "opponent": "Switzerland",
+            "flag": "🇨🇭",
+            "dPct": 98,
+            "gPct": 30,
+            "pct": 18
+          },
+          {
+            "opponent": "Bosnia & Herz.",
+            "flag": "🇧🇦",
+            "dPct": 98,
+            "gPct": 15,
+            "pct": 9
+          },
+          {
+            "opponent": "Qatar",
+            "flag": "🇶🇦",
+            "dPct": 98,
+            "gPct": 10,
+            "pct": 6
+          }
+        ]
       }
     },
     {
@@ -5310,16 +5524,18 @@
           "status": "active",
           "city": "New Jersey · Toronto",
           "venue": "Various venues",
-          "date": "Jun 16–26",
-          "detail": "0pts after MD0"
+          "date": "Jun 16–Jun 26",
+          "detail": "Group I"
         },
         "r32": {
           "status": "upcoming",
-          "match": 86,
+          "match": 85,
           "date": "2026-07-02",
-          "city": "Miami",
-          "venue": "Hard Rock Stadium",
-          "opponentDesc": "Winner Group J"
+          "city": "Boston",
+          "venue": "Gillette Stadium",
+          "opponentDesc": "Best 3rd from E/F/G/I/J",
+          "conditional": true,
+          "conditionNote": "Venue assumes Senegal win Group I. Runner-up path leads to a different venue and date."
         },
         "r16": {
           "status": "future",
@@ -5327,7 +5543,9 @@
           "date": "2026-07-07",
           "city": "Vancouver",
           "venue": "BC Place",
-          "opponentDesc": "Winner Match 86"
+          "opponentDesc": "Winner Match 85",
+          "conditional": true,
+          "conditionNote": "Venue assumes Senegal win Group I and all preceding knockout rounds. Actual venue may differ."
         },
         "qf": {
           "status": "future",
@@ -5335,7 +5553,9 @@
           "date": "2026-07-11",
           "city": "Kansas City",
           "venue": "Arrowhead Stadium",
-          "opponentDesc": "Winner Match 96"
+          "opponentDesc": "Winner Match 96",
+          "conditional": true,
+          "conditionNote": "Venue assumes Senegal win Group I and all preceding knockout rounds. Actual venue may differ."
         },
         "sf": {
           "status": "future",
@@ -5343,7 +5563,9 @@
           "date": "2026-07-14",
           "city": "Dallas",
           "venue": "AT&T Stadium",
-          "opponentDesc": "Winner QF bracket"
+          "opponentDesc": "Winner QF bracket",
+          "conditional": true,
+          "conditionNote": "Venue assumes Senegal win Group I and all preceding knockout rounds. Actual venue may differ."
         },
         "final": {
           "status": "future",
@@ -5351,21 +5573,62 @@
           "date": "2026-07-19",
           "city": "New Jersey",
           "venue": "MetLife Stadium",
-          "opponentDesc": "Winner other SF"
+          "opponentDesc": "Winner other SF",
+          "conditional": true,
+          "conditionNote": "Venue assumes Senegal win Group I and all preceding knockout rounds. Actual venue may differ."
         }
       },
       "possibleOpponents": {
         "r32": [
           {
-            "group": "J",
-            "likelyTeam": "Algeria",
-            "flag": "🇩🇿",
-            "fifaRank": 35,
+            "group": "E",
+            "likelyTeam": "TBD",
+            "flag": "🏳️",
+            "fifaRank": 50,
             "difficulty": 3,
             "label": "Moderate",
             "color": "#F59E0B",
-            "note": "Winner of Group J",
-            "pct": null
+            "note": "3rd-place team from Group E"
+          },
+          {
+            "group": "F",
+            "likelyTeam": "TBD",
+            "flag": "🏳️",
+            "fifaRank": 50,
+            "difficulty": 3,
+            "label": "Moderate",
+            "color": "#F59E0B",
+            "note": "3rd-place team from Group F"
+          },
+          {
+            "group": "G",
+            "likelyTeam": "TBD",
+            "flag": "🏳️",
+            "fifaRank": 50,
+            "difficulty": 3,
+            "label": "Moderate",
+            "color": "#F59E0B",
+            "note": "3rd-place team from Group G"
+          },
+          {
+            "group": "I",
+            "likelyTeam": "TBD",
+            "flag": "🏳️",
+            "fifaRank": 50,
+            "difficulty": 3,
+            "label": "Moderate",
+            "color": "#F59E0B",
+            "note": "3rd-place team from Group I"
+          },
+          {
+            "group": "J",
+            "likelyTeam": "TBD",
+            "flag": "🏳️",
+            "fifaRank": 50,
+            "difficulty": 3,
+            "label": "Moderate",
+            "color": "#F59E0B",
+            "note": "3rd-place team from Group J"
           }
         ],
         "r16": []
@@ -5426,16 +5689,18 @@
           "status": "active",
           "city": "Boston · Philadelphia · Toronto",
           "venue": "Various venues",
-          "date": "Jun 16–26",
-          "detail": "0pts after MD0"
+          "date": "Jun 16–Jun 26",
+          "detail": "Group I"
         },
         "r32": {
           "status": "upcoming",
-          "match": 86,
+          "match": 85,
           "date": "2026-07-02",
-          "city": "Miami",
-          "venue": "Hard Rock Stadium",
-          "opponentDesc": "Winner Group J"
+          "city": "Boston",
+          "venue": "Gillette Stadium",
+          "opponentDesc": "Best 3rd from E/F/G/I/J",
+          "conditional": true,
+          "conditionNote": "Venue assumes Iraq win Group I. Runner-up path leads to a different venue and date."
         },
         "r16": {
           "status": "future",
@@ -5443,7 +5708,9 @@
           "date": "2026-07-07",
           "city": "Vancouver",
           "venue": "BC Place",
-          "opponentDesc": "Winner Match 86"
+          "opponentDesc": "Winner Match 85",
+          "conditional": true,
+          "conditionNote": "Venue assumes Iraq win Group I and all preceding knockout rounds. Actual venue may differ."
         },
         "qf": {
           "status": "future",
@@ -5451,7 +5718,9 @@
           "date": "2026-07-11",
           "city": "Kansas City",
           "venue": "Arrowhead Stadium",
-          "opponentDesc": "Winner Match 96"
+          "opponentDesc": "Winner Match 96",
+          "conditional": true,
+          "conditionNote": "Venue assumes Iraq win Group I and all preceding knockout rounds. Actual venue may differ."
         },
         "sf": {
           "status": "future",
@@ -5459,7 +5728,9 @@
           "date": "2026-07-14",
           "city": "Dallas",
           "venue": "AT&T Stadium",
-          "opponentDesc": "Winner QF bracket"
+          "opponentDesc": "Winner QF bracket",
+          "conditional": true,
+          "conditionNote": "Venue assumes Iraq win Group I and all preceding knockout rounds. Actual venue may differ."
         },
         "final": {
           "status": "future",
@@ -5467,21 +5738,62 @@
           "date": "2026-07-19",
           "city": "New Jersey",
           "venue": "MetLife Stadium",
-          "opponentDesc": "Winner other SF"
+          "opponentDesc": "Winner other SF",
+          "conditional": true,
+          "conditionNote": "Venue assumes Iraq win Group I and all preceding knockout rounds. Actual venue may differ."
         }
       },
       "possibleOpponents": {
         "r32": [
           {
-            "group": "J",
-            "likelyTeam": "Algeria",
-            "flag": "🇩🇿",
-            "fifaRank": 35,
+            "group": "E",
+            "likelyTeam": "TBD",
+            "flag": "🏳️",
+            "fifaRank": 50,
             "difficulty": 3,
             "label": "Moderate",
             "color": "#F59E0B",
-            "note": "Winner of Group J",
-            "pct": null
+            "note": "3rd-place team from Group E"
+          },
+          {
+            "group": "F",
+            "likelyTeam": "TBD",
+            "flag": "🏳️",
+            "fifaRank": 50,
+            "difficulty": 3,
+            "label": "Moderate",
+            "color": "#F59E0B",
+            "note": "3rd-place team from Group F"
+          },
+          {
+            "group": "G",
+            "likelyTeam": "TBD",
+            "flag": "🏳️",
+            "fifaRank": 50,
+            "difficulty": 3,
+            "label": "Moderate",
+            "color": "#F59E0B",
+            "note": "3rd-place team from Group G"
+          },
+          {
+            "group": "I",
+            "likelyTeam": "TBD",
+            "flag": "🏳️",
+            "fifaRank": 50,
+            "difficulty": 3,
+            "label": "Moderate",
+            "color": "#F59E0B",
+            "note": "3rd-place team from Group I"
+          },
+          {
+            "group": "J",
+            "likelyTeam": "TBD",
+            "flag": "🏳️",
+            "fifaRank": 50,
+            "difficulty": 3,
+            "label": "Moderate",
+            "color": "#F59E0B",
+            "note": "3rd-place team from Group J"
           }
         ],
         "r16": []
@@ -5542,16 +5854,18 @@
           "status": "active",
           "city": "Boston · New Jersey",
           "venue": "Various venues",
-          "date": "Jun 16–26",
-          "detail": "0pts after MD0"
+          "date": "Jun 16–Jun 26",
+          "detail": "Group I"
         },
         "r32": {
           "status": "upcoming",
-          "match": 86,
+          "match": 85,
           "date": "2026-07-02",
-          "city": "Miami",
-          "venue": "Hard Rock Stadium",
-          "opponentDesc": "Winner Group J"
+          "city": "Boston",
+          "venue": "Gillette Stadium",
+          "opponentDesc": "Best 3rd from E/F/G/I/J",
+          "conditional": true,
+          "conditionNote": "Venue assumes Norway win Group I. Runner-up path leads to a different venue and date."
         },
         "r16": {
           "status": "future",
@@ -5559,7 +5873,9 @@
           "date": "2026-07-07",
           "city": "Vancouver",
           "venue": "BC Place",
-          "opponentDesc": "Winner Match 86"
+          "opponentDesc": "Winner Match 85",
+          "conditional": true,
+          "conditionNote": "Venue assumes Norway win Group I and all preceding knockout rounds. Actual venue may differ."
         },
         "qf": {
           "status": "future",
@@ -5567,7 +5883,9 @@
           "date": "2026-07-11",
           "city": "Kansas City",
           "venue": "Arrowhead Stadium",
-          "opponentDesc": "Winner Match 96"
+          "opponentDesc": "Winner Match 96",
+          "conditional": true,
+          "conditionNote": "Venue assumes Norway win Group I and all preceding knockout rounds. Actual venue may differ."
         },
         "sf": {
           "status": "future",
@@ -5575,7 +5893,9 @@
           "date": "2026-07-14",
           "city": "Dallas",
           "venue": "AT&T Stadium",
-          "opponentDesc": "Winner QF bracket"
+          "opponentDesc": "Winner QF bracket",
+          "conditional": true,
+          "conditionNote": "Venue assumes Norway win Group I and all preceding knockout rounds. Actual venue may differ."
         },
         "final": {
           "status": "future",
@@ -5583,21 +5903,62 @@
           "date": "2026-07-19",
           "city": "New Jersey",
           "venue": "MetLife Stadium",
-          "opponentDesc": "Winner other SF"
+          "opponentDesc": "Winner other SF",
+          "conditional": true,
+          "conditionNote": "Venue assumes Norway win Group I and all preceding knockout rounds. Actual venue may differ."
         }
       },
       "possibleOpponents": {
         "r32": [
           {
-            "group": "J",
-            "likelyTeam": "Algeria",
-            "flag": "🇩🇿",
-            "fifaRank": 35,
+            "group": "E",
+            "likelyTeam": "TBD",
+            "flag": "🏳️",
+            "fifaRank": 50,
             "difficulty": 3,
             "label": "Moderate",
             "color": "#F59E0B",
-            "note": "Winner of Group J",
-            "pct": null
+            "note": "3rd-place team from Group E"
+          },
+          {
+            "group": "F",
+            "likelyTeam": "TBD",
+            "flag": "🏳️",
+            "fifaRank": 50,
+            "difficulty": 3,
+            "label": "Moderate",
+            "color": "#F59E0B",
+            "note": "3rd-place team from Group F"
+          },
+          {
+            "group": "G",
+            "likelyTeam": "TBD",
+            "flag": "🏳️",
+            "fifaRank": 50,
+            "difficulty": 3,
+            "label": "Moderate",
+            "color": "#F59E0B",
+            "note": "3rd-place team from Group G"
+          },
+          {
+            "group": "I",
+            "likelyTeam": "TBD",
+            "flag": "🏳️",
+            "fifaRank": 50,
+            "difficulty": 3,
+            "label": "Moderate",
+            "color": "#F59E0B",
+            "note": "3rd-place team from Group I"
+          },
+          {
+            "group": "J",
+            "likelyTeam": "TBD",
+            "flag": "🏳️",
+            "fifaRank": 50,
+            "difficulty": 3,
+            "label": "Moderate",
+            "color": "#F59E0B",
+            "note": "3rd-place team from Group J"
           }
         ],
         "r16": []
@@ -5658,32 +6019,38 @@
           "status": "active",
           "city": "Kansas City · Los Angeles · Dallas",
           "venue": "Various venues",
-          "date": "Jun 16–27",
-          "detail": "0pts after MD0"
+          "date": "Jun 16–Jun 27",
+          "detail": "Group J"
         },
         "r32": {
           "status": "upcoming",
-          "match": 84,
-          "date": "2026-07-02",
-          "city": "Los Angeles",
-          "venue": "SoFi Stadium",
-          "opponentDesc": "Winner Group H"
+          "match": 79,
+          "date": "2026-06-28",
+          "city": "Mexico City",
+          "venue": "Estadio Azteca",
+          "opponentDesc": "Best 3rd from C/E/F/H/I",
+          "conditional": true,
+          "conditionNote": "Venue assumes Argentina win Group J. Runner-up path leads to a different venue and date."
         },
         "r16": {
           "status": "future",
-          "match": 96,
-          "date": "2026-07-07",
-          "city": "Vancouver",
-          "venue": "BC Place",
-          "opponentDesc": "Winner Match 85"
+          "match": 93,
+          "date": "2026-07-05",
+          "city": "Guadalajara",
+          "venue": "Estadio Guadalajara",
+          "opponentDesc": "Winner Match 79",
+          "conditional": true,
+          "conditionNote": "Venue assumes Argentina win Group J and all preceding knockout rounds. Actual venue may differ."
         },
         "qf": {
           "status": "future",
-          "match": 100,
-          "date": "2026-07-11",
-          "city": "Kansas City",
-          "venue": "Arrowhead Stadium",
-          "opponentDesc": "Winner Match 96"
+          "match": 97,
+          "date": "2026-07-09",
+          "city": "Guadalajara",
+          "venue": "Estadio Guadalajara",
+          "opponentDesc": "Winner Match 93",
+          "conditional": true,
+          "conditionNote": "Venue assumes Argentina win Group J and all preceding knockout rounds. Actual venue may differ."
         },
         "sf": {
           "status": "future",
@@ -5691,7 +6058,9 @@
           "date": "2026-07-14",
           "city": "Dallas",
           "venue": "AT&T Stadium",
-          "opponentDesc": "Winner QF bracket"
+          "opponentDesc": "Winner QF bracket",
+          "conditional": true,
+          "conditionNote": "Venue assumes Argentina win Group J and all preceding knockout rounds. Actual venue may differ."
         },
         "final": {
           "status": "future",
@@ -5699,24 +6068,92 @@
           "date": "2026-07-19",
           "city": "New Jersey",
           "venue": "MetLife Stadium",
-          "opponentDesc": "Winner other SF"
+          "opponentDesc": "Winner other SF",
+          "conditional": true,
+          "conditionNote": "Venue assumes Argentina win Group J and all preceding knockout rounds. Actual venue may differ."
         }
       },
       "possibleOpponents": {
         "r32": [
           {
-            "group": "H",
-            "likelyTeam": "Cape Verde",
-            "flag": "🇨🇻",
-            "fifaRank": 62,
-            "difficulty": 1,
+            "group": "C",
+            "likelyTeam": "Morocco",
+            "altTeam": "Haiti",
+            "flag": "🇲🇦",
+            "altFlag": "🇭🇹",
+            "fifaRank": 14,
+            "difficulty": 4,
+            "label": "Tough",
+            "color": "#FB923C",
+            "note": "Morocco (#14) strong. Haiti much easier. Big range of difficulty."
+          },
+          {
+            "group": "E",
+            "likelyTeam": "Ivory Coast",
+            "altTeam": "Curaçao",
+            "flag": "🇨🇮",
+            "altFlag": "🇨🇼",
+            "fifaRank": 42,
+            "difficulty": 2,
             "label": "Favorable",
             "color": "#22C55E",
-            "note": "Winner of Group H",
-            "pct": null
+            "note": "Manageable for Argentina."
+          },
+          {
+            "group": "H",
+            "likelyTeam": "Saudi Arabia",
+            "altTeam": "Uruguay",
+            "flag": "🇸🇦",
+            "altFlag": "🇺🇾",
+            "fifaRank": 55,
+            "difficulty": 2,
+            "label": "Favorable",
+            "color": "#22C55E",
+            "note": "Either manageable for the world champions."
+          },
+          {
+            "group": "I",
+            "likelyTeam": "Senegal",
+            "altTeam": "Iraq",
+            "flag": "🇸🇳",
+            "altFlag": "🇮🇶",
+            "fifaRank": 14,
+            "difficulty": 3,
+            "label": "Moderate",
+            "color": "#F59E0B",
+            "note": "Even Senegal is manageable for Argentina."
           }
         ],
-        "r16": []
+        "r16": [
+          {
+            "opponent": "Portugal",
+            "flag": "🇵🇹",
+            "dPct": 99,
+            "gPct": 60,
+            "pct": 32
+          },
+          {
+            "opponent": "Colombia",
+            "flag": "🇨🇴",
+            "dPct": 99,
+            "gPct": 25,
+            "pct": 14
+          },
+          {
+            "opponent": "DR Congo",
+            "flag": "🇨🇩",
+            "dPct": 99,
+            "gPct": 10,
+            "pct": 6
+          },
+          {
+            "opponent": "Uzbekistan",
+            "flag": "🇺🇿",
+            "dPct": 99,
+            "gPct": 5,
+            "pct": 3
+          }
+        ]
       }
     },
     {
@@ -5774,8 +6211,8 @@
           "status": "active",
           "city": "Kansas City",
           "venue": "Various venues",
-          "date": "Jun 16–27",
-          "detail": "0pts after MD0"
+          "date": "Jun 16–Jun 27",
+          "detail": "Group J"
         },
         "r32": {
           "status": "upcoming",
@@ -5783,7 +6220,9 @@
           "date": "2026-06-28",
           "city": "Mexico City",
           "venue": "Estadio Azteca",
-          "opponentDesc": "Best 3rd from C/E/F/H/I"
+          "opponentDesc": "Best 3rd from C/E/F/H/I",
+          "conditional": true,
+          "conditionNote": "Venue assumes Algeria win Group J. Runner-up path leads to a different venue and date."
         },
         "r16": {
           "status": "future",
@@ -5791,7 +6230,9 @@
           "date": "2026-07-05",
           "city": "Guadalajara",
           "venue": "Estadio Guadalajara",
-          "opponentDesc": "Winner Match 79"
+          "opponentDesc": "Winner Match 79",
+          "conditional": true,
+          "conditionNote": "Venue assumes Algeria win Group J and all preceding knockout rounds. Actual venue may differ."
         },
         "qf": {
           "status": "future",
@@ -5799,7 +6240,9 @@
           "date": "2026-07-09",
           "city": "Guadalajara",
           "venue": "Estadio Guadalajara",
-          "opponentDesc": "Winner Match 93"
+          "opponentDesc": "Winner Match 93",
+          "conditional": true,
+          "conditionNote": "Venue assumes Algeria win Group J and all preceding knockout rounds. Actual venue may differ."
         },
         "sf": {
           "status": "future",
@@ -5807,7 +6250,9 @@
           "date": "2026-07-14",
           "city": "Dallas",
           "venue": "AT&T Stadium",
-          "opponentDesc": "Winner QF bracket"
+          "opponentDesc": "Winner QF bracket",
+          "conditional": true,
+          "conditionNote": "Venue assumes Algeria win Group J and all preceding knockout rounds. Actual venue may differ."
         },
         "final": {
           "status": "future",
@@ -5815,65 +6260,62 @@
           "date": "2026-07-19",
           "city": "New Jersey",
           "venue": "MetLife Stadium",
-          "opponentDesc": "Winner other SF"
+          "opponentDesc": "Winner other SF",
+          "conditional": true,
+          "conditionNote": "Venue assumes Algeria win Group J and all preceding knockout rounds. Actual venue may differ."
         }
       },
       "possibleOpponents": {
         "r32": [
           {
             "group": "C",
-            "likelyTeam": "Brazil",
-            "flag": "🇧🇷",
-            "fifaRank": 4,
-            "difficulty": 5,
-            "label": "Danger",
-            "color": "#EF4444",
-            "note": "3rd-place team from Group C",
-            "pct": null
+            "likelyTeam": "TBD",
+            "flag": "🏳️",
+            "fifaRank": 50,
+            "difficulty": 3,
+            "label": "Moderate",
+            "color": "#F59E0B",
+            "note": "3rd-place team from Group C"
           },
           {
             "group": "E",
-            "likelyTeam": "Ecuador",
-            "flag": "🇪🇨",
-            "fifaRank": 23,
+            "likelyTeam": "TBD",
+            "flag": "🏳️",
+            "fifaRank": 50,
             "difficulty": 3,
             "label": "Moderate",
             "color": "#F59E0B",
-            "note": "3rd-place team from Group E",
-            "pct": null
+            "note": "3rd-place team from Group E"
           },
           {
             "group": "F",
-            "likelyTeam": "Netherlands",
-            "flag": "🇳🇱",
-            "fifaRank": 7,
-            "difficulty": 5,
-            "label": "Danger",
-            "color": "#EF4444",
-            "note": "3rd-place team from Group F",
-            "pct": null
-          },
-          {
-            "group": "H",
-            "likelyTeam": "Saudi Arabia",
-            "flag": "🇸🇦",
-            "fifaRank": 55,
-            "difficulty": 2,
-            "label": "Favorable",
-            "color": "#22C55E",
-            "note": "3rd-place team from Group H",
-            "pct": null
-          },
-          {
-            "group": "I",
-            "likelyTeam": "Norway",
-            "flag": "🇳🇴",
-            "fifaRank": 31,
+            "likelyTeam": "TBD",
+            "flag": "🏳️",
+            "fifaRank": 50,
             "difficulty": 3,
             "label": "Moderate",
             "color": "#F59E0B",
-            "note": "3rd-place team from Group I",
-            "pct": null
+            "note": "3rd-place team from Group F"
+          },
+          {
+            "group": "H",
+            "likelyTeam": "TBD",
+            "flag": "🏳️",
+            "fifaRank": 50,
+            "difficulty": 3,
+            "label": "Moderate",
+            "color": "#F59E0B",
+            "note": "3rd-place team from Group H"
+          },
+          {
+            "group": "I",
+            "likelyTeam": "TBD",
+            "flag": "🏳️",
+            "fifaRank": 50,
+            "difficulty": 3,
+            "label": "Moderate",
+            "color": "#F59E0B",
+            "note": "3rd-place team from Group I"
           }
         ],
         "r16": []
@@ -5934,32 +6376,38 @@
           "status": "active",
           "city": "San Francisco · Los Angeles · Kansas City",
           "venue": "Various venues",
-          "date": "Jun 16–27",
-          "detail": "0pts after MD0"
+          "date": "Jun 16–Jun 27",
+          "detail": "Group J"
         },
         "r32": {
           "status": "upcoming",
-          "match": 84,
-          "date": "2026-07-02",
-          "city": "Los Angeles",
-          "venue": "SoFi Stadium",
-          "opponentDesc": "Winner Group H"
+          "match": 79,
+          "date": "2026-06-28",
+          "city": "Mexico City",
+          "venue": "Estadio Azteca",
+          "opponentDesc": "Best 3rd from C/E/F/H/I",
+          "conditional": true,
+          "conditionNote": "Venue assumes Austria win Group J. Runner-up path leads to a different venue and date."
         },
         "r16": {
           "status": "future",
-          "match": 96,
-          "date": "2026-07-07",
-          "city": "Vancouver",
-          "venue": "BC Place",
-          "opponentDesc": "Winner Match 85"
+          "match": 93,
+          "date": "2026-07-05",
+          "city": "Guadalajara",
+          "venue": "Estadio Guadalajara",
+          "opponentDesc": "Winner Match 79",
+          "conditional": true,
+          "conditionNote": "Venue assumes Austria win Group J and all preceding knockout rounds. Actual venue may differ."
         },
         "qf": {
           "status": "future",
-          "match": 100,
-          "date": "2026-07-11",
-          "city": "Kansas City",
-          "venue": "Arrowhead Stadium",
-          "opponentDesc": "Winner Match 96"
+          "match": 97,
+          "date": "2026-07-09",
+          "city": "Guadalajara",
+          "venue": "Estadio Guadalajara",
+          "opponentDesc": "Winner Match 93",
+          "conditional": true,
+          "conditionNote": "Venue assumes Austria win Group J and all preceding knockout rounds. Actual venue may differ."
         },
         "sf": {
           "status": "future",
@@ -5967,7 +6415,9 @@
           "date": "2026-07-14",
           "city": "Dallas",
           "venue": "AT&T Stadium",
-          "opponentDesc": "Winner QF bracket"
+          "opponentDesc": "Winner QF bracket",
+          "conditional": true,
+          "conditionNote": "Venue assumes Austria win Group J and all preceding knockout rounds. Actual venue may differ."
         },
         "final": {
           "status": "future",
@@ -5975,21 +6425,62 @@
           "date": "2026-07-19",
           "city": "New Jersey",
           "venue": "MetLife Stadium",
-          "opponentDesc": "Winner other SF"
+          "opponentDesc": "Winner other SF",
+          "conditional": true,
+          "conditionNote": "Venue assumes Austria win Group J and all preceding knockout rounds. Actual venue may differ."
         }
       },
       "possibleOpponents": {
         "r32": [
           {
+            "group": "C",
+            "likelyTeam": "TBD",
+            "flag": "🏳️",
+            "fifaRank": 50,
+            "difficulty": 3,
+            "label": "Moderate",
+            "color": "#F59E0B",
+            "note": "3rd-place team from Group C"
+          },
+          {
+            "group": "E",
+            "likelyTeam": "TBD",
+            "flag": "🏳️",
+            "fifaRank": 50,
+            "difficulty": 3,
+            "label": "Moderate",
+            "color": "#F59E0B",
+            "note": "3rd-place team from Group E"
+          },
+          {
+            "group": "F",
+            "likelyTeam": "TBD",
+            "flag": "🏳️",
+            "fifaRank": 50,
+            "difficulty": 3,
+            "label": "Moderate",
+            "color": "#F59E0B",
+            "note": "3rd-place team from Group F"
+          },
+          {
             "group": "H",
-            "likelyTeam": "Cape Verde",
-            "flag": "🇨🇻",
-            "fifaRank": 62,
-            "difficulty": 1,
-            "label": "Favorable",
-            "color": "#22C55E",
-            "note": "Winner of Group H",
-            "pct": null
+            "likelyTeam": "TBD",
+            "flag": "🏳️",
+            "fifaRank": 50,
+            "difficulty": 3,
+            "label": "Moderate",
+            "color": "#F59E0B",
+            "note": "3rd-place team from Group H"
+          },
+          {
+            "group": "I",
+            "likelyTeam": "TBD",
+            "flag": "🏳️",
+            "fifaRank": 50,
+            "difficulty": 3,
+            "label": "Moderate",
+            "color": "#F59E0B",
+            "note": "3rd-place team from Group I"
           }
         ],
         "r16": []
@@ -6050,32 +6541,38 @@
           "status": "active",
           "city": "San Francisco · Kansas City · Dallas",
           "venue": "Various venues",
-          "date": "Jun 16–27",
-          "detail": "0pts after MD0"
+          "date": "Jun 16–Jun 27",
+          "detail": "Group J"
         },
         "r32": {
           "status": "upcoming",
-          "match": 84,
-          "date": "2026-07-02",
-          "city": "Los Angeles",
-          "venue": "SoFi Stadium",
-          "opponentDesc": "Winner Group H"
+          "match": 79,
+          "date": "2026-06-28",
+          "city": "Mexico City",
+          "venue": "Estadio Azteca",
+          "opponentDesc": "Best 3rd from C/E/F/H/I",
+          "conditional": true,
+          "conditionNote": "Venue assumes Jordan win Group J. Runner-up path leads to a different venue and date."
         },
         "r16": {
           "status": "future",
-          "match": 96,
-          "date": "2026-07-07",
-          "city": "Vancouver",
-          "venue": "BC Place",
-          "opponentDesc": "Winner Match 85"
+          "match": 93,
+          "date": "2026-07-05",
+          "city": "Guadalajara",
+          "venue": "Estadio Guadalajara",
+          "opponentDesc": "Winner Match 79",
+          "conditional": true,
+          "conditionNote": "Venue assumes Jordan win Group J and all preceding knockout rounds. Actual venue may differ."
         },
         "qf": {
           "status": "future",
-          "match": 100,
-          "date": "2026-07-11",
-          "city": "Kansas City",
-          "venue": "Arrowhead Stadium",
-          "opponentDesc": "Winner Match 96"
+          "match": 97,
+          "date": "2026-07-09",
+          "city": "Guadalajara",
+          "venue": "Estadio Guadalajara",
+          "opponentDesc": "Winner Match 93",
+          "conditional": true,
+          "conditionNote": "Venue assumes Jordan win Group J and all preceding knockout rounds. Actual venue may differ."
         },
         "sf": {
           "status": "future",
@@ -6083,7 +6580,9 @@
           "date": "2026-07-14",
           "city": "Dallas",
           "venue": "AT&T Stadium",
-          "opponentDesc": "Winner QF bracket"
+          "opponentDesc": "Winner QF bracket",
+          "conditional": true,
+          "conditionNote": "Venue assumes Jordan win Group J and all preceding knockout rounds. Actual venue may differ."
         },
         "final": {
           "status": "future",
@@ -6091,21 +6590,62 @@
           "date": "2026-07-19",
           "city": "New Jersey",
           "venue": "MetLife Stadium",
-          "opponentDesc": "Winner other SF"
+          "opponentDesc": "Winner other SF",
+          "conditional": true,
+          "conditionNote": "Venue assumes Jordan win Group J and all preceding knockout rounds. Actual venue may differ."
         }
       },
       "possibleOpponents": {
         "r32": [
           {
+            "group": "C",
+            "likelyTeam": "TBD",
+            "flag": "🏳️",
+            "fifaRank": 50,
+            "difficulty": 3,
+            "label": "Moderate",
+            "color": "#F59E0B",
+            "note": "3rd-place team from Group C"
+          },
+          {
+            "group": "E",
+            "likelyTeam": "TBD",
+            "flag": "🏳️",
+            "fifaRank": 50,
+            "difficulty": 3,
+            "label": "Moderate",
+            "color": "#F59E0B",
+            "note": "3rd-place team from Group E"
+          },
+          {
+            "group": "F",
+            "likelyTeam": "TBD",
+            "flag": "🏳️",
+            "fifaRank": 50,
+            "difficulty": 3,
+            "label": "Moderate",
+            "color": "#F59E0B",
+            "note": "3rd-place team from Group F"
+          },
+          {
             "group": "H",
-            "likelyTeam": "Cape Verde",
-            "flag": "🇨🇻",
-            "fifaRank": 62,
-            "difficulty": 1,
-            "label": "Favorable",
-            "color": "#22C55E",
-            "note": "Winner of Group H",
-            "pct": null
+            "likelyTeam": "TBD",
+            "flag": "🏳️",
+            "fifaRank": 50,
+            "difficulty": 3,
+            "label": "Moderate",
+            "color": "#F59E0B",
+            "note": "3rd-place team from Group H"
+          },
+          {
+            "group": "I",
+            "likelyTeam": "TBD",
+            "flag": "🏳️",
+            "fifaRank": 50,
+            "difficulty": 3,
+            "label": "Moderate",
+            "color": "#F59E0B",
+            "note": "3rd-place team from Group I"
           }
         ],
         "r16": []
@@ -6166,32 +6706,38 @@
           "status": "active",
           "city": "Houston · Miami",
           "venue": "Various venues",
-          "date": "Jun 17–27",
-          "detail": "0pts after MD0"
+          "date": "Jun 17–Jun 27",
+          "detail": "Group K"
         },
         "r32": {
           "status": "upcoming",
-          "match": 83,
+          "match": 80,
           "date": "2026-06-29",
-          "city": "Toronto",
-          "venue": "BMO Field",
-          "opponentDesc": "Runner-up Group L"
+          "city": "Atlanta",
+          "venue": "Mercedes-Benz Stadium",
+          "opponentDesc": "Best 3rd from E/H/I/J/K",
+          "conditional": true,
+          "conditionNote": "Venue assumes Portugal win Group K. Runner-up path leads to a different venue and date."
         },
         "r16": {
           "status": "future",
-          "match": 95,
-          "date": "2026-07-07",
-          "city": "Atlanta",
-          "venue": "Mercedes-Benz Stadium",
-          "opponentDesc": "Winner Match 83"
+          "match": 94,
+          "date": "2026-07-06",
+          "city": "Seattle",
+          "venue": "Lumen Field",
+          "opponentDesc": "Winner Match 80",
+          "conditional": true,
+          "conditionNote": "Venue assumes Portugal win Group K and all preceding knockout rounds. Actual venue may differ."
         },
         "qf": {
           "status": "future",
-          "match": 99,
-          "date": "2026-07-11",
-          "city": "Miami",
-          "venue": "Hard Rock Stadium",
-          "opponentDesc": "Winner Match 95"
+          "match": 98,
+          "date": "2026-07-10",
+          "city": "Los Angeles",
+          "venue": "SoFi Stadium",
+          "opponentDesc": "Winner Match 94",
+          "conditional": true,
+          "conditionNote": "Venue assumes Portugal win Group K and all preceding knockout rounds. Actual venue may differ."
         },
         "sf": {
           "status": "future",
@@ -6199,7 +6745,9 @@
           "date": "2026-07-15",
           "city": "Atlanta",
           "venue": "Mercedes-Benz Stadium",
-          "opponentDesc": "Winner QF bracket"
+          "opponentDesc": "Winner QF bracket",
+          "conditional": true,
+          "conditionNote": "Venue assumes Portugal win Group K and all preceding knockout rounds. Actual venue may differ."
         },
         "final": {
           "status": "future",
@@ -6207,24 +6755,92 @@
           "date": "2026-07-19",
           "city": "New Jersey",
           "venue": "MetLife Stadium",
-          "opponentDesc": "Winner other SF"
+          "opponentDesc": "Winner other SF",
+          "conditional": true,
+          "conditionNote": "Venue assumes Portugal win Group K and all preceding knockout rounds. Actual venue may differ."
         }
       },
       "possibleOpponents": {
         "r32": [
           {
-            "group": "L",
-            "likelyTeam": "Ghana",
-            "flag": "🇬🇭",
-            "fifaRank": 60,
-            "difficulty": 1,
+            "group": "E",
+            "likelyTeam": "Ivory Coast",
+            "altTeam": "Curaçao",
+            "flag": "🇨🇮",
+            "altFlag": "🇨🇼",
+            "fifaRank": 42,
+            "difficulty": 2,
             "label": "Favorable",
             "color": "#22C55E",
-            "note": "Runner-up of Group L",
-            "pct": null
+            "note": "Manageable for Portugal."
+          },
+          {
+            "group": "H",
+            "likelyTeam": "Saudi Arabia",
+            "altTeam": "Uruguay",
+            "flag": "🇸🇦",
+            "altFlag": "🇺🇾",
+            "fifaRank": 55,
+            "difficulty": 2,
+            "label": "Favorable",
+            "color": "#22C55E",
+            "note": "Saudi Arabia or Uruguay. Portugal favorites."
+          },
+          {
+            "group": "I",
+            "likelyTeam": "Senegal",
+            "altTeam": "Iraq",
+            "flag": "🇸🇳",
+            "altFlag": "🇮🇶",
+            "fifaRank": 14,
+            "difficulty": 3,
+            "label": "Moderate",
+            "color": "#F59E0B",
+            "note": "Senegal would test Portugal seriously."
+          },
+          {
+            "group": "J",
+            "likelyTeam": "Austria",
+            "altTeam": "Algeria",
+            "flag": "🇦🇹",
+            "altFlag": "🇩🇿",
+            "fifaRank": 24,
+            "difficulty": 3,
+            "label": "Moderate",
+            "color": "#F59E0B",
+            "note": "Austria or Algeria. Either a genuine contest."
           }
         ],
-        "r16": []
+        "r16": [
+          {
+            "opponent": "France",
+            "flag": "🇫🇷",
+            "dPct": 97,
+            "gPct": 55,
+            "pct": 35
+          },
+          {
+            "opponent": "Norway",
+            "flag": "🇳🇴",
+            "dPct": 97,
+            "gPct": 28,
+            "pct": 18
+          },
+          {
+            "opponent": "Senegal",
+            "flag": "🇸🇳",
+            "dPct": 97,
+            "gPct": 12,
+            "pct": 8
+          },
+          {
+            "opponent": "Iraq",
+            "flag": "🇮🇶",
+            "dPct": 97,
+            "gPct": 5,
+            "pct": 3
+          }
+        ]
       }
     },
     {
@@ -6282,8 +6898,8 @@
           "status": "active",
           "city": "Houston · Mexico City · Atlanta",
           "venue": "Various venues",
-          "date": "Jun 17–27",
-          "detail": "0pts after MD0"
+          "date": "Jun 17–Jun 27",
+          "detail": "Group K"
         },
         "r32": {
           "status": "upcoming",
@@ -6291,7 +6907,9 @@
           "date": "2026-06-29",
           "city": "Atlanta",
           "venue": "Mercedes-Benz Stadium",
-          "opponentDesc": "Best 3rd from E/H/I/J/K"
+          "opponentDesc": "Best 3rd from E/H/I/J/K",
+          "conditional": true,
+          "conditionNote": "Venue assumes DR Congo win Group K. Runner-up path leads to a different venue and date."
         },
         "r16": {
           "status": "future",
@@ -6299,7 +6917,9 @@
           "date": "2026-07-06",
           "city": "Seattle",
           "venue": "Lumen Field",
-          "opponentDesc": "Winner Match 80"
+          "opponentDesc": "Winner Match 80",
+          "conditional": true,
+          "conditionNote": "Venue assumes DR Congo win Group K and all preceding knockout rounds. Actual venue may differ."
         },
         "qf": {
           "status": "future",
@@ -6307,7 +6927,9 @@
           "date": "2026-07-10",
           "city": "Los Angeles",
           "venue": "SoFi Stadium",
-          "opponentDesc": "Winner Match 94"
+          "opponentDesc": "Winner Match 94",
+          "conditional": true,
+          "conditionNote": "Venue assumes DR Congo win Group K and all preceding knockout rounds. Actual venue may differ."
         },
         "sf": {
           "status": "future",
@@ -6315,7 +6937,9 @@
           "date": "2026-07-15",
           "city": "Atlanta",
           "venue": "Mercedes-Benz Stadium",
-          "opponentDesc": "Winner QF bracket"
+          "opponentDesc": "Winner QF bracket",
+          "conditional": true,
+          "conditionNote": "Venue assumes DR Congo win Group K and all preceding knockout rounds. Actual venue may differ."
         },
         "final": {
           "status": "future",
@@ -6323,65 +6947,62 @@
           "date": "2026-07-19",
           "city": "New Jersey",
           "venue": "MetLife Stadium",
-          "opponentDesc": "Winner other SF"
+          "opponentDesc": "Winner other SF",
+          "conditional": true,
+          "conditionNote": "Venue assumes DR Congo win Group K and all preceding knockout rounds. Actual venue may differ."
         }
       },
       "possibleOpponents": {
         "r32": [
           {
             "group": "E",
-            "likelyTeam": "Ecuador",
-            "flag": "🇪🇨",
-            "fifaRank": 23,
+            "likelyTeam": "TBD",
+            "flag": "🏳️",
+            "fifaRank": 50,
             "difficulty": 3,
             "label": "Moderate",
             "color": "#F59E0B",
-            "note": "3rd-place team from Group E",
-            "pct": null
+            "note": "3rd-place team from Group E"
           },
           {
             "group": "H",
-            "likelyTeam": "Saudi Arabia",
-            "flag": "🇸🇦",
-            "fifaRank": 55,
-            "difficulty": 2,
-            "label": "Favorable",
-            "color": "#22C55E",
-            "note": "3rd-place team from Group H",
-            "pct": null
-          },
-          {
-            "group": "I",
-            "likelyTeam": "Norway",
-            "flag": "🇳🇴",
-            "fifaRank": 31,
+            "likelyTeam": "TBD",
+            "flag": "🏳️",
+            "fifaRank": 50,
             "difficulty": 3,
             "label": "Moderate",
             "color": "#F59E0B",
-            "note": "3rd-place team from Group I",
-            "pct": null
+            "note": "3rd-place team from Group H"
+          },
+          {
+            "group": "I",
+            "likelyTeam": "TBD",
+            "flag": "🏳️",
+            "fifaRank": 50,
+            "difficulty": 3,
+            "label": "Moderate",
+            "color": "#F59E0B",
+            "note": "3rd-place team from Group I"
           },
           {
             "group": "J",
-            "likelyTeam": "Jordan",
-            "flag": "🇯🇴",
-            "fifaRank": 66,
-            "difficulty": 1,
-            "label": "Favorable",
-            "color": "#22C55E",
-            "note": "3rd-place team from Group J",
-            "pct": null
+            "likelyTeam": "TBD",
+            "flag": "🏳️",
+            "fifaRank": 50,
+            "difficulty": 3,
+            "label": "Moderate",
+            "color": "#F59E0B",
+            "note": "3rd-place team from Group J"
           },
           {
             "group": "K",
-            "likelyTeam": "Portugal",
-            "flag": "🇵🇹",
-            "fifaRank": 6,
-            "difficulty": 5,
-            "label": "Danger",
-            "color": "#EF4444",
-            "note": "3rd-place team from Group K",
-            "pct": null
+            "likelyTeam": "TBD",
+            "flag": "🏳️",
+            "fifaRank": 50,
+            "difficulty": 3,
+            "label": "Moderate",
+            "color": "#F59E0B",
+            "note": "3rd-place team from Group K"
           }
         ],
         "r16": []
@@ -6442,32 +7063,38 @@
           "status": "active",
           "city": "Mexico City · Houston · Atlanta",
           "venue": "Various venues",
-          "date": "Jun 17–27",
-          "detail": "0pts after MD0"
+          "date": "Jun 17–Jun 27",
+          "detail": "Group K"
         },
         "r32": {
           "status": "upcoming",
-          "match": 83,
+          "match": 80,
           "date": "2026-06-29",
-          "city": "Toronto",
-          "venue": "BMO Field",
-          "opponentDesc": "Runner-up Group L"
+          "city": "Atlanta",
+          "venue": "Mercedes-Benz Stadium",
+          "opponentDesc": "Best 3rd from E/H/I/J/K",
+          "conditional": true,
+          "conditionNote": "Venue assumes Uzbekistan win Group K. Runner-up path leads to a different venue and date."
         },
         "r16": {
           "status": "future",
-          "match": 95,
-          "date": "2026-07-07",
-          "city": "Atlanta",
-          "venue": "Mercedes-Benz Stadium",
-          "opponentDesc": "Winner Match 83"
+          "match": 94,
+          "date": "2026-07-06",
+          "city": "Seattle",
+          "venue": "Lumen Field",
+          "opponentDesc": "Winner Match 80",
+          "conditional": true,
+          "conditionNote": "Venue assumes Uzbekistan win Group K and all preceding knockout rounds. Actual venue may differ."
         },
         "qf": {
           "status": "future",
-          "match": 99,
-          "date": "2026-07-11",
-          "city": "Miami",
-          "venue": "Hard Rock Stadium",
-          "opponentDesc": "Winner Match 95"
+          "match": 98,
+          "date": "2026-07-10",
+          "city": "Los Angeles",
+          "venue": "SoFi Stadium",
+          "opponentDesc": "Winner Match 94",
+          "conditional": true,
+          "conditionNote": "Venue assumes Uzbekistan win Group K and all preceding knockout rounds. Actual venue may differ."
         },
         "sf": {
           "status": "future",
@@ -6475,7 +7102,9 @@
           "date": "2026-07-15",
           "city": "Atlanta",
           "venue": "Mercedes-Benz Stadium",
-          "opponentDesc": "Winner QF bracket"
+          "opponentDesc": "Winner QF bracket",
+          "conditional": true,
+          "conditionNote": "Venue assumes Uzbekistan win Group K and all preceding knockout rounds. Actual venue may differ."
         },
         "final": {
           "status": "future",
@@ -6483,21 +7112,62 @@
           "date": "2026-07-19",
           "city": "New Jersey",
           "venue": "MetLife Stadium",
-          "opponentDesc": "Winner other SF"
+          "opponentDesc": "Winner other SF",
+          "conditional": true,
+          "conditionNote": "Venue assumes Uzbekistan win Group K and all preceding knockout rounds. Actual venue may differ."
         }
       },
       "possibleOpponents": {
         "r32": [
           {
-            "group": "L",
-            "likelyTeam": "Ghana",
-            "flag": "🇬🇭",
-            "fifaRank": 60,
-            "difficulty": 1,
-            "label": "Favorable",
-            "color": "#22C55E",
-            "note": "Runner-up of Group L",
-            "pct": null
+            "group": "E",
+            "likelyTeam": "TBD",
+            "flag": "🏳️",
+            "fifaRank": 50,
+            "difficulty": 3,
+            "label": "Moderate",
+            "color": "#F59E0B",
+            "note": "3rd-place team from Group E"
+          },
+          {
+            "group": "H",
+            "likelyTeam": "TBD",
+            "flag": "🏳️",
+            "fifaRank": 50,
+            "difficulty": 3,
+            "label": "Moderate",
+            "color": "#F59E0B",
+            "note": "3rd-place team from Group H"
+          },
+          {
+            "group": "I",
+            "likelyTeam": "TBD",
+            "flag": "🏳️",
+            "fifaRank": 50,
+            "difficulty": 3,
+            "label": "Moderate",
+            "color": "#F59E0B",
+            "note": "3rd-place team from Group I"
+          },
+          {
+            "group": "J",
+            "likelyTeam": "TBD",
+            "flag": "🏳️",
+            "fifaRank": 50,
+            "difficulty": 3,
+            "label": "Moderate",
+            "color": "#F59E0B",
+            "note": "3rd-place team from Group J"
+          },
+          {
+            "group": "K",
+            "likelyTeam": "TBD",
+            "flag": "🏳️",
+            "fifaRank": 50,
+            "difficulty": 3,
+            "label": "Moderate",
+            "color": "#F59E0B",
+            "note": "3rd-place team from Group K"
           }
         ],
         "r16": []
@@ -6558,32 +7228,38 @@
           "status": "active",
           "city": "Mexico City · Miami",
           "venue": "Various venues",
-          "date": "Jun 17–27",
-          "detail": "0pts after MD0"
+          "date": "Jun 17–Jun 27",
+          "detail": "Group K"
         },
         "r32": {
           "status": "upcoming",
-          "match": 83,
+          "match": 80,
           "date": "2026-06-29",
-          "city": "Toronto",
-          "venue": "BMO Field",
-          "opponentDesc": "Runner-up Group L"
+          "city": "Atlanta",
+          "venue": "Mercedes-Benz Stadium",
+          "opponentDesc": "Best 3rd from E/H/I/J/K",
+          "conditional": true,
+          "conditionNote": "Venue assumes Colombia win Group K. Runner-up path leads to a different venue and date."
         },
         "r16": {
           "status": "future",
-          "match": 95,
-          "date": "2026-07-07",
-          "city": "Atlanta",
-          "venue": "Mercedes-Benz Stadium",
-          "opponentDesc": "Winner Match 83"
+          "match": 94,
+          "date": "2026-07-06",
+          "city": "Seattle",
+          "venue": "Lumen Field",
+          "opponentDesc": "Winner Match 80",
+          "conditional": true,
+          "conditionNote": "Venue assumes Colombia win Group K and all preceding knockout rounds. Actual venue may differ."
         },
         "qf": {
           "status": "future",
-          "match": 99,
-          "date": "2026-07-11",
-          "city": "Miami",
-          "venue": "Hard Rock Stadium",
-          "opponentDesc": "Winner Match 95"
+          "match": 98,
+          "date": "2026-07-10",
+          "city": "Los Angeles",
+          "venue": "SoFi Stadium",
+          "opponentDesc": "Winner Match 94",
+          "conditional": true,
+          "conditionNote": "Venue assumes Colombia win Group K and all preceding knockout rounds. Actual venue may differ."
         },
         "sf": {
           "status": "future",
@@ -6591,7 +7267,9 @@
           "date": "2026-07-15",
           "city": "Atlanta",
           "venue": "Mercedes-Benz Stadium",
-          "opponentDesc": "Winner QF bracket"
+          "opponentDesc": "Winner QF bracket",
+          "conditional": true,
+          "conditionNote": "Venue assumes Colombia win Group K and all preceding knockout rounds. Actual venue may differ."
         },
         "final": {
           "status": "future",
@@ -6599,21 +7277,62 @@
           "date": "2026-07-19",
           "city": "New Jersey",
           "venue": "MetLife Stadium",
-          "opponentDesc": "Winner other SF"
+          "opponentDesc": "Winner other SF",
+          "conditional": true,
+          "conditionNote": "Venue assumes Colombia win Group K and all preceding knockout rounds. Actual venue may differ."
         }
       },
       "possibleOpponents": {
         "r32": [
           {
-            "group": "L",
-            "likelyTeam": "Ghana",
-            "flag": "🇬🇭",
-            "fifaRank": 60,
-            "difficulty": 1,
-            "label": "Favorable",
-            "color": "#22C55E",
-            "note": "Runner-up of Group L",
-            "pct": null
+            "group": "E",
+            "likelyTeam": "TBD",
+            "flag": "🏳️",
+            "fifaRank": 50,
+            "difficulty": 3,
+            "label": "Moderate",
+            "color": "#F59E0B",
+            "note": "3rd-place team from Group E"
+          },
+          {
+            "group": "H",
+            "likelyTeam": "TBD",
+            "flag": "🏳️",
+            "fifaRank": 50,
+            "difficulty": 3,
+            "label": "Moderate",
+            "color": "#F59E0B",
+            "note": "3rd-place team from Group H"
+          },
+          {
+            "group": "I",
+            "likelyTeam": "TBD",
+            "flag": "🏳️",
+            "fifaRank": 50,
+            "difficulty": 3,
+            "label": "Moderate",
+            "color": "#F59E0B",
+            "note": "3rd-place team from Group I"
+          },
+          {
+            "group": "J",
+            "likelyTeam": "TBD",
+            "flag": "🏳️",
+            "fifaRank": 50,
+            "difficulty": 3,
+            "label": "Moderate",
+            "color": "#F59E0B",
+            "note": "3rd-place team from Group J"
+          },
+          {
+            "group": "K",
+            "likelyTeam": "TBD",
+            "flag": "🏳️",
+            "fifaRank": 50,
+            "difficulty": 3,
+            "label": "Moderate",
+            "color": "#F59E0B",
+            "note": "3rd-place team from Group K"
           }
         ],
         "r16": []
@@ -6674,8 +7393,8 @@
           "status": "active",
           "city": "Dallas · Philadelphia · New Jersey",
           "venue": "Various venues",
-          "date": "Jun 17–27",
-          "detail": "0pts after MD0"
+          "date": "Jun 17–Jun 27",
+          "detail": "Group L"
         },
         "r32": {
           "status": "upcoming",
@@ -6683,7 +7402,9 @@
           "date": "2026-06-29",
           "city": "Toronto",
           "venue": "BMO Field",
-          "opponentDesc": "Runner-up Group K"
+          "opponentDesc": "Runner-up Group K",
+          "conditional": true,
+          "conditionNote": "Venue assumes England win Group L. Runner-up path leads to a different venue and date."
         },
         "r16": {
           "status": "future",
@@ -6691,7 +7412,9 @@
           "date": "2026-07-07",
           "city": "Atlanta",
           "venue": "Mercedes-Benz Stadium",
-          "opponentDesc": "Winner Match 83"
+          "opponentDesc": "Winner Match 83",
+          "conditional": true,
+          "conditionNote": "Venue assumes England win Group L and all preceding knockout rounds. Actual venue may differ."
         },
         "qf": {
           "status": "future",
@@ -6699,7 +7422,9 @@
           "date": "2026-07-11",
           "city": "Miami",
           "venue": "Hard Rock Stadium",
-          "opponentDesc": "Winner Match 95"
+          "opponentDesc": "Winner Match 95",
+          "conditional": true,
+          "conditionNote": "Venue assumes England win Group L and all preceding knockout rounds. Actual venue may differ."
         },
         "sf": {
           "status": "future",
@@ -6707,7 +7432,9 @@
           "date": "2026-07-15",
           "city": "Atlanta",
           "venue": "Mercedes-Benz Stadium",
-          "opponentDesc": "Winner QF bracket"
+          "opponentDesc": "Winner QF bracket",
+          "conditional": true,
+          "conditionNote": "Venue assumes England win Group L and all preceding knockout rounds. Actual venue may differ."
         },
         "final": {
           "status": "future",
@@ -6715,24 +7442,68 @@
           "date": "2026-07-19",
           "city": "New Jersey",
           "venue": "MetLife Stadium",
-          "opponentDesc": "Winner other SF"
+          "opponentDesc": "Winner other SF",
+          "conditional": true,
+          "conditionNote": "Venue assumes England win Group L and all preceding knockout rounds. Actual venue may differ."
         }
       },
       "possibleOpponents": {
         "r32": [
           {
             "group": "K",
+            "likelyTeam": "DR Congo",
+            "altTeam": "Uzbekistan",
+            "flag": "🇨🇩",
+            "altFlag": "🇺🇿",
+            "fifaRank": 56,
+            "difficulty": 2,
+            "label": "Favorable",
+            "color": "#22C55E",
+            "note": "If England finish 1st: likely 3rd-place from K pool. DR Congo probable. Colombia possible if they slip."
+          },
+          {
+            "group": "K",
             "likelyTeam": "Colombia",
+            "altTeam": "Portugal",
             "flag": "🇨🇴",
+            "altFlag": "🇵🇹",
             "fifaRank": 13,
             "difficulty": 4,
             "label": "Tough",
             "color": "#FB923C",
-            "note": "Runner-up of Group K",
-            "pct": null
+            "note": "If England finish 2nd: face runner-up Group K — likely Colombia or Portugal. Much harder draw."
           }
         ],
-        "r16": []
+        "r16": [
+          {
+            "opponent": "Argentina",
+            "flag": "🇦🇷",
+            "dPct": 97,
+            "gPct": 55,
+            "pct": 28
+          },
+          {
+            "opponent": "Algeria",
+            "flag": "🇩🇿",
+            "dPct": 97,
+            "gPct": 25,
+            "pct": 14
+          },
+          {
+            "opponent": "Austria",
+            "flag": "🇦🇹",
+            "dPct": 97,
+            "gPct": 15,
+            "pct": 9
+          },
+          {
+            "opponent": "Jordan",
+            "flag": "🇯🇴",
+            "dPct": 97,
+            "gPct": 5,
+            "pct": 4
+          }
+        ]
       }
     },
     {
@@ -6790,32 +7561,38 @@
           "status": "active",
           "city": "Dallas · Toronto · Philadelphia",
           "venue": "Various venues",
-          "date": "Jun 17–27",
-          "detail": "0pts after MD0"
+          "date": "Jun 17–Jun 27",
+          "detail": "Group L"
         },
         "r32": {
           "status": "upcoming",
-          "match": 80,
+          "match": 83,
           "date": "2026-06-29",
-          "city": "Atlanta",
-          "venue": "Mercedes-Benz Stadium",
-          "opponentDesc": "Winner Group K"
+          "city": "Toronto",
+          "venue": "BMO Field",
+          "opponentDesc": "Runner-up Group K",
+          "conditional": true,
+          "conditionNote": "Venue assumes Croatia win Group L. Runner-up path leads to a different venue and date."
         },
         "r16": {
           "status": "future",
-          "match": 94,
-          "date": "2026-07-06",
-          "city": "Seattle",
-          "venue": "Lumen Field",
-          "opponentDesc": "Winner Match 80"
+          "match": 95,
+          "date": "2026-07-07",
+          "city": "Atlanta",
+          "venue": "Mercedes-Benz Stadium",
+          "opponentDesc": "Winner Match 83",
+          "conditional": true,
+          "conditionNote": "Venue assumes Croatia win Group L and all preceding knockout rounds. Actual venue may differ."
         },
         "qf": {
           "status": "future",
-          "match": 98,
-          "date": "2026-07-10",
-          "city": "Los Angeles",
-          "venue": "SoFi Stadium",
-          "opponentDesc": "Winner Match 94"
+          "match": 99,
+          "date": "2026-07-11",
+          "city": "Miami",
+          "venue": "Hard Rock Stadium",
+          "opponentDesc": "Winner Match 95",
+          "conditional": true,
+          "conditionNote": "Venue assumes Croatia win Group L and all preceding knockout rounds. Actual venue may differ."
         },
         "sf": {
           "status": "future",
@@ -6823,7 +7600,9 @@
           "date": "2026-07-15",
           "city": "Atlanta",
           "venue": "Mercedes-Benz Stadium",
-          "opponentDesc": "Winner QF bracket"
+          "opponentDesc": "Winner QF bracket",
+          "conditional": true,
+          "conditionNote": "Venue assumes Croatia win Group L and all preceding knockout rounds. Actual venue may differ."
         },
         "final": {
           "status": "future",
@@ -6831,21 +7610,32 @@
           "date": "2026-07-19",
           "city": "New Jersey",
           "venue": "MetLife Stadium",
-          "opponentDesc": "Winner other SF"
+          "opponentDesc": "Winner other SF",
+          "conditional": true,
+          "conditionNote": "Venue assumes Croatia win Group L and all preceding knockout rounds. Actual venue may differ."
         }
       },
       "possibleOpponents": {
         "r32": [
           {
             "group": "K",
-            "likelyTeam": "DR Congo",
-            "flag": "🇨🇩",
-            "fifaRank": 56,
-            "difficulty": 1,
-            "label": "Favorable",
-            "color": "#22C55E",
-            "note": "Winner of Group K",
-            "pct": null
+            "likelyTeam": "TBD",
+            "flag": "🏳️",
+            "fifaRank": 50,
+            "difficulty": 3,
+            "label": "Moderate",
+            "color": "#F59E0B",
+            "note": "3rd-place team from Group K"
+          },
+          {
+            "group": "L",
+            "likelyTeam": "TBD",
+            "flag": "🏳️",
+            "fifaRank": 50,
+            "difficulty": 3,
+            "label": "Moderate",
+            "color": "#F59E0B",
+            "note": "3rd-place team from Group L"
           }
         ],
         "r16": []
@@ -6906,32 +7696,38 @@
           "status": "active",
           "city": "Toronto · Philadelphia",
           "venue": "Various venues",
-          "date": "Jun 17–27",
-          "detail": "0pts after MD0"
+          "date": "Jun 17–Jun 27",
+          "detail": "Group L"
         },
         "r32": {
           "status": "upcoming",
-          "match": 80,
+          "match": 83,
           "date": "2026-06-29",
-          "city": "Atlanta",
-          "venue": "Mercedes-Benz Stadium",
-          "opponentDesc": "Winner Group K"
+          "city": "Toronto",
+          "venue": "BMO Field",
+          "opponentDesc": "Runner-up Group K",
+          "conditional": true,
+          "conditionNote": "Venue assumes Ghana win Group L. Runner-up path leads to a different venue and date."
         },
         "r16": {
           "status": "future",
-          "match": 94,
-          "date": "2026-07-06",
-          "city": "Seattle",
-          "venue": "Lumen Field",
-          "opponentDesc": "Winner Match 80"
+          "match": 95,
+          "date": "2026-07-07",
+          "city": "Atlanta",
+          "venue": "Mercedes-Benz Stadium",
+          "opponentDesc": "Winner Match 83",
+          "conditional": true,
+          "conditionNote": "Venue assumes Ghana win Group L and all preceding knockout rounds. Actual venue may differ."
         },
         "qf": {
           "status": "future",
-          "match": 98,
-          "date": "2026-07-10",
-          "city": "Los Angeles",
-          "venue": "SoFi Stadium",
-          "opponentDesc": "Winner Match 94"
+          "match": 99,
+          "date": "2026-07-11",
+          "city": "Miami",
+          "venue": "Hard Rock Stadium",
+          "opponentDesc": "Winner Match 95",
+          "conditional": true,
+          "conditionNote": "Venue assumes Ghana win Group L and all preceding knockout rounds. Actual venue may differ."
         },
         "sf": {
           "status": "future",
@@ -6939,7 +7735,9 @@
           "date": "2026-07-15",
           "city": "Atlanta",
           "venue": "Mercedes-Benz Stadium",
-          "opponentDesc": "Winner QF bracket"
+          "opponentDesc": "Winner QF bracket",
+          "conditional": true,
+          "conditionNote": "Venue assumes Ghana win Group L and all preceding knockout rounds. Actual venue may differ."
         },
         "final": {
           "status": "future",
@@ -6947,21 +7745,32 @@
           "date": "2026-07-19",
           "city": "New Jersey",
           "venue": "MetLife Stadium",
-          "opponentDesc": "Winner other SF"
+          "opponentDesc": "Winner other SF",
+          "conditional": true,
+          "conditionNote": "Venue assumes Ghana win Group L and all preceding knockout rounds. Actual venue may differ."
         }
       },
       "possibleOpponents": {
         "r32": [
           {
             "group": "K",
-            "likelyTeam": "DR Congo",
-            "flag": "🇨🇩",
-            "fifaRank": 56,
-            "difficulty": 1,
-            "label": "Favorable",
-            "color": "#22C55E",
-            "note": "Winner of Group K",
-            "pct": null
+            "likelyTeam": "TBD",
+            "flag": "🏳️",
+            "fifaRank": 50,
+            "difficulty": 3,
+            "label": "Moderate",
+            "color": "#F59E0B",
+            "note": "3rd-place team from Group K"
+          },
+          {
+            "group": "L",
+            "likelyTeam": "TBD",
+            "flag": "🏳️",
+            "fifaRank": 50,
+            "difficulty": 3,
+            "label": "Moderate",
+            "color": "#F59E0B",
+            "note": "3rd-place team from Group L"
           }
         ],
         "r16": []
@@ -7022,32 +7831,38 @@
           "status": "active",
           "city": "Toronto · New Jersey",
           "venue": "Various venues",
-          "date": "Jun 17–27",
-          "detail": "0pts after MD0"
+          "date": "Jun 17–Jun 27",
+          "detail": "Group L"
         },
         "r32": {
           "status": "upcoming",
-          "match": 80,
+          "match": 83,
           "date": "2026-06-29",
-          "city": "Atlanta",
-          "venue": "Mercedes-Benz Stadium",
-          "opponentDesc": "Winner Group K"
+          "city": "Toronto",
+          "venue": "BMO Field",
+          "opponentDesc": "Runner-up Group K",
+          "conditional": true,
+          "conditionNote": "Venue assumes Panama win Group L. Runner-up path leads to a different venue and date."
         },
         "r16": {
           "status": "future",
-          "match": 94,
-          "date": "2026-07-06",
-          "city": "Seattle",
-          "venue": "Lumen Field",
-          "opponentDesc": "Winner Match 80"
+          "match": 95,
+          "date": "2026-07-07",
+          "city": "Atlanta",
+          "venue": "Mercedes-Benz Stadium",
+          "opponentDesc": "Winner Match 83",
+          "conditional": true,
+          "conditionNote": "Venue assumes Panama win Group L and all preceding knockout rounds. Actual venue may differ."
         },
         "qf": {
           "status": "future",
-          "match": 98,
-          "date": "2026-07-10",
-          "city": "Los Angeles",
-          "venue": "SoFi Stadium",
-          "opponentDesc": "Winner Match 94"
+          "match": 99,
+          "date": "2026-07-11",
+          "city": "Miami",
+          "venue": "Hard Rock Stadium",
+          "opponentDesc": "Winner Match 95",
+          "conditional": true,
+          "conditionNote": "Venue assumes Panama win Group L and all preceding knockout rounds. Actual venue may differ."
         },
         "sf": {
           "status": "future",
@@ -7055,7 +7870,9 @@
           "date": "2026-07-15",
           "city": "Atlanta",
           "venue": "Mercedes-Benz Stadium",
-          "opponentDesc": "Winner QF bracket"
+          "opponentDesc": "Winner QF bracket",
+          "conditional": true,
+          "conditionNote": "Venue assumes Panama win Group L and all preceding knockout rounds. Actual venue may differ."
         },
         "final": {
           "status": "future",
@@ -7063,21 +7880,32 @@
           "date": "2026-07-19",
           "city": "New Jersey",
           "venue": "MetLife Stadium",
-          "opponentDesc": "Winner other SF"
+          "opponentDesc": "Winner other SF",
+          "conditional": true,
+          "conditionNote": "Venue assumes Panama win Group L and all preceding knockout rounds. Actual venue may differ."
         }
       },
       "possibleOpponents": {
         "r32": [
           {
             "group": "K",
-            "likelyTeam": "DR Congo",
-            "flag": "🇨🇩",
-            "fifaRank": 56,
-            "difficulty": 1,
-            "label": "Favorable",
-            "color": "#22C55E",
-            "note": "Winner of Group K",
-            "pct": null
+            "likelyTeam": "TBD",
+            "flag": "🏳️",
+            "fifaRank": 50,
+            "difficulty": 3,
+            "label": "Moderate",
+            "color": "#F59E0B",
+            "note": "3rd-place team from Group K"
+          },
+          {
+            "group": "L",
+            "likelyTeam": "TBD",
+            "flag": "🏳️",
+            "fifaRank": 50,
+            "difficulty": 3,
+            "label": "Moderate",
+            "color": "#F59E0B",
+            "note": "3rd-place team from Group L"
           }
         ],
         "r16": []
