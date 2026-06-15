@@ -66,7 +66,7 @@ export default function Hero({ team, activeStage, isHistorical }: HeroProps) {
 				<div className={styles.inner}>
 					<p className={styles.eyebrow}>{eyebrow}</p>
 					<h1 id="hero-heading" className={styles.heading}>
-						{!team.eliminated && <><FlagIcon code={team.id} flag={team.flag} name={team.name} />{' '}</>}
+						{!team.eliminated && <><FlagIcon code={team.id} flag={team.flag} name={team.name} size={40} />{' '}</>}
 						{heading}
 					</h1>
 					{!team.eliminated && <p className={styles.subhead}>{subhead}</p>}

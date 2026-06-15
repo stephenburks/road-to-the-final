@@ -61,14 +61,15 @@ interface FlagIconProps {
 	flag?: string
 	name?: string
 	small?: boolean
+	size?: number
 	opponent?: string
 }
 
-export default function FlagIcon({ code, flag, name, small, opponent }: FlagIconProps) {
+export default function FlagIcon({ code, flag, name, small, size: sizeProp, opponent }: FlagIconProps) {
 	const resolvedCode = resolveCode(code, opponent)
 	const iso = ID_TO_ISO[resolvedCode]
 	const tla = ID_TO_TLA[resolvedCode] || ''
-	const size = small ? 16 : 22
+	const size = sizeProp ?? (small ? 16 : 22)
 
 	if (iso) {
 		return (

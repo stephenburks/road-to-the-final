@@ -44,9 +44,9 @@
 .dropdown {
 	position: absolute;
 	right: 0;
-	left: 0;
 	top: calc(100% + 6px);
 	width: 240px;
+	max-width: calc(100vw - 40px);
 	background: #0e0e1e;
 	border: 1px solid var(--purple-b);
 	border-radius: 10px;
@@ -54,12 +54,6 @@
 	box-shadow: 0 16px 40px rgba(0, 0, 0, 0.55);
 	z-index: 300;
 	animation: fadeIn 0.15s ease;
-}
-
-@media (min-width: 445px) {
-	.dropdown {
-		left: auto;
-	}
 }
 
 .search {
