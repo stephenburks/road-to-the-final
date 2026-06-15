@@ -360,6 +360,87 @@ async function fetchMatches() {
   return data.matches;
 }
 
+// ─── ESPN: fetch goal scorer data (free, no auth required) ────────────────────
+const ESPN_TEAM_MAP = {
+	'United States': 'usa', 'Mexico': 'mexico', 'Canada': 'canada',
+	'Brazil': 'brazil', 'Argentina': 'argentina', 'Colombia': 'colombia',
+	'Ecuador': 'ecuador', 'Uruguay': 'uruguay', 'Paraguay': 'paraguay',
+	'Spain': 'spain', 'France': 'france', 'Germany': 'germany',
+	'England': 'england', 'Netherlands': 'netherlands', 'Portugal': 'portugal',
+	'Belgium': 'belgium', 'Switzerland': 'switzerland', 'Croatia': 'croatia',
+	'Austria': 'austria', 'Sweden': 'sweden', 'Norway': 'norway',
+	'Scotland': 'scotland', 'Czechia': 'czechia', 'Türkiye': 'turkey',
+	'Bosnia-Herzegovina': 'bosnia',
+	'Morocco': 'morocco', 'Senegal': 'senegal', 'Egypt': 'egypt',
+	'Ivory Coast': 'ivorycoast', 'Ghana': 'ghana', 'Algeria': 'algeria',
+	'Tunisia': 'tunisia', 'Congo DR': 'drcongo', 'Cape Verde': 'capeverde',
+	'South Africa': 'southafrica',
+	'Japan': 'japan', 'South Korea': 'southkorea', 'Australia': 'australia',
+	'Iran': 'iran', 'Iraq': 'iraq', 'Qatar': 'qatar', 'Jordan': 'jordan',
+	'Saudi Arabia': 'saudiarabia', 'Uzbekistan': 'uzbekistan',
+	'New Zealand': 'newzealand',
+	'Haiti': 'haiti', 'Panama': 'panama', 'Curaçao': 'curacao',
+};
+
+async function fetchESPNScorers(dateFrom, dateTo) {
+	const scorers = {}; // { teamId: [{ name, minute, type, matchStr }] }
+
+	const ESPN_BASE = 'https://site.web.api.espn.com/apis/site/v2/sports/soccer/fifa.world/scoreboard';
+
+	// ESPN only accepts one date at a time, loop through range
+	const start = new Date(dateFrom + 'T00:00:00Z');
+	const end   = new Date(dateTo   + 'T00:00:00Z');
+	const dates = [];
+	for (let d = new Date(start); d <= end; d.setUTCDate(d.getUTCDate() + 1)) {
+		dates.push(d.toISOString().split('T')[0].replace(/-/g, ''));
+	}
+
+	let fetched = 0;
+	for (const date of dates) {
+		const data = await tryFetch(`${ESPN_BASE}?dates=${date}`);
+		if (!data?.events?.length) continue;
+		fetched++;
+
+		for (const event of data.events) {
+			const eventDate = event.date?.split('T')[0];
+			const competitors = event.competitions?.[0]?.competitors || [];
+			const homeTeam = competitors.find(c => c.homeAway === 'home');
+			const awayTeam = competitors.find(c => c.homeAway === 'away');
+			const matchStr = `${homeTeam?.team?.displayName || '?'} vs ${awayTeam?.team?.displayName || '?'}`;
+			const teamIdByEspn = {}; // ESPN team id → our id
+			for (const c of competitors) {
+				const ourId = ESPN_TEAM_MAP[c.team?.displayName];
+				if (ourId) teamIdByEspn[String(c.team?.id)] = ourId;
+			}
+
+			const details = event.competitions?.[0]?.details || [];
+			for (const d of details) {
+				if (!d.scoringPlay) continue;
+				const ourId = teamIdByEspn[String(d.team?.id)];
+				if (!ourId) continue;
+				const athlete = d.athletesInvolved?.[0];
+				if (!athlete?.displayName) continue;
+				const type = d.type?.text || 'Goal';
+				const minute = d.clock?.displayValue || '?';
+				const label = type === 'Own Goal'
+					? `${athlete.displayName} OG ${minute}`
+					: type.includes('Penalty')
+						? `${athlete.displayName} ${minute} (P)`
+						: `${athlete.displayName} ${minute}`;
+
+				if (!scorers[ourId]) scorers[ourId] = [];
+				scorers[ourId].push({ name: athlete.displayName, minute, type, matchStr, label, date: eventDate });
+			}
+		}
+	}
+
+	if (fetched > 0) {
+		const total = Object.values(scorers).reduce((s, arr) => s + arr.length, 0);
+		log(`ESPN: ${total} scorer entries across ${Object.keys(scorers).length} teams (${fetched} dates)`);
+	}
+	return scorers;
+}
+
 // ─── Polymarket: fetch group winner probabilities (Option B — always) ─────────
 // Returns { teamId: pct } across all groups we can find market data for.
 async function fetchPolymarketAll() {
@@ -761,6 +842,29 @@ function validateBracketPaths() {
 	}
 }
 
+// Inject ESPN scorer data into group results
+function injectScorers(groupResults, espnScorers) {
+  if (!espnScorers?.length) return groupResults;
+  const labels = espnScorers.map(s => s.label);
+  let assigned = false;
+  return groupResults.map(gr => {
+    if (gr.scorers?.length > 0) return gr;
+    if (!gr.result) return gr;
+    // Match by date first, fall back to first unresolved match
+    const matchScorers = espnScorers.filter(s => s.date === gr.date);
+    if (matchScorers.length > 0) {
+      assigned = true;
+      return { ...gr, scorers: matchScorers.map(s => s.label) };
+    }
+    // Fallback: first finished match without scorers gets all scorers
+    if (!assigned) {
+      assigned = true;
+      return { ...gr, scorers: labels };
+    }
+    return gr;
+  });
+}
+
 function isSingleGroupDegraded(groupData) {
   if (!groupData?.winProbabilities) return true;
   const total = Object.values(groupData.winProbabilities).reduce((s, v) => s + v, 0);
@@ -785,6 +889,9 @@ async function main() {
   const [rawStandings, allMatches, polyProbs] = hasActive
     ? await Promise.all([fetchStandings(), fetchMatches(), fetchPolymarketAll()])
     : [{}, [], {}];
+
+  // ESPN scorer data — always fetch (independent of football-data API)
+  const espnScorers = await fetchESPNScorers(yesterdayStr(), todayStr());
 
   if (hasActive) {
     if (!Object.keys(rawStandings).length) log('⚠  No standings data returned — API may be unavailable');
@@ -878,14 +985,23 @@ async function main() {
           currentStage: stage,
           path: teamPath,
           possibleOpponents: possibleOpps,
+          groupResults: injectScorers(existingTeam.groupResults || [], espnScorers[t.id]),
         };
       }
-      return { ...existingTeam, eliminated, currentStage: stage };
+      return {
+        ...existingTeam,
+        eliminated,
+        currentStage: stage,
+        groupResults: injectScorers(existingTeam.groupResults || [], espnScorers[t.id]),
+      };
     }
 
     // Full recalculation
     const existingGroupResults = existingTeam?.groupResults || []
-    const groupResults  = buildGroupResults(t.id, t.group, matchIndex, existingGroupResults)
+    const groupResults  = injectScorers(
+      buildGroupResults(t.id, t.group, matchIndex, existingGroupResults),
+      espnScorers[t.id]
+    )
 
     // Preserve existing market-sourced probabilities when Poly is unavailable
     const existingHadMarket = existingTeam?.advanceProbabilities?.source === 'market';
