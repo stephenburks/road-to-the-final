@@ -158,9 +158,7 @@ function MatchCard({ match, teamFlag, teamId, teams }: {
 			{match.result && (
 				<div className={styles.matchEvents}>
 					<div className={styles.eventSide}>
-						<div className={styles.eventTeam}>
-							<FlagIcon code={teamId} flag={teamFlag} small />
-						</div>
+						<div className={styles.eventTeam}>{teamId.toUpperCase()}</div>
 						{match.scorers?.length > 0 && (
 							<ul className={styles.scorers} aria-label={`${teamId} goal scorers`}>
 								{match.scorers.map((s, j) => <li key={j}><span className="emoji" aria-hidden="true">⚽</span> {s}</li>)}
@@ -179,9 +177,7 @@ function MatchCard({ match, teamFlag, teamId, teams }: {
 					</div>
 					{oppMatch && (
 						<div className={styles.eventSide}>
-							<div className={styles.eventTeam}>
-								<FlagIcon flag={match.opponentFlag} small />
-							</div>
+							<div className={styles.eventTeam}>{match.opponent.slice(0, 3).toUpperCase()}</div>
 							{oppMatch.scorers?.length > 0 && (
 								<ul className={styles.scorers} aria-label={`${match.opponent} goal scorers`}>
 									{oppMatch.scorers.map((s, j) => <li key={j}><span className="emoji" aria-hidden="true">⚽</span> {s}</li>)}
