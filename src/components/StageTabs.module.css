@@ -2,8 +2,7 @@
 	overflow-x: auto;
 	max-width: 100%;
 	-webkit-overflow-scrolling: touch;
-	padding-bottom: 6px;
-	padding-top: 6px;
+	padding: 6px;
 	/* Hide scrollbar — momentum scroll still works */
 	scrollbar-width: none;
 }
