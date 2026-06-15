@@ -113,15 +113,20 @@ export function GroupTable({ groupKey, groupData, highlightTeamId }: {
 	)
 }
 
-function MatchCard({ match, teamFlag, teamId }: {
+function MatchCard({ match, teamFlag, teamId, teams }: {
 	match: GroupMatch
 	teamFlag: string
 	teamId: string
+	teams: Team[]
 }) {
 	const badgeStyle = match.result ? BADGE_STYLES[match.result as keyof typeof BADGE_STYLES] : { background: 'rgba(255,255,255,0.06)', color: 'var(--text-dim)' }
 	const isWin = match.result === 'W'
 	const isDraw = match.result === 'D'
 	const resultLabel = match.result ? (RESULT_LABELS[match.result as keyof typeof RESULT_LABELS] ?? 'To be played') : 'To be played'
+
+	// Find opponent's match data for the same matchday
+	const oppTeam = teams?.find(t => t.name === match.opponent)
+	const oppMatch = oppTeam?.groupResults?.find(g => g.matchday === match.matchday)
 
 	return (
 		<div
@@ -150,25 +155,51 @@ function MatchCard({ match, teamFlag, teamId }: {
 				)}
 			</div>
 
-			{match.scorers?.length > 0 && (
-				<ul className={styles.scorers} aria-label="Goal scorers">
-					{match.scorers.map((s, j) => <li key={j}><span className="emoji" aria-hidden="true">⚽</span> {s}</li>)}
-				</ul>
-			)}
-
-			{match.cards?.length > 0 && (
-				<ul className={styles.cards} aria-label="Cards">
-					{match.cards.map((c, j) => (
-						<li key={j}>
-							<span
-								className={styles.cardIndicator}
-								style={{ background: c.type === 'red' ? '#ef4444' : '#eab308' }}
-								aria-hidden="true"
-							/>
-							{c.player} {c.minute}
-						</li>
-					))}
-				</ul>
+			{match.result && (
+				<div className={styles.matchEvents}>
+					<div className={styles.eventSide}>
+						<div className={styles.eventTeam}>
+							<FlagIcon code={teamId} flag={teamFlag} small />
+						</div>
+						{match.scorers?.length > 0 && (
+							<ul className={styles.scorers} aria-label={`${teamId} goal scorers`}>
+								{match.scorers.map((s, j) => <li key={j}><span className="emoji" aria-hidden="true">⚽</span> {s}</li>)}
+							</ul>
+						)}
+						{match.cards?.length > 0 && (
+							<ul className={styles.cards} aria-label={`${teamId} cards`}>
+								{match.cards.map((c, j) => (
+									<li key={j}>
+										<span className={styles.cardIndicator} style={{ background: c.type === 'red' ? '#ef4444' : '#eab308' }} aria-hidden="true" />
+										{c.player} {c.minute}
+									</li>
+								))}
+							</ul>
+						)}
+					</div>
+					{oppMatch && (
+						<div className={styles.eventSide}>
+							<div className={styles.eventTeam}>
+								<FlagIcon flag={match.opponentFlag} small />
+							</div>
+							{oppMatch.scorers?.length > 0 && (
+								<ul className={styles.scorers} aria-label={`${match.opponent} goal scorers`}>
+									{oppMatch.scorers.map((s, j) => <li key={j}><span className="emoji" aria-hidden="true">⚽</span> {s}</li>)}
+								</ul>
+							)}
+							{oppMatch.cards?.length > 0 && (
+								<ul className={styles.cards} aria-label={`${match.opponent} cards`}>
+									{oppMatch.cards.map((c, j) => (
+										<li key={j}>
+											<span className={styles.cardIndicator} style={{ background: c.type === 'red' ? '#ef4444' : '#eab308' }} aria-hidden="true" />
+											{c.player} {c.minute}
+										</li>
+									))}
+								</ul>
+							)}
+						</div>
+					)}
+				</div>
 			)}
 
 			{!match.result && <div className={styles.venue}>{match.venue}</div>}
@@ -240,7 +271,7 @@ export default function GroupStage({ team, data }: { team: Team; data: AppData }
 
 			<div className={styles.matchGrid}>
 				{(team.groupResults ?? []).map((match, i) => (
-					<MatchCard key={i} match={match} teamFlag={team.flag} teamId={team.id} />
+					<MatchCard key={i} match={match} teamFlag={team.flag} teamId={team.id} teams={data.teams} />
 				))}
 			</div>
 		</section>
