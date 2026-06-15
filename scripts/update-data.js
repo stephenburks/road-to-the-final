@@ -780,15 +780,29 @@ async function main() {
     if (hId && aId) matchIndex.set(`${hId}:${aId}`, m);
   }
 
-  // Build group data
+  // Build group data — carry forward existing on quiet days
   const groupsData = {};
-  for (const g of 'ABCDEFGHIJKL'.split('')) {
-    const standArr = buildGroupStandings(g, rawStandings);
-    const winProbs = {};
-    standArr.forEach(s => {
-      winProbs[s.teamId] = polyProbs[s.teamId] ?? calcProbs(s.teamId, g, rawStandings, polyProbs).winner;
-    });
-    groupsData[g] = { standings: standArr, winProbabilities: winProbs };
+  if (hasActive && Object.keys(rawStandings).length > 0) {
+    for (const g of 'ABCDEFGHIJKL'.split('')) {
+      const standArr = buildGroupStandings(g, rawStandings);
+      const winProbs = {};
+      standArr.forEach(s => {
+        winProbs[s.teamId] = polyProbs[s.teamId] ?? calcProbs(s.teamId, g, rawStandings, polyProbs).winner;
+      });
+      groupsData[g] = { standings: standArr, winProbabilities: winProbs };
+    }
+  } else if (existing?.groups) {
+    log('No new standings — carrying forward group data');
+    Object.assign(groupsData, existing.groups);
+  } else {
+    for (const g of 'ABCDEFGHIJKL'.split('')) {
+      const standArr = buildGroupStandings(g, rawStandings);
+      const winProbs = {};
+      standArr.forEach(s => {
+        winProbs[s.teamId] = calcProbs(s.teamId, g, rawStandings, polyProbs).winner;
+      });
+      groupsData[g] = { standings: standArr, winProbabilities: winProbs };
+    }
   }
 
   // Build team data — full recalc for active teams, smart carry-forward for others

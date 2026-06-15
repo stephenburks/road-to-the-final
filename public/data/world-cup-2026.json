@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-15T00:02:21.369Z",
+  "lastUpdated": "2026-06-15T02:49:40.929Z",
   "snapshotDate": "2026-06-15",
   "isHistorical": false,
   "tournament": {
@@ -17,22 +17,22 @@
         "date": "Jun 28–Jul 2"
       },
       "r16": {
-        "status": "future",
+        "status": "upcoming",
         "label": "Round of 16",
         "date": "Jul 4–7"
       },
       "qf": {
-        "status": "future",
+        "status": "upcoming",
         "label": "Quarterfinal",
         "date": "Jul 9–11"
       },
       "sf": {
-        "status": "future",
+        "status": "upcoming",
         "label": "Semifinal",
         "date": "Jul 14–15"
       },
       "final": {
-        "status": "future",
+        "status": "upcoming",
         "label": "The Final",
         "date": "Jul 19"
       }
@@ -99,9 +99,9 @@
         }
       ],
       "winProbabilities": {
-        "mexico": 30,
-        "southkorea": 18,
-        "czechia": 4,
+        "mexico": 0,
+        "southkorea": 0,
+        "czechia": 0,
         "southafrica": 0
       }
     },
@@ -165,9 +165,9 @@
         }
       ],
       "winProbabilities": {
-        "switzerland": 30,
-        "canada": 15,
+        "canada": 0,
         "qatar": 0,
+        "switzerland": 0,
         "bosnia": 0
       }
     },
@@ -231,10 +231,10 @@
         }
       ],
       "winProbabilities": {
-        "scotland": 11,
-        "morocco": 23,
-        "brazil": 14,
-        "haiti": 0
+        "brazil": 0,
+        "haiti": 0,
+        "scotland": 0,
+        "morocco": 0
       }
     },
     "D": {
@@ -297,10 +297,10 @@
         }
       ],
       "winProbabilities": {
-        "usa": 30,
-        "australia": 16,
-        "turkey": 8,
-        "paraguay": 1
+        "usa": 52,
+        "australia": 28,
+        "turkey": 14,
+        "paraguay": 6
       }
     },
     "E": {
@@ -363,9 +363,9 @@
         }
       ],
       "winProbabilities": {
-        "germany": 30,
-        "ecuador": 18,
-        "ivorycoast": 2,
+        "germany": 0,
+        "ivorycoast": 0,
+        "ecuador": 0,
         "curacao": 0
       }
     },
@@ -429,10 +429,10 @@
         }
       ],
       "winProbabilities": {
-        "japan": 30,
-        "netherlands": 28,
-        "sweden": 6,
-        "tunisia": 1
+        "netherlands": 0,
+        "sweden": 0,
+        "tunisia": 0,
+        "japan": 0
       }
     },
     "G": {
@@ -495,10 +495,10 @@
         }
       ],
       "winProbabilities": {
-        "egypt": 16,
-        "belgium": 27,
-        "iran": 9,
-        "newzealand": 0
+        "belgium": 0,
+        "iran": 0,
+        "newzealand": 0,
+        "egypt": 0
       }
     },
     "H": {
@@ -561,10 +561,10 @@
         }
       ],
       "winProbabilities": {
-        "capeverde": 1,
-        "saudiarabia": 1,
-        "spain": 15,
-        "uruguay": 2
+        "spain": 0,
+        "saudiarabia": 0,
+        "uruguay": 0,
+        "capeverde": 0
       }
     },
     "I": {
@@ -627,10 +627,10 @@
         }
       ],
       "winProbabilities": {
-        "france": 30,
-        "iraq": 1,
-        "norway": 6,
-        "senegal": 2
+        "france": 0,
+        "iraq": 0,
+        "norway": 0,
+        "senegal": 0
       }
     },
     "J": {
@@ -693,10 +693,10 @@
         }
       ],
       "winProbabilities": {
-        "algeria": 15,
-        "argentina": 30,
+        "argentina": 0,
+        "austria": 0,
         "jordan": 0,
-        "austria": 1
+        "algeria": 0
       }
     },
     "K": {
@@ -759,10 +759,10 @@
         }
       ],
       "winProbabilities": {
-        "drcongo": 1,
-        "colombia": 24,
-        "portugal": 13,
-        "uzbekistan": 0
+        "portugal": 0,
+        "uzbekistan": 0,
+        "colombia": 0,
+        "drcongo": 0
       }
     },
     "L": {
@@ -825,10 +825,10 @@
         }
       ],
       "winProbabilities": {
-        "england": 30,
-        "ghana": 1,
-        "croatia": 12,
-        "panama": 0
+        "england": 0,
+        "ghana": 0,
+        "panama": 0,
+        "croatia": 0
       }
     }
   },
@@ -2222,7 +2222,9 @@
           "score": "1-1",
           "date": "2026-06-13",
           "venue": "MetLife Stadium, New Jersey",
-          "scorers": []
+          "scorers": [
+            "Vinícius Jr 55'"
+          ]
         },
         {
           "matchday": 2,
@@ -2246,13 +2248,13 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 44,
-        "r16": 24,
-        "qf": 12,
-        "sf": 6,
-        "final": 3,
-        "winner": 14,
-        "source": "calculated"
+        "r32": 96,
+        "r16": 72,
+        "qf": 46,
+        "sf": 26,
+        "final": 14,
+        "winner": 8,
+        "source": "market"
       },
       "path": {
         "group_stage": {
@@ -2338,7 +2340,9 @@
           "score": "1-1",
           "date": "2026-06-13",
           "venue": "MetLife Stadium, New Jersey",
-          "scorers": []
+          "scorers": [
+            "Saibari 22'"
+          ]
         },
         {
           "matchday": 2,
@@ -2362,13 +2366,13 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 84,
-        "r16": 46,
-        "qf": 24,
-        "sf": 12,
-        "final": 6,
-        "winner": 23,
-        "source": "calculated"
+        "r32": 72,
+        "r16": 40,
+        "qf": 22,
+        "sf": 10,
+        "final": 5,
+        "winner": 2,
+        "source": "market"
       },
       "path": {
         "group_stage": {
@@ -2570,7 +2574,9 @@
           "score": "1-0",
           "date": "2026-06-13",
           "venue": "Gillette Stadium, Boston",
-          "scorers": []
+          "scorers": [
+            "McGinn 28'"
+          ]
         },
         {
           "matchday": 2,
@@ -2594,13 +2600,13 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 51,
-        "r16": 28,
-        "qf": 15,
-        "sf": 8,
-        "final": 4,
-        "winner": 11,
-        "source": "calculated"
+        "r32": 78,
+        "r16": 32,
+        "qf": 14,
+        "sf": 6,
+        "final": 2,
+        "winner": 1,
+        "source": "market"
       },
       "path": {
         "group_stage": {
@@ -2730,7 +2736,12 @@
           "score": "4-1",
           "date": "2026-06-12",
           "venue": "SoFi Stadium, Los Angeles",
-          "scorers": []
+          "scorers": [
+            "Bobadilla OG 7'",
+            "Balogun 31'",
+            "Balogun 45+5'",
+            "Reyna 90+8'"
+          ]
         },
         {
           "matchday": 2,
@@ -2754,13 +2765,13 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 99,
-        "r16": 54,
-        "qf": 28,
-        "sf": 14,
-        "final": 7,
-        "winner": 30,
-        "source": "calculated"
+        "r32": 94,
+        "r16": 38,
+        "qf": 22,
+        "sf": 11,
+        "final": 5,
+        "winner": 3,
+        "source": "market"
       },
       "path": {
         "group_stage": {
@@ -2890,7 +2901,9 @@
           "score": "1-4",
           "date": "2026-06-12",
           "venue": "SoFi Stadium, Los Angeles",
-          "scorers": []
+          "scorers": [
+            "Mauricio 73'"
+          ]
         },
         {
           "matchday": 2,
@@ -2914,13 +2927,13 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 8,
-        "r16": 4,
-        "qf": 2,
+        "r32": 30,
+        "r16": 8,
+        "qf": 3,
         "sf": 1,
-        "final": 1,
-        "winner": 1,
-        "source": "calculated"
+        "final": 0,
+        "winner": 0,
+        "source": "market"
       },
       "path": {
         "group_stage": {
@@ -3006,7 +3019,9 @@
           "score": "2-0",
           "date": "2026-06-13",
           "venue": "BC Place, Vancouver",
-          "scorers": []
+          "scorers": [
+            "Irankunda 28'"
+          ]
         },
         {
           "matchday": 2,
@@ -3030,13 +3045,13 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 65,
-        "r16": 36,
-        "qf": 19,
-        "sf": 10,
-        "final": 5,
-        "winner": 16,
-        "source": "calculated"
+        "r32": 82,
+        "r16": 28,
+        "qf": 14,
+        "sf": 6,
+        "final": 3,
+        "winner": 1,
+        "source": "market"
       },
       "path": {
         "group_stage": {
@@ -3146,13 +3161,13 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 27,
-        "r16": 15,
-        "qf": 8,
+        "r32": 55,
+        "r16": 20,
+        "qf": 9,
         "sf": 4,
         "final": 2,
-        "winner": 8,
-        "source": "calculated"
+        "winner": 1,
+        "source": "market"
       },
       "path": {
         "group_stage": {
@@ -3262,13 +3277,13 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 99,
-        "r16": 54,
-        "qf": 28,
-        "sf": 14,
-        "final": 7,
-        "winner": 30,
-        "source": "calculated"
+        "r32": 97,
+        "r16": 70,
+        "qf": 42,
+        "sf": 22,
+        "final": 11,
+        "winner": 6,
+        "source": "market"
       },
       "path": {
         "group_stage": {
@@ -3770,13 +3785,13 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 98,
-        "r16": 54,
-        "qf": 28,
-        "sf": 14,
-        "final": 7,
-        "winner": 28,
-        "source": "calculated"
+        "r32": 96,
+        "r16": 68,
+        "qf": 40,
+        "sf": 20,
+        "final": 10,
+        "winner": 5,
+        "source": "market"
       },
       "path": {
         "group_stage": {
@@ -3886,13 +3901,13 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 99,
-        "r16": 54,
-        "qf": 28,
-        "sf": 14,
-        "final": 7,
-        "winner": 30,
-        "source": "calculated"
+        "r32": 80,
+        "r16": 42,
+        "qf": 20,
+        "sf": 9,
+        "final": 4,
+        "winner": 2,
+        "source": "market"
       },
       "path": {
         "group_stage": {
@@ -4235,12 +4250,12 @@
       ],
       "advanceProbabilities": {
         "r32": 96,
-        "r16": 53,
-        "qf": 28,
-        "sf": 14,
-        "final": 7,
-        "winner": 27,
-        "source": "calculated"
+        "r16": 72,
+        "qf": 44,
+        "sf": 24,
+        "final": 13,
+        "winner": 7,
+        "source": "market"
       },
       "path": {
         "group_stage": {
@@ -4840,13 +4855,13 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 47,
-        "r16": 26,
-        "qf": 14,
-        "sf": 7,
-        "final": 4,
-        "winner": 15,
-        "source": "calculated"
+        "r32": 99,
+        "r16": 86,
+        "qf": 62,
+        "sf": 40,
+        "final": 24,
+        "winner": 14,
+        "source": "market"
       },
       "path": {
         "group_stage": {
