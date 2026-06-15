@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-15T16:28:30.357Z",
+  "lastUpdated": "2026-06-15T20:05:32.162Z",
   "snapshotDate": "2026-06-15",
   "isHistorical": false,
   "tournament": {
@@ -441,32 +441,18 @@
           "pos": 1,
           "teamId": "egypt",
           "team": "Egypt",
-          "played": 0,
-          "w": 0,
+          "played": 1,
+          "w": 1,
           "d": 0,
           "l": 0,
-          "gf": 0,
+          "gf": 1,
           "ga": 0,
-          "gd": 0,
-          "pts": 0,
+          "gd": 1,
+          "pts": 3,
           "flag": "🇪🇬"
         },
         {
           "pos": 2,
-          "teamId": "belgium",
-          "team": "Belgium",
-          "played": 0,
-          "w": 0,
-          "d": 0,
-          "l": 0,
-          "gf": 0,
-          "ga": 0,
-          "gd": 0,
-          "pts": 0,
-          "flag": "🇧🇪"
-        },
-        {
-          "pos": 3,
           "teamId": "iran",
           "team": "Iran",
           "played": 0,
@@ -480,7 +466,7 @@
           "flag": "🇮🇷"
         },
         {
-          "pos": 4,
+          "pos": 3,
           "teamId": "newzealand",
           "team": "New Zealand",
           "played": 0,
@@ -492,13 +478,27 @@
           "gd": 0,
           "pts": 0,
           "flag": "🇳🇿"
+        },
+        {
+          "pos": 4,
+          "teamId": "belgium",
+          "team": "Belgium",
+          "played": 1,
+          "w": 0,
+          "d": 0,
+          "l": 1,
+          "gf": 0,
+          "ga": 1,
+          "gd": -1,
+          "pts": 0,
+          "flag": "🇧🇪"
         }
       ],
       "winProbabilities": {
         "egypt": 16,
-        "belgium": 27,
-        "iran": 9,
-        "newzealand": 0
+        "iran": 19,
+        "newzealand": 0,
+        "belgium": 2
       }
     },
     "H": {
@@ -2085,12 +2085,12 @@
           },
           {
             "group": "G",
-            "likelyTeam": "Iran",
-            "flag": "🇮🇷",
-            "fifaRank": 21,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
+            "likelyTeam": "New Zealand",
+            "flag": "🇳🇿",
+            "fifaRank": 86,
+            "difficulty": 1,
+            "label": "Favorable",
+            "color": "#22C55E",
             "note": "3rd-place team from Group G",
             "pct": null
           },
@@ -4165,12 +4165,12 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 96,
-        "r16": 53,
-        "qf": 28,
-        "sf": 14,
-        "final": 7,
-        "winner": 27,
+        "r32": 11,
+        "r16": 6,
+        "qf": 3,
+        "sf": 2,
+        "final": 1,
+        "winner": 2,
         "source": "calculated"
       },
       "path": {
@@ -4179,7 +4179,7 @@
           "city": "Seattle · Los Angeles · Vancouver",
           "venue": "Various venues",
           "date": "Jun 15–26",
-          "detail": "0pts after MD0"
+          "detail": "0pts after MD1"
         },
         "r32": {
           "status": "upcoming",
@@ -4295,7 +4295,7 @@
           "city": "Seattle · Vancouver",
           "venue": "Various venues",
           "date": "Jun 15–26",
-          "detail": "0pts after MD0"
+          "detail": "3pts after MD1"
         },
         "r32": {
           "status": "upcoming",
@@ -4645,8 +4645,8 @@
           "matchday": 1,
           "opponent": "Cape Verde",
           "opponentFlag": "🇨🇻",
-          "result": null,
-          "score": null,
+          "result": "D",
+          "score": "0-0",
           "date": "2026-06-15",
           "venue": "Mercedes-Benz Stadium, Atlanta",
           "scorers": []
@@ -4761,8 +4761,8 @@
           "matchday": 1,
           "opponent": "Spain",
           "opponentFlag": "🇪🇸",
-          "result": null,
-          "score": null,
+          "result": "D",
+          "score": "0-0",
           "date": "2026-06-15",
           "venue": "Mercedes-Benz Stadium, Atlanta",
           "scorers": []
@@ -5220,12 +5220,12 @@
           },
           {
             "group": "G",
-            "likelyTeam": "Iran",
-            "flag": "🇮🇷",
-            "fifaRank": 21,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
+            "likelyTeam": "New Zealand",
+            "flag": "🇳🇿",
+            "fifaRank": 86,
+            "difficulty": 1,
+            "label": "Favorable",
+            "color": "#22C55E",
             "note": "3rd-place team from Group G",
             "pct": null
           },
