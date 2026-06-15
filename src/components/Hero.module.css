@@ -36,6 +36,16 @@
   margin-bottom: 6px;
 }
 
+.subhead {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: clamp(1.1rem, 2.8vw, 1.65rem);
+  line-height: 1.2;
+  color: #9ca3af;
+  letter-spacing: -0.02em;
+  margin-bottom: 2px;
+}
+
 .subtext {
   font-family: var(--font-display);
   font-weight: 400;

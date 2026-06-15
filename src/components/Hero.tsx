@@ -13,12 +13,18 @@ const STAT_CARDS = [
 
 function getEyebrow(team: Team, activeStage: string, isHistorical: boolean) {
 	if (team.eliminated) return `\u274C ${team.name} \u2014 Eliminated`
-	return `${team.name} \u00B7 ${STAGE_LABELS[activeStage as Stage]}${isHistorical ? ' \u00B7 Historical' : ''}`
+	return `${STAGE_LABELS[activeStage as Stage]}${isHistorical ? ' \u00B7 Historical' : ''}`
 }
 
-function getHeading(team: Team, path: { city?: string } | null | undefined) {
+function getHeading(team: Team) {
 	if (team.eliminated) return 'Journey Ended'
-	return path?.city ?? '\u2014'
+	return team.name
+}
+
+function getSubhead(path: { city?: string; date?: string } | null | undefined) {
+	const city = path?.city ?? '\u2014'
+	const dateSuffix = path?.date?.match(/^\d{4}/) ? `. ${formatDate(path.date)}.` : ''
+	return city + dateSuffix
 }
 
 function getSubtext(team: Team, activeStage: string, days: number | null) {
@@ -45,8 +51,8 @@ export default function Hero({ team, activeStage, isHistorical }: HeroProps) {
 	const sourceLabel = isHistorical ? 'As of snapshot' : source === 'market' ? 'Market estimate' : 'Calculated'
 
 	const eyebrow = getEyebrow(team, activeStage, isHistorical)
-	const heading = getHeading(team, path)
-	const dateSuffix = path?.date?.match(/^\d{4}/) ? `. ${formatDate(path.date)}.` : ''
+	const heading = getHeading(team)
+	const subhead = getSubhead(path)
 	const subtext = getSubtext(team, activeStage, days)
 	const conditionalNote = path?.conditional && !team.eliminated
 		? (path.conditionNote ?? 'Venue assumes current group standing — may change.')
@@ -58,13 +64,12 @@ export default function Hero({ team, activeStage, isHistorical }: HeroProps) {
 				<div className={styles.glow} aria-hidden="true" />
 
 				<div className={styles.inner}>
-					<p className={styles.eyebrow}>
-					{!team.eliminated && <><FlagIcon code={team.id} flag={team.flag} name={team.name} />{' '}</>}
-					{eyebrow}
-				</p>
+					<p className={styles.eyebrow}>{eyebrow}</p>
 					<h1 id="hero-heading" className={styles.heading}>
-						{heading}{dateSuffix}
+						{!team.eliminated && <><FlagIcon code={team.id} flag={team.flag} name={team.name} />{' '}</>}
+						{heading}
 					</h1>
+					{!team.eliminated && <p className={styles.subhead}>{subhead}</p>}
 					<p className={styles.subtext}>{subtext}</p>
 					{conditionalNote && (
 						<p className={styles.conditionalNote} role="note">

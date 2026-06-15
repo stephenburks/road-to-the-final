@@ -18,11 +18,13 @@ import EliminatedView   from './components/ui/EliminatedView'
 
 function HistoricalBanner({ date, label, onGoLive }: { date: string; label: string; onGoLive: () => void }) {
   return (
-    <div role="alert" aria-live="polite" style={{ background:'rgba(245,158,11,0.07)', borderBottom:'1px solid rgba(245,158,11,0.2)', padding:'9px 20px', display:'flex', alignItems:'center', gap:10, fontSize:12, color:'#fcd34d', fontFamily:'var(--font-mono)' }}>
-      <span className="emoji" aria-hidden="true">📅</span> Viewing snapshot from <strong>{label ?? date}</strong> — probabilities reflect that day
-      <button onClick={onGoLive} aria-label="Return to live data" style={{ marginLeft:'auto', padding:'3px 10px', borderRadius:5, border:'1px solid rgba(245,158,11,0.3)', color:'#fcd34d', fontSize:10, fontFamily:'var(--font-mono)', cursor:'pointer', background:'transparent' }}>
-        ← Back to Live
-      </button>
+    <div role="alert" aria-live="polite" style={{ background:'rgba(245,158,11,0.07)', borderBottom:'1px solid rgba(245,158,11,0.2)', fontSize:12, color:'#fcd34d', fontFamily:'var(--font-mono)' }}>
+      <div className="wrap" style={{ padding:'9px 0', display:'flex', alignItems:'center', gap:10, flexWrap:'wrap' }}>
+        <span className="emoji" aria-hidden="true">📅</span> Viewing snapshot from <strong>{label ?? date}</strong> — probabilities reflect that day
+        <button onClick={onGoLive} aria-label="Return to live data" style={{ marginLeft:'auto', padding:'3px 10px', borderRadius:5, border:'1px solid rgba(245,158,11,0.3)', color:'#fcd34d', fontSize:10, fontFamily:'var(--font-mono)', cursor:'pointer', background:'transparent' }}>
+          ← Back to Live
+        </button>
+      </div>
     </div>
   )
 }
