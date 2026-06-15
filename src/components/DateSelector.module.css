@@ -55,6 +55,12 @@
 	animation: fadeIn 0.15s ease;
 }
 
+@media (min-width: 600px) {
+	.dropdown {
+		left: auto;
+	}
+}
+
 .liveOption {
 	display: flex;
 	align-items: center;
