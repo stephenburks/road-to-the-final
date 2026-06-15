@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-15T11:21:01.848Z",
+  "lastUpdated": "2026-06-15T16:28:30.357Z",
   "snapshotDate": "2026-06-15",
   "isHistorical": false,
   "tournament": {
@@ -507,18 +507,32 @@
           "pos": 1,
           "teamId": "capeverde",
           "team": "Cape Verde",
-          "played": 0,
+          "played": 1,
           "w": 0,
-          "d": 0,
+          "d": 1,
           "l": 0,
           "gf": 0,
           "ga": 0,
           "gd": 0,
-          "pts": 0,
+          "pts": 1,
           "flag": "🇨🇻"
         },
         {
           "pos": 2,
+          "teamId": "spain",
+          "team": "Spain",
+          "played": 1,
+          "w": 0,
+          "d": 1,
+          "l": 0,
+          "gf": 0,
+          "ga": 0,
+          "gd": 0,
+          "pts": 1,
+          "flag": "🇪🇸"
+        },
+        {
+          "pos": 3,
           "teamId": "saudiarabia",
           "team": "Saudi Arabia",
           "played": 0,
@@ -530,20 +544,6 @@
           "gd": 0,
           "pts": 0,
           "flag": "🇸🇦"
-        },
-        {
-          "pos": 3,
-          "teamId": "spain",
-          "team": "Spain",
-          "played": 0,
-          "w": 0,
-          "d": 0,
-          "l": 0,
-          "gf": 0,
-          "ga": 0,
-          "gd": 0,
-          "pts": 0,
-          "flag": "🇪🇸"
         },
         {
           "pos": 4,
@@ -562,8 +562,8 @@
       ],
       "winProbabilities": {
         "capeverde": 1,
-        "saudiarabia": 1,
-        "spain": 15,
+        "spain": 30,
+        "saudiarabia": 0,
         "uruguay": 2
       }
     },
@@ -972,12 +972,12 @@
           },
           {
             "group": "H",
-            "likelyTeam": "Spain",
-            "flag": "🇪🇸",
-            "fifaRank": 1,
-            "difficulty": 5,
-            "label": "Danger",
-            "color": "#EF4444",
+            "likelyTeam": "Saudi Arabia",
+            "flag": "🇸🇦",
+            "fifaRank": 55,
+            "difficulty": 2,
+            "label": "Favorable",
+            "color": "#22C55E",
             "note": "3rd-place team from Group H",
             "pct": null
           },
@@ -1110,12 +1110,12 @@
           },
           {
             "group": "H",
-            "likelyTeam": "Spain",
-            "flag": "🇪🇸",
-            "fifaRank": 1,
-            "difficulty": 5,
-            "label": "Danger",
-            "color": "#EF4444",
+            "likelyTeam": "Saudi Arabia",
+            "flag": "🇸🇦",
+            "fifaRank": 55,
+            "difficulty": 2,
+            "label": "Favorable",
+            "color": "#22C55E",
             "note": "3rd-place team from Group H",
             "pct": null
           },
@@ -1270,12 +1270,12 @@
           },
           {
             "group": "H",
-            "likelyTeam": "Spain",
-            "flag": "🇪🇸",
-            "fifaRank": 1,
-            "difficulty": 5,
-            "label": "Danger",
-            "color": "#EF4444",
+            "likelyTeam": "Saudi Arabia",
+            "flag": "🇸🇦",
+            "fifaRank": 55,
+            "difficulty": 2,
+            "label": "Favorable",
+            "color": "#22C55E",
             "note": "3rd-place team from Group H",
             "pct": null
           },
@@ -1430,12 +1430,12 @@
           },
           {
             "group": "H",
-            "likelyTeam": "Spain",
-            "flag": "🇪🇸",
-            "fifaRank": 1,
-            "difficulty": 5,
-            "label": "Danger",
-            "color": "#EF4444",
+            "likelyTeam": "Saudi Arabia",
+            "flag": "🇸🇦",
+            "fifaRank": 55,
+            "difficulty": 2,
+            "label": "Favorable",
+            "color": "#22C55E",
             "note": "3rd-place team from Group H",
             "pct": null
           },
@@ -1603,12 +1603,12 @@
           },
           {
             "group": "H",
-            "likelyTeam": "Spain",
-            "flag": "🇪🇸",
-            "fifaRank": 1,
-            "difficulty": 5,
-            "label": "Danger",
-            "color": "#EF4444",
+            "likelyTeam": "Saudi Arabia",
+            "flag": "🇸🇦",
+            "fifaRank": 55,
+            "difficulty": 2,
+            "label": "Favorable",
+            "color": "#22C55E",
             "note": "3rd-place team from Group H",
             "pct": null
           },
@@ -1765,12 +1765,12 @@
           },
           {
             "group": "H",
-            "likelyTeam": "Spain",
-            "flag": "🇪🇸",
-            "fifaRank": 1,
-            "difficulty": 5,
-            "label": "Danger",
-            "color": "#EF4444",
+            "likelyTeam": "Saudi Arabia",
+            "flag": "🇸🇦",
+            "fifaRank": 55,
+            "difficulty": 2,
+            "label": "Favorable",
+            "color": "#22C55E",
             "note": "3rd-place team from Group H",
             "pct": null
           },
@@ -1925,12 +1925,12 @@
           },
           {
             "group": "H",
-            "likelyTeam": "Spain",
-            "flag": "🇪🇸",
-            "fifaRank": 1,
-            "difficulty": 5,
-            "label": "Danger",
-            "color": "#EF4444",
+            "likelyTeam": "Saudi Arabia",
+            "flag": "🇸🇦",
+            "fifaRank": 55,
+            "difficulty": 2,
+            "label": "Favorable",
+            "color": "#22C55E",
             "note": "3rd-place team from Group H",
             "pct": null
           },
@@ -4364,12 +4364,12 @@
           },
           {
             "group": "H",
-            "likelyTeam": "Spain",
-            "flag": "🇪🇸",
-            "fifaRank": 1,
-            "difficulty": 5,
-            "label": "Danger",
-            "color": "#EF4444",
+            "likelyTeam": "Saudi Arabia",
+            "flag": "🇸🇦",
+            "fifaRank": 55,
+            "difficulty": 2,
+            "label": "Favorable",
+            "color": "#22C55E",
             "note": "3rd-place team from Group H",
             "pct": null
           },
@@ -4673,12 +4673,12 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 47,
-        "r16": 26,
-        "qf": 14,
-        "sf": 7,
-        "final": 4,
-        "winner": 15,
+        "r32": 99,
+        "r16": 54,
+        "qf": 28,
+        "sf": 14,
+        "final": 7,
+        "winner": 30,
         "source": "calculated"
       },
       "path": {
@@ -4687,7 +4687,7 @@
           "city": "Atlanta · Guadalajara",
           "venue": "Various venues",
           "date": "Jun 15–26",
-          "detail": "0pts after MD0"
+          "detail": "1pt after MD1"
         },
         "r32": {
           "status": "upcoming",
@@ -4803,7 +4803,7 @@
           "city": "Atlanta · Miami · Houston",
           "venue": "Various venues",
           "date": "Jun 15–26",
-          "detail": "0pts after MD0"
+          "detail": "1pt after MD1"
         },
         "r32": {
           "status": "upcoming",
@@ -4905,12 +4905,12 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 23,
-        "r16": 13,
-        "qf": 7,
-        "sf": 4,
-        "final": 2,
-        "winner": 1,
+        "r32": 5,
+        "r16": 3,
+        "qf": 2,
+        "sf": 1,
+        "final": 1,
+        "winner": 0,
         "source": "calculated"
       },
       "path": {
@@ -5855,12 +5855,12 @@
           },
           {
             "group": "H",
-            "likelyTeam": "Spain",
-            "flag": "🇪🇸",
-            "fifaRank": 1,
-            "difficulty": 5,
-            "label": "Danger",
-            "color": "#EF4444",
+            "likelyTeam": "Saudi Arabia",
+            "flag": "🇸🇦",
+            "fifaRank": 55,
+            "difficulty": 2,
+            "label": "Favorable",
+            "color": "#22C55E",
             "note": "3rd-place team from Group H",
             "pct": null
           },
@@ -6341,12 +6341,12 @@
           },
           {
             "group": "H",
-            "likelyTeam": "Spain",
-            "flag": "🇪🇸",
-            "fifaRank": 1,
-            "difficulty": 5,
-            "label": "Danger",
-            "color": "#EF4444",
+            "likelyTeam": "Saudi Arabia",
+            "flag": "🇸🇦",
+            "fifaRank": 55,
+            "difficulty": 2,
+            "label": "Favorable",
+            "color": "#22C55E",
             "note": "3rd-place team from Group H",
             "pct": null
           },
