@@ -3,7 +3,8 @@ import type { Stage, Team, AppData, Opponent, Scenario } from '../types'
 import { formatDate, getFeederGroup } from '../utils'
 import SectionLabel from './ui/SectionLabel'
 import FlagIcon from './ui/FlagIcon'
-import { GroupTable } from './GroupStage'
+import { GroupTable } from './ui/GroupTable'
+import FeederGroupPanel from './ui/FeederGroupPanel'
 import styles from './OpponentWatchlist.module.css'
 
 function DiffPips({ level, color, max = 5 }: { level: number; color: string; max?: number }) {
@@ -273,20 +274,10 @@ export default function OpponentWatchlist({ team, activeStage, data }: {
 			)}
 
 			{r32Feeder && (
-				<div style={{ marginTop: 20 }}>
-					<div
-						style={{
-							fontFamily: 'var(--font-mono)',
-							fontSize: 9,
-							color: 'var(--text-dim)',
-							marginBottom: 8,
-							lineHeight: 1.5,
-						}}
-					>
-						Potential opponent&rsquo;s group — based on current standings: Group {r32Feeder.key}
-					</div>
-					<GroupTable groupKey={r32Feeder.key} groupData={r32Feeder.group} highlightTeamId={null} />
-				</div>
+				<FeederGroupPanel
+					feeder={r32Feeder}
+					explanation={`Potential opponent&rsquo;s group — based on current standings: Group ${r32Feeder.key}`}
+				/>
 			)}
 			{!r32Feeder && activeStage === 'r32' && (
 				<div
@@ -308,20 +299,11 @@ export default function OpponentWatchlist({ team, activeStage, data }: {
 			)}
 
 			{r16Feeder && (
-				<div style={{ marginTop: r16WithPct ? 24 : 0 }}>
-					<div
-						style={{
-							fontFamily: 'var(--font-mono)',
-							fontSize: 9,
-							color: 'var(--text-dim)',
-							marginBottom: 8,
-							lineHeight: 1.5,
-						}}
-					>
-						Potential R16 opponent&rsquo;s group — if {team.name} wins Group {team.group}, they face the winner of Group {r16Feeder.key}
-					</div>
-					<GroupTable groupKey={r16Feeder.key} groupData={r16Feeder.group} highlightTeamId={null} />
-				</div>
+				<FeederGroupPanel
+					feeder={r16Feeder}
+					marginTop={r16WithPct ? 24 : 0}
+					explanation={`Potential R16 opponent&rsquo;s group — if ${team.name} wins Group ${team.group}, they face the winner of Group ${r16Feeder.key}`}
+				/>
 			)}
 			{!r16Feeder && activeStage === 'r16' && (
 				<div

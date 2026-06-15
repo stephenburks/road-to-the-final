@@ -1,58 +1,64 @@
 import { CircleFlag } from 'react-circle-flags'
 import styles from './FlagIcon.module.css'
 
-const ID_TO_ISO: Record<string, string> = {
-	mexico: 'mx', southafrica: 'za', southkorea: 'kr', czechia: 'cz',
-	canada: 'ca', bosnia: 'ba', qatar: 'qa', switzerland: 'ch',
-	brazil: 'br', morocco: 'ma', haiti: 'ht', scotland: 'gb-sct',
-	usa: 'us', paraguay: 'py', australia: 'au', turkey: 'tr',
-	germany: 'de', curacao: 'cw', ivorycoast: 'ci', ecuador: 'ec',
-	netherlands: 'nl', japan: 'jp', sweden: 'se', tunisia: 'tn',
-	belgium: 'be', egypt: 'eg', iran: 'ir', newzealand: 'nz',
-	spain: 'es', capeverde: 'cv', saudiarabia: 'sa', uruguay: 'uy',
-	france: 'fr', senegal: 'sn', iraq: 'iq', norway: 'no',
-	argentina: 'ar', algeria: 'dz', austria: 'at', jordan: 'jo',
-	portugal: 'pt', drcongo: 'cd', uzbekistan: 'uz', colombia: 'co',
-	england: 'gb-eng', croatia: 'hr', ghana: 'gh', panama: 'pa',
-}
+const TEAM_MAPPINGS = [
+	{ id: 'mexico',      iso: 'mx',     tla: 'MEX', name: 'Mexico' },
+	{ id: 'southafrica', iso: 'za',     tla: 'RSA', name: 'South Africa' },
+	{ id: 'southkorea',  iso: 'kr',     tla: 'KOR', name: 'South Korea' },
+	{ id: 'czechia',     iso: 'cz',     tla: 'CZE', name: 'Czechia' },
+	{ id: 'canada',      iso: 'ca',     tla: 'CAN', name: 'Canada' },
+	{ id: 'bosnia',      iso: 'ba',     tla: 'BIH', name: 'Bosnia & Herz.' },
+	{ id: 'qatar',       iso: 'qa',     tla: 'QAT', name: 'Qatar' },
+	{ id: 'switzerland', iso: 'ch',     tla: 'SUI', name: 'Switzerland' },
+	{ id: 'brazil',      iso: 'br',     tla: 'BRA', name: 'Brazil' },
+	{ id: 'morocco',     iso: 'ma',     tla: 'MAR', name: 'Morocco' },
+	{ id: 'haiti',       iso: 'ht',     tla: 'HAI', name: 'Haiti' },
+	{ id: 'scotland',    iso: 'gb-sct', tla: 'SCO', name: 'Scotland' },
+	{ id: 'usa',         iso: 'us',     tla: 'USA', name: 'USA' },
+	{ id: 'paraguay',    iso: 'py',     tla: 'PAR', name: 'Paraguay' },
+	{ id: 'australia',   iso: 'au',     tla: 'AUS', name: 'Australia' },
+	{ id: 'turkey',      iso: 'tr',     tla: 'TUR', name: 'Türkiye' },
+	{ id: 'germany',     iso: 'de',     tla: 'GER', name: 'Germany' },
+	{ id: 'curacao',     iso: 'cw',     tla: 'CUW', name: 'Curaçao' },
+	{ id: 'ivorycoast',  iso: 'ci',     tla: 'CIV', name: 'Ivory Coast' },
+	{ id: 'ecuador',     iso: 'ec',     tla: 'ECU', name: 'Ecuador' },
+	{ id: 'netherlands', iso: 'nl',     tla: 'NED', name: 'Netherlands' },
+	{ id: 'japan',       iso: 'jp',     tla: 'JPN', name: 'Japan' },
+	{ id: 'sweden',      iso: 'se',     tla: 'SWE', name: 'Sweden' },
+	{ id: 'tunisia',     iso: 'tn',     tla: 'TUN', name: 'Tunisia' },
+	{ id: 'belgium',     iso: 'be',     tla: 'BEL', name: 'Belgium' },
+	{ id: 'egypt',       iso: 'eg',     tla: 'EGY', name: 'Egypt' },
+	{ id: 'iran',        iso: 'ir',     tla: 'IRN', name: 'Iran' },
+	{ id: 'newzealand',  iso: 'nz',     tla: 'NZL', name: 'New Zealand' },
+	{ id: 'spain',       iso: 'es',     tla: 'ESP', name: 'Spain' },
+	{ id: 'capeverde',   iso: 'cv',     tla: 'CPV', name: 'Cape Verde' },
+	{ id: 'saudiarabia', iso: 'sa',     tla: 'KSA', name: 'Saudi Arabia' },
+	{ id: 'uruguay',     iso: 'uy',     tla: 'URU', name: 'Uruguay' },
+	{ id: 'france',      iso: 'fr',     tla: 'FRA', name: 'France' },
+	{ id: 'senegal',     iso: 'sn',     tla: 'SEN', name: 'Senegal' },
+	{ id: 'iraq',        iso: 'iq',     tla: 'IRQ', name: 'Iraq' },
+	{ id: 'norway',      iso: 'no',     tla: 'NOR', name: 'Norway' },
+	{ id: 'argentina',   iso: 'ar',     tla: 'ARG', name: 'Argentina' },
+	{ id: 'algeria',     iso: 'dz',     tla: 'ALG', name: 'Algeria' },
+	{ id: 'austria',     iso: 'at',     tla: 'AUT', name: 'Austria' },
+	{ id: 'jordan',      iso: 'jo',     tla: 'JOR', name: 'Jordan' },
+	{ id: 'portugal',    iso: 'pt',     tla: 'POR', name: 'Portugal' },
+	{ id: 'drcongo',     iso: 'cd',     tla: 'COD', name: 'DR Congo' },
+	{ id: 'uzbekistan',  iso: 'uz',     tla: 'UZB', name: 'Uzbekistan' },
+	{ id: 'colombia',    iso: 'co',     tla: 'COL', name: 'Colombia' },
+	{ id: 'england',     iso: 'gb-eng', tla: 'ENG', name: 'England' },
+	{ id: 'croatia',     iso: 'hr',     tla: 'CRO', name: 'Croatia' },
+	{ id: 'ghana',       iso: 'gh',     tla: 'GHA', name: 'Ghana' },
+	{ id: 'panama',      iso: 'pa',     tla: 'PAN', name: 'Panama' },
+] as const
 
-const ID_TO_TLA: Record<string, string> = {
-	mexico: 'MEX', southafrica: 'RSA', southkorea: 'KOR', czechia: 'CZE',
-	canada: 'CAN', bosnia: 'BIH', qatar: 'QAT', switzerland: 'SUI',
-	brazil: 'BRA', morocco: 'MAR', haiti: 'HAI', scotland: 'SCO',
-	usa: 'USA', paraguay: 'PAR', australia: 'AUS', turkey: 'TUR',
-	germany: 'GER', curacao: 'CUW', ivorycoast: 'CIV', ecuador: 'ECU',
-	netherlands: 'NED', japan: 'JPN', sweden: 'SWE', tunisia: 'TUN',
-	belgium: 'BEL', egypt: 'EGY', iran: 'IRN', newzealand: 'NZL',
-	spain: 'ESP', capeverde: 'CPV', saudiarabia: 'KSA', uruguay: 'URU',
-	france: 'FRA', senegal: 'SEN', iraq: 'IRQ', norway: 'NOR',
-	argentina: 'ARG', algeria: 'ALG', austria: 'AUT', jordan: 'JOR',
-	portugal: 'POR', drcongo: 'COD', uzbekistan: 'UZB', colombia: 'COL',
-	england: 'ENG', croatia: 'CRO', ghana: 'GHA', panama: 'PAN',
-}
-
-const NAME_TO_ID = {
-	'Mexico': 'mexico', 'South Africa': 'southafrica', 'South Korea': 'southkorea',
-	'Czechia': 'czechia', 'Canada': 'canada', 'Bosnia & Herz.': 'bosnia',
-	'Qatar': 'qatar', 'Switzerland': 'switzerland', 'Brazil': 'brazil',
-	'Morocco': 'morocco', 'Haiti': 'haiti', 'Scotland': 'scotland',
-	'USA': 'usa', 'Paraguay': 'paraguay', 'Australia': 'australia',
-	'Türkiye': 'turkey', 'Germany': 'germany', 'Curaçao': 'curacao',
-	'Ivory Coast': 'ivorycoast', 'Ecuador': 'ecuador', 'Netherlands': 'netherlands',
-	'Japan': 'japan', 'Sweden': 'sweden', 'Tunisia': 'tunisia',
-	'Belgium': 'belgium', 'Egypt': 'egypt', 'Iran': 'iran',
-	'New Zealand': 'newzealand', 'Spain': 'spain', 'Cape Verde': 'capeverde',
-	'Saudi Arabia': 'saudiarabia', 'Uruguay': 'uruguay', 'France': 'france',
-	'Senegal': 'senegal', 'Iraq': 'iraq', 'Norway': 'norway',
-	'Argentina': 'argentina', 'Algeria': 'algeria', 'Austria': 'austria',
-	'Jordan': 'jordan', 'Portugal': 'portugal', 'DR Congo': 'drcongo',
-	'Uzbekistan': 'uzbekistan', 'Colombia': 'colombia', 'England': 'england',
-	'Croatia': 'croatia', 'Ghana': 'ghana', 'Panama': 'panama',
-}
+const ID_TO_ISO  = Object.fromEntries(TEAM_MAPPINGS.map(t => [t.id,  t.iso]))
+const ID_TO_TLA  = Object.fromEntries(TEAM_MAPPINGS.map(t => [t.id,  t.tla]))
+const NAME_TO_ID = Object.fromEntries(TEAM_MAPPINGS.map(t => [t.name, t.id]))
 
 function resolveCode(code?: string, opponentName?: string): string {
 	if (code) return code
-	if (opponentName) return (NAME_TO_ID as Record<string, string>)[opponentName] || ''
+	if (opponentName) return NAME_TO_ID[opponentName] || ''
 	return ''
 }
 

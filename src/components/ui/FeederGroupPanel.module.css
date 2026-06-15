@@ -1,0 +1,11 @@
+.panel {
+	margin-top: 20px;
+}
+
+.explanation {
+	font-family: var(--font-mono);
+	font-size: 9px;
+	color: var(--text-dim);
+	margin-bottom: 8px;
+	line-height: 1.5;
+}
