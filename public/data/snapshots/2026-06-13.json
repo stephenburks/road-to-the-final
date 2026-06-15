@@ -2100,6 +2100,18 @@
           "venue": "MetLife Stadium, New Jersey",
           "scorers": [
             "Vinícius Jr 55'"
+          ],
+          "cards": [
+            {
+              "player": "Casemiro",
+              "minute": "37'",
+              "type": "yellow"
+            },
+            {
+              "player": "Roger Ibañez",
+              "minute": "43'",
+              "type": "yellow"
+            }
           ]
         },
         {
@@ -2412,7 +2424,14 @@
           "score": "0-1",
           "date": "2026-06-13",
           "venue": "Gillette Stadium, Boston",
-          "scorers": []
+          "scorers": [],
+          "cards": [
+            {
+              "player": "Jean-Ricner Bellegarde",
+              "minute": "39'",
+              "type": "yellow"
+            }
+          ]
         },
         {
           "matchday": 2,
@@ -2569,6 +2588,23 @@
           "venue": "Gillette Stadium, Boston",
           "scorers": [
             "McGinn 28'"
+          ],
+          "cards": [
+            {
+              "player": "Aaron Hickey",
+              "minute": "46'",
+              "type": "yellow"
+            },
+            {
+              "player": "Findlay Curtis",
+              "minute": "90'+1'",
+              "type": "yellow"
+            },
+            {
+              "player": "Kenny McLean",
+              "minute": "90'+5'",
+              "type": "yellow"
+            }
           ]
         },
         {

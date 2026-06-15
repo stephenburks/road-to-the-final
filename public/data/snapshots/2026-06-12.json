@@ -1271,7 +1271,21 @@
           "score": "1-1",
           "date": "2026-06-12",
           "venue": "BMO Field, Toronto",
-          "scorers": []
+          "scorers": [
+            "Cyle Larin 78'"
+          ],
+          "cards": [
+            {
+              "player": "Alistair Johnston",
+              "minute": "11'",
+              "type": "yellow"
+            },
+            {
+              "player": "Luc de Fougerolles",
+              "minute": "53'",
+              "type": "yellow"
+            }
+          ]
         },
         {
           "matchday": 2,
@@ -1375,7 +1389,26 @@
           "score": "1-1",
           "date": "2026-06-12",
           "venue": "BMO Field, Toronto",
-          "scorers": []
+          "scorers": [
+            "Jovo Lukic 21'"
+          ],
+          "cards": [
+            {
+              "player": "Ermedin Demirovic",
+              "minute": "45'",
+              "type": "yellow"
+            },
+            {
+              "player": "Jovo Lukic",
+              "minute": "45'+1'",
+              "type": "yellow"
+            },
+            {
+              "player": "Nikola Katic",
+              "minute": "90'+3'",
+              "type": "yellow"
+            }
+          ]
         },
         {
           "matchday": 2,
@@ -2103,7 +2136,19 @@
           "score": "4-1",
           "date": "2026-06-12",
           "venue": "SoFi Stadium, Los Angeles",
-          "scorers": []
+          "scorers": [
+            "Damián Bobadilla OG 7'",
+            "Folarin Balogun 31'",
+            "Folarin Balogun 45'+5'",
+            "Giovanni Reyna 90'+8'"
+          ],
+          "cards": [
+            {
+              "player": "Tyler Adams",
+              "minute": "59'",
+              "type": "yellow"
+            }
+          ]
         },
         {
           "matchday": 2,
@@ -2207,7 +2252,36 @@
           "score": "1-4",
           "date": "2026-06-12",
           "venue": "SoFi Stadium, Los Angeles",
-          "scorers": []
+          "scorers": [
+            "Maurício 73'"
+          ],
+          "cards": [
+            {
+              "player": "Juan Jose Cáceres",
+              "minute": "10'",
+              "type": "yellow"
+            },
+            {
+              "player": "Miguel Almirón",
+              "minute": "53'",
+              "type": "yellow"
+            },
+            {
+              "player": "Diego Gómez",
+              "minute": "79'",
+              "type": "yellow"
+            },
+            {
+              "player": "Alex Arce",
+              "minute": "88'",
+              "type": "yellow"
+            },
+            {
+              "player": "Júnior Alonso",
+              "minute": "90'+3'",
+              "type": "yellow"
+            }
+          ]
         },
         {
           "matchday": 2,

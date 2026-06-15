@@ -855,7 +855,22 @@
           "score": "2-0",
           "date": "2026-06-11",
           "venue": "Estadio Azteca, Mexico City",
-          "scorers": []
+          "scorers": [
+            "Julián Quiñones 9'",
+            "Raúl Jiménez 67'"
+          ],
+          "cards": [
+            {
+              "player": "Brian Gutiérrez",
+              "minute": "23'",
+              "type": "yellow"
+            },
+            {
+              "player": "César Montes",
+              "minute": "90'+2'",
+              "type": "red"
+            }
+          ]
         },
         {
           "matchday": 2,
@@ -959,7 +974,29 @@
           "score": "0-2",
           "date": "2026-06-11",
           "venue": "Estadio Azteca, Mexico City",
-          "scorers": []
+          "scorers": [],
+          "cards": [
+            {
+              "player": "Teboho Mokoena",
+              "minute": "17'",
+              "type": "yellow"
+            },
+            {
+              "player": "Sphephelo Sithole",
+              "minute": "49'",
+              "type": "red"
+            },
+            {
+              "player": "Nkosinathi Sibisi",
+              "minute": "74'",
+              "type": "yellow"
+            },
+            {
+              "player": "Themba Zwane",
+              "minute": "84'",
+              "type": "red"
+            }
+          ]
         },
         {
           "matchday": 2,
