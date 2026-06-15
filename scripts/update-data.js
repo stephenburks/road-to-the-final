@@ -473,12 +473,20 @@ function buildGroupResults(teamId, group, matchIndex, existingGroupResults = [])
       const isHome  = g.h === teamId;
       const oppId   = isHome ? g.a : g.h;
       const oppInfo = ALL_TEAMS.find(t => t.id === oppId) || {};
-      const match   = matchIndex.get(`${g.h}:${g.a}`);
+
+      // Try both directions — API may assign home/away differently than schedule
+      let match = matchIndex.get(`${g.h}:${g.a}`);
+      let matchReversed = false;
+      if (!match) {
+        match = matchIndex.get(`${g.a}:${g.h}`);
+        matchReversed = true;
+      }
 
       let result = null, score = null;
       if (match?.status === 'FINISHED') {
-        const myG = isHome ? match.score.fullTime.home : match.score.fullTime.away;
-        const opG = isHome ? match.score.fullTime.away : match.score.fullTime.home;
+        const isMyTeamHome = isHome !== matchReversed;
+        const myG = isMyTeamHome ? match.score.fullTime.home : match.score.fullTime.away;
+        const opG = isMyTeamHome ? match.score.fullTime.away : match.score.fullTime.home;
         result = myG > opG ? 'W' : myG < opG ? 'L' : 'D';
         score  = `${myG}-${opG}`;
       }
@@ -753,13 +761,10 @@ function validateBracketPaths() {
 	}
 }
 
-function isGroupDataDegraded(groups) {
-  if (!groups) return true;
-  for (const g of Object.values(groups)) {
-    const total = Object.values(g.winProbabilities || {}).reduce((s, v) => s + v, 0);
-    if (total < 10) return true;
-  }
-  return false;
+function isSingleGroupDegraded(groupData) {
+  if (!groupData?.winProbabilities) return true;
+  const total = Object.values(groupData.winProbabilities).reduce((s, v) => s + v, 0);
+  return total < 10;
 }
 
 // ─── Main ─────────────────────────────────────────────────────────────────────
@@ -797,23 +802,31 @@ async function main() {
     if (hId && aId) matchIndex.set(`${hId}:${aId}`, m);
   }
 
-  // Build group data — carry forward existing on quiet days
+  // Build group data — per-group carry-forward for healthy groups
   const groupsData = {};
-  if (hasActive && Object.keys(rawStandings).length > 0) {
-    for (const g of 'ABCDEFGHIJKL'.split('')) {
+  const GROUP_LETTERS = 'ABCDEFGHIJKL'.split('');
+  const existingGroups = existing?.groups || {};
+
+  for (const g of GROUP_LETTERS) {
+    const existingGroup = existingGroups[g];
+
+    if (hasActive && Object.keys(rawStandings).length > 0) {
+      // Fresh API data: always rebuild from standings
       const standArr = buildGroupStandings(g, rawStandings);
       const winProbs = {};
       standArr.forEach(s => {
-        winProbs[s.teamId] = polyProbs[s.teamId] ?? calcProbs(s.teamId, g, rawStandings, polyProbs).winner;
+        // Prefer Polymarket, fallback to existing market data, then calculated
+        winProbs[s.teamId] = polyProbs[s.teamId]
+          ?? (existingGroup?.winProbabilities?.[s.teamId]
+            ? existingGroup.winProbabilities[s.teamId]
+            : calcProbs(s.teamId, g, rawStandings, polyProbs).winner);
       });
       groupsData[g] = { standings: standArr, winProbabilities: winProbs };
-    }
-  } else if (existing?.groups && !isGroupDataDegraded(existing.groups)) {
-    log('No new standings — carrying forward group data');
-    Object.assign(groupsData, existing.groups);
-  } else {
-    if (existing?.groups) log('Existing group data degraded — rebuilding with ranking estimates');
-    for (const g of 'ABCDEFGHIJKL'.split('')) {
+    } else if (existingGroup && !isSingleGroupDegraded(existingGroup)) {
+      // Quiet day with healthy existing data: carry forward
+      groupsData[g] = existingGroup;
+    } else {
+      // No existing data or degraded: rebuild with ranking estimates
       const standArr = buildGroupStandings(g, rawStandings);
       const winProbs = {};
       standArr.forEach(s => {
@@ -821,6 +834,11 @@ async function main() {
       });
       groupsData[g] = { standings: standArr, winProbabilities: winProbs };
     }
+  }
+
+  if (!hasActive || !Object.keys(rawStandings).length) {
+    const carried = GROUP_LETTERS.filter(g => existingGroups[g] && !isSingleGroupDegraded(existingGroups[g])).length;
+    log(`No new standings — carrying forward ${carried}/12 healthy groups`);
   }
 
   // Build team data — full recalc for active teams, smart carry-forward for others
@@ -868,7 +886,14 @@ async function main() {
     // Full recalculation
     const existingGroupResults = existingTeam?.groupResults || []
     const groupResults  = buildGroupResults(t.id, t.group, matchIndex, existingGroupResults)
-    const advanceProbs  = calcProbs(t.id, t.group, rawStandings, polyProbs)
+
+    // Preserve existing market-sourced probabilities when Poly is unavailable
+    const existingHadMarket = existingTeam?.advanceProbabilities?.source === 'market';
+    const hasFreshPoly = typeof polyProbs[t.id] === 'number';
+    const advanceProbs = existingHadMarket && !hasFreshPoly
+      ? existingTeam.advanceProbabilities
+      : calcProbs(t.id, t.group, rawStandings, polyProbs);
+
     const teamPath      = buildPath(t.id, t.group, rawStandings);
     const possibleOpps  = buildOpponents(t.id, t.group, teamPath.r32?.opponentDesc ?? '', rawStandings);
 
