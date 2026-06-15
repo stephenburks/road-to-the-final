@@ -27,4 +27,10 @@ export default defineConfig([
       globals: globals.node,
     },
   },
+  {
+    files: ['src/**/*.test.{js,jsx}', 'scripts/**/*.test.js', 'src/test-setup.js'],
+    languageOptions: {
+      globals: { describe: 'readonly', it: 'readonly', expect: 'readonly', vi: 'readonly' },
+    },
+  },
 ])

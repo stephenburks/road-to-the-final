@@ -1,6 +1,5 @@
 import { describe, it, expect } from 'vitest'
 import { daysUntil, formatDate, stageIndex, resolveActiveStage, getFeederGroup } from './utils'
-import { STAGE_ORDER } from './constants'
 
 describe('daysUntil', () => {
 	it('returns null for empty string', () => {

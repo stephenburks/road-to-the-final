@@ -669,7 +669,7 @@ function determineCurrentStage(teamId, group, rawStandings, matchIndex) {
 }
 
 function findMatchByNumber(matchNum, matchIndex) {
-	for (const [key, m] of matchIndex.entries()) {
+	for (const [_key, m] of matchIndex.entries()) {
 		if (m.matchNumber === matchNum) return m;
 	}
 	return null;
@@ -798,7 +798,6 @@ async function main() {
 
     // Group elimination: compute for everyone whenever standings exist
     let eliminated = false;
-    let groupEliminated = false;
     if (rawStandings?.[t.group]) {
       const gRows = rawStandings[t.group];
       const teamRow = gRows.find(r => r.teamId === t.id);
@@ -807,8 +806,7 @@ async function main() {
         const maxPossible = teamRow.pts + 3 * remainingMatches;
         const sorted = [...gRows].sort((a, b) => b.pts - a.pts);
         const secondPlacePts = sorted[1]?.pts ?? 0;
-        groupEliminated = remainingMatches > 0 && maxPossible < secondPlacePts;
-        eliminated = groupEliminated;
+        eliminated = remainingMatches > 0 && maxPossible < secondPlacePts;
       }
     }
 
