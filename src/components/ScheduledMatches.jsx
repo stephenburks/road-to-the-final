@@ -34,7 +34,7 @@ function MatchRow({ match, teamFlag, teamId, isConditional = false }) {
           <>
             <FlagIcon code={teamId} flag={teamFlag} />
             <span className={styles.vs}>vs</span>
-            <FlagIcon flag={match.opponentFlag} />
+            <FlagIcon flag={match.opponentFlag} opponent={match.opponent} />
             <span className={styles.opponentName}>{match.opponent}</span>
           </>
         ) : (

@@ -31,9 +31,35 @@ const ID_TO_TLA = {
 	england: 'ENG', croatia: 'CRO', ghana: 'GHA', panama: 'PAN',
 }
 
-export default function FlagIcon({ code, flag, name, small }) {
-	const iso = ID_TO_ISO[code]
-	const tla = ID_TO_TLA[code] || ''
+const NAME_TO_ID = {
+	'Mexico': 'mexico', 'South Africa': 'southafrica', 'South Korea': 'southkorea',
+	'Czechia': 'czechia', 'Canada': 'canada', 'Bosnia & Herz.': 'bosnia',
+	'Qatar': 'qatar', 'Switzerland': 'switzerland', 'Brazil': 'brazil',
+	'Morocco': 'morocco', 'Haiti': 'haiti', 'Scotland': 'scotland',
+	'USA': 'usa', 'Paraguay': 'paraguay', 'Australia': 'australia',
+	'Türkiye': 'turkey', 'Germany': 'germany', 'Curaçao': 'curacao',
+	'Ivory Coast': 'ivorycoast', 'Ecuador': 'ecuador', 'Netherlands': 'netherlands',
+	'Japan': 'japan', 'Sweden': 'sweden', 'Tunisia': 'tunisia',
+	'Belgium': 'belgium', 'Egypt': 'egypt', 'Iran': 'iran',
+	'New Zealand': 'newzealand', 'Spain': 'spain', 'Cape Verde': 'capeverde',
+	'Saudi Arabia': 'saudiarabia', 'Uruguay': 'uruguay', 'France': 'france',
+	'Senegal': 'senegal', 'Iraq': 'iraq', 'Norway': 'norway',
+	'Argentina': 'argentina', 'Algeria': 'algeria', 'Austria': 'austria',
+	'Jordan': 'jordan', 'Portugal': 'portugal', 'DR Congo': 'drcongo',
+	'Uzbekistan': 'uzbekistan', 'Colombia': 'colombia', 'England': 'england',
+	'Croatia': 'croatia', 'Ghana': 'ghana', 'Panama': 'panama',
+}
+
+export function resolveCode(code, opponentName) {
+	if (code) return code
+	if (opponentName) return NAME_TO_ID[opponentName] || ''
+	return ''
+}
+
+export default function FlagIcon({ code, flag, name, small, opponent }) {
+	const resolvedCode = resolveCode(code, opponent)
+	const iso = ID_TO_ISO[resolvedCode]
+	const tla = ID_TO_TLA[resolvedCode] || ''
 	const size = small ? 16 : 22
 
 	if (iso) {

@@ -132,7 +132,7 @@ function MatchCard({ match, teamFlag, teamId }) {
 			<div className={styles.matchTeams}>
 				<FlagIcon code={teamId} flag={teamFlag} />
 				<span style={{ fontSize: 12, color: 'var(--text-lo)' }}>vs</span>
-				<FlagIcon flag={match.opponentFlag} />
+				<FlagIcon flag={match.opponentFlag} opponent={match.opponent} />
 				<span style={{ fontSize: 12, color: '#d1d5db', fontWeight: 600 }}>{match.opponent}</span>
 				{match.score && (
 					<span className={styles.score} aria-label={`Score: ${match.score}`}>
