@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-15T20:55:35.069Z",
+  "lastUpdated": "2026-06-15T21:00:47.562Z",
   "snapshotDate": "2026-06-12",
   "isHistorical": true,
   "sourceSummary": {
@@ -13,7 +13,7 @@
       "group_stage": {
         "status": "active",
         "label": "Group Stage",
-        "date": "Jun 12–27"
+        "date": "Jun 11–27"
       },
       "r32": {
         "status": "upcoming",
@@ -853,7 +853,7 @@
           "opponentFlag": "🇿🇦",
           "result": "W",
           "score": "2-0",
-          "date": "2026-06-12",
+          "date": "2026-06-11",
           "venue": "Estadio Azteca, Mexico City",
           "scorers": []
         },
@@ -892,7 +892,7 @@
           "status": "active",
           "city": "Mexico City · Zapopan",
           "venue": "Various venues",
-          "date": "Jun 12–24",
+          "date": "Jun 11–24",
           "detail": "3pts after MD1"
         },
         "r32": {
@@ -957,7 +957,7 @@
           "opponentFlag": "🇲🇽",
           "result": "L",
           "score": "0-2",
-          "date": "2026-06-12",
+          "date": "2026-06-11",
           "venue": "Estadio Azteca, Mexico City",
           "scorers": []
         },
@@ -996,7 +996,7 @@
           "status": "active",
           "city": "Mexico City · Atlanta · Zapopan",
           "venue": "Various venues",
-          "date": "Jun 12–24",
+          "date": "Jun 11–24",
           "detail": "0pts after MD1"
         },
         "r32": {
@@ -1061,7 +1061,7 @@
           "opponentFlag": "🇨🇿",
           "result": null,
           "score": null,
-          "date": "2026-06-12",
+          "date": "2026-06-11",
           "venue": "Estadio Akron, Zapopan",
           "scorers": []
         },
@@ -1100,7 +1100,7 @@
           "status": "active",
           "city": "Zapopan",
           "venue": "Various venues",
-          "date": "Jun 12–24",
+          "date": "Jun 11–24",
           "detail": "0pts after MD0"
         },
         "r32": {
@@ -1165,7 +1165,7 @@
           "opponentFlag": "🇰🇷",
           "result": null,
           "score": null,
-          "date": "2026-06-12",
+          "date": "2026-06-11",
           "venue": "Estadio Akron, Zapopan",
           "scorers": []
         },
@@ -1204,7 +1204,7 @@
           "status": "active",
           "city": "Zapopan · Atlanta",
           "venue": "Various venues",
-          "date": "Jun 12–24",
+          "date": "Jun 11–24",
           "detail": "0pts after MD0"
         },
         "r32": {

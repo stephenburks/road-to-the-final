@@ -9,7 +9,7 @@
       "group_stage": {
         "status": "active",
         "label": "Group Stage",
-        "date": "Jun 12–27"
+        "date": "Jun 11–27"
       },
       "r32": {
         "status": "upcoming",
@@ -849,7 +849,7 @@
           "opponentFlag": "🇿🇦",
           "result": "W",
           "score": "2-0",
-          "date": "2026-06-12",
+          "date": "2026-06-11",
           "venue": "Estadio Azteca, Mexico City",
           "scorers": [
             "Lozano 34'",
@@ -891,7 +891,7 @@
           "status": "active",
           "city": "Mexico City · Zapopan",
           "venue": "Various venues",
-          "date": "Jun 12–Jun 24",
+          "date": "Jun 11–Jun 24",
           "detail": "3pts after MD1"
         },
         "r32": {
@@ -1032,7 +1032,7 @@
           "opponentFlag": "🇲🇽",
           "result": "L",
           "score": "0-2",
-          "date": "2026-06-12",
+          "date": "2026-06-11",
           "venue": "Estadio Azteca, Mexico City",
           "scorers": []
         },
@@ -1071,7 +1071,7 @@
           "status": "active",
           "city": "Mexico City · Atlanta · Zapopan",
           "venue": "Various venues",
-          "date": "Jun 12–Jun 24",
+          "date": "Jun 11–Jun 24",
           "detail": "0pts after MD1"
         },
         "r32": {
@@ -1197,7 +1197,7 @@
           "opponentFlag": "🇨🇿",
           "result": null,
           "score": null,
-          "date": "2026-06-12",
+          "date": "2026-06-11",
           "venue": "Estadio Akron, Zapopan",
           "scorers": []
         },
@@ -1236,7 +1236,7 @@
           "status": "active",
           "city": "Zapopan",
           "venue": "Various venues",
-          "date": "Jun 12–Jun 24",
+          "date": "Jun 11–Jun 24",
           "detail": "Group A"
         },
         "r32": {
@@ -1362,7 +1362,7 @@
           "opponentFlag": "🇰🇷",
           "result": null,
           "score": null,
-          "date": "2026-06-12",
+          "date": "2026-06-11",
           "venue": "Estadio Akron, Zapopan",
           "scorers": []
         },
@@ -1401,7 +1401,7 @@
           "status": "active",
           "city": "Zapopan · Atlanta",
           "venue": "Various venues",
-          "date": "Jun 12–Jun 24",
+          "date": "Jun 11–Jun 24",
           "detail": "Group A"
         },
         "r32": {

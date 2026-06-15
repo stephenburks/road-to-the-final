@@ -390,8 +390,8 @@ async function fetchPolymarketAll() {
 
 // ─── Build group results for a team from match data ──────────────────────────
 const GROUP_SCHEDULE = {
-   A:[{md:1,h:'mexico',     a:'southafrica',d:'2026-06-12',v:'Estadio Azteca, Mexico City'},
-      {md:1,h:'southkorea', a:'czechia',    d:'2026-06-12',v:'Estadio Akron, Zapopan'},
+   A:[{md:1,h:'mexico',     a:'southafrica',d:'2026-06-11',v:'Estadio Azteca, Mexico City'},
+      {md:1,h:'southkorea', a:'czechia',    d:'2026-06-11',v:'Estadio Akron, Zapopan'},
      {md:2,h:'czechia',    a:'southafrica',d:'2026-06-18',v:'Mercedes-Benz Stadium, Atlanta'},
      {md:2,h:'mexico',     a:'southkorea', d:'2026-06-18',v:'Estadio Akron, Zapopan'},
      {md:3,h:'czechia',    a:'mexico',     d:'2026-06-24',v:'Estadio Akron, Zapopan'},
@@ -947,7 +947,7 @@ async function main() {
       name:         'FIFA World Cup 2026',
       currentStage: tournamentStage,
       stages: {
-        group_stage: { status: stageStatuses.group_stage ?? 'active',   label:'Group Stage', date:'Jun 12–27' },
+        group_stage: { status: stageStatuses.group_stage ?? 'active',   label:'Group Stage', date:'Jun 11–27' },
         r32:         { status: stageStatuses.r32         ?? 'upcoming', label:'Round of 32', date:'Jun 28–Jul 2' },
         r16:         { status: stageStatuses.r16         ?? 'future',   label:'Round of 16', date:'Jul 4–7' },
         qf:          { status: stageStatuses.qf          ?? 'future',   label:'Quarterfinal',date:'Jul 9–11' },
@@ -979,7 +979,7 @@ async function main() {
   }
 
   // Build human-readable labels
-  const TOURNAMENT_START = '2026-06-12';
+  const TOURNAMENT_START = '2026-06-11';
   mf.available.forEach((d, i) => {
     const isLatest = i === mf.available.length - 1;
     const isStart  = d === TOURNAMENT_START;

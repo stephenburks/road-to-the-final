@@ -71,8 +71,8 @@ const ALL_TEAMS = [
 ];
 
 const GROUP_SCHEDULE = {
-   A:[{md:1,h:'mexico',     a:'southafrica',d:'2026-06-12',v:'Estadio Azteca, Mexico City'},
-      {md:1,h:'southkorea', a:'czechia',    d:'2026-06-12',v:'Estadio Akron, Zapopan'},
+   A:[{md:1,h:'mexico',     a:'southafrica',d:'2026-06-11',v:'Estadio Azteca, Mexico City'},
+      {md:1,h:'southkorea', a:'czechia',    d:'2026-06-11',v:'Estadio Akron, Zapopan'},
       {md:2,h:'czechia',    a:'southafrica',d:'2026-06-18',v:'Mercedes-Benz Stadium, Atlanta'},
       {md:2,h:'mexico',     a:'southkorea', d:'2026-06-18',v:'Estadio Akron, Zapopan'},
       {md:3,h:'czechia',    a:'mexico',     d:'2026-06-24',v:'Estadio Akron, Zapopan'},
@@ -284,9 +284,14 @@ function buildGroupResults(teamId, group, matchResults) {
     });
 }
 
-// ─── Jun 12 match results (from Jun 13 snapshot verification) ─────────────────
-const JUN12_RESULTS = new Map([
+// ─── Jun 11 match results (Group A MD1) ──────────────────────────────────────
+const DAY1_RESULTS = new Map([
   ['mexico:southafrica', { hGoals: 2, aGoals: 0 }],
+]);
+
+// ─── Jun 12 match results (adds to Jun 11) ────────────────────────────────────
+const JUN12_RESULTS = new Map([
+  ...DAY1_RESULTS,
   ['canada:bosnia',      { hGoals: 1, aGoals: 1 }],
   ['usa:paraguay',       { hGoals: 4, aGoals: 1 }],
 ]);
@@ -360,7 +365,7 @@ function generateSnapshot(snapshotDate, matchResults) {
       name: 'FIFA World Cup 2026',
       currentStage: 'group_stage',
       stages: {
-        group_stage: { status: 'active',   label: 'Group Stage', date: 'Jun 12\u201327' },
+        group_stage: { status: 'active',   label: 'Group Stage', date: 'Jun 11\u201327' },
         r32:         { status: 'upcoming', label: 'Round of 32', date: 'Jun 28\u2013Jul 2' },
         r16:         { status: 'future',   label: 'Round of 16', date: 'Jul 4\u20137' },
         qf:          { status: 'future',   label: 'Quarterfinal', date: 'Jul 9\u201311' },
@@ -400,9 +405,10 @@ function main() {
 
   // Generate Jun 11 (tournament start — no matches)
   log('Generating 2026-06-11 (Tournament Start)');
-  const s11 = generateSnapshot('2026-06-11', new Map());
+  const s11 = generateSnapshot('2026-06-11', DAY1_RESULTS);
   fs.writeFileSync(path.join(SNAP_DIR, '2026-06-11.json'), JSON.stringify(s11, null, 2));
-  log('✅ Jun 11 saved — 0/' + s11.teams.length + ' teams with results');
+  const s11Results = s11.teams.filter(t => t.groupResults.some(g => g.result)).length;
+  log('✅ Jun 11 saved — ' + s11Results + '/' + s11.teams.length + ' teams with results');
 
   // Generate Jun 12 (after day 1 — 3 matches)
   log('Generating 2026-06-12 (After Day 1)');
