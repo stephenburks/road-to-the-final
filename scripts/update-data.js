@@ -924,8 +924,9 @@ async function main() {
     ? await Promise.all([fetchStandings(), fetchMatches(), fetchPolymarketAll()])
     : [{}, [], {}];
 
-  // ESPN scorer data — always fetch (independent of football-data API)
-  const { scorers: espnScorers, cards: espnCards } = await fetchESPNEventDetails(yesterdayStr(), todayStr());
+  // ESPN scorer data — fetch full tournament range (cards/scorers may update retroactively)
+  const TOURNAMENT_START_ESPN = '2026-06-11';
+  const { scorers: espnScorers, cards: espnCards } = await fetchESPNEventDetails(TOURNAMENT_START_ESPN, todayStr());
 
   if (hasActive) {
     if (!Object.keys(rawStandings).length) log('⚠  No standings data returned — API may be unavailable');

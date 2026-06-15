@@ -854,6 +854,18 @@
           "scorers": [
             "Lozano 34'",
             "Jiménez 67'"
+          ],
+          "cards": [
+            {
+              "player": "Brian Gutiérrez",
+              "minute": "23'",
+              "type": "yellow"
+            },
+            {
+              "player": "César Montes",
+              "minute": "90'+2'",
+              "type": "red"
+            }
           ]
         },
         {
@@ -1034,7 +1046,29 @@
           "score": "0-2",
           "date": "2026-06-11",
           "venue": "Estadio Azteca, Mexico City",
-          "scorers": []
+          "scorers": [],
+          "cards": [
+            {
+              "player": "Teboho Mokoena",
+              "minute": "17'",
+              "type": "yellow"
+            },
+            {
+              "player": "Sphephelo Sithole",
+              "minute": "49'",
+              "type": "red"
+            },
+            {
+              "player": "Nkosinathi Sibisi",
+              "minute": "74'",
+              "type": "yellow"
+            },
+            {
+              "player": "Themba Zwane",
+              "minute": "84'",
+              "type": "red"
+            }
+          ]
         },
         {
           "matchday": 2,
@@ -1531,6 +1565,18 @@
           "venue": "BMO Field, Toronto",
           "scorers": [
             "Larin 61'"
+          ],
+          "cards": [
+            {
+              "player": "Alistair Johnston",
+              "minute": "11'",
+              "type": "yellow"
+            },
+            {
+              "player": "Luc de Fougerolles",
+              "minute": "53'",
+              "type": "yellow"
+            }
           ]
         },
         {
@@ -1737,6 +1783,23 @@
           "venue": "BMO Field, Toronto",
           "scorers": [
             "Džeko 44'"
+          ],
+          "cards": [
+            {
+              "player": "Ermedin Demirovic",
+              "minute": "45'",
+              "type": "yellow"
+            },
+            {
+              "player": "Jovo Lukic",
+              "minute": "45'+1'",
+              "type": "yellow"
+            },
+            {
+              "player": "Nikola Katic",
+              "minute": "90'+3'",
+              "type": "yellow"
+            }
           ]
         },
         {
@@ -1902,7 +1965,21 @@
           "score": "1-1",
           "date": "2026-06-13",
           "venue": "Levi's Stadium, San Francisco",
-          "scorers": []
+          "scorers": [
+            "Miro Muheim OG 90'+4'"
+          ],
+          "cards": [
+            {
+              "player": "Mahmoud Abunada",
+              "minute": "16'",
+              "type": "yellow"
+            },
+            {
+              "player": "Jassem Gaber",
+              "minute": "23'",
+              "type": "yellow"
+            }
+          ]
         },
         {
           "matchday": 2,
@@ -2062,7 +2139,16 @@
           "score": "1-1",
           "date": "2026-06-13",
           "venue": "Levi's Stadium, San Francisco",
-          "scorers": []
+          "scorers": [
+            "Breel Embolo 17' (P)"
+          ],
+          "cards": [
+            {
+              "player": "Denis Zakaria",
+              "minute": "42'",
+              "type": "yellow"
+            }
+          ]
         },
         {
           "matchday": 2,
@@ -2224,6 +2310,18 @@
           "venue": "MetLife Stadium, New Jersey",
           "scorers": [
             "Vinícius Jr 55'"
+          ],
+          "cards": [
+            {
+              "player": "Casemiro",
+              "minute": "37'",
+              "type": "yellow"
+            },
+            {
+              "player": "Roger Ibañez",
+              "minute": "43'",
+              "type": "yellow"
+            }
           ]
         },
         {
@@ -2458,7 +2556,14 @@
           "score": "0-1",
           "date": "2026-06-13",
           "venue": "Gillette Stadium, Boston",
-          "scorers": []
+          "scorers": [],
+          "cards": [
+            {
+              "player": "Jean-Ricner Bellegarde",
+              "minute": "39'",
+              "type": "yellow"
+            }
+          ]
         },
         {
           "matchday": 2,
@@ -2576,6 +2681,23 @@
           "venue": "Gillette Stadium, Boston",
           "scorers": [
             "McGinn 28'"
+          ],
+          "cards": [
+            {
+              "player": "Aaron Hickey",
+              "minute": "46'",
+              "type": "yellow"
+            },
+            {
+              "player": "Findlay Curtis",
+              "minute": "90'+1'",
+              "type": "yellow"
+            },
+            {
+              "player": "Kenny McLean",
+              "minute": "90'+5'",
+              "type": "yellow"
+            }
           ]
         },
         {
@@ -2741,6 +2863,13 @@
             "Balogun 31'",
             "Balogun 45+5'",
             "Reyna 90+8'"
+          ],
+          "cards": [
+            {
+              "player": "Tyler Adams",
+              "minute": "59'",
+              "type": "yellow"
+            }
           ]
         },
         {
@@ -2903,6 +3032,33 @@
           "venue": "SoFi Stadium, Los Angeles",
           "scorers": [
             "Mauricio 73'"
+          ],
+          "cards": [
+            {
+              "player": "Juan Jose Cáceres",
+              "minute": "10'",
+              "type": "yellow"
+            },
+            {
+              "player": "Miguel Almirón",
+              "minute": "53'",
+              "type": "yellow"
+            },
+            {
+              "player": "Diego Gómez",
+              "minute": "79'",
+              "type": "yellow"
+            },
+            {
+              "player": "Alex Arce",
+              "minute": "88'",
+              "type": "yellow"
+            },
+            {
+              "player": "Júnior Alonso",
+              "minute": "90'+3'",
+              "type": "yellow"
+            }
           ]
         },
         {
