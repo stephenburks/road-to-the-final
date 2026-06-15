@@ -98,8 +98,21 @@ export interface Team {
 	possibleOpponents: {
 		r32: Opponent[]
 		r16: Opponent[]
+	} | {
+		r32: { scenarios: string[] }
+		r16: { scenarios: string[] }
 	}
 }
+
+export interface Scenario {
+	condition: string
+	probability: number
+	venue?: string
+	date?: string
+	opponents: Opponent[]
+}
+
+export type PossibleOpponentData = Opponent[] | { scenarios: Scenario[] }
 
 export interface TournamentStage {
 	status: 'active' | 'upcoming' | 'future' | 'done'
