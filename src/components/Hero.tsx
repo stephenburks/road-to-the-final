@@ -11,9 +11,9 @@ const STAT_CARDS = [
 	{ key: 'final', label: 'Reach the Final', color: '#ef4444', bg: 'rgba(239,68,68,0.08)', border: 'rgba(239,68,68,0.2)' },
 ]
 
-function getEyebrow(team: Team, activeStage: string, isHistorical: boolean) {
+function getEyebrow(team: Team, activeStage: Stage, isHistorical: boolean) {
 	if (team.eliminated) return `\u274C ${team.name} \u2014 Eliminated`
-	return `${STAGE_LABELS[activeStage as Stage]}${isHistorical ? ' \u00B7 Historical' : ''}`
+	return `${STAGE_LABELS[activeStage]}${isHistorical ? ' \u00B7 Historical' : ''}`
 }
 
 function getHeading(team: Team) {
@@ -27,14 +27,14 @@ function getSubhead(path: { city?: string; date?: string } | null | undefined) {
 	return city + dateSuffix
 }
 
-function getSubtext(team: Team, activeStage: string, days: number | null) {
+function getSubtext(team: Team, activeStage: Stage, days: number | null) {
 	if (team.eliminated) {
 		return `${team.name} were knocked out in the ${STAGE_LABELS[team.currentStage ?? 'r32']}.`
 	}
 	if (days !== null) {
-		return `${STAGE_LABELS[activeStage as Stage]} is ${Math.max(days, 0)} day${days !== 1 ? 's' : ''} away.`
+		return `${STAGE_LABELS[activeStage]} is ${Math.max(days, 0)} day${days !== 1 ? 's' : ''} away.`
 	}
-	return `Next: ${team.path?.[activeStage as Stage]?.date ?? '\u2014'}`
+	return `Next: ${team.path?.[activeStage]?.date ?? '\u2014'}`
 }
 
 interface HeroProps {

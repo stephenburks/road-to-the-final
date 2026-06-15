@@ -103,11 +103,8 @@ export interface Team {
 	advanceProbabilities: AdvanceProbabilities
 	path: TeamPath
 	possibleOpponents: {
-		r32: Opponent[]
-		r16: Opponent[]
-	} | {
-		r32: { scenarios: string[] }
-		r16: { scenarios: string[] }
+		r32: PossibleOpponentData
+		r16: PossibleOpponentData
 	}
 }
 

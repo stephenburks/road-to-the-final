@@ -200,7 +200,7 @@ export default function RoadBracket({ team, activeStage, onStageSelect }: {
 					aria-hidden="true"
 				/>
 
-				<div className={styles.grid} role="tablist" aria-label="Tournament stages">
+				<div className={styles.grid} role="group" aria-label="Tournament stages">
 					{STAGE_ORDER.map((stage, i) => {
 						const isAct = stage === activeStage
 						const path = team.path?.[stage]
@@ -208,11 +208,10 @@ export default function RoadBracket({ team, activeStage, onStageSelect }: {
 						const card = getCardStyle(i, currentIdx, stage, team, isAct)
 
 						return (
-							<button
-								key={stage}
-								role="tab"
-								aria-selected={isAct}
-								aria-label={`${STAGE_LABELS[stage]}${path?.city ? ` in ${path.city}` : ''}${i < currentIdx ? ', completed' : stage === team.currentStage ? ', current' : ''}`}
+						<button
+							key={stage}
+							aria-pressed={isAct}
+							aria-label={`${STAGE_LABELS[stage]}${path?.city ? ` in ${path.city}` : ''}${i < currentIdx ? ', completed' : stage === team.currentStage ? ', current' : ''}`}
 								className={styles.stage}
 								onClick={() => onStageSelect(stage)}
 							>

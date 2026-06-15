@@ -51,13 +51,13 @@ export function GroupTable({ groupKey, groupData, highlightTeamId }: {
 					</tr>
 				</thead>
 				<tbody>
-					{(groupData.standings ?? []).map((row, i) => {
+					{(groupData.standings ?? []).map((row) => {
 						const isSelected = row.teamId === highlightTeamId
 						const wp = row.teamId ? (probs[row.teamId] ?? 0) : 0
 
 						return (
 							<tr
-								key={i}
+								key={row.teamId ?? row.team}
 								style={{ background: isSelected ? 'rgba(99,102,241,0.07)' : undefined }}
 								aria-current={isSelected ? 'true' : undefined}
 							>
@@ -119,10 +119,10 @@ function MatchCard({ match, teamFlag, teamId, teams }: {
 	teamId: string
 	teams: Team[]
 }) {
-	const badgeStyle = match.result ? BADGE_STYLES[match.result as keyof typeof BADGE_STYLES] : { background: 'rgba(255,255,255,0.06)', color: 'var(--text-dim)' }
+	const badgeStyle = match.result ? (BADGE_STYLES[match.result] ?? { background: 'rgba(255,255,255,0.06)', color: 'var(--text-dim)' }) : { background: 'rgba(255,255,255,0.06)', color: 'var(--text-dim)' }
 	const isWin = match.result === 'W'
 	const isDraw = match.result === 'D'
-	const resultLabel = match.result ? (RESULT_LABELS[match.result as keyof typeof RESULT_LABELS] ?? 'To be played') : 'To be played'
+	const resultLabel = match.result ? (RESULT_LABELS[match.result] ?? 'To be played') : 'To be played'
 
 	// Find opponent's match data for the same matchday
 	const oppTeam = teams?.find(t => t.name === match.opponent)
@@ -171,6 +171,7 @@ function MatchCard({ match, teamFlag, teamId, teams }: {
 								{match.cards.map((c, j) => (
 									<li key={j}>
 										<span className={styles.cardIndicator} style={{ background: c.type === 'red' ? '#ef4444' : '#eab308' }} aria-hidden="true" />
+										<span className="sr-only">{c.type === 'red' ? 'Red' : 'Yellow'} card: </span>
 										{c.player} {c.minute}
 									</li>
 								))}
@@ -192,6 +193,7 @@ function MatchCard({ match, teamFlag, teamId, teams }: {
 									{oppMatch.cards.map((c, j) => (
 										<li key={j}>
 											<span className={styles.cardIndicator} style={{ background: c.type === 'red' ? '#ef4444' : '#eab308' }} aria-hidden="true" />
+											<span className="sr-only">{c.type === 'red' ? 'Red' : 'Yellow'} card: </span>
 											{c.player} {c.minute}
 										</li>
 									))}

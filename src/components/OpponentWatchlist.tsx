@@ -1,5 +1,5 @@
 import { STAGE_LABELS } from '../constants'
-import type { Stage, Team, AppData, Opponent } from '../types'
+import type { Stage, Team, AppData, Opponent, Scenario } from '../types'
 import { formatDate, getFeederGroup } from '../utils'
 import SectionLabel from './ui/SectionLabel'
 import FlagIcon from './ui/FlagIcon'
@@ -213,12 +213,16 @@ export default function OpponentWatchlist({ team, activeStage, data }: {
 	data: AppData
 }) {
 	const stagePath = team.path?.[activeStage]
-	const oppData = (team.possibleOpponents as Record<string, unknown>)[activeStage] as Record<string, unknown> | undefined
 
 	if (activeStage === 'group_stage') return null
 
-	const hasScenarios = Array.isArray((oppData as Record<string, unknown> | undefined)?.scenarios)
-	const flatList = (Array.isArray(oppData) ? oppData : []) as Opponent[]
+	const oppData = (activeStage === 'r32' || activeStage === 'r16')
+		? team.possibleOpponents[activeStage]
+		: undefined
+
+	const hasScenarios = oppData != null && !Array.isArray(oppData)
+		&& 'scenarios' in oppData && Array.isArray(oppData.scenarios)
+	const flatList = Array.isArray(oppData) ? oppData : []
 	const hasFlat = flatList.length > 0
 	const isLateStage = ['qf', 'sf', 'final'].includes(activeStage)
 	const r16WithPct = activeStage === 'r16' && flatList.some(o => o.pct != null)
@@ -239,26 +243,26 @@ export default function OpponentWatchlist({ team, activeStage, data }: {
 
 			{!isLateStage && hasScenarios && (
 				<div className={styles.scenarios}>
-					{(oppData as Record<string, unknown>).scenarios instanceof Array
-						? ((oppData as Record<string, unknown>).scenarios as Array<Record<string, unknown>>).map((scenario: Record<string, unknown>, i: number) => (
+					{/* Scenarios code path: currently unused by live data.
+						If data with scenarios is added, verify this rendering path. */}
+					{(oppData as { scenarios: Scenario[] }).scenarios.map((scenario, i) => (
 						<div key={i} className={styles.scenario}>
 							<div className={styles.scenarioHeader}>
-								<span className={styles.scenarioLabel}>{scenario.condition as string}</span>
-								<span className={styles.scenarioProb}>{scenario.probability as number}% likely</span>
+								<span className={styles.scenarioLabel}>{scenario.condition}</span>
+								<span className={styles.scenarioProb}>{scenario.probability}% likely</span>
 							</div>
-							{Boolean(scenario.venue) && (
+							{scenario.venue && (
 								<div className={styles.scenarioMeta}>
-									{(scenario.date ? `${formatDate(scenario.date as string)} \u00B7 ` : '') + (scenario.venue as string)}
+									{(scenario.date ? `${formatDate(scenario.date)} \u00B7 ` : '') + scenario.venue}
 								</div>
 							)}
 							<div className={styles.grid}>
-								{((scenario.opponents as unknown[]) ?? []).map((opp: unknown, j: number) => (
-									<OpponentCard key={j} opp={opp as Opponent} />
+								{scenario.opponents.map((opp, j) => (
+									<OpponentCard key={j} opp={opp} />
 								))}
 							</div>
 						</div>
-					))
-					: null}
+					))}
 				</div>
 			)}
 

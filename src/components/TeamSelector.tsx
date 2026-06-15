@@ -104,7 +104,7 @@ export default function TeamSelector({ teams, selectedId, onChange }: TeamSelect
 			</button>
 
 			{open && (
-				<div className={styles.dropdown} role="dialog" aria-label="Team selection">
+				<div className={styles.dropdown}>
 					<input
 						ref={inputRef}
 						className={styles.search}
