@@ -1,5 +1,6 @@
 .outer {
   overflow-x: auto;
+  max-width: 100%;
   -webkit-overflow-scrolling: touch;
   padding-bottom: 2px;
   /* Hide scrollbar — momentum scroll still works */

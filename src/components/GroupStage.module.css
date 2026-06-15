@@ -1,171 +1,181 @@
 .groupGrid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 16px;
-  margin-bottom: 0;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 16px;
+	margin-bottom: 0;
 }
 
 /* ── Table ── */
 .table {
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  overflow-x: auto;
-  max-width: 100%;
-  scrollbar-width: none;
+	background: var(--surface);
+	border: 1px solid var(--border);
+	border-radius: var(--radius);
+	overflow-x: auto;
+	max-width: 100%;
+	min-width: 0;
+	scrollbar-width: none;
 }
-.table::-webkit-scrollbar { display: none; }
-.table table { min-width: 400px; }
+.table::-webkit-scrollbar {
+	display: none;
+}
 
 .tableHead {
-  padding: 11px 14px 8px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-  display: flex;
-  gap: 6px;
-  align-items: baseline;
+	padding: 11px 14px 8px;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+	display: flex;
+	gap: 6px;
+	align-items: baseline;
 }
 
 .groupLetter {
-  font-family: var(--font-mono);
-  font-size: 9px;
-  letter-spacing: 0.12em;
-  color: var(--purple);
-  text-transform: uppercase;
+	font-family: var(--font-mono);
+	font-size: 9px;
+	letter-spacing: 0.12em;
+	color: var(--purple);
+	text-transform: uppercase;
 }
 
 .tableTitle {
-  font-size: 11px;
-  color: var(--text-lo);
+	font-size: 11px;
+	color: var(--text-lo);
 }
 
 table {
-  width: 100%;
-  border-collapse: collapse;
+	width: 100%;
+	border-collapse: collapse;
 }
 
 thead th {
-  padding: 6px 8px;
-  font-size: 9px;
-  color: var(--text-dim);
-  font-family: var(--font-mono);
-  letter-spacing: 0.06em;
-  font-weight: 600;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
-  text-align: center;
+	padding: 6px 8px;
+	font-size: 9px;
+	color: var(--text-dim);
+	font-family: var(--font-mono);
+	letter-spacing: 0.06em;
+	font-weight: 600;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+	text-align: center;
 }
 
-thead th:nth-child(2) { text-align: left; }
+thead th:nth-child(2) {
+	text-align: left;
+}
 
 tbody tr {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+	border-bottom: 1px solid rgba(255, 255, 255, 0.03);
 }
-tbody tr:last-child { border-bottom: none; }
+tbody tr:last-child {
+	border-bottom: none;
+}
 
 tbody td {
-  padding: 8px 8px;
-  font-size: 11px;
-  font-family: var(--font-mono);
+	padding: 8px 8px;
+	font-size: 11px;
+	font-family: var(--font-mono);
 }
 
 .teamCell {
-  display: flex;
-  align-items: center;
-  gap: 6px;
+	display: flex;
+	align-items: center;
+	gap: 6px;
 }
 
 .youTag {
-  font-size: 8px;
-  background: rgba(99, 102, 241, 0.3);
-  color: #a5b4fc;
-  padding: 1px 4px;
-  border-radius: 3px;
-  font-family: var(--font-mono);
-  letter-spacing: 0.07em;
+	font-size: 8px;
+	background: rgba(99, 102, 241, 0.3);
+	color: #a5b4fc;
+	padding: 1px 4px;
+	border-radius: 3px;
+	font-family: var(--font-mono);
+	letter-spacing: 0.07em;
 }
 
 .probCell {
-  display: flex;
-  align-items: center;
-  gap: 5px;
-  justify-content: flex-end;
-  padding-right: 10px;
+	display: flex;
+	align-items: center;
+	gap: 5px;
+	justify-content: flex-end;
+	padding-right: 10px;
 }
 
 .probBar {
-  height: 3px;
-  border-radius: 2px;
-  flex-shrink: 0;
+	height: 3px;
+	border-radius: 2px;
+	flex-shrink: 0;
 }
 
 /* ── Match cards ── */
 .matchGrid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 9px;
-  margin-top: 16px;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 9px;
+	margin-top: 16px;
 }
 
 .matchCard {
-  border-radius: 8px;
-  padding: 11px 13px;
+	border-radius: 8px;
+	padding: 11px 13px;
 }
 
 .matchMeta {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 6px;
-  font-size: 9px;
-  color: var(--text-dim);
-  font-family: var(--font-mono);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 6px;
+	font-size: 9px;
+	color: var(--text-dim);
+	font-family: var(--font-mono);
 }
 
 .badge {
-  display: inline-block;
-  padding: 1px 7px;
-  border-radius: 4px;
-  font-size: 10px;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  font-family: var(--font-mono);
+	display: inline-block;
+	padding: 1px 7px;
+	border-radius: 4px;
+	font-size: 10px;
+	font-weight: 700;
+	letter-spacing: 0.08em;
+	font-family: var(--font-mono);
 }
 
 .matchTeams {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  flex-wrap: wrap;
+	display: flex;
+	align-items: center;
+	gap: 6px;
+	flex-wrap: wrap;
 }
 
 .score {
-  margin-left: auto;
-  font-family: var(--font-mono);
-  font-size: 14px;
-  font-weight: 800;
-  color: #22c55e;
+	margin-left: auto;
+	font-family: var(--font-mono);
+	font-size: 14px;
+	font-weight: 800;
+	color: #22c55e;
 }
 
 .scorers {
-  margin-top: 6px;
-  padding-top: 6px;
-  border-top: 1px solid rgba(255, 255, 255, 0.04);
-  list-style: none;
-  font-size: 9px;
-  color: var(--text-dim);
-  font-family: var(--font-mono);
-  line-height: 1.9;
+	margin-top: 6px;
+	padding-top: 6px;
+	border-top: 1px solid rgba(255, 255, 255, 0.04);
+	list-style: none;
+	font-size: 9px;
+	color: var(--text-dim);
+	font-family: var(--font-mono);
+	line-height: 1.9;
 }
 
 .venue {
-  margin-top: 4px;
-  font-size: 10px;
-  color: var(--text-dim);
+	margin-top: 4px;
+	font-size: 10px;
+	color: var(--text-dim);
 }
 
 /* ── Responsive ── */
 @media (max-width: 900px) {
-  .groupGrid  { grid-template-columns: 1fr; }
+	.groupGrid {
+		grid-template-columns: 1fr;
+	}
 }
 @media (max-width: 580px) {
-  .matchGrid  { grid-template-columns: 1fr; }
+	.matchGrid {
+		grid-template-columns: 1fr;
+	}
 }
