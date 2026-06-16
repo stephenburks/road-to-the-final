@@ -416,7 +416,7 @@ function buildGroupResults(teamId, snapshotDate, truthResultMap, truthTeamDetail
 
 // ─── Repair a single snapshot ─────────────────────────────────────────────
 
-function repairSnapshot(snapshotDate, truthResultMap, truthTeamDetails, truthTeams) {
+function repairSnapshot(snapshotDate, truthResultMap, truthTeamDetails) {
 	const snapPath = path.join(SNAP_DIR, `${snapshotDate}.json`);
 	if (!fs.existsSync(snapPath)) {
 		console.log(`  ⚠  Snapshot not found: ${snapshotDate}.json — skipping`);
