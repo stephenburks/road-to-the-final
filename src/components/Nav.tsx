@@ -8,7 +8,7 @@ interface NavProps {
 }
 
 /**
- * Sticky navigation bar — always shows view toggles, appends section anchors on team view.
+ * Sticky navigation bar — static links on all views.
  */
 export default function Nav({ view, onViewChange, isHistorical }: NavProps) {
 	return (
@@ -29,28 +29,12 @@ export default function Nav({ view, onViewChange, isHistorical }: NavProps) {
 					Standings
 				</button>
 
-				{view === 'team' && (
-					<>
-						<a className={styles.link} href="#hero">
-							Team
-						</a>
-						<a className={styles.link} href="#road">
-							Bracket
-						</a>
-						<a className={styles.link} href="#groups">
-							Groups
-						</a>
-						<a className={styles.link} href="#opponents">
-							Opponents
-						</a>
-						<a className={styles.link} href="#schedule">
-							Schedule
-						</a>
-						<a className={styles.link} href="#squad">
-							Squad
-						</a>
-					</>
-				)}
+				<a className={styles.link} href="#hero">Team</a>
+				<a className={styles.link} href="#road">Bracket</a>
+				<a className={styles.link} href="#groups">Groups</a>
+				<a className={styles.link} href="#opponents">Opponents</a>
+				<a className={styles.link} href="#schedule">Schedule</a>
+				<a className={styles.link} href="#squad">Squad</a>
 
 				<div className={styles.badge} aria-live="polite">
 					<div
