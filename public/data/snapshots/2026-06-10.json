@@ -49,57 +49,57 @@
           "pos": 1,
           "teamId": "mexico",
           "team": "Mexico",
-          "played": 1,
-          "w": 1,
+          "flag": "🇲🇽",
+          "played": 0,
+          "w": 0,
           "d": 0,
           "l": 0,
-          "gf": 2,
+          "gf": 0,
           "ga": 0,
-          "gd": 2,
-          "pts": 3,
-          "flag": "🇲🇽"
+          "gd": 0,
+          "pts": 0
         },
         {
           "pos": 2,
-          "teamId": "southkorea",
-          "team": "South Korea",
-          "played": 1,
-          "w": 1,
+          "teamId": "southafrica",
+          "team": "South Africa",
+          "flag": "🇿🇦",
+          "played": 0,
+          "w": 0,
           "d": 0,
           "l": 0,
-          "gf": 2,
-          "ga": 1,
-          "gd": 1,
-          "pts": 3,
-          "flag": "🇰🇷"
+          "gf": 0,
+          "ga": 0,
+          "gd": 0,
+          "pts": 0
         },
         {
           "pos": 3,
-          "teamId": "czechia",
-          "team": "Czechia",
-          "played": 1,
+          "teamId": "southkorea",
+          "team": "South Korea",
+          "flag": "🇰🇷",
+          "played": 0,
           "w": 0,
           "d": 0,
-          "l": 1,
-          "gf": 1,
-          "ga": 2,
-          "gd": -1,
-          "pts": 0,
-          "flag": "🇨🇿"
+          "l": 0,
+          "gf": 0,
+          "ga": 0,
+          "gd": 0,
+          "pts": 0
         },
         {
           "pos": 4,
-          "teamId": "southafrica",
-          "team": "South Africa",
-          "played": 1,
+          "teamId": "czechia",
+          "team": "Czechia",
+          "flag": "🇨🇿",
+          "played": 0,
           "w": 0,
           "d": 0,
-          "l": 1,
+          "l": 0,
           "gf": 0,
-          "ga": 2,
-          "gd": -2,
-          "pts": 0,
-          "flag": "🇿🇦"
+          "ga": 0,
+          "gd": 0,
+          "pts": 0
         }
       ],
       "winProbabilities": {
@@ -113,59 +113,59 @@
       "standings": [
         {
           "pos": 1,
-          "teamId": "switzerland",
-          "team": "Switzerland",
-          "played": 1,
+          "teamId": "canada",
+          "team": "Canada",
+          "flag": "🇨🇦",
+          "played": 0,
           "w": 0,
-          "d": 1,
+          "d": 0,
           "l": 0,
-          "gf": 1,
-          "ga": 1,
+          "gf": 0,
+          "ga": 0,
           "gd": 0,
-          "pts": 1,
-          "flag": "🇨🇭"
+          "pts": 0
         },
         {
           "pos": 2,
-          "teamId": "canada",
-          "team": "Canada",
-          "played": 1,
+          "teamId": "bosnia",
+          "team": "Bosnia & Herz.",
+          "flag": "🇧🇦",
+          "played": 0,
           "w": 0,
-          "d": 1,
+          "d": 0,
           "l": 0,
-          "gf": 1,
-          "ga": 1,
+          "gf": 0,
+          "ga": 0,
           "gd": 0,
-          "pts": 1,
-          "flag": "🇨🇦"
+          "pts": 0
         },
         {
           "pos": 3,
           "teamId": "qatar",
           "team": "Qatar",
-          "played": 1,
+          "flag": "🇶🇦",
+          "played": 0,
           "w": 0,
-          "d": 1,
+          "d": 0,
           "l": 0,
-          "gf": 1,
-          "ga": 1,
+          "gf": 0,
+          "ga": 0,
           "gd": 0,
-          "pts": 1,
-          "flag": "🇶🇦"
+          "pts": 0
         },
         {
           "pos": 4,
-          "teamId": "bosnia",
-          "team": "Bosnia & Herz.",
-          "played": 1,
+          "teamId": "switzerland",
+          "team": "Switzerland",
+          "flag": "🇨🇭",
+          "played": 0,
           "w": 0,
-          "d": 1,
+          "d": 0,
           "l": 0,
-          "gf": 1,
-          "ga": 1,
+          "gf": 0,
+          "ga": 0,
           "gd": 0,
-          "pts": 1,
-          "flag": "🇧🇦"
+          "pts": 0
         }
       ],
       "winProbabilities": {
@@ -179,59 +179,59 @@
       "standings": [
         {
           "pos": 1,
-          "teamId": "scotland",
-          "team": "Scotland",
-          "played": 1,
-          "w": 1,
+          "teamId": "brazil",
+          "team": "Brazil",
+          "flag": "🇧🇷",
+          "played": 0,
+          "w": 0,
           "d": 0,
           "l": 0,
-          "gf": 1,
+          "gf": 0,
           "ga": 0,
-          "gd": 1,
-          "pts": 3,
-          "flag": "🏴󠁧󠁢󠁳󠁣󠁴󠁿"
+          "gd": 0,
+          "pts": 0
         },
         {
           "pos": 2,
           "teamId": "morocco",
           "team": "Morocco",
-          "played": 1,
+          "flag": "🇲🇦",
+          "played": 0,
           "w": 0,
-          "d": 1,
+          "d": 0,
           "l": 0,
-          "gf": 1,
-          "ga": 1,
+          "gf": 0,
+          "ga": 0,
           "gd": 0,
-          "pts": 1,
-          "flag": "🇲🇦"
+          "pts": 0
         },
         {
           "pos": 3,
-          "teamId": "brazil",
-          "team": "Brazil",
-          "played": 1,
+          "teamId": "haiti",
+          "team": "Haiti",
+          "flag": "🇭🇹",
+          "played": 0,
           "w": 0,
-          "d": 1,
+          "d": 0,
           "l": 0,
-          "gf": 1,
-          "ga": 1,
+          "gf": 0,
+          "ga": 0,
           "gd": 0,
-          "pts": 1,
-          "flag": "🇧🇷"
+          "pts": 0
         },
         {
           "pos": 4,
-          "teamId": "haiti",
-          "team": "Haiti",
-          "played": 1,
+          "teamId": "scotland",
+          "team": "Scotland",
+          "flag": "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
+          "played": 0,
           "w": 0,
           "d": 0,
-          "l": 1,
+          "l": 0,
           "gf": 0,
-          "ga": 1,
-          "gd": -1,
-          "pts": 0,
-          "flag": "🇭🇹"
+          "ga": 0,
+          "gd": 0,
+          "pts": 0
         }
       ],
       "winProbabilities": {
@@ -247,57 +247,57 @@
           "pos": 1,
           "teamId": "usa",
           "team": "USA",
-          "played": 1,
-          "w": 1,
+          "flag": "🇺🇸",
+          "played": 0,
+          "w": 0,
           "d": 0,
           "l": 0,
-          "gf": 4,
-          "ga": 1,
-          "gd": 3,
-          "pts": 3,
-          "flag": "🇺🇸"
+          "gf": 0,
+          "ga": 0,
+          "gd": 0,
+          "pts": 0
         },
         {
           "pos": 2,
-          "teamId": "australia",
-          "team": "Australia",
-          "played": 1,
-          "w": 1,
+          "teamId": "paraguay",
+          "team": "Paraguay",
+          "flag": "🇵🇾",
+          "played": 0,
+          "w": 0,
           "d": 0,
           "l": 0,
-          "gf": 2,
+          "gf": 0,
           "ga": 0,
-          "gd": 2,
-          "pts": 3,
-          "flag": "🇦🇺"
+          "gd": 0,
+          "pts": 0
         },
         {
           "pos": 3,
-          "teamId": "turkey",
-          "team": "Türkiye",
-          "played": 1,
+          "teamId": "australia",
+          "team": "Australia",
+          "flag": "🇦🇺",
+          "played": 0,
           "w": 0,
           "d": 0,
-          "l": 1,
+          "l": 0,
           "gf": 0,
-          "ga": 2,
-          "gd": -2,
-          "pts": 0,
-          "flag": "🇹🇷"
+          "ga": 0,
+          "gd": 0,
+          "pts": 0
         },
         {
           "pos": 4,
-          "teamId": "paraguay",
-          "team": "Paraguay",
-          "played": 1,
+          "teamId": "turkey",
+          "team": "Türkiye",
+          "flag": "🇹🇷",
+          "played": 0,
           "w": 0,
           "d": 0,
-          "l": 1,
-          "gf": 1,
-          "ga": 4,
-          "gd": -3,
-          "pts": 0,
-          "flag": "🇵🇾"
+          "l": 0,
+          "gf": 0,
+          "ga": 0,
+          "gd": 0,
+          "pts": 0
         }
       ],
       "winProbabilities": {
@@ -313,57 +313,57 @@
           "pos": 1,
           "teamId": "germany",
           "team": "Germany",
-          "played": 1,
-          "w": 1,
+          "flag": "🇩🇪",
+          "played": 0,
+          "w": 0,
           "d": 0,
           "l": 0,
-          "gf": 7,
-          "ga": 1,
-          "gd": 6,
-          "pts": 3,
-          "flag": "🇩🇪"
+          "gf": 0,
+          "ga": 0,
+          "gd": 0,
+          "pts": 0
         },
         {
           "pos": 2,
-          "teamId": "ivorycoast",
-          "team": "Ivory Coast",
-          "played": 1,
-          "w": 1,
+          "teamId": "curacao",
+          "team": "Curaçao",
+          "flag": "🇨🇼",
+          "played": 0,
+          "w": 0,
           "d": 0,
           "l": 0,
-          "gf": 1,
+          "gf": 0,
           "ga": 0,
-          "gd": 1,
-          "pts": 3,
-          "flag": "🇨🇮"
+          "gd": 0,
+          "pts": 0
         },
         {
           "pos": 3,
-          "teamId": "ecuador",
-          "team": "Ecuador",
-          "played": 1,
+          "teamId": "ivorycoast",
+          "team": "Ivory Coast",
+          "flag": "🇨🇮",
+          "played": 0,
           "w": 0,
           "d": 0,
-          "l": 1,
+          "l": 0,
           "gf": 0,
-          "ga": 1,
-          "gd": -1,
-          "pts": 0,
-          "flag": "🇪🇨"
+          "ga": 0,
+          "gd": 0,
+          "pts": 0
         },
         {
           "pos": 4,
-          "teamId": "curacao",
-          "team": "Curaçao",
-          "played": 1,
+          "teamId": "ecuador",
+          "team": "Ecuador",
+          "flag": "🇪🇨",
+          "played": 0,
           "w": 0,
           "d": 0,
-          "l": 1,
-          "gf": 1,
-          "ga": 7,
-          "gd": -6,
-          "pts": 0,
-          "flag": "🇨🇼"
+          "l": 0,
+          "gf": 0,
+          "ga": 0,
+          "gd": 0,
+          "pts": 0
         }
       ],
       "winProbabilities": {
@@ -377,59 +377,59 @@
       "standings": [
         {
           "pos": 1,
-          "teamId": "sweden",
-          "team": "Sweden",
-          "played": 1,
-          "w": 1,
+          "teamId": "netherlands",
+          "team": "Netherlands",
+          "flag": "🇳🇱",
+          "played": 0,
+          "w": 0,
           "d": 0,
           "l": 0,
-          "gf": 5,
-          "ga": 1,
-          "gd": 4,
-          "pts": 3,
-          "flag": "🇸🇪"
+          "gf": 0,
+          "ga": 0,
+          "gd": 0,
+          "pts": 0
         },
         {
           "pos": 2,
           "teamId": "japan",
           "team": "Japan",
-          "played": 1,
+          "flag": "🇯🇵",
+          "played": 0,
           "w": 0,
-          "d": 1,
+          "d": 0,
           "l": 0,
-          "gf": 2,
-          "ga": 2,
+          "gf": 0,
+          "ga": 0,
           "gd": 0,
-          "pts": 1,
-          "flag": "🇯🇵"
+          "pts": 0
         },
         {
           "pos": 3,
-          "teamId": "netherlands",
-          "team": "Netherlands",
-          "played": 1,
+          "teamId": "sweden",
+          "team": "Sweden",
+          "flag": "🇸🇪",
+          "played": 0,
           "w": 0,
-          "d": 1,
+          "d": 0,
           "l": 0,
-          "gf": 2,
-          "ga": 2,
+          "gf": 0,
+          "ga": 0,
           "gd": 0,
-          "pts": 1,
-          "flag": "🇳🇱"
+          "pts": 0
         },
         {
           "pos": 4,
           "teamId": "tunisia",
           "team": "Tunisia",
-          "played": 1,
+          "flag": "🇹🇳",
+          "played": 0,
           "w": 0,
           "d": 0,
-          "l": 1,
-          "gf": 1,
-          "ga": 5,
-          "gd": -4,
-          "pts": 0,
-          "flag": "🇹🇳"
+          "l": 0,
+          "gf": 0,
+          "ga": 0,
+          "gd": 0,
+          "pts": 0
         }
       ],
       "winProbabilities": {
@@ -443,59 +443,59 @@
       "standings": [
         {
           "pos": 1,
-          "teamId": "newzealand",
-          "team": "New Zealand",
-          "played": 1,
-          "w": 1,
+          "teamId": "belgium",
+          "team": "Belgium",
+          "flag": "🇧🇪",
+          "played": 0,
+          "w": 0,
           "d": 0,
           "l": 0,
-          "gf": 1,
+          "gf": 0,
           "ga": 0,
-          "gd": 1,
-          "pts": 3,
-          "flag": "🇳🇿"
+          "gd": 0,
+          "pts": 0
         },
         {
           "pos": 2,
-          "teamId": "belgium",
-          "team": "Belgium",
-          "played": 1,
+          "teamId": "egypt",
+          "team": "Egypt",
+          "flag": "🇪🇬",
+          "played": 0,
           "w": 0,
-          "d": 1,
+          "d": 0,
           "l": 0,
-          "gf": 1,
-          "ga": 1,
+          "gf": 0,
+          "ga": 0,
           "gd": 0,
-          "pts": 1,
-          "flag": "🇧🇪"
+          "pts": 0
         },
         {
           "pos": 3,
-          "teamId": "egypt",
-          "team": "Egypt",
-          "played": 1,
+          "teamId": "iran",
+          "team": "Iran",
+          "flag": "🇮🇷",
+          "played": 0,
           "w": 0,
-          "d": 1,
+          "d": 0,
           "l": 0,
-          "gf": 1,
-          "ga": 1,
+          "gf": 0,
+          "ga": 0,
           "gd": 0,
-          "pts": 1,
-          "flag": "🇪🇬"
+          "pts": 0
         },
         {
           "pos": 4,
-          "teamId": "iran",
-          "team": "Iran",
-          "played": 1,
+          "teamId": "newzealand",
+          "team": "New Zealand",
+          "flag": "🇳🇿",
+          "played": 0,
           "w": 0,
           "d": 0,
-          "l": 1,
+          "l": 0,
           "gf": 0,
-          "ga": 1,
-          "gd": -1,
-          "pts": 0,
-          "flag": "🇮🇷"
+          "ga": 0,
+          "gd": 0,
+          "pts": 0
         }
       ],
       "winProbabilities": {
@@ -509,59 +509,59 @@
       "standings": [
         {
           "pos": 1,
-          "teamId": "saudiarabia",
-          "team": "Saudi Arabia",
-          "played": 1,
+          "teamId": "spain",
+          "team": "Spain",
+          "flag": "🇪🇸",
+          "played": 0,
           "w": 0,
-          "d": 1,
+          "d": 0,
           "l": 0,
-          "gf": 1,
-          "ga": 1,
+          "gf": 0,
+          "ga": 0,
           "gd": 0,
-          "pts": 1,
-          "flag": "🇸🇦"
+          "pts": 0
         },
         {
           "pos": 2,
-          "teamId": "uruguay",
-          "team": "Uruguay",
-          "played": 1,
+          "teamId": "capeverde",
+          "team": "Cape Verde",
+          "flag": "🇨🇻",
+          "played": 0,
           "w": 0,
-          "d": 1,
+          "d": 0,
           "l": 0,
-          "gf": 1,
-          "ga": 1,
+          "gf": 0,
+          "ga": 0,
           "gd": 0,
-          "pts": 1,
-          "flag": "🇺🇾"
+          "pts": 0
         },
         {
           "pos": 3,
-          "teamId": "spain",
-          "team": "Spain",
-          "played": 1,
+          "teamId": "saudiarabia",
+          "team": "Saudi Arabia",
+          "flag": "🇸🇦",
+          "played": 0,
           "w": 0,
-          "d": 1,
+          "d": 0,
           "l": 0,
           "gf": 0,
           "ga": 0,
           "gd": 0,
-          "pts": 1,
-          "flag": "🇪🇸"
+          "pts": 0
         },
         {
           "pos": 4,
-          "teamId": "capeverde",
-          "team": "Cape Verde",
-          "played": 1,
+          "teamId": "uruguay",
+          "team": "Uruguay",
+          "flag": "🇺🇾",
+          "played": 0,
           "w": 0,
-          "d": 1,
+          "d": 0,
           "l": 0,
           "gf": 0,
           "ga": 0,
           "gd": 0,
-          "pts": 1,
-          "flag": "🇨🇻"
+          "pts": 0
         }
       ],
       "winProbabilities": {
@@ -577,6 +577,7 @@
           "pos": 1,
           "teamId": "france",
           "team": "France",
+          "flag": "🇫🇷",
           "played": 0,
           "w": 0,
           "d": 0,
@@ -584,13 +585,13 @@
           "gf": 0,
           "ga": 0,
           "gd": 0,
-          "pts": 0,
-          "flag": "🇫🇷"
+          "pts": 0
         },
         {
           "pos": 2,
-          "teamId": "iraq",
-          "team": "Iraq",
+          "teamId": "senegal",
+          "team": "Senegal",
+          "flag": "🇸🇳",
           "played": 0,
           "w": 0,
           "d": 0,
@@ -598,13 +599,13 @@
           "gf": 0,
           "ga": 0,
           "gd": 0,
-          "pts": 0,
-          "flag": "🇮🇶"
+          "pts": 0
         },
         {
           "pos": 3,
-          "teamId": "norway",
-          "team": "Norway",
+          "teamId": "iraq",
+          "team": "Iraq",
+          "flag": "🇮🇶",
           "played": 0,
           "w": 0,
           "d": 0,
@@ -612,13 +613,13 @@
           "gf": 0,
           "ga": 0,
           "gd": 0,
-          "pts": 0,
-          "flag": "🇳🇴"
+          "pts": 0
         },
         {
           "pos": 4,
-          "teamId": "senegal",
-          "team": "Senegal",
+          "teamId": "norway",
+          "team": "Norway",
+          "flag": "🇳🇴",
           "played": 0,
           "w": 0,
           "d": 0,
@@ -626,8 +627,7 @@
           "gf": 0,
           "ga": 0,
           "gd": 0,
-          "pts": 0,
-          "flag": "🇸🇳"
+          "pts": 0
         }
       ],
       "winProbabilities": {
@@ -641,8 +641,9 @@
       "standings": [
         {
           "pos": 1,
-          "teamId": "algeria",
-          "team": "Algeria",
+          "teamId": "argentina",
+          "team": "Argentina",
+          "flag": "🇦🇷",
           "played": 0,
           "w": 0,
           "d": 0,
@@ -650,13 +651,13 @@
           "gf": 0,
           "ga": 0,
           "gd": 0,
-          "pts": 0,
-          "flag": "🇩🇿"
+          "pts": 0
         },
         {
           "pos": 2,
-          "teamId": "argentina",
-          "team": "Argentina",
+          "teamId": "algeria",
+          "team": "Algeria",
+          "flag": "🇩🇿",
           "played": 0,
           "w": 0,
           "d": 0,
@@ -664,13 +665,13 @@
           "gf": 0,
           "ga": 0,
           "gd": 0,
-          "pts": 0,
-          "flag": "🇦🇷"
+          "pts": 0
         },
         {
           "pos": 3,
-          "teamId": "jordan",
-          "team": "Jordan",
+          "teamId": "austria",
+          "team": "Austria",
+          "flag": "🇦🇹",
           "played": 0,
           "w": 0,
           "d": 0,
@@ -678,13 +679,13 @@
           "gf": 0,
           "ga": 0,
           "gd": 0,
-          "pts": 0,
-          "flag": "🇯🇴"
+          "pts": 0
         },
         {
           "pos": 4,
-          "teamId": "austria",
-          "team": "Austria",
+          "teamId": "jordan",
+          "team": "Jordan",
+          "flag": "🇯🇴",
           "played": 0,
           "w": 0,
           "d": 0,
@@ -692,8 +693,7 @@
           "gf": 0,
           "ga": 0,
           "gd": 0,
-          "pts": 0,
-          "flag": "🇦🇹"
+          "pts": 0
         }
       ],
       "winProbabilities": {
@@ -707,8 +707,9 @@
       "standings": [
         {
           "pos": 1,
-          "teamId": "drcongo",
-          "team": "DR Congo",
+          "teamId": "portugal",
+          "team": "Portugal",
+          "flag": "🇵🇹",
           "played": 0,
           "w": 0,
           "d": 0,
@@ -716,13 +717,13 @@
           "gf": 0,
           "ga": 0,
           "gd": 0,
-          "pts": 0,
-          "flag": "🇨🇩"
+          "pts": 0
         },
         {
           "pos": 2,
-          "teamId": "colombia",
-          "team": "Colombia",
+          "teamId": "drcongo",
+          "team": "DR Congo",
+          "flag": "🇨🇩",
           "played": 0,
           "w": 0,
           "d": 0,
@@ -730,13 +731,13 @@
           "gf": 0,
           "ga": 0,
           "gd": 0,
-          "pts": 0,
-          "flag": "🇨🇴"
+          "pts": 0
         },
         {
           "pos": 3,
-          "teamId": "portugal",
-          "team": "Portugal",
+          "teamId": "uzbekistan",
+          "team": "Uzbekistan",
+          "flag": "🇺🇿",
           "played": 0,
           "w": 0,
           "d": 0,
@@ -744,13 +745,13 @@
           "gf": 0,
           "ga": 0,
           "gd": 0,
-          "pts": 0,
-          "flag": "🇵🇹"
+          "pts": 0
         },
         {
           "pos": 4,
-          "teamId": "uzbekistan",
-          "team": "Uzbekistan",
+          "teamId": "colombia",
+          "team": "Colombia",
+          "flag": "🇨🇴",
           "played": 0,
           "w": 0,
           "d": 0,
@@ -758,8 +759,7 @@
           "gf": 0,
           "ga": 0,
           "gd": 0,
-          "pts": 0,
-          "flag": "🇺🇿"
+          "pts": 0
         }
       ],
       "winProbabilities": {
@@ -775,6 +775,7 @@
           "pos": 1,
           "teamId": "england",
           "team": "England",
+          "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
           "played": 0,
           "w": 0,
           "d": 0,
@@ -782,13 +783,13 @@
           "gf": 0,
           "ga": 0,
           "gd": 0,
-          "pts": 0,
-          "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿"
+          "pts": 0
         },
         {
           "pos": 2,
-          "teamId": "ghana",
-          "team": "Ghana",
+          "teamId": "croatia",
+          "team": "Croatia",
+          "flag": "🇭🇷",
           "played": 0,
           "w": 0,
           "d": 0,
@@ -796,13 +797,13 @@
           "gf": 0,
           "ga": 0,
           "gd": 0,
-          "pts": 0,
-          "flag": "🇬🇭"
+          "pts": 0
         },
         {
           "pos": 3,
-          "teamId": "croatia",
-          "team": "Croatia",
+          "teamId": "ghana",
+          "team": "Ghana",
+          "flag": "🇬🇭",
           "played": 0,
           "w": 0,
           "d": 0,
@@ -810,13 +811,13 @@
           "gf": 0,
           "ga": 0,
           "gd": 0,
-          "pts": 0,
-          "flag": "🇭🇷"
+          "pts": 0
         },
         {
           "pos": 4,
           "teamId": "panama",
           "team": "Panama",
+          "flag": "🇵🇦",
           "played": 0,
           "w": 0,
           "d": 0,
@@ -824,8 +825,7 @@
           "gf": 0,
           "ga": 0,
           "gd": 0,
-          "pts": 0,
-          "flag": "🇵🇦"
+          "pts": 0
         }
       ],
       "winProbabilities": {
@@ -851,26 +851,12 @@
           "matchday": 1,
           "opponent": "South Africa",
           "opponentFlag": "🇿🇦",
-          "result": "W",
-          "score": "2-0",
+          "result": null,
+          "score": null,
           "date": "2026-06-11",
           "venue": "Estadio Azteca, Mexico City",
-          "scorers": [
-            "Lozano 34'",
-            "Jiménez 67'"
-          ],
-          "cards": [
-            {
-              "player": "Brian Gutiérrez",
-              "minute": "23'",
-              "type": "yellow"
-            },
-            {
-              "player": "César Montes",
-              "minute": "90'+2'",
-              "type": "red"
-            }
-          ]
+          "scorers": [],
+          "cards": []
         },
         {
           "matchday": 2,
@@ -880,7 +866,8 @@
           "score": null,
           "date": "2026-06-18",
           "venue": "Estadio Akron, Zapopan",
-          "scorers": []
+          "scorers": [],
+          "cards": []
         },
         {
           "matchday": 3,
@@ -890,7 +877,8 @@
           "score": null,
           "date": "2026-06-24",
           "venue": "Estadio Akron, Zapopan",
-          "scorers": []
+          "scorers": [],
+          "cards": []
         }
       ],
       "advanceProbabilities": {
@@ -1026,33 +1014,12 @@
           "matchday": 1,
           "opponent": "Mexico",
           "opponentFlag": "🇲🇽",
-          "result": "L",
-          "score": "0-2",
+          "result": null,
+          "score": null,
           "date": "2026-06-11",
           "venue": "Estadio Azteca, Mexico City",
           "scorers": [],
-          "cards": [
-            {
-              "player": "Teboho Mokoena",
-              "minute": "17'",
-              "type": "yellow"
-            },
-            {
-              "player": "Sphephelo Sithole",
-              "minute": "49'",
-              "type": "red"
-            },
-            {
-              "player": "Nkosinathi Sibisi",
-              "minute": "74'",
-              "type": "yellow"
-            },
-            {
-              "player": "Themba Zwane",
-              "minute": "84'",
-              "type": "red"
-            }
-          ]
+          "cards": []
         },
         {
           "matchday": 2,
@@ -1062,7 +1029,8 @@
           "score": null,
           "date": "2026-06-18",
           "venue": "Mercedes-Benz Stadium, Atlanta",
-          "scorers": []
+          "scorers": [],
+          "cards": []
         },
         {
           "matchday": 3,
@@ -1072,7 +1040,8 @@
           "score": null,
           "date": "2026-06-24",
           "venue": "Estadio Akron, Zapopan",
-          "scorers": []
+          "scorers": [],
+          "cards": []
         }
       ],
       "advanceProbabilities": {
@@ -1212,7 +1181,8 @@
           "score": null,
           "date": "2026-06-11",
           "venue": "Estadio Akron, Zapopan",
-          "scorers": []
+          "scorers": [],
+          "cards": []
         },
         {
           "matchday": 2,
@@ -1222,7 +1192,8 @@
           "score": null,
           "date": "2026-06-18",
           "venue": "Estadio Akron, Zapopan",
-          "scorers": []
+          "scorers": [],
+          "cards": []
         },
         {
           "matchday": 3,
@@ -1232,7 +1203,8 @@
           "score": null,
           "date": "2026-06-24",
           "venue": "Estadio Akron, Zapopan",
-          "scorers": []
+          "scorers": [],
+          "cards": []
         }
       ],
       "advanceProbabilities": {
@@ -1372,7 +1344,8 @@
           "score": null,
           "date": "2026-06-11",
           "venue": "Estadio Akron, Zapopan",
-          "scorers": []
+          "scorers": [],
+          "cards": []
         },
         {
           "matchday": 2,
@@ -1382,7 +1355,8 @@
           "score": null,
           "date": "2026-06-18",
           "venue": "Mercedes-Benz Stadium, Atlanta",
-          "scorers": []
+          "scorers": [],
+          "cards": []
         },
         {
           "matchday": 3,
@@ -1392,7 +1366,8 @@
           "score": null,
           "date": "2026-06-24",
           "venue": "Estadio Akron, Zapopan",
-          "scorers": []
+          "scorers": [],
+          "cards": []
         }
       ],
       "advanceProbabilities": {
@@ -1528,25 +1503,12 @@
           "matchday": 1,
           "opponent": "Bosnia & Herz.",
           "opponentFlag": "🇧🇦",
-          "result": "D",
-          "score": "1-1",
+          "result": null,
+          "score": null,
           "date": "2026-06-12",
           "venue": "BMO Field, Toronto",
-          "scorers": [
-            "Larin 61'"
-          ],
-          "cards": [
-            {
-              "player": "Alistair Johnston",
-              "minute": "11'",
-              "type": "yellow"
-            },
-            {
-              "player": "Luc de Fougerolles",
-              "minute": "53'",
-              "type": "yellow"
-            }
-          ]
+          "scorers": [],
+          "cards": []
         },
         {
           "matchday": 2,
@@ -1556,7 +1518,8 @@
           "score": null,
           "date": "2026-06-18",
           "venue": "BC Place, Vancouver",
-          "scorers": []
+          "scorers": [],
+          "cards": []
         },
         {
           "matchday": 3,
@@ -1566,7 +1529,8 @@
           "score": null,
           "date": "2026-06-24",
           "venue": "BC Place, Vancouver",
-          "scorers": []
+          "scorers": [],
+          "cards": []
         }
       ],
       "advanceProbabilities": {
@@ -1702,30 +1666,12 @@
           "matchday": 1,
           "opponent": "Canada",
           "opponentFlag": "🇨🇦",
-          "result": "D",
-          "score": "1-1",
+          "result": null,
+          "score": null,
           "date": "2026-06-12",
           "venue": "BMO Field, Toronto",
-          "scorers": [
-            "Džeko 44'"
-          ],
-          "cards": [
-            {
-              "player": "Ermedin Demirovic",
-              "minute": "45'",
-              "type": "yellow"
-            },
-            {
-              "player": "Jovo Lukic",
-              "minute": "45'+1'",
-              "type": "yellow"
-            },
-            {
-              "player": "Nikola Katic",
-              "minute": "90'+3'",
-              "type": "yellow"
-            }
-          ]
+          "scorers": [],
+          "cards": []
         },
         {
           "matchday": 2,
@@ -1735,7 +1681,8 @@
           "score": null,
           "date": "2026-06-18",
           "venue": "Levi's Stadium, San Francisco",
-          "scorers": []
+          "scorers": [],
+          "cards": []
         },
         {
           "matchday": 3,
@@ -1745,7 +1692,8 @@
           "score": null,
           "date": "2026-06-24",
           "venue": "Lumen Field, Seattle",
-          "scorers": []
+          "scorers": [],
+          "cards": []
         }
       ],
       "advanceProbabilities": {
@@ -1881,25 +1829,12 @@
           "matchday": 1,
           "opponent": "Switzerland",
           "opponentFlag": "🇨🇭",
-          "result": "D",
-          "score": "1-1",
+          "result": null,
+          "score": null,
           "date": "2026-06-13",
           "venue": "Levi's Stadium, San Francisco",
-          "scorers": [
-            "Miro Muheim OG 90'+4'"
-          ],
-          "cards": [
-            {
-              "player": "Mahmoud Abunada",
-              "minute": "16'",
-              "type": "yellow"
-            },
-            {
-              "player": "Jassem Gaber",
-              "minute": "23'",
-              "type": "yellow"
-            }
-          ]
+          "scorers": [],
+          "cards": []
         },
         {
           "matchday": 2,
@@ -1909,7 +1844,8 @@
           "score": null,
           "date": "2026-06-18",
           "venue": "BC Place, Vancouver",
-          "scorers": []
+          "scorers": [],
+          "cards": []
         },
         {
           "matchday": 3,
@@ -1919,7 +1855,8 @@
           "score": null,
           "date": "2026-06-24",
           "venue": "Lumen Field, Seattle",
-          "scorers": []
+          "scorers": [],
+          "cards": []
         }
       ],
       "advanceProbabilities": {
@@ -2055,20 +1992,12 @@
           "matchday": 1,
           "opponent": "Qatar",
           "opponentFlag": "🇶🇦",
-          "result": "D",
-          "score": "1-1",
+          "result": null,
+          "score": null,
           "date": "2026-06-13",
           "venue": "Levi's Stadium, San Francisco",
-          "scorers": [
-            "Breel Embolo 17' (P)"
-          ],
-          "cards": [
-            {
-              "player": "Denis Zakaria",
-              "minute": "42'",
-              "type": "yellow"
-            }
-          ]
+          "scorers": [],
+          "cards": []
         },
         {
           "matchday": 2,
@@ -2078,7 +2007,8 @@
           "score": null,
           "date": "2026-06-18",
           "venue": "Levi's Stadium, San Francisco",
-          "scorers": []
+          "scorers": [],
+          "cards": []
         },
         {
           "matchday": 3,
@@ -2088,7 +2018,8 @@
           "score": null,
           "date": "2026-06-24",
           "venue": "BC Place, Vancouver",
-          "scorers": []
+          "scorers": [],
+          "cards": []
         }
       ],
       "advanceProbabilities": {
@@ -2224,25 +2155,12 @@
           "matchday": 1,
           "opponent": "Morocco",
           "opponentFlag": "🇲🇦",
-          "result": "D",
-          "score": "1-1",
+          "result": null,
+          "score": null,
           "date": "2026-06-13",
           "venue": "MetLife Stadium, New Jersey",
-          "scorers": [
-            "Vinícius Jr 55'"
-          ],
-          "cards": [
-            {
-              "player": "Casemiro",
-              "minute": "37'",
-              "type": "yellow"
-            },
-            {
-              "player": "Roger Ibañez",
-              "minute": "43'",
-              "type": "yellow"
-            }
-          ]
+          "scorers": [],
+          "cards": []
         },
         {
           "matchday": 2,
@@ -2252,7 +2170,8 @@
           "score": null,
           "date": "2026-06-19",
           "venue": "Lincoln Financial Field, Philadelphia",
-          "scorers": []
+          "scorers": [],
+          "cards": []
         },
         {
           "matchday": 3,
@@ -2262,7 +2181,8 @@
           "score": null,
           "date": "2026-06-24",
           "venue": "Hard Rock Stadium, Miami",
-          "scorers": []
+          "scorers": [],
+          "cards": []
         }
       ],
       "advanceProbabilities": {
@@ -2354,13 +2274,12 @@
           "matchday": 1,
           "opponent": "Brazil",
           "opponentFlag": "🇧🇷",
-          "result": "D",
-          "score": "1-1",
+          "result": null,
+          "score": null,
           "date": "2026-06-13",
           "venue": "MetLife Stadium, New Jersey",
-          "scorers": [
-            "Saibari 22'"
-          ]
+          "scorers": [],
+          "cards": []
         },
         {
           "matchday": 2,
@@ -2370,7 +2289,8 @@
           "score": null,
           "date": "2026-06-19",
           "venue": "Gillette Stadium, Boston",
-          "scorers": []
+          "scorers": [],
+          "cards": []
         },
         {
           "matchday": 3,
@@ -2380,7 +2300,8 @@
           "score": null,
           "date": "2026-06-24",
           "venue": "Mercedes-Benz Stadium, Atlanta",
-          "scorers": []
+          "scorers": [],
+          "cards": []
         }
       ],
       "advanceProbabilities": {
@@ -2472,18 +2393,12 @@
           "matchday": 1,
           "opponent": "Scotland",
           "opponentFlag": "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
-          "result": "L",
-          "score": "0-1",
+          "result": null,
+          "score": null,
           "date": "2026-06-13",
           "venue": "Gillette Stadium, Boston",
           "scorers": [],
-          "cards": [
-            {
-              "player": "Jean-Ricner Bellegarde",
-              "minute": "39'",
-              "type": "yellow"
-            }
-          ]
+          "cards": []
         },
         {
           "matchday": 2,
@@ -2493,7 +2408,8 @@
           "score": null,
           "date": "2026-06-19",
           "venue": "Lincoln Financial Field, Philadelphia",
-          "scorers": []
+          "scorers": [],
+          "cards": []
         },
         {
           "matchday": 3,
@@ -2503,7 +2419,8 @@
           "score": null,
           "date": "2026-06-24",
           "venue": "Mercedes-Benz Stadium, Atlanta",
-          "scorers": []
+          "scorers": [],
+          "cards": []
         }
       ],
       "advanceProbabilities": {
@@ -2595,30 +2512,12 @@
           "matchday": 1,
           "opponent": "Haiti",
           "opponentFlag": "🇭🇹",
-          "result": "W",
-          "score": "1-0",
+          "result": null,
+          "score": null,
           "date": "2026-06-13",
           "venue": "Gillette Stadium, Boston",
-          "scorers": [
-            "McGinn 28'"
-          ],
-          "cards": [
-            {
-              "player": "Aaron Hickey",
-              "minute": "46'",
-              "type": "yellow"
-            },
-            {
-              "player": "Findlay Curtis",
-              "minute": "90'+1'",
-              "type": "yellow"
-            },
-            {
-              "player": "Kenny McLean",
-              "minute": "90'+5'",
-              "type": "yellow"
-            }
-          ]
+          "scorers": [],
+          "cards": []
         },
         {
           "matchday": 2,
@@ -2628,7 +2527,8 @@
           "score": null,
           "date": "2026-06-19",
           "venue": "Gillette Stadium, Boston",
-          "scorers": []
+          "scorers": [],
+          "cards": []
         },
         {
           "matchday": 3,
@@ -2638,7 +2538,8 @@
           "score": null,
           "date": "2026-06-24",
           "venue": "Hard Rock Stadium, Miami",
-          "scorers": []
+          "scorers": [],
+          "cards": []
         }
       ],
       "advanceProbabilities": {
@@ -2774,23 +2675,12 @@
           "matchday": 1,
           "opponent": "Paraguay",
           "opponentFlag": "🇵🇾",
-          "result": "W",
-          "score": "4-1",
+          "result": null,
+          "score": null,
           "date": "2026-06-12",
           "venue": "SoFi Stadium, Los Angeles",
-          "scorers": [
-            "Bobadilla OG 7'",
-            "Balogun 31'",
-            "Balogun 45+5'",
-            "Reyna 90+8'"
-          ],
-          "cards": [
-            {
-              "player": "Tyler Adams",
-              "minute": "59'",
-              "type": "yellow"
-            }
-          ]
+          "scorers": [],
+          "cards": []
         },
         {
           "matchday": 2,
@@ -2800,7 +2690,8 @@
           "score": null,
           "date": "2026-06-19",
           "venue": "Lumen Field, Seattle",
-          "scorers": []
+          "scorers": [],
+          "cards": []
         },
         {
           "matchday": 3,
@@ -2810,7 +2701,8 @@
           "score": null,
           "date": "2026-06-25",
           "venue": "SoFi Stadium, Los Angeles",
-          "scorers": []
+          "scorers": [],
+          "cards": []
         }
       ],
       "advanceProbabilities": {
@@ -2946,40 +2838,12 @@
           "matchday": 1,
           "opponent": "USA",
           "opponentFlag": "🇺🇸",
-          "result": "L",
-          "score": "1-4",
+          "result": null,
+          "score": null,
           "date": "2026-06-12",
           "venue": "SoFi Stadium, Los Angeles",
-          "scorers": [
-            "Mauricio 73'"
-          ],
-          "cards": [
-            {
-              "player": "Juan Jose Cáceres",
-              "minute": "10'",
-              "type": "yellow"
-            },
-            {
-              "player": "Miguel Almirón",
-              "minute": "53'",
-              "type": "yellow"
-            },
-            {
-              "player": "Diego Gómez",
-              "minute": "79'",
-              "type": "yellow"
-            },
-            {
-              "player": "Alex Arce",
-              "minute": "88'",
-              "type": "yellow"
-            },
-            {
-              "player": "Júnior Alonso",
-              "minute": "90'+3'",
-              "type": "yellow"
-            }
-          ]
+          "scorers": [],
+          "cards": []
         },
         {
           "matchday": 2,
@@ -2989,7 +2853,8 @@
           "score": null,
           "date": "2026-06-19",
           "venue": "Levi's Stadium, San Francisco",
-          "scorers": []
+          "scorers": [],
+          "cards": []
         },
         {
           "matchday": 3,
@@ -2999,7 +2864,8 @@
           "score": null,
           "date": "2026-06-25",
           "venue": "Levi's Stadium, San Francisco",
-          "scorers": []
+          "scorers": [],
+          "cards": []
         }
       ],
       "advanceProbabilities": {
@@ -3091,13 +2957,12 @@
           "matchday": 1,
           "opponent": "Türkiye",
           "opponentFlag": "🇹🇷",
-          "result": "W",
-          "score": "2-0",
+          "result": null,
+          "score": null,
           "date": "2026-06-13",
           "venue": "BC Place, Vancouver",
-          "scorers": [
-            "Irankunda 28'"
-          ]
+          "scorers": [],
+          "cards": []
         },
         {
           "matchday": 2,
@@ -3107,7 +2972,8 @@
           "score": null,
           "date": "2026-06-19",
           "venue": "Lumen Field, Seattle",
-          "scorers": []
+          "scorers": [],
+          "cards": []
         },
         {
           "matchday": 3,
@@ -3117,7 +2983,8 @@
           "score": null,
           "date": "2026-06-25",
           "venue": "Levi's Stadium, San Francisco",
-          "scorers": []
+          "scorers": [],
+          "cards": []
         }
       ],
       "advanceProbabilities": {
@@ -3209,18 +3076,12 @@
           "matchday": 1,
           "opponent": "Australia",
           "opponentFlag": "🇦🇺",
-          "result": "L",
-          "score": "0-2",
+          "result": null,
+          "score": null,
           "date": "2026-06-13",
           "venue": "BC Place, Vancouver",
           "scorers": [],
-          "cards": [
-            {
-              "player": "Yunus Akgün",
-              "minute": "86'",
-              "type": "yellow"
-            }
-          ]
+          "cards": []
         },
         {
           "matchday": 2,
@@ -3230,7 +3091,8 @@
           "score": null,
           "date": "2026-06-19",
           "venue": "Levi's Stadium, San Francisco",
-          "scorers": []
+          "scorers": [],
+          "cards": []
         },
         {
           "matchday": 3,
@@ -3240,7 +3102,8 @@
           "score": null,
           "date": "2026-06-25",
           "venue": "SoFi Stadium, Los Angeles",
-          "scorers": []
+          "scorers": [],
+          "cards": []
         }
       ],
       "advanceProbabilities": {
@@ -3332,19 +3195,12 @@
           "matchday": 1,
           "opponent": "Curaçao",
           "opponentFlag": "🇨🇼",
-          "result": "W",
-          "score": "7-1",
+          "result": null,
+          "score": null,
           "date": "2026-06-14",
           "venue": "NRG Stadium, Houston",
-          "scorers": [
-            "Felix Nmecha 6''",
-            "Nico Schlotterbeck 38''",
-            "Kai Havertz 45'+5'' (P)",
-            "Jamal Musiala 47''",
-            "Nathaniel Brown 68''",
-            "Deniz Undav 78''",
-            "Kai Havertz 88''"
-          ]
+          "scorers": [],
+          "cards": []
         },
         {
           "matchday": 2,
@@ -3354,7 +3210,8 @@
           "score": null,
           "date": "2026-06-20",
           "venue": "Mercedes-Benz Stadium, Atlanta",
-          "scorers": []
+          "scorers": [],
+          "cards": []
         },
         {
           "matchday": 3,
@@ -3364,7 +3221,8 @@
           "score": null,
           "date": "2026-06-25",
           "venue": "MetLife Stadium, New Jersey",
-          "scorers": []
+          "scorers": [],
+          "cards": []
         }
       ],
       "advanceProbabilities": {
@@ -3500,13 +3358,12 @@
           "matchday": 1,
           "opponent": "Germany",
           "opponentFlag": "🇩🇪",
-          "result": "L",
-          "score": "1-7",
+          "result": null,
+          "score": null,
           "date": "2026-06-14",
           "venue": "NRG Stadium, Houston",
-          "scorers": [
-            "Livano Comenencia 21''"
-          ]
+          "scorers": [],
+          "cards": []
         },
         {
           "matchday": 2,
@@ -3516,7 +3373,8 @@
           "score": null,
           "date": "2026-06-20",
           "venue": "MetLife Stadium, New Jersey",
-          "scorers": []
+          "scorers": [],
+          "cards": []
         },
         {
           "matchday": 3,
@@ -3526,7 +3384,8 @@
           "score": null,
           "date": "2026-06-25",
           "venue": "Lincoln Financial Field, Philadelphia",
-          "scorers": []
+          "scorers": [],
+          "cards": []
         }
       ],
       "advanceProbabilities": {
@@ -3618,30 +3477,12 @@
           "matchday": 1,
           "opponent": "Ecuador",
           "opponentFlag": "🇪🇨",
-          "result": "W",
-          "score": "1-0",
+          "result": null,
+          "score": null,
           "date": "2026-06-14",
           "venue": "Lincoln Financial Field, Philadelphia",
-          "scorers": [
-            "Amad Diallo 90''"
-          ],
-          "cards": [
-            {
-              "player": "Seko Fofana",
-              "minute": "28'",
-              "type": "yellow"
-            },
-            {
-              "player": "Franck Kessié",
-              "minute": "38'",
-              "type": "yellow"
-            },
-            {
-              "player": "Guela Doué",
-              "minute": "40'",
-              "type": "yellow"
-            }
-          ]
+          "scorers": [],
+          "cards": []
         },
         {
           "matchday": 2,
@@ -3651,7 +3492,8 @@
           "score": null,
           "date": "2026-06-20",
           "venue": "Mercedes-Benz Stadium, Atlanta",
-          "scorers": []
+          "scorers": [],
+          "cards": []
         },
         {
           "matchday": 3,
@@ -3661,7 +3503,8 @@
           "score": null,
           "date": "2026-06-25",
           "venue": "Lincoln Financial Field, Philadelphia",
-          "scorers": []
+          "scorers": [],
+          "cards": []
         }
       ],
       "advanceProbabilities": {
@@ -3753,18 +3596,12 @@
           "matchday": 1,
           "opponent": "Ivory Coast",
           "opponentFlag": "🇨🇮",
-          "result": "L",
-          "score": "0-1",
+          "result": null,
+          "score": null,
           "date": "2026-06-14",
           "venue": "Lincoln Financial Field, Philadelphia",
           "scorers": [],
-          "cards": [
-            {
-              "player": "Jackson Porozo",
-              "minute": "73'",
-              "type": "yellow"
-            }
-          ]
+          "cards": []
         },
         {
           "matchday": 2,
@@ -3774,7 +3611,8 @@
           "score": null,
           "date": "2026-06-20",
           "venue": "MetLife Stadium, New Jersey",
-          "scorers": []
+          "scorers": [],
+          "cards": []
         },
         {
           "matchday": 3,
@@ -3784,7 +3622,8 @@
           "score": null,
           "date": "2026-06-25",
           "venue": "MetLife Stadium, New Jersey",
-          "scorers": []
+          "scorers": [],
+          "cards": []
         }
       ],
       "advanceProbabilities": {
@@ -3876,31 +3715,12 @@
           "matchday": 1,
           "opponent": "Japan",
           "opponentFlag": "🇯🇵",
-          "result": "D",
-          "score": "2-2",
+          "result": null,
+          "score": null,
           "date": "2026-06-14",
           "venue": "Arrowhead Stadium, Kansas City",
-          "scorers": [
-            "Virgil van Dijk 51''",
-            "Crysencio Summerville 64''"
-          ],
-          "cards": [
-            {
-              "player": "Crysencio Summerville",
-              "minute": "61'",
-              "type": "yellow"
-            },
-            {
-              "player": "Memphis Depay",
-              "minute": "83'",
-              "type": "yellow"
-            },
-            {
-              "player": "Micky van de Ven",
-              "minute": "90'+1'",
-              "type": "yellow"
-            }
-          ]
+          "scorers": [],
+          "cards": []
         },
         {
           "matchday": 2,
@@ -3910,7 +3730,8 @@
           "score": null,
           "date": "2026-06-20",
           "venue": "Arrowhead Stadium, Kansas City",
-          "scorers": []
+          "scorers": [],
+          "cards": []
         },
         {
           "matchday": 3,
@@ -3920,7 +3741,8 @@
           "score": null,
           "date": "2026-06-25",
           "venue": "Arrowhead Stadium, Kansas City",
-          "scorers": []
+          "scorers": [],
+          "cards": []
         }
       ],
       "advanceProbabilities": {
@@ -4012,14 +3834,12 @@
           "matchday": 1,
           "opponent": "Netherlands",
           "opponentFlag": "🇳🇱",
-          "result": "D",
-          "score": "2-2",
+          "result": null,
+          "score": null,
           "date": "2026-06-14",
           "venue": "Arrowhead Stadium, Kansas City",
-          "scorers": [
-            "Keito Nakamura 57''",
-            "Daichi Kamada 89''"
-          ]
+          "scorers": [],
+          "cards": []
         },
         {
           "matchday": 2,
@@ -4029,7 +3849,8 @@
           "score": null,
           "date": "2026-06-20",
           "venue": "Arrowhead Stadium, Kansas City",
-          "scorers": []
+          "scorers": [],
+          "cards": []
         },
         {
           "matchday": 3,
@@ -4039,7 +3860,8 @@
           "score": null,
           "date": "2026-06-25",
           "venue": "AT&T Stadium, Dallas",
-          "scorers": []
+          "scorers": [],
+          "cards": []
         }
       ],
       "advanceProbabilities": {
@@ -4131,17 +3953,11 @@
           "matchday": 1,
           "opponent": "Tunisia",
           "opponentFlag": "🇹🇳",
-          "result": "W",
-          "score": "5-1",
+          "result": null,
+          "score": null,
           "date": "2026-06-14",
           "venue": "Arrowhead Stadium, Kansas City",
-          "scorers": [
-            "Yasin Ayari 7'",
-            "Alexander Isak 30'",
-            "Viktor Gyökeres 59'",
-            "Mattias Svanberg 84'",
-            "Yasin Ayari 90'+6'"
-          ],
+          "scorers": [],
           "cards": []
         },
         {
@@ -4256,20 +4072,12 @@
           "matchday": 1,
           "opponent": "Sweden",
           "opponentFlag": "🇸🇪",
-          "result": "L",
-          "score": "1-5",
+          "result": null,
+          "score": null,
           "date": "2026-06-14",
           "venue": "Arrowhead Stadium, Kansas City",
-          "scorers": [
-            "Omar Rekik 43'"
-          ],
-          "cards": [
-            {
-              "player": "Rani Khedira",
-              "minute": "54'",
-              "type": "yellow"
-            }
-          ]
+          "scorers": [],
+          "cards": []
         },
         {
           "matchday": 2,
@@ -4383,25 +4191,12 @@
           "matchday": 1,
           "opponent": "Egypt",
           "opponentFlag": "🇪🇬",
-          "result": "D",
-          "score": "1-1",
+          "result": null,
+          "score": null,
           "date": "2026-06-15",
           "venue": "Lumen Field, Seattle",
-          "scorers": [
-            "Mohamed Hany OG 66'"
-          ],
-          "cards": [
-            {
-              "player": "Timothy Castagne",
-              "minute": "14'",
-              "type": "yellow"
-            },
-            {
-              "player": "Maxim De Cuyper",
-              "minute": "75'",
-              "type": "yellow"
-            }
-          ]
+          "scorers": [],
+          "cards": []
         },
         {
           "matchday": 2,
@@ -4515,25 +4310,12 @@
           "matchday": 1,
           "opponent": "Belgium",
           "opponentFlag": "🇧🇪",
-          "result": "D",
-          "score": "1-1",
+          "result": null,
+          "score": null,
           "date": "2026-06-15",
           "venue": "Lumen Field, Seattle",
-          "scorers": [
-            "Emam Ashour 19'"
-          ],
-          "cards": [
-            {
-              "player": "Marawan Attia",
-              "minute": "13'",
-              "type": "yellow"
-            },
-            {
-              "player": "Ahmed Fatouh",
-              "minute": "34'",
-              "type": "yellow"
-            }
-          ]
+          "scorers": [],
+          "cards": []
         },
         {
           "matchday": 2,
@@ -4929,18 +4711,12 @@
           "matchday": 1,
           "opponent": "Cape Verde",
           "opponentFlag": "🇨🇻",
-          "result": "D",
-          "score": "0-0",
+          "result": null,
+          "score": null,
           "date": "2026-06-15",
           "venue": "Mercedes-Benz Stadium, Atlanta",
           "scorers": [],
-          "cards": [
-            {
-              "player": "Pedri",
-              "minute": "90'+3'",
-              "type": "yellow"
-            }
-          ]
+          "cards": []
         },
         {
           "matchday": 2,
@@ -5054,18 +4830,12 @@
           "matchday": 1,
           "opponent": "Spain",
           "opponentFlag": "🇪🇸",
-          "result": "D",
-          "score": "0-0",
+          "result": null,
+          "score": null,
           "date": "2026-06-15",
           "venue": "Mercedes-Benz Stadium, Atlanta",
           "scorers": [],
-          "cards": [
-            {
-              "player": "Sidny Lopes Cabral",
-              "minute": "16'",
-              "type": "yellow"
-            }
-          ]
+          "cards": []
         },
         {
           "matchday": 2,
@@ -5179,20 +4949,12 @@
           "matchday": 1,
           "opponent": "Uruguay",
           "opponentFlag": "🇺🇾",
-          "result": "D",
-          "score": "1-1",
+          "result": null,
+          "score": null,
           "date": "2026-06-15",
           "venue": "Hard Rock Stadium, Miami",
-          "scorers": [
-            "Abdulelah Al-Amri 41'"
-          ],
-          "cards": [
-            {
-              "player": "Abdulelah Al-Amri",
-              "minute": "44'",
-              "type": "yellow"
-            }
-          ]
+          "scorers": [],
+          "cards": []
         },
         {
           "matchday": 2,
@@ -5306,13 +5068,11 @@
           "matchday": 1,
           "opponent": "Saudi Arabia",
           "opponentFlag": "🇸🇦",
-          "result": "D",
-          "score": "1-1",
+          "result": null,
+          "score": null,
           "date": "2026-06-15",
           "venue": "Hard Rock Stadium, Miami",
-          "scorers": [
-            "Maxi Araújo 80'"
-          ],
+          "scorers": [],
           "cards": []
         },
         {
@@ -5951,7 +5711,8 @@
           "score": null,
           "date": "2026-06-16",
           "venue": "Arrowhead Stadium, Kansas City",
-          "scorers": []
+          "scorers": [],
+          "cards": []
         },
         {
           "matchday": 2,
@@ -5961,7 +5722,8 @@
           "score": null,
           "date": "2026-06-22",
           "venue": "SoFi Stadium, Los Angeles",
-          "scorers": []
+          "scorers": [],
+          "cards": []
         },
         {
           "matchday": 3,
@@ -5971,7 +5733,8 @@
           "score": null,
           "date": "2026-06-27",
           "venue": "AT&T Stadium, Dallas",
-          "scorers": []
+          "scorers": [],
+          "cards": []
         }
       ],
       "advanceProbabilities": {
@@ -6067,7 +5830,8 @@
           "score": null,
           "date": "2026-06-16",
           "venue": "Arrowhead Stadium, Kansas City",
-          "scorers": []
+          "scorers": [],
+          "cards": []
         },
         {
           "matchday": 2,
@@ -6077,7 +5841,8 @@
           "score": null,
           "date": "2026-06-22",
           "venue": "Arrowhead Stadium, Kansas City",
-          "scorers": []
+          "scorers": [],
+          "cards": []
         },
         {
           "matchday": 3,
@@ -6087,7 +5852,8 @@
           "score": null,
           "date": "2026-06-27",
           "venue": "Arrowhead Stadium, Kansas City",
-          "scorers": []
+          "scorers": [],
+          "cards": []
         }
       ],
       "advanceProbabilities": {
@@ -6227,7 +5993,8 @@
           "score": null,
           "date": "2026-06-16",
           "venue": "Levi's Stadium, San Francisco",
-          "scorers": []
+          "scorers": [],
+          "cards": []
         },
         {
           "matchday": 2,
@@ -6237,7 +6004,8 @@
           "score": null,
           "date": "2026-06-22",
           "venue": "SoFi Stadium, Los Angeles",
-          "scorers": []
+          "scorers": [],
+          "cards": []
         },
         {
           "matchday": 3,
@@ -6247,7 +6015,8 @@
           "score": null,
           "date": "2026-06-27",
           "venue": "Arrowhead Stadium, Kansas City",
-          "scorers": []
+          "scorers": [],
+          "cards": []
         }
       ],
       "advanceProbabilities": {
@@ -6343,7 +6112,8 @@
           "score": null,
           "date": "2026-06-16",
           "venue": "Levi's Stadium, San Francisco",
-          "scorers": []
+          "scorers": [],
+          "cards": []
         },
         {
           "matchday": 2,
@@ -6353,7 +6123,8 @@
           "score": null,
           "date": "2026-06-22",
           "venue": "Arrowhead Stadium, Kansas City",
-          "scorers": []
+          "scorers": [],
+          "cards": []
         },
         {
           "matchday": 3,
@@ -6363,7 +6134,8 @@
           "score": null,
           "date": "2026-06-27",
           "venue": "AT&T Stadium, Dallas",
-          "scorers": []
+          "scorers": [],
+          "cards": []
         }
       ],
       "advanceProbabilities": {
@@ -6459,7 +6231,8 @@
           "score": null,
           "date": "2026-06-17",
           "venue": "NRG Stadium, Houston",
-          "scorers": []
+          "scorers": [],
+          "cards": []
         },
         {
           "matchday": 2,
@@ -6469,7 +6242,8 @@
           "score": null,
           "date": "2026-06-23",
           "venue": "NRG Stadium, Houston",
-          "scorers": []
+          "scorers": [],
+          "cards": []
         },
         {
           "matchday": 3,
@@ -6479,7 +6253,8 @@
           "score": null,
           "date": "2026-06-27",
           "venue": "Hard Rock Stadium, Miami",
-          "scorers": []
+          "scorers": [],
+          "cards": []
         }
       ],
       "advanceProbabilities": {
@@ -6575,7 +6350,8 @@
           "score": null,
           "date": "2026-06-17",
           "venue": "NRG Stadium, Houston",
-          "scorers": []
+          "scorers": [],
+          "cards": []
         },
         {
           "matchday": 2,
@@ -6585,7 +6361,8 @@
           "score": null,
           "date": "2026-06-23",
           "venue": "Estadio Azteca, Mexico City",
-          "scorers": []
+          "scorers": [],
+          "cards": []
         },
         {
           "matchday": 3,
@@ -6595,7 +6372,8 @@
           "score": null,
           "date": "2026-06-27",
           "venue": "Mercedes-Benz Stadium, Atlanta",
-          "scorers": []
+          "scorers": [],
+          "cards": []
         }
       ],
       "advanceProbabilities": {
@@ -6735,7 +6513,8 @@
           "score": null,
           "date": "2026-06-17",
           "venue": "Estadio Azteca, Mexico City",
-          "scorers": []
+          "scorers": [],
+          "cards": []
         },
         {
           "matchday": 2,
@@ -6745,7 +6524,8 @@
           "score": null,
           "date": "2026-06-23",
           "venue": "NRG Stadium, Houston",
-          "scorers": []
+          "scorers": [],
+          "cards": []
         },
         {
           "matchday": 3,
@@ -6755,7 +6535,8 @@
           "score": null,
           "date": "2026-06-27",
           "venue": "Mercedes-Benz Stadium, Atlanta",
-          "scorers": []
+          "scorers": [],
+          "cards": []
         }
       ],
       "advanceProbabilities": {
@@ -6851,7 +6632,8 @@
           "score": null,
           "date": "2026-06-17",
           "venue": "Estadio Azteca, Mexico City",
-          "scorers": []
+          "scorers": [],
+          "cards": []
         },
         {
           "matchday": 2,
@@ -6861,7 +6643,8 @@
           "score": null,
           "date": "2026-06-23",
           "venue": "Estadio Azteca, Mexico City",
-          "scorers": []
+          "scorers": [],
+          "cards": []
         },
         {
           "matchday": 3,
@@ -6871,7 +6654,8 @@
           "score": null,
           "date": "2026-06-27",
           "venue": "Hard Rock Stadium, Miami",
-          "scorers": []
+          "scorers": [],
+          "cards": []
         }
       ],
       "advanceProbabilities": {
@@ -6967,7 +6751,8 @@
           "score": null,
           "date": "2026-06-17",
           "venue": "AT&T Stadium, Dallas",
-          "scorers": []
+          "scorers": [],
+          "cards": []
         },
         {
           "matchday": 2,
@@ -6977,7 +6762,8 @@
           "score": null,
           "date": "2026-06-23",
           "venue": "Lincoln Financial Field, Philadelphia",
-          "scorers": []
+          "scorers": [],
+          "cards": []
         },
         {
           "matchday": 3,
@@ -6987,7 +6773,8 @@
           "score": null,
           "date": "2026-06-27",
           "venue": "MetLife Stadium, New Jersey",
-          "scorers": []
+          "scorers": [],
+          "cards": []
         }
       ],
       "advanceProbabilities": {
@@ -7083,7 +6870,8 @@
           "score": null,
           "date": "2026-06-17",
           "venue": "AT&T Stadium, Dallas",
-          "scorers": []
+          "scorers": [],
+          "cards": []
         },
         {
           "matchday": 2,
@@ -7093,7 +6881,8 @@
           "score": null,
           "date": "2026-06-23",
           "venue": "BMO Field, Toronto",
-          "scorers": []
+          "scorers": [],
+          "cards": []
         },
         {
           "matchday": 3,
@@ -7103,7 +6892,8 @@
           "score": null,
           "date": "2026-06-27",
           "venue": "Lincoln Financial Field, Philadelphia",
-          "scorers": []
+          "scorers": [],
+          "cards": []
         }
       ],
       "advanceProbabilities": {
@@ -7199,7 +6989,8 @@
           "score": null,
           "date": "2026-06-17",
           "venue": "BMO Field, Toronto",
-          "scorers": []
+          "scorers": [],
+          "cards": []
         },
         {
           "matchday": 2,
@@ -7209,7 +7000,8 @@
           "score": null,
           "date": "2026-06-23",
           "venue": "Lincoln Financial Field, Philadelphia",
-          "scorers": []
+          "scorers": [],
+          "cards": []
         },
         {
           "matchday": 3,
@@ -7219,7 +7011,8 @@
           "score": null,
           "date": "2026-06-27",
           "venue": "Lincoln Financial Field, Philadelphia",
-          "scorers": []
+          "scorers": [],
+          "cards": []
         }
       ],
       "advanceProbabilities": {
@@ -7315,7 +7108,8 @@
           "score": null,
           "date": "2026-06-17",
           "venue": "BMO Field, Toronto",
-          "scorers": []
+          "scorers": [],
+          "cards": []
         },
         {
           "matchday": 2,
@@ -7325,7 +7119,8 @@
           "score": null,
           "date": "2026-06-23",
           "venue": "BMO Field, Toronto",
-          "scorers": []
+          "scorers": [],
+          "cards": []
         },
         {
           "matchday": 3,
@@ -7335,7 +7130,8 @@
           "score": null,
           "date": "2026-06-27",
           "venue": "MetLife Stadium, New Jersey",
-          "scorers": []
+          "scorers": [],
+          "cards": []
         }
       ],
       "advanceProbabilities": {
@@ -7413,5 +7209,1337 @@
         "r16": []
       }
     }
-  ]
+  ],
+  "dailyMatches": {
+    "2026-06-11": [
+      {
+        "homeTeam": "Mexico",
+        "homeFlag": "🇲🇽",
+        "homeId": "mexico",
+        "awayTeam": "South Africa",
+        "awayFlag": "🇿🇦",
+        "awayId": "southafrica",
+        "homeScore": 0,
+        "awayScore": 0,
+        "status": "SCHEDULED",
+        "date": "2026-06-11",
+        "broadcasts": [
+          "FOX",
+          "Tele",
+          "Peacock"
+        ],
+        "time": "2026-06-11T19:00Z"
+      },
+      {
+        "homeTeam": "South Korea",
+        "homeFlag": "🇰🇷",
+        "homeId": "southkorea",
+        "awayTeam": "Czechia",
+        "awayFlag": "🇨🇿",
+        "awayId": "czechia",
+        "homeScore": 0,
+        "awayScore": 0,
+        "status": "SCHEDULED",
+        "date": "2026-06-11",
+        "broadcasts": [
+          "FS1",
+          "Tele",
+          "Peacock"
+        ],
+        "time": "2026-06-12T02:00Z"
+      }
+    ],
+    "2026-06-18": [
+      {
+        "homeTeam": "Czechia",
+        "homeFlag": "🇨🇿",
+        "homeId": "czechia",
+        "awayTeam": "South Africa",
+        "awayFlag": "🇿🇦",
+        "awayId": "southafrica",
+        "homeScore": 0,
+        "awayScore": 0,
+        "status": "SCHEDULED",
+        "date": "2026-06-18",
+        "broadcasts": [
+          "FOX",
+          "Tele",
+          "Peacock"
+        ],
+        "time": "2026-06-18T16:00Z"
+      },
+      {
+        "homeTeam": "Switzerland",
+        "homeFlag": "🇨🇭",
+        "homeId": "switzerland",
+        "awayTeam": "Bosnia & Herz.",
+        "awayFlag": "🇧🇦",
+        "awayId": "bosnia",
+        "homeScore": 0,
+        "awayScore": 0,
+        "status": "SCHEDULED",
+        "date": "2026-06-18",
+        "broadcasts": [
+          "FOX",
+          "Tele",
+          "Peacock"
+        ],
+        "time": "2026-06-18T19:00Z"
+      },
+      {
+        "homeTeam": "Canada",
+        "homeFlag": "🇨🇦",
+        "homeId": "canada",
+        "awayTeam": "Qatar",
+        "awayFlag": "🇶🇦",
+        "awayId": "qatar",
+        "homeScore": 0,
+        "awayScore": 0,
+        "status": "SCHEDULED",
+        "date": "2026-06-18",
+        "broadcasts": [
+          "FS1",
+          "Tele",
+          "Peacock"
+        ],
+        "time": "2026-06-18T22:00Z"
+      },
+      {
+        "homeTeam": "Mexico",
+        "homeFlag": "🇲🇽",
+        "homeId": "mexico",
+        "awayTeam": "South Korea",
+        "awayFlag": "🇰🇷",
+        "awayId": "southkorea",
+        "homeScore": 0,
+        "awayScore": 0,
+        "status": "SCHEDULED",
+        "date": "2026-06-18",
+        "broadcasts": [
+          "FOX",
+          "Tele",
+          "Peacock"
+        ],
+        "time": "2026-06-19T01:00Z"
+      }
+    ],
+    "2026-06-24": [
+      {
+        "homeTeam": "Switzerland",
+        "homeFlag": "🇨🇭",
+        "homeId": "switzerland",
+        "awayTeam": "Canada",
+        "awayFlag": "🇨🇦",
+        "awayId": "canada",
+        "homeScore": 0,
+        "awayScore": 0,
+        "status": "SCHEDULED",
+        "date": "2026-06-24",
+        "broadcasts": [
+          "FOX",
+          "Tele",
+          "Peacock"
+        ],
+        "time": "2026-06-24T19:00Z"
+      },
+      {
+        "homeTeam": "Bosnia & Herz.",
+        "homeFlag": "🇧🇦",
+        "homeId": "bosnia",
+        "awayTeam": "Qatar",
+        "awayFlag": "🇶🇦",
+        "awayId": "qatar",
+        "homeScore": 0,
+        "awayScore": 0,
+        "status": "SCHEDULED",
+        "date": "2026-06-24",
+        "broadcasts": [
+          "FS1",
+          "Tele",
+          "Peacock"
+        ],
+        "time": "2026-06-24T19:00Z"
+      },
+      {
+        "homeTeam": "Scotland",
+        "homeFlag": "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
+        "homeId": "scotland",
+        "awayTeam": "Brazil",
+        "awayFlag": "🇧🇷",
+        "awayId": "brazil",
+        "homeScore": 0,
+        "awayScore": 0,
+        "status": "SCHEDULED",
+        "date": "2026-06-24",
+        "broadcasts": [
+          "FOX",
+          "Tele",
+          "Peacock"
+        ],
+        "time": "2026-06-24T22:00Z"
+      },
+      {
+        "homeTeam": "Morocco",
+        "homeFlag": "🇲🇦",
+        "homeId": "morocco",
+        "awayTeam": "Haiti",
+        "awayFlag": "🇭🇹",
+        "awayId": "haiti",
+        "homeScore": 0,
+        "awayScore": 0,
+        "status": "SCHEDULED",
+        "date": "2026-06-24",
+        "broadcasts": [
+          "FS1",
+          "Tele",
+          "Peacock"
+        ],
+        "time": "2026-06-24T22:00Z"
+      },
+      {
+        "homeTeam": "Czechia",
+        "homeFlag": "🇨🇿",
+        "homeId": "czechia",
+        "awayTeam": "Mexico",
+        "awayFlag": "🇲🇽",
+        "awayId": "mexico",
+        "homeScore": 0,
+        "awayScore": 0,
+        "status": "SCHEDULED",
+        "date": "2026-06-24",
+        "broadcasts": [
+          "FOX",
+          "Tele",
+          "Peacock"
+        ],
+        "time": "2026-06-25T01:00Z"
+      },
+      {
+        "homeTeam": "South Africa",
+        "homeFlag": "🇿🇦",
+        "homeId": "southafrica",
+        "awayTeam": "South Korea",
+        "awayFlag": "🇰🇷",
+        "awayId": "southkorea",
+        "homeScore": 0,
+        "awayScore": 0,
+        "status": "SCHEDULED",
+        "date": "2026-06-24",
+        "broadcasts": [
+          "FS1",
+          "Tele",
+          "Peacock"
+        ],
+        "time": "2026-06-25T01:00Z"
+      }
+    ],
+    "2026-06-12": [
+      {
+        "homeTeam": "Canada",
+        "homeFlag": "🇨🇦",
+        "homeId": "canada",
+        "awayTeam": "Bosnia & Herz.",
+        "awayFlag": "🇧🇦",
+        "awayId": "bosnia",
+        "homeScore": 0,
+        "awayScore": 0,
+        "status": "SCHEDULED",
+        "date": "2026-06-12",
+        "broadcasts": [
+          "FOX",
+          "Tele",
+          "Peacock"
+        ],
+        "time": "2026-06-12T19:00Z"
+      },
+      {
+        "homeTeam": "USA",
+        "homeFlag": "🇺🇸",
+        "homeId": "usa",
+        "awayTeam": "Paraguay",
+        "awayFlag": "🇵🇾",
+        "awayId": "paraguay",
+        "homeScore": 0,
+        "awayScore": 0,
+        "status": "SCHEDULED",
+        "date": "2026-06-12",
+        "broadcasts": [
+          "FOX",
+          "Tele",
+          "Peacock"
+        ],
+        "time": "2026-06-13T01:00Z"
+      }
+    ],
+    "2026-06-13": [
+      {
+        "homeTeam": "Qatar",
+        "homeFlag": "🇶🇦",
+        "homeId": "qatar",
+        "awayTeam": "Switzerland",
+        "awayFlag": "🇨🇭",
+        "awayId": "switzerland",
+        "homeScore": 0,
+        "awayScore": 0,
+        "status": "SCHEDULED",
+        "date": "2026-06-13",
+        "broadcasts": [
+          "FOX",
+          "Tele",
+          "Peacock"
+        ],
+        "time": "2026-06-13T19:00Z"
+      },
+      {
+        "homeTeam": "Brazil",
+        "homeFlag": "🇧🇷",
+        "homeId": "brazil",
+        "awayTeam": "Morocco",
+        "awayFlag": "🇲🇦",
+        "awayId": "morocco",
+        "homeScore": 0,
+        "awayScore": 0,
+        "status": "SCHEDULED",
+        "date": "2026-06-13",
+        "broadcasts": [
+          "FOX",
+          "Tele",
+          "Peacock"
+        ],
+        "time": "2026-06-13T22:00Z"
+      },
+      {
+        "homeTeam": "Haiti",
+        "homeFlag": "🇭🇹",
+        "homeId": "haiti",
+        "awayTeam": "Scotland",
+        "awayFlag": "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
+        "awayId": "scotland",
+        "homeScore": 0,
+        "awayScore": 0,
+        "status": "SCHEDULED",
+        "date": "2026-06-13",
+        "broadcasts": [
+          "FOX",
+          "Tele",
+          "Peacock"
+        ],
+        "time": "2026-06-14T01:00Z"
+      },
+      {
+        "homeTeam": "Australia",
+        "homeFlag": "🇦🇺",
+        "homeId": "australia",
+        "awayTeam": "Türkiye",
+        "awayFlag": "🇹🇷",
+        "awayId": "turkey",
+        "homeScore": 0,
+        "awayScore": 0,
+        "status": "SCHEDULED",
+        "date": "2026-06-13",
+        "broadcasts": [
+          "FS1",
+          "Tele",
+          "Peacock"
+        ],
+        "time": "2026-06-14T04:00Z"
+      }
+    ],
+    "2026-06-19": [
+      {
+        "homeTeam": "USA",
+        "homeFlag": "🇺🇸",
+        "homeId": "usa",
+        "awayTeam": "Australia",
+        "awayFlag": "🇦🇺",
+        "awayId": "australia",
+        "homeScore": 0,
+        "awayScore": 0,
+        "status": "SCHEDULED",
+        "date": "2026-06-19",
+        "broadcasts": [
+          "FOX",
+          "Tele",
+          "Peacock"
+        ],
+        "time": "2026-06-19T19:00Z"
+      },
+      {
+        "homeTeam": "Scotland",
+        "homeFlag": "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
+        "homeId": "scotland",
+        "awayTeam": "Morocco",
+        "awayFlag": "🇲🇦",
+        "awayId": "morocco",
+        "homeScore": 0,
+        "awayScore": 0,
+        "status": "SCHEDULED",
+        "date": "2026-06-19",
+        "broadcasts": [
+          "FOX",
+          "Tele",
+          "Peacock"
+        ],
+        "time": "2026-06-19T22:00Z"
+      },
+      {
+        "homeTeam": "Brazil",
+        "homeFlag": "🇧🇷",
+        "homeId": "brazil",
+        "awayTeam": "Haiti",
+        "awayFlag": "🇭🇹",
+        "awayId": "haiti",
+        "homeScore": 0,
+        "awayScore": 0,
+        "status": "SCHEDULED",
+        "date": "2026-06-19",
+        "broadcasts": [
+          "FOX",
+          "Tele",
+          "Peacock"
+        ],
+        "time": "2026-06-20T00:30Z"
+      },
+      {
+        "homeTeam": "Türkiye",
+        "homeFlag": "🇹🇷",
+        "homeId": "turkey",
+        "awayTeam": "Paraguay",
+        "awayFlag": "🇵🇾",
+        "awayId": "paraguay",
+        "homeScore": 0,
+        "awayScore": 0,
+        "status": "SCHEDULED",
+        "date": "2026-06-19",
+        "broadcasts": [
+          "FS1",
+          "Tele",
+          "Peacock"
+        ],
+        "time": "2026-06-20T03:00Z"
+      }
+    ],
+    "2026-06-25": [
+      {
+        "homeTeam": "Ecuador",
+        "homeFlag": "🇪🇨",
+        "homeId": "ecuador",
+        "awayTeam": "Germany",
+        "awayFlag": "🇩🇪",
+        "awayId": "germany",
+        "homeScore": 0,
+        "awayScore": 0,
+        "status": "SCHEDULED",
+        "date": "2026-06-25",
+        "broadcasts": [
+          "FOX",
+          "Tele",
+          "Peacock"
+        ],
+        "time": "2026-06-25T20:00Z"
+      },
+      {
+        "homeTeam": "Curaçao",
+        "homeFlag": "🇨🇼",
+        "homeId": "curacao",
+        "awayTeam": "Ivory Coast",
+        "awayFlag": "🇨🇮",
+        "awayId": "ivorycoast",
+        "homeScore": 0,
+        "awayScore": 0,
+        "status": "SCHEDULED",
+        "date": "2026-06-25",
+        "broadcasts": [
+          "FS1",
+          "Tele",
+          "Peacock"
+        ],
+        "time": "2026-06-25T20:00Z"
+      },
+      {
+        "homeTeam": "Japan",
+        "homeFlag": "🇯🇵",
+        "homeId": "japan",
+        "awayTeam": "Sweden",
+        "awayFlag": "🇸🇪",
+        "awayId": "sweden",
+        "homeScore": 0,
+        "awayScore": 0,
+        "status": "SCHEDULED",
+        "date": "2026-06-25",
+        "broadcasts": [
+          "FS1",
+          "Tele",
+          "Peacock"
+        ],
+        "time": "2026-06-25T23:00Z"
+      },
+      {
+        "homeTeam": "Tunisia",
+        "homeFlag": "🇹🇳",
+        "homeId": "tunisia",
+        "awayTeam": "Netherlands",
+        "awayFlag": "🇳🇱",
+        "awayId": "netherlands",
+        "homeScore": 0,
+        "awayScore": 0,
+        "status": "SCHEDULED",
+        "date": "2026-06-25",
+        "broadcasts": [
+          "FOX",
+          "Tele",
+          "Peacock"
+        ],
+        "time": "2026-06-25T23:00Z"
+      },
+      {
+        "homeTeam": "Türkiye",
+        "homeFlag": "🇹🇷",
+        "homeId": "turkey",
+        "awayTeam": "USA",
+        "awayFlag": "🇺🇸",
+        "awayId": "usa",
+        "homeScore": 0,
+        "awayScore": 0,
+        "status": "SCHEDULED",
+        "date": "2026-06-25",
+        "broadcasts": [
+          "FOX",
+          "Tele",
+          "Peacock"
+        ],
+        "time": "2026-06-26T02:00Z"
+      },
+      {
+        "homeTeam": "Paraguay",
+        "homeFlag": "🇵🇾",
+        "homeId": "paraguay",
+        "awayTeam": "Australia",
+        "awayFlag": "🇦🇺",
+        "awayId": "australia",
+        "homeScore": 0,
+        "awayScore": 0,
+        "status": "SCHEDULED",
+        "date": "2026-06-25",
+        "broadcasts": [
+          "FS1",
+          "Tele",
+          "Peacock"
+        ],
+        "time": "2026-06-26T02:00Z"
+      }
+    ],
+    "2026-06-14": [
+      {
+        "homeTeam": "Germany",
+        "homeFlag": "🇩🇪",
+        "homeId": "germany",
+        "awayTeam": "Curaçao",
+        "awayFlag": "🇨🇼",
+        "awayId": "curacao",
+        "homeScore": 0,
+        "awayScore": 0,
+        "status": "SCHEDULED",
+        "date": "2026-06-14",
+        "broadcasts": [
+          "FOX",
+          "Tele",
+          "Peacock"
+        ],
+        "time": "2026-06-14T17:00Z"
+      },
+      {
+        "homeTeam": "Netherlands",
+        "homeFlag": "🇳🇱",
+        "homeId": "netherlands",
+        "awayTeam": "Japan",
+        "awayFlag": "🇯🇵",
+        "awayId": "japan",
+        "homeScore": 0,
+        "awayScore": 0,
+        "status": "SCHEDULED",
+        "date": "2026-06-14",
+        "broadcasts": [
+          "FOX",
+          "Tele",
+          "Peacock"
+        ],
+        "time": "2026-06-14T20:00Z"
+      },
+      {
+        "homeTeam": "Ivory Coast",
+        "homeFlag": "🇨🇮",
+        "homeId": "ivorycoast",
+        "awayTeam": "Ecuador",
+        "awayFlag": "🇪🇨",
+        "awayId": "ecuador",
+        "homeScore": 0,
+        "awayScore": 0,
+        "status": "SCHEDULED",
+        "date": "2026-06-14",
+        "broadcasts": [
+          "FS1",
+          "Tele",
+          "Peacock"
+        ],
+        "time": "2026-06-14T23:00Z"
+      },
+      {
+        "homeTeam": "Sweden",
+        "homeFlag": "🇸🇪",
+        "homeId": "sweden",
+        "awayTeam": "Tunisia",
+        "awayFlag": "🇹🇳",
+        "awayId": "tunisia",
+        "homeScore": 0,
+        "awayScore": 0,
+        "status": "SCHEDULED",
+        "date": "2026-06-14",
+        "broadcasts": [
+          "FS1",
+          "Tele",
+          "Peacock"
+        ],
+        "time": "2026-06-15T02:00Z"
+      }
+    ],
+    "2026-06-20": [
+      {
+        "homeTeam": "Netherlands",
+        "homeFlag": "🇳🇱",
+        "homeId": "netherlands",
+        "awayTeam": "Sweden",
+        "awayFlag": "🇸🇪",
+        "awayId": "sweden",
+        "homeScore": 0,
+        "awayScore": 0,
+        "status": "SCHEDULED",
+        "date": "2026-06-20",
+        "broadcasts": [
+          "FOX",
+          "Tele",
+          "Peacock"
+        ],
+        "time": "2026-06-20T17:00Z"
+      },
+      {
+        "homeTeam": "Germany",
+        "homeFlag": "🇩🇪",
+        "homeId": "germany",
+        "awayTeam": "Ivory Coast",
+        "awayFlag": "🇨🇮",
+        "awayId": "ivorycoast",
+        "homeScore": 0,
+        "awayScore": 0,
+        "status": "SCHEDULED",
+        "date": "2026-06-20",
+        "broadcasts": [
+          "FOX",
+          "Tele",
+          "Peacock"
+        ],
+        "time": "2026-06-20T20:00Z"
+      },
+      {
+        "homeTeam": "Ecuador",
+        "homeFlag": "🇪🇨",
+        "homeId": "ecuador",
+        "awayTeam": "Curaçao",
+        "awayFlag": "🇨🇼",
+        "awayId": "curacao",
+        "homeScore": 0,
+        "awayScore": 0,
+        "status": "SCHEDULED",
+        "date": "2026-06-20",
+        "broadcasts": [
+          "FS1",
+          "Tele",
+          "Peacock"
+        ],
+        "time": "2026-06-21T00:00Z"
+      },
+      {
+        "homeTeam": "Tunisia",
+        "homeFlag": "🇹🇳",
+        "homeId": "tunisia",
+        "awayTeam": "Japan",
+        "awayFlag": "🇯🇵",
+        "awayId": "japan",
+        "homeScore": 0,
+        "awayScore": 0,
+        "status": "SCHEDULED",
+        "date": "2026-06-20",
+        "broadcasts": [
+          "FS1",
+          "Tele",
+          "Peacock"
+        ],
+        "time": "2026-06-21T04:00Z"
+      }
+    ],
+    "2026-06-15": [
+      {
+        "homeTeam": "Spain",
+        "homeFlag": "🇪🇸",
+        "homeId": "spain",
+        "awayTeam": "Cape Verde",
+        "awayFlag": "🇨🇻",
+        "awayId": "capeverde",
+        "homeScore": 0,
+        "awayScore": 0,
+        "status": "SCHEDULED",
+        "date": "2026-06-15",
+        "broadcasts": [
+          "FOX",
+          "Tele",
+          "Peacock"
+        ],
+        "time": "2026-06-15T16:00Z"
+      },
+      {
+        "homeTeam": "Belgium",
+        "homeFlag": "🇧🇪",
+        "homeId": "belgium",
+        "awayTeam": "Egypt",
+        "awayFlag": "🇪🇬",
+        "awayId": "egypt",
+        "homeScore": 0,
+        "awayScore": 0,
+        "status": "SCHEDULED",
+        "date": "2026-06-15",
+        "broadcasts": [
+          "FOX",
+          "Tele",
+          "Peacock"
+        ],
+        "time": "2026-06-15T19:00Z"
+      },
+      {
+        "homeTeam": "Saudi Arabia",
+        "homeFlag": "🇸🇦",
+        "homeId": "saudiarabia",
+        "awayTeam": "Uruguay",
+        "awayFlag": "🇺🇾",
+        "awayId": "uruguay",
+        "homeScore": 0,
+        "awayScore": 0,
+        "status": "SCHEDULED",
+        "date": "2026-06-15",
+        "broadcasts": [
+          "FS1",
+          "Tele",
+          "Peacock"
+        ],
+        "time": "2026-06-15T22:00Z"
+      },
+      {
+        "homeTeam": "Iran",
+        "homeFlag": "🇮🇷",
+        "homeId": "iran",
+        "awayTeam": "New Zealand",
+        "awayFlag": "🇳🇿",
+        "awayId": "newzealand",
+        "homeScore": 0,
+        "awayScore": 0,
+        "status": "SCHEDULED",
+        "date": "2026-06-15",
+        "broadcasts": [
+          "FS1",
+          "Tele",
+          "Peacock"
+        ],
+        "time": "2026-06-16T01:00Z"
+      }
+    ],
+    "2026-06-21": [
+      {
+        "homeTeam": "Spain",
+        "homeFlag": "🇪🇸",
+        "homeId": "spain",
+        "awayTeam": "Saudi Arabia",
+        "awayFlag": "🇸🇦",
+        "awayId": "saudiarabia",
+        "homeScore": 0,
+        "awayScore": 0,
+        "status": "SCHEDULED",
+        "date": "2026-06-21",
+        "broadcasts": [
+          "FOX",
+          "Tele",
+          "Peacock"
+        ],
+        "time": "2026-06-21T16:00Z"
+      },
+      {
+        "homeTeam": "Belgium",
+        "homeFlag": "🇧🇪",
+        "homeId": "belgium",
+        "awayTeam": "Iran",
+        "awayFlag": "🇮🇷",
+        "awayId": "iran",
+        "homeScore": 0,
+        "awayScore": 0,
+        "status": "SCHEDULED",
+        "date": "2026-06-21",
+        "broadcasts": [
+          "FS1",
+          "Tele",
+          "Peacock"
+        ],
+        "time": "2026-06-21T19:00Z"
+      },
+      {
+        "homeTeam": "Uruguay",
+        "homeFlag": "🇺🇾",
+        "homeId": "uruguay",
+        "awayTeam": "Cape Verde",
+        "awayFlag": "🇨🇻",
+        "awayId": "capeverde",
+        "homeScore": 0,
+        "awayScore": 0,
+        "status": "SCHEDULED",
+        "date": "2026-06-21",
+        "broadcasts": [
+          "FS1",
+          "Tele",
+          "Peacock"
+        ],
+        "time": "2026-06-21T22:00Z"
+      },
+      {
+        "homeTeam": "New Zealand",
+        "homeFlag": "🇳🇿",
+        "homeId": "newzealand",
+        "awayTeam": "Egypt",
+        "awayFlag": "🇪🇬",
+        "awayId": "egypt",
+        "homeScore": 0,
+        "awayScore": 0,
+        "status": "SCHEDULED",
+        "date": "2026-06-21",
+        "broadcasts": [
+          "FS1",
+          "Tele",
+          "Peacock"
+        ],
+        "time": "2026-06-22T01:00Z"
+      }
+    ],
+    "2026-06-26": [
+      {
+        "homeTeam": "Norway",
+        "homeFlag": "🇳🇴",
+        "homeId": "norway",
+        "awayTeam": "France",
+        "awayFlag": "🇫🇷",
+        "awayId": "france",
+        "homeScore": 0,
+        "awayScore": 0,
+        "status": "SCHEDULED",
+        "date": "2026-06-26",
+        "broadcasts": [
+          "FOX",
+          "Tele",
+          "Peacock"
+        ],
+        "time": "2026-06-26T19:00Z"
+      },
+      {
+        "homeTeam": "Senegal",
+        "homeFlag": "🇸🇳",
+        "homeId": "senegal",
+        "awayTeam": "Iraq",
+        "awayFlag": "🇮🇶",
+        "awayId": "iraq",
+        "homeScore": 0,
+        "awayScore": 0,
+        "status": "SCHEDULED",
+        "date": "2026-06-26",
+        "broadcasts": [
+          "FS1",
+          "Tele",
+          "Peacock"
+        ],
+        "time": "2026-06-26T19:00Z"
+      },
+      {
+        "homeTeam": "Cape Verde",
+        "homeFlag": "🇨🇻",
+        "homeId": "capeverde",
+        "awayTeam": "Saudi Arabia",
+        "awayFlag": "🇸🇦",
+        "awayId": "saudiarabia",
+        "homeScore": 0,
+        "awayScore": 0,
+        "status": "SCHEDULED",
+        "date": "2026-06-26",
+        "broadcasts": [
+          "FS1",
+          "Tele",
+          "Peacock"
+        ],
+        "time": "2026-06-27T00:00Z"
+      },
+      {
+        "homeTeam": "Uruguay",
+        "homeFlag": "🇺🇾",
+        "homeId": "uruguay",
+        "awayTeam": "Spain",
+        "awayFlag": "🇪🇸",
+        "awayId": "spain",
+        "homeScore": 0,
+        "awayScore": 0,
+        "status": "SCHEDULED",
+        "date": "2026-06-26",
+        "broadcasts": [
+          "FOX",
+          "Tele",
+          "Peacock"
+        ],
+        "time": "2026-06-27T00:00Z"
+      },
+      {
+        "homeTeam": "Egypt",
+        "homeFlag": "🇪🇬",
+        "homeId": "egypt",
+        "awayTeam": "Iran",
+        "awayFlag": "🇮🇷",
+        "awayId": "iran",
+        "homeScore": 0,
+        "awayScore": 0,
+        "status": "SCHEDULED",
+        "date": "2026-06-26",
+        "broadcasts": [
+          "FS1",
+          "Tele",
+          "Peacock"
+        ],
+        "time": "2026-06-27T03:00Z"
+      },
+      {
+        "homeTeam": "New Zealand",
+        "homeFlag": "🇳🇿",
+        "homeId": "newzealand",
+        "awayTeam": "Belgium",
+        "awayFlag": "🇧🇪",
+        "awayId": "belgium",
+        "homeScore": 0,
+        "awayScore": 0,
+        "status": "SCHEDULED",
+        "date": "2026-06-26",
+        "broadcasts": [
+          "FOX",
+          "Tele",
+          "Peacock"
+        ],
+        "time": "2026-06-27T03:00Z"
+      }
+    ],
+    "2026-06-16": [
+      {
+        "homeTeam": "France",
+        "homeFlag": "🇫🇷",
+        "homeId": "france",
+        "awayTeam": "Senegal",
+        "awayFlag": "🇸🇳",
+        "awayId": "senegal",
+        "homeScore": 0,
+        "awayScore": 0,
+        "status": "SCHEDULED",
+        "date": "2026-06-16",
+        "broadcasts": [
+          "FOX",
+          "Tele",
+          "Peacock"
+        ],
+        "time": "2026-06-16T19:00Z"
+      },
+      {
+        "homeTeam": "Iraq",
+        "homeFlag": "🇮🇶",
+        "homeId": "iraq",
+        "awayTeam": "Norway",
+        "awayFlag": "🇳🇴",
+        "awayId": "norway",
+        "homeScore": 0,
+        "awayScore": 0,
+        "status": "SCHEDULED",
+        "date": "2026-06-16",
+        "broadcasts": [
+          "FOX",
+          "Tele",
+          "Peacock"
+        ],
+        "time": "2026-06-16T22:00Z"
+      },
+      {
+        "homeTeam": "Argentina",
+        "homeFlag": "🇦🇷",
+        "homeId": "argentina",
+        "awayTeam": "Algeria",
+        "awayFlag": "🇩🇿",
+        "awayId": "algeria",
+        "homeScore": 0,
+        "awayScore": 0,
+        "status": "SCHEDULED",
+        "date": "2026-06-16",
+        "broadcasts": [
+          "FOX",
+          "Tele",
+          "Peacock"
+        ],
+        "time": "2026-06-17T01:00Z"
+      },
+      {
+        "homeTeam": "Austria",
+        "homeFlag": "🇦🇹",
+        "homeId": "austria",
+        "awayTeam": "Jordan",
+        "awayFlag": "🇯🇴",
+        "awayId": "jordan",
+        "homeScore": 0,
+        "awayScore": 0,
+        "status": "SCHEDULED",
+        "date": "2026-06-16",
+        "broadcasts": [
+          "FS1",
+          "Tele",
+          "Peacock"
+        ],
+        "time": "2026-06-17T04:00Z"
+      }
+    ],
+    "2026-06-22": [
+      {
+        "homeTeam": "Argentina",
+        "homeFlag": "🇦🇷",
+        "homeId": "argentina",
+        "awayTeam": "Austria",
+        "awayFlag": "🇦🇹",
+        "awayId": "austria",
+        "homeScore": 0,
+        "awayScore": 0,
+        "status": "SCHEDULED",
+        "date": "2026-06-22",
+        "broadcasts": [
+          "FOX",
+          "Tele",
+          "Peacock"
+        ],
+        "time": "2026-06-22T17:00Z"
+      },
+      {
+        "homeTeam": "France",
+        "homeFlag": "🇫🇷",
+        "homeId": "france",
+        "awayTeam": "Iraq",
+        "awayFlag": "🇮🇶",
+        "awayId": "iraq",
+        "homeScore": 0,
+        "awayScore": 0,
+        "status": "SCHEDULED",
+        "date": "2026-06-22",
+        "broadcasts": [
+          "FOX",
+          "Tele",
+          "Peacock"
+        ],
+        "time": "2026-06-22T21:00Z"
+      },
+      {
+        "homeTeam": "Norway",
+        "homeFlag": "🇳🇴",
+        "homeId": "norway",
+        "awayTeam": "Senegal",
+        "awayFlag": "🇸🇳",
+        "awayId": "senegal",
+        "homeScore": 0,
+        "awayScore": 0,
+        "status": "SCHEDULED",
+        "date": "2026-06-22",
+        "broadcasts": [
+          "FOX",
+          "Tele",
+          "Peacock"
+        ],
+        "time": "2026-06-23T00:00Z"
+      },
+      {
+        "homeTeam": "Jordan",
+        "homeFlag": "🇯🇴",
+        "homeId": "jordan",
+        "awayTeam": "Algeria",
+        "awayFlag": "🇩🇿",
+        "awayId": "algeria",
+        "homeScore": 0,
+        "awayScore": 0,
+        "status": "SCHEDULED",
+        "date": "2026-06-22",
+        "broadcasts": [
+          "FS1",
+          "Tele",
+          "Peacock"
+        ],
+        "time": "2026-06-23T03:00Z"
+      }
+    ],
+    "2026-06-27": [
+      {
+        "homeTeam": "Panama",
+        "homeFlag": "🇵🇦",
+        "homeId": "panama",
+        "awayTeam": "England",
+        "awayFlag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+        "awayId": "england",
+        "homeScore": 0,
+        "awayScore": 0,
+        "status": "SCHEDULED",
+        "date": "2026-06-27",
+        "broadcasts": [
+          "FOX",
+          "Tele",
+          "Peacock"
+        ],
+        "time": "2026-06-27T21:00Z"
+      },
+      {
+        "homeTeam": "Croatia",
+        "homeFlag": "🇭🇷",
+        "homeId": "croatia",
+        "awayTeam": "Ghana",
+        "awayFlag": "🇬🇭",
+        "awayId": "ghana",
+        "homeScore": 0,
+        "awayScore": 0,
+        "status": "SCHEDULED",
+        "date": "2026-06-27",
+        "broadcasts": [
+          "FS1",
+          "Tele",
+          "Peacock"
+        ],
+        "time": "2026-06-27T21:00Z"
+      },
+      {
+        "homeTeam": "Colombia",
+        "homeFlag": "🇨🇴",
+        "homeId": "colombia",
+        "awayTeam": "Portugal",
+        "awayFlag": "🇵🇹",
+        "awayId": "portugal",
+        "homeScore": 0,
+        "awayScore": 0,
+        "status": "SCHEDULED",
+        "date": "2026-06-27",
+        "broadcasts": [
+          "FOX",
+          "Tele",
+          "Peacock"
+        ],
+        "time": "2026-06-27T23:30Z"
+      },
+      {
+        "homeTeam": "DR Congo",
+        "homeFlag": "🇨🇩",
+        "homeId": "drcongo",
+        "awayTeam": "Uzbekistan",
+        "awayFlag": "🇺🇿",
+        "awayId": "uzbekistan",
+        "homeScore": 0,
+        "awayScore": 0,
+        "status": "SCHEDULED",
+        "date": "2026-06-27",
+        "broadcasts": [
+          "FS1",
+          "Tele",
+          "Peacock"
+        ],
+        "time": "2026-06-27T23:30Z"
+      },
+      {
+        "homeTeam": "Algeria",
+        "homeFlag": "🇩🇿",
+        "homeId": "algeria",
+        "awayTeam": "Austria",
+        "awayFlag": "🇦🇹",
+        "awayId": "austria",
+        "homeScore": 0,
+        "awayScore": 0,
+        "status": "SCHEDULED",
+        "date": "2026-06-27",
+        "broadcasts": [
+          "FS1",
+          "Tele",
+          "Peacock"
+        ],
+        "time": "2026-06-28T02:00Z"
+      },
+      {
+        "homeTeam": "Jordan",
+        "homeFlag": "🇯🇴",
+        "homeId": "jordan",
+        "awayTeam": "Argentina",
+        "awayFlag": "🇦🇷",
+        "awayId": "argentina",
+        "homeScore": 0,
+        "awayScore": 0,
+        "status": "SCHEDULED",
+        "date": "2026-06-27",
+        "broadcasts": [
+          "FOX",
+          "Tele",
+          "Peacock"
+        ],
+        "time": "2026-06-28T02:00Z"
+      }
+    ],
+    "2026-06-17": [
+      {
+        "homeTeam": "Portugal",
+        "homeFlag": "🇵🇹",
+        "homeId": "portugal",
+        "awayTeam": "DR Congo",
+        "awayFlag": "🇨🇩",
+        "awayId": "drcongo",
+        "homeScore": 0,
+        "awayScore": 0,
+        "status": "SCHEDULED",
+        "date": "2026-06-17",
+        "broadcasts": [
+          "FOX",
+          "Tele",
+          "Peacock"
+        ],
+        "time": "2026-06-17T17:00Z"
+      },
+      {
+        "homeTeam": "England",
+        "homeFlag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+        "homeId": "england",
+        "awayTeam": "Croatia",
+        "awayFlag": "🇭🇷",
+        "awayId": "croatia",
+        "homeScore": 0,
+        "awayScore": 0,
+        "status": "SCHEDULED",
+        "date": "2026-06-17",
+        "broadcasts": [
+          "FOX",
+          "Tele",
+          "Peacock"
+        ],
+        "time": "2026-06-17T20:00Z"
+      },
+      {
+        "homeTeam": "Ghana",
+        "homeFlag": "🇬🇭",
+        "homeId": "ghana",
+        "awayTeam": "Panama",
+        "awayFlag": "🇵🇦",
+        "awayId": "panama",
+        "homeScore": 0,
+        "awayScore": 0,
+        "status": "SCHEDULED",
+        "date": "2026-06-17",
+        "broadcasts": [
+          "FS1",
+          "Tele",
+          "Peacock"
+        ],
+        "time": "2026-06-17T23:00Z"
+      },
+      {
+        "homeTeam": "Uzbekistan",
+        "homeFlag": "🇺🇿",
+        "homeId": "uzbekistan",
+        "awayTeam": "Colombia",
+        "awayFlag": "🇨🇴",
+        "awayId": "colombia",
+        "homeScore": 0,
+        "awayScore": 0,
+        "status": "SCHEDULED",
+        "date": "2026-06-17",
+        "broadcasts": [
+          "FS1",
+          "Tele",
+          "Peacock"
+        ],
+        "time": "2026-06-18T02:00Z"
+      }
+    ],
+    "2026-06-23": [
+      {
+        "homeTeam": "Portugal",
+        "homeFlag": "🇵🇹",
+        "homeId": "portugal",
+        "awayTeam": "Uzbekistan",
+        "awayFlag": "🇺🇿",
+        "awayId": "uzbekistan",
+        "homeScore": 0,
+        "awayScore": 0,
+        "status": "SCHEDULED",
+        "date": "2026-06-23",
+        "broadcasts": [
+          "FOX",
+          "Tele",
+          "Peacock"
+        ],
+        "time": "2026-06-23T17:00Z"
+      },
+      {
+        "homeTeam": "England",
+        "homeFlag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+        "homeId": "england",
+        "awayTeam": "Ghana",
+        "awayFlag": "🇬🇭",
+        "awayId": "ghana",
+        "homeScore": 0,
+        "awayScore": 0,
+        "status": "SCHEDULED",
+        "date": "2026-06-23",
+        "broadcasts": [
+          "FOX",
+          "Tele",
+          "Peacock"
+        ],
+        "time": "2026-06-23T20:00Z"
+      },
+      {
+        "homeTeam": "Panama",
+        "homeFlag": "🇵🇦",
+        "homeId": "panama",
+        "awayTeam": "Croatia",
+        "awayFlag": "🇭🇷",
+        "awayId": "croatia",
+        "homeScore": 0,
+        "awayScore": 0,
+        "status": "SCHEDULED",
+        "date": "2026-06-23",
+        "broadcasts": [
+          "FOX",
+          "Tele",
+          "Peacock"
+        ],
+        "time": "2026-06-23T23:00Z"
+      },
+      {
+        "homeTeam": "Colombia",
+        "homeFlag": "🇨🇴",
+        "homeId": "colombia",
+        "awayTeam": "DR Congo",
+        "awayFlag": "🇨🇩",
+        "awayId": "drcongo",
+        "homeScore": 0,
+        "awayScore": 0,
+        "status": "SCHEDULED",
+        "date": "2026-06-23",
+        "broadcasts": [
+          "FS1",
+          "Tele",
+          "Peacock"
+        ],
+        "time": "2026-06-24T02:00Z"
+      }
+    ]
+  }
 }
