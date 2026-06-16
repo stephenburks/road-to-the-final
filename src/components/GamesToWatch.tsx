@@ -33,6 +33,8 @@ function enrich(match: DailyMatch, teams: AppData['teams']) {
 					? ('in_progress' as const)
 					: ('upcoming' as const),
 		date: match.date,
+		time: match.time,
+		broadcasts: match.broadcasts,
 		homeScorers: homeResult?.scorers ?? [],
 		awayScorers: awayResult?.scorers ?? [],
 		homeCards: homeResult?.cards ?? [],
