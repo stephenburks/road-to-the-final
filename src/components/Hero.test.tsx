@@ -70,7 +70,7 @@ describe('Hero', () => {
 
 	it('shows Polymarket as source label when source is market', () => {
 		render(<Hero team={mockTeam()} activeStage={ACTIVE_STAGE} isHistorical={false} />)
-		expect(screen.getAllByText('Polymarket')).toHaveLength(6)
+		expect(screen.getAllByText('Polymarket')).toHaveLength(7)
 	})
 
 	it('shows calculated as source label when source is calculated', () => {
@@ -109,9 +109,10 @@ describe('Hero', () => {
 		expect(screen.getByRole('listitem', { name: 'Win Group A: 12%' })).toBeInTheDocument()
 	})
 
-	it('does not render group win card when groupWinProb is undefined', () => {
+	it('shows group win card placeholder when groupWinProb is undefined', () => {
 		render(<Hero team={mockTeam()} activeStage={ACTIVE_STAGE} isHistorical={false} />)
-		expect(screen.queryByText(/Win Group/)).not.toBeInTheDocument()
+		expect(screen.getByText('Win Group')).toBeInTheDocument()
+		expect(screen.getByText('\u2014%')).toBeInTheDocument()
 	})
 
 	it('does not render group win card for eliminated team even if groupWinProb provided', () => {

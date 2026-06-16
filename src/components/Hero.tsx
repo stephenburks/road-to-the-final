@@ -119,8 +119,36 @@ export default function Hero({ team, activeStage, isHistorical, groupWinProb }: 
 		</div>
 	) : null
 
+	const goalsFor = record?.stats?.pointsFor
+
 	const statGridEl = !team.eliminated ? (
-		<div className={styles.statGrid} role="list" aria-label="Tournament advancement probabilities">
+		<div className={styles.statGrid} role="list" aria-label="Tournament statistics and advancement probabilities">
+
+			{/* ── Goals ── */}
+			<div role="listitem" className={`${styles.statCard} ${styles.statCardGoals}`} aria-label={`Total goals: ${goalsFor ?? '\u2014'}`}>
+				<div className={`${styles.statValue} ${styles.statValueGoals}`}>
+					{goalsFor ?? '\u2014'}
+				</div>
+				<div className={styles.statLabel}>Total Goals</div>
+				<div className={styles.statSub}>ESPN</div>
+			</div>
+
+			{/* ── Group Win ── */}
+			<div
+				role="listitem"
+				className={`${styles.statCard} ${styles.statCardGroup}`}
+				aria-label={groupWinProb ? `Win Group ${groupWinProb.groupLetter}: ${groupWinProb.probability}%` : 'Win group probability not available'}
+			>
+				<div className={`${styles.statValue} ${styles.statValueGroup}`}>
+					{groupWinProb?.probability ?? '\u2014'}%
+				</div>
+				<div className={styles.statLabel}>
+					{groupWinProb ? `Win Group ${groupWinProb.groupLetter}` : 'Win Group'}
+				</div>
+				<div className={styles.statSub}>Polymarket</div>
+			</div>
+
+			{/* ── Stage probabilities ── */}
 			{STAT_CARD_DEFS.map(card => (
 				<div
 					key={card.key}
@@ -137,19 +165,6 @@ export default function Hero({ team, activeStage, isHistorical, groupWinProb }: 
 					</div>
 				</div>
 			))}
-			{groupWinProb && (
-				<div
-					role="listitem"
-					className={`${styles.statCard} ${styles.statCardGroup}`}
-					aria-label={`Win Group ${groupWinProb.groupLetter}: ${groupWinProb.probability}%`}
-				>
-					<div className={`${styles.statValue} ${styles.statValueGroup}`}>
-						{groupWinProb.probability}%
-					</div>
-					<div className={styles.statLabel}>Win Group {groupWinProb.groupLetter}</div>
-					<div className={styles.statSub}>Polymarket</div>
-				</div>
-			)}
 		</div>
 	) : null
 
