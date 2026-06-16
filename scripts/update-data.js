@@ -466,47 +466,67 @@ function pmNameToId(name) {
   return nameToId(name, null);
 }
 
-// ─── Polymarket: fetch winner & advance-to-knockout probabilities ───────────────
-// Returns { winner: { teamId: pct }, advance: { teamId: pct } }
+// ─── Polymarket: fetch ALL stage probabilities (18 events total) ─────────────────
+// Returns { group, r32, r16, qf, sf, final, winner } — each { teamId: pct }
 async function fetchPolymarketAll() {
-  const winner  = {};
-  const advance = {};
+  const result = { group: {}, r32: {}, r16: {}, qf: {}, sf: {}, final: {}, winner: {} };
 
-  const EVENT_SLUGS = {
-    winner:  'world-cup-winner',
-    advance: 'world-cup-team-to-advance-to-knockout-stages',
+  const GROUP_SLUGS = 'abcdefghijkl'.split('').map(l => `world-cup-group-${l}-winner`);
+  const TOURNAMENT_SLUGS = {
+    r32:    'world-cup-team-to-advance-to-knockout-stages',
+    r16:    'world-cup-nation-to-reach-round-of-16',
+    qf:     'world-cup-nation-to-reach-quarterfinals',
+    sf:     'world-cup-nation-to-reach-semifinals',
+    final:  'world-cup-nation-to-reach-final',
+    winner: 'world-cup-winner',
   };
 
-  for (const [key, slug] of Object.entries(EVENT_SLUGS)) {
+  // Helper: parse markets from an event response into the target stage map
+  const parseEvent = (data, target) => {
+    validatePolymarketResponse(data);
+    const markets = data[0].markets || [];
+    for (const m of markets) {
+      const name = m.groupItemTitle || '';
+      const id = pmNameToId(name);
+      if (!id) {
+        // Log unmatched names for debugging (skip known non-team entries)
+        if (name && name !== 'Other' && !name.startsWith('Team ') && name !== 'Field')
+          log(`⚠  Polymarket unmapped: "${name}"`);
+        continue;
+      }
+      let prices;
+      try { prices = JSON.parse(m.outcomePrices || '[]'); } catch { continue; }
+      const yesPct = parseFloat(prices[0]);
+      if (isNaN(yesPct)) continue;
+      target[id] = Math.round(yesPct * 100);
+    }
+  };
+
+  // Fetch all 12 group winner events
+  for (const slug of GROUP_SLUGS) {
     const data = await tryFetch(`https://gamma-api.polymarket.com/events?slug=${slug}&limit=1`);
     if (!data?.length) {
       log(`⚠  Polymarket event not found: ${slug}`);
       continue;
     }
-    validatePolymarketResponse(data);
+    parseEvent(data, result.group);
+  }
+  log(`Polymarket group winners: ${Object.keys(result.group).length} teams`);
 
-    const markets = data[0].markets || [];
-    const target  = key === 'winner' ? winner : advance;
-
-    for (const m of markets) {
-      const name   = m.groupItemTitle || '';
-      const id     = pmNameToId(name);
-      if (!id) continue; // skip placeholders like "Team AM", "Other", "Italy", "Peru"
-
-      let prices;
-      try { prices = JSON.parse(m.outcomePrices || '[]'); } catch { continue; }
-      const yesPct = parseFloat(prices[0]);
-      if (isNaN(yesPct)) continue;
-
-      target[id] = Math.round(yesPct * 100);
+  // Fetch all 6 tournament stage events
+  for (const [stage, slug] of Object.entries(TOURNAMENT_SLUGS)) {
+    const data = await tryFetch(`https://gamma-api.polymarket.com/events?slug=${slug}&limit=1`);
+    if (!data?.length) {
+      log(`⚠  Polymarket event not found: ${slug}`);
+      continue;
     }
-
-    log(`Polymarket ${key} fetched: ${Object.keys(target).length} teams`);
+    parseEvent(data, result[stage]);
+    log(`Polymarket ${stage}: ${Object.keys(result[stage]).length} teams`);
   }
 
-  const allIds = [...new Set([...Object.keys(winner), ...Object.keys(advance)])];
-  log(`Polymarket combined: ${allIds.length} teams`);
-  return { winner, advance };
+  const allIds = [...new Set(Object.values(result).flatMap(Object.keys))];
+  log(`Polymarket combined: ${allIds.length} unique teams across all stages`);
+  return result;
 }
 
 // ─── Build group results for a team from match data ──────────────────────────
@@ -651,77 +671,102 @@ function buildPath(teamId, group, standings) {
   };
 }
 
-function calcProbs(teamId, group, standings, winnerProbs, advanceProbs) {
-  // Polymarket winner/advance % are authoritative where available.
-  // Fallback: derive from group position + FIFA ranking.
-  const rows     = standings[group] || [];
-  const row      = rows.find(r => r.teamId === teamId);
-  const base     = ALL_TEAMS.find(t => t.id === teamId)?.fifaRank ?? 50;
-  const marketWin  = winnerProbs?.[teamId];
-  const marketAdv  = advanceProbs?.[teamId];
+function calcProbs(teamId, group, standings, polyData) {
+  // Use Polymarket data DIRECTLY for every stage where it exists.
+  // NO interpolation for stages with market data — pull from source of truth.
+  // Only use 'calculated' for stages where Polymarket truly has no price.
+  const market = {
+    r32:    polyData?.r32?.[teamId],
+    r16:    polyData?.r16?.[teamId],
+    qf:     polyData?.qf?.[teamId],
+    sf:     polyData?.sf?.[teamId],
+    final:  polyData?.final?.[teamId],
+    winner: polyData?.winner?.[teamId],
+  };
+
+  const stages = ['r32', 'r16', 'qf', 'sf', 'final', 'winner'];
+  const known = stages
+    .map((key, idx) => ({ key, idx, val: market[key] }))
+    .filter(s => typeof s.val === 'number');
+
+  const hasAnyMarket = known.length > 0;
+
+  if (!hasAnyMarket) {
+    // No Polymarket data at all: use ranking/standings-based fallback
+    return calcProbsFallback(teamId, group, standings);
+  }
+
+  // Build result: use market data where available, interpolate only the gaps
+  const result = {};
+  for (let i = 0; i < stages.length; i++) {
+    if (typeof market[stages[i]] === 'number') {
+      result[stages[i]] = market[stages[i]];
+      continue;
+    }
+    // Find nearest known stages before and after
+    const before = [...known].reverse().find(k => k.idx < i);
+    const after = known.find(k => k.idx > i);
+
+    if (before && after) {
+      // Geometric interpolation between two known stages
+      const steps = after.idx - before.idx;
+      const t = (i - before.idx) / steps;
+      result[stages[i]] = Math.round(before.val * Math.pow(after.val / before.val, t));
+    } else if (before) {
+      // Extrapolate forward from last known stage
+      const stepsFrom = i - before.idx;
+      const perRound = 0.48; // conservative per-round advancement factor
+      result[stages[i]] = Math.round(before.val * Math.pow(perRound, stepsFrom));
+    } else if (after) {
+      // Extrapolate backward from first known stage
+      const stepsTo = after.idx - i;
+      const perRound = 1 / 0.48;
+      result[stages[i]] = Math.min(Math.round(after.val * Math.pow(perRound, stepsTo)), 99);
+    }
+  }
+
+  // Enforce monotonicity: each later stage must be <= earlier stage
+  // (Polymarket markets for different stages aren't perfectly consistent)
+  for (let i = 1; i < stages.length; i++) {
+    if (result[stages[i]] > result[stages[i - 1]]) {
+      result[stages[i]] = result[stages[i - 1]];
+    }
+  }
+
+  return { ...result, source: 'market' };
+}
+
+// Fallback when Polymarket has no data for a team (ranking + standings based)
+function calcProbsFallback(teamId, group, standings) {
+  const rows = standings[group] || [];
+  const row = rows.find(r => r.teamId === teamId);
+  const base = ALL_TEAMS.find(t => t.id === teamId)?.fifaRank ?? 50;
 
   const hasStandings = rows.length > 0;
   const pos = hasStandings ? (row?.pos ?? 4) : 4;
   const rankScore = Math.max(1, 50 - base);
 
-  // When standings exist, scale by actual group position.
-  // When no standings (API down), use ranking-based tiers to avoid near-zero.
   let seed;
   if (hasStandings) {
     const posMult = { 1: 1.0, 2: 0.65, 3: 0.3, 4: 0.05 }[pos] ?? 0.5;
     seed = Math.round(rankScore * posMult);
   } else {
     const tiers = [
-      { max: 10, pct: 25 },
-      { max: 20, pct: 18 },
-      { max: 30, pct: 12 },
-      { max: 40, pct: 8  },
-      { max: 50, pct: 5  },
-      { max: Infinity, pct: 2 },
+      { max: 10, pct: 25 }, { max: 20, pct: 18 }, { max: 30, pct: 12 },
+      { max: 40, pct: 8  }, { max: 50, pct: 5  }, { max: Infinity, pct: 2 },
     ];
     const tier = tiers.find(t => base <= t.max);
     seed = tier ? Math.round(tier.pct * (rankScore / 50)) : 2;
   }
 
-  const winner = marketWin ?? Math.min(seed, 30);
-  const r32    = marketAdv ?? Math.min(Math.round(winner * 2.8 + (pos <= 2 ? 20 : 5)), 99);
-  const hasMarketData = typeof marketWin === 'number' || typeof marketAdv === 'number';
+  const winner = Math.min(seed, 30);
+  const r32 = Math.min(Math.round(winner * 2.8 + (pos <= 2 ? 20 : 5)), 99);
+  const r16 = Math.round(r32 * 0.55);
+  const qf   = Math.round(r16 * 0.52);
+  const sf   = Math.round(qf  * 0.50);
+  const final = Math.round(sf  * 0.50);
 
-  // Derive intermediate knockout stages via geometric interpolation.
-  // The tournament has 5 knockout rounds (R32→R16→QF→SF→Final).
-  // With market r32 and winner, we compute the implied per-round win rate:
-  //   perRound = (winner / r32)^(1/5)
-  // Then step down geometrically from r32 to winner.
-  let r16, qf, sf, final;
-  if (typeof marketAdv === 'number' && typeof marketWin === 'number' && r32 > 0 && winner > 0) {
-    const perRound = Math.pow(winner / r32, 1 / 5);
-    r16   = Math.min(Math.round(r32 * perRound), 98);
-    qf    = Math.min(Math.round(r16 * perRound), 95);
-    sf    = Math.round(qf  * perRound);
-    final = Math.round(sf  * perRound);
-    // Floor at winner (mathematically we should land there but guard against rounding)
-    final = Math.max(final, winner);
-  } else if (typeof marketAdv === 'number') {
-    // Only have advance data: use flat per-round factors
-    r16   = Math.min(Math.round(r32 * 0.65), 98);
-    qf    = Math.min(Math.round(r16 * 0.52), 95);
-    sf    = Math.round(qf  * 0.50);
-    final = Math.round(sf  * 0.50);
-  } else if (typeof marketWin === 'number') {
-    // Only have winner data: reverse-derive
-    r16   = Math.min(Math.round(winner * 1.8), 95);
-    qf    = Math.round(r16 * 0.52);
-    sf    = Math.round(qf  * 0.50);
-    final = Math.round(sf  * 0.50);
-  } else {
-    // No market data: calculated fallback
-    r16   = Math.round(r32 * 0.55);
-    qf    = Math.round(r16 * 0.52);
-    sf    = Math.round(qf  * 0.50);
-    final = Math.round(sf  * 0.50);
-  }
-
-  return { r32, r16, qf, sf, final, winner, source: hasMarketData ? 'market' : 'calculated' };
+  return { r32, r16, qf, sf, final, winner, source: 'calculated' };
 }
 
 function diffRating(rank) {
@@ -982,8 +1027,6 @@ async function main() {
 
   // Polymarket + ESPN always run (independent of football-data.org API availability)
   const polyData = await fetchPolymarketAll();
-  const winnerProbs  = polyData.winner || {};
-  const advanceProbs = polyData.advance || {};
 
   const TOURNAMENT_START_ESPN = '2026-06-11';
   const { scorers: espnScorers, cards: espnCards } = await fetchESPNEventDetails(TOURNAMENT_START_ESPN, todayStr());
@@ -996,11 +1039,11 @@ async function main() {
   if (hasActive) {
     if (!Object.keys(rawStandings).length) log('⚠  No standings data returned — API may be unavailable');
     if (!allMatches.length)             log('⚠  No match data returned — API may be unavailable');
-    if (!Object.keys(winnerProbs).length && !Object.keys(advanceProbs).length)
+    if (!Object.keys(polyData.winner || {}).length && !Object.keys(polyData.r32 || {}).length)
       log('⚠  No Polymarket data returned — API may be unavailable');
   }
 
-  log(`Standings: ${Object.keys(rawStandings).length} groups | Matches: ${allMatches.length} | Polymarket: ${Object.keys(winnerProbs).length} winner + ${Object.keys(advanceProbs).length} advance teams`);
+  log(`Standings: ${Object.keys(rawStandings).length} groups | Matches: ${allMatches.length} | Polymarket: ${Object.keys(polyData.winner || {}).length} winner + ${Object.keys(polyData.group || {}).length} group + ${Object.keys(polyData.r32 || {}).length} R32 teams`);
 
   // Index matches by "homeId:awayId" for O(1) lookup
   const matchIndex = new Map();
@@ -1023,33 +1066,32 @@ async function main() {
       const standArr = buildGroupStandings(g, rawStandings);
       const winProbs = {};
       standArr.forEach(s => {
-        // Prefer Polymarket, fallback to existing market data, then calculated
-        winProbs[s.teamId] = winnerProbs[s.teamId]
-          ?? (existingGroup?.winProbabilities?.[s.teamId]
-            ? existingGroup.winProbabilities[s.teamId]
-            : calcProbs(s.teamId, g, rawStandings, winnerProbs, advanceProbs).winner);
+        // Use Polymarket group winner data directly, fallback to existing or 0
+        winProbs[s.teamId] = polyData.group?.[s.teamId]
+          ?? existingGroup?.winProbabilities?.[s.teamId]
+          ?? 0;
       });
       groupsData[g] = { standings: standArr, winProbabilities: winProbs };
     } else if (existingGroup && !isSingleGroupDegraded(existingGroup)) {
       // Quiet day with healthy existing data: carry forward but refresh
-      // Polymarket win probabilities (market odds change independently)
+      // Polymarket group win probabilities (market odds change independently)
       const refreshed = { ...existingGroup };
-      if (Object.keys(winnerProbs).length > 0) {
+      if (Object.keys(polyData.group || {}).length > 0) {
         const updatedWinProbs = { ...existingGroup.winProbabilities };
         for (const tid of Object.keys(updatedWinProbs)) {
-          if (typeof winnerProbs[tid] === 'number') {
-            updatedWinProbs[tid] = winnerProbs[tid];
+          if (typeof polyData.group[tid] === 'number') {
+            updatedWinProbs[tid] = polyData.group[tid];
           }
         }
         refreshed.winProbabilities = updatedWinProbs;
       }
       groupsData[g] = refreshed;
     } else {
-      // No existing data or degraded: rebuild with ranking estimates
+      // No existing data or degraded: rebuild with available market data
       const standArr = buildGroupStandings(g, rawStandings);
       const winProbs = {};
       standArr.forEach(s => {
-        winProbs[s.teamId] = calcProbs(s.teamId, g, rawStandings, winnerProbs, advanceProbs).winner;
+        winProbs[s.teamId] = polyData.group?.[s.teamId] ?? 0;
       });
       groupsData[g] = { standings: standArr, winProbabilities: winProbs };
     }
@@ -1089,9 +1131,14 @@ async function main() {
     if (!isActive && existingTeam) {
       // Carry forward but always recalculate advance probabilities with fresh
       // Polymarket data (market odds change independently of match results)
-      const hasFreshPoly = typeof winnerProbs[t.id] === 'number' || typeof advanceProbs[t.id] === 'number';
+      const hasFreshPoly = typeof polyData.r32?.[t.id] === 'number'
+        || typeof polyData.r16?.[t.id] === 'number'
+        || typeof polyData.qf?.[t.id] === 'number'
+        || typeof polyData.sf?.[t.id] === 'number'
+        || typeof polyData.final?.[t.id] === 'number'
+        || typeof polyData.winner?.[t.id] === 'number';
       const teamAdvP = hasFreshPoly
-        ? calcProbs(t.id, t.group, rawStandings, winnerProbs, advanceProbs)
+        ? calcProbs(t.id, t.group, rawStandings, polyData)
         : existingTeam.advanceProbabilities;
 
       // Carry forward but always update computed fields if standings exist
@@ -1135,10 +1182,15 @@ async function main() {
 
     // Preserve existing market-sourced probabilities when Poly is unavailable
     const existingHadMarket = existingTeam?.advanceProbabilities?.source === 'market';
-    const hasFreshPoly = typeof winnerProbs[t.id] === 'number' || typeof advanceProbs[t.id] === 'number';
+    const hasFreshPoly = typeof polyData.r32?.[t.id] === 'number'
+      || typeof polyData.r16?.[t.id] === 'number'
+      || typeof polyData.qf?.[t.id] === 'number'
+      || typeof polyData.sf?.[t.id] === 'number'
+      || typeof polyData.final?.[t.id] === 'number'
+      || typeof polyData.winner?.[t.id] === 'number';
     const teamAdvanceProbs = existingHadMarket && !hasFreshPoly
       ? existingTeam.advanceProbabilities
-      : calcProbs(t.id, t.group, rawStandings, winnerProbs, advanceProbs);
+      : calcProbs(t.id, t.group, rawStandings, polyData);
 
     const teamPath      = buildPath(t.id, t.group, rawStandings);
     const possibleOpps  = buildOpponents(t.id, t.group, teamPath.r32?.opponentDesc ?? '', rawStandings);
