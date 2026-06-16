@@ -1,6 +1,7 @@
 import { useMemo } from 'react'
 import type { AppData, DailyMatch } from '../types'
 import type { View } from '../hooks/useAppState'
+import { useLiveScores, type LiveMatchPatch } from '../hooks/useLiveScores'
 import MatchCard from './groups/MatchCard'
 import NewsSection from './NewsSection'
 import styles from './HomePage.module.css'
@@ -37,9 +38,16 @@ const DAY_LABELS: Record<string, string> = {
 }
 
 /** Cross-reference a DailyMatch with team groupResults to extract scorers/cards */
-function enrich(match: DailyMatch, teams: AppData['teams']) {
+function enrich(
+	match: DailyMatch,
+	teams: AppData['teams'],
+	livePatch?: LiveMatchPatch
+) {
 	const homeTeam = teams.find(t => t.id === match.homeId)
 	const awayTeam = teams.find(t => t.id === match.awayId)
+
+	const key = `${match.homeId}:${match.awayId}`
+	const live = livePatch instanceof Map ? livePatch.get(key) : null
 
 	const homeResult = homeTeam?.groupResults?.find(
 		g => g.opponent === match.awayTeam
@@ -47,6 +55,9 @@ function enrich(match: DailyMatch, teams: AppData['teams']) {
 	const awayResult = awayTeam?.groupResults?.find(
 		g => g.opponent === match.homeTeam
 	)
+
+	const effectiveStatus = live?.status ?? match.status
+	const effectiveScore = live ? `${live.homeScore}-${live.awayScore}` : (match.status !== 'SCHEDULED' ? `${match.homeScore}-${match.awayScore}` : null)
 
 	return {
 		mode: 'neutral' as const,
@@ -56,29 +67,30 @@ function enrich(match: DailyMatch, teams: AppData['teams']) {
 		awayTeam: match.awayTeam,
 		awayFlag: match.awayFlag,
 		awayId: match.awayId,
-		score: match.status !== 'SCHEDULED' ? `${match.homeScore}-${match.awayScore}` : null,
-		status: match.status === 'FINISHED' ? 'finished' as const : match.status === 'IN_PROGRESS' ? 'in_progress' as const : 'upcoming' as const,
+		score: effectiveScore,
+		status: effectiveStatus === 'FINISHED' ? 'finished' as const : effectiveStatus === 'IN_PROGRESS' ? 'in_progress' as const : 'upcoming' as const,
 		date: match.date,
-		clock: match.clock,
-		homeScorers: homeResult?.scorers ?? [],
-		awayScorers: awayResult?.scorers ?? [],
-		homeCards: homeResult?.cards ?? [],
-		awayCards: awayResult?.cards ?? [],
+		clock: live?.clock ?? match.clock,
+		homeScorers: live?.homeScorers ?? homeResult?.scorers ?? [],
+		awayScorers: live?.awayScorers ?? awayResult?.scorers ?? [],
+		homeCards: live?.homeCards ?? homeResult?.cards ?? [],
+		awayCards: live?.awayCards ?? awayResult?.cards ?? [],
 	}
 }
 
 export default function HomePage({ data, selectedTeamId, onTeamChange, onViewChange }: HomePageProps) {
 	const dailyMatches = useMemo(() => data.dailyMatches ?? {}, [data.dailyMatches])
+	const livePatches = useLiveScores(dailyMatches, data.teams, data.isHistorical)
 
 	const today = todayStr()
 	const yesterday = yesterdayStr()
 	const tomorrow = tomorrowStr()
 
 	const sections = useMemo(() => [
-		{ key: 'today', date: today, matches: (dailyMatches[today] ?? []).map(m => enrich(m, data.teams)) },
-		{ key: 'yesterday', date: yesterday, matches: (dailyMatches[yesterday] ?? []).map(m => enrich(m, data.teams)) },
-		{ key: 'tomorrow', date: tomorrow, matches: (dailyMatches[tomorrow] ?? []).map(m => enrich(m, data.teams)) },
-	], [dailyMatches, data.teams, today, yesterday, tomorrow])
+		{ key: 'today', date: today, matches: (dailyMatches[today] ?? []).map(m => enrich(m, data.teams, livePatches?.get(`${m.homeId}:${m.awayId}`))) },
+		{ key: 'yesterday', date: yesterday, matches: (dailyMatches[yesterday] ?? []).map(m => enrich(m, data.teams, livePatches?.get(`${m.homeId}:${m.awayId}`))) },
+		{ key: 'tomorrow', date: tomorrow, matches: (dailyMatches[tomorrow] ?? []).map(m => enrich(m, data.teams, livePatches?.get(`${m.homeId}:${m.awayId}`))) },
+	], [dailyMatches, data.teams, today, yesterday, tomorrow, livePatches])
 
 	return (
 		<div className={styles.page}>
