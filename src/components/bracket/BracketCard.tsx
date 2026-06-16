@@ -31,11 +31,11 @@ export default function BracketCard({ path, card, isAct, stage }: BracketCardPro
 			</div>
 			{path?.conditional && (
 				<div
-					className={styles.cardConditional + ' emoji'}
+					className={styles.cardConditional}
 					title={path.conditionNote ?? 'Venue depends on finishing position'}
 					aria-label={path.conditionNote ?? 'Conditional venue'}
 				>
-					⚠ Conditional
+					Conditional
 				</div>
 			)}
 		</div>

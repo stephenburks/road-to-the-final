@@ -13,11 +13,10 @@ export default function BracketNode({ bg, border, color, shadow, icon }: Bracket
 
 	return (
 		<div
-			className={`${styles.node} emoji ${isLarge ? styles.nodeLarge : ''}`}
+			className={`${styles.node} ${isLarge ? styles.nodeLarge : ''}`}
 			style={{ background: bg, border: `2px solid ${border}`, color, boxShadow: shadow }}
+			data-icon={icon}
 			aria-hidden="true"
-		>
-			{icon}
-		</div>
+		/>
 	)
 }

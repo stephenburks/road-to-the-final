@@ -18,6 +18,7 @@
   flex-shrink: 0;
   margin-top: 1px;
 }
+.icon::before { content: '\2139\FE0F'; }   /* ℹ️ */
 
 .content { flex: 1; }
 

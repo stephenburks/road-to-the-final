@@ -3,6 +3,14 @@
 	grid-template-columns: 1fr 1fr;
 	gap: 16px;
 	margin-bottom: 0;
+	min-width: 0;
+}
+
+/* Prevent grid children from auto-expanding past their column */
+.groupGrid > * {
+	min-width: 0;
+	max-width: 100%;
+	overflow: hidden;
 }
 
 .matchGrid {

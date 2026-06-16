@@ -21,7 +21,7 @@ function HistoricalBanner({ date, label, onGoLive }: { date: string; label: stri
   return (
     <div role="alert" aria-live="polite" className={styles.historicalBanner}>
       <div className={`wrap ${styles.historicalInner}`}>
-        <span className="emoji" aria-hidden="true">{'\u{1F4C5}'}</span> Viewing snapshot from <strong>{label ?? date}</strong> {'\u2014'} probabilities reflect that day
+        <span className={styles.historicalBannerIcon} aria-hidden="true" /> Viewing snapshot from <strong>{label ?? date}</strong> {'\u2014'} probabilities reflect that day
         <button onClick={onGoLive} aria-label="Return to live data" className={styles.historicalBtn}>
           {'\u2190'} Back to Live
         </button>
@@ -33,7 +33,7 @@ function HistoricalBanner({ date, label, onGoLive }: { date: string; label: stri
 function ErrorScreen({ message }: { message: string }) {
   return (
     <div role="alert" className={styles.errorScreen}>
-      <span className={`emoji ${styles.errorIcon}`}>{'\u26A0\uFE0F'}</span>
+      <span className={styles.errorIcon} />
       <p>{message}</p>
       <p className={styles.errorSubtext}>
         Run <code className={styles.errorCode}>npm run dev</code> to serve the app locally.

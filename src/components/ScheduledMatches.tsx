@@ -39,9 +39,7 @@ function MatchRow({ match, teamFlag, teamId, isConditional = false }: MatchRowPr
       className={`${styles.matchRow} ${match.result ? styles.played : styles.upcoming} ${isConditional ? styles.conditional : ''}`}
       aria-label={`${match.result ? status.label : 'Upcoming'}: vs ${match.opponent ?? match.opponentDesc ?? 'TBD'}`}
     >
-      <div className={`${styles.matchStatus} emoji ${status.className}`} aria-hidden="true">
-        <span>{status.icon}</span>
-      </div>
+      <div className={`${styles.matchStatus} ${status.className}`} aria-hidden="true" />
 
       <div className={styles.matchDate}>{formatDate(match.date)}</div>
 
@@ -98,7 +96,7 @@ function StageBlock({ stageKey, team }: StageBlockProps) {
       <div className={styles.stageBlock}>
         <div className={styles.stageHeader}>
           <span className={`${styles.stageLabel} ${isCurrent ? styles.stageCurrent : isComplete ? styles.stageDone : ''}`}>
-            {isComplete ? '✓ ' : isCurrent ? '● ' : ''}{STAGE_LABELS[stageKey]}
+            {STAGE_LABELS[stageKey]}
           </span>
         </div>
         {results.map((match, i) => (
@@ -123,9 +121,9 @@ function StageBlock({ stageKey, team }: StageBlockProps) {
   return (
     <div className={styles.stageBlock}>
       <div className={styles.stageHeader}>
-        <span className={`${styles.stageLabel} ${isCurrent ? styles.stageCurrent : isComplete ? styles.stageDone : styles.stageFuture}`}>
-          {isComplete ? '✓ ' : isCurrent ? '● ' : '❓ '}{STAGE_LABELS[stageKey]}
-        </span>
+          <span className={`${styles.stageLabel} ${isCurrent ? styles.stageCurrent : isComplete ? styles.stageDone : styles.stageFuture}`}>
+            {STAGE_LABELS[stageKey]}
+          </span>
         {path.city && (
           <span className={styles.stageCity}>{path.city}</span>
         )}
@@ -163,7 +161,7 @@ export default function ScheduledMatches({ team }: { team: Team }) {
       </div>
 
       <p className={styles.note} role="note">
-        <span className="emoji" aria-hidden="true">❓</span> Future matches are conditional on advancing from each stage.
+        Future matches are conditional on advancing from each stage.
         Venues and dates reflect the most likely path based on current group standings.
       </p>
     </section>

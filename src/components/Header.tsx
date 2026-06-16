@@ -29,7 +29,7 @@ export default function Header({
       <header className={styles.header}>
         {/* Logo */}
         <div className={styles.logo}>
-          <div className={`${styles.logoIcon} emoji`} aria-hidden="true">⚽</div>
+          <div className={styles.logoIcon} aria-hidden="true" />
           <div>
             <div className={styles.logoName}>Road to the Final</div>
             <div className={styles.logoSub}>FIFA World Cup 2026</div>

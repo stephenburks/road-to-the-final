@@ -77,10 +77,11 @@ export default function Hero({ team, activeStage, isHistorical, groupWinProb }: 
 					</h1>
 					{!team.eliminated && <p className={styles.subhead}>{subhead}</p>}
 					<p className={styles.subtext}>{subtext}</p>
-					{conditionalNote && (
-						<p className={styles.conditionalNote} role="note">
-							<span aria-hidden="true" className="emoji">⚠️ </span>{conditionalNote}
-						</p>
+						{conditionalNote && (
+						<div className={styles.conditionalNote} role="note">
+							<span className={styles.conditionalNoteIcon} aria-hidden="true" />
+							{conditionalNote}
+						</div>
 					)}
 
 					{!team.eliminated && (

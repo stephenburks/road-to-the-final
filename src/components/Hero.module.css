@@ -68,6 +68,9 @@
   max-width: 620px;
 }
 
+.conditionalNoteIcon { flex-shrink: 0; }
+.conditionalNoteIcon::before { content: '\26A0\FE0F\00A0'; }   /* ⚠️  */
+
 .statGrid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);

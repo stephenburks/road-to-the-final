@@ -15,6 +15,7 @@
 	font-size: 36px;
 	line-height: 1;
 }
+.icon::before { content: '\26A0\FE0F'; }   /* ⚠️ */
 
 .title {
 	margin: 0;

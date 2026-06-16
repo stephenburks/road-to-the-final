@@ -12,4 +12,9 @@
 	transition: box-shadow 0.3s;
 }
 
+/* Render icon text via CSS content from data attribute */
+.node::after {
+	content: attr(data-icon);
+}
+
 .nodeLarge { font-size: 13px; }

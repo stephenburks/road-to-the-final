@@ -69,7 +69,7 @@ describe('BracketCard', () => {
 				stage="qf"
 			/>
 		)
-		expect(screen.getByText('⚠ Conditional')).toBeInTheDocument()
+		expect(screen.getByText('Conditional')).toBeInTheDocument()
 		const condEl = screen.getByLabelText('Based on position')
 		expect(condEl).toBeTruthy()
 	})
@@ -83,7 +83,7 @@ describe('BracketCard', () => {
 				stage="sf"
 			/>
 		)
-		expect(screen.queryByText('⚠ Conditional')).toBeFalsy()
+		expect(screen.queryByText('Conditional')).toBeFalsy()
 	})
 
 	it('applies active city class when isAct is true', () => {

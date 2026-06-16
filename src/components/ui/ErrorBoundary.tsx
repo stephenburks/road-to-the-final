@@ -42,7 +42,7 @@ export default class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBo
 
 		return (
 			<div className={styles.container} role="alert">
-				<span className={styles.icon} aria-hidden="true">{'\u26A0\uFE0F'}</span>
+				<span className={styles.icon} aria-hidden="true" />
 				<h1 className={styles.title}>Something broke</h1>
 				<p className={styles.message}>
 					The app hit an unexpected error and couldn&apos;t render.

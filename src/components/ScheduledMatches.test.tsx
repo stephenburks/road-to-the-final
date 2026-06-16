@@ -99,20 +99,27 @@ describe('ScheduledMatches', () => {
 
 	// ── Past/current/future stage states ───────────────────────────────
 
-	it('marks past stages with ✓ prefix', () => {
-		render(<ScheduledMatches team={mockTeam()} />)
-		// Group stage is in the past (currentStage is r32)
-		expect(screen.getByText(/✓\s*Group Stage/)).toBeInTheDocument()
+	it('marks past stages with ✓ prefix CSS class', () => {
+		const { container } = render(<ScheduledMatches team={mockTeam()} />)
+		// Group stage is in the past (currentStage is r32) — should have stageDone class
+		const doneStage = container.querySelector('[class*="stageDone"]')
+		expect(doneStage).toBeTruthy()
+		expect(doneStage!.textContent).toContain('Group Stage')
 	})
 
-	it('marks current stage with ● prefix', () => {
-		render(<ScheduledMatches team={mockTeam()} />)
-		expect(screen.getByText(/●\s*Round of 32/)).toBeInTheDocument()
+	it('marks current stage with ● prefix CSS class', () => {
+		const { container } = render(<ScheduledMatches team={mockTeam()} />)
+		// r32 is current — should have stageCurrent class
+		const currentStage = container.querySelector('[class*="stageCurrent"]')
+		expect(currentStage).toBeTruthy()
+		expect(currentStage!.textContent).toContain('Round of 32')
 	})
 
-	it('marks future stages with ❓ prefix', () => {
-		render(<ScheduledMatches team={mockTeam()} />)
-		expect(screen.getByText(/❓\s*Quarterfinal/)).toBeInTheDocument()
+	it('marks future stages with ❓ prefix CSS class', () => {
+		const { container } = render(<ScheduledMatches team={mockTeam()} />)
+		// Quarterfinal is future — should have stageFuture class
+		const futureStages = container.querySelectorAll('[class*="stageFuture"]')
+		expect(futureStages.length).toBeGreaterThan(0)
 	})
 
 	it('applies stageDone class to completed stages', () => {

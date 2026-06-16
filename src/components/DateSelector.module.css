@@ -19,6 +19,12 @@
 	transition: background 0.15s;
 }
 
+/* Live indicator — antenna icon */
+.triggerLiveIcon::before { content: '\1F4E1\00A0'; }   /* 📡  */
+
+/* Historical indicator — calendar icon */
+.triggerHistoricalIcon::before { content: '\1F4C5\00A0'; }   /* 📅  */
+
 .trigger:hover {
 	background: rgba(255, 255, 255, 0.08);
 }
@@ -122,6 +128,9 @@
 	transition: background 0.1s;
 	list-style: none;
 }
+
+/* Calendar icon before each historical date option */
+.option::before { content: '\1F4C5'; }   /* 📅 */
 
 .option:hover {
 	background: rgba(99, 102, 241, 0.1);

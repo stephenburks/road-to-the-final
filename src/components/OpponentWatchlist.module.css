@@ -41,6 +41,7 @@
 }
 
 .conditionalIcon { flex-shrink: 0; font-size: 12px; }
+.conditionalIcon::before { content: '\26A0\FE0F'; }   /* ⚠️ */
 
 /* ── Scenarios ── */
 .scenarios { display: flex; flex-direction: column; gap: 20px; }
@@ -101,7 +102,11 @@
   border-style: dashed;
 }
 
-.futureIcon { font-size: 22px; flex-shrink: 0; }
+.futureIcon {
+	flex-shrink: 0;
+	font-size: 22px;
+}
+.futureIcon::before { content: '\23F3'; }   /* ⏳ */
 
 .futureText { font-size: 12px; color: var(--text-dim); line-height: 1.6; }
 .futureText strong { color: var(--text-lo); font-size: 13px; display: block; margin-bottom: 4px; }

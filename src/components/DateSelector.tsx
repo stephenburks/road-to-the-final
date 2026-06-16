@@ -34,13 +34,12 @@ export default function DateSelector({
 	return (
 		<div ref={ref} className={styles.wrap}>
 			<button
-				className={`${styles.trigger} ${isLive ? '' : styles.historical} ${open ? styles.open : ''}`}
+				className={`${styles.trigger} ${isLive ? styles.triggerLiveIcon : styles.triggerHistoricalIcon} ${isLive ? '' : styles.historical} ${open ? styles.open : ''}`}
 				onClick={() => setOpen((o) => !o)}
 				aria-haspopup="listbox"
 				aria-expanded={open}
 				aria-label={`Date view: ${label}`}
 			>
-				<span aria-hidden="true">{isLive ? '📡' : '📅'}</span>
 				<span>{label}</span>
 				<span className={styles.arrow} aria-hidden="true">
 					▾
@@ -70,7 +69,6 @@ export default function DateSelector({
 								className={`${styles.option} ${selectedDate === date ? styles.active : ''}`}
 								onClick={() => handleSelect(date)}
 							>
-								<span aria-hidden="true">📅</span>
 								<span className={styles.dateLabel}>{manifest.labels?.[date] ?? date}</span>
 							</li>
 						))}

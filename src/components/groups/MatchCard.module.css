@@ -57,6 +57,11 @@
 	line-height: 1.8;
 }
 
+/* Soccer ball icon before each scorer name */
+.scorers li::before {
+	content: '\26BD\00A0';   /* ⚽  */
+}
+
 .matchEvents {
 	display: grid;
 	grid-template-columns: 1fr 1fr;

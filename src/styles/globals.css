@@ -55,6 +55,12 @@ body {
   min-height: 100vh;
   line-height: 1.5;
   overflow-x: hidden;
+  max-width: 100vw;
+}
+
+main {
+  max-width: 100%;
+  overflow: hidden;
 }
 
 a {

@@ -17,6 +17,8 @@
 	text-align: center;
 }
 
+.historicalBannerIcon::before { content: '\1F4C5\00A0'; }   /* 📅  */
+
 .historicalBtn {
 	padding: 3px 10px;
 	border-radius: 5px;
@@ -43,6 +45,7 @@
 }
 
 .errorIcon { font-size: 28px; }
+.errorIcon::before { content: '\26A0\FE0F'; }   /* ⚠️ */
 
 .errorSubtext { color: var(--text-dim); margin-top: 8px; }
 
@@ -52,4 +55,9 @@
 	border-radius: 3px;
 }
 
-.tabWrapper { padding-top: 22px; padding-bottom: 0; }
+.tabWrapper {
+	padding-top: 22px;
+	padding-bottom: 0;
+	max-width: 100%;
+	overflow: hidden;
+}

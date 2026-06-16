@@ -53,7 +53,7 @@ export default function MatchCard({ match, teamFlag, teamId, teams }: MatchCardP
 						</div>
 						{match.scorers?.length > 0 && (
 							<ul className={styles.scorers} aria-label={`${teamId} goal scorers`}>
-								{match.scorers.map((s, j) => <li key={j}><span className="emoji" aria-hidden="true">⚽</span> {s}</li>)}
+								{match.scorers.map((s, j) => <li key={j}>{s}</li>)}
 							</ul>
 						)}
 						{match.cards?.length > 0 && (
@@ -75,7 +75,7 @@ export default function MatchCard({ match, teamFlag, teamId, teams }: MatchCardP
 							</div>
 							{oppMatch.scorers?.length > 0 && (
 								<ul className={styles.scorers} aria-label={`${match.opponent} goal scorers`}>
-									{oppMatch.scorers.map((s, j) => <li key={j}><span className="emoji" aria-hidden="true">⚽</span> {s}</li>)}
+									{oppMatch.scorers.map((s, j) => <li key={j}>{s}</li>)}
 								</ul>
 							)}
 							{oppMatch.cards?.length > 0 && (

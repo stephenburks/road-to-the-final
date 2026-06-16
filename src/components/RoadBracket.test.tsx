@@ -81,41 +81,41 @@ describe('RoadBracket', () => {
 	// ── Node icons ─────────────────────────────────────────────────────
 
 	it('renders checkmark node for completed stages', () => {
-		render(<RoadBracket team={mockTeam()} activeStage={ACTIVE_STAGE} onStageSelect={onStageSelect} />)
+		const { container } = render(<RoadBracket team={mockTeam()} activeStage={ACTIVE_STAGE} onStageSelect={onStageSelect} />)
 		// Group stage is done (index 0 < currentIdx 1)
-		expect(screen.getByText('✓')).toBeInTheDocument()
+		expect(container.querySelector('[data-icon="✓"]')).toBeTruthy()
 	})
 
 	it('renders current stage icon for current stage', () => {
-		render(<RoadBracket team={mockTeam()} activeStage={ACTIVE_STAGE} onStageSelect={onStageSelect} />)
+		const { container } = render(<RoadBracket team={mockTeam()} activeStage={ACTIVE_STAGE} onStageSelect={onStageSelect} />)
 		// r32 is current, icon is '32'
-		expect(screen.getByText('32')).toBeInTheDocument()
+		expect(container.querySelector('[data-icon="32"]')).toBeTruthy()
 	})
 
 	it('renders purple node for active (selected) future stage', () => {
-		render(<RoadBracket team={mockTeam()} activeStage="qf" onStageSelect={onStageSelect} />)
+		const { container } = render(<RoadBracket team={mockTeam()} activeStage="qf" onStageSelect={onStageSelect} />)
 		// qf is active but not current, should show 'QF'
-		expect(screen.getByText('QF')).toBeInTheDocument()
+		expect(container.querySelector('[data-icon="QF"]')).toBeTruthy()
 	})
 
 	it('renders star icon for final', () => {
-		render(<RoadBracket team={mockTeam()} activeStage={ACTIVE_STAGE} onStageSelect={onStageSelect} />)
-		expect(screen.getByText('★')).toBeInTheDocument()
+		const { container } = render(<RoadBracket team={mockTeam()} activeStage={ACTIVE_STAGE} onStageSelect={onStageSelect} />)
+		expect(container.querySelector('[data-icon="★"]')).toBeTruthy()
 	})
 
 	// ── Eliminated team rendering ──────────────────────────────────────
 
 	it('renders eliminated X marker for eliminated team', () => {
 		const team = mockTeam({ eliminated: true, currentStage: 'r16' })
-		render(<RoadBracket team={team} activeStage="r16" onStageSelect={onStageSelect} />)
-		expect(screen.getByText('✕')).toBeInTheDocument()
+		const { container } = render(<RoadBracket team={team} activeStage="r16" onStageSelect={onStageSelect} />)
+		expect(container.querySelector('[data-icon="✕"]')).toBeTruthy()
 	})
 
 	it('renders checkmarks for stages before elimination', () => {
 		const team = mockTeam({ eliminated: true, currentStage: 'r16' })
-		render(<RoadBracket team={team} activeStage="r16" onStageSelect={onStageSelect} />)
+		const { container } = render(<RoadBracket team={team} activeStage="r16" onStageSelect={onStageSelect} />)
 		// Stages before current (group_stage, r32) should have ✓
-		const checks = screen.getAllByText('✓')
+		const checks = container.querySelectorAll('[data-icon="✓"]')
 		expect(checks.length).toBe(2)
 	})
 

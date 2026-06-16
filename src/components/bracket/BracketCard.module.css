@@ -46,3 +46,6 @@
 	opacity: 0.8;
 	cursor: help;
 }
+.cardConditional::before {
+	content: '\26A0\FE0F\00A0';   /* ⚠️ + nbsp */
+}

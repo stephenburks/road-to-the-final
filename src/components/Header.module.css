@@ -25,6 +25,7 @@
   justify-content: center;
   font-size: 15px;
 }
+.logoIcon::before { content: '\26BD'; }   /* ⚽ */
 
 .logoName {
   font-family: var(--font-display);

@@ -8,9 +8,9 @@ import MatchupMatrix from './opponents/MatchupMatrix'
 import styles from './OpponentWatchlist.module.css'
 
 function FutureStagePlaceholder({ stage, path }: { stage: Stage; path?: Team['path'][keyof Team['path']] | null }) {
-	return (
+		return (
 		<div className={styles.futurePlaceholder}>
-			<div className={`${styles.futureIcon} emoji`} aria-hidden="true">⏳</div>
+			<div className={styles.futureIcon} aria-hidden="true" />
 			<div className={styles.futureText}>
 				<strong>{STAGE_LABELS[stage]} opponents update live</strong>
 				<p>
@@ -40,9 +40,9 @@ function VenueBanner({ stagePath, activeStage }: {
 				{stagePath.date?.match(/^\d{4}/) ? ` · ${formatDate(stagePath.date)}` : ''}
 				{stagePath.venue ? ` · ${stagePath.venue}, ${stagePath.city}` : stagePath.city ? ` · ${stagePath.city}` : ''}
 			</div>
-			{stagePath.conditional && stagePath.conditionNote && (
+				{stagePath.conditional && stagePath.conditionNote && (
 				<div className={styles.bannerConditionalNote}>
-					<span className={`${styles.conditionalIcon} emoji`} aria-hidden="true">⚠️</span>
+					<span className={styles.conditionalIcon} aria-hidden="true" />
 					{stagePath.conditionNote}
 				</div>
 			)}

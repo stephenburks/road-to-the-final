@@ -3,11 +3,11 @@ import { render } from '@testing-library/react'
 import BracketNode from './BracketNode'
 
 describe('BracketNode', () => {
-	it('renders the icon text', () => {
+	it('renders the icon text via data attribute', () => {
 		const { container } = render(
 			<BracketNode bg="#000" border="#fff" color="#fff" shadow="none" icon="GS" />
 		)
-		expect(container.textContent).toBe('GS')
+		expect(container.firstElementChild?.getAttribute('data-icon')).toBe('GS')
 	})
 
 	it('applies inline styles', () => {
