@@ -35,6 +35,7 @@ export default function Nav({ view, onViewChange, isHistorical }: NavProps) {
 						<a className={styles.link} href="#road">Bracket</a>
 						<a className={styles.link} href="#groups">Groups</a>
 						<a className={styles.link} href="#opponents">Opponents</a>
+						<a className={styles.link} href="#squad">Squad</a>
 						<a className={styles.link} href="#schedule">Schedule</a>
 					</>
 				)}

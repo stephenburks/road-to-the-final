@@ -169,7 +169,6 @@ export default function App() {
           </div>
 
 			<Hero team={team} activeStage={activeStage} isHistorical={isHistorical} groupWinProb={groupWinProb} />
-			<Roster players={rosterPlayers} loading={rosterLoading} />
 			{!team.eliminated && <GamesToWatch team={team} data={data} />}
 			<RoadBracket team={team} activeStage={activeStage} onStageSelect={handleStageSelect} />
 
@@ -183,6 +182,7 @@ export default function App() {
               <ScheduledMatches team={team} />
             </>
           )}
+          <Roster players={rosterPlayers} loading={rosterLoading} />
         </main>
       )}
 

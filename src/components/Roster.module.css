@@ -61,20 +61,36 @@
 	align-self: flex-start;
 }
 
-.headshot {
+.headshotWrap {
 	width: 48px;
 	height: 48px;
 	border-radius: 50%;
-	object-fit: cover;
+	overflow: hidden;
 	background: rgba(255, 255, 255, 0.04);
+}
+
+.headshot {
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+	object-fit: cover;
 }
 
 .headshotFallback {
 	width: 48px;
 	height: 48px;
 	border-radius: 50%;
-	background: rgba(255, 255, 255, 0.04);
+	background: rgba(255, 255, 255, 0.06);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 20px;
 }
+
+.fallbackG::before { content: '\1F9E4'; }   /* 🧤 goalie glove */
+.fallbackD::before { content: '\1F6E1'; }   /* 🛡️ shield */
+.fallbackM::before { content: '\26BD'; }    /* ⚽ ball */
+.fallbackF::before { content: '\1F45F'; }   /* 👟 cleat */
 
 .info {
 	text-align: center;
