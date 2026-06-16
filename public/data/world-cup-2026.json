@@ -1,10 +1,10 @@
 {
-  "lastUpdated": "2026-06-16T01:44:25.894Z",
+  "lastUpdated": "2026-06-16T06:30:06.131Z",
   "snapshotDate": "2026-06-16",
   "isHistorical": false,
   "sourceSummary": {
-    "market": 13,
-    "calculated": 35
+    "market": 48,
+    "calculated": 0
   },
   "tournament": {
     "name": "FIFA World Cup 2026",
@@ -49,63 +49,63 @@
           "pos": 1,
           "teamId": "mexico",
           "team": "Mexico",
-          "played": 1,
-          "w": 1,
+          "flag": "🇲🇽",
+          "played": 0,
+          "w": 0,
           "d": 0,
           "l": 0,
-          "gf": 2,
+          "gf": 0,
           "ga": 0,
-          "gd": 2,
-          "pts": 3,
-          "flag": "🇲🇽"
+          "gd": 0,
+          "pts": 0
         },
         {
           "pos": 2,
           "teamId": "southkorea",
           "team": "South Korea",
-          "played": 1,
-          "w": 1,
+          "flag": "🇰🇷",
+          "played": 0,
+          "w": 0,
           "d": 0,
           "l": 0,
-          "gf": 2,
-          "ga": 1,
-          "gd": 1,
-          "pts": 3,
-          "flag": "🇰🇷"
+          "gf": 0,
+          "ga": 0,
+          "gd": 0,
+          "pts": 0
         },
         {
           "pos": 3,
           "teamId": "czechia",
           "team": "Czechia",
-          "played": 1,
+          "flag": "🇨🇿",
+          "played": 0,
           "w": 0,
           "d": 0,
-          "l": 1,
-          "gf": 1,
-          "ga": 2,
-          "gd": -1,
-          "pts": 0,
-          "flag": "🇨🇿"
+          "l": 0,
+          "gf": 0,
+          "ga": 0,
+          "gd": 0,
+          "pts": 0
         },
         {
           "pos": 4,
           "teamId": "southafrica",
           "team": "South Africa",
-          "played": 1,
+          "flag": "🇿🇦",
+          "played": 0,
           "w": 0,
           "d": 0,
-          "l": 1,
+          "l": 0,
           "gf": 0,
-          "ga": 2,
-          "gd": -2,
-          "pts": 0,
-          "flag": "🇿🇦"
+          "ga": 0,
+          "gd": 0,
+          "pts": 0
         }
       ],
       "winProbabilities": {
-        "mexico": 30,
-        "southkorea": 18,
-        "czechia": 4,
+        "mexico": 1,
+        "southkorea": 0,
+        "czechia": 0,
         "southafrica": 0
       }
     },
@@ -113,65 +113,65 @@
       "standings": [
         {
           "pos": 1,
-          "teamId": "switzerland",
-          "team": "Switzerland",
-          "played": 1,
+          "teamId": "canada",
+          "team": "Canada",
+          "flag": "🇨🇦",
+          "played": 0,
           "w": 0,
-          "d": 1,
+          "d": 0,
           "l": 0,
-          "gf": 1,
-          "ga": 1,
+          "gf": 0,
+          "ga": 0,
           "gd": 0,
-          "pts": 1,
-          "flag": "🇨🇭"
+          "pts": 0
         },
         {
           "pos": 2,
-          "teamId": "canada",
-          "team": "Canada",
-          "played": 1,
+          "teamId": "qatar",
+          "team": "Qatar",
+          "flag": "🇶🇦",
+          "played": 0,
           "w": 0,
-          "d": 1,
+          "d": 0,
           "l": 0,
-          "gf": 1,
-          "ga": 1,
+          "gf": 0,
+          "ga": 0,
           "gd": 0,
-          "pts": 1,
-          "flag": "🇨🇦"
+          "pts": 0
         },
         {
           "pos": 3,
-          "teamId": "qatar",
-          "team": "Qatar",
-          "played": 1,
+          "teamId": "switzerland",
+          "team": "Switzerland",
+          "flag": "🇨🇭",
+          "played": 0,
           "w": 0,
-          "d": 1,
+          "d": 0,
           "l": 0,
-          "gf": 1,
-          "ga": 1,
+          "gf": 0,
+          "ga": 0,
           "gd": 0,
-          "pts": 1,
-          "flag": "🇶🇦"
+          "pts": 0
         },
         {
           "pos": 4,
           "teamId": "bosnia",
           "team": "Bosnia & Herz.",
-          "played": 1,
+          "flag": "🇧🇦",
+          "played": 0,
           "w": 0,
-          "d": 1,
+          "d": 0,
           "l": 0,
-          "gf": 1,
-          "ga": 1,
+          "gf": 0,
+          "ga": 0,
           "gd": 0,
-          "pts": 1,
-          "flag": "🇧🇦"
+          "pts": 0
         }
       ],
       "winProbabilities": {
-        "switzerland": 30,
-        "canada": 15,
+        "canada": 0,
         "qatar": 0,
+        "switzerland": 1,
         "bosnia": 0
       }
     },
@@ -179,66 +179,66 @@
       "standings": [
         {
           "pos": 1,
-          "teamId": "scotland",
-          "team": "Scotland",
-          "played": 1,
-          "w": 1,
+          "teamId": "brazil",
+          "team": "Brazil",
+          "flag": "🇧🇷",
+          "played": 0,
+          "w": 0,
           "d": 0,
           "l": 0,
-          "gf": 1,
+          "gf": 0,
           "ga": 0,
-          "gd": 1,
-          "pts": 3,
-          "flag": "🏴󠁧󠁢󠁳󠁣󠁴󠁿"
+          "gd": 0,
+          "pts": 0
         },
         {
           "pos": 2,
-          "teamId": "morocco",
-          "team": "Morocco",
-          "played": 1,
+          "teamId": "haiti",
+          "team": "Haiti",
+          "flag": "🇭🇹",
+          "played": 0,
           "w": 0,
-          "d": 1,
+          "d": 0,
           "l": 0,
-          "gf": 1,
-          "ga": 1,
+          "gf": 0,
+          "ga": 0,
           "gd": 0,
-          "pts": 1,
-          "flag": "🇲🇦"
+          "pts": 0
         },
         {
           "pos": 3,
-          "teamId": "brazil",
-          "team": "Brazil",
-          "played": 1,
+          "teamId": "scotland",
+          "team": "Scotland",
+          "flag": "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
+          "played": 0,
           "w": 0,
-          "d": 1,
+          "d": 0,
           "l": 0,
-          "gf": 1,
-          "ga": 1,
+          "gf": 0,
+          "ga": 0,
           "gd": 0,
-          "pts": 1,
-          "flag": "🇧🇷"
+          "pts": 0
         },
         {
           "pos": 4,
-          "teamId": "haiti",
-          "team": "Haiti",
-          "played": 1,
+          "teamId": "morocco",
+          "team": "Morocco",
+          "flag": "🇲🇦",
+          "played": 0,
           "w": 0,
           "d": 0,
-          "l": 1,
+          "l": 0,
           "gf": 0,
-          "ga": 1,
-          "gd": -1,
-          "pts": 0,
-          "flag": "🇭🇹"
+          "ga": 0,
+          "gd": 0,
+          "pts": 0
         }
       ],
       "winProbabilities": {
-        "scotland": 11,
-        "morocco": 23,
-        "brazil": 14,
-        "haiti": 0
+        "brazil": 7,
+        "haiti": 0,
+        "scotland": 0,
+        "morocco": 2
       }
     },
     "D": {
@@ -247,64 +247,64 @@
           "pos": 1,
           "teamId": "usa",
           "team": "USA",
-          "played": 1,
-          "w": 1,
+          "flag": "🇺🇸",
+          "played": 0,
+          "w": 0,
           "d": 0,
           "l": 0,
-          "gf": 4,
-          "ga": 1,
-          "gd": 3,
-          "pts": 3,
-          "flag": "🇺🇸"
+          "gf": 0,
+          "ga": 0,
+          "gd": 0,
+          "pts": 0
         },
         {
           "pos": 2,
           "teamId": "australia",
           "team": "Australia",
-          "played": 1,
-          "w": 1,
+          "flag": "🇦🇺",
+          "played": 0,
+          "w": 0,
           "d": 0,
           "l": 0,
-          "gf": 2,
+          "gf": 0,
           "ga": 0,
-          "gd": 2,
-          "pts": 3,
-          "flag": "🇦🇺"
+          "gd": 0,
+          "pts": 0
         },
         {
           "pos": 3,
           "teamId": "turkey",
           "team": "Türkiye",
-          "played": 1,
+          "flag": "🇹🇷",
+          "played": 0,
           "w": 0,
           "d": 0,
-          "l": 1,
+          "l": 0,
           "gf": 0,
-          "ga": 2,
-          "gd": -2,
-          "pts": 0,
-          "flag": "🇹🇷"
+          "ga": 0,
+          "gd": 0,
+          "pts": 0
         },
         {
           "pos": 4,
           "teamId": "paraguay",
           "team": "Paraguay",
-          "played": 1,
+          "flag": "🇵🇾",
+          "played": 0,
           "w": 0,
           "d": 0,
-          "l": 1,
-          "gf": 1,
-          "ga": 4,
-          "gd": -3,
-          "pts": 0,
-          "flag": "🇵🇾"
+          "l": 0,
+          "gf": 0,
+          "ga": 0,
+          "gd": 0,
+          "pts": 0
         }
       ],
       "winProbabilities": {
-        "usa": 30,
-        "australia": 16,
-        "turkey": 8,
-        "paraguay": 1
+        "usa": 2,
+        "australia": 0,
+        "turkey": 0,
+        "paraguay": 0
       }
     },
     "E": {
@@ -313,63 +313,63 @@
           "pos": 1,
           "teamId": "germany",
           "team": "Germany",
-          "played": 1,
-          "w": 1,
+          "flag": "🇩🇪",
+          "played": 0,
+          "w": 0,
           "d": 0,
           "l": 0,
-          "gf": 7,
-          "ga": 1,
-          "gd": 6,
-          "pts": 3,
-          "flag": "🇩🇪"
+          "gf": 0,
+          "ga": 0,
+          "gd": 0,
+          "pts": 0
         },
         {
           "pos": 2,
           "teamId": "ivorycoast",
           "team": "Ivory Coast",
-          "played": 1,
-          "w": 1,
+          "flag": "🇨🇮",
+          "played": 0,
+          "w": 0,
           "d": 0,
           "l": 0,
-          "gf": 1,
+          "gf": 0,
           "ga": 0,
-          "gd": 1,
-          "pts": 3,
-          "flag": "🇨🇮"
+          "gd": 0,
+          "pts": 0
         },
         {
           "pos": 3,
           "teamId": "ecuador",
           "team": "Ecuador",
-          "played": 1,
+          "flag": "🇪🇨",
+          "played": 0,
           "w": 0,
           "d": 0,
-          "l": 1,
+          "l": 0,
           "gf": 0,
-          "ga": 1,
-          "gd": -1,
-          "pts": 0,
-          "flag": "🇪🇨"
+          "ga": 0,
+          "gd": 0,
+          "pts": 0
         },
         {
           "pos": 4,
           "teamId": "curacao",
           "team": "Curaçao",
-          "played": 1,
+          "flag": "🇨🇼",
+          "played": 0,
           "w": 0,
           "d": 0,
-          "l": 1,
-          "gf": 1,
-          "ga": 7,
-          "gd": -6,
-          "pts": 0,
-          "flag": "🇨🇼"
+          "l": 0,
+          "gf": 0,
+          "ga": 0,
+          "gd": 0,
+          "pts": 0
         }
       ],
       "winProbabilities": {
-        "germany": 30,
-        "ivorycoast": 5,
-        "ecuador": 8,
+        "germany": 6,
+        "ivorycoast": 1,
+        "ecuador": 0,
         "curacao": 0
       }
     },
@@ -377,132 +377,132 @@
       "standings": [
         {
           "pos": 1,
-          "teamId": "sweden",
-          "team": "Sweden",
-          "played": 1,
-          "w": 1,
+          "teamId": "netherlands",
+          "team": "Netherlands",
+          "flag": "🇳🇱",
+          "played": 0,
+          "w": 0,
           "d": 0,
           "l": 0,
-          "gf": 5,
-          "ga": 1,
-          "gd": 4,
-          "pts": 3,
-          "flag": "🇸🇪"
+          "gf": 0,
+          "ga": 0,
+          "gd": 0,
+          "pts": 0
         },
         {
           "pos": 2,
-          "teamId": "japan",
-          "team": "Japan",
-          "played": 1,
+          "teamId": "sweden",
+          "team": "Sweden",
+          "flag": "🇸🇪",
+          "played": 0,
           "w": 0,
-          "d": 1,
+          "d": 0,
           "l": 0,
-          "gf": 2,
-          "ga": 2,
+          "gf": 0,
+          "ga": 0,
           "gd": 0,
-          "pts": 1,
-          "flag": "🇯🇵"
+          "pts": 0
         },
         {
           "pos": 3,
-          "teamId": "netherlands",
-          "team": "Netherlands",
-          "played": 1,
+          "teamId": "tunisia",
+          "team": "Tunisia",
+          "flag": "🇹🇳",
+          "played": 0,
           "w": 0,
-          "d": 1,
+          "d": 0,
           "l": 0,
-          "gf": 2,
-          "ga": 2,
+          "gf": 0,
+          "ga": 0,
           "gd": 0,
-          "pts": 1,
-          "flag": "🇳🇱"
+          "pts": 0
         },
         {
           "pos": 4,
-          "teamId": "tunisia",
-          "team": "Tunisia",
-          "played": 1,
+          "teamId": "japan",
+          "team": "Japan",
+          "flag": "🇯🇵",
+          "played": 0,
           "w": 0,
           "d": 0,
-          "l": 1,
-          "gf": 1,
-          "ga": 5,
-          "gd": -4,
-          "pts": 0,
-          "flag": "🇹🇳"
+          "l": 0,
+          "gf": 0,
+          "ga": 0,
+          "gd": 0,
+          "pts": 0
         }
       ],
       "winProbabilities": {
-        "sweden": 21,
-        "japan": 24,
-        "netherlands": 13,
-        "tunisia": 1
+        "netherlands": 5,
+        "sweden": 1,
+        "tunisia": 0,
+        "japan": 2
       }
     },
     "G": {
       "standings": [
         {
           "pos": 1,
-          "teamId": "newzealand",
-          "team": "New Zealand",
-          "played": 1,
-          "w": 1,
+          "teamId": "belgium",
+          "team": "Belgium",
+          "flag": "🇧🇪",
+          "played": 0,
+          "w": 0,
           "d": 0,
           "l": 0,
-          "gf": 1,
+          "gf": 0,
           "ga": 0,
-          "gd": 1,
-          "pts": 3,
-          "flag": "🇳🇿"
+          "gd": 0,
+          "pts": 0
         },
         {
           "pos": 2,
-          "teamId": "belgium",
-          "team": "Belgium",
-          "played": 1,
+          "teamId": "iran",
+          "team": "Iran",
+          "flag": "🇮🇷",
+          "played": 0,
           "w": 0,
-          "d": 1,
+          "d": 0,
           "l": 0,
-          "gf": 1,
-          "ga": 1,
+          "gf": 0,
+          "ga": 0,
           "gd": 0,
-          "pts": 1,
-          "flag": "🇧🇪"
+          "pts": 0
         },
         {
           "pos": 3,
-          "teamId": "egypt",
-          "team": "Egypt",
-          "played": 1,
+          "teamId": "newzealand",
+          "team": "New Zealand",
+          "flag": "🇳🇿",
+          "played": 0,
           "w": 0,
-          "d": 1,
+          "d": 0,
           "l": 0,
-          "gf": 1,
-          "ga": 1,
+          "gf": 0,
+          "ga": 0,
           "gd": 0,
-          "pts": 1,
-          "flag": "🇪🇬"
+          "pts": 0
         },
         {
           "pos": 4,
-          "teamId": "iran",
-          "team": "Iran",
-          "played": 1,
+          "teamId": "egypt",
+          "team": "Egypt",
+          "flag": "🇪🇬",
+          "played": 0,
           "w": 0,
           "d": 0,
-          "l": 1,
+          "l": 0,
           "gf": 0,
-          "ga": 1,
-          "gd": -1,
-          "pts": 0,
-          "flag": "🇮🇷"
+          "ga": 0,
+          "gd": 0,
+          "pts": 0
         }
       ],
       "winProbabilities": {
-        "newzealand": 1,
         "belgium": 2,
-        "egypt": 16,
-        "iran": 19
+        "iran": 0,
+        "newzealand": 0,
+        "egypt": 0
       }
     },
     "H": {
@@ -565,10 +565,10 @@
         }
       ],
       "winProbabilities": {
-        "saudiarabia": 1,
-        "uruguay": 2,
-        "spain": 30,
-        "capeverde": 1
+        "saudiarabia": 0,
+        "uruguay": 1,
+        "spain": 15,
+        "capeverde": 0
       }
     },
     "I": {
@@ -631,18 +631,19 @@
         }
       ],
       "winProbabilities": {
-        "france": 30,
-        "iraq": 1,
-        "norway": 6,
-        "senegal": 2
+        "france": 18,
+        "iraq": 0,
+        "norway": 2,
+        "senegal": 1
       }
     },
     "J": {
       "standings": [
         {
           "pos": 1,
-          "teamId": "algeria",
-          "team": "Algeria",
+          "teamId": "argentina",
+          "team": "Argentina",
+          "flag": "🇦🇷",
           "played": 0,
           "w": 0,
           "d": 0,
@@ -650,13 +651,13 @@
           "gf": 0,
           "ga": 0,
           "gd": 0,
-          "pts": 0,
-          "flag": "🇩🇿"
+          "pts": 0
         },
         {
           "pos": 2,
-          "teamId": "argentina",
-          "team": "Argentina",
+          "teamId": "austria",
+          "team": "Austria",
+          "flag": "🇦🇹",
           "played": 0,
           "w": 0,
           "d": 0,
@@ -664,13 +665,13 @@
           "gf": 0,
           "ga": 0,
           "gd": 0,
-          "pts": 0,
-          "flag": "🇦🇷"
+          "pts": 0
         },
         {
           "pos": 3,
           "teamId": "jordan",
           "team": "Jordan",
+          "flag": "🇯🇴",
           "played": 0,
           "w": 0,
           "d": 0,
@@ -678,13 +679,13 @@
           "gf": 0,
           "ga": 0,
           "gd": 0,
-          "pts": 0,
-          "flag": "🇯🇴"
+          "pts": 0
         },
         {
           "pos": 4,
-          "teamId": "austria",
-          "team": "Austria",
+          "teamId": "algeria",
+          "team": "Algeria",
+          "flag": "🇩🇿",
           "played": 0,
           "w": 0,
           "d": 0,
@@ -692,15 +693,14 @@
           "gf": 0,
           "ga": 0,
           "gd": 0,
-          "pts": 0,
-          "flag": "🇦🇹"
+          "pts": 0
         }
       ],
       "winProbabilities": {
-        "algeria": 15,
-        "argentina": 30,
+        "argentina": 8,
+        "austria": 0,
         "jordan": 0,
-        "austria": 1
+        "algeria": 0
       }
     },
     "K": {
@@ -763,9 +763,9 @@
         }
       ],
       "winProbabilities": {
-        "drcongo": 1,
-        "colombia": 24,
-        "portugal": 13,
+        "drcongo": 0,
+        "colombia": 2,
+        "portugal": 11,
         "uzbekistan": 0
       }
     },
@@ -829,9 +829,9 @@
         }
       ],
       "winProbabilities": {
-        "england": 30,
-        "ghana": 1,
-        "croatia": 12,
+        "england": 11,
+        "ghana": 0,
+        "croatia": 1,
         "panama": 0
       }
     }
@@ -894,12 +894,12 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 92,
-        "r16": 58,
-        "qf": 30,
-        "sf": 14,
-        "final": 6,
-        "winner": 3,
+        "r32": 97,
+        "r16": 39,
+        "qf": 16,
+        "sf": 6,
+        "final": 2,
+        "winner": 1,
         "source": "market"
       },
       "path": {
@@ -1076,13 +1076,13 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 4,
-        "r16": 0,
-        "qf": 0,
-        "sf": 0,
-        "final": 0,
+        "r32": 17,
+        "r16": 11,
+        "qf": 6,
+        "sf": 3,
+        "final": 2,
         "winner": 0,
-        "source": "calculated"
+        "source": "market"
       },
       "path": {
         "group_stage": {
@@ -1236,13 +1236,13 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 4,
-        "r16": 0,
-        "qf": 0,
-        "sf": 0,
-        "final": 0,
+        "r32": 94,
+        "r16": 61,
+        "qf": 32,
+        "sf": 16,
+        "final": 8,
         "winner": 0,
-        "source": "calculated"
+        "source": "market"
       },
       "path": {
         "group_stage": {
@@ -1396,13 +1396,13 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 4,
-        "r16": 0,
-        "qf": 0,
-        "sf": 0,
-        "final": 0,
+        "r32": 55,
+        "r16": 36,
+        "qf": 19,
+        "sf": 10,
+        "final": 5,
         "winner": 0,
-        "source": "calculated"
+        "source": "market"
       },
       "path": {
         "group_stage": {
@@ -1570,12 +1570,12 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 80,
-        "r16": 44,
-        "qf": 22,
-        "sf": 10,
-        "final": 4,
-        "winner": 2,
+        "r32": 84,
+        "r16": 55,
+        "qf": 29,
+        "sf": 15,
+        "final": 8,
+        "winner": 0,
         "source": "market"
       },
       "path": {
@@ -1749,13 +1749,13 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 4,
-        "r16": 0,
-        "qf": 0,
-        "sf": 0,
-        "final": 0,
+        "r32": 66,
+        "r16": 43,
+        "qf": 22,
+        "sf": 11,
+        "final": 6,
         "winner": 0,
-        "source": "calculated"
+        "source": "market"
       },
       "path": {
         "group_stage": {
@@ -1923,13 +1923,13 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 5,
-        "r16": 3,
-        "qf": 2,
-        "sf": 1,
-        "final": 1,
+        "r32": 24,
+        "r16": 16,
+        "qf": 8,
+        "sf": 4,
+        "final": 2,
         "winner": 0,
-        "source": "calculated"
+        "source": "market"
       },
       "path": {
         "group_stage": {
@@ -2092,13 +2092,13 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 99,
-        "r16": 54,
-        "qf": 28,
-        "sf": 14,
-        "final": 7,
-        "winner": 30,
-        "source": "calculated"
+        "r32": 88,
+        "r16": 36,
+        "qf": 15,
+        "sf": 6,
+        "final": 2,
+        "winner": 1,
+        "source": "market"
       },
       "path": {
         "group_stage": {
@@ -2267,11 +2267,11 @@
       ],
       "advanceProbabilities": {
         "r32": 96,
-        "r16": 72,
-        "qf": 46,
-        "sf": 26,
-        "final": 14,
-        "winner": 8,
+        "r16": 57,
+        "qf": 34,
+        "sf": 20,
+        "final": 12,
+        "winner": 7,
         "source": "market"
       },
       "path": {
@@ -2384,11 +2384,11 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 72,
-        "r16": 40,
-        "qf": 22,
-        "sf": 10,
-        "final": 5,
+        "r32": 95,
+        "r16": 44,
+        "qf": 20,
+        "sf": 9,
+        "final": 4,
         "winner": 2,
         "source": "market"
       },
@@ -2507,13 +2507,13 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 5,
-        "r16": 3,
+        "r32": 6,
+        "r16": 4,
         "qf": 2,
         "sf": 1,
         "final": 1,
         "winner": 0,
-        "source": "calculated"
+        "source": "market"
       },
       "path": {
         "group_stage": {
@@ -2642,13 +2642,13 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 51,
-        "r16": 28,
-        "qf": 15,
-        "sf": 8,
-        "final": 4,
-        "winner": 11,
-        "source": "calculated"
+        "r32": 75,
+        "r16": 49,
+        "qf": 25,
+        "sf": 13,
+        "final": 7,
+        "winner": 0,
+        "source": "market"
       },
       "path": {
         "group_stage": {
@@ -2814,12 +2814,12 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 94,
-        "r16": 38,
-        "qf": 22,
-        "sf": 11,
+        "r32": 98,
+        "r16": 45,
+        "qf": 21,
+        "sf": 10,
         "final": 5,
-        "winner": 3,
+        "winner": 2,
         "source": "market"
       },
       "path": {
@@ -3003,11 +3003,11 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 30,
-        "r16": 8,
-        "qf": 3,
-        "sf": 1,
-        "final": 0,
+        "r32": 38,
+        "r16": 25,
+        "qf": 13,
+        "sf": 7,
+        "final": 4,
         "winner": 0,
         "source": "market"
       },
@@ -3121,13 +3121,13 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 65,
-        "r16": 36,
-        "qf": 19,
-        "sf": 10,
-        "final": 5,
-        "winner": 16,
-        "source": "calculated"
+        "r32": 87,
+        "r16": 57,
+        "qf": 30,
+        "sf": 15,
+        "final": 8,
+        "winner": 0,
+        "source": "market"
       },
       "path": {
         "group_stage": {
@@ -3244,13 +3244,13 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 27,
-        "r16": 15,
-        "qf": 8,
-        "sf": 4,
-        "final": 2,
-        "winner": 8,
-        "source": "calculated"
+        "r32": 52,
+        "r16": 34,
+        "qf": 18,
+        "sf": 9,
+        "final": 5,
+        "winner": 0,
+        "source": "market"
       },
       "path": {
         "group_stage": {
@@ -3368,13 +3368,13 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 99,
-        "r16": 54,
-        "qf": 28,
-        "sf": 14,
-        "final": 7,
-        "winner": 30,
-        "source": "calculated"
+        "r32": 100,
+        "r16": 57,
+        "qf": 32,
+        "sf": 18,
+        "final": 10,
+        "winner": 6,
+        "source": "market"
       },
       "path": {
         "group_stage": {
@@ -3530,13 +3530,13 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 5,
-        "r16": 3,
-        "qf": 2,
+        "r32": 3,
+        "r16": 2,
+        "qf": 1,
         "sf": 1,
         "final": 1,
         "winner": 0,
-        "source": "calculated"
+        "source": "market"
       },
       "path": {
         "group_stage": {
@@ -3665,13 +3665,13 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 34,
-        "r16": 19,
-        "qf": 10,
-        "sf": 5,
-        "final": 3,
-        "winner": 5,
-        "source": "calculated"
+        "r32": 95,
+        "r16": 38,
+        "qf": 15,
+        "sf": 6,
+        "final": 2,
+        "winner": 1,
+        "source": "market"
       },
       "path": {
         "group_stage": {
@@ -3788,13 +3788,13 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 27,
-        "r16": 15,
-        "qf": 8,
-        "sf": 4,
-        "final": 2,
-        "winner": 8,
-        "source": "calculated"
+        "r32": 81,
+        "r16": 53,
+        "qf": 28,
+        "sf": 14,
+        "final": 7,
+        "winner": 0,
+        "source": "market"
       },
       "path": {
         "group_stage": {
@@ -3924,13 +3924,13 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 41,
-        "r16": 23,
-        "qf": 12,
-        "sf": 6,
-        "final": 3,
-        "winner": 13,
-        "source": "calculated"
+        "r32": 93,
+        "r16": 52,
+        "qf": 29,
+        "sf": 16,
+        "final": 9,
+        "winner": 5,
+        "source": "market"
       },
       "path": {
         "group_stage": {
@@ -4043,13 +4043,13 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 87,
-        "r16": 48,
-        "qf": 25,
-        "sf": 13,
-        "final": 7,
-        "winner": 24,
-        "source": "calculated"
+        "r32": 86,
+        "r16": 41,
+        "qf": 19,
+        "sf": 9,
+        "final": 4,
+        "winner": 2,
+        "source": "market"
       },
       "path": {
         "group_stage": {
@@ -4168,13 +4168,13 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 79,
-        "r16": 43,
-        "qf": 22,
-        "sf": 11,
-        "final": 6,
-        "winner": 21,
-        "source": "calculated"
+        "r32": 95,
+        "r16": 38,
+        "qf": 15,
+        "sf": 6,
+        "final": 2,
+        "winner": 1,
+        "source": "market"
       },
       "path": {
         "group_stage": {
@@ -4295,13 +4295,13 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 8,
-        "r16": 4,
-        "qf": 2,
-        "sf": 1,
+        "r32": 10,
+        "r16": 7,
+        "qf": 4,
+        "sf": 2,
         "final": 1,
-        "winner": 1,
-        "source": "calculated"
+        "winner": 0,
+        "source": "market"
       },
       "path": {
         "group_stage": {
@@ -4427,13 +4427,13 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 96,
-        "r16": 53,
-        "qf": 28,
-        "sf": 14,
-        "final": 7,
-        "winner": 27,
-        "source": "calculated"
+        "r32": 95,
+        "r16": 44,
+        "qf": 20,
+        "sf": 9,
+        "final": 4,
+        "winner": 2,
+        "source": "market"
       },
       "path": {
         "group_stage": {
@@ -4559,13 +4559,13 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 19,
-        "r16": 10,
-        "qf": 5,
-        "sf": 3,
-        "final": 2,
-        "winner": 5,
-        "source": "calculated"
+        "r32": 82,
+        "r16": 53,
+        "qf": 28,
+        "sf": 14,
+        "final": 7,
+        "winner": 0,
+        "source": "market"
       },
       "path": {
         "group_stage": {
@@ -4678,13 +4678,13 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 8,
-        "r16": 4,
-        "qf": 2,
-        "sf": 1,
-        "final": 1,
-        "winner": 1,
-        "source": "calculated"
+        "r32": 44,
+        "r16": 29,
+        "qf": 15,
+        "sf": 8,
+        "final": 4,
+        "winner": 0,
+        "source": "market"
       },
       "path": {
         "group_stage": {
@@ -4797,13 +4797,13 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 23,
-        "r16": 13,
-        "qf": 7,
-        "sf": 4,
-        "final": 2,
-        "winner": 1,
-        "source": "calculated"
+        "r32": 30,
+        "r16": 20,
+        "qf": 10,
+        "sf": 5,
+        "final": 3,
+        "winner": 0,
+        "source": "market"
       },
       "path": {
         "group_stage": {
@@ -4966,13 +4966,13 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 47,
-        "r16": 26,
-        "qf": 14,
-        "sf": 7,
-        "final": 4,
+        "r32": 98,
+        "r16": 67,
+        "qf": 46,
+        "sf": 32,
+        "final": 22,
         "winner": 15,
-        "source": "calculated"
+        "source": "market"
       },
       "path": {
         "group_stage": {
@@ -5091,13 +5091,13 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 5,
-        "r16": 3,
-        "qf": 2,
-        "sf": 1,
-        "final": 1,
+        "r32": 45,
+        "r16": 29,
+        "qf": 15,
+        "sf": 8,
+        "final": 4,
         "winner": 0,
-        "source": "calculated"
+        "source": "market"
       },
       "path": {
         "group_stage": {
@@ -5218,13 +5218,13 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 23,
-        "r16": 13,
-        "qf": 7,
-        "sf": 4,
-        "final": 2,
-        "winner": 1,
-        "source": "calculated"
+        "r32": 41,
+        "r16": 27,
+        "qf": 14,
+        "sf": 7,
+        "final": 4,
+        "winner": 0,
+        "source": "market"
       },
       "path": {
         "group_stage": {
@@ -5340,12 +5340,12 @@
       ],
       "advanceProbabilities": {
         "r32": 79,
-        "r16": 43,
-        "qf": 22,
-        "sf": 11,
-        "final": 6,
-        "winner": 21,
-        "source": "calculated"
+        "r16": 33,
+        "qf": 14,
+        "sf": 6,
+        "final": 3,
+        "winner": 1,
+        "source": "market"
       },
       "path": {
         "group_stage": {
@@ -5458,12 +5458,12 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 98,
-        "r16": 78,
-        "qf": 52,
-        "sf": 30,
-        "final": 17,
-        "winner": 9,
+        "r32": 97,
+        "r16": 69,
+        "qf": 49,
+        "sf": 35,
+        "final": 25,
+        "winner": 18,
         "source": "market"
       },
       "path": {
@@ -5621,13 +5621,13 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 11,
-        "r16": 6,
-        "qf": 3,
-        "sf": 2,
-        "final": 1,
-        "winner": 2,
-        "source": "calculated"
+        "r32": 71,
+        "r16": 30,
+        "qf": 13,
+        "sf": 6,
+        "final": 3,
+        "winner": 1,
+        "source": "market"
       },
       "path": {
         "group_stage": {
@@ -5740,13 +5740,13 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 23,
-        "r16": 13,
-        "qf": 7,
-        "sf": 4,
+        "r32": 14,
+        "r16": 9,
+        "qf": 5,
+        "sf": 3,
         "final": 2,
-        "winner": 1,
-        "source": "calculated"
+        "winner": 0,
+        "source": "market"
       },
       "path": {
         "group_stage": {
@@ -5859,9 +5859,9 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 78,
-        "r16": 40,
-        "qf": 20,
+        "r32": 87,
+        "r16": 41,
+        "qf": 19,
         "sf": 9,
         "final": 4,
         "winner": 2,
@@ -5975,12 +5975,12 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 99,
-        "r16": 82,
-        "qf": 58,
-        "sf": 34,
-        "final": 19,
-        "winner": 11,
+        "r32": 97,
+        "r16": 59,
+        "qf": 36,
+        "sf": 22,
+        "final": 13,
+        "winner": 8,
         "source": "market"
       },
       "path": {
@@ -6091,13 +6091,13 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 4,
-        "r16": 0,
-        "qf": 0,
-        "sf": 0,
-        "final": 0,
+        "r32": 67,
+        "r16": 44,
+        "qf": 23,
+        "sf": 12,
+        "final": 6,
         "winner": 0,
-        "source": "calculated"
+        "source": "market"
       },
       "path": {
         "group_stage": {
@@ -6251,13 +6251,13 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 4,
-        "r16": 0,
-        "qf": 0,
-        "sf": 0,
-        "final": 0,
+        "r32": 80,
+        "r16": 52,
+        "qf": 27,
+        "sf": 14,
+        "final": 7,
         "winner": 0,
-        "source": "calculated"
+        "source": "market"
       },
       "path": {
         "group_stage": {
@@ -6367,13 +6367,13 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 4,
-        "r16": 0,
-        "qf": 0,
-        "sf": 0,
-        "final": 0,
+        "r32": 20,
+        "r16": 13,
+        "qf": 7,
+        "sf": 4,
+        "final": 2,
         "winner": 0,
-        "source": "calculated"
+        "source": "market"
       },
       "path": {
         "group_stage": {
@@ -6484,11 +6484,11 @@
       ],
       "advanceProbabilities": {
         "r32": 97,
-        "r16": 74,
-        "qf": 46,
-        "sf": 26,
-        "final": 14,
-        "winner": 7,
+        "r16": 63,
+        "qf": 41,
+        "sf": 27,
+        "final": 17,
+        "winner": 11,
         "source": "market"
       },
       "path": {
@@ -6599,13 +6599,13 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 4,
-        "r16": 0,
-        "qf": 0,
-        "sf": 0,
-        "final": 0,
+        "r32": 39,
+        "r16": 25,
+        "qf": 13,
+        "sf": 7,
+        "final": 4,
         "winner": 0,
-        "source": "calculated"
+        "source": "market"
       },
       "path": {
         "group_stage": {
@@ -6759,13 +6759,13 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 4,
-        "r16": 0,
-        "qf": 0,
-        "sf": 0,
-        "final": 0,
+        "r32": 31,
+        "r16": 20,
+        "qf": 10,
+        "sf": 5,
+        "final": 3,
         "winner": 0,
-        "source": "calculated"
+        "source": "market"
       },
       "path": {
         "group_stage": {
@@ -6875,12 +6875,12 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 92,
-        "r16": 60,
-        "qf": 34,
-        "sf": 16,
-        "final": 7,
-        "winner": 4,
+        "r32": 90,
+        "r16": 42,
+        "qf": 20,
+        "sf": 9,
+        "final": 4,
+        "winner": 2,
         "source": "market"
       },
       "path": {
@@ -6992,11 +6992,11 @@
       ],
       "advanceProbabilities": {
         "r32": 97,
-        "r16": 74,
-        "qf": 46,
-        "sf": 26,
-        "final": 14,
-        "winner": 7,
+        "r16": 63,
+        "qf": 41,
+        "sf": 27,
+        "final": 17,
+        "winner": 11,
         "source": "market"
       },
       "path": {
@@ -7107,12 +7107,12 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 82,
-        "r16": 44,
-        "qf": 22,
-        "sf": 10,
-        "final": 4,
-        "winner": 2,
+        "r32": 84,
+        "r16": 35,
+        "qf": 14,
+        "sf": 6,
+        "final": 2,
+        "winner": 1,
         "source": "market"
       },
       "path": {
@@ -7223,13 +7223,13 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 4,
-        "r16": 0,
-        "qf": 0,
-        "sf": 0,
-        "final": 0,
+        "r32": 49,
+        "r16": 32,
+        "qf": 17,
+        "sf": 9,
+        "final": 5,
         "winner": 0,
-        "source": "calculated"
+        "source": "market"
       },
       "path": {
         "group_stage": {
@@ -7339,13 +7339,13 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 4,
-        "r16": 0,
-        "qf": 0,
-        "sf": 0,
-        "final": 0,
+        "r32": 35,
+        "r16": 23,
+        "qf": 12,
+        "sf": 6,
+        "final": 3,
         "winner": 0,
-        "source": "calculated"
+        "source": "market"
       },
       "path": {
         "group_stage": {
