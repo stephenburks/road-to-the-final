@@ -11,6 +11,11 @@ const STAT_CARD_DEFS = [
 	{ key: 'final', label: 'Reach the Final',    cardClass: styles.statCardFinal, valueClass: styles.statValueFinal },
 ]
 
+interface GroupWinCard {
+	probability: number
+	groupLetter: string
+}
+
 function getEyebrow(team: Team, activeStage: Stage, isHistorical: boolean) {
 	if (team.eliminated) return `\u274C ${team.name} \u2014 Eliminated`
 	return `${STAGE_LABELS[activeStage]}${isHistorical ? ' \u00B7 Historical' : ''}`
@@ -41,9 +46,10 @@ interface HeroProps {
 	team: Team
 	activeStage: Stage
 	isHistorical: boolean
+	groupWinProb?: GroupWinCard
 }
 
-export default function Hero({ team, activeStage, isHistorical }: HeroProps) {
+export default function Hero({ team, activeStage, isHistorical, groupWinProb }: HeroProps) {
 	const path = team.path?.[activeStage]
 	const ap = team.advanceProbabilities ?? {}
 	const days = daysUntil(path?.date)
@@ -95,6 +101,19 @@ export default function Hero({ team, activeStage, isHistorical }: HeroProps) {
 									</div>
 								</div>
 							))}
+							{groupWinProb && (
+								<div
+									role="listitem"
+									className={`${styles.statCard} ${styles.statCardGroup}`}
+									aria-label={`Win Group ${groupWinProb.groupLetter}: ${groupWinProb.probability}%`}
+								>
+									<div className={`${styles.statValue} ${styles.statValueGroup}`}>
+										{groupWinProb.probability}%
+									</div>
+									<div className={styles.statLabel}>Win Group {groupWinProb.groupLetter}</div>
+									<div className={styles.statSub}>Polymarket</div>
+								</div>
+							)}
 						</div>
 					)}
 				</div>

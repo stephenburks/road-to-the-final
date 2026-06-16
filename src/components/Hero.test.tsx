@@ -94,6 +94,35 @@ describe('Hero', () => {
 		expect(screen.getByText(/Historical/)).toBeInTheDocument()
 	})
 
+	// ── Group win probability card ─────────────────────────────────────
+
+	it('renders group win probability card when groupWinProb is provided', () => {
+		const groupWinProb = { probability: 7, groupLetter: 'D' }
+		render(<Hero team={mockTeam()} activeStage={ACTIVE_STAGE} isHistorical={false} groupWinProb={groupWinProb} />)
+		expect(screen.getByText('7%')).toBeInTheDocument()
+		expect(screen.getByText('Win Group D')).toBeInTheDocument()
+		expect(screen.getByText('Polymarket')).toBeInTheDocument()
+	})
+
+	it('renders correct aria-label on group win card', () => {
+		const groupWinProb = { probability: 12, groupLetter: 'A' }
+		render(<Hero team={mockTeam()} activeStage={ACTIVE_STAGE} isHistorical={false} groupWinProb={groupWinProb} />)
+		expect(screen.getByRole('listitem', { name: 'Win Group A: 12%' })).toBeInTheDocument()
+	})
+
+	it('does not render group win card when groupWinProb is undefined', () => {
+		render(<Hero team={mockTeam()} activeStage={ACTIVE_STAGE} isHistorical={false} />)
+		expect(screen.queryByText('Polymarket')).not.toBeInTheDocument()
+		expect(screen.queryByText(/Win Group/)).not.toBeInTheDocument()
+	})
+
+	it('does not render group win card for eliminated team even if groupWinProb provided', () => {
+		const groupWinProb = { probability: 5, groupLetter: 'A' }
+		const team = mockTeam({ eliminated: true, currentStage: 'r16' })
+		render(<Hero team={team} activeStage="r16" isHistorical={false} groupWinProb={groupWinProb} />)
+		expect(screen.queryByText('Polymarket')).not.toBeInTheDocument()
+	})
+
 	// ── Days-until edge cases ──────────────────────────────────────────
 
 	it('shows days-until count when path date is in the future', () => {

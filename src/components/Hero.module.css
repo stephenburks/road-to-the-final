@@ -84,6 +84,7 @@
 .statCardR16   { background: rgba(99,102,241,0.08);  border: 1px solid rgba(99,102,241,0.28); }
 .statCardQf    { background: rgba(245,158,11,0.08);  border: 1px solid rgba(245,158,11,0.28); }
 .statCardFinal { background: rgba(239,68,68,0.08);   border: 1px solid rgba(239,68,68,0.2); }
+.statCardGroup { background: rgba(34,211,238,0.08);  border: 1px solid rgba(34,211,238,0.28); }
 
 .statValue {
 	font-family: var(--font-display);
@@ -97,6 +98,7 @@
 .statValueR16   { color: var(--purple); }
 .statValueQf    { color: var(--amber); }
 .statValueFinal { color: var(--red); }
+.statValueGroup { color: var(--cyan); }
 
 .statLabel {
   font-size: 11px;

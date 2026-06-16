@@ -62,6 +62,15 @@ export default function App() {
 
   const activeStage = useMemo(() => resolveActiveStage(selectedStage, team), [selectedStage, team])
 
+	const groupWinProb = useMemo(() => {
+		if (!team || !data?.groups) return undefined
+		const group = data.groups[team.group]
+		if (!group?.winProbabilities) return undefined
+		const probability = group.winProbabilities[team.id]
+		if (probability == null) return undefined
+		return { probability, groupLetter: team.group }
+	}, [team, data])
+
   useEffect(() => {
     if (!team) return
     document.title = `${team.name} • Road to the Final • World Cup 2026`
@@ -98,7 +107,7 @@ export default function App() {
             <StageTabs team={team} selectedStage={activeStage} onSelect={handleStageSelect} />
           </div>
 
-          <Hero team={team} activeStage={activeStage} isHistorical={isHistorical} />
+          <Hero team={team} activeStage={activeStage} isHistorical={isHistorical} groupWinProb={groupWinProb} />
           <RoadBracket team={team} activeStage={activeStage} onStageSelect={handleStageSelect} />
 
           {showGroups && !showElim && <GroupStage team={team} data={data} />}
