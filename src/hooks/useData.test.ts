@@ -46,8 +46,6 @@ describe('useData', () => {
 	})
 
 	it('fetches live data and manifest on mount', async () => {
-		const fetch1 = mockFetch(mockLive)
-		const fetch2 = mockFetch(mockManifest)
 		vi.stubGlobal('fetch', vi.fn()
 			.mockResolvedValueOnce({ ok: true, status: 200, json: () => Promise.resolve(mockLive) })
 			.mockResolvedValueOnce({ ok: true, status: 200, json: () => Promise.resolve(mockManifest) }))

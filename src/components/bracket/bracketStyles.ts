@@ -1,5 +1,5 @@
 import { STAGE_ORDER } from '../../constants'
-import type { Stage, Team } from '../../types'
+import type { Team } from '../../types'
 
 export const NODE_ICONS: Record<string, string> = {
 	group_stage: 'GS',

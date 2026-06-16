@@ -44,7 +44,7 @@ describe('RoadBracket', () => {
 
 	it('renders a button for each tournament stage', () => {
 		render(<RoadBracket team={mockTeam()} activeStage={ACTIVE_STAGE} onStageSelect={onStageSelect} />)
-		STAGE_ORDER.forEach(stage => {
+		STAGE_ORDER.forEach(_stage => {
 			// Each stage has an aria-label containing the stage name
 			// Using querySelector to find buttons within the group
 		})

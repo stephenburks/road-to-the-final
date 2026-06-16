@@ -1,4 +1,3 @@
-import type { NodeStyle } from './bracketStyles'
 import styles from './BracketNode.module.css'
 
 interface BracketNodeProps {

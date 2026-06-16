@@ -1,7 +1,7 @@
 import { describe, it, expect } from 'vitest'
 import { render, screen } from '@testing-library/react'
 import GroupStage from './GroupStage'
-import type { Team, AppData, GroupMatch } from '../types'
+import type { Team, AppData } from '../types'
 
 function mockTeam(overrides: Partial<Team> = {}): Team {
 	return {
