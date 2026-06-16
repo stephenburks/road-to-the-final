@@ -87,7 +87,6 @@ const STAGE_SLUGS = {
 	winner: 'world-cup-winner',
 };
 
-const GROUP_LETTERS = 'ABCDEFGHIJKL'.split('');
 const GROUP_SLUGS = 'abcdefghijkl'.split('').map(l => `world-cup-group-${l}-winner`);
 
 // ─── Helpers ────────────────────────────────────────────────────────────────────
