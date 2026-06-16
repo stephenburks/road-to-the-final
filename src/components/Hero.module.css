@@ -17,6 +17,18 @@
 
 .inner { position: relative; }
 
+.topRow {
+  display: flex;
+  gap: 32px;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.textCol {
+  flex: 1;
+  min-width: 0;
+}
+
 .eyebrow {
   font-family: var(--font-mono);
   font-size: 10px;
@@ -149,6 +161,13 @@
 	max-width: 480px;
 }
 
+.topRow .nextMatch {
+	flex-shrink: 0;
+	width: 340px;
+	max-width: none;
+	margin-bottom: 0;
+}
+
 .nextMatchLabel {
 	font-family: var(--font-mono);
 	font-size: 9px;
@@ -195,4 +214,17 @@
 	margin-top: 5px;
 	padding-top: 5px;
 	border-top: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+@media (max-width: 700px) {
+	.topRow {
+		flex-direction: column;
+		margin-bottom: 0;
+	}
+
+	.topRow .nextMatch {
+		width: auto;
+		max-width: 480px;
+		margin-bottom: 16px;
+	}
 }

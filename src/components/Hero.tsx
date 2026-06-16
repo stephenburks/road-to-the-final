@@ -67,90 +67,105 @@ export default function Hero({ team, activeStage, isHistorical, groupWinProb }: 
 		? (path.conditionNote ?? 'Venue assumes current group standing — may change.')
 		: null
 
+	const useTopRowLayout = !team.eliminated && !!nextEvent
+
+	const textCol = (
+		<div className={styles.textCol}>
+			<p className={styles.eyebrow}>{eyebrow}</p>
+			<h1 id="hero-heading" className={styles.heading}>
+				{!team.eliminated && <><FlagIcon code={team.id} flag={team.flag} name={team.name} size={40} />{' '}</>}
+				{heading}
+			</h1>
+			{!team.eliminated && (
+				<div className={styles.metaRow}>
+					{record && (
+						<span className={styles.recordBadge} aria-label={`Record: ${record.summary.replace(/-/g, ' wins, ').replace(/-/g, ' draws, ')} losses`}>
+							{record.summary}
+						</span>
+					)}
+					<p className={styles.subhead}>{subhead}</p>
+				</div>
+			)}
+			<p className={styles.subtext}>{subtext}</p>
+			{conditionalNote && (
+				<div className={styles.conditionalNote} role="note">
+					<span className={styles.conditionalNoteIcon} aria-hidden="true" />
+					{conditionalNote}
+				</div>
+			)}
+		</div>
+	)
+
+	const nextMatchCard = nextEvent ? (
+		<div className={styles.nextMatch} role="complementary" aria-label="Next match">
+			<div className={styles.nextMatchLabel}>Next Match</div>
+			<div className={styles.nextMatchTeams}>
+				<FlagIcon code={team.id} flag={team.flag} name={team.name} />
+				<span className={styles.nextMatchVs}>vs</span>
+				<FlagIcon flag={nextEvent.opponentFlag} opponent={nextEvent.opponent} />
+				<span className={styles.nextMatchOpponent}>{nextEvent.opponent}</span>
+			</div>
+			<div className={styles.nextMatchDetails}>
+				{nextEvent.date && <span>{formatDate(nextEvent.date)}</span>}
+				{nextEvent.venue && <span className={styles.nextMatchVenue}>{nextEvent.venue}</span>}
+			</div>
+			{nextEvent.broadcasts.length > 0 && (
+				<div className={styles.nextMatchBroadcasts}>
+					{nextEvent.broadcasts.join(' / ')}
+				</div>
+			)}
+		</div>
+	) : null
+
+	const statGridEl = !team.eliminated ? (
+		<div className={styles.statGrid} role="list" aria-label="Tournament advancement probabilities">
+			{STAT_CARD_DEFS.map(card => (
+				<div
+					key={card.key}
+					role="listitem"
+					className={`${styles.statCard} ${card.cardClass}`}
+					aria-label={`${card.label}: ${ap[card.key as keyof AdvanceProbabilities] ?? 0}%`}
+				>
+					<div className={`${styles.statValue} ${card.valueClass}`}>
+						{ap[card.key as keyof AdvanceProbabilities] ?? 0}%
+					</div>
+					<div className={styles.statLabel}>{card.label}</div>
+					<div className={styles.statSub}>
+						{sourceLabel}
+					</div>
+				</div>
+			))}
+			{groupWinProb && (
+				<div
+					role="listitem"
+					className={`${styles.statCard} ${styles.statCardGroup}`}
+					aria-label={`Win Group ${groupWinProb.groupLetter}: ${groupWinProb.probability}%`}
+				>
+					<div className={`${styles.statValue} ${styles.statValueGroup}`}>
+						{groupWinProb.probability}%
+					</div>
+					<div className={styles.statLabel}>Win Group {groupWinProb.groupLetter}</div>
+					<div className={styles.statSub}>Polymarket</div>
+				</div>
+			)}
+		</div>
+	) : null
+
 	return (
 		<div className="wrap">
 			<section className={styles.hero} id="hero" aria-labelledby="hero-heading">
 				<div className={styles.glow} aria-hidden="true" />
 
 				<div className={styles.inner}>
-					<p className={styles.eyebrow}>{eyebrow}</p>
-					<h1 id="hero-heading" className={styles.heading}>
-						{!team.eliminated && <><FlagIcon code={team.id} flag={team.flag} name={team.name} size={40} />{' '}</>}
-						{heading}
-					</h1>
-					{!team.eliminated && (
-						<div className={styles.metaRow}>
-							{record && (
-								<span className={styles.recordBadge} aria-label={`Record: ${record.summary.replace(/-/g, ' wins, ').replace(/-/g, ' draws, ')} losses`}>
-									{record.summary}
-								</span>
-							)}
-							<p className={styles.subhead}>{subhead}</p>
+					{useTopRowLayout ? (
+						<div className={styles.topRow}>
+							{textCol}
+							{nextMatchCard}
 						</div>
+					) : (
+						textCol
 					)}
-					<p className={styles.subtext}>{subtext}</p>
-						{conditionalNote && (
-						<div className={styles.conditionalNote} role="note">
-							<span className={styles.conditionalNoteIcon} aria-hidden="true" />
-							{conditionalNote}
-						</div>
-					)}
-
-					{!team.eliminated && (
-						<>
-							{nextEvent && (
-								<div className={styles.nextMatch} role="complementary" aria-label="Next match">
-									<div className={styles.nextMatchLabel}>Next Match</div>
-									<div className={styles.nextMatchTeams}>
-										<FlagIcon code={team.id} flag={team.flag} name={team.name} />
-										<span className={styles.nextMatchVs}>vs</span>
-										<FlagIcon flag={nextEvent.opponentFlag} opponent={nextEvent.opponent} />
-										<span className={styles.nextMatchOpponent}>{nextEvent.opponent}</span>
-									</div>
-									<div className={styles.nextMatchDetails}>
-										{nextEvent.date && <span>{formatDate(nextEvent.date)}</span>}
-										{nextEvent.venue && <span className={styles.nextMatchVenue}>{nextEvent.venue}</span>}
-									</div>
-									{nextEvent.broadcasts.length > 0 && (
-										<div className={styles.nextMatchBroadcasts}>
-											{nextEvent.broadcasts.join(' / ')}
-										</div>
-									)}
-								</div>
-							)}
-							<div className={styles.statGrid} role="list" aria-label="Tournament advancement probabilities">
-							{STAT_CARD_DEFS.map(card => (
-								<div
-									key={card.key}
-									role="listitem"
-									className={`${styles.statCard} ${card.cardClass}`}
-									aria-label={`${card.label}: ${ap[card.key as keyof AdvanceProbabilities] ?? 0}%`}
-								>
-									<div className={`${styles.statValue} ${card.valueClass}`}>
-										{ap[card.key as keyof AdvanceProbabilities] ?? 0}%
-									</div>
-									<div className={styles.statLabel}>{card.label}</div>
-									<div className={styles.statSub}>
-										{sourceLabel}
-									</div>
-								</div>
-							))}
-							{groupWinProb && (
-								<div
-									role="listitem"
-									className={`${styles.statCard} ${styles.statCardGroup}`}
-									aria-label={`Win Group ${groupWinProb.groupLetter}: ${groupWinProb.probability}%`}
-								>
-									<div className={`${styles.statValue} ${styles.statValueGroup}`}>
-										{groupWinProb.probability}%
-									</div>
-									<div className={styles.statLabel}>Win Group {groupWinProb.groupLetter}</div>
-									<div className={styles.statSub}>Polymarket</div>
-								</div>
-							)}
-						</div>
-							</>
-					)}
+					{statGridEl}
 				</div>
 			</section>
 		</div>
