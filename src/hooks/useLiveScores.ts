@@ -59,7 +59,7 @@ export function useLiveScores(
 
 		async function poll() {
 			try {
-				const res = await fetch(`${ESPN_SCOREBOARD}?dates=${ymd(today)}`)
+				const res = await fetch(`${ESPN_SCOREBOARD}?dates=${ymd(today)}&_=${Date.now()}`)
 				const json = await res.json()
 				const events = json?.events ?? []
 

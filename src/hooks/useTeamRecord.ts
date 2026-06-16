@@ -58,7 +58,7 @@ export function useTeamRecord(teamId: string, isHistorical: boolean): TeamRecord
 
 		async function doFetch(c: { current: boolean }) {
 			try {
-				const res = await fetch(`${ESPN_TEAM_URL}/${slug}`)
+				const res = await fetch(`${ESPN_TEAM_URL}/${slug}?_=${Date.now()}`)
 				const json = await res.json()
 				if (c.current) return
 				const team = json?.team

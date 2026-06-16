@@ -21,6 +21,7 @@ interface TeamMatchCardProps {
 		awayCards?: Card[]
 		broadcasts?: string[]
 	}
+	matchTime?: string
 }
 
 // ── Neutral mode (used by HomePage) ──
@@ -165,6 +166,9 @@ export default function MatchCard(props: MatchCardProps) {
 		: isLive ? styles.badgeLive : styles.badgeUpcoming
 	const cardClass = isWin ? styles.cardW : isDraw ? styles.cardD : isLive ? styles.cardLive : styles.cardUpcoming
 	const badgeText = isLive && liveData?.clock ? `LIVE ${liveData.clock}` : isLive ? 'LIVE' : match.result ?? 'TBD'
+	const timeDisplay = props.matchTime
+		? new Date(props.matchTime).toLocaleTimeString([], { hour: 'numeric', minute: '2-digit', timeZoneName: 'short' })
+		: ''
 
 	const oppTeam = teams?.find(t => t.name === match.opponent)
 	const oppMatch = oppTeam?.groupResults?.find(g => g.matchday === match.matchday)
@@ -178,7 +182,7 @@ export default function MatchCard(props: MatchCardProps) {
 	return (
 		<div className={`${styles.matchCard} ${cardClass}`}>
 			<div className={styles.matchMeta}>
-				<span>MD{match.matchday} · {formatDate(match.date)}</span>
+				<span>MD{match.matchday} · {formatDate(match.date)}{!match.result && !isLive && timeDisplay ? ` \u00B7 ${timeDisplay}` : ''}</span>
 				<span className={`${styles.badge} ${badgeClass}`} aria-label={resultLabel}>
 					{badgeText}
 				</span>
