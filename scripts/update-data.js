@@ -233,6 +233,11 @@ function yesterdayStr() {
   d.setDate(d.getDate() - 1);
   return d.toISOString().split('T')[0];
 }
+function tomorrowStr() {
+  const d = new Date();
+  d.setDate(d.getDate() + 1);
+  return d.toISOString().split('T')[0];
+}
 function fmtLabel(dateStr) {
   return new Date(dateStr + 'T12:00:00Z').toLocaleDateString('en-US', {
     month: 'short', day: 'numeric', timeZone: 'UTC',
@@ -320,15 +325,12 @@ async function fetchESPNEventDetails(dateFrom, dateTo) {
 				const hScore = parseInt(homeComp?.score, 10) || 0;
 				const aScore = parseInt(awayComp?.score, 10) || 0;
 
-				// Add to match map: finished matches always, non-finished only if scores present
-				if (isFinished || hScore > 0 || aScore > 0) {
-					const key = `${homeId}:${awayId}`;
-					if (!matches.has(key)) {
-						matches.set(key, {
-							homeId, awayId, homeScore: hScore, awayScore: aScore,
-							status: matchStatus, date: eventDate,
-						});
-					}
+				const key = `${homeId}:${awayId}`;
+				if (!matches.has(key)) {
+					matches.set(key, {
+						homeId, awayId, homeScore: hScore, awayScore: aScore,
+						status: matchStatus, date: eventDate,
+					});
 				}
 			}
 
@@ -385,6 +387,46 @@ async function fetchESPNEventDetails(dateFrom, dateTo) {
 	}
 	log(`ESPN matches: ${matches.size} extracted, ${activeTeams.size} active teams`);
 	return { matches, scorers, cards, activeTeams };
+}
+
+// ─── Normalize ESPN UTC dates → local venue dates using GROUP_SCHEDULE ─────────
+function normalizeESPNCalendarDates(espnMatches, espnScorers, espnCards) {
+	const sched = new Map();
+	for (const games of Object.values(GROUP_SCHEDULE)) {
+		for (const g of games) {
+			sched.set(`${g.h}:${g.a}`, g.d);
+			sched.set(`${g.a}:${g.h}`, g.d);
+		}
+	}
+
+	let normalized = 0;
+	for (const [key, match] of espnMatches) {
+		const localDate = sched.get(key);
+		if (!localDate || localDate === match.date) continue;
+
+		const oldDate = match.date;
+		match.date = localDate;
+		normalized++;
+
+		// Normalize scorer/card dates for both teams
+		const [homeId, awayId] = key.split(':');
+		for (const teamId of [homeId, awayId]) {
+			const scorers = espnScorers[teamId];
+			if (scorers) {
+				for (const s of scorers) {
+					if (s.date === oldDate) s.date = localDate;
+				}
+			}
+			const cards = espnCards[teamId];
+			if (cards) {
+				for (const c of cards) {
+					if (c.date === oldDate) c.date = localDate;
+				}
+			}
+		}
+	}
+
+	if (normalized > 0) log(`Normalized ${normalized} match dates from UTC → local venue time`);
 }
 
 // ─── Compute group standings from ESPN match data ─────────────────────────────
@@ -1026,7 +1068,10 @@ async function main() {
 
   const TOURNAMENT_START_ESPN = '2026-06-11';
   const { matches: espnMatches, scorers: espnScorers, cards: espnCards, activeTeams: espnActiveTeams }
-    = await fetchESPNEventDetails(TOURNAMENT_START_ESPN, todayStr());
+    = await fetchESPNEventDetails(TOURNAMENT_START_ESPN, tomorrowStr());
+
+  // Normalize all ESPN UTC dates to local venue dates
+  normalizeESPNCalendarDates(espnMatches, espnScorers, espnCards);
 
   const activeIds  = espnActiveTeams;
   const hasActive  = activeIds.size > 0;
@@ -1141,7 +1186,10 @@ async function main() {
           path: teamPath,
           possibleOpponents: possibleOpps,
           groupResults: injectCards(
-            injectScorers(existingTeam.groupResults || [], espnScorers[t.id]),
+            injectScorers(
+              buildGroupResults(t.id, t.group, espnMatches, existingTeam.groupResults || []),
+              espnScorers[t.id]
+            ),
             espnCards[t.id]
           ),
         };
@@ -1152,7 +1200,10 @@ async function main() {
         currentStage: stage,
         advanceProbabilities: teamAdvP,
         groupResults: injectCards(
-          injectScorers(existingTeam.groupResults || [], espnScorers[t.id]),
+          injectScorers(
+            buildGroupResults(t.id, t.group, espnMatches, existingTeam.groupResults || []),
+            espnScorers[t.id]
+          ),
           espnCards[t.id]
         ),
       };

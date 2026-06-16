@@ -1,7 +1,28 @@
 import { describe, it, expect, vi } from 'vitest'
 import { render, screen } from '@testing-library/react'
 import HomePage from './HomePage'
-import type { AppData, DailyMatch } from '../../types'
+import type { AppData, DailyMatch, Team } from '../../types'
+
+const todayStr = (): string => {
+	const d = new Date()
+	return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`
+}
+
+const makeTeam = (overrides: Partial<Team> = {}): Team => ({
+	id: 'usa',
+	name: 'USA',
+	flag: '🇺🇸',
+	group: 'D',
+	confederation: 'CONCACAF',
+	fifaRank: 14,
+	eliminated: false,
+	currentStage: 'group_stage',
+	groupResults: [],
+	advanceProbabilities: { r32: 80, r16: 50, qf: 30, sf: 15, final: 5, winner: 2, source: 'market' },
+	path: { group_stage: { status: 'active' }, r32: null, r16: null, qf: null, sf: null, final: null },
+	possibleOpponents: { r32: [], r16: [] },
+	...overrides,
+})
 
 const createData = (dailyMatches: Record<string, DailyMatch[]> = {}): AppData => ({
 	lastUpdated: new Date().toISOString(),
@@ -20,11 +41,12 @@ const createData = (dailyMatches: Record<string, DailyMatch[]> = {}): AppData =>
 		},
 	},
 	groups: {},
-	teams: [],
+	teams: [
+		makeTeam({ id: 'usa', name: 'USA', flag: '🇺🇸' }),
+		makeTeam({ id: 'paraguay', name: 'Paraguay', flag: '🇵🇾' }),
+	],
 	dailyMatches,
 })
-
-const todayStr = (): string => new Date().toISOString().split('T')[0]
 
 const makeMatch = (overrides: Partial<DailyMatch> = {}): DailyMatch => ({
 	homeTeam: 'USA',
@@ -109,7 +131,7 @@ describe('HomePage', () => {
 			/>
 		)
 		expect(screen.getByText("Today's Matches")).toBeInTheDocument()
-		expect(screen.getByText('USA')).toBeInTheDocument()
+		expect(screen.getAllByText('USA').length).toBeGreaterThan(0)
 		expect(screen.getByText('Paraguay')).toBeInTheDocument()
 	})
 

@@ -1,17 +1,133 @@
-import type { Team, GroupMatch } from '../../types'
+import type { Team, GroupMatch, Card } from '../../types'
 import { formatDate } from '../../utils'
 import FlagIcon from '../ui/FlagIcon'
 import { RESULT_LABELS } from './groupStageConstants'
 import styles from './MatchCard.module.css'
 
-interface MatchCardProps {
+// ── Team mode (existing contract, used by GroupStage) ──
+interface TeamMatchCardProps {
+	mode: 'team'
 	match: GroupMatch
 	teamFlag: string
 	teamId: string
 	teams: Team[]
 }
 
-export default function MatchCard({ match, teamFlag, teamId, teams }: MatchCardProps) {
+// ── Neutral mode (used by HomePage) ──
+interface NeutralMatchCardProps {
+	mode: 'neutral'
+	homeTeam: string
+	homeFlag: string
+	homeId: string
+	awayTeam: string
+	awayFlag: string
+	awayId: string
+	score: string | null
+	status: 'finished' | 'upcoming'
+	date: string
+	venue?: string
+	homeScorers: string[]
+	awayScorers: string[]
+	homeCards: Card[]
+	awayCards: Card[]
+}
+
+type MatchCardProps = TeamMatchCardProps | NeutralMatchCardProps
+
+function ScorerList({ scorers, label }: { scorers: string[]; label: string }) {
+	if (!scorers.length) return null
+	return (
+		<ul className={styles.scorers} aria-label={label}>
+			{scorers.map((s, j) => <li key={j}>{s}</li>)}
+		</ul>
+	)
+}
+
+function CardList({ cards, label }: { cards: Card[]; label: string }) {
+	if (!cards.length) return null
+	return (
+		<ul className={styles.cards} aria-label={label}>
+			{cards.map((c, j) => (
+				<li key={j}>
+					<span className={`${styles.cardIndicator} ${c.type === 'red' ? styles.cardRed : styles.cardYellow}`} aria-hidden="true" />
+					<span className="sr-only">{c.type === 'red' ? 'Red' : 'Yellow'} card: </span>
+					{c.player} {c.minute}
+				</li>
+			))}
+		</ul>
+	)
+}
+
+function EventColumn({ flag, teamId, teamName, scorers, cards, scorerLabel, cardLabel }: {
+	flag: string
+	teamId?: string
+	teamName: string
+	scorers: string[]
+	cards: Card[]
+	scorerLabel: string
+	cardLabel: string
+}) {
+	return (
+		<div className={styles.eventSide}>
+			<div className={styles.eventTeam}>
+				{teamId ? <FlagIcon code={teamId} flag={flag} small /> : <FlagIcon flag={flag} opponent={teamName} small />}
+			</div>
+			<ScorerList scorers={scorers} label={scorerLabel} />
+			<CardList cards={cards} label={cardLabel} />
+		</div>
+	)
+}
+
+export default function MatchCard(props: MatchCardProps) {
+	if (props.mode === 'neutral') {
+		const { homeTeam, homeFlag, homeId, awayTeam, awayFlag, awayId, score, status, date, venue, homeScorers, awayScorers, homeCards, awayCards } = props
+		const isFinished = status === 'finished'
+		const cardClass = isFinished ? styles.cardNeutral : styles.cardUpcoming
+
+		return (
+			<div className={`${styles.matchCard} ${cardClass}`}>
+				<div className={styles.matchMeta}>
+					<span>{formatDate(date)}</span>
+					<span className={`${styles.badge} ${isFinished ? styles.badgeD : styles.badgeUpcoming}`}>
+						{isFinished ? 'FT' : 'Upcoming'}
+					</span>
+				</div>
+
+				<div className={styles.matchTeams}>
+					<FlagIcon code={homeId} flag={homeFlag} name={homeTeam} />
+					<span className={styles.opponentName}>{homeTeam}</span>
+					<span className={styles.vsLabel}>vs</span>
+					<FlagIcon code={awayId} flag={awayFlag} name={awayTeam} />
+					<span className={styles.opponentName}>{awayTeam}</span>
+					{score && (
+						<span className={styles.score} aria-label={`Score: ${score}`}>{score}</span>
+					)}
+				</div>
+
+				{isFinished && (
+					<div className={styles.matchEvents}>
+						<EventColumn
+							flag={homeFlag} teamId={homeId} teamName={homeTeam}
+							scorers={homeScorers} cards={homeCards}
+							scorerLabel={`${homeTeam} goal scorers`}
+							cardLabel={`${homeTeam} cards`}
+						/>
+						<EventColumn
+							flag={awayFlag} teamId={awayId} teamName={awayTeam}
+							scorers={awayScorers} cards={awayCards}
+							scorerLabel={`${awayTeam} goal scorers`}
+							cardLabel={`${awayTeam} cards`}
+						/>
+					</div>
+				)}
+
+				{!isFinished && venue && <div className={styles.venue}>{venue}</div>}
+			</div>
+		)
+	}
+
+	// ── Team mode (existing behavior) ──
+	const { match, teamFlag, teamId, teams } = props
 	const isWin = match.result === 'W'
 	const isDraw = match.result === 'D'
 	const resultLabel = match.result ? (RESULT_LABELS[match.result] ?? 'To be played') : 'To be played'
@@ -20,7 +136,6 @@ export default function MatchCard({ match, teamFlag, teamId, teams }: MatchCardP
 		: styles.badgeUpcoming
 	const cardClass = isWin ? styles.cardW : isDraw ? styles.cardD : styles.cardUpcoming
 
-	// Find opponent's match data for the same matchday
 	const oppTeam = teams?.find(t => t.name === match.opponent)
 	const oppMatch = oppTeam?.groupResults?.find(g => g.matchday === match.matchday)
 
@@ -47,49 +162,19 @@ export default function MatchCard({ match, teamFlag, teamId, teams }: MatchCardP
 
 			{match.result && (
 				<div className={styles.matchEvents}>
-					<div className={styles.eventSide}>
-						<div className={styles.eventTeam}>
-							<FlagIcon code={teamId} flag={teamFlag} small />
-						</div>
-						{match.scorers?.length > 0 && (
-							<ul className={styles.scorers} aria-label={`${teamId} goal scorers`}>
-								{match.scorers.map((s, j) => <li key={j}>{s}</li>)}
-							</ul>
-						)}
-						{match.cards?.length > 0 && (
-							<ul className={styles.cards} aria-label={`${teamId} cards`}>
-								{match.cards.map((c, j) => (
-									<li key={j}>
-										<span className={`${styles.cardIndicator} ${c.type === 'red' ? styles.cardRed : styles.cardYellow}`} aria-hidden="true" />
-										<span className="sr-only">{c.type === 'red' ? 'Red' : 'Yellow'} card: </span>
-										{c.player} {c.minute}
-									</li>
-								))}
-							</ul>
-						)}
-					</div>
+					<EventColumn
+						flag={teamFlag} teamId={teamId} teamName=""
+						scorers={match.scorers ?? []} cards={match.cards ?? []}
+						scorerLabel={`${teamId} goal scorers`}
+						cardLabel={`${teamId} cards`}
+					/>
 					{oppMatch && (
-						<div className={styles.eventSide}>
-							<div className={styles.eventTeam}>
-								<FlagIcon code={oppTeam?.id} flag={match.opponentFlag} small />
-							</div>
-							{oppMatch.scorers?.length > 0 && (
-								<ul className={styles.scorers} aria-label={`${match.opponent} goal scorers`}>
-									{oppMatch.scorers.map((s, j) => <li key={j}>{s}</li>)}
-								</ul>
-							)}
-							{oppMatch.cards?.length > 0 && (
-								<ul className={styles.cards} aria-label={`${match.opponent} cards`}>
-									{oppMatch.cards.map((c, j) => (
-										<li key={j}>
-											<span className={`${styles.cardIndicator} ${c.type === 'red' ? styles.cardRed : styles.cardYellow}`} aria-hidden="true" />
-											<span className="sr-only">{c.type === 'red' ? 'Red' : 'Yellow'} card: </span>
-											{c.player} {c.minute}
-										</li>
-									))}
-								</ul>
-							)}
-						</div>
+						<EventColumn
+							flag={match.opponentFlag} teamName={match.opponent}
+							scorers={oppMatch.scorers ?? []} cards={oppMatch.cards ?? []}
+							scorerLabel={`${match.opponent} goal scorers`}
+							cardLabel={`${match.opponent} cards`}
+						/>
 					)}
 				</div>
 			)}

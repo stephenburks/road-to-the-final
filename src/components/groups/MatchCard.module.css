@@ -6,6 +6,7 @@
 /* ── Card variant backgrounds / borders ── */
 .cardW { background: rgba(34,197,94,0.06); border: 1px solid rgba(34,197,94,0.2); }
 .cardD { background: rgba(99,102,241,0.04); border: 1px solid rgba(99,102,241,0.15); }
+.cardNeutral { background: rgba(99,102,241,0.04); border: 1px solid rgba(99,102,241,0.15); }
 .cardUpcoming { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.07); }
 
 .matchMeta {

@@ -88,15 +88,18 @@
 }
 
 .matchGrid {
-	display: flex;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
 	gap: 12px;
-	overflow-x: auto;
-	padding-bottom: 8px;
-	-webkit-overflow-scrolling: touch;
-	scrollbar-width: none;
 }
 
-.matchGrid::-webkit-scrollbar { display: none; }
+@media (max-width: 780px) {
+	.matchGrid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 500px) {
+	.matchGrid { grid-template-columns: 1fr; }
+}
 
 .emptyState {
 	font-size: 12px;

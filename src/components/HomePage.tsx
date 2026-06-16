@@ -1,6 +1,7 @@
-import type { AppData } from '../types'
+import { useMemo } from 'react'
+import type { AppData, DailyMatch } from '../types'
 import type { View } from '../hooks/useAppState'
-import DailyMatchCard from './DailyMatchCard'
+import MatchCard from './groups/MatchCard'
 import NewsSection from './NewsSection'
 import styles from './HomePage.module.css'
 
@@ -11,26 +12,58 @@ interface HomePageProps {
 	onViewChange: (v: View) => void
 }
 
-function todayStr(): string {
-	return new Date().toISOString().split('T')[0]
+function localDateStr(date = new Date()): string {
+	return `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, '0')}-${String(date.getDate()).padStart(2, '0')}`
 }
+
+function todayStr(): string { return localDateStr() }
 
 function yesterdayStr(): string {
 	const d = new Date()
 	d.setDate(d.getDate() - 1)
-	return d.toISOString().split('T')[0]
+	return localDateStr(d)
 }
 
 function tomorrowStr(): string {
 	const d = new Date()
 	d.setDate(d.getDate() + 1)
-	return d.toISOString().split('T')[0]
+	return localDateStr(d)
 }
 
 const DAY_LABELS: Record<string, string> = {
 	yesterday: "Yesterday's Matches",
 	today: "Today's Matches",
 	tomorrow: "Tomorrow's Matches",
+}
+
+/** Cross-reference a DailyMatch with team groupResults to extract scorers/cards */
+function enrich(match: DailyMatch, teams: AppData['teams']) {
+	const homeTeam = teams.find(t => t.id === match.homeId)
+	const awayTeam = teams.find(t => t.id === match.awayId)
+
+	const homeResult = homeTeam?.groupResults?.find(
+		g => g.opponent === match.awayTeam
+	)
+	const awayResult = awayTeam?.groupResults?.find(
+		g => g.opponent === match.homeTeam
+	)
+
+	return {
+		mode: 'neutral' as const,
+		homeTeam: match.homeTeam,
+		homeFlag: match.homeFlag,
+		homeId: match.homeId,
+		awayTeam: match.awayTeam,
+		awayFlag: match.awayFlag,
+		awayId: match.awayId,
+		score: match.status === 'FINISHED' ? `${match.homeScore}-${match.awayScore}` : null,
+		status: match.status === 'FINISHED' ? 'finished' as const : 'upcoming' as const,
+		date: match.date,
+		homeScorers: homeResult?.scorers ?? [],
+		awayScorers: awayResult?.scorers ?? [],
+		homeCards: homeResult?.cards ?? [],
+		awayCards: awayResult?.cards ?? [],
+	}
 }
 
 export default function HomePage({ data, selectedTeamId, onTeamChange, onViewChange }: HomePageProps) {
@@ -40,11 +73,11 @@ export default function HomePage({ data, selectedTeamId, onTeamChange, onViewCha
 	const yesterday = yesterdayStr()
 	const tomorrow = tomorrowStr()
 
-	const sections = [
-		{ key: 'yesterday', date: yesterday, matches: dailyMatches[yesterday] ?? [] },
-		{ key: 'today', date: today, matches: dailyMatches[today] ?? [] },
-		{ key: 'tomorrow', date: tomorrow, matches: dailyMatches[tomorrow] ?? [] },
-	]
+	const sections = useMemo(() => [
+		{ key: 'today', date: today, matches: (dailyMatches[today] ?? []).map(m => enrich(m, data.teams)) },
+		{ key: 'yesterday', date: yesterday, matches: (dailyMatches[yesterday] ?? []).map(m => enrich(m, data.teams)) },
+		{ key: 'tomorrow', date: tomorrow, matches: (dailyMatches[tomorrow] ?? []).map(m => enrich(m, data.teams)) },
+	], [dailyMatches, data.teams, today, yesterday, tomorrow])
 
 	return (
 		<div className={styles.page}>
@@ -79,7 +112,7 @@ export default function HomePage({ data, selectedTeamId, onTeamChange, onViewCha
 						<div className={styles.matchGrid} role="list" aria-label={`${DAY_LABELS[key] ?? date} matches`}>
 							{matches.map((m, i) => (
 								<div key={`${m.homeTeam}-${m.awayTeam}-${i}`} role="listitem">
-									<DailyMatchCard match={m} />
+									<MatchCard {...m} />
 								</div>
 							))}
 						</div>
