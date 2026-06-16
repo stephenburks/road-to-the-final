@@ -135,21 +135,24 @@ export default function MatchCard(props: MatchCardProps) {
 	const { match, teamFlag, teamId, teams } = props
 	const isWin = match.result === 'W'
 	const isDraw = match.result === 'D'
-	const resultLabel = match.result ? (RESULT_LABELS[match.result] ?? 'To be played') : 'To be played'
+	const isLive = !match.result && !!match.score
+	const resultLabel = match.result ? (RESULT_LABELS[match.result] ?? 'To be played') : isLive ? 'Live' : 'To be played'
 	const badgeClass = match.result
 		? (match.result === 'W' ? styles.badgeW : match.result === 'D' ? styles.badgeD : styles.badgeL)
-		: styles.badgeUpcoming
-	const cardClass = isWin ? styles.cardW : isDraw ? styles.cardD : styles.cardUpcoming
+		: isLive ? styles.badgeLive : styles.badgeUpcoming
+	const cardClass = isWin ? styles.cardW : isDraw ? styles.cardD : isLive ? styles.cardLive : styles.cardUpcoming
 
 	const oppTeam = teams?.find(t => t.name === match.opponent)
 	const oppMatch = oppTeam?.groupResults?.find(g => g.matchday === match.matchday)
+
+	const hasEvents = !!match.result || (isLive && (match.scorers?.length > 0 || match.cards?.length > 0 || oppMatch?.scorers?.length > 0 || oppMatch?.cards?.length > 0))
 
 	return (
 		<div className={`${styles.matchCard} ${cardClass}`}>
 			<div className={styles.matchMeta}>
 				<span>MD{match.matchday} · {formatDate(match.date)}</span>
 				<span className={`${styles.badge} ${badgeClass}`} aria-label={resultLabel}>
-					{match.result ?? 'TBD'}
+					{isLive ? 'LIVE' : match.result ?? 'TBD'}
 				</span>
 			</div>
 
@@ -159,13 +162,13 @@ export default function MatchCard(props: MatchCardProps) {
 				<FlagIcon flag={match.opponentFlag} opponent={match.opponent} />
 				<span className={styles.opponentName}>{match.opponent}</span>
 				{match.score && (
-					<span className={styles.score} aria-label={`Score: ${match.score}`}>
+					<span className={`${styles.score} ${isLive ? styles.scoreLive : ''}`} aria-label={`Score: ${match.score}`}>
 						{match.score}
 					</span>
 				)}
 			</div>
 
-			{match.result && (
+			{hasEvents && (
 				<div className={styles.matchEvents}>
 					<EventColumn
 						flag={teamFlag} teamId={teamId} teamName=""
@@ -184,7 +187,7 @@ export default function MatchCard(props: MatchCardProps) {
 				</div>
 			)}
 
-			{!match.result && <div className={styles.venue}>{match.venue}</div>}
+			{!match.result && !isLive && <div className={styles.venue}>{match.venue}</div>}
 		</div>
 	)
 }
