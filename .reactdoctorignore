@@ -1,0 +1,6 @@
+# Scope React Doctor to source code only — avoid false positives from dependencies
+node_modules/
+dist/
+public/
+scripts/
+coverage/
