@@ -67,7 +67,7 @@ function enrich(match: DailyMatch, teams: AppData['teams']) {
 }
 
 export default function HomePage({ data, selectedTeamId, onTeamChange, onViewChange }: HomePageProps) {
-	const dailyMatches = data.dailyMatches ?? {}
+	const dailyMatches = useMemo(() => data.dailyMatches ?? {}, [data.dailyMatches])
 
 	const today = todayStr()
 	const yesterday = yesterdayStr()

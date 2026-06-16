@@ -1,7 +1,7 @@
 import { describe, it, expect } from 'vitest'
 import { render, screen } from '@testing-library/react'
 import StandingsPage from './StandingsPage'
-import type { AppData, Team, Stage } from '../../types'
+import type { AppData, Team, StandingRow } from '../../types'
 
 const makeTeam = (id: string, name: string, flag: string, group: string): Team => ({
 	id, name, flag, group, confederation: 'UEFA', fifaRank: 10,
@@ -16,7 +16,7 @@ const makeTeam = (id: string, name: string, flag: string, group: string): Team =
 })
 
 const createData = (): AppData => {
-	const groups: Record<string, { standings: any[]; winProbabilities: Record<string, number> }> = {}
+	const groups: Record<string, { standings: StandingRow[]; winProbabilities: Record<string, number> }> = {}
 	const teams: Team[] = []
 
 	'ABCDEFGHIJKL'.split('').forEach(g => {
