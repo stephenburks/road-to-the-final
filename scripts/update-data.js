@@ -325,9 +325,10 @@ async function fetchESPNEventDetails(dateFrom, dateTo) {
 			const matchClock   = isInProgress ? (statusDetail || 'LIVE') : '';
 
 			// ── Broadcast extraction ──────────────────────────────────
-			const broadcasts = (competition?.broadcasts ?? [])
+			const broadcasts = (competition?.geoBroadcasts ?? [])
 				.map(b => b.media?.shortName)
-				.filter(Boolean);
+				.filter(Boolean)
+				.filter((v, i, a) => a.indexOf(v) === i);
 
 			if (homeId && awayId) {
 				const hScore = parseInt(homeComp?.score, 10) || 0;
