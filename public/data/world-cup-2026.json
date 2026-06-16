@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-16T07:27:05.412Z",
+  "lastUpdated": "2026-06-16T07:36:27.443Z",
   "snapshotDate": "2026-06-16",
   "isHistorical": false,
   "sourceSummary": {
@@ -49,57 +49,57 @@
           "pos": 1,
           "teamId": "mexico",
           "team": "Mexico",
-          "flag": "🇲🇽",
-          "played": 0,
-          "w": 0,
+          "played": 1,
+          "w": 1,
           "d": 0,
           "l": 0,
-          "gf": 0,
+          "gf": 2,
           "ga": 0,
-          "gd": 0,
-          "pts": 0
+          "gd": 2,
+          "pts": 3,
+          "flag": "🇲🇽"
         },
         {
           "pos": 2,
           "teamId": "southkorea",
           "team": "South Korea",
-          "flag": "🇰🇷",
-          "played": 0,
-          "w": 0,
+          "played": 1,
+          "w": 1,
           "d": 0,
           "l": 0,
-          "gf": 0,
-          "ga": 0,
-          "gd": 0,
-          "pts": 0
+          "gf": 2,
+          "ga": 1,
+          "gd": 1,
+          "pts": 3,
+          "flag": "🇰🇷"
         },
         {
           "pos": 3,
           "teamId": "czechia",
           "team": "Czechia",
-          "flag": "🇨🇿",
-          "played": 0,
+          "played": 1,
           "w": 0,
           "d": 0,
-          "l": 0,
-          "gf": 0,
-          "ga": 0,
-          "gd": 0,
-          "pts": 0
+          "l": 1,
+          "gf": 1,
+          "ga": 2,
+          "gd": -1,
+          "pts": 0,
+          "flag": "🇨🇿"
         },
         {
           "pos": 4,
           "teamId": "southafrica",
           "team": "South Africa",
-          "flag": "🇿🇦",
-          "played": 0,
+          "played": 1,
           "w": 0,
           "d": 0,
-          "l": 0,
+          "l": 1,
           "gf": 0,
-          "ga": 0,
-          "gd": 0,
-          "pts": 0
+          "ga": 2,
+          "gd": -2,
+          "pts": 0,
+          "flag": "🇿🇦"
         }
       ],
       "winProbabilities": {
@@ -113,65 +113,65 @@
       "standings": [
         {
           "pos": 1,
-          "teamId": "canada",
-          "team": "Canada",
-          "flag": "🇨🇦",
-          "played": 0,
+          "teamId": "switzerland",
+          "team": "Switzerland",
+          "played": 1,
           "w": 0,
-          "d": 0,
+          "d": 1,
           "l": 0,
-          "gf": 0,
-          "ga": 0,
+          "gf": 1,
+          "ga": 1,
           "gd": 0,
-          "pts": 0
+          "pts": 1,
+          "flag": "🇨🇭"
         },
         {
           "pos": 2,
-          "teamId": "qatar",
-          "team": "Qatar",
-          "flag": "🇶🇦",
-          "played": 0,
+          "teamId": "canada",
+          "team": "Canada",
+          "played": 1,
           "w": 0,
-          "d": 0,
+          "d": 1,
           "l": 0,
-          "gf": 0,
-          "ga": 0,
+          "gf": 1,
+          "ga": 1,
           "gd": 0,
-          "pts": 0
+          "pts": 1,
+          "flag": "🇨🇦"
         },
         {
           "pos": 3,
-          "teamId": "switzerland",
-          "team": "Switzerland",
-          "flag": "🇨🇭",
-          "played": 0,
+          "teamId": "qatar",
+          "team": "Qatar",
+          "played": 1,
           "w": 0,
-          "d": 0,
+          "d": 1,
           "l": 0,
-          "gf": 0,
-          "ga": 0,
+          "gf": 1,
+          "ga": 1,
           "gd": 0,
-          "pts": 0
+          "pts": 1,
+          "flag": "🇶🇦"
         },
         {
           "pos": 4,
           "teamId": "bosnia",
           "team": "Bosnia & Herz.",
-          "flag": "🇧🇦",
-          "played": 0,
+          "played": 1,
           "w": 0,
-          "d": 0,
+          "d": 1,
           "l": 0,
-          "gf": 0,
-          "ga": 0,
+          "gf": 1,
+          "ga": 1,
           "gd": 0,
-          "pts": 0
+          "pts": 1,
+          "flag": "🇧🇦"
         }
       ],
       "winProbabilities": {
+        "switzerland": 46,
         "canada": 35,
         "qatar": 3,
-        "switzerland": 46,
         "bosnia": 16
       }
     },
@@ -179,66 +179,66 @@
       "standings": [
         {
           "pos": 1,
-          "teamId": "brazil",
-          "team": "Brazil",
-          "flag": "🇧🇷",
-          "played": 0,
-          "w": 0,
+          "teamId": "scotland",
+          "team": "Scotland",
+          "played": 1,
+          "w": 1,
           "d": 0,
           "l": 0,
-          "gf": 0,
+          "gf": 1,
           "ga": 0,
-          "gd": 0,
-          "pts": 0
+          "gd": 1,
+          "pts": 3,
+          "flag": "🏴󠁧󠁢󠁳󠁣󠁴󠁿"
         },
         {
           "pos": 2,
-          "teamId": "haiti",
-          "team": "Haiti",
-          "flag": "🇭🇹",
-          "played": 0,
+          "teamId": "morocco",
+          "team": "Morocco",
+          "played": 1,
           "w": 0,
-          "d": 0,
+          "d": 1,
           "l": 0,
-          "gf": 0,
-          "ga": 0,
+          "gf": 1,
+          "ga": 1,
           "gd": 0,
-          "pts": 0
+          "pts": 1,
+          "flag": "🇲🇦"
         },
         {
           "pos": 3,
-          "teamId": "scotland",
-          "team": "Scotland",
-          "flag": "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
-          "played": 0,
+          "teamId": "brazil",
+          "team": "Brazil",
+          "played": 1,
           "w": 0,
-          "d": 0,
+          "d": 1,
           "l": 0,
-          "gf": 0,
-          "ga": 0,
+          "gf": 1,
+          "ga": 1,
           "gd": 0,
-          "pts": 0
+          "pts": 1,
+          "flag": "🇧🇷"
         },
         {
           "pos": 4,
-          "teamId": "morocco",
-          "team": "Morocco",
-          "flag": "🇲🇦",
-          "played": 0,
+          "teamId": "haiti",
+          "team": "Haiti",
+          "played": 1,
           "w": 0,
           "d": 0,
-          "l": 0,
+          "l": 1,
           "gf": 0,
-          "ga": 0,
-          "gd": 0,
-          "pts": 0
+          "ga": 1,
+          "gd": -1,
+          "pts": 0,
+          "flag": "🇭🇹"
         }
       ],
       "winProbabilities": {
-        "brazil": 59,
-        "haiti": 1,
         "scotland": 11,
-        "morocco": 30
+        "morocco": 30,
+        "brazil": 59,
+        "haiti": 1
       }
     },
     "D": {
@@ -247,57 +247,57 @@
           "pos": 1,
           "teamId": "usa",
           "team": "USA",
-          "flag": "🇺🇸",
-          "played": 0,
-          "w": 0,
+          "played": 1,
+          "w": 1,
           "d": 0,
           "l": 0,
-          "gf": 0,
-          "ga": 0,
-          "gd": 0,
-          "pts": 0
+          "gf": 4,
+          "ga": 1,
+          "gd": 3,
+          "pts": 3,
+          "flag": "🇺🇸"
         },
         {
           "pos": 2,
           "teamId": "australia",
           "team": "Australia",
-          "flag": "🇦🇺",
-          "played": 0,
-          "w": 0,
+          "played": 1,
+          "w": 1,
           "d": 0,
           "l": 0,
-          "gf": 0,
+          "gf": 2,
           "ga": 0,
-          "gd": 0,
-          "pts": 0
+          "gd": 2,
+          "pts": 3,
+          "flag": "🇦🇺"
         },
         {
           "pos": 3,
           "teamId": "turkey",
           "team": "Türkiye",
-          "flag": "🇹🇷",
-          "played": 0,
+          "played": 1,
           "w": 0,
           "d": 0,
-          "l": 0,
+          "l": 1,
           "gf": 0,
-          "ga": 0,
-          "gd": 0,
-          "pts": 0
+          "ga": 2,
+          "gd": -2,
+          "pts": 0,
+          "flag": "🇹🇷"
         },
         {
           "pos": 4,
           "teamId": "paraguay",
           "team": "Paraguay",
-          "flag": "🇵🇾",
-          "played": 0,
+          "played": 1,
           "w": 0,
           "d": 0,
-          "l": 0,
-          "gf": 0,
-          "ga": 0,
-          "gd": 0,
-          "pts": 0
+          "l": 1,
+          "gf": 1,
+          "ga": 4,
+          "gd": -3,
+          "pts": 0,
+          "flag": "🇵🇾"
         }
       ],
       "winProbabilities": {
@@ -313,57 +313,57 @@
           "pos": 1,
           "teamId": "germany",
           "team": "Germany",
-          "flag": "🇩🇪",
-          "played": 0,
-          "w": 0,
+          "played": 1,
+          "w": 1,
           "d": 0,
           "l": 0,
-          "gf": 0,
-          "ga": 0,
-          "gd": 0,
-          "pts": 0
+          "gf": 7,
+          "ga": 1,
+          "gd": 6,
+          "pts": 3,
+          "flag": "🇩🇪"
         },
         {
           "pos": 2,
           "teamId": "ivorycoast",
           "team": "Ivory Coast",
-          "flag": "🇨🇮",
-          "played": 0,
-          "w": 0,
+          "played": 1,
+          "w": 1,
           "d": 0,
           "l": 0,
-          "gf": 0,
+          "gf": 1,
           "ga": 0,
-          "gd": 0,
-          "pts": 0
+          "gd": 1,
+          "pts": 3,
+          "flag": "🇨🇮"
         },
         {
           "pos": 3,
           "teamId": "ecuador",
           "team": "Ecuador",
-          "flag": "🇪🇨",
-          "played": 0,
+          "played": 1,
           "w": 0,
           "d": 0,
-          "l": 0,
+          "l": 1,
           "gf": 0,
-          "ga": 0,
-          "gd": 0,
-          "pts": 0
+          "ga": 1,
+          "gd": -1,
+          "pts": 0,
+          "flag": "🇪🇨"
         },
         {
           "pos": 4,
           "teamId": "curacao",
           "team": "Curaçao",
-          "flag": "🇨🇼",
-          "played": 0,
+          "played": 1,
           "w": 0,
           "d": 0,
-          "l": 0,
-          "gf": 0,
-          "ga": 0,
-          "gd": 0,
-          "pts": 0
+          "l": 1,
+          "gf": 1,
+          "ga": 7,
+          "gd": -6,
+          "pts": 0,
+          "flag": "🇨🇼"
         }
       ],
       "winProbabilities": {
@@ -377,131 +377,131 @@
       "standings": [
         {
           "pos": 1,
-          "teamId": "netherlands",
-          "team": "Netherlands",
-          "flag": "🇳🇱",
-          "played": 0,
-          "w": 0,
+          "teamId": "sweden",
+          "team": "Sweden",
+          "played": 1,
+          "w": 1,
           "d": 0,
           "l": 0,
-          "gf": 0,
-          "ga": 0,
-          "gd": 0,
-          "pts": 0
+          "gf": 5,
+          "ga": 1,
+          "gd": 4,
+          "pts": 3,
+          "flag": "🇸🇪"
         },
         {
           "pos": 2,
-          "teamId": "sweden",
-          "team": "Sweden",
-          "flag": "🇸🇪",
-          "played": 0,
+          "teamId": "japan",
+          "team": "Japan",
+          "played": 1,
           "w": 0,
-          "d": 0,
+          "d": 1,
           "l": 0,
-          "gf": 0,
-          "ga": 0,
+          "gf": 2,
+          "ga": 2,
           "gd": 0,
-          "pts": 0
+          "pts": 1,
+          "flag": "🇯🇵"
         },
         {
           "pos": 3,
-          "teamId": "tunisia",
-          "team": "Tunisia",
-          "flag": "🇹🇳",
-          "played": 0,
+          "teamId": "netherlands",
+          "team": "Netherlands",
+          "played": 1,
           "w": 0,
-          "d": 0,
+          "d": 1,
           "l": 0,
-          "gf": 0,
-          "ga": 0,
+          "gf": 2,
+          "ga": 2,
           "gd": 0,
-          "pts": 0
+          "pts": 1,
+          "flag": "🇳🇱"
         },
         {
           "pos": 4,
-          "teamId": "japan",
-          "team": "Japan",
-          "flag": "🇯🇵",
-          "played": 0,
+          "teamId": "tunisia",
+          "team": "Tunisia",
+          "played": 1,
           "w": 0,
           "d": 0,
-          "l": 0,
-          "gf": 0,
-          "ga": 0,
-          "gd": 0,
-          "pts": 0
+          "l": 1,
+          "gf": 1,
+          "ga": 5,
+          "gd": -4,
+          "pts": 0,
+          "flag": "🇹🇳"
         }
       ],
       "winProbabilities": {
-        "netherlands": 44,
         "sweden": 28,
-        "tunisia": 1,
-        "japan": 28
+        "japan": 28,
+        "netherlands": 44,
+        "tunisia": 1
       }
     },
     "G": {
       "standings": [
         {
           "pos": 1,
-          "teamId": "belgium",
-          "team": "Belgium",
-          "flag": "🇧🇪",
-          "played": 0,
+          "teamId": "iran",
+          "team": "Iran",
+          "played": 1,
           "w": 0,
-          "d": 0,
+          "d": 1,
           "l": 0,
-          "gf": 0,
-          "ga": 0,
+          "gf": 2,
+          "ga": 2,
           "gd": 0,
-          "pts": 0
+          "pts": 1,
+          "flag": "🇮🇷"
         },
         {
           "pos": 2,
-          "teamId": "iran",
-          "team": "Iran",
-          "flag": "🇮🇷",
-          "played": 0,
+          "teamId": "newzealand",
+          "team": "New Zealand",
+          "played": 1,
           "w": 0,
-          "d": 0,
+          "d": 1,
           "l": 0,
-          "gf": 0,
-          "ga": 0,
+          "gf": 2,
+          "ga": 2,
           "gd": 0,
-          "pts": 0
+          "pts": 1,
+          "flag": "🇳🇿"
         },
         {
           "pos": 3,
-          "teamId": "newzealand",
-          "team": "New Zealand",
-          "flag": "🇳🇿",
-          "played": 0,
+          "teamId": "belgium",
+          "team": "Belgium",
+          "played": 1,
           "w": 0,
-          "d": 0,
+          "d": 1,
           "l": 0,
-          "gf": 0,
-          "ga": 0,
+          "gf": 1,
+          "ga": 1,
           "gd": 0,
-          "pts": 0
+          "pts": 1,
+          "flag": "🇧🇪"
         },
         {
           "pos": 4,
           "teamId": "egypt",
           "team": "Egypt",
-          "flag": "🇪🇬",
-          "played": 0,
+          "played": 1,
           "w": 0,
-          "d": 0,
+          "d": 1,
           "l": 0,
-          "gf": 0,
-          "ga": 0,
+          "gf": 1,
+          "ga": 1,
           "gd": 0,
-          "pts": 0
+          "pts": 1,
+          "flag": "🇪🇬"
         }
       ],
       "winProbabilities": {
-        "belgium": 65,
         "iran": 8,
         "newzealand": 4,
+        "belgium": 65,
         "egypt": 23
       }
     },
@@ -641,9 +641,8 @@
       "standings": [
         {
           "pos": 1,
-          "teamId": "argentina",
-          "team": "Argentina",
-          "flag": "🇦🇷",
+          "teamId": "algeria",
+          "team": "Algeria",
           "played": 0,
           "w": 0,
           "d": 0,
@@ -651,13 +650,13 @@
           "gf": 0,
           "ga": 0,
           "gd": 0,
-          "pts": 0
+          "pts": 0,
+          "flag": "🇩🇿"
         },
         {
           "pos": 2,
-          "teamId": "austria",
-          "team": "Austria",
-          "flag": "🇦🇹",
+          "teamId": "argentina",
+          "team": "Argentina",
           "played": 0,
           "w": 0,
           "d": 0,
@@ -665,13 +664,13 @@
           "gf": 0,
           "ga": 0,
           "gd": 0,
-          "pts": 0
+          "pts": 0,
+          "flag": "🇦🇷"
         },
         {
           "pos": 3,
           "teamId": "jordan",
           "team": "Jordan",
-          "flag": "🇯🇴",
           "played": 0,
           "w": 0,
           "d": 0,
@@ -679,13 +678,13 @@
           "gf": 0,
           "ga": 0,
           "gd": 0,
-          "pts": 0
+          "pts": 0,
+          "flag": "🇯🇴"
         },
         {
           "pos": 4,
-          "teamId": "algeria",
-          "team": "Algeria",
-          "flag": "🇩🇿",
+          "teamId": "austria",
+          "team": "Austria",
           "played": 0,
           "w": 0,
           "d": 0,
@@ -693,14 +692,15 @@
           "gf": 0,
           "ga": 0,
           "gd": 0,
-          "pts": 0
+          "pts": 0,
+          "flag": "🇦🇹"
         }
       ],
       "winProbabilities": {
+        "algeria": 9,
         "argentina": 74,
-        "austria": 19,
         "jordan": 1,
-        "algeria": 9
+        "austria": 19
       }
     },
     "K": {
@@ -896,7 +896,7 @@
       "advanceProbabilities": {
         "r32": 97,
         "r16": 60,
-        "qf": 31,
+        "qf": 30,
         "sf": 11,
         "final": 5,
         "winner": 1,
@@ -1080,7 +1080,7 @@
         "r16": 4,
         "qf": 2,
         "sf": 1,
-        "final": 2,
+        "final": 1,
         "winner": 0,
         "source": "market"
       },
@@ -1571,7 +1571,7 @@
       ],
       "advanceProbabilities": {
         "r32": 84,
-        "r16": 39,
+        "r16": 38,
         "qf": 14,
         "sf": 3,
         "final": 1,
@@ -1750,7 +1750,7 @@
       ],
       "advanceProbabilities": {
         "r32": 66,
-        "r16": 21,
+        "r16": 22,
         "qf": 6,
         "sf": 3,
         "final": 1,
@@ -2175,12 +2175,12 @@
           },
           {
             "group": "G",
-            "likelyTeam": "Egypt",
-            "flag": "🇪🇬",
-            "fifaRank": 34,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
+            "likelyTeam": "Belgium",
+            "flag": "🇧🇪",
+            "fifaRank": 9,
+            "difficulty": 5,
+            "label": "Danger",
+            "color": "#EF4444",
             "note": "3rd-place team from Group G",
             "pct": null
           },
@@ -2644,7 +2644,7 @@
       "advanceProbabilities": {
         "r32": 75,
         "r16": 25,
-        "qf": 8,
+        "qf": 9,
         "sf": 4,
         "final": 2,
         "winner": 0,
@@ -2816,7 +2816,7 @@
       "advanceProbabilities": {
         "r32": 98,
         "r16": 64,
-        "qf": 41,
+        "qf": 36,
         "sf": 15,
         "final": 7,
         "winner": 2,
@@ -3245,7 +3245,7 @@
       ],
       "advanceProbabilities": {
         "r32": 52,
-        "r16": 22,
+        "r16": 23,
         "qf": 12,
         "sf": 6,
         "final": 1,
@@ -3533,7 +3533,7 @@
         "r32": 3,
         "r16": 1,
         "qf": 0,
-        "sf": 1,
+        "sf": 0,
         "final": 0,
         "winner": 0,
         "source": "market"
@@ -4561,7 +4561,7 @@
       "advanceProbabilities": {
         "r32": 81,
         "r16": 36,
-        "qf": 13,
+        "qf": 12,
         "sf": 3,
         "final": 1,
         "winner": 0,
@@ -4647,12 +4647,21 @@
           "matchday": 1,
           "opponent": "New Zealand",
           "opponentFlag": "🇳🇿",
-          "result": null,
-          "score": null,
+          "result": "D",
+          "score": "2-2",
           "date": "2026-06-15",
           "venue": "SoFi Stadium, Los Angeles",
-          "scorers": [],
-          "cards": []
+          "scorers": [
+            "Ramin Rezaeian 32'",
+            "Mohammad Mohebbi 64'"
+          ],
+          "cards": [
+            {
+              "player": "Ehsan Hajsafi",
+              "minute": "89'",
+              "type": "yellow"
+            }
+          ]
         },
         {
           "matchday": 2,
@@ -4692,126 +4701,7 @@
           "city": "Los Angeles · Seattle",
           "venue": "Various venues",
           "date": "Jun 15–26",
-          "detail": "0pts after MD1"
-        },
-        "r32": {
-          "status": "upcoming",
-          "match": 88,
-          "date": "2026-07-03",
-          "city": "Dallas",
-          "venue": "AT&T Stadium",
-          "opponentDesc": "Runner-up Group D"
-        },
-        "r16": {
-          "status": "future",
-          "match": 95,
-          "date": "2026-07-07",
-          "city": "Atlanta",
-          "venue": "Mercedes-Benz Stadium",
-          "opponentDesc": "Winner Match 87"
-        },
-        "qf": {
-          "status": "future",
-          "match": 99,
-          "date": "2026-07-11",
-          "city": "Miami",
-          "venue": "Hard Rock Stadium",
-          "opponentDesc": "Winner Match 95"
-        },
-        "sf": {
-          "status": "future",
-          "match": 102,
-          "date": "2026-07-15",
-          "city": "Atlanta",
-          "venue": "Mercedes-Benz Stadium",
-          "opponentDesc": "Winner QF bracket"
-        },
-        "final": {
-          "status": "future",
-          "match": 104,
-          "date": "2026-07-19",
-          "city": "New Jersey",
-          "venue": "MetLife Stadium",
-          "opponentDesc": "Winner other SF"
-        }
-      },
-      "possibleOpponents": {
-        "r32": [
-          {
-            "group": "D",
-            "likelyTeam": "Australia",
-            "flag": "🇦🇺",
-            "fifaRank": 26,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "Runner-up of Group D",
-            "pct": null
-          }
-        ],
-        "r16": []
-      }
-    },
-    {
-      "id": "newzealand",
-      "name": "New Zealand",
-      "flag": "🇳🇿",
-      "group": "G",
-      "confederation": "OFC",
-      "fifaRank": 86,
-      "eliminated": false,
-      "currentStage": "group_stage",
-      "groupResults": [
-        {
-          "matchday": 1,
-          "opponent": "Iran",
-          "opponentFlag": "🇮🇷",
-          "result": null,
-          "score": null,
-          "date": "2026-06-15",
-          "venue": "SoFi Stadium, Los Angeles",
-          "scorers": [],
-          "cards": []
-        },
-        {
-          "matchday": 2,
-          "opponent": "Egypt",
-          "opponentFlag": "🇪🇬",
-          "result": null,
-          "score": null,
-          "date": "2026-06-21",
-          "venue": "BC Place, Vancouver",
-          "scorers": [],
-          "cards": []
-        },
-        {
-          "matchday": 3,
-          "opponent": "Belgium",
-          "opponentFlag": "🇧🇪",
-          "result": null,
-          "score": null,
-          "date": "2026-06-26",
-          "venue": "BC Place, Vancouver",
-          "scorers": [],
-          "cards": []
-        }
-      ],
-      "advanceProbabilities": {
-        "r32": 30,
-        "r16": 11,
-        "qf": 1,
-        "sf": 2,
-        "final": 2,
-        "winner": 0,
-        "source": "market"
-      },
-      "path": {
-        "group_stage": {
-          "status": "active",
-          "city": "Los Angeles · Vancouver",
-          "venue": "Various venues",
-          "date": "Jun 15–26",
-          "detail": "3pts after MD1"
+          "detail": "1pt after MD1"
         },
         "r32": {
           "status": "upcoming",
@@ -4909,6 +4799,128 @@
             "label": "Favorable",
             "color": "#22C55E",
             "note": "3rd-place team from Group J",
+            "pct": null
+          }
+        ],
+        "r16": []
+      }
+    },
+    {
+      "id": "newzealand",
+      "name": "New Zealand",
+      "flag": "🇳🇿",
+      "group": "G",
+      "confederation": "OFC",
+      "fifaRank": 86,
+      "eliminated": false,
+      "currentStage": "group_stage",
+      "groupResults": [
+        {
+          "matchday": 1,
+          "opponent": "Iran",
+          "opponentFlag": "🇮🇷",
+          "result": "D",
+          "score": "2-2",
+          "date": "2026-06-15",
+          "venue": "SoFi Stadium, Los Angeles",
+          "scorers": [
+            "Elijah Just 7'",
+            "Elijah Just 54'"
+          ],
+          "cards": []
+        },
+        {
+          "matchday": 2,
+          "opponent": "Egypt",
+          "opponentFlag": "🇪🇬",
+          "result": null,
+          "score": null,
+          "date": "2026-06-21",
+          "venue": "BC Place, Vancouver",
+          "scorers": [],
+          "cards": []
+        },
+        {
+          "matchday": 3,
+          "opponent": "Belgium",
+          "opponentFlag": "🇧🇪",
+          "result": null,
+          "score": null,
+          "date": "2026-06-26",
+          "venue": "BC Place, Vancouver",
+          "scorers": [],
+          "cards": []
+        }
+      ],
+      "advanceProbabilities": {
+        "r32": 30,
+        "r16": 11,
+        "qf": 1,
+        "sf": 1,
+        "final": 1,
+        "winner": 0,
+        "source": "market"
+      },
+      "path": {
+        "group_stage": {
+          "status": "active",
+          "city": "Los Angeles · Vancouver",
+          "venue": "Various venues",
+          "date": "Jun 15–26",
+          "detail": "1pt after MD1"
+        },
+        "r32": {
+          "status": "upcoming",
+          "match": 88,
+          "date": "2026-07-03",
+          "city": "Dallas",
+          "venue": "AT&T Stadium",
+          "opponentDesc": "Runner-up Group D"
+        },
+        "r16": {
+          "status": "future",
+          "match": 95,
+          "date": "2026-07-07",
+          "city": "Atlanta",
+          "venue": "Mercedes-Benz Stadium",
+          "opponentDesc": "Winner Match 87"
+        },
+        "qf": {
+          "status": "future",
+          "match": 99,
+          "date": "2026-07-11",
+          "city": "Miami",
+          "venue": "Hard Rock Stadium",
+          "opponentDesc": "Winner Match 95"
+        },
+        "sf": {
+          "status": "future",
+          "match": 102,
+          "date": "2026-07-15",
+          "city": "Atlanta",
+          "venue": "Mercedes-Benz Stadium",
+          "opponentDesc": "Winner QF bracket"
+        },
+        "final": {
+          "status": "future",
+          "match": 104,
+          "date": "2026-07-19",
+          "city": "New Jersey",
+          "venue": "MetLife Stadium",
+          "opponentDesc": "Winner other SF"
+        }
+      },
+      "possibleOpponents": {
+        "r32": [
+          {
+            "group": "D",
+            "likelyTeam": "Australia",
+            "flag": "🇦🇺",
+            "fifaRank": 26,
+            "difficulty": 3,
+            "label": "Moderate",
+            "color": "#F59E0B",
+            "note": "Runner-up of Group D",
             "pct": null
           }
         ],
@@ -5340,7 +5352,7 @@
       ],
       "advanceProbabilities": {
         "r32": 81,
-        "r16": 39,
+        "r16": 38,
         "qf": 22,
         "sf": 9,
         "final": 4,
@@ -5541,12 +5553,12 @@
           },
           {
             "group": "G",
-            "likelyTeam": "Egypt",
-            "flag": "🇪🇬",
-            "fifaRank": 34,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
+            "likelyTeam": "Belgium",
+            "flag": "🇧🇪",
+            "fifaRank": 9,
+            "difficulty": 5,
+            "label": "Danger",
+            "color": "#EF4444",
             "note": "3rd-place team from Group G",
             "pct": null
           },
@@ -6993,7 +7005,7 @@
       "advanceProbabilities": {
         "r32": 97,
         "r16": 77,
-        "qf": 56,
+        "qf": 55,
         "sf": 37,
         "final": 24,
         "winner": 11,
@@ -7109,7 +7121,7 @@
       "advanceProbabilities": {
         "r32": 84,
         "r16": 41,
-        "qf": 19,
+        "qf": 20,
         "sf": 9,
         "final": 4,
         "winner": 1,
@@ -7340,7 +7352,7 @@
       ],
       "advanceProbabilities": {
         "r32": 35,
-        "r16": 10,
+        "r16": 8,
         "qf": 2,
         "sf": 1,
         "final": 0,
