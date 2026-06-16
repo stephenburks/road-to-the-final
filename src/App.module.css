@@ -59,5 +59,10 @@
 	padding-top: 22px;
 	padding-bottom: 0;
 	max-width: 100%;
-	overflow: hidden;
+}
+
+@media (max-width: 580px) {
+	.tabWrapper {
+		overflow: hidden;
+	}
 }
