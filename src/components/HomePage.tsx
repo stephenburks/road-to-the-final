@@ -46,8 +46,7 @@ function enrich(
 	const homeTeam = teams.find(t => t.id === match.homeId)
 	const awayTeam = teams.find(t => t.id === match.awayId)
 
-	const key = `${match.homeId}:${match.awayId}`
-	const live = livePatch instanceof Map ? livePatch.get(key) : null
+	const live = livePatch
 
 	const homeResult = homeTeam?.groupResults?.find(
 		g => g.opponent === match.awayTeam
