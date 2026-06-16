@@ -1,3 +1,4 @@
+import { useMemo } from 'react'
 import type { Team, AppData } from '../types'
 import { getFeederGroup } from '../utils'
 import SectionLabel from './ui/SectionLabel'
@@ -10,17 +11,33 @@ export default function GroupStage({ team, data }: { team: Team; data: AppData }
 	const myGroup = data?.groups?.[team.group]
 	const feeder = getFeederGroup(team, 'r16', data)
 
+	const eliminatedTeamIds = useMemo(() => {
+		const set = new Set<string>()
+		for (const t of (data?.teams ?? [])) {
+			if (t.eliminated) set.add(t.id)
+		}
+		return set
+	}, [data?.teams])
+
 	return (
 		<section className="wrap section" id="groups" aria-labelledby="groups-heading">
 			<SectionLabel text="Group Stage Tracker" />
 			<h2 id="groups-heading" className="sr-only">Group stage standings and results</h2>
 
 			<div className={styles.groupGrid}>
-				{myGroup && <GroupTable groupKey={team.group} groupData={myGroup} highlightTeamId={team.id} />}
+				{myGroup && (
+					<GroupTable
+						groupKey={team.group}
+						groupData={myGroup}
+						highlightTeamId={team.id}
+						eliminatedTeamIds={eliminatedTeamIds}
+					/>
+				)}
 				{feeder && (
 					<FeederGroupPanel
 						feeder={feeder}
 						marginTop={0}
+						eliminatedTeamIds={eliminatedTeamIds}
 						explanation={`The table shows Group ${feeder.key} standings — if ${team.name} wins Group ${team.group}, the winner of Group ${feeder.key} would be their Round of 16 opponent.`}
 					/>
 				)}

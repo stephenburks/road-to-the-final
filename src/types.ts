@@ -167,3 +167,29 @@ export interface Confederation {
 	name: string
 	teams: Team[]
 }
+
+export interface RosterPlayer {
+	id: string
+	displayName: string
+	shortName: string
+	jersey: string
+	position: {
+		abbreviation: string
+		name: string
+	}
+	age: number
+	headshot?: { href: string }
+	statistics: {
+		appearances: number
+		goals: number
+		assists: number
+		shots: number
+		shotsOnTarget: number
+		foulsCommitted: number
+		foulsSuffered: number
+		yellowCards: number
+		redCards: number
+		saves: number
+		goalsConceded: number
+	}
+}

@@ -43,7 +43,27 @@
 	line-height: 1.2;
 	color: var(--text-lo);
 	letter-spacing: -0.02em;
+}
+
+.metaRow {
+	display: flex;
+	align-items: center;
+	gap: 12px;
 	margin-bottom: 2px;
+	flex-wrap: wrap;
+}
+
+.recordBadge {
+	font-family: var(--font-mono);
+	font-size: 11px;
+	font-weight: 700;
+	color: var(--green);
+	background: rgba(34, 197, 94, 0.1);
+	border: 1px solid rgba(34, 197, 94, 0.25);
+	padding: 2px 8px;
+	border-radius: 4px;
+	letter-spacing: 0.04em;
+	flex-shrink: 0;
 }
 
 .subtext {
@@ -118,4 +138,61 @@
 
 @media (max-width: 900px) {
   .statGrid { grid-template-columns: 1fr 1fr; }
+}
+
+.nextMatch {
+	background: rgba(99, 102, 241, 0.06);
+	border: 1px solid rgba(99, 102, 241, 0.2);
+	border-radius: var(--radius);
+	padding: 14px 18px;
+	margin-bottom: 16px;
+	max-width: 480px;
+}
+
+.nextMatchLabel {
+	font-family: var(--font-mono);
+	font-size: 9px;
+	letter-spacing: 0.1em;
+	color: var(--purple);
+	text-transform: uppercase;
+	margin-bottom: 8px;
+}
+
+.nextMatchTeams {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	margin-bottom: 6px;
+}
+
+.nextMatchVs {
+	font-size: 11px;
+	color: var(--text-dim);
+}
+
+.nextMatchOpponent {
+	font-weight: 600;
+	font-size: 14px;
+	color: var(--text-hi);
+}
+
+.nextMatchDetails {
+	font-size: 11px;
+	color: var(--text-dim);
+	font-family: var(--font-mono);
+	display: flex;
+	gap: 12px;
+}
+
+.nextMatchVenue {
+	color: var(--text-lo);
+}
+
+.nextMatchBroadcasts {
+	font-size: 10px;
+	color: var(--amber);
+	font-family: var(--font-mono);
+	margin-top: 5px;
+	padding-top: 5px;
+	border-top: 1px solid rgba(255, 255, 255, 0.04);
 }

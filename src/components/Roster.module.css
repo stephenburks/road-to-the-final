@@ -1,0 +1,160 @@
+.heading {
+	font-family: var(--font-mono);
+	font-size: 11px;
+	font-weight: 600;
+	color: var(--text-lo);
+	text-transform: uppercase;
+	letter-spacing: 0.1em;
+	margin-bottom: 16px;
+}
+
+.groupLabel {
+	font-family: var(--font-mono);
+	font-size: 10px;
+	font-weight: 500;
+	color: var(--text-dim);
+	text-transform: uppercase;
+	letter-spacing: 0.08em;
+	margin-top: 16px;
+	margin-bottom: 10px;
+	display: flex;
+	align-items: center;
+	gap: 6px;
+}
+
+.groupCount {
+	font-size: 9px;
+	color: var(--purple);
+	background: rgba(99, 102, 241, 0.12);
+	padding: 1px 6px;
+	border-radius: 8px;
+	font-weight: 700;
+}
+
+.grid {
+	display: grid;
+	grid-template-columns: repeat(6, 1fr);
+	gap: 10px;
+}
+
+.card {
+	background: var(--surface);
+	border: 1px solid rgba(255, 255, 255, 0.06);
+	border-radius: 8px;
+	padding: 10px 8px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 4px;
+	position: relative;
+	transition: border-color 0.15s;
+}
+
+.card:hover {
+	border-color: rgba(255, 255, 255, 0.12);
+}
+
+.jersey {
+	font-family: var(--font-mono);
+	font-size: 9px;
+	color: var(--text-dim);
+	align-self: flex-start;
+}
+
+.headshot {
+	width: 48px;
+	height: 48px;
+	border-radius: 50%;
+	object-fit: cover;
+	background: rgba(255, 255, 255, 0.04);
+}
+
+.headshotFallback {
+	width: 48px;
+	height: 48px;
+	border-radius: 50%;
+	background: rgba(255, 255, 255, 0.04);
+}
+
+.info {
+	text-align: center;
+}
+
+.name {
+	font-size: 10px;
+	font-family: var(--font-display);
+	color: var(--text);
+	line-height: 1.3;
+	display: block;
+}
+
+.pos {
+	font-size: 9px;
+	font-family: var(--font-mono);
+	color: var(--text-dim);
+}
+
+.goalBadge {
+	position: absolute;
+	top: -4px;
+	right: -4px;
+	background: var(--green);
+	color: #052e16;
+	font-size: 9px;
+	font-weight: 800;
+	font-family: var(--font-mono);
+	min-width: 18px;
+	height: 18px;
+	border-radius: 9px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0 5px;
+}
+
+/* ── Skeleton loading ── */
+.skeleton {
+	pointer-events: none;
+}
+
+.skelJersey {
+	width: 16px;
+	height: 9px;
+	background: rgba(255, 255, 255, 0.06);
+	border-radius: 2px;
+	align-self: flex-start;
+	animation: shimmer 1.5s ease-in-out infinite;
+}
+
+.skelHeadshot {
+	width: 48px;
+	height: 48px;
+	border-radius: 50%;
+	background: rgba(255, 255, 255, 0.06);
+	animation: shimmer 1.5s ease-in-out infinite;
+}
+
+.skelName {
+	width: 56px;
+	height: 10px;
+	background: rgba(255, 255, 255, 0.06);
+	border-radius: 2px;
+	animation: shimmer 1.5s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+	0%, 100% { opacity: 0.4; }
+	50%      { opacity: 0.8; }
+}
+
+@media (max-width: 900px) {
+	.grid { grid-template-columns: repeat(4, 1fr); }
+}
+
+@media (max-width: 600px) {
+	.grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (max-width: 400px) {
+	.grid { grid-template-columns: repeat(2, 1fr); }
+}

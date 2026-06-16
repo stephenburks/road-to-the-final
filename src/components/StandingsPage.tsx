@@ -1,3 +1,4 @@
+import { useMemo } from 'react'
 import type { AppData } from '../types'
 import { GroupTable } from './ui/GroupTable'
 import styles from './StandingsPage.module.css'
@@ -11,6 +12,14 @@ interface StandingsPageProps {
 
 export default function StandingsPage({ data, selectedTeamId }: StandingsPageProps) {
 	const groups = data.groups ?? {}
+
+	const eliminatedTeamIds = useMemo(() => {
+		const set = new Set<string>()
+		for (const t of (data.teams ?? [])) {
+			if (t.eliminated) set.add(t.id)
+		}
+		return set
+	}, [data.teams])
 
 	return (
 		<div className={styles.page}>
@@ -29,6 +38,7 @@ export default function StandingsPage({ data, selectedTeamId }: StandingsPagePro
 								groupKey={letter}
 								groupData={group}
 								highlightTeamId={selectedTeamId}
+								eliminatedTeamIds={eliminatedTeamIds}
 							/>
 						</div>
 					)

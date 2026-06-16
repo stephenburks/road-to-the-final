@@ -1,6 +1,7 @@
 import { STAGE_LABELS } from '../constants'
 import type { Stage, Team, AdvanceProbabilities } from '../types'
 import { daysUntil, formatDate } from '../utils'
+import { useTeamRecord } from '../hooks/useTeamRecord'
 import FlagIcon from './ui/FlagIcon'
 import styles from './Hero.module.css'
 
@@ -56,6 +57,8 @@ export default function Hero({ team, activeStage, isHistorical, groupWinProb }: 
 	const source = ap.source
 	const sourceLabel = isHistorical ? 'As of snapshot' : source === 'market' ? 'Market estimate' : 'Calculated'
 
+	const { record, nextEvent } = useTeamRecord(team.id, isHistorical)
+
 	const eyebrow = getEyebrow(team, activeStage, isHistorical)
 	const heading = getHeading(team)
 	const subhead = getSubhead(path)
@@ -75,7 +78,16 @@ export default function Hero({ team, activeStage, isHistorical, groupWinProb }: 
 						{!team.eliminated && <><FlagIcon code={team.id} flag={team.flag} name={team.name} size={40} />{' '}</>}
 						{heading}
 					</h1>
-					{!team.eliminated && <p className={styles.subhead}>{subhead}</p>}
+					{!team.eliminated && (
+						<div className={styles.metaRow}>
+							{record && (
+								<span className={styles.recordBadge} aria-label={`Record: ${record.summary.replace(/-/g, ' wins, ').replace(/-/g, ' draws, ')} losses`}>
+									{record.summary}
+								</span>
+							)}
+							<p className={styles.subhead}>{subhead}</p>
+						</div>
+					)}
 					<p className={styles.subtext}>{subtext}</p>
 						{conditionalNote && (
 						<div className={styles.conditionalNote} role="note">
@@ -85,7 +97,28 @@ export default function Hero({ team, activeStage, isHistorical, groupWinProb }: 
 					)}
 
 					{!team.eliminated && (
-						<div className={styles.statGrid} role="list" aria-label="Tournament advancement probabilities">
+						<>
+							{nextEvent && (
+								<div className={styles.nextMatch} role="complementary" aria-label="Next match">
+									<div className={styles.nextMatchLabel}>Next Match</div>
+									<div className={styles.nextMatchTeams}>
+										<FlagIcon code={team.id} flag={team.flag} name={team.name} />
+										<span className={styles.nextMatchVs}>vs</span>
+										<FlagIcon flag={nextEvent.opponentFlag} opponent={nextEvent.opponent} />
+										<span className={styles.nextMatchOpponent}>{nextEvent.opponent}</span>
+									</div>
+									<div className={styles.nextMatchDetails}>
+										{nextEvent.date && <span>{formatDate(nextEvent.date)}</span>}
+										{nextEvent.venue && <span className={styles.nextMatchVenue}>{nextEvent.venue}</span>}
+									</div>
+									{nextEvent.broadcasts.length > 0 && (
+										<div className={styles.nextMatchBroadcasts}>
+											{nextEvent.broadcasts.join(' / ')}
+										</div>
+									)}
+								</div>
+							)}
+							<div className={styles.statGrid} role="list" aria-label="Tournament advancement probabilities">
 							{STAT_CARD_DEFS.map(card => (
 								<div
 									key={card.key}
@@ -116,6 +149,7 @@ export default function Hero({ team, activeStage, isHistorical, groupWinProb }: 
 								</div>
 							)}
 						</div>
+							</>
 					)}
 				</div>
 			</section>

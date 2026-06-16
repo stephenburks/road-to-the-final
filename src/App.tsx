@@ -3,11 +3,14 @@ import { DEFAULT_TEAM } from './constants'
 import { resolveActiveStage } from './utils'
 import { useData } from './hooks/useData'
 import { useAppState } from './hooks/useAppState'
+import { useRoster } from './hooks/useRoster'
 import Header           from './components/Header'
 import Nav              from './components/Nav'
 import StageTabs        from './components/StageTabs'
 import Hero             from './components/Hero'
+import Roster           from './components/Roster'
 import RoadBracket      from './components/RoadBracket'
+import GamesToWatch     from './components/GamesToWatch'
 import GroupStage       from './components/GroupStage'
 import OpponentWatchlist from './components/OpponentWatchlist'
 import ScheduledMatches from './components/ScheduledMatches'
@@ -48,6 +51,8 @@ export default function App() {
   const { selectedTeamId, selectedDate, selectedStage, view, isHistorical, handleTeamChange, handleDateChange, handleStageSelect, handleViewChange } = useAppState()
 
   const { liveData, manifest, snapData, loadingSnap, error } = useData(selectedDate)
+
+  const { players: rosterPlayers, loading: rosterLoading } = useRoster(selectedTeamId, isHistorical)
 
   const data       = selectedDate === 'live' ? liveData : snapData
 
@@ -163,8 +168,10 @@ export default function App() {
             <StageTabs team={team} selectedStage={activeStage} onSelect={handleStageSelect} />
           </div>
 
-          <Hero team={team} activeStage={activeStage} isHistorical={isHistorical} groupWinProb={groupWinProb} />
-          <RoadBracket team={team} activeStage={activeStage} onStageSelect={handleStageSelect} />
+			<Hero team={team} activeStage={activeStage} isHistorical={isHistorical} groupWinProb={groupWinProb} />
+			<Roster players={rosterPlayers} loading={rosterLoading} />
+			{!team.eliminated && <GamesToWatch team={team} data={data} />}
+			<RoadBracket team={team} activeStage={activeStage} onStageSelect={handleStageSelect} />
 
           {showGroups && !showElim && <GroupStage team={team} data={data} />}
 

@@ -6,16 +6,22 @@ interface FeederGroupPanelProps {
 	feeder: { key: string; group: GroupData }
 	explanation: string
 	marginTop?: number
+	eliminatedTeamIds?: Set<string>
 }
 
-export default function FeederGroupPanel({ feeder, explanation, marginTop }: FeederGroupPanelProps) {
+export default function FeederGroupPanel({ feeder, explanation, marginTop, eliminatedTeamIds }: FeederGroupPanelProps) {
 	return (
 		<div
 			className={styles.panel}
 			style={marginTop !== undefined ? { marginTop } : undefined}
 		>
 			<div className={styles.explanation}>{explanation}</div>
-			<GroupTable groupKey={feeder.key} groupData={feeder.group} highlightTeamId={null} />
+			<GroupTable
+				groupKey={feeder.key}
+				groupData={feeder.group}
+				highlightTeamId={null}
+				eliminatedTeamIds={eliminatedTeamIds}
+			/>
 		</div>
 	)
 }

@@ -1,3 +1,4 @@
+import { useMemo } from 'react'
 import { STAGE_LABELS } from '../constants'
 import type { Stage, Team, AppData, Scenario } from '../types'
 import { formatDate, getFeederGroup } from '../utils'
@@ -58,6 +59,14 @@ export default function OpponentWatchlist({ team, activeStage, data }: {
 	activeStage: Stage
 	data: AppData
 }) {
+	const eliminatedTeamIds = useMemo(() => {
+		const set = new Set<string>()
+		for (const t of (data?.teams ?? [])) {
+			if (t.eliminated) set.add(t.id)
+		}
+		return set
+	}, [data?.teams])
+
 	const stagePath = team.path?.[activeStage]
 
 	if (activeStage === 'group_stage') return null
@@ -121,6 +130,7 @@ export default function OpponentWatchlist({ team, activeStage, data }: {
 			{r32Feeder && (
 				<FeederGroupPanel
 					feeder={r32Feeder}
+					eliminatedTeamIds={eliminatedTeamIds}
 					explanation={`Potential opponent&rsquo;s group — based on current standings: Group ${r32Feeder.key}`}
 				/>
 			)}
@@ -138,6 +148,7 @@ export default function OpponentWatchlist({ team, activeStage, data }: {
 				<FeederGroupPanel
 					feeder={r16Feeder}
 					marginTop={r16WithPct ? 24 : 0}
+					eliminatedTeamIds={eliminatedTeamIds}
 					explanation={`Potential R16 opponent&rsquo;s group — if ${team.name} wins Group ${team.group}, they face the winner of Group ${r16Feeder.key}`}
 				/>
 			)}
