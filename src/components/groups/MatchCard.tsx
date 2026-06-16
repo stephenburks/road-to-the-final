@@ -23,8 +23,9 @@ interface NeutralMatchCardProps {
 	awayFlag: string
 	awayId: string
 	score: string | null
-	status: 'finished' | 'upcoming'
+	status: 'finished' | 'in_progress' | 'upcoming'
 	date: string
+	clock?: string
 	venue?: string
 	homeScorers: string[]
 	awayScorers: string[]
@@ -82,14 +83,18 @@ export default function MatchCard(props: MatchCardProps) {
 	if (props.mode === 'neutral') {
 		const { homeTeam, homeFlag, homeId, awayTeam, awayFlag, awayId, score, status, date, venue, homeScorers, awayScorers, homeCards, awayCards } = props
 		const isFinished = status === 'finished'
-		const cardClass = isFinished ? styles.cardNeutral : styles.cardUpcoming
+		const isLive = status === 'in_progress'
+		const hasResult = isFinished || isLive
+		const cardClass = isLive ? styles.cardLive : isFinished ? styles.cardNeutral : styles.cardUpcoming
+		const badgeClass = isLive ? styles.badgeLive : isFinished ? styles.badgeD : styles.badgeUpcoming
+		const badgeText = isLive ? (props.clock ? `LIVE ${props.clock}` : 'LIVE') : isFinished ? 'FT' : 'Upcoming'
 
 		return (
 			<div className={`${styles.matchCard} ${cardClass}`}>
 				<div className={styles.matchMeta}>
 					<span>{formatDate(date)}</span>
-					<span className={`${styles.badge} ${isFinished ? styles.badgeD : styles.badgeUpcoming}`}>
-						{isFinished ? 'FT' : 'Upcoming'}
+					<span className={`${styles.badge} ${badgeClass}`}>
+						{badgeText}
 					</span>
 				</div>
 
@@ -100,11 +105,11 @@ export default function MatchCard(props: MatchCardProps) {
 					<FlagIcon code={awayId} flag={awayFlag} name={awayTeam} />
 					<span className={styles.opponentName}>{awayTeam}</span>
 					{score && (
-						<span className={styles.score} aria-label={`Score: ${score}`}>{score}</span>
+						<span className={`${styles.score} ${isLive ? styles.scoreLive : ''}`} aria-label={`Score: ${score}`}>{score}</span>
 					)}
 				</div>
 
-				{isFinished && (
+				{hasResult && (
 					<div className={styles.matchEvents}>
 						<EventColumn
 							flag={homeFlag} teamId={homeId} teamName={homeTeam}
@@ -121,7 +126,7 @@ export default function MatchCard(props: MatchCardProps) {
 					</div>
 				)}
 
-				{!isFinished && venue && <div className={styles.venue}>{venue}</div>}
+				{!hasResult && venue && <div className={styles.venue}>{venue}</div>}
 			</div>
 		)
 	}

@@ -133,8 +133,9 @@ export interface DailyMatch {
 	awayId: string
 	homeScore: number
 	awayScore: number
-	status: 'FINISHED' | 'SCHEDULED'
+	status: 'FINISHED' | 'IN_PROGRESS' | 'SCHEDULED'
 	date: string
+	clock?: string
 }
 
 export interface DailyMatches {

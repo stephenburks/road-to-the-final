@@ -316,10 +316,13 @@ async function fetchESPNEventDetails(dateFrom, dateTo) {
 			const awayId = NAME_TO_ID[awayComp?.team?.displayName] || null;
 
 			// ── Match result extraction ──────────────────────────────────
-			const statusTypeName = competition?.status?.type?.name;
-			const statusCompleted = competition?.status?.type?.completed;
-			const isFinished = statusTypeName === 'STATUS_FULL_TIME' || statusCompleted === true;
-			const matchStatus = isFinished ? 'FINISHED' : 'SCHEDULED';
+			const statusType   = competition?.status?.type;
+			const statusState  = statusType?.state;       // 'pre' | 'in' | 'post'
+			const statusDetail = statusType?.detail;      // e.g. '64'' for live, 'FT' for finished, 'Scheduled' for upcoming
+			const isFinished   = statusState === 'post';
+			const isInProgress = statusState === 'in';
+			const matchStatus  = isFinished ? 'FINISHED' : isInProgress ? 'IN_PROGRESS' : 'SCHEDULED';
+			const matchClock   = isInProgress ? (statusDetail || 'LIVE') : '';
 
 			if (homeId && awayId) {
 				const hScore = parseInt(homeComp?.score, 10) || 0;
@@ -329,7 +332,7 @@ async function fetchESPNEventDetails(dateFrom, dateTo) {
 				if (!matches.has(key)) {
 					matches.set(key, {
 						homeId, awayId, homeScore: hScore, awayScore: aScore,
-						status: matchStatus, date: eventDate,
+						status: matchStatus, date: eventDate, clock: matchClock,
 					});
 				}
 			}
@@ -666,6 +669,11 @@ function buildGroupResults(teamId, group, matchIndex, existingGroupResults = [])
         const myG = isMyTeamHome ? match.homeScore : match.awayScore;
         const opG = isMyTeamHome ? match.awayScore : match.homeScore;
         result = myG > opG ? 'W' : myG < opG ? 'L' : 'D';
+        score  = `${myG}-${opG}`;
+      } else if (match?.status === 'IN_PROGRESS') {
+        const isMyTeamHome = isHome !== matchReversed;
+        const myG = isMyTeamHome ? match.homeScore : match.awayScore;
+        const opG = isMyTeamHome ? match.awayScore : match.homeScore;
         score  = `${myG}-${opG}`;
       }
 
@@ -1267,6 +1275,7 @@ async function main() {
       awayScore: match.awayScore,
       status: match.status,
       date: match.date,
+      clock: match.clock || undefined,
     });
   }
   log(`Daily matches: ${Object.keys(dailyMatches).length} dates, ${Object.values(dailyMatches).reduce((s, a) => s + a.length, 0)} matches`);

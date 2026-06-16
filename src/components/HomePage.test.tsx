@@ -147,6 +147,23 @@ describe('HomePage', () => {
 		expect(screen.getAllByText('No matches scheduled for this date.')).toHaveLength(3)
 	})
 
+	it('shows LIVE badge for in-progress matches', () => {
+		const today = todayStr()
+		const data = createData({
+			[today]: [makeMatch({ date: today, status: 'IN_PROGRESS', homeScore: 1, awayScore: 0 })],
+		})
+		render(
+			<HomePage
+				data={data}
+				selectedTeamId="usa"
+				onTeamChange={vi.fn()}
+				onViewChange={vi.fn()}
+			/>
+		)
+		expect(screen.getByText('LIVE')).toBeInTheDocument()
+		expect(screen.getByLabelText('Score: 1-0')).toBeInTheDocument()
+	})
+
 	it('renders section headings for yesterday, today, tomorrow', () => {
 		render(
 			<HomePage
