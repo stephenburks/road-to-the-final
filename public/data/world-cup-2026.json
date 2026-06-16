@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-16T21:25:09.772Z",
+  "lastUpdated": "2026-06-16T21:37:59.041Z",
   "snapshotDate": "2026-06-16",
   "isHistorical": false,
   "sourceSummary": {
@@ -106,7 +106,7 @@
       "winProbabilities": {
         "mexico": 62,
         "southkorea": 35,
-        "czechia": 3,
+        "czechia": 4,
         "southafrica": 1
       }
     },
@@ -171,7 +171,7 @@
       ],
       "winProbabilities": {
         "canada": 35,
-        "qatar": 4,
+        "qatar": 3,
         "switzerland": 47,
         "bosnia": 16
       }
@@ -632,9 +632,9 @@
         }
       ],
       "winProbabilities": {
-        "france": 80,
-        "iraq": 1,
-        "norway": 19,
+        "france": 82,
+        "iraq": 0,
+        "norway": 18,
         "senegal": 2
       }
     },
@@ -899,7 +899,7 @@
       "advanceProbabilities": {
         "r32": 97,
         "r16": 59,
-        "qf": 31,
+        "qf": 30,
         "sf": 11,
         "final": 6,
         "winner": 1,
@@ -1254,7 +1254,7 @@
       ],
       "advanceProbabilities": {
         "r32": 93,
-        "r16": 46,
+        "r16": 47,
         "qf": 16,
         "sf": 5,
         "final": 2,
@@ -1776,7 +1776,7 @@
       ],
       "advanceProbabilities": {
         "r32": 68,
-        "r16": 18,
+        "r16": 19,
         "qf": 6,
         "sf": 3,
         "final": 1,
@@ -2123,8 +2123,8 @@
       ],
       "advanceProbabilities": {
         "r32": 89,
-        "r16": 54,
-        "qf": 27,
+        "r16": 53,
+        "qf": 25,
         "sf": 10,
         "final": 3,
         "winner": 1,
@@ -2682,7 +2682,7 @@
       ],
       "advanceProbabilities": {
         "r32": 75,
-        "r16": 28,
+        "r16": 26,
         "qf": 9,
         "sf": 3,
         "final": 2,
@@ -2856,7 +2856,7 @@
       ],
       "advanceProbabilities": {
         "r32": 97,
-        "r16": 64,
+        "r16": 65,
         "qf": 34,
         "sf": 14,
         "final": 6,
@@ -3047,10 +3047,10 @@
       ],
       "advanceProbabilities": {
         "r32": 39,
-        "r16": 15,
+        "r16": 16,
         "qf": 5,
         "sf": 2,
-        "final": 2,
+        "final": 1,
         "winner": 0,
         "source": "market"
       },
@@ -3170,7 +3170,7 @@
         "r32": 87,
         "r16": 35,
         "qf": 9,
-        "sf": 4,
+        "sf": 2,
         "final": 1,
         "winner": 0,
         "source": "market"
@@ -3420,8 +3420,8 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 74,
-        "qf": 43,
+        "r16": 73,
+        "qf": 41,
         "sf": 26,
         "final": 14,
         "winner": 6,
@@ -3584,8 +3584,8 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 2,
-        "r16": 2,
+        "r32": 3,
+        "r16": 3,
         "qf": 0,
         "sf": 0,
         "final": 0,
@@ -3847,9 +3847,9 @@
       ],
       "advanceProbabilities": {
         "r32": 79,
-        "r16": 36,
+        "r16": 35,
         "qf": 16,
-        "sf": 6,
+        "sf": 5,
         "final": 2,
         "winner": 0,
         "source": "market"
@@ -3984,10 +3984,10 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 92,
+        "r32": 93,
         "r16": 54,
-        "qf": 36,
-        "sf": 22,
+        "qf": 37,
+        "sf": 21,
         "final": 11,
         "winner": 5,
         "source": "market"
@@ -4106,11 +4106,11 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 86,
+        "r32": 85,
         "r16": 40,
-        "qf": 27,
+        "qf": 26,
         "sf": 12,
-        "final": 4,
+        "final": 5,
         "winner": 2,
         "source": "market"
       },
@@ -4231,7 +4231,7 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 94,
+        "r32": 95,
         "r16": 39,
         "qf": 14,
         "sf": 6,
@@ -4493,7 +4493,7 @@
         "r32": 93,
         "r16": 58,
         "qf": 36,
-        "sf": 14,
+        "sf": 15,
         "final": 6,
         "winner": 2,
         "source": "market"
@@ -4917,7 +4917,7 @@
       ],
       "advanceProbabilities": {
         "r32": 31,
-        "r16": 8,
+        "r16": 9,
         "qf": 2,
         "sf": 2,
         "final": 2,
@@ -5045,7 +5045,7 @@
         "r16": 74,
         "qf": 56,
         "sf": 41,
-        "final": 27,
+        "final": 26,
         "winner": 14,
         "source": "market"
       },
@@ -5168,8 +5168,8 @@
       "advanceProbabilities": {
         "r32": 43,
         "r16": 8,
-        "qf": 7,
-        "sf": 3,
+        "qf": 6,
+        "sf": 4,
         "final": 1,
         "winner": 0,
         "source": "market"
@@ -5294,8 +5294,8 @@
       ],
       "advanceProbabilities": {
         "r32": 43,
-        "r16": 12,
-        "qf": 6,
+        "r16": 11,
+        "qf": 11,
         "sf": 1,
         "final": 1,
         "winner": 0,
@@ -5538,11 +5538,11 @@
       ],
       "advanceProbabilities": {
         "r32": 99,
-        "r16": 83,
+        "r16": 82,
         "qf": 60,
-        "sf": 42,
+        "sf": 41,
         "final": 28,
-        "winner": 20,
+        "winner": 19,
         "source": "market"
       },
       "path": {
@@ -5703,10 +5703,10 @@
       ],
       "advanceProbabilities": {
         "r32": 65,
-        "r16": 34,
-        "qf": 24,
+        "r16": 33,
+        "qf": 21,
         "sf": 7,
-        "final": 2,
+        "final": 3,
         "winner": 1,
         "source": "market"
       },
@@ -5941,7 +5941,7 @@
       ],
       "advanceProbabilities": {
         "r32": 85,
-        "r16": 56,
+        "r16": 57,
         "qf": 31,
         "sf": 15,
         "final": 8,
@@ -6061,8 +6061,8 @@
       "advanceProbabilities": {
         "r32": 97,
         "r16": 69,
-        "qf": 55,
-        "sf": 34,
+        "qf": 54,
+        "sf": 33,
         "final": 20,
         "winner": 10,
         "source": "market"
@@ -6222,7 +6222,7 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 66,
+        "r32": 67,
         "r16": 23,
         "qf": 8,
         "sf": 3,
@@ -6343,7 +6343,7 @@
       "advanceProbabilities": {
         "r32": 81,
         "r16": 28,
-        "qf": 17,
+        "qf": 15,
         "sf": 6,
         "final": 2,
         "winner": 0,
@@ -6460,7 +6460,7 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 20,
+        "r32": 21,
         "r16": 6,
         "qf": 2,
         "sf": 2,
@@ -6580,7 +6580,7 @@
       ],
       "advanceProbabilities": {
         "r32": 97,
-        "r16": 75,
+        "r16": 76,
         "qf": 52,
         "sf": 32,
         "final": 20,
@@ -7219,7 +7219,7 @@
       ],
       "advanceProbabilities": {
         "r32": 84,
-        "r16": 42,
+        "r16": 41,
         "qf": 19,
         "sf": 9,
         "final": 3,
@@ -7338,7 +7338,7 @@
       ],
       "advanceProbabilities": {
         "r32": 49,
-        "r16": 12,
+        "r16": 14,
         "qf": 5,
         "sf": 3,
         "final": 1,
@@ -7456,7 +7456,7 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 34,
+        "r32": 35,
         "r16": 6,
         "qf": 2,
         "sf": 1,
@@ -7976,6 +7976,890 @@
           "Peacock"
         ],
         "time": "2026-06-18T02:00Z"
+      }
+    ],
+    "2026-06-18": [
+      {
+        "homeTeam": "Czechia",
+        "homeFlag": "🇨🇿",
+        "homeId": "czechia",
+        "awayTeam": "South Africa",
+        "awayFlag": "🇿🇦",
+        "awayId": "southafrica",
+        "homeScore": 0,
+        "awayScore": 0,
+        "status": "SCHEDULED",
+        "date": "2026-06-18",
+        "broadcasts": [
+          "FOX",
+          "Tele",
+          "Peacock"
+        ],
+        "time": "2026-06-18T16:00Z"
+      },
+      {
+        "homeTeam": "Switzerland",
+        "homeFlag": "🇨🇭",
+        "homeId": "switzerland",
+        "awayTeam": "Bosnia & Herz.",
+        "awayFlag": "🇧🇦",
+        "awayId": "bosnia",
+        "homeScore": 0,
+        "awayScore": 0,
+        "status": "SCHEDULED",
+        "date": "2026-06-18",
+        "broadcasts": [
+          "FOX",
+          "Tele",
+          "Peacock"
+        ],
+        "time": "2026-06-18T19:00Z"
+      },
+      {
+        "homeTeam": "Canada",
+        "homeFlag": "🇨🇦",
+        "homeId": "canada",
+        "awayTeam": "Qatar",
+        "awayFlag": "🇶🇦",
+        "awayId": "qatar",
+        "homeScore": 0,
+        "awayScore": 0,
+        "status": "SCHEDULED",
+        "date": "2026-06-18",
+        "broadcasts": [
+          "FS1",
+          "Tele",
+          "Peacock"
+        ],
+        "time": "2026-06-18T22:00Z"
+      },
+      {
+        "homeTeam": "Mexico",
+        "homeFlag": "🇲🇽",
+        "homeId": "mexico",
+        "awayTeam": "South Korea",
+        "awayFlag": "🇰🇷",
+        "awayId": "southkorea",
+        "homeScore": 0,
+        "awayScore": 0,
+        "status": "SCHEDULED",
+        "date": "2026-06-18",
+        "broadcasts": [
+          "FOX",
+          "Tele",
+          "Peacock"
+        ],
+        "time": "2026-06-19T01:00Z"
+      }
+    ],
+    "2026-06-19": [
+      {
+        "homeTeam": "USA",
+        "homeFlag": "🇺🇸",
+        "homeId": "usa",
+        "awayTeam": "Australia",
+        "awayFlag": "🇦🇺",
+        "awayId": "australia",
+        "homeScore": 0,
+        "awayScore": 0,
+        "status": "SCHEDULED",
+        "date": "2026-06-19",
+        "broadcasts": [
+          "FOX",
+          "Tele",
+          "Peacock"
+        ],
+        "time": "2026-06-19T19:00Z"
+      },
+      {
+        "homeTeam": "Scotland",
+        "homeFlag": "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
+        "homeId": "scotland",
+        "awayTeam": "Morocco",
+        "awayFlag": "🇲🇦",
+        "awayId": "morocco",
+        "homeScore": 0,
+        "awayScore": 0,
+        "status": "SCHEDULED",
+        "date": "2026-06-19",
+        "broadcasts": [
+          "FOX",
+          "Tele",
+          "Peacock"
+        ],
+        "time": "2026-06-19T22:00Z"
+      },
+      {
+        "homeTeam": "Brazil",
+        "homeFlag": "🇧🇷",
+        "homeId": "brazil",
+        "awayTeam": "Haiti",
+        "awayFlag": "🇭🇹",
+        "awayId": "haiti",
+        "homeScore": 0,
+        "awayScore": 0,
+        "status": "SCHEDULED",
+        "date": "2026-06-19",
+        "broadcasts": [
+          "FOX",
+          "Tele",
+          "Peacock"
+        ],
+        "time": "2026-06-20T00:30Z"
+      },
+      {
+        "homeTeam": "Türkiye",
+        "homeFlag": "🇹🇷",
+        "homeId": "turkey",
+        "awayTeam": "Paraguay",
+        "awayFlag": "🇵🇾",
+        "awayId": "paraguay",
+        "homeScore": 0,
+        "awayScore": 0,
+        "status": "SCHEDULED",
+        "date": "2026-06-19",
+        "broadcasts": [
+          "FS1",
+          "Tele",
+          "Peacock"
+        ],
+        "time": "2026-06-20T03:00Z"
+      }
+    ],
+    "2026-06-20": [
+      {
+        "homeTeam": "Netherlands",
+        "homeFlag": "🇳🇱",
+        "homeId": "netherlands",
+        "awayTeam": "Sweden",
+        "awayFlag": "🇸🇪",
+        "awayId": "sweden",
+        "homeScore": 0,
+        "awayScore": 0,
+        "status": "SCHEDULED",
+        "date": "2026-06-20",
+        "broadcasts": [
+          "FOX",
+          "Tele",
+          "Peacock"
+        ],
+        "time": "2026-06-20T17:00Z"
+      },
+      {
+        "homeTeam": "Germany",
+        "homeFlag": "🇩🇪",
+        "homeId": "germany",
+        "awayTeam": "Ivory Coast",
+        "awayFlag": "🇨🇮",
+        "awayId": "ivorycoast",
+        "homeScore": 0,
+        "awayScore": 0,
+        "status": "SCHEDULED",
+        "date": "2026-06-20",
+        "broadcasts": [
+          "FOX",
+          "Tele",
+          "Peacock"
+        ],
+        "time": "2026-06-20T20:00Z"
+      },
+      {
+        "homeTeam": "Ecuador",
+        "homeFlag": "🇪🇨",
+        "homeId": "ecuador",
+        "awayTeam": "Curaçao",
+        "awayFlag": "🇨🇼",
+        "awayId": "curacao",
+        "homeScore": 0,
+        "awayScore": 0,
+        "status": "SCHEDULED",
+        "date": "2026-06-20",
+        "broadcasts": [
+          "FS1",
+          "Tele",
+          "Peacock"
+        ],
+        "time": "2026-06-21T00:00Z"
+      },
+      {
+        "homeTeam": "Tunisia",
+        "homeFlag": "🇹🇳",
+        "homeId": "tunisia",
+        "awayTeam": "Japan",
+        "awayFlag": "🇯🇵",
+        "awayId": "japan",
+        "homeScore": 0,
+        "awayScore": 0,
+        "status": "SCHEDULED",
+        "date": "2026-06-20",
+        "broadcasts": [
+          "FS1",
+          "Tele",
+          "Peacock"
+        ],
+        "time": "2026-06-21T04:00Z"
+      }
+    ],
+    "2026-06-21": [
+      {
+        "homeTeam": "Spain",
+        "homeFlag": "🇪🇸",
+        "homeId": "spain",
+        "awayTeam": "Saudi Arabia",
+        "awayFlag": "🇸🇦",
+        "awayId": "saudiarabia",
+        "homeScore": 0,
+        "awayScore": 0,
+        "status": "SCHEDULED",
+        "date": "2026-06-21",
+        "broadcasts": [
+          "FOX",
+          "Tele",
+          "Peacock"
+        ],
+        "time": "2026-06-21T16:00Z"
+      },
+      {
+        "homeTeam": "Belgium",
+        "homeFlag": "🇧🇪",
+        "homeId": "belgium",
+        "awayTeam": "Iran",
+        "awayFlag": "🇮🇷",
+        "awayId": "iran",
+        "homeScore": 0,
+        "awayScore": 0,
+        "status": "SCHEDULED",
+        "date": "2026-06-21",
+        "broadcasts": [
+          "FS1",
+          "Tele",
+          "Peacock"
+        ],
+        "time": "2026-06-21T19:00Z"
+      },
+      {
+        "homeTeam": "Uruguay",
+        "homeFlag": "🇺🇾",
+        "homeId": "uruguay",
+        "awayTeam": "Cape Verde",
+        "awayFlag": "🇨🇻",
+        "awayId": "capeverde",
+        "homeScore": 0,
+        "awayScore": 0,
+        "status": "SCHEDULED",
+        "date": "2026-06-21",
+        "broadcasts": [
+          "FS1",
+          "Tele",
+          "Peacock"
+        ],
+        "time": "2026-06-21T22:00Z"
+      },
+      {
+        "homeTeam": "New Zealand",
+        "homeFlag": "🇳🇿",
+        "homeId": "newzealand",
+        "awayTeam": "Egypt",
+        "awayFlag": "🇪🇬",
+        "awayId": "egypt",
+        "homeScore": 0,
+        "awayScore": 0,
+        "status": "SCHEDULED",
+        "date": "2026-06-21",
+        "broadcasts": [
+          "FS1",
+          "Tele",
+          "Peacock"
+        ],
+        "time": "2026-06-22T01:00Z"
+      }
+    ],
+    "2026-06-22": [
+      {
+        "homeTeam": "Argentina",
+        "homeFlag": "🇦🇷",
+        "homeId": "argentina",
+        "awayTeam": "Austria",
+        "awayFlag": "🇦🇹",
+        "awayId": "austria",
+        "homeScore": 0,
+        "awayScore": 0,
+        "status": "SCHEDULED",
+        "date": "2026-06-22",
+        "broadcasts": [
+          "FOX",
+          "Tele",
+          "Peacock"
+        ],
+        "time": "2026-06-22T17:00Z"
+      },
+      {
+        "homeTeam": "France",
+        "homeFlag": "🇫🇷",
+        "homeId": "france",
+        "awayTeam": "Iraq",
+        "awayFlag": "🇮🇶",
+        "awayId": "iraq",
+        "homeScore": 0,
+        "awayScore": 0,
+        "status": "SCHEDULED",
+        "date": "2026-06-22",
+        "broadcasts": [
+          "FOX",
+          "Tele",
+          "Peacock"
+        ],
+        "time": "2026-06-22T21:00Z"
+      },
+      {
+        "homeTeam": "Norway",
+        "homeFlag": "🇳🇴",
+        "homeId": "norway",
+        "awayTeam": "Senegal",
+        "awayFlag": "🇸🇳",
+        "awayId": "senegal",
+        "homeScore": 0,
+        "awayScore": 0,
+        "status": "SCHEDULED",
+        "date": "2026-06-22",
+        "broadcasts": [
+          "FOX",
+          "Tele",
+          "Peacock"
+        ],
+        "time": "2026-06-23T00:00Z"
+      },
+      {
+        "homeTeam": "Jordan",
+        "homeFlag": "🇯🇴",
+        "homeId": "jordan",
+        "awayTeam": "Algeria",
+        "awayFlag": "🇩🇿",
+        "awayId": "algeria",
+        "homeScore": 0,
+        "awayScore": 0,
+        "status": "SCHEDULED",
+        "date": "2026-06-22",
+        "broadcasts": [
+          "FS1",
+          "Tele",
+          "Peacock"
+        ],
+        "time": "2026-06-23T03:00Z"
+      }
+    ],
+    "2026-06-23": [
+      {
+        "homeTeam": "Portugal",
+        "homeFlag": "🇵🇹",
+        "homeId": "portugal",
+        "awayTeam": "Uzbekistan",
+        "awayFlag": "🇺🇿",
+        "awayId": "uzbekistan",
+        "homeScore": 0,
+        "awayScore": 0,
+        "status": "SCHEDULED",
+        "date": "2026-06-23",
+        "broadcasts": [
+          "FOX",
+          "Tele",
+          "Peacock"
+        ],
+        "time": "2026-06-23T17:00Z"
+      },
+      {
+        "homeTeam": "England",
+        "homeFlag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+        "homeId": "england",
+        "awayTeam": "Ghana",
+        "awayFlag": "🇬🇭",
+        "awayId": "ghana",
+        "homeScore": 0,
+        "awayScore": 0,
+        "status": "SCHEDULED",
+        "date": "2026-06-23",
+        "broadcasts": [
+          "FOX",
+          "Tele",
+          "Peacock"
+        ],
+        "time": "2026-06-23T20:00Z"
+      },
+      {
+        "homeTeam": "Panama",
+        "homeFlag": "🇵🇦",
+        "homeId": "panama",
+        "awayTeam": "Croatia",
+        "awayFlag": "🇭🇷",
+        "awayId": "croatia",
+        "homeScore": 0,
+        "awayScore": 0,
+        "status": "SCHEDULED",
+        "date": "2026-06-23",
+        "broadcasts": [
+          "FOX",
+          "Tele",
+          "Peacock"
+        ],
+        "time": "2026-06-23T23:00Z"
+      },
+      {
+        "homeTeam": "Colombia",
+        "homeFlag": "🇨🇴",
+        "homeId": "colombia",
+        "awayTeam": "DR Congo",
+        "awayFlag": "🇨🇩",
+        "awayId": "drcongo",
+        "homeScore": 0,
+        "awayScore": 0,
+        "status": "SCHEDULED",
+        "date": "2026-06-23",
+        "broadcasts": [
+          "FS1",
+          "Tele",
+          "Peacock"
+        ],
+        "time": "2026-06-24T02:00Z"
+      }
+    ],
+    "2026-06-24": [
+      {
+        "homeTeam": "Bosnia & Herz.",
+        "homeFlag": "🇧🇦",
+        "homeId": "bosnia",
+        "awayTeam": "Qatar",
+        "awayFlag": "🇶🇦",
+        "awayId": "qatar",
+        "homeScore": 0,
+        "awayScore": 0,
+        "status": "SCHEDULED",
+        "date": "2026-06-24",
+        "broadcasts": [
+          "FS1",
+          "Tele",
+          "Peacock"
+        ],
+        "time": "2026-06-24T19:00Z"
+      },
+      {
+        "homeTeam": "Switzerland",
+        "homeFlag": "🇨🇭",
+        "homeId": "switzerland",
+        "awayTeam": "Canada",
+        "awayFlag": "🇨🇦",
+        "awayId": "canada",
+        "homeScore": 0,
+        "awayScore": 0,
+        "status": "SCHEDULED",
+        "date": "2026-06-24",
+        "broadcasts": [
+          "FOX",
+          "Tele",
+          "Peacock"
+        ],
+        "time": "2026-06-24T19:00Z"
+      },
+      {
+        "homeTeam": "Morocco",
+        "homeFlag": "🇲🇦",
+        "homeId": "morocco",
+        "awayTeam": "Haiti",
+        "awayFlag": "🇭🇹",
+        "awayId": "haiti",
+        "homeScore": 0,
+        "awayScore": 0,
+        "status": "SCHEDULED",
+        "date": "2026-06-24",
+        "broadcasts": [
+          "FS1",
+          "Tele",
+          "Peacock"
+        ],
+        "time": "2026-06-24T22:00Z"
+      },
+      {
+        "homeTeam": "Scotland",
+        "homeFlag": "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
+        "homeId": "scotland",
+        "awayTeam": "Brazil",
+        "awayFlag": "🇧🇷",
+        "awayId": "brazil",
+        "homeScore": 0,
+        "awayScore": 0,
+        "status": "SCHEDULED",
+        "date": "2026-06-24",
+        "broadcasts": [
+          "FOX",
+          "Tele",
+          "Peacock"
+        ],
+        "time": "2026-06-24T22:00Z"
+      },
+      {
+        "homeTeam": "Czechia",
+        "homeFlag": "🇨🇿",
+        "homeId": "czechia",
+        "awayTeam": "Mexico",
+        "awayFlag": "🇲🇽",
+        "awayId": "mexico",
+        "homeScore": 0,
+        "awayScore": 0,
+        "status": "SCHEDULED",
+        "date": "2026-06-24",
+        "broadcasts": [
+          "FOX",
+          "Tele",
+          "Peacock"
+        ],
+        "time": "2026-06-25T01:00Z"
+      },
+      {
+        "homeTeam": "South Africa",
+        "homeFlag": "🇿🇦",
+        "homeId": "southafrica",
+        "awayTeam": "South Korea",
+        "awayFlag": "🇰🇷",
+        "awayId": "southkorea",
+        "homeScore": 0,
+        "awayScore": 0,
+        "status": "SCHEDULED",
+        "date": "2026-06-24",
+        "broadcasts": [
+          "FS1",
+          "Tele",
+          "Peacock"
+        ],
+        "time": "2026-06-25T01:00Z"
+      }
+    ],
+    "2026-06-25": [
+      {
+        "homeTeam": "Curaçao",
+        "homeFlag": "🇨🇼",
+        "homeId": "curacao",
+        "awayTeam": "Ivory Coast",
+        "awayFlag": "🇨🇮",
+        "awayId": "ivorycoast",
+        "homeScore": 0,
+        "awayScore": 0,
+        "status": "SCHEDULED",
+        "date": "2026-06-25",
+        "broadcasts": [
+          "FS1",
+          "Tele",
+          "Peacock"
+        ],
+        "time": "2026-06-25T20:00Z"
+      },
+      {
+        "homeTeam": "Ecuador",
+        "homeFlag": "🇪🇨",
+        "homeId": "ecuador",
+        "awayTeam": "Germany",
+        "awayFlag": "🇩🇪",
+        "awayId": "germany",
+        "homeScore": 0,
+        "awayScore": 0,
+        "status": "SCHEDULED",
+        "date": "2026-06-25",
+        "broadcasts": [
+          "FOX",
+          "Tele",
+          "Peacock"
+        ],
+        "time": "2026-06-25T20:00Z"
+      },
+      {
+        "homeTeam": "Japan",
+        "homeFlag": "🇯🇵",
+        "homeId": "japan",
+        "awayTeam": "Sweden",
+        "awayFlag": "🇸🇪",
+        "awayId": "sweden",
+        "homeScore": 0,
+        "awayScore": 0,
+        "status": "SCHEDULED",
+        "date": "2026-06-25",
+        "broadcasts": [
+          "FS1",
+          "Tele",
+          "Peacock"
+        ],
+        "time": "2026-06-25T23:00Z"
+      },
+      {
+        "homeTeam": "Tunisia",
+        "homeFlag": "🇹🇳",
+        "homeId": "tunisia",
+        "awayTeam": "Netherlands",
+        "awayFlag": "🇳🇱",
+        "awayId": "netherlands",
+        "homeScore": 0,
+        "awayScore": 0,
+        "status": "SCHEDULED",
+        "date": "2026-06-25",
+        "broadcasts": [
+          "FOX",
+          "Tele",
+          "Peacock"
+        ],
+        "time": "2026-06-25T23:00Z"
+      },
+      {
+        "homeTeam": "Paraguay",
+        "homeFlag": "🇵🇾",
+        "homeId": "paraguay",
+        "awayTeam": "Australia",
+        "awayFlag": "🇦🇺",
+        "awayId": "australia",
+        "homeScore": 0,
+        "awayScore": 0,
+        "status": "SCHEDULED",
+        "date": "2026-06-25",
+        "broadcasts": [
+          "FS1",
+          "Tele",
+          "Peacock"
+        ],
+        "time": "2026-06-26T02:00Z"
+      },
+      {
+        "homeTeam": "Türkiye",
+        "homeFlag": "🇹🇷",
+        "homeId": "turkey",
+        "awayTeam": "USA",
+        "awayFlag": "🇺🇸",
+        "awayId": "usa",
+        "homeScore": 0,
+        "awayScore": 0,
+        "status": "SCHEDULED",
+        "date": "2026-06-25",
+        "broadcasts": [
+          "FOX",
+          "Tele",
+          "Peacock"
+        ],
+        "time": "2026-06-26T02:00Z"
+      }
+    ],
+    "2026-06-26": [
+      {
+        "homeTeam": "Norway",
+        "homeFlag": "🇳🇴",
+        "homeId": "norway",
+        "awayTeam": "France",
+        "awayFlag": "🇫🇷",
+        "awayId": "france",
+        "homeScore": 0,
+        "awayScore": 0,
+        "status": "SCHEDULED",
+        "date": "2026-06-26",
+        "broadcasts": [
+          "FOX",
+          "Tele",
+          "Peacock"
+        ],
+        "time": "2026-06-26T19:00Z"
+      },
+      {
+        "homeTeam": "Senegal",
+        "homeFlag": "🇸🇳",
+        "homeId": "senegal",
+        "awayTeam": "Iraq",
+        "awayFlag": "🇮🇶",
+        "awayId": "iraq",
+        "homeScore": 0,
+        "awayScore": 0,
+        "status": "SCHEDULED",
+        "date": "2026-06-26",
+        "broadcasts": [
+          "FS1",
+          "Tele",
+          "Peacock"
+        ],
+        "time": "2026-06-26T19:00Z"
+      },
+      {
+        "homeTeam": "Cape Verde",
+        "homeFlag": "🇨🇻",
+        "homeId": "capeverde",
+        "awayTeam": "Saudi Arabia",
+        "awayFlag": "🇸🇦",
+        "awayId": "saudiarabia",
+        "homeScore": 0,
+        "awayScore": 0,
+        "status": "SCHEDULED",
+        "date": "2026-06-26",
+        "broadcasts": [
+          "FS1",
+          "Tele",
+          "Peacock"
+        ],
+        "time": "2026-06-27T00:00Z"
+      },
+      {
+        "homeTeam": "Uruguay",
+        "homeFlag": "🇺🇾",
+        "homeId": "uruguay",
+        "awayTeam": "Spain",
+        "awayFlag": "🇪🇸",
+        "awayId": "spain",
+        "homeScore": 0,
+        "awayScore": 0,
+        "status": "SCHEDULED",
+        "date": "2026-06-26",
+        "broadcasts": [
+          "FOX",
+          "Tele",
+          "Peacock"
+        ],
+        "time": "2026-06-27T00:00Z"
+      },
+      {
+        "homeTeam": "Egypt",
+        "homeFlag": "🇪🇬",
+        "homeId": "egypt",
+        "awayTeam": "Iran",
+        "awayFlag": "🇮🇷",
+        "awayId": "iran",
+        "homeScore": 0,
+        "awayScore": 0,
+        "status": "SCHEDULED",
+        "date": "2026-06-26",
+        "broadcasts": [
+          "FS1",
+          "Tele",
+          "Peacock"
+        ],
+        "time": "2026-06-27T03:00Z"
+      },
+      {
+        "homeTeam": "New Zealand",
+        "homeFlag": "🇳🇿",
+        "homeId": "newzealand",
+        "awayTeam": "Belgium",
+        "awayFlag": "🇧🇪",
+        "awayId": "belgium",
+        "homeScore": 0,
+        "awayScore": 0,
+        "status": "SCHEDULED",
+        "date": "2026-06-26",
+        "broadcasts": [
+          "FOX",
+          "Tele",
+          "Peacock"
+        ],
+        "time": "2026-06-27T03:00Z"
+      }
+    ],
+    "2026-06-27": [
+      {
+        "homeTeam": "Croatia",
+        "homeFlag": "🇭🇷",
+        "homeId": "croatia",
+        "awayTeam": "Ghana",
+        "awayFlag": "🇬🇭",
+        "awayId": "ghana",
+        "homeScore": 0,
+        "awayScore": 0,
+        "status": "SCHEDULED",
+        "date": "2026-06-27",
+        "broadcasts": [
+          "FS1",
+          "Tele",
+          "Peacock"
+        ],
+        "time": "2026-06-27T21:00Z"
+      },
+      {
+        "homeTeam": "Panama",
+        "homeFlag": "🇵🇦",
+        "homeId": "panama",
+        "awayTeam": "England",
+        "awayFlag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+        "awayId": "england",
+        "homeScore": 0,
+        "awayScore": 0,
+        "status": "SCHEDULED",
+        "date": "2026-06-27",
+        "broadcasts": [
+          "FOX",
+          "Tele",
+          "Peacock"
+        ],
+        "time": "2026-06-27T21:00Z"
+      },
+      {
+        "homeTeam": "Colombia",
+        "homeFlag": "🇨🇴",
+        "homeId": "colombia",
+        "awayTeam": "Portugal",
+        "awayFlag": "🇵🇹",
+        "awayId": "portugal",
+        "homeScore": 0,
+        "awayScore": 0,
+        "status": "SCHEDULED",
+        "date": "2026-06-27",
+        "broadcasts": [
+          "FOX",
+          "Tele",
+          "Peacock"
+        ],
+        "time": "2026-06-27T23:30Z"
+      },
+      {
+        "homeTeam": "DR Congo",
+        "homeFlag": "🇨🇩",
+        "homeId": "drcongo",
+        "awayTeam": "Uzbekistan",
+        "awayFlag": "🇺🇿",
+        "awayId": "uzbekistan",
+        "homeScore": 0,
+        "awayScore": 0,
+        "status": "SCHEDULED",
+        "date": "2026-06-27",
+        "broadcasts": [
+          "FS1",
+          "Tele",
+          "Peacock"
+        ],
+        "time": "2026-06-27T23:30Z"
+      },
+      {
+        "homeTeam": "Algeria",
+        "homeFlag": "🇩🇿",
+        "homeId": "algeria",
+        "awayTeam": "Austria",
+        "awayFlag": "🇦🇹",
+        "awayId": "austria",
+        "homeScore": 0,
+        "awayScore": 0,
+        "status": "SCHEDULED",
+        "date": "2026-06-27",
+        "broadcasts": [
+          "FS1",
+          "Tele",
+          "Peacock"
+        ],
+        "time": "2026-06-28T02:00Z"
+      },
+      {
+        "homeTeam": "Jordan",
+        "homeFlag": "🇯🇴",
+        "homeId": "jordan",
+        "awayTeam": "Argentina",
+        "awayFlag": "🇦🇷",
+        "awayId": "argentina",
+        "homeScore": 0,
+        "awayScore": 0,
+        "status": "SCHEDULED",
+        "date": "2026-06-27",
+        "broadcasts": [
+          "FOX",
+          "Tele",
+          "Peacock"
+        ],
+        "time": "2026-06-28T02:00Z"
       }
     ]
   }

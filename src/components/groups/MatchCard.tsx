@@ -22,6 +22,7 @@ interface TeamMatchCardProps {
 		broadcasts?: string[]
 	}
 	matchTime?: string
+	matchBroadcasts?: string[]
 }
 
 // ── Neutral mode (used by HomePage) ──
@@ -217,9 +218,9 @@ export default function MatchCard(props: MatchCardProps) {
 				</div>
 			)}
 
-			{(liveData?.broadcasts && liveData.broadcasts.length > 0 && !match.result) && (
+			{((liveData?.broadcasts?.length ?? 0) > 0 || (props.matchBroadcasts?.length ?? 0) > 0) && !match.result && (
 					<div className={styles.matchBroadcasts}>
-						{liveData.broadcasts.join(' / ')}
+						{(liveData?.broadcasts ?? props.matchBroadcasts ?? []).join(' / ')}
 					</div>
 				)}
 

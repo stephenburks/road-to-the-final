@@ -233,11 +233,6 @@ function yesterdayStr() {
   d.setDate(d.getDate() - 1);
   return d.toISOString().split('T')[0];
 }
-function tomorrowStr() {
-  const d = new Date();
-  d.setDate(d.getDate() + 1);
-  return d.toISOString().split('T')[0];
-}
 function fmtLabel(dateStr) {
   return new Date(dateStr + 'T12:00:00Z').toLocaleDateString('en-US', {
     month: 'short', day: 'numeric', timeZone: 'UTC',
@@ -1083,8 +1078,9 @@ async function main() {
   const polyData = await fetchPolymarketAll();
 
   const TOURNAMENT_START_ESPN = '2026-06-11';
+  const TOURNAMENT_END_ESPN   = '2026-06-27'; // full group stage
   const { matches: espnMatches, scorers: espnScorers, cards: espnCards, activeTeams: espnActiveTeams }
-    = await fetchESPNEventDetails(TOURNAMENT_START_ESPN, tomorrowStr());
+    = await fetchESPNEventDetails(TOURNAMENT_START_ESPN, TOURNAMENT_END_ESPN);
 
   // Normalize all ESPN UTC dates to local venue dates
   normalizeESPNCalendarDates(espnMatches, espnScorers, espnCards);

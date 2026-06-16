@@ -52,6 +52,15 @@ export default function GroupStage({ team, data }: { team: Team; data: AppData }
 		return m?.time
 	}
 
+	const resolveBroadcasts = (opponentName: string, matchDate: string) => {
+		const daily = data.dailyMatches?.[matchDate]
+		if (!daily) return undefined
+		const oppTeam = data.teams?.find(t => t.name === opponentName)
+		if (!oppTeam) return undefined
+		const m = daily.find(d => (d.homeId === team.id && d.awayId === oppTeam.id) || (d.homeId === oppTeam.id && d.awayId === team.id))
+		return m?.broadcasts
+	}
+
 	return (
 		<section className="wrap section" id="groups" aria-labelledby="groups-heading">
 			<SectionLabel text="Group Stage Tracker" />
@@ -89,12 +98,14 @@ export default function GroupStage({ team, data }: { team: Team; data: AppData }
 				{(team.groupResults ?? []).map((match, i) => (
 					<MatchCard
 						key={i}
+						mode="team"
 						match={match}
 						teamFlag={team.flag}
 						teamId={team.id}
 						teams={data.teams}
 						liveData={resolveLiveData(match.opponent)}
 						matchTime={resolveTime(match.opponent, match.date)}
+						matchBroadcasts={resolveBroadcasts(match.opponent, match.date)}
 					/>
 				))}
 			</div>
