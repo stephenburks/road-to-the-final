@@ -122,7 +122,9 @@ export default function Hero({ team, activeStage, isHistorical, groupWinProb }: 
 				</div>
 			)}
 			<div className={styles.nextMatchDetails}>
-				{nextEvent.date && <span>{formatDate(nextEvent.date)}</span>}
+				{nextEvent.date && (
+					<span>{formatDate(nextEvent.date)} · {new Date(nextEvent.date).toLocaleTimeString([], { hour: 'numeric', minute: '2-digit', timeZoneName: 'short' })}</span>
+				)}
 				{nextEvent.venue && <span className={styles.nextMatchVenue}>{nextEvent.venue}</span>}
 			</div>
 			{nextEvent.broadcasts.length > 0 && (
