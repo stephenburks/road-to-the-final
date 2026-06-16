@@ -137,7 +137,7 @@ export default function MatchCard(props: MatchCardProps) {
 					</div>
 				)}
 
-				{broadcasts && broadcasts.length > 0 && (
+				{broadcasts && broadcasts.length > 0 && !isFinished && (
 					<div className={styles.matchBroadcasts}>
 						{broadcasts.join(' / ')}
 					</div>
@@ -209,7 +209,7 @@ export default function MatchCard(props: MatchCardProps) {
 				</div>
 			)}
 
-			{(liveData?.broadcasts && liveData.broadcasts.length > 0) && (
+			{(liveData?.broadcasts && liveData.broadcasts.length > 0 && !match.result) && (
 					<div className={styles.matchBroadcasts}>
 						{liveData.broadcasts.join(' / ')}
 					</div>
