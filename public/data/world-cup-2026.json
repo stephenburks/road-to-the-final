@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-16T21:10:20.340Z",
+  "lastUpdated": "2026-06-16T21:24:01.834Z",
   "snapshotDate": "2026-06-16",
   "isHistorical": false,
   "sourceSummary": {
@@ -500,7 +500,7 @@
         }
       ],
       "winProbabilities": {
-        "iran": 8,
+        "iran": 7,
         "newzealand": 4,
         "belgium": 63,
         "egypt": 27
@@ -632,9 +632,9 @@
         }
       ],
       "winProbabilities": {
-        "france": 79,
+        "france": 80,
         "iraq": 1,
-        "norway": 18,
+        "norway": 19,
         "senegal": 2
       }
     },
@@ -901,7 +901,7 @@
         "r16": 59,
         "qf": 31,
         "sf": 11,
-        "final": 5,
+        "final": 6,
         "winner": 1,
         "source": "market"
       },
@@ -1254,9 +1254,9 @@
       ],
       "advanceProbabilities": {
         "r32": 93,
-        "r16": 45,
+        "r16": 46,
         "qf": 16,
-        "sf": 6,
+        "sf": 5,
         "final": 2,
         "winner": 0,
         "source": "market"
@@ -1953,7 +1953,7 @@
       "advanceProbabilities": {
         "r32": 25,
         "r16": 5,
-        "qf": 2,
+        "qf": 3,
         "sf": 1,
         "final": 1,
         "winner": 0,
@@ -2123,7 +2123,7 @@
       ],
       "advanceProbabilities": {
         "r32": 89,
-        "r16": 53,
+        "r16": 54,
         "qf": 27,
         "sf": 10,
         "final": 3,
@@ -2298,7 +2298,7 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 95,
+        "r32": 96,
         "r16": 66,
         "qf": 47,
         "sf": 23,
@@ -2681,7 +2681,7 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 76,
+        "r32": 75,
         "r16": 28,
         "qf": 9,
         "sf": 3,
@@ -3169,7 +3169,7 @@
       "advanceProbabilities": {
         "r32": 87,
         "r16": 35,
-        "qf": 10,
+        "qf": 9,
         "sf": 4,
         "final": 1,
         "winner": 0,
@@ -3849,7 +3849,7 @@
         "r32": 79,
         "r16": 36,
         "qf": 16,
-        "sf": 5,
+        "sf": 6,
         "final": 2,
         "winner": 0,
         "source": "market"
@@ -4359,7 +4359,7 @@
       ],
       "advanceProbabilities": {
         "r32": 8,
-        "r16": 5,
+        "r16": 4,
         "qf": 2,
         "sf": 1,
         "final": 1,
@@ -4491,9 +4491,9 @@
       ],
       "advanceProbabilities": {
         "r32": 93,
-        "r16": 57,
+        "r16": 58,
         "qf": 36,
-        "sf": 15,
+        "sf": 14,
         "final": 6,
         "winner": 2,
         "source": "market"
@@ -4622,7 +4622,7 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 84,
+        "r32": 83,
         "r16": 36,
         "qf": 12,
         "sf": 3,
@@ -4917,7 +4917,7 @@
       ],
       "advanceProbabilities": {
         "r32": 31,
-        "r16": 9,
+        "r16": 8,
         "qf": 2,
         "sf": 2,
         "final": 2,
@@ -5168,7 +5168,7 @@
       "advanceProbabilities": {
         "r32": 43,
         "r16": 8,
-        "qf": 8,
+        "qf": 7,
         "sf": 3,
         "final": 1,
         "winner": 0,
@@ -5415,7 +5415,7 @@
       ],
       "advanceProbabilities": {
         "r32": 78,
-        "r16": 39,
+        "r16": 40,
         "qf": 22,
         "sf": 6,
         "final": 4,
@@ -5539,10 +5539,10 @@
       "advanceProbabilities": {
         "r32": 99,
         "r16": 83,
-        "qf": 59,
-        "sf": 40,
+        "qf": 60,
+        "sf": 42,
         "final": 28,
-        "winner": 19,
+        "winner": 20,
         "source": "market"
       },
       "path": {
@@ -5702,9 +5702,9 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 62,
+        "r32": 65,
         "r16": 34,
-        "qf": 18,
+        "qf": 24,
         "sf": 7,
         "final": 2,
         "winner": 1,
@@ -5821,8 +5821,8 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 11,
-        "r16": 11,
+        "r32": 12,
+        "r16": 12,
         "qf": 2,
         "sf": 0,
         "final": 0,
@@ -5940,8 +5940,8 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 87,
-        "r16": 58,
+        "r32": 85,
+        "r16": 56,
         "qf": 31,
         "sf": 15,
         "final": 8,
@@ -6061,7 +6061,7 @@
       "advanceProbabilities": {
         "r32": 97,
         "r16": 69,
-        "qf": 54,
+        "qf": 55,
         "sf": 34,
         "final": 20,
         "winner": 10,
@@ -6343,7 +6343,7 @@
       "advanceProbabilities": {
         "r32": 81,
         "r16": 28,
-        "qf": 14,
+        "qf": 17,
         "sf": 6,
         "final": 2,
         "winner": 0,
@@ -7338,10 +7338,10 @@
       ],
       "advanceProbabilities": {
         "r32": 49,
-        "r16": 13,
+        "r16": 12,
         "qf": 5,
         "sf": 3,
-        "final": 2,
+        "final": 1,
         "winner": 0,
         "source": "market"
       },
@@ -7456,7 +7456,7 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 35,
+        "r32": 34,
         "r16": 6,
         "qf": 2,
         "sf": 1,
@@ -7548,7 +7548,8 @@
           "FOX",
           "Tele",
           "Peacock"
-        ]
+        ],
+        "time": "2026-06-11T19:00Z"
       },
       {
         "homeTeam": "South Korea",
@@ -7565,7 +7566,8 @@
           "FS1",
           "Tele",
           "Peacock"
-        ]
+        ],
+        "time": "2026-06-12T02:00Z"
       }
     ],
     "2026-06-12": [
@@ -7584,7 +7586,8 @@
           "FOX",
           "Tele",
           "Peacock"
-        ]
+        ],
+        "time": "2026-06-12T19:00Z"
       },
       {
         "homeTeam": "USA",
@@ -7601,7 +7604,8 @@
           "FOX",
           "Tele",
           "Peacock"
-        ]
+        ],
+        "time": "2026-06-13T01:00Z"
       }
     ],
     "2026-06-13": [
@@ -7620,7 +7624,8 @@
           "FOX",
           "Tele",
           "Peacock"
-        ]
+        ],
+        "time": "2026-06-13T19:00Z"
       },
       {
         "homeTeam": "Brazil",
@@ -7637,7 +7642,8 @@
           "FOX",
           "Tele",
           "Peacock"
-        ]
+        ],
+        "time": "2026-06-13T22:00Z"
       },
       {
         "homeTeam": "Haiti",
@@ -7654,7 +7660,8 @@
           "FOX",
           "Tele",
           "Peacock"
-        ]
+        ],
+        "time": "2026-06-14T01:00Z"
       },
       {
         "homeTeam": "Australia",
@@ -7671,7 +7678,8 @@
           "FS1",
           "Tele",
           "Peacock"
-        ]
+        ],
+        "time": "2026-06-14T04:00Z"
       }
     ],
     "2026-06-14": [
@@ -7690,7 +7698,8 @@
           "FOX",
           "Tele",
           "Peacock"
-        ]
+        ],
+        "time": "2026-06-14T17:00Z"
       },
       {
         "homeTeam": "Netherlands",
@@ -7707,7 +7716,8 @@
           "FOX",
           "Tele",
           "Peacock"
-        ]
+        ],
+        "time": "2026-06-14T20:00Z"
       },
       {
         "homeTeam": "Ivory Coast",
@@ -7724,7 +7734,8 @@
           "FS1",
           "Tele",
           "Peacock"
-        ]
+        ],
+        "time": "2026-06-14T23:00Z"
       },
       {
         "homeTeam": "Sweden",
@@ -7741,7 +7752,8 @@
           "FS1",
           "Tele",
           "Peacock"
-        ]
+        ],
+        "time": "2026-06-15T02:00Z"
       }
     ],
     "2026-06-15": [
@@ -7760,7 +7772,8 @@
           "FOX",
           "Tele",
           "Peacock"
-        ]
+        ],
+        "time": "2026-06-15T16:00Z"
       },
       {
         "homeTeam": "Belgium",
@@ -7777,7 +7790,8 @@
           "FOX",
           "Tele",
           "Peacock"
-        ]
+        ],
+        "time": "2026-06-15T19:00Z"
       },
       {
         "homeTeam": "Saudi Arabia",
@@ -7794,7 +7808,8 @@
           "FS1",
           "Tele",
           "Peacock"
-        ]
+        ],
+        "time": "2026-06-15T22:00Z"
       },
       {
         "homeTeam": "Iran",
@@ -7811,7 +7826,8 @@
           "FS1",
           "Tele",
           "Peacock"
-        ]
+        ],
+        "time": "2026-06-16T01:00Z"
       }
     ],
     "2026-06-16": [
@@ -7830,7 +7846,8 @@
           "FOX",
           "Tele",
           "Peacock"
-        ]
+        ],
+        "time": "2026-06-16T19:00Z"
       },
       {
         "homeTeam": "Iraq",
@@ -7847,7 +7864,8 @@
           "FOX",
           "Tele",
           "Peacock"
-        ]
+        ],
+        "time": "2026-06-16T22:00Z"
       },
       {
         "homeTeam": "Argentina",
@@ -7864,7 +7882,8 @@
           "FOX",
           "Tele",
           "Peacock"
-        ]
+        ],
+        "time": "2026-06-17T01:00Z"
       },
       {
         "homeTeam": "Austria",
@@ -7881,7 +7900,8 @@
           "FS1",
           "Tele",
           "Peacock"
-        ]
+        ],
+        "time": "2026-06-17T04:00Z"
       }
     ],
     "2026-06-17": [
@@ -7900,7 +7920,8 @@
           "FOX",
           "Tele",
           "Peacock"
-        ]
+        ],
+        "time": "2026-06-17T17:00Z"
       },
       {
         "homeTeam": "England",
@@ -7917,7 +7938,8 @@
           "FOX",
           "Tele",
           "Peacock"
-        ]
+        ],
+        "time": "2026-06-17T20:00Z"
       },
       {
         "homeTeam": "Ghana",
@@ -7934,7 +7956,8 @@
           "FS1",
           "Tele",
           "Peacock"
-        ]
+        ],
+        "time": "2026-06-17T23:00Z"
       },
       {
         "homeTeam": "Uzbekistan",
@@ -7951,7 +7974,8 @@
           "FS1",
           "Tele",
           "Peacock"
-        ]
+        ],
+        "time": "2026-06-18T02:00Z"
       }
     ]
   }

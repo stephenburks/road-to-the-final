@@ -69,6 +69,7 @@ function enrich(
 		score: effectiveScore,
 		status: effectiveStatus === 'FINISHED' ? 'finished' as const : effectiveStatus === 'IN_PROGRESS' ? 'in_progress' as const : 'upcoming' as const,
 		date: match.date,
+		time: match.time,
 		clock: live?.clock ?? match.clock,
 		broadcasts: match.broadcasts,
 		homeScorers: live?.homeScorers ?? homeResult?.scorers ?? [],

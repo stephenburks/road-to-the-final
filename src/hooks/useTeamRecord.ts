@@ -109,12 +109,14 @@ export function useTeamRecord(teamId: string, isHistorical: boolean): TeamRecord
 						score,
 					}
 
-					if (isLive && !intervalRef.current) {
-						intervalRef.current = setInterval(() => fetchRef.current?.(c), 75000)
-					} else if (!isLive && intervalRef.current) {
-						clearInterval(intervalRef.current)
-						intervalRef.current = null
-					}
+				if (isLive && !intervalRef.current) {
+					intervalRef.current = setInterval(() => fetchRef.current?.(c), 75000)
+				} else if (!isLive && intervalRef.current) {
+					// Match just ended — do one more fetch after delay then stop
+					clearInterval(intervalRef.current)
+					intervalRef.current = null
+					setTimeout(() => fetchRef.current?.(c), 30000)
+				}
 				}
 
 				setData({ record, standingSummary: team.standingSummary ?? null, nextEvent })

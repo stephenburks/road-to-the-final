@@ -36,6 +36,7 @@ interface NeutralMatchCardProps {
 	status: 'finished' | 'in_progress' | 'upcoming'
 	date: string
 	clock?: string
+	time?: string
 	venue?: string
 	broadcasts?: string[]
 	homeScorers: string[]
@@ -99,11 +100,14 @@ export default function MatchCard(props: MatchCardProps) {
 		const cardClass = isLive ? styles.cardLive : isFinished ? styles.cardNeutral : styles.cardUpcoming
 		const badgeClass = isLive ? styles.badgeLive : isFinished ? styles.badgeD : styles.badgeUpcoming
 		const badgeText = isLive ? (props.clock ? `LIVE ${props.clock}` : 'LIVE') : isFinished ? 'FT' : 'Upcoming'
+		const timeDisplay = props.time
+			? new Date(props.time).toLocaleTimeString([], { hour: 'numeric', minute: '2-digit', timeZoneName: 'short' })
+			: ''
 
 		return (
 			<div className={`${styles.matchCard} ${cardClass}`}>
 				<div className={styles.matchMeta}>
-					<span>{formatDate(date)}</span>
+					<span>{formatDate(date)}{timeDisplay && !isFinished ? ` \u00B7 ${timeDisplay}` : ''}</span>
 					<span className={`${styles.badge} ${badgeClass}`}>
 						{badgeText}
 					</span>

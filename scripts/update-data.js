@@ -305,6 +305,7 @@ async function fetchESPNEventDetails(dateFrom, dateTo) {
 
 		for (const event of data.events) {
 			const eventDate = event.date?.split('T')[0];
+			const eventTime = event.date || '';
 			const competition = event.competitions?.[0];
 			const competitors = competition?.competitors || [];
 			const homeComp = competitors.find(c => c.homeAway === 'home');
@@ -339,7 +340,7 @@ async function fetchESPNEventDetails(dateFrom, dateTo) {
 					matches.set(key, {
 						homeId, awayId, homeScore: hScore, awayScore: aScore,
 						status: matchStatus, date: eventDate, clock: matchClock,
-						broadcasts,
+						broadcasts, time: eventTime,
 					});
 				}
 			}
@@ -1284,6 +1285,7 @@ async function main() {
       date: match.date,
       clock: match.clock || undefined,
       broadcasts: match.broadcasts?.length ? match.broadcasts : undefined,
+      time: match.time || undefined,
     });
   }
   log(`Daily matches: ${Object.keys(dailyMatches).length} dates, ${Object.values(dailyMatches).reduce((s, a) => s + a.length, 0)} matches`);

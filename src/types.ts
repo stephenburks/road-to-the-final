@@ -137,6 +137,7 @@ export interface DailyMatch {
 	date: string
 	clock?: string
 	broadcasts?: string[]
+	time?: string
 }
 
 export interface DailyMatches {
