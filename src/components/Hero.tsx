@@ -100,13 +100,27 @@ export default function Hero({ team, activeStage, isHistorical, groupWinProb }: 
 
 	const nextMatchCard = nextEvent ? (
 		<div className={styles.nextMatch} role="complementary" aria-label="Next match">
-			<div className={styles.nextMatchLabel}>Next Match</div>
+			<div className={styles.nextMatchLabel}>
+				{nextEvent.isLive ? (
+					<span className={styles.nextMatchLiveLabel}>
+						<span className={styles.nextMatchLiveDot} aria-hidden="true" />
+						LIVE {nextEvent.clock || ''}
+					</span>
+				) : (
+					'Next Match'
+				)}
+			</div>
 			<div className={styles.nextMatchTeams}>
 				<FlagIcon code={team.id} flag={team.flag} name={team.name} />
 				<span className={styles.nextMatchVs}>vs</span>
 				<FlagIcon flag={nextEvent.opponentFlag} opponent={nextEvent.opponent} />
 				<span className={styles.nextMatchOpponent}>{nextEvent.opponent}</span>
 			</div>
+			{nextEvent.isLive && nextEvent.score && (
+				<div className={styles.nextMatchScore} aria-label={`Live score: ${nextEvent.score}`}>
+					{nextEvent.score}
+				</div>
+			)}
 			<div className={styles.nextMatchDetails}>
 				{nextEvent.date && <span>{formatDate(nextEvent.date)}</span>}
 				{nextEvent.venue && <span className={styles.nextMatchVenue}>{nextEvent.venue}</span>}

@@ -276,6 +276,36 @@
 	border-top: 1px solid rgba(255, 255, 255, 0.04);
 }
 
+.nextMatchLiveLabel {
+	color: var(--green);
+	font-weight: 700;
+	display: flex;
+	align-items: center;
+	gap: 6px;
+}
+
+.nextMatchLiveDot {
+	width: 7px;
+	height: 7px;
+	border-radius: 50%;
+	background: var(--green);
+	display: inline-block;
+	animation: pulse 1.5s ease-in-out infinite;
+}
+
+.nextMatchScore {
+	font-family: var(--font-display);
+	font-weight: 800;
+	font-size: 1.3rem;
+	color: var(--green);
+	margin-bottom: 4px;
+}
+
+@keyframes pulse {
+	0%, 100% { opacity: 1; }
+	50% { opacity: 0.3; }
+}
+
 @media (max-width: 700px) {
 	.topRow {
 		flex-direction: column;

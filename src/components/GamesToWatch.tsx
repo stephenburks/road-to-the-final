@@ -12,10 +12,10 @@ function dateStr(daysOffset = 0): string {
 }
 
 function enrich(match: DailyMatch, teams: AppData['teams']) {
-	const homeTeam = teams.find(t => t.id === match.homeId)
-	const awayTeam = teams.find(t => t.id === match.awayId)
-	const homeResult = homeTeam?.groupResults?.find(g => g.opponent === match.awayTeam)
-	const awayResult = awayTeam?.groupResults?.find(g => g.opponent === match.homeTeam)
+	const homeTeam = teams.find((t) => t.id === match.homeId)
+	const awayTeam = teams.find((t) => t.id === match.awayId)
+	const homeResult = homeTeam?.groupResults?.find((g) => g.opponent === match.awayTeam)
+	const awayResult = awayTeam?.groupResults?.find((g) => g.opponent === match.homeTeam)
 
 	return {
 		mode: 'neutral' as const,
@@ -26,7 +26,12 @@ function enrich(match: DailyMatch, teams: AppData['teams']) {
 		awayFlag: match.awayFlag,
 		awayId: match.awayId,
 		score: match.status !== 'SCHEDULED' ? `${match.homeScore}-${match.awayScore}` : null,
-		status: match.status === 'FINISHED' ? 'finished' as const : match.status === 'IN_PROGRESS' ? 'in_progress' as const : 'upcoming' as const,
+		status:
+			match.status === 'FINISHED'
+				? ('finished' as const)
+				: match.status === 'IN_PROGRESS'
+					? ('in_progress' as const)
+					: ('upcoming' as const),
 		date: match.date,
 		homeScorers: homeResult?.scorers ?? [],
 		awayScorers: awayResult?.scorers ?? [],
@@ -43,7 +48,7 @@ interface WatchMatch {
 function findGroupWatchMatches(team: Team, data: AppData, targetDates: string[]): WatchMatch[] {
 	const groupLetter = team.group
 	const groupStandings = data.groups?.[groupLetter]?.standings ?? []
-	const groupTeamIds = new Set(groupStandings.map(s => s.teamId).filter(Boolean) as string[])
+	const groupTeamIds = new Set(groupStandings.map((s) => s.teamId).filter(Boolean) as string[])
 
 	const results: WatchMatch[] = []
 	for (const date of targetDates) {
@@ -56,7 +61,7 @@ function findGroupWatchMatches(team: Team, data: AppData, targetDates: string[])
 
 			results.push({
 				match: enrich(match, data.teams),
-				note: `This result affects ${team.name}&rsquo;s group standing`,
+				note: `This result affects ${team.name}'s group standing`,
 			})
 		}
 	}
@@ -95,11 +100,11 @@ function findKnockoutWatchMatches(team: Team, data: AppData, _targetDates: strin
 		for (const sched of schedules) {
 			const dayMatches = data.dailyMatches?.[sched.d] ?? []
 			for (const match of dayMatches) {
-				const scheduleIds = new Set(schedules.map(s => [s.h, s.a]).flat())
+				const scheduleIds = new Set(schedules.map((s) => [s.h, s.a]).flat())
 				if (scheduleIds.has(match.homeId) || scheduleIds.has(match.awayId)) {
 					results.push({
 						match: enrich(match, data.teams),
-						note: `Decides ${team.name}&rsquo;s next opponent in ${team.currentStage?.toUpperCase() || 'next round'}`,
+						note: `Decides ${team.name}'s next opponent in ${team.currentStage?.toUpperCase() || 'next round'}`,
 					})
 				}
 			}
@@ -143,7 +148,9 @@ export default function GamesToWatch({ team, data }: GamesToWatchProps) {
 				{watchMatches.map((item, i) => (
 					<div key={`${item.match.homeTeam}-${item.match.awayTeam}-${i}`} role="listitem">
 						<MatchCard {...item.match} />
-						<p className={styles.note} role="note">{item.note}</p>
+						<p className={styles.note} role="note">
+							{item.note}
+						</p>
 					</div>
 				))}
 			</div>

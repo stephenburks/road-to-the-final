@@ -11,6 +11,11 @@ interface TeamMatchCardProps {
 	teamFlag: string
 	teamId: string
 	teams: Team[]
+	liveData?: {
+		score: string
+		clock: string
+		status: 'IN_PROGRESS' | 'FINISHED'
+	}
 }
 
 // ── Neutral mode (used by HomePage) ──
@@ -27,6 +32,7 @@ interface NeutralMatchCardProps {
 	date: string
 	clock?: string
 	venue?: string
+	broadcasts?: string[]
 	homeScorers: string[]
 	awayScorers: string[]
 	homeCards: Card[]
@@ -81,7 +87,7 @@ function EventColumn({ flag, teamId, teamName, scorers, cards, scorerLabel, card
 
 export default function MatchCard(props: MatchCardProps) {
 	if (props.mode === 'neutral') {
-		const { homeTeam, homeFlag, homeId, awayTeam, awayFlag, awayId, score, status, date, venue, homeScorers, awayScorers, homeCards, awayCards } = props
+		const { homeTeam, homeFlag, homeId, awayTeam, awayFlag, awayId, score, status, date, venue, broadcasts, homeScorers, awayScorers, homeCards, awayCards } = props
 		const isFinished = status === 'finished'
 		const isLive = status === 'in_progress'
 		const hasResult = isFinished || isLive
@@ -126,21 +132,30 @@ export default function MatchCard(props: MatchCardProps) {
 					</div>
 				)}
 
+				{broadcasts && broadcasts.length > 0 && (
+					<div className={styles.matchBroadcasts}>
+						{broadcasts.join(' / ')}
+					</div>
+				)}
+
 				{!hasResult && venue && <div className={styles.venue}>{venue}</div>}
 			</div>
 		)
 	}
 
 	// ── Team mode (existing behavior) ──
-	const { match, teamFlag, teamId, teams } = props
+	const { match, teamFlag, teamId, teams, liveData } = props
+	const effectiveScore = liveData?.score ?? match.score
+	const effectiveIsLive = liveData ? liveData.status === 'IN_PROGRESS' : (!match.result && !!match.score)
 	const isWin = match.result === 'W'
 	const isDraw = match.result === 'D'
-	const isLive = !match.result && !!match.score
+	const isLive = effectiveIsLive
 	const resultLabel = match.result ? (RESULT_LABELS[match.result] ?? 'To be played') : isLive ? 'Live' : 'To be played'
 	const badgeClass = match.result
 		? (match.result === 'W' ? styles.badgeW : match.result === 'D' ? styles.badgeD : styles.badgeL)
 		: isLive ? styles.badgeLive : styles.badgeUpcoming
 	const cardClass = isWin ? styles.cardW : isDraw ? styles.cardD : isLive ? styles.cardLive : styles.cardUpcoming
+	const badgeText = isLive && liveData?.clock ? `LIVE ${liveData.clock}` : isLive ? 'LIVE' : match.result ?? 'TBD'
 
 	const oppTeam = teams?.find(t => t.name === match.opponent)
 	const oppMatch = oppTeam?.groupResults?.find(g => g.matchday === match.matchday)
@@ -152,7 +167,7 @@ export default function MatchCard(props: MatchCardProps) {
 			<div className={styles.matchMeta}>
 				<span>MD{match.matchday} · {formatDate(match.date)}</span>
 				<span className={`${styles.badge} ${badgeClass}`} aria-label={resultLabel}>
-					{isLive ? 'LIVE' : match.result ?? 'TBD'}
+					{badgeText}
 				</span>
 			</div>
 
@@ -161,9 +176,9 @@ export default function MatchCard(props: MatchCardProps) {
 				<span className={styles.vsLabel}>vs</span>
 				<FlagIcon flag={match.opponentFlag} opponent={match.opponent} />
 				<span className={styles.opponentName}>{match.opponent}</span>
-				{match.score && (
-					<span className={`${styles.score} ${isLive ? styles.scoreLive : ''}`} aria-label={`Score: ${match.score}`}>
-						{match.score}
+				{effectiveScore && (
+					<span className={`${styles.score} ${isLive ? styles.scoreLive : ''}`} aria-label={`Score: ${effectiveScore}`}>
+						{effectiveScore}
 					</span>
 				)}
 			</div>

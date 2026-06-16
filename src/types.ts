@@ -136,6 +136,7 @@ export interface DailyMatch {
 	status: 'FINISHED' | 'IN_PROGRESS' | 'SCHEDULED'
 	date: string
 	clock?: string
+	broadcasts?: string[]
 }
 
 export interface DailyMatches {

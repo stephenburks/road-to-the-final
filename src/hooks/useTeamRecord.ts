@@ -13,6 +13,9 @@ interface NextEvent {
 	venue: string
 	broadcasts: string[]
 	isHome: boolean
+	isLive: boolean
+	clock?: string
+	score?: string
 }
 
 export interface TeamRecordData {
@@ -84,6 +87,14 @@ export function useTeamRecord(teamId: string, isHistorical: boolean): TeamRecord
 						if (b.media?.shortName) broadcasts.push(b.media.shortName)
 					}
 
+					const statusState = comp?.status?.type?.state
+					const statusDetail = comp?.status?.type?.detail
+					const isLive = statusState === 'in'
+					const clock = isLive ? (statusDetail || undefined) : undefined
+					const score = isLive
+						? `${parseInt(home?.score, 10) || 0}-${parseInt(away?.score, 10) || 0}`
+						: undefined
+
 					nextEvent = {
 						opponent: opp?.team?.displayName ?? 'TBD',
 						opponentFlag: opp?.team?.abbreviation
@@ -93,6 +104,9 @@ export function useTeamRecord(teamId: string, isHistorical: boolean): TeamRecord
 						venue: comp?.venue?.fullName ?? '',
 						broadcasts,
 						isHome: home?.team?.id === team.id,
+						isLive,
+						clock,
+						score,
 					}
 				}
 

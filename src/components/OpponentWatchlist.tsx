@@ -8,8 +8,14 @@ import OpponentCard from './opponents/OpponentCard'
 import MatchupMatrix from './opponents/MatchupMatrix'
 import styles from './OpponentWatchlist.module.css'
 
-function FutureStagePlaceholder({ stage, path }: { stage: Stage; path?: Team['path'][keyof Team['path']] | null }) {
-		return (
+function FutureStagePlaceholder({
+	stage,
+	path,
+}: {
+	stage: Stage
+	path?: Team['path'][keyof Team['path']] | null
+}) {
+	return (
 		<div className={styles.futurePlaceholder}>
 			<div className={styles.futureIcon} aria-hidden="true" />
 			<div className={styles.futureText}>
@@ -17,8 +23,11 @@ function FutureStagePlaceholder({ stage, path }: { stage: Stage; path?: Team['pa
 				<p>
 					Possible opponents will be shown here as the bracket fills in.
 					{path?.city && (
-						<span> Expected venue: {path.city}
-							{path.conditional && ' (conditional on path through bracket).'}</span>
+						<span>
+							{' '}
+							Expected venue: {path.city}
+							{path.conditional && ' (conditional on path through bracket).'}
+						</span>
 					)}
 				</p>
 			</div>
@@ -26,7 +35,10 @@ function FutureStagePlaceholder({ stage, path }: { stage: Stage; path?: Team['pa
 	)
 }
 
-function VenueBanner({ stagePath, activeStage }: {
+function VenueBanner({
+	stagePath,
+	activeStage,
+}: {
 	stagePath: NonNullable<Team['path'][keyof Team['path']]>
 	activeStage: Stage
 }) {
@@ -39,9 +51,13 @@ function VenueBanner({ stagePath, activeStage }: {
 				<strong>{STAGE_LABELS[activeStage]}</strong>
 				{stagePath.match ? ` · Match ${stagePath.match}` : ''}
 				{stagePath.date?.match(/^\d{4}/) ? ` · ${formatDate(stagePath.date)}` : ''}
-				{stagePath.venue ? ` · ${stagePath.venue}, ${stagePath.city}` : stagePath.city ? ` · ${stagePath.city}` : ''}
+				{stagePath.venue
+					? ` · ${stagePath.venue}, ${stagePath.city}`
+					: stagePath.city
+						? ` · ${stagePath.city}`
+						: ''}
 			</div>
-				{stagePath.conditional && stagePath.conditionNote && (
+			{stagePath.conditional && stagePath.conditionNote && (
 				<div className={styles.bannerConditionalNote}>
 					<span className={styles.conditionalIcon} aria-hidden="true" />
 					{stagePath.conditionNote}
@@ -54,14 +70,18 @@ function VenueBanner({ stagePath, activeStage }: {
 	)
 }
 
-export default function OpponentWatchlist({ team, activeStage, data }: {
+export default function OpponentWatchlist({
+	team,
+	activeStage,
+	data,
+}: {
 	team: Team
 	activeStage: Stage
 	data: AppData
 }) {
 	const eliminatedTeamIds = useMemo(() => {
 		const set = new Set<string>()
-		for (const t of (data?.teams ?? [])) {
+		for (const t of data?.teams ?? []) {
 			if (t.eliminated) set.add(t.id)
 		}
 		return set
@@ -71,25 +91,30 @@ export default function OpponentWatchlist({ team, activeStage, data }: {
 
 	if (activeStage === 'group_stage') return null
 
-	const oppData = (activeStage === 'r32' || activeStage === 'r16')
-		? team.possibleOpponents[activeStage]
-		: undefined
+	const oppData =
+		activeStage === 'r32' || activeStage === 'r16' ? team.possibleOpponents[activeStage] : undefined
 
-	const hasScenarios = oppData != null && !Array.isArray(oppData)
-		&& 'scenarios' in oppData && Array.isArray(oppData.scenarios)
+	const hasScenarios =
+		oppData != null &&
+		!Array.isArray(oppData) &&
+		'scenarios' in oppData &&
+		Array.isArray(oppData.scenarios)
 	const flatList = Array.isArray(oppData) ? oppData : []
 	const hasFlat = flatList.length > 0
 	const isLateStage = ['qf', 'sf', 'final'].includes(activeStage)
-	const r16WithPct = activeStage === 'r16' && flatList.some(o => o.pct != null)
+	const r16WithPct = activeStage === 'r16' && flatList.some((o) => o.pct != null)
 	const r32Feeder = activeStage === 'r32' ? getFeederGroup(team, 'r32', data) : null
 	const r16Feeder = activeStage === 'r16' ? getFeederGroup(team, 'r16', data) : null
-	const maxPct = r16WithPct ? Math.max(...flatList.map(o => o.pct ?? 0), 1) : 1
+	const maxPct = r16WithPct ? Math.max(...flatList.map((o) => o.pct ?? 0), 1) : 1
 
 	return (
 		<section className="wrap section" id="opponents" aria-labelledby="opponents-heading">
-			<SectionLabel text={`${STAGE_LABELS[activeStage]} — ${isLateStage ? 'Path Ahead' : 'Opponent Watchlist'}`} />
+			<SectionLabel
+				text={`${STAGE_LABELS[activeStage]} — ${isLateStage ? 'Path Ahead' : 'Opponent Watchlist'}`}
+			/>
 			<h2 id="opponents-heading" className="sr-only">
-				{isLateStage ? 'Path ahead in the ' : 'Possible opponents in the '}{STAGE_LABELS[activeStage]}
+				{isLateStage ? 'Path ahead in the ' : 'Possible opponents in the '}
+				{STAGE_LABELS[activeStage]}
 			</h2>
 
 			{stagePath && <VenueBanner stagePath={stagePath} activeStage={activeStage} />}
@@ -123,7 +148,9 @@ export default function OpponentWatchlist({ team, activeStage, data }: {
 
 			{!isLateStage && !hasScenarios && hasFlat && !r16WithPct && (
 				<div className={styles.grid}>
-					{flatList.map((opp, i) => <OpponentCard key={i} opp={opp} />)}
+					{flatList.map((opp, i) => (
+						<OpponentCard key={i} opp={opp} />
+					))}
 				</div>
 			)}
 
@@ -131,7 +158,7 @@ export default function OpponentWatchlist({ team, activeStage, data }: {
 				<FeederGroupPanel
 					feeder={r32Feeder}
 					eliminatedTeamIds={eliminatedTeamIds}
-					explanation={`Potential opponent&rsquo;s group — based on current standings: Group ${r32Feeder.key}`}
+					explanation={`Potential opponent's group — based on current standings: Group ${r32Feeder.key}`}
 				/>
 			)}
 			{!r32Feeder && activeStage === 'r32' && (
@@ -140,30 +167,37 @@ export default function OpponentWatchlist({ team, activeStage, data }: {
 				</div>
 			)}
 
-			{r16WithPct && (
-				<MatchupMatrix flatList={flatList} team={team} maxPct={maxPct} data={data} />
-			)}
+			{r16WithPct && <MatchupMatrix flatList={flatList} team={team} maxPct={maxPct} data={data} />}
 
 			{r16Feeder && (
 				<FeederGroupPanel
 					feeder={r16Feeder}
 					marginTop={r16WithPct ? 24 : 0}
 					eliminatedTeamIds={eliminatedTeamIds}
-					explanation={`Potential R16 opponent&rsquo;s group — if ${team.name} wins Group ${team.group}, they face the winner of Group ${r16Feeder.key}`}
+					explanation={`Potential R16 opponent's group — if ${team.name} wins Group ${team.group}, they face the winner of Group ${r16Feeder.key}`}
 				/>
 			)}
 			{!r16Feeder && activeStage === 'r16' && (
 				<div className={`${styles.noFeederMsg} ${r16WithPct ? styles.noFeederMsgExtra : ''}`}>
-					Opponent depends on R32 results across multiple matches — will resolve as the knockout rounds progress.
+					Opponent depends on R32 results across multiple matches — will resolve as the knockout
+					rounds progress.
 				</div>
 			)}
 
 			{activeStage === 'r32' && (hasFlat || hasScenarios) && (
 				<div className={styles.legend} role="note" aria-label="Difficulty key">
-					<span><span className={`${styles.legendPip} ${styles.legendPipFavorable}`} /> Favorable</span>
-					<span><span className={`${styles.legendPip} ${styles.legendPipModerate}`} /> Moderate</span>
-					<span><span className={`${styles.legendPip} ${styles.legendPipTough}`} /> Tough</span>
-					<span><span className={`${styles.legendPip} ${styles.legendPipDanger}`} /> Danger</span>
+					<span>
+						<span className={`${styles.legendPip} ${styles.legendPipFavorable}`} /> Favorable
+					</span>
+					<span>
+						<span className={`${styles.legendPip} ${styles.legendPipModerate}`} /> Moderate
+					</span>
+					<span>
+						<span className={`${styles.legendPip} ${styles.legendPipTough}`} /> Tough
+					</span>
+					<span>
+						<span className={`${styles.legendPip} ${styles.legendPipDanger}`} /> Danger
+					</span>
 				</div>
 			)}
 		</section>

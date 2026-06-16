@@ -1,3 +1,4 @@
+import { useCallback } from 'react'
 import type { View } from '../hooks/useAppState'
 import styles from './Nav.module.css'
 
@@ -7,10 +8,34 @@ interface NavProps {
 	isHistorical: boolean
 }
 
+const SECTION_LINKS = [
+	{ id: 'hero',       label: 'Team' },
+	{ id: 'road',       label: 'Bracket' },
+	{ id: 'groups',     label: 'Groups' },
+	{ id: 'opponents',  label: 'Opponents' },
+	{ id: 'schedule',   label: 'Schedule' },
+	{ id: 'squad',      label: 'Squad' },
+]
+
+function scrollToSection(id: string) {
+	document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
+}
+
 /**
  * Sticky navigation bar — static links on all views.
+ * Section links navigate to team view first when not already there.
  */
 export default function Nav({ view, onViewChange, isHistorical }: NavProps) {
+	const handleSectionClick = useCallback((sectionId: string) => {
+		if (view !== 'team') {
+			onViewChange('team')
+			// Wait for React render + DOM paint before scrolling
+			setTimeout(() => scrollToSection(sectionId), 60)
+		} else {
+			scrollToSection(sectionId)
+		}
+	}, [view, onViewChange])
+
 	return (
 		<nav className={styles.nav} aria-label="Site navigation">
 			<div className={styles.inner}>
@@ -29,12 +54,15 @@ export default function Nav({ view, onViewChange, isHistorical }: NavProps) {
 					Standings
 				</button>
 
-				<a className={styles.link} href="#hero">Team</a>
-				<a className={styles.link} href="#road">Bracket</a>
-				<a className={styles.link} href="#groups">Groups</a>
-				<a className={styles.link} href="#opponents">Opponents</a>
-				<a className={styles.link} href="#schedule">Schedule</a>
-				<a className={styles.link} href="#squad">Squad</a>
+				{SECTION_LINKS.map(({ id, label }) => (
+					<button
+						key={id}
+						className={`${styles.link} ${view === 'team' ? styles.active : ''}`}
+						onClick={() => handleSectionClick(id)}
+					>
+						{label}
+					</button>
+				))}
 
 				<div className={styles.badge} aria-live="polite">
 					<div

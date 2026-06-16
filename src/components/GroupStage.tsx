@@ -1,6 +1,7 @@
 import { useMemo } from 'react'
 import type { Team, AppData } from '../types'
 import { getFeederGroup } from '../utils'
+import { useLiveScores } from '../hooks/useLiveScores'
 import SectionLabel from './ui/SectionLabel'
 import { GroupTable } from './ui/GroupTable'
 import FeederGroupPanel from './ui/FeederGroupPanel'
@@ -11,13 +12,28 @@ export default function GroupStage({ team, data }: { team: Team; data: AppData }
 	const myGroup = data?.groups?.[team.group]
 	const feeder = getFeederGroup(team, 'r16', data)
 
+	const livePatches = useLiveScores(data.dailyMatches ?? {}, data.teams, data.isHistorical)
+
 	const eliminatedTeamIds = useMemo(() => {
 		const set = new Set<string>()
-		for (const t of (data?.teams ?? [])) {
+		for (const t of (data.teams ?? [])) {
 			if (t.eliminated) set.add(t.id)
 		}
 		return set
-	}, [data?.teams])
+	}, [data.teams])
+
+	const resolveLiveData = (opponentName: string) => {
+		if (!livePatches) return undefined
+		const oppTeam = data.teams?.find(t => t.name === opponentName)
+		if (!oppTeam) return undefined
+		const patch = livePatches.get(`${team.id}:${oppTeam.id}`) ?? livePatches.get(`${oppTeam.id}:${team.id}`)
+		if (!patch || patch.status === 'SCHEDULED') return undefined
+		// Determine score from team's perspective
+		const isHome = livePatches.has(`${team.id}:${oppTeam.id}`)
+		const myScore = isHome ? patch.homeScore : patch.awayScore
+		const opScore = isHome ? patch.awayScore : patch.homeScore
+		return { score: `${myScore}-${opScore}`, clock: patch.clock, status: patch.status }
+	}
 
 	return (
 		<section className="wrap section" id="groups" aria-labelledby="groups-heading">
@@ -54,7 +70,14 @@ export default function GroupStage({ team, data }: { team: Team; data: AppData }
 
 			<div className={styles.matchGrid}>
 				{(team.groupResults ?? []).map((match, i) => (
-					<MatchCard key={i} match={match} teamFlag={team.flag} teamId={team.id} teams={data.teams} />
+					<MatchCard
+						key={i}
+						match={match}
+						teamFlag={team.flag}
+						teamId={team.id}
+						teams={data.teams}
+						liveData={resolveLiveData(match.opponent)}
+					/>
 				))}
 			</div>
 		</section>

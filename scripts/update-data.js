@@ -324,6 +324,11 @@ async function fetchESPNEventDetails(dateFrom, dateTo) {
 			const matchStatus  = isFinished ? 'FINISHED' : isInProgress ? 'IN_PROGRESS' : 'SCHEDULED';
 			const matchClock   = isInProgress ? (statusDetail || 'LIVE') : '';
 
+			// ── Broadcast extraction ──────────────────────────────────
+			const broadcasts = (competition?.broadcasts ?? [])
+				.map(b => b.media?.shortName)
+				.filter(Boolean);
+
 			if (homeId && awayId) {
 				const hScore = parseInt(homeComp?.score, 10) || 0;
 				const aScore = parseInt(awayComp?.score, 10) || 0;
@@ -333,6 +338,7 @@ async function fetchESPNEventDetails(dateFrom, dateTo) {
 					matches.set(key, {
 						homeId, awayId, homeScore: hScore, awayScore: aScore,
 						status: matchStatus, date: eventDate, clock: matchClock,
+						broadcasts,
 					});
 				}
 			}
@@ -1276,6 +1282,7 @@ async function main() {
       status: match.status,
       date: match.date,
       clock: match.clock || undefined,
+      broadcasts: match.broadcasts?.length ? match.broadcasts : undefined,
     });
   }
   log(`Daily matches: ${Object.keys(dailyMatches).length} dates, ${Object.values(dailyMatches).reduce((s, a) => s + a.length, 0)} matches`);
