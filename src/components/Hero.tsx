@@ -9,7 +9,9 @@ const STAT_CARD_DEFS = [
 	{ key: 'r32',   label: 'Reach Round of 32', cardClass: styles.statCardR32,   valueClass: styles.statValueR32 },
 	{ key: 'r16',   label: 'Reach Round of 16', cardClass: styles.statCardR16,   valueClass: styles.statValueR16 },
 	{ key: 'qf',    label: 'Reach Quarterfinal', cardClass: styles.statCardQf,    valueClass: styles.statValueQf },
+	{ key: 'sf',    label: 'Reach Semifinal',    cardClass: styles.statCardSf,    valueClass: styles.statValueSf },
 	{ key: 'final', label: 'Reach the Final',    cardClass: styles.statCardFinal, valueClass: styles.statValueFinal },
+	{ key: 'winner',label: 'Win World Cup',      cardClass: styles.statCardWin,   valueClass: styles.statValueWin },
 ]
 
 interface GroupWinCard {
@@ -55,7 +57,7 @@ export default function Hero({ team, activeStage, isHistorical, groupWinProb }: 
 	const ap = team.advanceProbabilities ?? {}
 	const days = daysUntil(path?.date)
 	const source = ap.source
-	const sourceLabel = isHistorical ? 'As of snapshot' : source === 'market' ? 'Market estimate' : 'Calculated'
+	const sourceLabel = isHistorical ? 'As of snapshot' : source === 'market' ? 'Polymarket' : 'Calculated'
 
 	const { record, nextEvent } = useTeamRecord(team.id, isHistorical)
 

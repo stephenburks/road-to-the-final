@@ -68,9 +68,9 @@ describe('Hero', () => {
 		expect(screen.getByText('5%')).toBeInTheDocument()
 	})
 
-	it('shows market estimate as source label when source is market', () => {
+	it('shows Polymarket as source label when source is market', () => {
 		render(<Hero team={mockTeam()} activeStage={ACTIVE_STAGE} isHistorical={false} />)
-		expect(screen.getAllByText('Market estimate')).toHaveLength(4)
+		expect(screen.getAllByText('Polymarket')).toHaveLength(6)
 	})
 
 	it('shows calculated as source label when source is calculated', () => {
@@ -81,12 +81,12 @@ describe('Hero', () => {
 			},
 		})
 		render(<Hero team={team} activeStage={ACTIVE_STAGE} isHistorical={false} />)
-		expect(screen.getAllByText('Calculated')).toHaveLength(4)
+		expect(screen.getAllByText('Calculated')).toHaveLength(6)
 	})
 
 	it('shows historical source label when isHistorical is true', () => {
 		render(<Hero team={mockTeam()} activeStage={ACTIVE_STAGE} isHistorical={true} />)
-		expect(screen.getAllByText('As of snapshot')).toHaveLength(4)
+		expect(screen.getAllByText('As of snapshot')).toHaveLength(6)
 	})
 
 	it('shows historical suffix in eyebrow when isHistorical', () => {
@@ -101,7 +101,6 @@ describe('Hero', () => {
 		render(<Hero team={mockTeam()} activeStage={ACTIVE_STAGE} isHistorical={false} groupWinProb={groupWinProb} />)
 		expect(screen.getByText('7%')).toBeInTheDocument()
 		expect(screen.getByText('Win Group D')).toBeInTheDocument()
-		expect(screen.getByText('Polymarket')).toBeInTheDocument()
 	})
 
 	it('renders correct aria-label on group win card', () => {
@@ -112,7 +111,6 @@ describe('Hero', () => {
 
 	it('does not render group win card when groupWinProb is undefined', () => {
 		render(<Hero team={mockTeam()} activeStage={ACTIVE_STAGE} isHistorical={false} />)
-		expect(screen.queryByText('Polymarket')).not.toBeInTheDocument()
 		expect(screen.queryByText(/Win Group/)).not.toBeInTheDocument()
 	})
 
@@ -120,7 +118,7 @@ describe('Hero', () => {
 		const groupWinProb = { probability: 5, groupLetter: 'A' }
 		const team = mockTeam({ eliminated: true, currentStage: 'r16' })
 		render(<Hero team={team} activeStage="r16" isHistorical={false} groupWinProb={groupWinProb} />)
-		expect(screen.queryByText('Polymarket')).not.toBeInTheDocument()
+		expect(screen.queryByText(/Win Group/)).not.toBeInTheDocument()
 	})
 
 	// ── Days-until edge cases ──────────────────────────────────────────
