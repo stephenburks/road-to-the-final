@@ -13,27 +13,27 @@
       "group_stage": {
         "status": "active",
         "label": "Group Stage",
-        "date": "Jun 11\u201327"
+        "date": "Jun 11–27"
       },
       "r32": {
         "status": "upcoming",
         "label": "Round of 32",
-        "date": "Jun 28\u2013Jul 2"
+        "date": "Jun 28–Jul 2"
       },
       "r16": {
         "status": "upcoming",
         "label": "Round of 16",
-        "date": "Jul 4\u20137"
+        "date": "Jul 4–7"
       },
       "qf": {
         "status": "upcoming",
         "label": "Quarterfinal",
-        "date": "Jul 9\u201311"
+        "date": "Jul 9–11"
       },
       "sf": {
         "status": "upcoming",
         "label": "Semifinal",
-        "date": "Jul 14\u201315"
+        "date": "Jul 14–15"
       },
       "final": {
         "status": "upcoming",
@@ -57,7 +57,7 @@
           "ga": 0,
           "gd": 2,
           "pts": 3,
-          "flag": "\ud83c\uddf2\ud83c\uddfd"
+          "flag": "🇲🇽"
         },
         {
           "pos": 2,
@@ -71,7 +71,7 @@
           "ga": 1,
           "gd": 1,
           "pts": 3,
-          "flag": "\ud83c\uddf0\ud83c\uddf7"
+          "flag": "🇰🇷"
         },
         {
           "pos": 3,
@@ -85,7 +85,7 @@
           "ga": 2,
           "gd": -1,
           "pts": 0,
-          "flag": "\ud83c\udde8\ud83c\uddff"
+          "flag": "🇨🇿"
         },
         {
           "pos": 4,
@@ -99,7 +99,7 @@
           "ga": 2,
           "gd": -2,
           "pts": 0,
-          "flag": "\ud83c\uddff\ud83c\udde6"
+          "flag": "🇿🇦"
         }
       ],
       "winProbabilities": {
@@ -123,7 +123,7 @@
           "ga": 1,
           "gd": 0,
           "pts": 1,
-          "flag": "\ud83c\udde8\ud83c\udded"
+          "flag": "🇨🇭"
         },
         {
           "pos": 2,
@@ -137,7 +137,7 @@
           "ga": 1,
           "gd": 0,
           "pts": 1,
-          "flag": "\ud83c\udde8\ud83c\udde6"
+          "flag": "🇨🇦"
         },
         {
           "pos": 3,
@@ -151,7 +151,7 @@
           "ga": 1,
           "gd": 0,
           "pts": 1,
-          "flag": "\ud83c\uddf6\ud83c\udde6"
+          "flag": "🇶🇦"
         },
         {
           "pos": 4,
@@ -165,13 +165,13 @@
           "ga": 1,
           "gd": 0,
           "pts": 1,
-          "flag": "\ud83c\udde7\ud83c\udde6"
+          "flag": "🇧🇦"
         }
       ],
       "winProbabilities": {
+        "switzerland": 47,
         "canada": 36,
-        "qatar": 3,
-        "switzerland": 45,
+        "qatar": 2,
         "bosnia": 16
       }
     },
@@ -189,7 +189,7 @@
           "ga": 0,
           "gd": 1,
           "pts": 3,
-          "flag": "\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc73\udb40\udc63\udb40\udc74\udb40\udc7f"
+          "flag": "🏴󠁧󠁢󠁳󠁣󠁴󠁿"
         },
         {
           "pos": 2,
@@ -203,7 +203,7 @@
           "ga": 1,
           "gd": 0,
           "pts": 1,
-          "flag": "\ud83c\uddf2\ud83c\udde6"
+          "flag": "🇲🇦"
         },
         {
           "pos": 3,
@@ -217,7 +217,7 @@
           "ga": 1,
           "gd": 0,
           "pts": 1,
-          "flag": "\ud83c\udde7\ud83c\uddf7"
+          "flag": "🇧🇷"
         },
         {
           "pos": 4,
@@ -231,14 +231,14 @@
           "ga": 1,
           "gd": -1,
           "pts": 0,
-          "flag": "\ud83c\udded\ud83c\uddf9"
+          "flag": "🇭🇹"
         }
       ],
       "winProbabilities": {
-        "brazil": 59,
-        "haiti": 1,
-        "scotland": 11,
-        "morocco": 30
+        "scotland": 10,
+        "morocco": 28,
+        "brazil": 60,
+        "haiti": 0
       }
     },
     "D": {
@@ -255,7 +255,7 @@
           "ga": 1,
           "gd": 3,
           "pts": 3,
-          "flag": "\ud83c\uddfa\ud83c\uddf8"
+          "flag": "🇺🇸"
         },
         {
           "pos": 2,
@@ -269,12 +269,12 @@
           "ga": 0,
           "gd": 2,
           "pts": 3,
-          "flag": "\ud83c\udde6\ud83c\uddfa"
+          "flag": "🇦🇺"
         },
         {
           "pos": 3,
           "teamId": "turkey",
-          "team": "T\u00fcrkiye",
+          "team": "Türkiye",
           "played": 1,
           "w": 0,
           "d": 0,
@@ -283,7 +283,7 @@
           "ga": 2,
           "gd": -2,
           "pts": 0,
-          "flag": "\ud83c\uddf9\ud83c\uddf7"
+          "flag": "🇹🇷"
         },
         {
           "pos": 4,
@@ -297,13 +297,13 @@
           "ga": 4,
           "gd": -3,
           "pts": 0,
-          "flag": "\ud83c\uddf5\ud83c\uddfe"
+          "flag": "🇵🇾"
         }
       ],
       "winProbabilities": {
-        "usa": 69,
-        "australia": 20,
-        "turkey": 9,
+        "usa": 72,
+        "australia": 19,
+        "turkey": 8,
         "paraguay": 2
       }
     },
@@ -321,7 +321,7 @@
           "ga": 1,
           "gd": 6,
           "pts": 3,
-          "flag": "\ud83c\udde9\ud83c\uddea"
+          "flag": "🇩🇪"
         },
         {
           "pos": 2,
@@ -335,7 +335,7 @@
           "ga": 0,
           "gd": 1,
           "pts": 3,
-          "flag": "\ud83c\udde8\ud83c\uddee"
+          "flag": "🇨🇮"
         },
         {
           "pos": 3,
@@ -349,12 +349,12 @@
           "ga": 1,
           "gd": -1,
           "pts": 0,
-          "flag": "\ud83c\uddea\ud83c\udde8"
+          "flag": "🇪🇨"
         },
         {
           "pos": 4,
           "teamId": "curacao",
-          "team": "Cura\u00e7ao",
+          "team": "Curaçao",
           "played": 1,
           "w": 0,
           "d": 0,
@@ -363,13 +363,13 @@
           "ga": 7,
           "gd": -6,
           "pts": 0,
-          "flag": "\ud83c\udde8\ud83c\uddfc"
+          "flag": "🇨🇼"
         }
       ],
       "winProbabilities": {
-        "germany": 74,
-        "ivorycoast": 20,
-        "ecuador": 5,
+        "germany": 71,
+        "ivorycoast": 10,
+        "ecuador": 21,
         "curacao": 0
       }
     },
@@ -387,7 +387,7 @@
           "ga": 1,
           "gd": 4,
           "pts": 3,
-          "flag": "\ud83c\uddf8\ud83c\uddea"
+          "flag": "🇸🇪"
         },
         {
           "pos": 2,
@@ -401,7 +401,7 @@
           "ga": 2,
           "gd": 0,
           "pts": 1,
-          "flag": "\ud83c\uddef\ud83c\uddf5"
+          "flag": "🇯🇵"
         },
         {
           "pos": 3,
@@ -415,7 +415,7 @@
           "ga": 2,
           "gd": 0,
           "pts": 1,
-          "flag": "\ud83c\uddf3\ud83c\uddf1"
+          "flag": "🇳🇱"
         },
         {
           "pos": 4,
@@ -429,14 +429,14 @@
           "ga": 5,
           "gd": -4,
           "pts": 0,
-          "flag": "\ud83c\uddf9\ud83c\uddf3"
+          "flag": "🇹🇳"
         }
       ],
       "winProbabilities": {
-        "netherlands": 44,
-        "sweden": 28,
-        "tunisia": 1,
-        "japan": 28
+        "sweden": 19,
+        "japan": 28,
+        "netherlands": 48,
+        "tunisia": 5
       }
     },
     "G": {
@@ -453,7 +453,7 @@
           "ga": 0,
           "gd": 1,
           "pts": 3,
-          "flag": "\ud83c\uddf3\ud83c\uddff"
+          "flag": "🇳🇿"
         },
         {
           "pos": 2,
@@ -467,7 +467,7 @@
           "ga": 1,
           "gd": 0,
           "pts": 1,
-          "flag": "\ud83c\udde7\ud83c\uddea"
+          "flag": "🇧🇪"
         },
         {
           "pos": 3,
@@ -481,7 +481,7 @@
           "ga": 1,
           "gd": 0,
           "pts": 1,
-          "flag": "\ud83c\uddea\ud83c\uddec"
+          "flag": "🇪🇬"
         },
         {
           "pos": 4,
@@ -495,14 +495,14 @@
           "ga": 1,
           "gd": -1,
           "pts": 0,
-          "flag": "\ud83c\uddee\ud83c\uddf7"
+          "flag": "🇮🇷"
         }
       ],
       "winProbabilities": {
-        "belgium": 65,
-        "iran": 8,
-        "newzealand": 4,
-        "egypt": 23
+        "newzealand": 3,
+        "belgium": 72,
+        "egypt": 17,
+        "iran": 11
       }
     },
     "H": {
@@ -519,7 +519,7 @@
           "ga": 1,
           "gd": 0,
           "pts": 1,
-          "flag": "\ud83c\uddf8\ud83c\udde6"
+          "flag": "🇸🇦"
         },
         {
           "pos": 2,
@@ -533,7 +533,7 @@
           "ga": 1,
           "gd": 0,
           "pts": 1,
-          "flag": "\ud83c\uddfa\ud83c\uddfe"
+          "flag": "🇺🇾"
         },
         {
           "pos": 3,
@@ -547,7 +547,7 @@
           "ga": 0,
           "gd": 0,
           "pts": 1,
-          "flag": "\ud83c\uddea\ud83c\uddf8"
+          "flag": "🇪🇸"
         },
         {
           "pos": 4,
@@ -561,14 +561,14 @@
           "ga": 0,
           "gd": 0,
           "pts": 1,
-          "flag": "\ud83c\udde8\ud83c\uddfb"
+          "flag": "🇨🇻"
         }
       ],
       "winProbabilities": {
-        "saudiarabia": 3,
-        "uruguay": 23,
-        "spain": 73,
-        "capeverde": 4
+        "saudiarabia": 2,
+        "uruguay": 19,
+        "spain": 80,
+        "capeverde": 1
       }
     },
     "I": {
@@ -585,7 +585,7 @@
           "ga": 0,
           "gd": 0,
           "pts": 0,
-          "flag": "\ud83c\uddeb\ud83c\uddf7"
+          "flag": "🇫🇷"
         },
         {
           "pos": 2,
@@ -599,7 +599,7 @@
           "ga": 0,
           "gd": 0,
           "pts": 0,
-          "flag": "\ud83c\uddee\ud83c\uddf6"
+          "flag": "🇮🇶"
         },
         {
           "pos": 3,
@@ -613,7 +613,7 @@
           "ga": 0,
           "gd": 0,
           "pts": 0,
-          "flag": "\ud83c\uddf3\ud83c\uddf4"
+          "flag": "🇳🇴"
         },
         {
           "pos": 4,
@@ -627,13 +627,13 @@
           "ga": 0,
           "gd": 0,
           "pts": 0,
-          "flag": "\ud83c\uddf8\ud83c\uddf3"
+          "flag": "🇸🇳"
         }
       ],
       "winProbabilities": {
-        "france": 66,
+        "france": 68,
         "iraq": 1,
-        "norway": 24,
+        "norway": 23,
         "senegal": 10
       }
     },
@@ -651,7 +651,7 @@
           "ga": 0,
           "gd": 0,
           "pts": 0,
-          "flag": "\ud83c\udde9\ud83c\uddff"
+          "flag": "🇩🇿"
         },
         {
           "pos": 2,
@@ -665,7 +665,7 @@
           "ga": 0,
           "gd": 0,
           "pts": 0,
-          "flag": "\ud83c\udde6\ud83c\uddf7"
+          "flag": "🇦🇷"
         },
         {
           "pos": 3,
@@ -679,7 +679,7 @@
           "ga": 0,
           "gd": 0,
           "pts": 0,
-          "flag": "\ud83c\uddef\ud83c\uddf4"
+          "flag": "🇯🇴"
         },
         {
           "pos": 4,
@@ -693,14 +693,14 @@
           "ga": 0,
           "gd": 0,
           "pts": 0,
-          "flag": "\ud83c\udde6\ud83c\uddf9"
+          "flag": "🇦🇹"
         }
       ],
       "winProbabilities": {
-        "argentina": 74,
-        "austria": 19,
+        "algeria": 9,
+        "argentina": 72,
         "jordan": 1,
-        "algeria": 9
+        "austria": 20
       }
     },
     "K": {
@@ -717,7 +717,7 @@
           "ga": 0,
           "gd": 0,
           "pts": 0,
-          "flag": "\ud83c\udde8\ud83c\udde9"
+          "flag": "🇨🇩"
         },
         {
           "pos": 2,
@@ -731,7 +731,7 @@
           "ga": 0,
           "gd": 0,
           "pts": 0,
-          "flag": "\ud83c\udde8\ud83c\uddf4"
+          "flag": "🇨🇴"
         },
         {
           "pos": 3,
@@ -745,7 +745,7 @@
           "ga": 0,
           "gd": 0,
           "pts": 0,
-          "flag": "\ud83c\uddf5\ud83c\uddf9"
+          "flag": "🇵🇹"
         },
         {
           "pos": 4,
@@ -759,13 +759,13 @@
           "ga": 0,
           "gd": 0,
           "pts": 0,
-          "flag": "\ud83c\uddfa\ud83c\uddff"
+          "flag": "🇺🇿"
         }
       ],
       "winProbabilities": {
-        "drcongo": 3,
-        "colombia": 32,
-        "portugal": 62,
+        "drcongo": 4,
+        "colombia": 33,
+        "portugal": 63,
         "uzbekistan": 3
       }
     },
@@ -783,7 +783,7 @@
           "ga": 0,
           "gd": 0,
           "pts": 0,
-          "flag": "\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f"
+          "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿"
         },
         {
           "pos": 2,
@@ -797,7 +797,7 @@
           "ga": 0,
           "gd": 0,
           "pts": 0,
-          "flag": "\ud83c\uddec\ud83c\udded"
+          "flag": "🇬🇭"
         },
         {
           "pos": 3,
@@ -811,7 +811,7 @@
           "ga": 0,
           "gd": 0,
           "pts": 0,
-          "flag": "\ud83c\udded\ud83c\uddf7"
+          "flag": "🇭🇷"
         },
         {
           "pos": 4,
@@ -825,12 +825,12 @@
           "ga": 0,
           "gd": 0,
           "pts": 0,
-          "flag": "\ud83c\uddf5\ud83c\udde6"
+          "flag": "🇵🇦"
         }
       ],
       "winProbabilities": {
-        "england": 70,
-        "ghana": 5,
+        "england": 72,
+        "ghana": 4,
         "croatia": 22,
         "panama": 3
       }
@@ -840,7 +840,7 @@
     {
       "id": "mexico",
       "name": "Mexico",
-      "flag": "\ud83c\uddf2\ud83c\uddfd",
+      "flag": "🇲🇽",
       "group": "A",
       "confederation": "CONCACAF",
       "fifaRank": 15,
@@ -850,23 +850,23 @@
         {
           "matchday": 1,
           "opponent": "South Africa",
-          "opponentFlag": "\ud83c\uddff\ud83c\udde6",
+          "opponentFlag": "🇿🇦",
           "result": "W",
           "score": "2-0",
           "date": "2026-06-11",
           "venue": "Estadio Azteca, Mexico City",
           "scorers": [
             "Lozano 34'",
-            "Jim\u00e9nez 67'"
+            "Jiménez 67'"
           ],
           "cards": [
             {
-              "player": "Brian Guti\u00e9rrez",
+              "player": "Brian Gutiérrez",
               "minute": "23'",
               "type": "yellow"
             },
             {
-              "player": "C\u00e9sar Montes",
+              "player": "César Montes",
               "minute": "90'+2'",
               "type": "red"
             }
@@ -875,7 +875,7 @@
         {
           "matchday": 2,
           "opponent": "South Korea",
-          "opponentFlag": "\ud83c\uddf0\ud83c\uddf7",
+          "opponentFlag": "🇰🇷",
           "result": null,
           "score": null,
           "date": "2026-06-18",
@@ -885,7 +885,7 @@
         {
           "matchday": 3,
           "opponent": "Czechia",
-          "opponentFlag": "\ud83c\udde8\ud83c\uddff",
+          "opponentFlag": "🇨🇿",
           "result": null,
           "score": null,
           "date": "2026-06-24",
@@ -894,20 +894,20 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 97,
-        "r16": 58,
-        "qf": 31,
-        "sf": 12,
-        "final": 5,
+        "r32": 98,
+        "r16": 62,
+        "qf": 32,
+        "sf": 13,
+        "final": 6,
         "winner": 1,
         "source": "market"
       },
       "path": {
         "group_stage": {
           "status": "active",
-          "city": "Mexico City \u00b7 Zapopan",
+          "city": "Mexico City · Zapopan",
           "venue": "Various venues",
-          "date": "Jun 11\u201324",
+          "date": "Jun 11–24",
           "detail": "3pts after MD1"
         },
         "r32": {
@@ -956,7 +956,7 @@
           {
             "group": "C",
             "likelyTeam": "Brazil",
-            "flag": "\ud83c\udde7\ud83c\uddf7",
+            "flag": "🇧🇷",
             "fifaRank": 4,
             "difficulty": 5,
             "label": "Danger",
@@ -967,7 +967,7 @@
           {
             "group": "E",
             "likelyTeam": "Ecuador",
-            "flag": "\ud83c\uddea\ud83c\udde8",
+            "flag": "🇪🇨",
             "fifaRank": 23,
             "difficulty": 3,
             "label": "Moderate",
@@ -978,7 +978,7 @@
           {
             "group": "F",
             "likelyTeam": "Netherlands",
-            "flag": "\ud83c\uddf3\ud83c\uddf1",
+            "flag": "🇳🇱",
             "fifaRank": 7,
             "difficulty": 5,
             "label": "Danger",
@@ -989,7 +989,7 @@
           {
             "group": "H",
             "likelyTeam": "Spain",
-            "flag": "\ud83c\uddea\ud83c\uddf8",
+            "flag": "🇪🇸",
             "fifaRank": 1,
             "difficulty": 5,
             "label": "Danger",
@@ -1000,7 +1000,7 @@
           {
             "group": "I",
             "likelyTeam": "Norway",
-            "flag": "\ud83c\uddf3\ud83c\uddf4",
+            "flag": "🇳🇴",
             "fifaRank": 31,
             "difficulty": 3,
             "label": "Moderate",
@@ -1015,7 +1015,7 @@
     {
       "id": "southafrica",
       "name": "South Africa",
-      "flag": "\ud83c\uddff\ud83c\udde6",
+      "flag": "🇿🇦",
       "group": "A",
       "confederation": "CAF",
       "fifaRank": 58,
@@ -1025,7 +1025,7 @@
         {
           "matchday": 1,
           "opponent": "Mexico",
-          "opponentFlag": "\ud83c\uddf2\ud83c\uddfd",
+          "opponentFlag": "🇲🇽",
           "result": "L",
           "score": "0-2",
           "date": "2026-06-11",
@@ -1057,7 +1057,7 @@
         {
           "matchday": 2,
           "opponent": "Czechia",
-          "opponentFlag": "\ud83c\udde8\ud83c\uddff",
+          "opponentFlag": "🇨🇿",
           "result": null,
           "score": null,
           "date": "2026-06-18",
@@ -1067,7 +1067,7 @@
         {
           "matchday": 3,
           "opponent": "South Korea",
-          "opponentFlag": "\ud83c\uddf0\ud83c\uddf7",
+          "opponentFlag": "🇰🇷",
           "result": null,
           "score": null,
           "date": "2026-06-24",
@@ -1077,19 +1077,19 @@
       ],
       "advanceProbabilities": {
         "r32": 17,
-        "r16": 4,
+        "r16": 7,
         "qf": 2,
         "sf": 1,
-        "final": 1,
+        "final": 2,
         "winner": 0,
         "source": "market"
       },
       "path": {
         "group_stage": {
           "status": "active",
-          "city": "Mexico City \u00b7 Atlanta \u00b7 Zapopan",
+          "city": "Mexico City · Atlanta · Zapopan",
           "venue": "Various venues",
-          "date": "Jun 11\u201324",
+          "date": "Jun 11–24",
           "detail": "0pts after MD1"
         },
         "r32": {
@@ -1138,7 +1138,7 @@
           {
             "group": "E",
             "likelyTeam": "Ecuador",
-            "flag": "\ud83c\uddea\ud83c\udde8",
+            "flag": "🇪🇨",
             "fifaRank": 23,
             "difficulty": 3,
             "label": "Moderate",
@@ -1149,7 +1149,7 @@
           {
             "group": "H",
             "likelyTeam": "Spain",
-            "flag": "\ud83c\uddea\ud83c\uddf8",
+            "flag": "🇪🇸",
             "fifaRank": 1,
             "difficulty": 5,
             "label": "Danger",
@@ -1160,7 +1160,7 @@
           {
             "group": "I",
             "likelyTeam": "Norway",
-            "flag": "\ud83c\uddf3\ud83c\uddf4",
+            "flag": "🇳🇴",
             "fifaRank": 31,
             "difficulty": 3,
             "label": "Moderate",
@@ -1171,7 +1171,7 @@
           {
             "group": "J",
             "likelyTeam": "Jordan",
-            "flag": "\ud83c\uddef\ud83c\uddf4",
+            "flag": "🇯🇴",
             "fifaRank": 66,
             "difficulty": 1,
             "label": "Favorable",
@@ -1182,7 +1182,7 @@
           {
             "group": "K",
             "likelyTeam": "Portugal",
-            "flag": "\ud83c\uddf5\ud83c\uddf9",
+            "flag": "🇵🇹",
             "fifaRank": 6,
             "difficulty": 5,
             "label": "Danger",
@@ -1197,7 +1197,7 @@
     {
       "id": "southkorea",
       "name": "South Korea",
-      "flag": "\ud83c\uddf0\ud83c\uddf7",
+      "flag": "🇰🇷",
       "group": "A",
       "confederation": "AFC",
       "fifaRank": 22,
@@ -1207,7 +1207,7 @@
         {
           "matchday": 1,
           "opponent": "Czechia",
-          "opponentFlag": "\ud83c\udde8\ud83c\uddff",
+          "opponentFlag": "🇨🇿",
           "result": null,
           "score": null,
           "date": "2026-06-11",
@@ -1217,7 +1217,7 @@
         {
           "matchday": 2,
           "opponent": "Mexico",
-          "opponentFlag": "\ud83c\uddf2\ud83c\uddfd",
+          "opponentFlag": "🇲🇽",
           "result": null,
           "score": null,
           "date": "2026-06-18",
@@ -1227,7 +1227,7 @@
         {
           "matchday": 3,
           "opponent": "South Africa",
-          "opponentFlag": "\ud83c\uddff\ud83c\udde6",
+          "opponentFlag": "🇿🇦",
           "result": null,
           "score": null,
           "date": "2026-06-24",
@@ -1236,10 +1236,10 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 94,
-        "r16": 48,
-        "qf": 17,
-        "sf": 6,
+        "r32": 93,
+        "r16": 47,
+        "qf": 15,
+        "sf": 7,
         "final": 2,
         "winner": 0,
         "source": "market"
@@ -1249,7 +1249,7 @@
           "status": "active",
           "city": "Zapopan",
           "venue": "Various venues",
-          "date": "Jun 11\u201324",
+          "date": "Jun 11–24",
           "detail": "3pts after MD1"
         },
         "r32": {
@@ -1298,7 +1298,7 @@
           {
             "group": "E",
             "likelyTeam": "Ecuador",
-            "flag": "\ud83c\uddea\ud83c\udde8",
+            "flag": "🇪🇨",
             "fifaRank": 23,
             "difficulty": 3,
             "label": "Moderate",
@@ -1309,7 +1309,7 @@
           {
             "group": "H",
             "likelyTeam": "Spain",
-            "flag": "\ud83c\uddea\ud83c\uddf8",
+            "flag": "🇪🇸",
             "fifaRank": 1,
             "difficulty": 5,
             "label": "Danger",
@@ -1320,7 +1320,7 @@
           {
             "group": "I",
             "likelyTeam": "Norway",
-            "flag": "\ud83c\uddf3\ud83c\uddf4",
+            "flag": "🇳🇴",
             "fifaRank": 31,
             "difficulty": 3,
             "label": "Moderate",
@@ -1331,7 +1331,7 @@
           {
             "group": "J",
             "likelyTeam": "Jordan",
-            "flag": "\ud83c\uddef\ud83c\uddf4",
+            "flag": "🇯🇴",
             "fifaRank": 66,
             "difficulty": 1,
             "label": "Favorable",
@@ -1342,7 +1342,7 @@
           {
             "group": "K",
             "likelyTeam": "Portugal",
-            "flag": "\ud83c\uddf5\ud83c\uddf9",
+            "flag": "🇵🇹",
             "fifaRank": 6,
             "difficulty": 5,
             "label": "Danger",
@@ -1357,7 +1357,7 @@
     {
       "id": "czechia",
       "name": "Czechia",
-      "flag": "\ud83c\udde8\ud83c\uddff",
+      "flag": "🇨🇿",
       "group": "A",
       "confederation": "UEFA",
       "fifaRank": 37,
@@ -1367,7 +1367,7 @@
         {
           "matchday": 1,
           "opponent": "South Korea",
-          "opponentFlag": "\ud83c\uddf0\ud83c\uddf7",
+          "opponentFlag": "🇰🇷",
           "result": null,
           "score": null,
           "date": "2026-06-11",
@@ -1377,7 +1377,7 @@
         {
           "matchday": 2,
           "opponent": "South Africa",
-          "opponentFlag": "\ud83c\uddff\ud83c\udde6",
+          "opponentFlag": "🇿🇦",
           "result": null,
           "score": null,
           "date": "2026-06-18",
@@ -1387,7 +1387,7 @@
         {
           "matchday": 3,
           "opponent": "Mexico",
-          "opponentFlag": "\ud83c\uddf2\ud83c\uddfd",
+          "opponentFlag": "🇲🇽",
           "result": null,
           "score": null,
           "date": "2026-06-24",
@@ -1397,19 +1397,19 @@
       ],
       "advanceProbabilities": {
         "r32": 55,
-        "r16": 18,
-        "qf": 5,
-        "sf": 2,
-        "final": 1,
+        "r16": 17,
+        "qf": 7,
+        "sf": 3,
+        "final": 2,
         "winner": 0,
         "source": "market"
       },
       "path": {
         "group_stage": {
           "status": "active",
-          "city": "Zapopan \u00b7 Atlanta",
+          "city": "Zapopan · Atlanta",
           "venue": "Various venues",
-          "date": "Jun 11\u201324",
+          "date": "Jun 11–24",
           "detail": "0pts after MD1"
         },
         "r32": {
@@ -1458,7 +1458,7 @@
           {
             "group": "E",
             "likelyTeam": "Ecuador",
-            "flag": "\ud83c\uddea\ud83c\udde8",
+            "flag": "🇪🇨",
             "fifaRank": 23,
             "difficulty": 3,
             "label": "Moderate",
@@ -1469,7 +1469,7 @@
           {
             "group": "H",
             "likelyTeam": "Spain",
-            "flag": "\ud83c\uddea\ud83c\uddf8",
+            "flag": "🇪🇸",
             "fifaRank": 1,
             "difficulty": 5,
             "label": "Danger",
@@ -1480,7 +1480,7 @@
           {
             "group": "I",
             "likelyTeam": "Norway",
-            "flag": "\ud83c\uddf3\ud83c\uddf4",
+            "flag": "🇳🇴",
             "fifaRank": 31,
             "difficulty": 3,
             "label": "Moderate",
@@ -1491,7 +1491,7 @@
           {
             "group": "J",
             "likelyTeam": "Jordan",
-            "flag": "\ud83c\uddef\ud83c\uddf4",
+            "flag": "🇯🇴",
             "fifaRank": 66,
             "difficulty": 1,
             "label": "Favorable",
@@ -1502,7 +1502,7 @@
           {
             "group": "K",
             "likelyTeam": "Portugal",
-            "flag": "\ud83c\uddf5\ud83c\uddf9",
+            "flag": "🇵🇹",
             "fifaRank": 6,
             "difficulty": 5,
             "label": "Danger",
@@ -1517,7 +1517,7 @@
     {
       "id": "canada",
       "name": "Canada",
-      "flag": "\ud83c\udde8\ud83c\udde6",
+      "flag": "🇨🇦",
       "group": "B",
       "confederation": "CONCACAF",
       "fifaRank": 27,
@@ -1527,7 +1527,7 @@
         {
           "matchday": 1,
           "opponent": "Bosnia & Herz.",
-          "opponentFlag": "\ud83c\udde7\ud83c\udde6",
+          "opponentFlag": "🇧🇦",
           "result": "D",
           "score": "1-1",
           "date": "2026-06-12",
@@ -1551,7 +1551,7 @@
         {
           "matchday": 2,
           "opponent": "Qatar",
-          "opponentFlag": "\ud83c\uddf6\ud83c\udde6",
+          "opponentFlag": "🇶🇦",
           "result": null,
           "score": null,
           "date": "2026-06-18",
@@ -1561,7 +1561,7 @@
         {
           "matchday": 3,
           "opponent": "Switzerland",
-          "opponentFlag": "\ud83c\udde8\ud83c\udded",
+          "opponentFlag": "🇨🇭",
           "result": null,
           "score": null,
           "date": "2026-06-24",
@@ -1571,19 +1571,19 @@
       ],
       "advanceProbabilities": {
         "r32": 84,
-        "r16": 39,
-        "qf": 14,
-        "sf": 3,
-        "final": 1,
+        "r16": 41,
+        "qf": 10,
+        "sf": 2,
+        "final": 2,
         "winner": 0,
         "source": "market"
       },
       "path": {
         "group_stage": {
           "status": "active",
-          "city": "Toronto \u00b7 Vancouver",
+          "city": "Toronto · Vancouver",
           "venue": "Various venues",
-          "date": "Jun 12\u201324",
+          "date": "Jun 12–24",
           "detail": "1pt after MD1"
         },
         "r32": {
@@ -1632,7 +1632,7 @@
           {
             "group": "A",
             "likelyTeam": "Czechia",
-            "flag": "\ud83c\udde8\ud83c\uddff",
+            "flag": "🇨🇿",
             "fifaRank": 37,
             "difficulty": 2,
             "label": "Favorable",
@@ -1643,7 +1643,7 @@
           {
             "group": "E",
             "likelyTeam": "Ecuador",
-            "flag": "\ud83c\uddea\ud83c\udde8",
+            "flag": "🇪🇨",
             "fifaRank": 23,
             "difficulty": 3,
             "label": "Moderate",
@@ -1654,7 +1654,7 @@
           {
             "group": "H",
             "likelyTeam": "Spain",
-            "flag": "\ud83c\uddea\ud83c\uddf8",
+            "flag": "🇪🇸",
             "fifaRank": 1,
             "difficulty": 5,
             "label": "Danger",
@@ -1665,7 +1665,7 @@
           {
             "group": "I",
             "likelyTeam": "Norway",
-            "flag": "\ud83c\uddf3\ud83c\uddf4",
+            "flag": "🇳🇴",
             "fifaRank": 31,
             "difficulty": 3,
             "label": "Moderate",
@@ -1676,7 +1676,7 @@
           {
             "group": "J",
             "likelyTeam": "Jordan",
-            "flag": "\ud83c\uddef\ud83c\uddf4",
+            "flag": "🇯🇴",
             "fifaRank": 66,
             "difficulty": 1,
             "label": "Favorable",
@@ -1691,7 +1691,7 @@
     {
       "id": "bosnia",
       "name": "Bosnia & Herz.",
-      "flag": "\ud83c\udde7\ud83c\udde6",
+      "flag": "🇧🇦",
       "group": "B",
       "confederation": "UEFA",
       "fifaRank": 71,
@@ -1701,13 +1701,13 @@
         {
           "matchday": 1,
           "opponent": "Canada",
-          "opponentFlag": "\ud83c\udde8\ud83c\udde6",
+          "opponentFlag": "🇨🇦",
           "result": "D",
           "score": "1-1",
           "date": "2026-06-12",
           "venue": "BMO Field, Toronto",
           "scorers": [
-            "D\u017eeko 44'"
+            "Džeko 44'"
           ],
           "cards": [
             {
@@ -1730,7 +1730,7 @@
         {
           "matchday": 2,
           "opponent": "Switzerland",
-          "opponentFlag": "\ud83c\udde8\ud83c\udded",
+          "opponentFlag": "🇨🇭",
           "result": null,
           "score": null,
           "date": "2026-06-18",
@@ -1740,7 +1740,7 @@
         {
           "matchday": 3,
           "opponent": "Qatar",
-          "opponentFlag": "\ud83c\uddf6\ud83c\udde6",
+          "opponentFlag": "🇶🇦",
           "result": null,
           "score": null,
           "date": "2026-06-24",
@@ -1749,20 +1749,20 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 66,
-        "r16": 21,
-        "qf": 6,
+        "r32": 68,
+        "r16": 23,
+        "qf": 7,
         "sf": 3,
-        "final": 1,
+        "final": 2,
         "winner": 0,
         "source": "market"
       },
       "path": {
         "group_stage": {
           "status": "active",
-          "city": "Toronto \u00b7 San Francisco \u00b7 Seattle",
+          "city": "Toronto · San Francisco · Seattle",
           "venue": "Various venues",
-          "date": "Jun 12\u201324",
+          "date": "Jun 12–24",
           "detail": "1pt after MD1"
         },
         "r32": {
@@ -1811,7 +1811,7 @@
           {
             "group": "A",
             "likelyTeam": "Czechia",
-            "flag": "\ud83c\udde8\ud83c\uddff",
+            "flag": "🇨🇿",
             "fifaRank": 37,
             "difficulty": 2,
             "label": "Favorable",
@@ -1822,7 +1822,7 @@
           {
             "group": "E",
             "likelyTeam": "Ecuador",
-            "flag": "\ud83c\uddea\ud83c\udde8",
+            "flag": "🇪🇨",
             "fifaRank": 23,
             "difficulty": 3,
             "label": "Moderate",
@@ -1833,7 +1833,7 @@
           {
             "group": "H",
             "likelyTeam": "Spain",
-            "flag": "\ud83c\uddea\ud83c\uddf8",
+            "flag": "🇪🇸",
             "fifaRank": 1,
             "difficulty": 5,
             "label": "Danger",
@@ -1844,7 +1844,7 @@
           {
             "group": "I",
             "likelyTeam": "Norway",
-            "flag": "\ud83c\uddf3\ud83c\uddf4",
+            "flag": "🇳🇴",
             "fifaRank": 31,
             "difficulty": 3,
             "label": "Moderate",
@@ -1855,7 +1855,7 @@
           {
             "group": "J",
             "likelyTeam": "Jordan",
-            "flag": "\ud83c\uddef\ud83c\uddf4",
+            "flag": "🇯🇴",
             "fifaRank": 66,
             "difficulty": 1,
             "label": "Favorable",
@@ -1870,7 +1870,7 @@
     {
       "id": "qatar",
       "name": "Qatar",
-      "flag": "\ud83c\uddf6\ud83c\udde6",
+      "flag": "🇶🇦",
       "group": "B",
       "confederation": "AFC",
       "fifaRank": 51,
@@ -1880,7 +1880,7 @@
         {
           "matchday": 1,
           "opponent": "Switzerland",
-          "opponentFlag": "\ud83c\udde8\ud83c\udded",
+          "opponentFlag": "🇨🇭",
           "result": "D",
           "score": "1-1",
           "date": "2026-06-13",
@@ -1904,7 +1904,7 @@
         {
           "matchday": 2,
           "opponent": "Canada",
-          "opponentFlag": "\ud83c\udde8\ud83c\udde6",
+          "opponentFlag": "🇨🇦",
           "result": null,
           "score": null,
           "date": "2026-06-18",
@@ -1914,7 +1914,7 @@
         {
           "matchday": 3,
           "opponent": "Bosnia & Herz.",
-          "opponentFlag": "\ud83c\udde7\ud83c\udde6",
+          "opponentFlag": "🇧🇦",
           "result": null,
           "score": null,
           "date": "2026-06-24",
@@ -1923,10 +1923,10 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 24,
-        "r16": 5,
+        "r32": 26,
+        "r16": 3,
         "qf": 3,
-        "sf": 2,
+        "sf": 1,
         "final": 1,
         "winner": 0,
         "source": "market"
@@ -1934,9 +1934,9 @@
       "path": {
         "group_stage": {
           "status": "active",
-          "city": "San Francisco \u00b7 Vancouver \u00b7 Seattle",
+          "city": "San Francisco · Vancouver · Seattle",
           "venue": "Various venues",
-          "date": "Jun 13\u201324",
+          "date": "Jun 13–24",
           "detail": "1pt after MD1"
         },
         "r32": {
@@ -1985,7 +1985,7 @@
           {
             "group": "A",
             "likelyTeam": "Czechia",
-            "flag": "\ud83c\udde8\ud83c\uddff",
+            "flag": "🇨🇿",
             "fifaRank": 37,
             "difficulty": 2,
             "label": "Favorable",
@@ -1996,7 +1996,7 @@
           {
             "group": "E",
             "likelyTeam": "Ecuador",
-            "flag": "\ud83c\uddea\ud83c\udde8",
+            "flag": "🇪🇨",
             "fifaRank": 23,
             "difficulty": 3,
             "label": "Moderate",
@@ -2007,7 +2007,7 @@
           {
             "group": "H",
             "likelyTeam": "Spain",
-            "flag": "\ud83c\uddea\ud83c\uddf8",
+            "flag": "🇪🇸",
             "fifaRank": 1,
             "difficulty": 5,
             "label": "Danger",
@@ -2018,7 +2018,7 @@
           {
             "group": "I",
             "likelyTeam": "Norway",
-            "flag": "\ud83c\uddf3\ud83c\uddf4",
+            "flag": "🇳🇴",
             "fifaRank": 31,
             "difficulty": 3,
             "label": "Moderate",
@@ -2029,7 +2029,7 @@
           {
             "group": "J",
             "likelyTeam": "Jordan",
-            "flag": "\ud83c\uddef\ud83c\uddf4",
+            "flag": "🇯🇴",
             "fifaRank": 66,
             "difficulty": 1,
             "label": "Favorable",
@@ -2044,7 +2044,7 @@
     {
       "id": "switzerland",
       "name": "Switzerland",
-      "flag": "\ud83c\udde8\ud83c\udded",
+      "flag": "🇨🇭",
       "group": "B",
       "confederation": "UEFA",
       "fifaRank": 17,
@@ -2054,7 +2054,7 @@
         {
           "matchday": 1,
           "opponent": "Qatar",
-          "opponentFlag": "\ud83c\uddf6\ud83c\udde6",
+          "opponentFlag": "🇶🇦",
           "result": "D",
           "score": "1-1",
           "date": "2026-06-13",
@@ -2073,7 +2073,7 @@
         {
           "matchday": 2,
           "opponent": "Bosnia & Herz.",
-          "opponentFlag": "\ud83c\udde7\ud83c\udde6",
+          "opponentFlag": "🇧🇦",
           "result": null,
           "score": null,
           "date": "2026-06-18",
@@ -2083,7 +2083,7 @@
         {
           "matchday": 3,
           "opponent": "Canada",
-          "opponentFlag": "\ud83c\udde8\ud83c\udde6",
+          "opponentFlag": "🇨🇦",
           "result": null,
           "score": null,
           "date": "2026-06-24",
@@ -2093,19 +2093,19 @@
       ],
       "advanceProbabilities": {
         "r32": 88,
-        "r16": 53,
-        "qf": 21,
-        "sf": 8,
-        "final": 3,
+        "r16": 51,
+        "qf": 19,
+        "sf": 7,
+        "final": 4,
         "winner": 1,
         "source": "market"
       },
       "path": {
         "group_stage": {
           "status": "active",
-          "city": "San Francisco \u00b7 Vancouver",
+          "city": "San Francisco · Vancouver",
           "venue": "Various venues",
-          "date": "Jun 13\u201324",
+          "date": "Jun 13–24",
           "detail": "1pt after MD1"
         },
         "r32": {
@@ -2154,7 +2154,7 @@
           {
             "group": "E",
             "likelyTeam": "Ecuador",
-            "flag": "\ud83c\uddea\ud83c\udde8",
+            "flag": "🇪🇨",
             "fifaRank": 23,
             "difficulty": 3,
             "label": "Moderate",
@@ -2165,7 +2165,7 @@
           {
             "group": "F",
             "likelyTeam": "Netherlands",
-            "flag": "\ud83c\uddf3\ud83c\uddf1",
+            "flag": "🇳🇱",
             "fifaRank": 7,
             "difficulty": 5,
             "label": "Danger",
@@ -2176,7 +2176,7 @@
           {
             "group": "G",
             "likelyTeam": "Egypt",
-            "flag": "\ud83c\uddea\ud83c\uddec",
+            "flag": "🇪🇬",
             "fifaRank": 34,
             "difficulty": 3,
             "label": "Moderate",
@@ -2187,7 +2187,7 @@
           {
             "group": "I",
             "likelyTeam": "Norway",
-            "flag": "\ud83c\uddf3\ud83c\uddf4",
+            "flag": "🇳🇴",
             "fifaRank": 31,
             "difficulty": 3,
             "label": "Moderate",
@@ -2198,7 +2198,7 @@
           {
             "group": "J",
             "likelyTeam": "Jordan",
-            "flag": "\ud83c\uddef\ud83c\uddf4",
+            "flag": "🇯🇴",
             "fifaRank": 66,
             "difficulty": 1,
             "label": "Favorable",
@@ -2213,7 +2213,7 @@
     {
       "id": "brazil",
       "name": "Brazil",
-      "flag": "\ud83c\udde7\ud83c\uddf7",
+      "flag": "🇧🇷",
       "group": "C",
       "confederation": "CONMEBOL",
       "fifaRank": 4,
@@ -2223,13 +2223,13 @@
         {
           "matchday": 1,
           "opponent": "Morocco",
-          "opponentFlag": "\ud83c\uddf2\ud83c\udde6",
+          "opponentFlag": "🇲🇦",
           "result": "D",
           "score": "1-1",
           "date": "2026-06-13",
           "venue": "MetLife Stadium, New Jersey",
           "scorers": [
-            "Vin\u00edcius Jr 55'"
+            "Vinícius Jr 55'"
           ],
           "cards": [
             {
@@ -2238,7 +2238,7 @@
               "type": "yellow"
             },
             {
-              "player": "Roger Iba\u00f1ez",
+              "player": "Roger Ibañez",
               "minute": "43'",
               "type": "yellow"
             }
@@ -2247,7 +2247,7 @@
         {
           "matchday": 2,
           "opponent": "Haiti",
-          "opponentFlag": "\ud83c\udded\ud83c\uddf9",
+          "opponentFlag": "🇭🇹",
           "result": null,
           "score": null,
           "date": "2026-06-19",
@@ -2257,7 +2257,7 @@
         {
           "matchday": 3,
           "opponent": "Scotland",
-          "opponentFlag": "\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc73\udb40\udc63\udb40\udc74\udb40\udc7f",
+          "opponentFlag": "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
           "result": null,
           "score": null,
           "date": "2026-06-24",
@@ -2266,20 +2266,20 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 96,
-        "r16": 67,
-        "qf": 47,
-        "sf": 24,
-        "final": 14,
+        "r32": 95,
+        "r16": 70,
+        "qf": 48,
+        "sf": 28,
+        "final": 18,
         "winner": 7,
         "source": "market"
       },
       "path": {
         "group_stage": {
           "status": "active",
-          "city": "New Jersey \u00b7 Philadelphia \u00b7 Miami",
+          "city": "New Jersey · Philadelphia · Miami",
           "venue": "Various venues",
-          "date": "Jun 13\u201324",
+          "date": "Jun 13–24",
           "detail": "1pt after MD1"
         },
         "r32": {
@@ -2328,7 +2328,7 @@
           {
             "group": "D",
             "likelyTeam": "Australia",
-            "flag": "\ud83c\udde6\ud83c\uddfa",
+            "flag": "🇦🇺",
             "fifaRank": 26,
             "difficulty": 3,
             "label": "Moderate",
@@ -2343,7 +2343,7 @@
     {
       "id": "morocco",
       "name": "Morocco",
-      "flag": "\ud83c\uddf2\ud83c\udde6",
+      "flag": "🇲🇦",
       "group": "C",
       "confederation": "CAF",
       "fifaRank": 14,
@@ -2353,7 +2353,7 @@
         {
           "matchday": 1,
           "opponent": "Brazil",
-          "opponentFlag": "\ud83c\udde7\ud83c\uddf7",
+          "opponentFlag": "🇧🇷",
           "result": "D",
           "score": "1-1",
           "date": "2026-06-13",
@@ -2365,7 +2365,7 @@
         {
           "matchday": 2,
           "opponent": "Scotland",
-          "opponentFlag": "\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc73\udb40\udc63\udb40\udc74\udb40\udc7f",
+          "opponentFlag": "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
           "result": null,
           "score": null,
           "date": "2026-06-19",
@@ -2375,7 +2375,7 @@
         {
           "matchday": 3,
           "opponent": "Haiti",
-          "opponentFlag": "\ud83c\udded\ud83c\uddf9",
+          "opponentFlag": "🇭🇹",
           "result": null,
           "score": null,
           "date": "2026-06-24",
@@ -2384,9 +2384,9 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 95,
-        "r16": 52,
-        "qf": 30,
+        "r32": 94,
+        "r16": 48,
+        "qf": 29,
         "sf": 14,
         "final": 8,
         "winner": 2,
@@ -2395,9 +2395,9 @@
       "path": {
         "group_stage": {
           "status": "active",
-          "city": "New Jersey \u00b7 Boston \u00b7 Atlanta",
+          "city": "New Jersey · Boston · Atlanta",
           "venue": "Various venues",
-          "date": "Jun 13\u201324",
+          "date": "Jun 13–24",
           "detail": "1pt after MD1"
         },
         "r32": {
@@ -2446,7 +2446,7 @@
           {
             "group": "D",
             "likelyTeam": "Australia",
-            "flag": "\ud83c\udde6\ud83c\uddfa",
+            "flag": "🇦🇺",
             "fifaRank": 26,
             "difficulty": 3,
             "label": "Moderate",
@@ -2461,7 +2461,7 @@
     {
       "id": "haiti",
       "name": "Haiti",
-      "flag": "\ud83c\udded\ud83c\uddf9",
+      "flag": "🇭🇹",
       "group": "C",
       "confederation": "CONCACAF",
       "fifaRank": 83,
@@ -2471,7 +2471,7 @@
         {
           "matchday": 1,
           "opponent": "Scotland",
-          "opponentFlag": "\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc73\udb40\udc63\udb40\udc74\udb40\udc7f",
+          "opponentFlag": "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
           "result": "L",
           "score": "0-1",
           "date": "2026-06-13",
@@ -2488,7 +2488,7 @@
         {
           "matchday": 2,
           "opponent": "Brazil",
-          "opponentFlag": "\ud83c\udde7\ud83c\uddf7",
+          "opponentFlag": "🇧🇷",
           "result": null,
           "score": null,
           "date": "2026-06-19",
@@ -2498,7 +2498,7 @@
         {
           "matchday": 3,
           "opponent": "Morocco",
-          "opponentFlag": "\ud83c\uddf2\ud83c\udde6",
+          "opponentFlag": "🇲🇦",
           "result": null,
           "score": null,
           "date": "2026-06-24",
@@ -2507,7 +2507,7 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 6,
+        "r32": 5,
         "r16": 5,
         "qf": 1,
         "sf": 0,
@@ -2518,9 +2518,9 @@
       "path": {
         "group_stage": {
           "status": "active",
-          "city": "Boston \u00b7 Philadelphia \u00b7 Atlanta",
+          "city": "Boston · Philadelphia · Atlanta",
           "venue": "Various venues",
-          "date": "Jun 13\u201324",
+          "date": "Jun 13–24",
           "detail": "0pts after MD1"
         },
         "r32": {
@@ -2569,7 +2569,7 @@
           {
             "group": "D",
             "likelyTeam": "Australia",
-            "flag": "\ud83c\udde6\ud83c\uddfa",
+            "flag": "🇦🇺",
             "fifaRank": 26,
             "difficulty": 3,
             "label": "Moderate",
@@ -2584,7 +2584,7 @@
     {
       "id": "scotland",
       "name": "Scotland",
-      "flag": "\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc73\udb40\udc63\udb40\udc74\udb40\udc7f",
+      "flag": "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
       "group": "C",
       "confederation": "UEFA",
       "fifaRank": 39,
@@ -2594,7 +2594,7 @@
         {
           "matchday": 1,
           "opponent": "Haiti",
-          "opponentFlag": "\ud83c\udded\ud83c\uddf9",
+          "opponentFlag": "🇭🇹",
           "result": "W",
           "score": "1-0",
           "date": "2026-06-13",
@@ -2623,7 +2623,7 @@
         {
           "matchday": 2,
           "opponent": "Morocco",
-          "opponentFlag": "\ud83c\uddf2\ud83c\udde6",
+          "opponentFlag": "🇲🇦",
           "result": null,
           "score": null,
           "date": "2026-06-19",
@@ -2633,7 +2633,7 @@
         {
           "matchday": 3,
           "opponent": "Brazil",
-          "opponentFlag": "\ud83c\udde7\ud83c\uddf7",
+          "opponentFlag": "🇧🇷",
           "result": null,
           "score": null,
           "date": "2026-06-24",
@@ -2642,10 +2642,10 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 75,
-        "r16": 25,
+        "r32": 80,
+        "r16": 21,
         "qf": 9,
-        "sf": 4,
+        "sf": 3,
         "final": 2,
         "winner": 0,
         "source": "market"
@@ -2653,9 +2653,9 @@
       "path": {
         "group_stage": {
           "status": "active",
-          "city": "Boston \u00b7 Miami",
+          "city": "Boston · Miami",
           "venue": "Various venues",
-          "date": "Jun 13\u201324",
+          "date": "Jun 13–24",
           "detail": "3pts after MD1"
         },
         "r32": {
@@ -2703,8 +2703,8 @@
         "r32": [
           {
             "group": "D",
-            "likelyTeam": "T\u00fcrkiye",
-            "flag": "\ud83c\uddf9\ud83c\uddf7",
+            "likelyTeam": "Türkiye",
+            "flag": "🇹🇷",
             "fifaRank": 25,
             "difficulty": 3,
             "label": "Moderate",
@@ -2715,7 +2715,7 @@
           {
             "group": "E",
             "likelyTeam": "Ecuador",
-            "flag": "\ud83c\uddea\ud83c\udde8",
+            "flag": "🇪🇨",
             "fifaRank": 23,
             "difficulty": 3,
             "label": "Moderate",
@@ -2726,7 +2726,7 @@
           {
             "group": "I",
             "likelyTeam": "Norway",
-            "flag": "\ud83c\uddf3\ud83c\uddf4",
+            "flag": "🇳🇴",
             "fifaRank": 31,
             "difficulty": 3,
             "label": "Moderate",
@@ -2737,7 +2737,7 @@
           {
             "group": "J",
             "likelyTeam": "Jordan",
-            "flag": "\ud83c\uddef\ud83c\uddf4",
+            "flag": "🇯🇴",
             "fifaRank": 66,
             "difficulty": 1,
             "label": "Favorable",
@@ -2748,7 +2748,7 @@
           {
             "group": "L",
             "likelyTeam": "Croatia",
-            "flag": "\ud83c\udded\ud83c\uddf7",
+            "flag": "🇭🇷",
             "fifaRank": 10,
             "difficulty": 5,
             "label": "Danger",
@@ -2763,7 +2763,7 @@
     {
       "id": "usa",
       "name": "USA",
-      "flag": "\ud83c\uddfa\ud83c\uddf8",
+      "flag": "🇺🇸",
       "group": "D",
       "confederation": "CONCACAF",
       "fifaRank": 14,
@@ -2773,7 +2773,7 @@
         {
           "matchday": 1,
           "opponent": "Paraguay",
-          "opponentFlag": "\ud83c\uddf5\ud83c\uddfe",
+          "opponentFlag": "🇵🇾",
           "result": "W",
           "score": "4-1",
           "date": "2026-06-12",
@@ -2795,7 +2795,7 @@
         {
           "matchday": 2,
           "opponent": "Australia",
-          "opponentFlag": "\ud83c\udde6\ud83c\uddfa",
+          "opponentFlag": "🇦🇺",
           "result": null,
           "score": null,
           "date": "2026-06-19",
@@ -2804,8 +2804,8 @@
         },
         {
           "matchday": 3,
-          "opponent": "T\u00fcrkiye",
-          "opponentFlag": "\ud83c\uddf9\ud83c\uddf7",
+          "opponent": "Türkiye",
+          "opponentFlag": "🇹🇷",
           "result": null,
           "score": null,
           "date": "2026-06-25",
@@ -2817,7 +2817,7 @@
         "r32": 98,
         "r16": 64,
         "qf": 36,
-        "sf": 15,
+        "sf": 14,
         "final": 7,
         "winner": 2,
         "source": "market"
@@ -2825,9 +2825,9 @@
       "path": {
         "group_stage": {
           "status": "active",
-          "city": "Los Angeles \u00b7 Seattle",
+          "city": "Los Angeles · Seattle",
           "venue": "Various venues",
-          "date": "Jun 12\u201325",
+          "date": "Jun 12–25",
           "detail": "3pts after MD1"
         },
         "r32": {
@@ -2876,7 +2876,7 @@
           {
             "group": "B",
             "likelyTeam": "Qatar",
-            "flag": "\ud83c\uddf6\ud83c\udde6",
+            "flag": "🇶🇦",
             "fifaRank": 51,
             "difficulty": 2,
             "label": "Favorable",
@@ -2887,7 +2887,7 @@
           {
             "group": "E",
             "likelyTeam": "Ecuador",
-            "flag": "\ud83c\uddea\ud83c\udde8",
+            "flag": "🇪🇨",
             "fifaRank": 23,
             "difficulty": 3,
             "label": "Moderate",
@@ -2898,7 +2898,7 @@
           {
             "group": "F",
             "likelyTeam": "Netherlands",
-            "flag": "\ud83c\uddf3\ud83c\uddf1",
+            "flag": "🇳🇱",
             "fifaRank": 7,
             "difficulty": 5,
             "label": "Danger",
@@ -2909,7 +2909,7 @@
           {
             "group": "I",
             "likelyTeam": "Norway",
-            "flag": "\ud83c\uddf3\ud83c\uddf4",
+            "flag": "🇳🇴",
             "fifaRank": 31,
             "difficulty": 3,
             "label": "Moderate",
@@ -2920,7 +2920,7 @@
           {
             "group": "J",
             "likelyTeam": "Jordan",
-            "flag": "\ud83c\uddef\ud83c\uddf4",
+            "flag": "🇯🇴",
             "fifaRank": 66,
             "difficulty": 1,
             "label": "Favorable",
@@ -2935,7 +2935,7 @@
     {
       "id": "paraguay",
       "name": "Paraguay",
-      "flag": "\ud83c\uddf5\ud83c\uddfe",
+      "flag": "🇵🇾",
       "group": "D",
       "confederation": "CONMEBOL",
       "fifaRank": 39,
@@ -2945,7 +2945,7 @@
         {
           "matchday": 1,
           "opponent": "USA",
-          "opponentFlag": "\ud83c\uddfa\ud83c\uddf8",
+          "opponentFlag": "🇺🇸",
           "result": "L",
           "score": "1-4",
           "date": "2026-06-12",
@@ -2955,17 +2955,17 @@
           ],
           "cards": [
             {
-              "player": "Juan Jose C\u00e1ceres",
+              "player": "Juan Jose Cáceres",
               "minute": "10'",
               "type": "yellow"
             },
             {
-              "player": "Miguel Almir\u00f3n",
+              "player": "Miguel Almirón",
               "minute": "53'",
               "type": "yellow"
             },
             {
-              "player": "Diego G\u00f3mez",
+              "player": "Diego Gómez",
               "minute": "79'",
               "type": "yellow"
             },
@@ -2975,7 +2975,7 @@
               "type": "yellow"
             },
             {
-              "player": "J\u00fanior Alonso",
+              "player": "Júnior Alonso",
               "minute": "90'+3'",
               "type": "yellow"
             }
@@ -2983,8 +2983,8 @@
         },
         {
           "matchday": 2,
-          "opponent": "T\u00fcrkiye",
-          "opponentFlag": "\ud83c\uddf9\ud83c\uddf7",
+          "opponent": "Türkiye",
+          "opponentFlag": "🇹🇷",
           "result": null,
           "score": null,
           "date": "2026-06-19",
@@ -2994,7 +2994,7 @@
         {
           "matchday": 3,
           "opponent": "Australia",
-          "opponentFlag": "\ud83c\udde6\ud83c\uddfa",
+          "opponentFlag": "🇦🇺",
           "result": null,
           "score": null,
           "date": "2026-06-25",
@@ -3003,20 +3003,20 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 38,
-        "r16": 16,
-        "qf": 3,
+        "r32": 35,
+        "r16": 14,
+        "qf": 5,
         "sf": 2,
-        "final": 1,
+        "final": 2,
         "winner": 0,
         "source": "market"
       },
       "path": {
         "group_stage": {
           "status": "active",
-          "city": "Los Angeles \u00b7 San Francisco",
+          "city": "Los Angeles · San Francisco",
           "venue": "Various venues",
-          "date": "Jun 12\u201325",
+          "date": "Jun 12–25",
           "detail": "0pts after MD1"
         },
         "r32": {
@@ -3065,7 +3065,7 @@
           {
             "group": "C",
             "likelyTeam": "Scotland",
-            "flag": "\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc73\udb40\udc63\udb40\udc74\udb40\udc7f",
+            "flag": "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
             "fifaRank": 39,
             "difficulty": 2,
             "label": "Favorable",
@@ -3080,7 +3080,7 @@
     {
       "id": "australia",
       "name": "Australia",
-      "flag": "\ud83c\udde6\ud83c\uddfa",
+      "flag": "🇦🇺",
       "group": "D",
       "confederation": "AFC",
       "fifaRank": 26,
@@ -3089,8 +3089,8 @@
       "groupResults": [
         {
           "matchday": 1,
-          "opponent": "T\u00fcrkiye",
-          "opponentFlag": "\ud83c\uddf9\ud83c\uddf7",
+          "opponent": "Türkiye",
+          "opponentFlag": "🇹🇷",
           "result": "W",
           "score": "2-0",
           "date": "2026-06-13",
@@ -3102,7 +3102,7 @@
         {
           "matchday": 2,
           "opponent": "USA",
-          "opponentFlag": "\ud83c\uddfa\ud83c\uddf8",
+          "opponentFlag": "🇺🇸",
           "result": null,
           "score": null,
           "date": "2026-06-19",
@@ -3112,7 +3112,7 @@
         {
           "matchday": 3,
           "opponent": "Paraguay",
-          "opponentFlag": "\ud83c\uddf5\ud83c\uddfe",
+          "opponentFlag": "🇵🇾",
           "result": null,
           "score": null,
           "date": "2026-06-25",
@@ -3121,10 +3121,10 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 87,
-        "r16": 38,
-        "qf": 9,
-        "sf": 3,
+        "r32": 88,
+        "r16": 34,
+        "qf": 11,
+        "sf": 2,
         "final": 1,
         "winner": 0,
         "source": "market"
@@ -3132,9 +3132,9 @@
       "path": {
         "group_stage": {
           "status": "active",
-          "city": "Vancouver \u00b7 Seattle \u00b7 San Francisco",
+          "city": "Vancouver · Seattle · San Francisco",
           "venue": "Various venues",
-          "date": "Jun 13\u201325",
+          "date": "Jun 13–25",
           "detail": "3pts after MD1"
         },
         "r32": {
@@ -3183,7 +3183,7 @@
           {
             "group": "C",
             "likelyTeam": "Scotland",
-            "flag": "\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc73\udb40\udc63\udb40\udc74\udb40\udc7f",
+            "flag": "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
             "fifaRank": 39,
             "difficulty": 2,
             "label": "Favorable",
@@ -3197,8 +3197,8 @@
     },
     {
       "id": "turkey",
-      "name": "T\u00fcrkiye",
-      "flag": "\ud83c\uddf9\ud83c\uddf7",
+      "name": "Türkiye",
+      "flag": "🇹🇷",
       "group": "D",
       "confederation": "UEFA",
       "fifaRank": 25,
@@ -3208,7 +3208,7 @@
         {
           "matchday": 1,
           "opponent": "Australia",
-          "opponentFlag": "\ud83c\udde6\ud83c\uddfa",
+          "opponentFlag": "🇦🇺",
           "result": "L",
           "score": "0-2",
           "date": "2026-06-13",
@@ -3216,7 +3216,7 @@
           "scorers": [],
           "cards": [
             {
-              "player": "Yunus Akg\u00fcn",
+              "player": "Yunus Akgün",
               "minute": "86'",
               "type": "yellow"
             }
@@ -3225,7 +3225,7 @@
         {
           "matchday": 2,
           "opponent": "Paraguay",
-          "opponentFlag": "\ud83c\uddf5\ud83c\uddfe",
+          "opponentFlag": "🇵🇾",
           "result": null,
           "score": null,
           "date": "2026-06-19",
@@ -3235,7 +3235,7 @@
         {
           "matchday": 3,
           "opponent": "USA",
-          "opponentFlag": "\ud83c\uddfa\ud83c\uddf8",
+          "opponentFlag": "🇺🇸",
           "result": null,
           "score": null,
           "date": "2026-06-25",
@@ -3244,10 +3244,10 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 52,
-        "r16": 22,
+        "r32": 55,
+        "r16": 25,
         "qf": 12,
-        "sf": 7,
+        "sf": 6,
         "final": 1,
         "winner": 0,
         "source": "market"
@@ -3255,9 +3255,9 @@
       "path": {
         "group_stage": {
           "status": "active",
-          "city": "Vancouver \u00b7 San Francisco \u00b7 Los Angeles",
+          "city": "Vancouver · San Francisco · Los Angeles",
           "venue": "Various venues",
-          "date": "Jun 13\u201325",
+          "date": "Jun 13–25",
           "detail": "0pts after MD1"
         },
         "r32": {
@@ -3306,7 +3306,7 @@
           {
             "group": "C",
             "likelyTeam": "Scotland",
-            "flag": "\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc73\udb40\udc63\udb40\udc74\udb40\udc7f",
+            "flag": "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
             "fifaRank": 39,
             "difficulty": 2,
             "label": "Favorable",
@@ -3321,7 +3321,7 @@
     {
       "id": "germany",
       "name": "Germany",
-      "flag": "\ud83c\udde9\ud83c\uddea",
+      "flag": "🇩🇪",
       "group": "E",
       "confederation": "UEFA",
       "fifaRank": 9,
@@ -3330,8 +3330,8 @@
       "groupResults": [
         {
           "matchday": 1,
-          "opponent": "Cura\u00e7ao",
-          "opponentFlag": "\ud83c\udde8\ud83c\uddfc",
+          "opponent": "Curaçao",
+          "opponentFlag": "🇨🇼",
           "result": "W",
           "score": "7-1",
           "date": "2026-06-14",
@@ -3349,7 +3349,7 @@
         {
           "matchday": 2,
           "opponent": "Ivory Coast",
-          "opponentFlag": "\ud83c\udde8\ud83c\uddee",
+          "opponentFlag": "🇨🇮",
           "result": null,
           "score": null,
           "date": "2026-06-20",
@@ -3359,7 +3359,7 @@
         {
           "matchday": 3,
           "opponent": "Ecuador",
-          "opponentFlag": "\ud83c\uddea\ud83c\udde8",
+          "opponentFlag": "🇪🇨",
           "result": null,
           "score": null,
           "date": "2026-06-25",
@@ -3368,10 +3368,10 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 100,
-        "r16": 75,
-        "qf": 44,
-        "sf": 24,
+        "r32": 99,
+        "r16": 78,
+        "qf": 41,
+        "sf": 26,
         "final": 14,
         "winner": 6,
         "source": "market"
@@ -3379,9 +3379,9 @@
       "path": {
         "group_stage": {
           "status": "active",
-          "city": "Houston \u00b7 Atlanta \u00b7 New Jersey",
+          "city": "Houston · Atlanta · New Jersey",
           "venue": "Various venues",
-          "date": "Jun 14\u201325",
+          "date": "Jun 14–25",
           "detail": "3pts after MD1"
         },
         "r32": {
@@ -3430,7 +3430,7 @@
           {
             "group": "B",
             "likelyTeam": "Qatar",
-            "flag": "\ud83c\uddf6\ud83c\udde6",
+            "flag": "🇶🇦",
             "fifaRank": 51,
             "difficulty": 2,
             "label": "Favorable",
@@ -3441,7 +3441,7 @@
           {
             "group": "E",
             "likelyTeam": "Ecuador",
-            "flag": "\ud83c\uddea\ud83c\udde8",
+            "flag": "🇪🇨",
             "fifaRank": 23,
             "difficulty": 3,
             "label": "Moderate",
@@ -3452,7 +3452,7 @@
           {
             "group": "F",
             "likelyTeam": "Netherlands",
-            "flag": "\ud83c\uddf3\ud83c\uddf1",
+            "flag": "🇳🇱",
             "fifaRank": 7,
             "difficulty": 5,
             "label": "Danger",
@@ -3463,7 +3463,7 @@
           {
             "group": "I",
             "likelyTeam": "Norway",
-            "flag": "\ud83c\uddf3\ud83c\uddf4",
+            "flag": "🇳🇴",
             "fifaRank": 31,
             "difficulty": 3,
             "label": "Moderate",
@@ -3474,7 +3474,7 @@
           {
             "group": "J",
             "likelyTeam": "Jordan",
-            "flag": "\ud83c\uddef\ud83c\uddf4",
+            "flag": "🇯🇴",
             "fifaRank": 66,
             "difficulty": 1,
             "label": "Favorable",
@@ -3488,8 +3488,8 @@
     },
     {
       "id": "curacao",
-      "name": "Cura\u00e7ao",
-      "flag": "\ud83c\udde8\ud83c\uddfc",
+      "name": "Curaçao",
+      "flag": "🇨🇼",
       "group": "E",
       "confederation": "CONCACAF",
       "fifaRank": 82,
@@ -3499,7 +3499,7 @@
         {
           "matchday": 1,
           "opponent": "Germany",
-          "opponentFlag": "\ud83c\udde9\ud83c\uddea",
+          "opponentFlag": "🇩🇪",
           "result": "L",
           "score": "1-7",
           "date": "2026-06-14",
@@ -3511,7 +3511,7 @@
         {
           "matchday": 2,
           "opponent": "Ecuador",
-          "opponentFlag": "\ud83c\uddea\ud83c\udde8",
+          "opponentFlag": "🇪🇨",
           "result": null,
           "score": null,
           "date": "2026-06-20",
@@ -3521,7 +3521,7 @@
         {
           "matchday": 3,
           "opponent": "Ivory Coast",
-          "opponentFlag": "\ud83c\udde8\ud83c\uddee",
+          "opponentFlag": "🇨🇮",
           "result": null,
           "score": null,
           "date": "2026-06-25",
@@ -3530,10 +3530,10 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 3,
-        "r16": 2,
+        "r32": 4,
+        "r16": 4,
         "qf": 0,
-        "sf": 0,
+        "sf": 2,
         "final": 0,
         "winner": 0,
         "source": "market"
@@ -3541,9 +3541,9 @@
       "path": {
         "group_stage": {
           "status": "active",
-          "city": "Houston \u00b7 New Jersey \u00b7 Philadelphia",
+          "city": "Houston · New Jersey · Philadelphia",
           "venue": "Various venues",
-          "date": "Jun 14\u201325",
+          "date": "Jun 14–25",
           "detail": "0pts after MD1"
         },
         "r32": {
@@ -3592,7 +3592,7 @@
           {
             "group": "J",
             "likelyTeam": "Algeria",
-            "flag": "\ud83c\udde9\ud83c\uddff",
+            "flag": "🇩🇿",
             "fifaRank": 35,
             "difficulty": 3,
             "label": "Moderate",
@@ -3607,7 +3607,7 @@
     {
       "id": "ivorycoast",
       "name": "Ivory Coast",
-      "flag": "\ud83c\udde8\ud83c\uddee",
+      "flag": "🇨🇮",
       "group": "E",
       "confederation": "CAF",
       "fifaRank": 42,
@@ -3617,7 +3617,7 @@
         {
           "matchday": 1,
           "opponent": "Ecuador",
-          "opponentFlag": "\ud83c\uddea\ud83c\udde8",
+          "opponentFlag": "🇪🇨",
           "result": "W",
           "score": "1-0",
           "date": "2026-06-14",
@@ -3632,12 +3632,12 @@
               "type": "yellow"
             },
             {
-              "player": "Franck Kessi\u00e9",
+              "player": "Franck Kessié",
               "minute": "38'",
               "type": "yellow"
             },
             {
-              "player": "Guela Dou\u00e9",
+              "player": "Guela Doué",
               "minute": "40'",
               "type": "yellow"
             }
@@ -3646,7 +3646,7 @@
         {
           "matchday": 2,
           "opponent": "Germany",
-          "opponentFlag": "\ud83c\udde9\ud83c\uddea",
+          "opponentFlag": "🇩🇪",
           "result": null,
           "score": null,
           "date": "2026-06-20",
@@ -3655,8 +3655,8 @@
         },
         {
           "matchday": 3,
-          "opponent": "Cura\u00e7ao",
-          "opponentFlag": "\ud83c\udde8\ud83c\uddfc",
+          "opponent": "Curaçao",
+          "opponentFlag": "🇨🇼",
           "result": null,
           "score": null,
           "date": "2026-06-25",
@@ -3665,20 +3665,20 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 95,
-        "r16": 39,
+        "r32": 80,
+        "r16": 37,
         "qf": 14,
-        "sf": 5,
+        "sf": 4,
         "final": 2,
-        "winner": 1,
+        "winner": 0,
         "source": "market"
       },
       "path": {
         "group_stage": {
           "status": "active",
-          "city": "Philadelphia \u00b7 Atlanta",
+          "city": "Philadelphia · Atlanta",
           "venue": "Various venues",
-          "date": "Jun 14\u201325",
+          "date": "Jun 14–25",
           "detail": "3pts after MD1"
         },
         "r32": {
@@ -3727,7 +3727,7 @@
           {
             "group": "J",
             "likelyTeam": "Algeria",
-            "flag": "\ud83c\udde9\ud83c\uddff",
+            "flag": "🇩🇿",
             "fifaRank": 35,
             "difficulty": 3,
             "label": "Moderate",
@@ -3742,7 +3742,7 @@
     {
       "id": "ecuador",
       "name": "Ecuador",
-      "flag": "\ud83c\uddea\ud83c\udde8",
+      "flag": "🇪🇨",
       "group": "E",
       "confederation": "CONMEBOL",
       "fifaRank": 23,
@@ -3752,7 +3752,7 @@
         {
           "matchday": 1,
           "opponent": "Ivory Coast",
-          "opponentFlag": "\ud83c\udde8\ud83c\uddee",
+          "opponentFlag": "🇨🇮",
           "result": "L",
           "score": "0-1",
           "date": "2026-06-14",
@@ -3768,8 +3768,8 @@
         },
         {
           "matchday": 2,
-          "opponent": "Cura\u00e7ao",
-          "opponentFlag": "\ud83c\udde8\ud83c\uddfc",
+          "opponent": "Curaçao",
+          "opponentFlag": "🇨🇼",
           "result": null,
           "score": null,
           "date": "2026-06-20",
@@ -3779,7 +3779,7 @@
         {
           "matchday": 3,
           "opponent": "Germany",
-          "opponentFlag": "\ud83c\udde9\ud83c\uddea",
+          "opponentFlag": "🇩🇪",
           "result": null,
           "score": null,
           "date": "2026-06-25",
@@ -3788,20 +3788,20 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 81,
-        "r16": 33,
-        "qf": 14,
-        "sf": 6,
-        "final": 2,
-        "winner": 0,
+        "r32": 85,
+        "r16": 47,
+        "qf": 23,
+        "sf": 11,
+        "final": 3,
+        "winner": 1,
         "source": "market"
       },
       "path": {
         "group_stage": {
           "status": "active",
-          "city": "Philadelphia \u00b7 New Jersey",
+          "city": "Philadelphia · New Jersey",
           "venue": "Various venues",
-          "date": "Jun 14\u201325",
+          "date": "Jun 14–25",
           "detail": "0pts after MD1"
         },
         "r32": {
@@ -3850,7 +3850,7 @@
           {
             "group": "J",
             "likelyTeam": "Algeria",
-            "flag": "\ud83c\udde9\ud83c\uddff",
+            "flag": "🇩🇿",
             "fifaRank": 35,
             "difficulty": 3,
             "label": "Moderate",
@@ -3865,7 +3865,7 @@
     {
       "id": "netherlands",
       "name": "Netherlands",
-      "flag": "\ud83c\uddf3\ud83c\uddf1",
+      "flag": "🇳🇱",
       "group": "F",
       "confederation": "UEFA",
       "fifaRank": 7,
@@ -3875,7 +3875,7 @@
         {
           "matchday": 1,
           "opponent": "Japan",
-          "opponentFlag": "\ud83c\uddef\ud83c\uddf5",
+          "opponentFlag": "🇯🇵",
           "result": "D",
           "score": "2-2",
           "date": "2026-06-14",
@@ -3905,7 +3905,7 @@
         {
           "matchday": 2,
           "opponent": "Sweden",
-          "opponentFlag": "\ud83c\uddf8\ud83c\uddea",
+          "opponentFlag": "🇸🇪",
           "result": null,
           "score": null,
           "date": "2026-06-20",
@@ -3915,7 +3915,7 @@
         {
           "matchday": 3,
           "opponent": "Tunisia",
-          "opponentFlag": "\ud83c\uddf9\ud83c\uddf3",
+          "opponentFlag": "🇹🇳",
           "result": null,
           "score": null,
           "date": "2026-06-25",
@@ -3924,11 +3924,11 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 92,
-        "r16": 53,
-        "qf": 33,
-        "sf": 22,
-        "final": 11,
+        "r32": 90,
+        "r16": 59,
+        "qf": 37,
+        "sf": 21,
+        "final": 13,
         "winner": 5,
         "source": "market"
       },
@@ -3937,7 +3937,7 @@
           "status": "active",
           "city": "Kansas City",
           "venue": "Various venues",
-          "date": "Jun 14\u201325",
+          "date": "Jun 14–25",
           "detail": "1pt after MD1"
         },
         "r32": {
@@ -3986,7 +3986,7 @@
           {
             "group": "K",
             "likelyTeam": "DR Congo",
-            "flag": "\ud83c\udde8\ud83c\udde9",
+            "flag": "🇨🇩",
             "fifaRank": 56,
             "difficulty": 1,
             "label": "Favorable",
@@ -4001,7 +4001,7 @@
     {
       "id": "japan",
       "name": "Japan",
-      "flag": "\ud83c\uddef\ud83c\uddf5",
+      "flag": "🇯🇵",
       "group": "F",
       "confederation": "AFC",
       "fifaRank": 13,
@@ -4011,7 +4011,7 @@
         {
           "matchday": 1,
           "opponent": "Netherlands",
-          "opponentFlag": "\ud83c\uddf3\ud83c\uddf1",
+          "opponentFlag": "🇳🇱",
           "result": "D",
           "score": "2-2",
           "date": "2026-06-14",
@@ -4024,7 +4024,7 @@
         {
           "matchday": 2,
           "opponent": "Tunisia",
-          "opponentFlag": "\ud83c\uddf9\ud83c\uddf3",
+          "opponentFlag": "🇹🇳",
           "result": null,
           "score": null,
           "date": "2026-06-20",
@@ -4034,7 +4034,7 @@
         {
           "matchday": 3,
           "opponent": "Sweden",
-          "opponentFlag": "\ud83c\uddf8\ud83c\uddea",
+          "opponentFlag": "🇸🇪",
           "result": null,
           "score": null,
           "date": "2026-06-25",
@@ -4043,20 +4043,20 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 86,
-        "r16": 39,
-        "qf": 24,
-        "sf": 12,
-        "final": 4,
+        "r32": 85,
+        "r16": 43,
+        "qf": 22,
+        "sf": 10,
+        "final": 5,
         "winner": 2,
         "source": "market"
       },
       "path": {
         "group_stage": {
           "status": "active",
-          "city": "Kansas City \u00b7 Dallas",
+          "city": "Kansas City · Dallas",
           "venue": "Various venues",
-          "date": "Jun 14\u201325",
+          "date": "Jun 14–25",
           "detail": "1pt after MD1"
         },
         "r32": {
@@ -4105,7 +4105,7 @@
           {
             "group": "K",
             "likelyTeam": "DR Congo",
-            "flag": "\ud83c\udde8\ud83c\udde9",
+            "flag": "🇨🇩",
             "fifaRank": 56,
             "difficulty": 1,
             "label": "Favorable",
@@ -4120,7 +4120,7 @@
     {
       "id": "sweden",
       "name": "Sweden",
-      "flag": "\ud83c\uddf8\ud83c\uddea",
+      "flag": "🇸🇪",
       "group": "F",
       "confederation": "UEFA",
       "fifaRank": 29,
@@ -4130,7 +4130,7 @@
         {
           "matchday": 1,
           "opponent": "Tunisia",
-          "opponentFlag": "\ud83c\uddf9\ud83c\uddf3",
+          "opponentFlag": "🇹🇳",
           "result": "W",
           "score": "5-1",
           "date": "2026-06-14",
@@ -4138,7 +4138,7 @@
           "scorers": [
             "Yasin Ayari 7'",
             "Alexander Isak 30'",
-            "Viktor Gy\u00f6keres 59'",
+            "Viktor Gyökeres 59'",
             "Mattias Svanberg 84'",
             "Yasin Ayari 90'+6'"
           ],
@@ -4147,7 +4147,7 @@
         {
           "matchday": 2,
           "opponent": "Netherlands",
-          "opponentFlag": "\ud83c\uddf3\ud83c\uddf1",
+          "opponentFlag": "🇳🇱",
           "result": null,
           "score": null,
           "date": "2026-06-20",
@@ -4158,7 +4158,7 @@
         {
           "matchday": 3,
           "opponent": "Japan",
-          "opponentFlag": "\ud83c\uddef\ud83c\uddf5",
+          "opponentFlag": "🇯🇵",
           "result": null,
           "score": null,
           "date": "2026-06-25",
@@ -4168,20 +4168,20 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 95,
-        "r16": 38,
-        "qf": 16,
-        "sf": 6,
-        "final": 3,
-        "winner": 1,
+        "r32": 66,
+        "r16": 27,
+        "qf": 9,
+        "sf": 4,
+        "final": 2,
+        "winner": 0,
         "source": "market"
       },
       "path": {
         "group_stage": {
           "status": "active",
-          "city": "Kansas City \u00b7 Dallas",
+          "city": "Kansas City · Dallas",
           "venue": "Various venues",
-          "date": "Jun 14\u201325",
+          "date": "Jun 14–25",
           "detail": "3pts after MD1"
         },
         "r32": {
@@ -4230,7 +4230,7 @@
           {
             "group": "D",
             "likelyTeam": "Australia",
-            "flag": "\ud83c\udde6\ud83c\uddfa",
+            "flag": "🇦🇺",
             "fifaRank": 26,
             "difficulty": 3,
             "label": "Moderate",
@@ -4245,7 +4245,7 @@
     {
       "id": "tunisia",
       "name": "Tunisia",
-      "flag": "\ud83c\uddf9\ud83c\uddf3",
+      "flag": "🇹🇳",
       "group": "F",
       "confederation": "CAF",
       "fifaRank": 36,
@@ -4255,7 +4255,7 @@
         {
           "matchday": 1,
           "opponent": "Sweden",
-          "opponentFlag": "\ud83c\uddf8\ud83c\uddea",
+          "opponentFlag": "🇸🇪",
           "result": "L",
           "score": "1-5",
           "date": "2026-06-14",
@@ -4274,7 +4274,7 @@
         {
           "matchday": 2,
           "opponent": "Japan",
-          "opponentFlag": "\ud83c\uddef\ud83c\uddf5",
+          "opponentFlag": "🇯🇵",
           "result": null,
           "score": null,
           "date": "2026-06-20",
@@ -4285,7 +4285,7 @@
         {
           "matchday": 3,
           "opponent": "Netherlands",
-          "opponentFlag": "\ud83c\uddf3\ud83c\uddf1",
+          "opponentFlag": "🇳🇱",
           "result": null,
           "score": null,
           "date": "2026-06-25",
@@ -4295,10 +4295,10 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 10,
-        "r16": 5,
+        "r32": 35,
+        "r16": 10,
         "qf": 2,
-        "sf": 1,
+        "sf": 2,
         "final": 1,
         "winner": 0,
         "source": "market"
@@ -4308,7 +4308,7 @@
           "status": "active",
           "city": "Kansas City",
           "venue": "Various venues",
-          "date": "Jun 14\u201325",
+          "date": "Jun 14–25",
           "detail": "0pts after MD1"
         },
         "r32": {
@@ -4357,7 +4357,7 @@
           {
             "group": "K",
             "likelyTeam": "DR Congo",
-            "flag": "\ud83c\udde8\ud83c\udde9",
+            "flag": "🇨🇩",
             "fifaRank": 56,
             "difficulty": 1,
             "label": "Favorable",
@@ -4372,7 +4372,7 @@
     {
       "id": "belgium",
       "name": "Belgium",
-      "flag": "\ud83c\udde7\ud83c\uddea",
+      "flag": "🇧🇪",
       "group": "G",
       "confederation": "UEFA",
       "fifaRank": 9,
@@ -4382,7 +4382,7 @@
         {
           "matchday": 1,
           "opponent": "Egypt",
-          "opponentFlag": "\ud83c\uddea\ud83c\uddec",
+          "opponentFlag": "🇪🇬",
           "result": "D",
           "score": "1-1",
           "date": "2026-06-15",
@@ -4406,7 +4406,7 @@
         {
           "matchday": 2,
           "opponent": "Iran",
-          "opponentFlag": "\ud83c\uddee\ud83c\uddf7",
+          "opponentFlag": "🇮🇷",
           "result": null,
           "score": null,
           "date": "2026-06-21",
@@ -4417,7 +4417,7 @@
         {
           "matchday": 3,
           "opponent": "New Zealand",
-          "opponentFlag": "\ud83c\uddf3\ud83c\uddff",
+          "opponentFlag": "🇳🇿",
           "result": null,
           "score": null,
           "date": "2026-06-26",
@@ -4428,8 +4428,8 @@
       ],
       "advanceProbabilities": {
         "r32": 95,
-        "r16": 59,
-        "qf": 35,
+        "r16": 64,
+        "qf": 36,
         "sf": 13,
         "final": 7,
         "winner": 2,
@@ -4438,9 +4438,9 @@
       "path": {
         "group_stage": {
           "status": "active",
-          "city": "Seattle \u00b7 Los Angeles \u00b7 Vancouver",
+          "city": "Seattle · Los Angeles · Vancouver",
           "venue": "Various venues",
-          "date": "Jun 15\u201326",
+          "date": "Jun 15–26",
           "detail": "1pt after MD1"
         },
         "r32": {
@@ -4489,7 +4489,7 @@
           {
             "group": "D",
             "likelyTeam": "Australia",
-            "flag": "\ud83c\udde6\ud83c\uddfa",
+            "flag": "🇦🇺",
             "fifaRank": 26,
             "difficulty": 3,
             "label": "Moderate",
@@ -4504,7 +4504,7 @@
     {
       "id": "egypt",
       "name": "Egypt",
-      "flag": "\ud83c\uddea\ud83c\uddec",
+      "flag": "🇪🇬",
       "group": "G",
       "confederation": "CAF",
       "fifaRank": 34,
@@ -4514,7 +4514,7 @@
         {
           "matchday": 1,
           "opponent": "Belgium",
-          "opponentFlag": "\ud83c\udde7\ud83c\uddea",
+          "opponentFlag": "🇧🇪",
           "result": "D",
           "score": "1-1",
           "date": "2026-06-15",
@@ -4538,7 +4538,7 @@
         {
           "matchday": 2,
           "opponent": "New Zealand",
-          "opponentFlag": "\ud83c\uddf3\ud83c\uddff",
+          "opponentFlag": "🇳🇿",
           "result": null,
           "score": null,
           "date": "2026-06-21",
@@ -4549,7 +4549,7 @@
         {
           "matchday": 3,
           "opponent": "Iran",
-          "opponentFlag": "\ud83c\uddee\ud83c\uddf7",
+          "opponentFlag": "🇮🇷",
           "result": null,
           "score": null,
           "date": "2026-06-26",
@@ -4559,9 +4559,9 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 82,
-        "r16": 39,
-        "qf": 13,
+        "r32": 72,
+        "r16": 32,
+        "qf": 7,
         "sf": 3,
         "final": 1,
         "winner": 0,
@@ -4570,9 +4570,9 @@
       "path": {
         "group_stage": {
           "status": "active",
-          "city": "Seattle \u00b7 Vancouver",
+          "city": "Seattle · Vancouver",
           "venue": "Various venues",
-          "date": "Jun 15\u201326",
+          "date": "Jun 15–26",
           "detail": "1pt after MD1"
         },
         "r32": {
@@ -4621,7 +4621,7 @@
           {
             "group": "D",
             "likelyTeam": "Australia",
-            "flag": "\ud83c\udde6\ud83c\uddfa",
+            "flag": "🇦🇺",
             "fifaRank": 26,
             "difficulty": 3,
             "label": "Moderate",
@@ -4636,7 +4636,7 @@
     {
       "id": "iran",
       "name": "Iran",
-      "flag": "\ud83c\uddee\ud83c\uddf7",
+      "flag": "🇮🇷",
       "group": "G",
       "confederation": "AFC",
       "fifaRank": 21,
@@ -4646,7 +4646,7 @@
         {
           "matchday": 1,
           "opponent": "New Zealand",
-          "opponentFlag": "\ud83c\uddf3\ud83c\uddff",
+          "opponentFlag": "🇳🇿",
           "result": null,
           "score": null,
           "date": "2026-06-15",
@@ -4657,7 +4657,7 @@
         {
           "matchday": 2,
           "opponent": "Belgium",
-          "opponentFlag": "\ud83c\udde7\ud83c\uddea",
+          "opponentFlag": "🇧🇪",
           "result": null,
           "score": null,
           "date": "2026-06-21",
@@ -4668,7 +4668,7 @@
         {
           "matchday": 3,
           "opponent": "Egypt",
-          "opponentFlag": "\ud83c\uddea\ud83c\uddec",
+          "opponentFlag": "🇪🇬",
           "result": null,
           "score": null,
           "date": "2026-06-26",
@@ -4678,9 +4678,9 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 44,
-        "r16": 19,
-        "qf": 6,
+        "r32": 62,
+        "r16": 23,
+        "qf": 5,
         "sf": 2,
         "final": 1,
         "winner": 0,
@@ -4689,9 +4689,9 @@
       "path": {
         "group_stage": {
           "status": "active",
-          "city": "Los Angeles \u00b7 Seattle",
+          "city": "Los Angeles · Seattle",
           "venue": "Various venues",
-          "date": "Jun 15\u201326",
+          "date": "Jun 15–26",
           "detail": "0pts after MD1"
         },
         "r32": {
@@ -4740,7 +4740,7 @@
           {
             "group": "D",
             "likelyTeam": "Australia",
-            "flag": "\ud83c\udde6\ud83c\uddfa",
+            "flag": "🇦🇺",
             "fifaRank": 26,
             "difficulty": 3,
             "label": "Moderate",
@@ -4755,7 +4755,7 @@
     {
       "id": "newzealand",
       "name": "New Zealand",
-      "flag": "\ud83c\uddf3\ud83c\uddff",
+      "flag": "🇳🇿",
       "group": "G",
       "confederation": "OFC",
       "fifaRank": 86,
@@ -4765,7 +4765,7 @@
         {
           "matchday": 1,
           "opponent": "Iran",
-          "opponentFlag": "\ud83c\uddee\ud83c\uddf7",
+          "opponentFlag": "🇮🇷",
           "result": null,
           "score": null,
           "date": "2026-06-15",
@@ -4776,7 +4776,7 @@
         {
           "matchday": 2,
           "opponent": "Egypt",
-          "opponentFlag": "\ud83c\uddea\ud83c\uddec",
+          "opponentFlag": "🇪🇬",
           "result": null,
           "score": null,
           "date": "2026-06-21",
@@ -4787,7 +4787,7 @@
         {
           "matchday": 3,
           "opponent": "Belgium",
-          "opponentFlag": "\ud83c\udde7\ud83c\uddea",
+          "opponentFlag": "🇧🇪",
           "result": null,
           "score": null,
           "date": "2026-06-26",
@@ -4797,20 +4797,20 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 30,
-        "r16": 11,
-        "qf": 1,
-        "sf": 1,
-        "final": 1,
+        "r32": 32,
+        "r16": 6,
+        "qf": 2,
+        "sf": 2,
+        "final": 3,
         "winner": 0,
         "source": "market"
       },
       "path": {
         "group_stage": {
           "status": "active",
-          "city": "Los Angeles \u00b7 Vancouver",
+          "city": "Los Angeles · Vancouver",
           "venue": "Various venues",
-          "date": "Jun 15\u201326",
+          "date": "Jun 15–26",
           "detail": "3pts after MD1"
         },
         "r32": {
@@ -4859,7 +4859,7 @@
           {
             "group": "A",
             "likelyTeam": "Czechia",
-            "flag": "\ud83c\udde8\ud83c\uddff",
+            "flag": "🇨🇿",
             "fifaRank": 37,
             "difficulty": 2,
             "label": "Favorable",
@@ -4870,7 +4870,7 @@
           {
             "group": "E",
             "likelyTeam": "Ecuador",
-            "flag": "\ud83c\uddea\ud83c\udde8",
+            "flag": "🇪🇨",
             "fifaRank": 23,
             "difficulty": 3,
             "label": "Moderate",
@@ -4881,7 +4881,7 @@
           {
             "group": "H",
             "likelyTeam": "Spain",
-            "flag": "\ud83c\uddea\ud83c\uddf8",
+            "flag": "🇪🇸",
             "fifaRank": 1,
             "difficulty": 5,
             "label": "Danger",
@@ -4892,7 +4892,7 @@
           {
             "group": "I",
             "likelyTeam": "Norway",
-            "flag": "\ud83c\uddf3\ud83c\uddf4",
+            "flag": "🇳🇴",
             "fifaRank": 31,
             "difficulty": 3,
             "label": "Moderate",
@@ -4903,7 +4903,7 @@
           {
             "group": "J",
             "likelyTeam": "Jordan",
-            "flag": "\ud83c\uddef\ud83c\uddf4",
+            "flag": "🇯🇴",
             "fifaRank": 66,
             "difficulty": 1,
             "label": "Favorable",
@@ -4918,7 +4918,7 @@
     {
       "id": "spain",
       "name": "Spain",
-      "flag": "\ud83c\uddea\ud83c\uddf8",
+      "flag": "🇪🇸",
       "group": "H",
       "confederation": "UEFA",
       "fifaRank": 1,
@@ -4928,7 +4928,7 @@
         {
           "matchday": 1,
           "opponent": "Cape Verde",
-          "opponentFlag": "\ud83c\udde8\ud83c\uddfb",
+          "opponentFlag": "🇨🇻",
           "result": "D",
           "score": "0-0",
           "date": "2026-06-15",
@@ -4945,7 +4945,7 @@
         {
           "matchday": 2,
           "opponent": "Saudi Arabia",
-          "opponentFlag": "\ud83c\uddf8\ud83c\udde6",
+          "opponentFlag": "🇸🇦",
           "result": null,
           "score": null,
           "date": "2026-06-21",
@@ -4956,7 +4956,7 @@
         {
           "matchday": 3,
           "opponent": "Uruguay",
-          "opponentFlag": "\ud83c\uddfa\ud83c\uddfe",
+          "opponentFlag": "🇺🇾",
           "result": null,
           "score": null,
           "date": "2026-06-26",
@@ -4967,19 +4967,19 @@
       ],
       "advanceProbabilities": {
         "r32": 98,
-        "r16": 73,
-        "qf": 57,
-        "sf": 42,
+        "r16": 81,
+        "qf": 63,
+        "sf": 48,
         "final": 28,
-        "winner": 15,
+        "winner": 16,
         "source": "market"
       },
       "path": {
         "group_stage": {
           "status": "active",
-          "city": "Atlanta \u00b7 Guadalajara",
+          "city": "Atlanta · Guadalajara",
           "venue": "Various venues",
-          "date": "Jun 15\u201326",
+          "date": "Jun 15–26",
           "detail": "1pt after MD1"
         },
         "r32": {
@@ -5028,7 +5028,7 @@
           {
             "group": "L",
             "likelyTeam": "England",
-            "flag": "\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f",
+            "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
             "fifaRank": 5,
             "difficulty": 5,
             "label": "Danger",
@@ -5043,7 +5043,7 @@
     {
       "id": "capeverde",
       "name": "Cape Verde",
-      "flag": "\ud83c\udde8\ud83c\uddfb",
+      "flag": "🇨🇻",
       "group": "H",
       "confederation": "CAF",
       "fifaRank": 62,
@@ -5053,7 +5053,7 @@
         {
           "matchday": 1,
           "opponent": "Spain",
-          "opponentFlag": "\ud83c\uddea\ud83c\uddf8",
+          "opponentFlag": "🇪🇸",
           "result": "D",
           "score": "0-0",
           "date": "2026-06-15",
@@ -5070,7 +5070,7 @@
         {
           "matchday": 2,
           "opponent": "Uruguay",
-          "opponentFlag": "\ud83c\uddfa\ud83c\uddfe",
+          "opponentFlag": "🇺🇾",
           "result": null,
           "score": null,
           "date": "2026-06-21",
@@ -5081,7 +5081,7 @@
         {
           "matchday": 3,
           "opponent": "Saudi Arabia",
-          "opponentFlag": "\ud83c\uddf8\ud83c\udde6",
+          "opponentFlag": "🇸🇦",
           "result": null,
           "score": null,
           "date": "2026-06-26",
@@ -5091,20 +5091,20 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 45,
-        "r16": 10,
-        "qf": 6,
+        "r32": 30,
+        "r16": 6,
+        "qf": 3,
         "sf": 3,
-        "final": 1,
+        "final": 0,
         "winner": 0,
         "source": "market"
       },
       "path": {
         "group_stage": {
           "status": "active",
-          "city": "Atlanta \u00b7 Miami \u00b7 Houston",
+          "city": "Atlanta · Miami · Houston",
           "venue": "Various venues",
-          "date": "Jun 15\u201326",
+          "date": "Jun 15–26",
           "detail": "1pt after MD1"
         },
         "r32": {
@@ -5153,7 +5153,7 @@
           {
             "group": "L",
             "likelyTeam": "England",
-            "flag": "\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f",
+            "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
             "fifaRank": 5,
             "difficulty": 5,
             "label": "Danger",
@@ -5168,7 +5168,7 @@
     {
       "id": "saudiarabia",
       "name": "Saudi Arabia",
-      "flag": "\ud83c\uddf8\ud83c\udde6",
+      "flag": "🇸🇦",
       "group": "H",
       "confederation": "AFC",
       "fifaRank": 55,
@@ -5178,7 +5178,7 @@
         {
           "matchday": 1,
           "opponent": "Uruguay",
-          "opponentFlag": "\ud83c\uddfa\ud83c\uddfe",
+          "opponentFlag": "🇺🇾",
           "result": "D",
           "score": "1-1",
           "date": "2026-06-15",
@@ -5197,7 +5197,7 @@
         {
           "matchday": 2,
           "opponent": "Spain",
-          "opponentFlag": "\ud83c\uddea\ud83c\uddf8",
+          "opponentFlag": "🇪🇸",
           "result": null,
           "score": null,
           "date": "2026-06-21",
@@ -5208,7 +5208,7 @@
         {
           "matchday": 3,
           "opponent": "Cape Verde",
-          "opponentFlag": "\ud83c\udde8\ud83c\uddfb",
+          "opponentFlag": "🇨🇻",
           "result": null,
           "score": null,
           "date": "2026-06-26",
@@ -5218,10 +5218,10 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 41,
-        "r16": 12,
-        "qf": 4,
-        "sf": 1,
+        "r32": 35,
+        "r16": 9,
+        "qf": 2,
+        "sf": 3,
         "final": 1,
         "winner": 0,
         "source": "market"
@@ -5229,9 +5229,9 @@
       "path": {
         "group_stage": {
           "status": "active",
-          "city": "Miami \u00b7 Atlanta \u00b7 Houston",
+          "city": "Miami · Atlanta · Houston",
           "venue": "Various venues",
-          "date": "Jun 15\u201326",
+          "date": "Jun 15–26",
           "detail": "1pt after MD1"
         },
         "r32": {
@@ -5280,7 +5280,7 @@
           {
             "group": "J",
             "likelyTeam": "Argentina",
-            "flag": "\ud83c\udde6\ud83c\uddf7",
+            "flag": "🇦🇷",
             "fifaRank": 2,
             "difficulty": 5,
             "label": "Danger",
@@ -5295,7 +5295,7 @@
     {
       "id": "uruguay",
       "name": "Uruguay",
-      "flag": "\ud83c\uddfa\ud83c\uddfe",
+      "flag": "🇺🇾",
       "group": "H",
       "confederation": "CONMEBOL",
       "fifaRank": 18,
@@ -5305,20 +5305,20 @@
         {
           "matchday": 1,
           "opponent": "Saudi Arabia",
-          "opponentFlag": "\ud83c\uddf8\ud83c\udde6",
+          "opponentFlag": "🇸🇦",
           "result": "D",
           "score": "1-1",
           "date": "2026-06-15",
           "venue": "Hard Rock Stadium, Miami",
           "scorers": [
-            "Maxi Ara\u00fajo 80'"
+            "Maxi Araújo 80'"
           ],
           "cards": []
         },
         {
           "matchday": 2,
           "opponent": "Cape Verde",
-          "opponentFlag": "\ud83c\udde8\ud83c\uddfb",
+          "opponentFlag": "🇨🇻",
           "result": null,
           "score": null,
           "date": "2026-06-21",
@@ -5329,7 +5329,7 @@
         {
           "matchday": 3,
           "opponent": "Spain",
-          "opponentFlag": "\ud83c\uddea\ud83c\uddf8",
+          "opponentFlag": "🇪🇸",
           "result": null,
           "score": null,
           "date": "2026-06-26",
@@ -5339,20 +5339,20 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 82,
-        "r16": 39,
+        "r32": 91,
+        "r16": 43,
         "qf": 22,
-        "sf": 9,
-        "final": 3,
+        "sf": 7,
+        "final": 4,
         "winner": 1,
         "source": "market"
       },
       "path": {
         "group_stage": {
           "status": "active",
-          "city": "Miami \u00b7 Guadalajara",
+          "city": "Miami · Guadalajara",
           "venue": "Various venues",
-          "date": "Jun 15\u201326",
+          "date": "Jun 15–26",
           "detail": "1pt after MD1"
         },
         "r32": {
@@ -5401,7 +5401,7 @@
           {
             "group": "L",
             "likelyTeam": "England",
-            "flag": "\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f",
+            "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
             "fifaRank": 5,
             "difficulty": 5,
             "label": "Danger",
@@ -5416,7 +5416,7 @@
     {
       "id": "france",
       "name": "France",
-      "flag": "\ud83c\uddeb\ud83c\uddf7",
+      "flag": "🇫🇷",
       "group": "I",
       "confederation": "UEFA",
       "fifaRank": 3,
@@ -5426,7 +5426,7 @@
         {
           "matchday": 1,
           "opponent": "Senegal",
-          "opponentFlag": "\ud83c\uddf8\ud83c\uddf3",
+          "opponentFlag": "🇸🇳",
           "result": null,
           "score": null,
           "date": "2026-06-16",
@@ -5437,7 +5437,7 @@
         {
           "matchday": 2,
           "opponent": "Iraq",
-          "opponentFlag": "\ud83c\uddee\ud83c\uddf6",
+          "opponentFlag": "🇮🇶",
           "result": null,
           "score": null,
           "date": "2026-06-22",
@@ -5448,7 +5448,7 @@
         {
           "matchday": 3,
           "opponent": "Norway",
-          "opponentFlag": "\ud83c\uddf3\ud83c\uddf4",
+          "opponentFlag": "🇳🇴",
           "result": null,
           "score": null,
           "date": "2026-06-26",
@@ -5460,18 +5460,18 @@
       "advanceProbabilities": {
         "r32": 97,
         "r16": 83,
-        "qf": 59,
-        "sf": 37,
-        "final": 28,
-        "winner": 18,
+        "qf": 60,
+        "sf": 40,
+        "final": 26,
+        "winner": 16,
         "source": "market"
       },
       "path": {
         "group_stage": {
           "status": "active",
-          "city": "New Jersey \u00b7 Philadelphia \u00b7 Boston",
+          "city": "New Jersey · Philadelphia · Boston",
           "venue": "Various venues",
-          "date": "Jun 16\u201326",
+          "date": "Jun 16–26",
           "detail": "0pts after MD0"
         },
         "r32": {
@@ -5520,7 +5520,7 @@
           {
             "group": "E",
             "likelyTeam": "Ecuador",
-            "flag": "\ud83c\uddea\ud83c\udde8",
+            "flag": "🇪🇨",
             "fifaRank": 23,
             "difficulty": 3,
             "label": "Moderate",
@@ -5531,7 +5531,7 @@
           {
             "group": "F",
             "likelyTeam": "Netherlands",
-            "flag": "\ud83c\uddf3\ud83c\uddf1",
+            "flag": "🇳🇱",
             "fifaRank": 7,
             "difficulty": 5,
             "label": "Danger",
@@ -5542,7 +5542,7 @@
           {
             "group": "G",
             "likelyTeam": "Egypt",
-            "flag": "\ud83c\uddea\ud83c\uddec",
+            "flag": "🇪🇬",
             "fifaRank": 34,
             "difficulty": 3,
             "label": "Moderate",
@@ -5553,7 +5553,7 @@
           {
             "group": "I",
             "likelyTeam": "Norway",
-            "flag": "\ud83c\uddf3\ud83c\uddf4",
+            "flag": "🇳🇴",
             "fifaRank": 31,
             "difficulty": 3,
             "label": "Moderate",
@@ -5564,7 +5564,7 @@
           {
             "group": "J",
             "likelyTeam": "Jordan",
-            "flag": "\ud83c\uddef\ud83c\uddf4",
+            "flag": "🇯🇴",
             "fifaRank": 66,
             "difficulty": 1,
             "label": "Favorable",
@@ -5579,7 +5579,7 @@
     {
       "id": "senegal",
       "name": "Senegal",
-      "flag": "\ud83c\uddf8\ud83c\uddf3",
+      "flag": "🇸🇳",
       "group": "I",
       "confederation": "CAF",
       "fifaRank": 14,
@@ -5589,7 +5589,7 @@
         {
           "matchday": 1,
           "opponent": "France",
-          "opponentFlag": "\ud83c\uddeb\ud83c\uddf7",
+          "opponentFlag": "🇫🇷",
           "result": null,
           "score": null,
           "date": "2026-06-16",
@@ -5600,7 +5600,7 @@
         {
           "matchday": 2,
           "opponent": "Norway",
-          "opponentFlag": "\ud83c\uddf3\ud83c\uddf4",
+          "opponentFlag": "🇳🇴",
           "result": null,
           "score": null,
           "date": "2026-06-22",
@@ -5611,7 +5611,7 @@
         {
           "matchday": 3,
           "opponent": "Iraq",
-          "opponentFlag": "\ud83c\uddee\ud83c\uddf6",
+          "opponentFlag": "🇮🇶",
           "result": null,
           "score": null,
           "date": "2026-06-26",
@@ -5621,9 +5621,9 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 71,
-        "r16": 31,
-        "qf": 16,
+        "r32": 72,
+        "r16": 28,
+        "qf": 14,
         "sf": 6,
         "final": 2,
         "winner": 1,
@@ -5632,9 +5632,9 @@
       "path": {
         "group_stage": {
           "status": "active",
-          "city": "New Jersey \u00b7 Toronto",
+          "city": "New Jersey · Toronto",
           "venue": "Various venues",
-          "date": "Jun 16\u201326",
+          "date": "Jun 16–26",
           "detail": "0pts after MD0"
         },
         "r32": {
@@ -5683,7 +5683,7 @@
           {
             "group": "J",
             "likelyTeam": "Algeria",
-            "flag": "\ud83c\udde9\ud83c\uddff",
+            "flag": "🇩🇿",
             "fifaRank": 35,
             "difficulty": 3,
             "label": "Moderate",
@@ -5698,7 +5698,7 @@
     {
       "id": "iraq",
       "name": "Iraq",
-      "flag": "\ud83c\uddee\ud83c\uddf6",
+      "flag": "🇮🇶",
       "group": "I",
       "confederation": "AFC",
       "fifaRank": 58,
@@ -5708,7 +5708,7 @@
         {
           "matchday": 1,
           "opponent": "Norway",
-          "opponentFlag": "\ud83c\uddf3\ud83c\uddf4",
+          "opponentFlag": "🇳🇴",
           "result": null,
           "score": null,
           "date": "2026-06-16",
@@ -5719,7 +5719,7 @@
         {
           "matchday": 2,
           "opponent": "France",
-          "opponentFlag": "\ud83c\uddeb\ud83c\uddf7",
+          "opponentFlag": "🇫🇷",
           "result": null,
           "score": null,
           "date": "2026-06-22",
@@ -5730,7 +5730,7 @@
         {
           "matchday": 3,
           "opponent": "Senegal",
-          "opponentFlag": "\ud83c\uddf8\ud83c\uddf3",
+          "opponentFlag": "🇸🇳",
           "result": null,
           "score": null,
           "date": "2026-06-26",
@@ -5740,20 +5740,20 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 14,
-        "r16": 5,
+        "r32": 13,
+        "r16": 6,
         "qf": 2,
         "sf": 2,
-        "final": 1,
+        "final": 0,
         "winner": 0,
         "source": "market"
       },
       "path": {
         "group_stage": {
           "status": "active",
-          "city": "Boston \u00b7 Philadelphia \u00b7 Toronto",
+          "city": "Boston · Philadelphia · Toronto",
           "venue": "Various venues",
-          "date": "Jun 16\u201326",
+          "date": "Jun 16–26",
           "detail": "0pts after MD0"
         },
         "r32": {
@@ -5802,7 +5802,7 @@
           {
             "group": "J",
             "likelyTeam": "Algeria",
-            "flag": "\ud83c\udde9\ud83c\uddff",
+            "flag": "🇩🇿",
             "fifaRank": 35,
             "difficulty": 3,
             "label": "Moderate",
@@ -5817,7 +5817,7 @@
     {
       "id": "norway",
       "name": "Norway",
-      "flag": "\ud83c\uddf3\ud83c\uddf4",
+      "flag": "🇳🇴",
       "group": "I",
       "confederation": "UEFA",
       "fifaRank": 31,
@@ -5827,7 +5827,7 @@
         {
           "matchday": 1,
           "opponent": "Iraq",
-          "opponentFlag": "\ud83c\uddee\ud83c\uddf6",
+          "opponentFlag": "🇮🇶",
           "result": null,
           "score": null,
           "date": "2026-06-16",
@@ -5838,7 +5838,7 @@
         {
           "matchday": 2,
           "opponent": "Senegal",
-          "opponentFlag": "\ud83c\uddf8\ud83c\uddf3",
+          "opponentFlag": "🇸🇳",
           "result": null,
           "score": null,
           "date": "2026-06-22",
@@ -5849,7 +5849,7 @@
         {
           "matchday": 3,
           "opponent": "France",
-          "opponentFlag": "\ud83c\uddeb\ud83c\uddf7",
+          "opponentFlag": "🇫🇷",
           "result": null,
           "score": null,
           "date": "2026-06-26",
@@ -5859,20 +5859,20 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 87,
+        "r32": 86,
         "r16": 56,
         "qf": 31,
         "sf": 14,
-        "final": 7,
+        "final": 6,
         "winner": 2,
         "source": "market"
       },
       "path": {
         "group_stage": {
           "status": "active",
-          "city": "Boston \u00b7 New Jersey",
+          "city": "Boston · New Jersey",
           "venue": "Various venues",
-          "date": "Jun 16\u201326",
+          "date": "Jun 16–26",
           "detail": "0pts after MD0"
         },
         "r32": {
@@ -5921,7 +5921,7 @@
           {
             "group": "J",
             "likelyTeam": "Algeria",
-            "flag": "\ud83c\udde9\ud83c\uddff",
+            "flag": "🇩🇿",
             "fifaRank": 35,
             "difficulty": 3,
             "label": "Moderate",
@@ -5936,7 +5936,7 @@
     {
       "id": "argentina",
       "name": "Argentina",
-      "flag": "\ud83c\udde6\ud83c\uddf7",
+      "flag": "🇦🇷",
       "group": "J",
       "confederation": "CONMEBOL",
       "fifaRank": 2,
@@ -5946,7 +5946,7 @@
         {
           "matchday": 1,
           "opponent": "Algeria",
-          "opponentFlag": "\ud83c\udde9\ud83c\uddff",
+          "opponentFlag": "🇩🇿",
           "result": null,
           "score": null,
           "date": "2026-06-16",
@@ -5956,7 +5956,7 @@
         {
           "matchday": 2,
           "opponent": "Austria",
-          "opponentFlag": "\ud83c\udde6\ud83c\uddf9",
+          "opponentFlag": "🇦🇹",
           "result": null,
           "score": null,
           "date": "2026-06-22",
@@ -5966,7 +5966,7 @@
         {
           "matchday": 3,
           "opponent": "Jordan",
-          "opponentFlag": "\ud83c\uddef\ud83c\uddf4",
+          "opponentFlag": "🇯🇴",
           "result": null,
           "score": null,
           "date": "2026-06-27",
@@ -5976,19 +5976,19 @@
       ],
       "advanceProbabilities": {
         "r32": 97,
-        "r16": 69,
+        "r16": 72,
         "qf": 53,
-        "sf": 35,
-        "final": 20,
+        "sf": 34,
+        "final": 22,
         "winner": 8,
         "source": "market"
       },
       "path": {
         "group_stage": {
           "status": "active",
-          "city": "Kansas City \u00b7 Los Angeles \u00b7 Dallas",
+          "city": "Kansas City · Los Angeles · Dallas",
           "venue": "Various venues",
-          "date": "Jun 16\u201327",
+          "date": "Jun 16–27",
           "detail": "0pts after MD0"
         },
         "r32": {
@@ -6037,7 +6037,7 @@
           {
             "group": "H",
             "likelyTeam": "Saudi Arabia",
-            "flag": "\ud83c\uddf8\ud83c\udde6",
+            "flag": "🇸🇦",
             "fifaRank": 55,
             "difficulty": 2,
             "label": "Favorable",
@@ -6052,7 +6052,7 @@
     {
       "id": "algeria",
       "name": "Algeria",
-      "flag": "\ud83c\udde9\ud83c\uddff",
+      "flag": "🇩🇿",
       "group": "J",
       "confederation": "CAF",
       "fifaRank": 35,
@@ -6062,7 +6062,7 @@
         {
           "matchday": 1,
           "opponent": "Argentina",
-          "opponentFlag": "\ud83c\udde6\ud83c\uddf7",
+          "opponentFlag": "🇦🇷",
           "result": null,
           "score": null,
           "date": "2026-06-16",
@@ -6072,7 +6072,7 @@
         {
           "matchday": 2,
           "opponent": "Jordan",
-          "opponentFlag": "\ud83c\uddef\ud83c\uddf4",
+          "opponentFlag": "🇯🇴",
           "result": null,
           "score": null,
           "date": "2026-06-22",
@@ -6082,7 +6082,7 @@
         {
           "matchday": 3,
           "opponent": "Austria",
-          "opponentFlag": "\ud83c\udde6\ud83c\uddf9",
+          "opponentFlag": "🇦🇹",
           "result": null,
           "score": null,
           "date": "2026-06-27",
@@ -6092,8 +6092,8 @@
       ],
       "advanceProbabilities": {
         "r32": 67,
-        "r16": 22,
-        "qf": 9,
+        "r16": 19,
+        "qf": 7,
         "sf": 3,
         "final": 2,
         "winner": 0,
@@ -6104,7 +6104,7 @@
           "status": "active",
           "city": "Kansas City",
           "venue": "Various venues",
-          "date": "Jun 16\u201327",
+          "date": "Jun 16–27",
           "detail": "0pts after MD0"
         },
         "r32": {
@@ -6153,7 +6153,7 @@
           {
             "group": "C",
             "likelyTeam": "Brazil",
-            "flag": "\ud83c\udde7\ud83c\uddf7",
+            "flag": "🇧🇷",
             "fifaRank": 4,
             "difficulty": 5,
             "label": "Danger",
@@ -6164,7 +6164,7 @@
           {
             "group": "E",
             "likelyTeam": "Ecuador",
-            "flag": "\ud83c\uddea\ud83c\udde8",
+            "flag": "🇪🇨",
             "fifaRank": 23,
             "difficulty": 3,
             "label": "Moderate",
@@ -6175,7 +6175,7 @@
           {
             "group": "F",
             "likelyTeam": "Netherlands",
-            "flag": "\ud83c\uddf3\ud83c\uddf1",
+            "flag": "🇳🇱",
             "fifaRank": 7,
             "difficulty": 5,
             "label": "Danger",
@@ -6186,7 +6186,7 @@
           {
             "group": "H",
             "likelyTeam": "Spain",
-            "flag": "\ud83c\uddea\ud83c\uddf8",
+            "flag": "🇪🇸",
             "fifaRank": 1,
             "difficulty": 5,
             "label": "Danger",
@@ -6197,7 +6197,7 @@
           {
             "group": "I",
             "likelyTeam": "Norway",
-            "flag": "\ud83c\uddf3\ud83c\uddf4",
+            "flag": "🇳🇴",
             "fifaRank": 31,
             "difficulty": 3,
             "label": "Moderate",
@@ -6212,7 +6212,7 @@
     {
       "id": "austria",
       "name": "Austria",
-      "flag": "\ud83c\udde6\ud83c\uddf9",
+      "flag": "🇦🇹",
       "group": "J",
       "confederation": "UEFA",
       "fifaRank": 24,
@@ -6222,7 +6222,7 @@
         {
           "matchday": 1,
           "opponent": "Jordan",
-          "opponentFlag": "\ud83c\uddef\ud83c\uddf4",
+          "opponentFlag": "🇯🇴",
           "result": null,
           "score": null,
           "date": "2026-06-16",
@@ -6232,7 +6232,7 @@
         {
           "matchday": 2,
           "opponent": "Argentina",
-          "opponentFlag": "\ud83c\udde6\ud83c\uddf7",
+          "opponentFlag": "🇦🇷",
           "result": null,
           "score": null,
           "date": "2026-06-22",
@@ -6242,7 +6242,7 @@
         {
           "matchday": 3,
           "opponent": "Algeria",
-          "opponentFlag": "\ud83c\udde9\ud83c\uddff",
+          "opponentFlag": "🇩🇿",
           "result": null,
           "score": null,
           "date": "2026-06-27",
@@ -6251,10 +6251,10 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 80,
-        "r16": 31,
+        "r32": 79,
+        "r16": 27,
         "qf": 13,
-        "sf": 6,
+        "sf": 7,
         "final": 2,
         "winner": 0,
         "source": "market"
@@ -6262,9 +6262,9 @@
       "path": {
         "group_stage": {
           "status": "active",
-          "city": "San Francisco \u00b7 Los Angeles \u00b7 Kansas City",
+          "city": "San Francisco · Los Angeles · Kansas City",
           "venue": "Various venues",
-          "date": "Jun 16\u201327",
+          "date": "Jun 16–27",
           "detail": "0pts after MD0"
         },
         "r32": {
@@ -6313,7 +6313,7 @@
           {
             "group": "H",
             "likelyTeam": "Saudi Arabia",
-            "flag": "\ud83c\uddf8\ud83c\udde6",
+            "flag": "🇸🇦",
             "fifaRank": 55,
             "difficulty": 2,
             "label": "Favorable",
@@ -6328,7 +6328,7 @@
     {
       "id": "jordan",
       "name": "Jordan",
-      "flag": "\ud83c\uddef\ud83c\uddf4",
+      "flag": "🇯🇴",
       "group": "J",
       "confederation": "AFC",
       "fifaRank": 66,
@@ -6338,7 +6338,7 @@
         {
           "matchday": 1,
           "opponent": "Austria",
-          "opponentFlag": "\ud83c\udde6\ud83c\uddf9",
+          "opponentFlag": "🇦🇹",
           "result": null,
           "score": null,
           "date": "2026-06-16",
@@ -6348,7 +6348,7 @@
         {
           "matchday": 2,
           "opponent": "Algeria",
-          "opponentFlag": "\ud83c\udde9\ud83c\uddff",
+          "opponentFlag": "🇩🇿",
           "result": null,
           "score": null,
           "date": "2026-06-22",
@@ -6358,7 +6358,7 @@
         {
           "matchday": 3,
           "opponent": "Argentina",
-          "opponentFlag": "\ud83c\udde6\ud83c\uddf7",
+          "opponentFlag": "🇦🇷",
           "result": null,
           "score": null,
           "date": "2026-06-27",
@@ -6368,7 +6368,7 @@
       ],
       "advanceProbabilities": {
         "r32": 20,
-        "r16": 8,
+        "r16": 2,
         "qf": 2,
         "sf": 2,
         "final": 1,
@@ -6378,9 +6378,9 @@
       "path": {
         "group_stage": {
           "status": "active",
-          "city": "San Francisco \u00b7 Kansas City \u00b7 Dallas",
+          "city": "San Francisco · Kansas City · Dallas",
           "venue": "Various venues",
-          "date": "Jun 16\u201327",
+          "date": "Jun 16–27",
           "detail": "0pts after MD0"
         },
         "r32": {
@@ -6429,7 +6429,7 @@
           {
             "group": "H",
             "likelyTeam": "Saudi Arabia",
-            "flag": "\ud83c\uddf8\ud83c\udde6",
+            "flag": "🇸🇦",
             "fifaRank": 55,
             "difficulty": 2,
             "label": "Favorable",
@@ -6444,7 +6444,7 @@
     {
       "id": "portugal",
       "name": "Portugal",
-      "flag": "\ud83c\uddf5\ud83c\uddf9",
+      "flag": "🇵🇹",
       "group": "K",
       "confederation": "UEFA",
       "fifaRank": 6,
@@ -6454,7 +6454,7 @@
         {
           "matchday": 1,
           "opponent": "DR Congo",
-          "opponentFlag": "\ud83c\udde8\ud83c\udde9",
+          "opponentFlag": "🇨🇩",
           "result": null,
           "score": null,
           "date": "2026-06-17",
@@ -6464,7 +6464,7 @@
         {
           "matchday": 2,
           "opponent": "Uzbekistan",
-          "opponentFlag": "\ud83c\uddfa\ud83c\uddff",
+          "opponentFlag": "🇺🇿",
           "result": null,
           "score": null,
           "date": "2026-06-23",
@@ -6474,7 +6474,7 @@
         {
           "matchday": 3,
           "opponent": "Colombia",
-          "opponentFlag": "\ud83c\udde8\ud83c\uddf4",
+          "opponentFlag": "🇨🇴",
           "result": null,
           "score": null,
           "date": "2026-06-27",
@@ -6483,20 +6483,20 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 97,
-        "r16": 75,
+        "r32": 96,
+        "r16": 76,
         "qf": 52,
-        "sf": 33,
-        "final": 22,
+        "sf": 32,
+        "final": 23,
         "winner": 11,
         "source": "market"
       },
       "path": {
         "group_stage": {
           "status": "active",
-          "city": "Houston \u00b7 Miami",
+          "city": "Houston · Miami",
           "venue": "Various venues",
-          "date": "Jun 17\u201327",
+          "date": "Jun 17–27",
           "detail": "0pts after MD0"
         },
         "r32": {
@@ -6545,7 +6545,7 @@
           {
             "group": "L",
             "likelyTeam": "Ghana",
-            "flag": "\ud83c\uddec\ud83c\udded",
+            "flag": "🇬🇭",
             "fifaRank": 60,
             "difficulty": 1,
             "label": "Favorable",
@@ -6560,7 +6560,7 @@
     {
       "id": "drcongo",
       "name": "DR Congo",
-      "flag": "\ud83c\udde8\ud83c\udde9",
+      "flag": "🇨🇩",
       "group": "K",
       "confederation": "CAF",
       "fifaRank": 56,
@@ -6570,7 +6570,7 @@
         {
           "matchday": 1,
           "opponent": "Portugal",
-          "opponentFlag": "\ud83c\uddf5\ud83c\uddf9",
+          "opponentFlag": "🇵🇹",
           "result": null,
           "score": null,
           "date": "2026-06-17",
@@ -6580,7 +6580,7 @@
         {
           "matchday": 2,
           "opponent": "Colombia",
-          "opponentFlag": "\ud83c\udde8\ud83c\uddf4",
+          "opponentFlag": "🇨🇴",
           "result": null,
           "score": null,
           "date": "2026-06-23",
@@ -6590,7 +6590,7 @@
         {
           "matchday": 3,
           "opponent": "Uzbekistan",
-          "opponentFlag": "\ud83c\uddfa\ud83c\uddff",
+          "opponentFlag": "🇺🇿",
           "result": null,
           "score": null,
           "date": "2026-06-27",
@@ -6599,8 +6599,8 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 39,
-        "r16": 9,
+        "r32": 42,
+        "r16": 12,
         "qf": 4,
         "sf": 3,
         "final": 1,
@@ -6610,9 +6610,9 @@
       "path": {
         "group_stage": {
           "status": "active",
-          "city": "Houston \u00b7 Mexico City \u00b7 Atlanta",
+          "city": "Houston · Mexico City · Atlanta",
           "venue": "Various venues",
-          "date": "Jun 17\u201327",
+          "date": "Jun 17–27",
           "detail": "0pts after MD0"
         },
         "r32": {
@@ -6661,7 +6661,7 @@
           {
             "group": "E",
             "likelyTeam": "Ecuador",
-            "flag": "\ud83c\uddea\ud83c\udde8",
+            "flag": "🇪🇨",
             "fifaRank": 23,
             "difficulty": 3,
             "label": "Moderate",
@@ -6672,7 +6672,7 @@
           {
             "group": "H",
             "likelyTeam": "Spain",
-            "flag": "\ud83c\uddea\ud83c\uddf8",
+            "flag": "🇪🇸",
             "fifaRank": 1,
             "difficulty": 5,
             "label": "Danger",
@@ -6683,7 +6683,7 @@
           {
             "group": "I",
             "likelyTeam": "Norway",
-            "flag": "\ud83c\uddf3\ud83c\uddf4",
+            "flag": "🇳🇴",
             "fifaRank": 31,
             "difficulty": 3,
             "label": "Moderate",
@@ -6694,7 +6694,7 @@
           {
             "group": "J",
             "likelyTeam": "Jordan",
-            "flag": "\ud83c\uddef\ud83c\uddf4",
+            "flag": "🇯🇴",
             "fifaRank": 66,
             "difficulty": 1,
             "label": "Favorable",
@@ -6705,7 +6705,7 @@
           {
             "group": "K",
             "likelyTeam": "Portugal",
-            "flag": "\ud83c\uddf5\ud83c\uddf9",
+            "flag": "🇵🇹",
             "fifaRank": 6,
             "difficulty": 5,
             "label": "Danger",
@@ -6720,7 +6720,7 @@
     {
       "id": "uzbekistan",
       "name": "Uzbekistan",
-      "flag": "\ud83c\uddfa\ud83c\uddff",
+      "flag": "🇺🇿",
       "group": "K",
       "confederation": "AFC",
       "fifaRank": 50,
@@ -6730,7 +6730,7 @@
         {
           "matchday": 1,
           "opponent": "Colombia",
-          "opponentFlag": "\ud83c\udde8\ud83c\uddf4",
+          "opponentFlag": "🇨🇴",
           "result": null,
           "score": null,
           "date": "2026-06-17",
@@ -6740,7 +6740,7 @@
         {
           "matchday": 2,
           "opponent": "Portugal",
-          "opponentFlag": "\ud83c\uddf5\ud83c\uddf9",
+          "opponentFlag": "🇵🇹",
           "result": null,
           "score": null,
           "date": "2026-06-23",
@@ -6750,7 +6750,7 @@
         {
           "matchday": 3,
           "opponent": "DR Congo",
-          "opponentFlag": "\ud83c\udde8\ud83c\udde9",
+          "opponentFlag": "🇨🇩",
           "result": null,
           "score": null,
           "date": "2026-06-27",
@@ -6759,10 +6759,10 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 31,
+        "r32": 32,
         "r16": 7,
-        "qf": 2,
-        "sf": 1,
+        "qf": 3,
+        "sf": 2,
         "final": 1,
         "winner": 0,
         "source": "market"
@@ -6770,9 +6770,9 @@
       "path": {
         "group_stage": {
           "status": "active",
-          "city": "Mexico City \u00b7 Houston \u00b7 Atlanta",
+          "city": "Mexico City · Houston · Atlanta",
           "venue": "Various venues",
-          "date": "Jun 17\u201327",
+          "date": "Jun 17–27",
           "detail": "0pts after MD0"
         },
         "r32": {
@@ -6821,7 +6821,7 @@
           {
             "group": "L",
             "likelyTeam": "Ghana",
-            "flag": "\ud83c\uddec\ud83c\udded",
+            "flag": "🇬🇭",
             "fifaRank": 60,
             "difficulty": 1,
             "label": "Favorable",
@@ -6836,7 +6836,7 @@
     {
       "id": "colombia",
       "name": "Colombia",
-      "flag": "\ud83c\udde8\ud83c\uddf4",
+      "flag": "🇨🇴",
       "group": "K",
       "confederation": "CONMEBOL",
       "fifaRank": 13,
@@ -6846,7 +6846,7 @@
         {
           "matchday": 1,
           "opponent": "Uzbekistan",
-          "opponentFlag": "\ud83c\uddfa\ud83c\uddff",
+          "opponentFlag": "🇺🇿",
           "result": null,
           "score": null,
           "date": "2026-06-17",
@@ -6856,7 +6856,7 @@
         {
           "matchday": 2,
           "opponent": "DR Congo",
-          "opponentFlag": "\ud83c\udde8\ud83c\udde9",
+          "opponentFlag": "🇨🇩",
           "result": null,
           "score": null,
           "date": "2026-06-23",
@@ -6866,7 +6866,7 @@
         {
           "matchday": 3,
           "opponent": "Portugal",
-          "opponentFlag": "\ud83c\uddf5\ud83c\uddf9",
+          "opponentFlag": "🇵🇹",
           "result": null,
           "score": null,
           "date": "2026-06-27",
@@ -6875,20 +6875,20 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 89,
-        "r16": 54,
+        "r32": 90,
+        "r16": 55,
         "qf": 28,
         "sf": 14,
-        "final": 5,
+        "final": 7,
         "winner": 2,
         "source": "market"
       },
       "path": {
         "group_stage": {
           "status": "active",
-          "city": "Mexico City \u00b7 Miami",
+          "city": "Mexico City · Miami",
           "venue": "Various venues",
-          "date": "Jun 17\u201327",
+          "date": "Jun 17–27",
           "detail": "0pts after MD0"
         },
         "r32": {
@@ -6937,7 +6937,7 @@
           {
             "group": "L",
             "likelyTeam": "Ghana",
-            "flag": "\ud83c\uddec\ud83c\udded",
+            "flag": "🇬🇭",
             "fifaRank": 60,
             "difficulty": 1,
             "label": "Favorable",
@@ -6952,7 +6952,7 @@
     {
       "id": "england",
       "name": "England",
-      "flag": "\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f",
+      "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
       "group": "L",
       "confederation": "UEFA",
       "fifaRank": 5,
@@ -6962,7 +6962,7 @@
         {
           "matchday": 1,
           "opponent": "Croatia",
-          "opponentFlag": "\ud83c\udded\ud83c\uddf7",
+          "opponentFlag": "🇭🇷",
           "result": null,
           "score": null,
           "date": "2026-06-17",
@@ -6972,7 +6972,7 @@
         {
           "matchday": 2,
           "opponent": "Ghana",
-          "opponentFlag": "\ud83c\uddec\ud83c\udded",
+          "opponentFlag": "🇬🇭",
           "result": null,
           "score": null,
           "date": "2026-06-23",
@@ -6982,7 +6982,7 @@
         {
           "matchday": 3,
           "opponent": "Panama",
-          "opponentFlag": "\ud83c\uddf5\ud83c\udde6",
+          "opponentFlag": "🇵🇦",
           "result": null,
           "score": null,
           "date": "2026-06-27",
@@ -6991,20 +6991,20 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 97,
-        "r16": 77,
+        "r32": 96,
+        "r16": 78,
         "qf": 56,
-        "sf": 37,
-        "final": 24,
-        "winner": 11,
+        "sf": 36,
+        "final": 25,
+        "winner": 10,
         "source": "market"
       },
       "path": {
         "group_stage": {
           "status": "active",
-          "city": "Dallas \u00b7 Philadelphia \u00b7 New Jersey",
+          "city": "Dallas · Philadelphia · New Jersey",
           "venue": "Various venues",
-          "date": "Jun 17\u201327",
+          "date": "Jun 17–27",
           "detail": "0pts after MD0"
         },
         "r32": {
@@ -7053,7 +7053,7 @@
           {
             "group": "K",
             "likelyTeam": "Colombia",
-            "flag": "\ud83c\udde8\ud83c\uddf4",
+            "flag": "🇨🇴",
             "fifaRank": 13,
             "difficulty": 4,
             "label": "Tough",
@@ -7068,7 +7068,7 @@
     {
       "id": "croatia",
       "name": "Croatia",
-      "flag": "\ud83c\udded\ud83c\uddf7",
+      "flag": "🇭🇷",
       "group": "L",
       "confederation": "UEFA",
       "fifaRank": 10,
@@ -7078,7 +7078,7 @@
         {
           "matchday": 1,
           "opponent": "England",
-          "opponentFlag": "\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f",
+          "opponentFlag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
           "result": null,
           "score": null,
           "date": "2026-06-17",
@@ -7088,7 +7088,7 @@
         {
           "matchday": 2,
           "opponent": "Panama",
-          "opponentFlag": "\ud83c\uddf5\ud83c\udde6",
+          "opponentFlag": "🇵🇦",
           "result": null,
           "score": null,
           "date": "2026-06-23",
@@ -7098,7 +7098,7 @@
         {
           "matchday": 3,
           "opponent": "Ghana",
-          "opponentFlag": "\ud83c\uddec\ud83c\udded",
+          "opponentFlag": "🇬🇭",
           "result": null,
           "score": null,
           "date": "2026-06-27",
@@ -7107,10 +7107,10 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 84,
-        "r16": 41,
-        "qf": 19,
-        "sf": 9,
+        "r32": 82,
+        "r16": 45,
+        "qf": 20,
+        "sf": 8,
         "final": 4,
         "winner": 1,
         "source": "market"
@@ -7118,9 +7118,9 @@
       "path": {
         "group_stage": {
           "status": "active",
-          "city": "Dallas \u00b7 Toronto \u00b7 Philadelphia",
+          "city": "Dallas · Toronto · Philadelphia",
           "venue": "Various venues",
-          "date": "Jun 17\u201327",
+          "date": "Jun 17–27",
           "detail": "0pts after MD0"
         },
         "r32": {
@@ -7169,7 +7169,7 @@
           {
             "group": "K",
             "likelyTeam": "DR Congo",
-            "flag": "\ud83c\udde8\ud83c\udde9",
+            "flag": "🇨🇩",
             "fifaRank": 56,
             "difficulty": 1,
             "label": "Favorable",
@@ -7184,7 +7184,7 @@
     {
       "id": "ghana",
       "name": "Ghana",
-      "flag": "\ud83c\uddec\ud83c\udded",
+      "flag": "🇬🇭",
       "group": "L",
       "confederation": "CAF",
       "fifaRank": 60,
@@ -7194,7 +7194,7 @@
         {
           "matchday": 1,
           "opponent": "Panama",
-          "opponentFlag": "\ud83c\uddf5\ud83c\udde6",
+          "opponentFlag": "🇵🇦",
           "result": null,
           "score": null,
           "date": "2026-06-17",
@@ -7204,7 +7204,7 @@
         {
           "matchday": 2,
           "opponent": "England",
-          "opponentFlag": "\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f",
+          "opponentFlag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
           "result": null,
           "score": null,
           "date": "2026-06-23",
@@ -7214,7 +7214,7 @@
         {
           "matchday": 3,
           "opponent": "Croatia",
-          "opponentFlag": "\ud83c\udded\ud83c\uddf7",
+          "opponentFlag": "🇭🇷",
           "result": null,
           "score": null,
           "date": "2026-06-27",
@@ -7225,7 +7225,7 @@
       "advanceProbabilities": {
         "r32": 49,
         "r16": 14,
-        "qf": 5,
+        "qf": 7,
         "sf": 2,
         "final": 2,
         "winner": 0,
@@ -7234,9 +7234,9 @@
       "path": {
         "group_stage": {
           "status": "active",
-          "city": "Toronto \u00b7 Philadelphia",
+          "city": "Toronto · Philadelphia",
           "venue": "Various venues",
-          "date": "Jun 17\u201327",
+          "date": "Jun 17–27",
           "detail": "0pts after MD0"
         },
         "r32": {
@@ -7285,7 +7285,7 @@
           {
             "group": "K",
             "likelyTeam": "DR Congo",
-            "flag": "\ud83c\udde8\ud83c\udde9",
+            "flag": "🇨🇩",
             "fifaRank": 56,
             "difficulty": 1,
             "label": "Favorable",
@@ -7300,7 +7300,7 @@
     {
       "id": "panama",
       "name": "Panama",
-      "flag": "\ud83c\uddf5\ud83c\udde6",
+      "flag": "🇵🇦",
       "group": "L",
       "confederation": "CONCACAF",
       "fifaRank": 76,
@@ -7310,7 +7310,7 @@
         {
           "matchday": 1,
           "opponent": "Ghana",
-          "opponentFlag": "\ud83c\uddec\ud83c\udded",
+          "opponentFlag": "🇬🇭",
           "result": null,
           "score": null,
           "date": "2026-06-17",
@@ -7320,7 +7320,7 @@
         {
           "matchday": 2,
           "opponent": "Croatia",
-          "opponentFlag": "\ud83c\udded\ud83c\uddf7",
+          "opponentFlag": "🇭🇷",
           "result": null,
           "score": null,
           "date": "2026-06-23",
@@ -7330,7 +7330,7 @@
         {
           "matchday": 3,
           "opponent": "England",
-          "opponentFlag": "\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f",
+          "opponentFlag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
           "result": null,
           "score": null,
           "date": "2026-06-27",
@@ -7340,8 +7340,8 @@
       ],
       "advanceProbabilities": {
         "r32": 34,
-        "r16": 10,
-        "qf": 2,
+        "r16": 8,
+        "qf": 3,
         "sf": 1,
         "final": 0,
         "winner": 0,
@@ -7350,9 +7350,9 @@
       "path": {
         "group_stage": {
           "status": "active",
-          "city": "Toronto \u00b7 New Jersey",
+          "city": "Toronto · New Jersey",
           "venue": "Various venues",
-          "date": "Jun 17\u201327",
+          "date": "Jun 17–27",
           "detail": "0pts after MD0"
         },
         "r32": {
@@ -7401,7 +7401,7 @@
           {
             "group": "K",
             "likelyTeam": "DR Congo",
-            "flag": "\ud83c\udde8\ud83c\udde9",
+            "flag": "🇨🇩",
             "fifaRank": 56,
             "difficulty": 1,
             "label": "Favorable",
