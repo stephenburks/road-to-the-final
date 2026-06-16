@@ -38,9 +38,9 @@ export default function Header({
 
         {/* Controls */}
         <div className={styles.controls}>
-          <div className={styles.updated} aria-label={`Data last updated ${formatUpdated(data?.lastUpdated)} · every 15 minutes`}>
+          <div className={styles.updated} aria-label={`Data last updated ${formatUpdated(data?.lastUpdated)} · every 30 minutes`}>
             Updated {formatUpdated(data?.lastUpdated)}
-            <br /><span style={{ opacity: 0.7 }}>every 15 min</span>
+            <br /><span style={{ opacity: 0.7 }}>every 30 min</span>
           </div>
 
           <DateSelector

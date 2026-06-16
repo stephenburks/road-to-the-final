@@ -15,7 +15,7 @@ A fan-made tracker for the 2026 FIFA World Cup. Pick any of the 48 teams and fol
 - **Opponent watchlist** with difficulty ratings (R32) and matchup probability bars (R16)
 - **Historical snapshots** — view probabilities as they were on any prior day
 - **Shareable URLs** — `?team=argentina&date=2026-06-14&stage=r16` encodes your view
-- **Hourly data updates** via GitHub Actions + ESPN API
+- **30-minute data updates** via GitHub Actions + ESPN API
 - **Dark theme** with Space Grotesk, Inter, and JetBrains Mono
 - **Fully accessible** — keyboard-navigable tabs, ARIA roles, focus-visible states
 
@@ -26,7 +26,7 @@ A fan-made tracker for the 2026 FIFA World Cup. Pick any of the 48 teams and fol
 - **React 18** — functional components, hooks, CSS Modules
 - **Vite 8** — dev server and production build
 - **No component library** — hand-written CSS with custom properties
-- **Node.js data pipeline** — `scripts/update-data.js` runs hourly via GitHub Actions
+- **Node.js data pipeline** — `scripts/update-data.js` runs every 30 minutes via GitHub Actions
 
 ---
 
@@ -45,11 +45,11 @@ road-to-the-final/
 │       └── 2026-06-14.json          # Historical snapshot
 │
 ├── scripts/
-│   └── update-data.js               # Hourly data refresh (Node 18+, no deps)
+│   └── update-data.js               # 30-minute data refresh (Node 18+, no deps)
 │
 ├── .github/workflows/
 │   ├── deploy.yml                   # Build + deploy to GitHub Pages
-│   └── update-data.yml             # Hourly data update + commit
+│   └── update-data.yml             # 30-minute data update + commit
 │
 └── src/
     ├── main.jsx                     # Entry point (ErrorBoundary wrapper)
@@ -100,7 +100,7 @@ Data is served from `public/data/` — you need a local server, not `file://`. V
 
 ## Data Pipeline
 
-The update script runs hourly via GitHub Actions:
+The update script runs every 30 minutes via GitHub Actions:
 
 ```bash
 # Run manually (no API key required)

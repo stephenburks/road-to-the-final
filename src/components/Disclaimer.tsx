@@ -30,7 +30,7 @@ export default function Disclaimer() {
               expectations, not guaranteed outcomes. This is a fan-made visualization
               for entertainment and discussion only.{' '}
               <strong>Not intended for wagering or any consequential decisions.</strong>{' '}
-              Group standings and match results update hourly on match days via{' '}
+              Group standings and match results update every 30 minutes on match days via{' '}
               <a
                 href="https://www.espn.com/soccer/scoreboard/_/league/fifa.world"
                 target="_blank"
