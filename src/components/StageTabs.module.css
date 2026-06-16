@@ -101,7 +101,15 @@
 .city {
 	font-size: 9px;
 	color: var(--text-dim);
+	display: none;
 }
+
+@media (min-width: 1200px) {
+	.city {
+		display: inline;
+	}
+}
+
 .conditional {
 	font-size: 9px;
 	color: var(--amber);
@@ -127,8 +135,5 @@
 	}
 	.labelShort {
 		display: inline;
-	}
-	.city {
-		display: none;
 	}
 }
