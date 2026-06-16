@@ -124,6 +124,23 @@ export interface TournamentStage {
 	date: string
 }
 
+export interface DailyMatch {
+	homeTeam: string
+	homeFlag: string
+	homeId: string
+	awayTeam: string
+	awayFlag: string
+	awayId: string
+	homeScore: number
+	awayScore: number
+	status: 'FINISHED' | 'SCHEDULED'
+	date: string
+}
+
+export interface DailyMatches {
+	[date: string]: DailyMatch[]
+}
+
 export interface AppData {
 	lastUpdated: string
 	snapshotDate: string
@@ -135,6 +152,7 @@ export interface AppData {
 	}
 	groups: Record<string, GroupData>
 	teams: Team[]
+	dailyMatches?: DailyMatches
 }
 
 export interface SnapshotManifest {

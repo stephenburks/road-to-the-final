@@ -54,10 +54,11 @@ interface URLParams {
   team: string | null
   date: string | null
   stage: string | null
+  view: string | null
 }
 
 /**
- * Read team, date, stage from the URL search params.
+ * Read team, date, stage, view from the URL search params.
  */
 export function readURLParams(): URLParams {
   const p = new URLSearchParams(window.location.search)
@@ -65,16 +66,26 @@ export function readURLParams(): URLParams {
     team:  p.get('team')  ?? null,
     date:  p.get('date')  ?? null,
     stage: p.get('stage') ?? null,
+    view:  p.get('view')  ?? null,
   }
 }
 
 /**
- * Push team, date, stage into the URL (replaceState — no history entry).
+ * Push team, date, stage, view into the URL (replaceState — no history entry).
  * Omits defaults to keep URLs clean.
+ * - view='home' with default team: no params
+ * - view='standings': ?view=standings
+ * - view='team': ?team=usa (backward compatible — no view param needed)
  */
-export function writeURLParams(team: string, date: string, stage: string, defaultTeam = 'usa'): void {
+export function writeURLParams(team: string, date: string, stage: string, view: string, defaultTeam = 'usa'): void {
   const p = new URLSearchParams()
-  if (team  && team  !== defaultTeam) p.set('team',  team)
+  if (view === 'standings') {
+    p.set('view', 'standings')
+  } else if (view === 'team') {
+    if (team && team !== defaultTeam) p.set('team', team)
+    // team view is implied by team param — no explicit view param needed
+  }
+  // view === 'home': no params needed (unless we want explicit ?view=home)
   if (date  && date  !== 'live')      p.set('date',  date)
   if (stage && stage !== 'auto')      p.set('stage', stage)
   const qs = p.toString()

@@ -30,11 +30,17 @@
   letter-spacing: 0.05em;
   transition: color 0.15s, background 0.15s;
   flex-shrink: 0;
+  cursor: pointer;
 }
 
 .link:hover {
   color: var(--text-hi);
   background: rgba(255, 255, 255, 0.06);
+}
+
+.active {
+  color: var(--text-hi);
+  background: rgba(99, 102, 241, 0.15);
 }
 
 .badge {

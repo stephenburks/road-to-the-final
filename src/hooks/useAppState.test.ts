@@ -71,7 +71,7 @@ describe('useAppState', () => {
 		expect(result.current.selectedTeamId).toBe('germany')
 	})
 
-	it('handleTeamChange resets stage to auto', () => {
+	it('handleTeamChange resets stage to auto and sets view to team', () => {
 		const { result } = renderHook(() => useAppState())
 
 		act(() => {
@@ -80,6 +80,54 @@ describe('useAppState', () => {
 
 		expect(result.current.selectedTeamId).toBe('brazil')
 		expect(result.current.selectedStage).toBe('auto')
+		expect(result.current.view).toBe('team')
+	})
+
+	it('default view is home when no URL params', () => {
+		Object.defineProperty(window, 'location', {
+			value: { ...window.location, search: '', pathname: '/' },
+			writable: true,
+			configurable: true,
+		})
+
+		const { result } = renderHook(() => useAppState())
+		expect(result.current.view).toBe('home')
+	})
+
+	it('view is team when team param present without explicit view', () => {
+		Object.defineProperty(window, 'location', {
+			value: { ...window.location, search: '?team=brazil', pathname: '/' },
+			writable: true,
+			configurable: true,
+		})
+
+		const { result } = renderHook(() => useAppState())
+		expect(result.current.view).toBe('team')
+	})
+
+	it('view is standings when view param is standings', () => {
+		Object.defineProperty(window, 'location', {
+			value: { ...window.location, search: '?view=standings', pathname: '/' },
+			writable: true,
+			configurable: true,
+		})
+
+		const { result } = renderHook(() => useAppState())
+		expect(result.current.view).toBe('standings')
+	})
+
+	it('handleViewChange updates view state', () => {
+		const { result } = renderHook(() => useAppState())
+
+		act(() => {
+			result.current.handleViewChange('standings')
+		})
+		expect(result.current.view).toBe('standings')
+
+		act(() => {
+			result.current.handleViewChange('home')
+		})
+		expect(result.current.view).toBe('home')
 	})
 
 	it('writeURLParams is called on state change', () => {

@@ -1197,6 +1197,29 @@ async function main() {
 
   log(`Built data for ${teams.length} teams (${hasActive ? activeIds.size + ' fully recalculated' : 'all carried forward'})`);
 
+  // Build dailyMatches from espnMatches (enriched with team names/flags)
+  const dailyMatches = {};
+  for (const [key, match] of espnMatches) {
+    const [homeId, awayId] = key.split(':');
+    const homeTeam = ALL_TEAMS.find(t => t.id === homeId);
+    const awayTeam = ALL_TEAMS.find(t => t.id === awayId);
+    const date = match.date;
+    if (!dailyMatches[date]) dailyMatches[date] = [];
+    dailyMatches[date].push({
+      homeTeam: homeTeam?.name || homeId,
+      homeFlag: homeTeam?.flag || '🏳️',
+      homeId: homeId,
+      awayTeam: awayTeam?.name || awayId,
+      awayFlag: awayTeam?.flag || '🏳️',
+      awayId: awayId,
+      homeScore: match.homeScore,
+      awayScore: match.awayScore,
+      status: match.status,
+      date: match.date,
+    });
+  }
+  log(`Daily matches: ${Object.keys(dailyMatches).length} dates, ${Object.values(dailyMatches).reduce((s, a) => s + a.length, 0)} matches`);
+
   // Assemble output
   const today = todayStr();
   const now   = new Date().toISOString();
@@ -1243,6 +1266,7 @@ async function main() {
     },
     groups: groupsData,
     teams,
+    dailyMatches,
   };
 
   // Write live file

@@ -15,6 +15,8 @@ import Disclaimer       from './components/Disclaimer'
 import Footer           from './components/Footer'
 import Loading          from './components/ui/Loading'
 import EliminatedView   from './components/ui/EliminatedView'
+import HomePage         from './components/HomePage'
+import StandingsPage    from './components/StandingsPage'
 import styles           from './App.module.css'
 
 function HistoricalBanner({ date, label, onGoLive }: { date: string; label: string; onGoLive: () => void }) {
@@ -43,7 +45,7 @@ function ErrorScreen({ message }: { message: string }) {
 }
 
 export default function App() {
-  const { selectedTeamId, selectedDate, selectedStage, isHistorical, handleTeamChange, handleDateChange, handleStageSelect } = useAppState()
+  const { selectedTeamId, selectedDate, selectedStage, view, isHistorical, handleTeamChange, handleDateChange, handleStageSelect, handleViewChange } = useAppState()
 
   const { liveData, manifest, snapData, loadingSnap, error } = useData(selectedDate)
 
@@ -76,12 +78,66 @@ export default function App() {
     document.title = `${team.name} • Road to the Final • World Cup 2026`
   }, [team])
 
+  useEffect(() => {
+    if (view === 'home') {
+      document.title = 'Road to the Final • World Cup 2026'
+    } else if (view === 'standings') {
+      document.title = 'Standings • Road to the Final • World Cup 2026'
+    }
+  }, [view])
+
   if (error)     return <ErrorScreen message={error} />
   if (!liveData) return <Loading message="Loading match data…" />
-  if (!team)     return <Loading message="Finding team data…" />
   if (!data)     return <Loading message="Loading data…" />
 
   const snapLabel  = isHistorical ? (manifest?.labels?.[selectedDate] ?? selectedDate) : null
+
+  // Home and Standings views don't need a resolved team
+  if (view === 'home' || view === 'standings') {
+    return (
+      <>
+        <Header
+          data={liveData}
+          selectedTeamId={selectedTeamId}
+          onTeamChange={handleTeamChange}
+          selectedDate={selectedDate}
+          onDateChange={handleDateChange}
+          manifest={manifest}
+        />
+        <Nav view={view} onViewChange={handleViewChange} isHistorical={isHistorical} />
+
+        {isHistorical && snapLabel && (
+          <HistoricalBanner date={selectedDate} label={snapLabel} onGoLive={() => handleDateChange('live')} />
+        )}
+
+        {loadingSnap ? <Loading message="Loading historical snapshot…" /> : (
+          <main id="main-content">
+            {view === 'home' && (
+              <HomePage
+                data={data}
+                selectedTeamId={selectedTeamId}
+                onTeamChange={handleTeamChange}
+                onViewChange={handleViewChange}
+              />
+            )}
+            {view === 'standings' && (
+              <StandingsPage
+                data={data}
+                selectedTeamId={selectedTeamId}
+              />
+            )}
+          </main>
+        )}
+
+        <Disclaimer />
+        <Footer />
+      </>
+    )
+  }
+
+  // Team view needs a resolved team
+  if (!team)     return <Loading message="Finding team data…" />
+
   const showGroups = activeStage === 'group_stage'
   const showElim   = team.eliminated
 
@@ -95,7 +151,7 @@ export default function App() {
         onDateChange={handleDateChange}
         manifest={manifest}
       />
-      <Nav isHistorical={isHistorical} />
+      <Nav view={view} onViewChange={handleViewChange} isHistorical={isHistorical} />
 
       {isHistorical && snapLabel && (
         <HistoricalBanner date={selectedDate} label={snapLabel} onGoLive={() => handleDateChange('live')} />
