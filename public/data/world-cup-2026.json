@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-16T21:24:01.834Z",
+  "lastUpdated": "2026-06-16T21:25:09.772Z",
   "snapshotDate": "2026-06-16",
   "isHistorical": false,
   "sourceSummary": {
@@ -3584,8 +3584,8 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 3,
-        "r16": 3,
+        "r32": 2,
+        "r16": 2,
         "qf": 0,
         "sf": 0,
         "final": 0,
@@ -6222,7 +6222,7 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 67,
+        "r32": 66,
         "r16": 23,
         "qf": 8,
         "sf": 3,
