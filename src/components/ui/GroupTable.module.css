@@ -59,17 +59,26 @@ tbody tr:last-child {
 	border-bottom: none;
 }
 
+/* ── Row states ── */
+.rowSelected { background: rgba(99,102,241,0.07); }
+
 tbody td {
 	padding: 8px 8px;
 	font-size: 11px;
 	font-family: var(--font-mono);
 }
 
+.colPos { color: var(--text-dim); width: 22px; }
+
+/* ── Team name ── */
 .teamCell {
 	display: flex;
 	align-items: center;
 	gap: 6px;
 }
+
+.teamName { font-weight: 500; color: #d1d5db; }
+.teamNameSelected { font-weight: 700; color: #c7d2fe; }
 
 .youTag {
 	font-size: 8px;
@@ -81,6 +90,12 @@ tbody td {
 	letter-spacing: 0.07em;
 }
 
+/* ── Stat cells ── */
+.statCell { text-align: center; color: var(--text-dim); font-weight: 400; }
+.statCellPts { color: #e2e0ff; font-weight: 700; }
+.statCellPtsSelected { color: #c7d2fe; }
+
+/* ── Win probability ── */
 .probCell {
 	display: flex;
 	align-items: center;
@@ -94,3 +109,11 @@ tbody td {
 	border-radius: 2px;
 	flex-shrink: 0;
 }
+
+.probBarLow  { background: #374151; }
+.probBarMid  { background: var(--amber); }
+.probBarHigh { background: var(--purple); }
+
+.probLabel { min-width: 28px; }
+.probLabelLow  { color: var(--text-dim); }
+.probLabelHigh { color: #a5b4fc; }

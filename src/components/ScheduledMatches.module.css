@@ -59,11 +59,16 @@
 }
 
 .matchStatus {
-  font-family: var(--font-mono);
-  font-weight: 700;
-  font-size: 13px;
-  text-align: center;
+	font-family: var(--font-mono);
+	font-weight: 700;
+	font-size: 13px;
+	text-align: center;
 }
+
+.statusWin  { color: var(--green); }
+.statusDraw { color: #a8a29e; }
+.statusLoss { color: var(--red); }
+.statusUpcoming { color: var(--text-dim); }
 
 .matchDate {
   font-family: var(--font-mono);
@@ -85,15 +90,17 @@
 }
 
 .opponentName {
-  font-weight: 500;
-  color: var(--text-lo);
+	font-weight: 500;
+	color: var(--text-lo);
 }
 
+.opponentNameConditional { color: var(--text-dim); }
+
 .score {
-  font-family: var(--font-mono);
-  font-size: 13px;
-  font-weight: 800;
-  color: #22c55e;
+	font-family: var(--font-mono);
+	font-size: 13px;
+	font-weight: 800;
+	color: var(--green);
 }
 
 .matchVenue {

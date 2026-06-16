@@ -1,7 +1,7 @@
 import type { Team, GroupMatch } from '../../types'
 import { formatDate } from '../../utils'
 import FlagIcon from '../ui/FlagIcon'
-import { BADGE_STYLES, RESULT_LABELS, CARD_BG, CARD_BORDER } from './groupStageConstants'
+import { RESULT_LABELS } from './groupStageConstants'
 import styles from './MatchCard.module.css'
 
 interface MatchCardProps {
@@ -12,35 +12,32 @@ interface MatchCardProps {
 }
 
 export default function MatchCard({ match, teamFlag, teamId, teams }: MatchCardProps) {
-	const badgeStyle = match.result ? (BADGE_STYLES[match.result] ?? { background: 'rgba(255,255,255,0.06)', color: 'var(--text-dim)' }) : { background: 'rgba(255,255,255,0.06)', color: 'var(--text-dim)' }
 	const isWin = match.result === 'W'
 	const isDraw = match.result === 'D'
 	const resultLabel = match.result ? (RESULT_LABELS[match.result] ?? 'To be played') : 'To be played'
+	const badgeClass = match.result
+		? (match.result === 'W' ? styles.badgeW : match.result === 'D' ? styles.badgeD : styles.badgeL)
+		: styles.badgeUpcoming
+	const cardClass = isWin ? styles.cardW : isDraw ? styles.cardD : styles.cardUpcoming
 
 	// Find opponent's match data for the same matchday
 	const oppTeam = teams?.find(t => t.name === match.opponent)
 	const oppMatch = oppTeam?.groupResults?.find(g => g.matchday === match.matchday)
 
 	return (
-		<div
-			className={styles.matchCard}
-			style={{
-				background: isWin ? CARD_BG.W : isDraw ? CARD_BG.D : 'rgba(255,255,255,0.03)',
-				border: `1px solid ${isWin ? CARD_BORDER.W : isDraw ? CARD_BORDER.D : 'rgba(255,255,255,0.07)'}`,
-			}}
-		>
+		<div className={`${styles.matchCard} ${cardClass}`}>
 			<div className={styles.matchMeta}>
 				<span>MD{match.matchday} · {formatDate(match.date)}</span>
-				<span className={styles.badge} style={badgeStyle} aria-label={resultLabel}>
+				<span className={`${styles.badge} ${badgeClass}`} aria-label={resultLabel}>
 					{match.result ?? 'TBD'}
 				</span>
 			</div>
 
 			<div className={styles.matchTeams}>
 				<FlagIcon code={teamId} flag={teamFlag} />
-				<span style={{ fontSize: 12, color: 'var(--text-lo)' }}>vs</span>
+				<span className={styles.vsLabel}>vs</span>
 				<FlagIcon flag={match.opponentFlag} opponent={match.opponent} />
-				<span style={{ fontSize: 12, color: '#d1d5db', fontWeight: 600 }}>{match.opponent}</span>
+				<span className={styles.opponentName}>{match.opponent}</span>
 				{match.score && (
 					<span className={styles.score} aria-label={`Score: ${match.score}`}>
 						{match.score}
@@ -63,7 +60,7 @@ export default function MatchCard({ match, teamFlag, teamId, teams }: MatchCardP
 							<ul className={styles.cards} aria-label={`${teamId} cards`}>
 								{match.cards.map((c, j) => (
 									<li key={j}>
-										<span className={styles.cardIndicator} style={{ background: c.type === 'red' ? '#ef4444' : '#eab308' }} aria-hidden="true" />
+										<span className={`${styles.cardIndicator} ${c.type === 'red' ? styles.cardRed : styles.cardYellow}`} aria-hidden="true" />
 										<span className="sr-only">{c.type === 'red' ? 'Red' : 'Yellow'} card: </span>
 										{c.player} {c.minute}
 									</li>
@@ -85,7 +82,7 @@ export default function MatchCard({ match, teamFlag, teamId, teams }: MatchCardP
 								<ul className={styles.cards} aria-label={`${match.opponent} cards`}>
 									{oppMatch.cards.map((c, j) => (
 										<li key={j}>
-											<span className={styles.cardIndicator} style={{ background: c.type === 'red' ? '#ef4444' : '#eab308' }} aria-hidden="true" />
+											<span className={`${styles.cardIndicator} ${c.type === 'red' ? styles.cardRed : styles.cardYellow}`} aria-hidden="true" />
 											<span className="sr-only">{c.type === 'red' ? 'Red' : 'Yellow'} card: </span>
 											{c.player} {c.minute}
 										</li>

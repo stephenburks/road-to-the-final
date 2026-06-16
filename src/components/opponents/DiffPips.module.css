@@ -1,2 +1,8 @@
 .pips { display: flex; gap: 2px; }
-.pip  { width: 6px; height: 6px; border-radius: 50%; }
+.pip {
+	width: 6px;
+	height: 6px;
+	border-radius: 50%;
+}
+
+.pipEmpty { background: rgba(255,255,255,0.1); }

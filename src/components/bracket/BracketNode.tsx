@@ -10,16 +10,12 @@ interface BracketNodeProps {
 }
 
 export default function BracketNode({ bg, border, color, shadow, icon }: BracketNodeProps) {
-	const fontSize = icon === '✕' || icon === '✓'
-		? '13px'
-		: color === '#052e16'
-			? '13px'
-			: '9px'
+	const isLarge = icon === '\u2715' || icon === '\u2713' || color === '#052e16'
 
 	return (
 		<div
-			className={`${styles.node} emoji`}
-			style={{ background: bg, border: `2px solid ${border}`, color, boxShadow: shadow, fontSize }}
+			className={`${styles.node} emoji ${isLarge ? styles.nodeLarge : ''}`}
+			style={{ background: bg, border: `2px solid ${border}`, color, boxShadow: shadow }}
 			aria-hidden="true"
 		>
 			{icon}

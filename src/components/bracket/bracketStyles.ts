@@ -112,7 +112,7 @@ export function getCardStyle(i: number, currentIdx: number, stage: string, team:
 }
 
 export function connectorGradient(currentIdx: number): string {
-	const completePct = Math.min((currentIdx / 5) * 100, 100)
+	const completePct = Math.min((currentIdx / (STAGE_ORDER.length - 1)) * 100, 100)
 	return `linear-gradient(to right,
 		var(--green) 0%,
 		var(--green) ${completePct * 0.9}%,

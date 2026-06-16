@@ -125,16 +125,7 @@ export default function OpponentWatchlist({ team, activeStage, data }: {
 				/>
 			)}
 			{!r32Feeder && activeStage === 'r32' && (
-				<div
-					style={{
-						marginTop: 20,
-						fontFamily: 'var(--font-mono)',
-						fontSize: 10,
-						color: 'var(--text-dim)',
-						textAlign: 'center',
-						lineHeight: 1.5,
-					}}
-				>
+				<div className={styles.noFeederMsg}>
 					Opponent pool spans multiple groups — will narrow as group stage standings update.
 				</div>
 			)}
@@ -151,26 +142,17 @@ export default function OpponentWatchlist({ team, activeStage, data }: {
 				/>
 			)}
 			{!r16Feeder && activeStage === 'r16' && (
-				<div
-					style={{
-						marginTop: r16WithPct ? 24 : 0,
-						fontFamily: 'var(--font-mono)',
-						fontSize: 10,
-						color: 'var(--text-dim)',
-						textAlign: 'center',
-						lineHeight: 1.5,
-					}}
-				>
+				<div className={`${styles.noFeederMsg} ${r16WithPct ? styles.noFeederMsgExtra : ''}`}>
 					Opponent depends on R32 results across multiple matches — will resolve as the knockout rounds progress.
 				</div>
 			)}
 
 			{activeStage === 'r32' && (hasFlat || hasScenarios) && (
 				<div className={styles.legend} role="note" aria-label="Difficulty key">
-					<span><span className={styles.legendPip} style={{ background: '#22C55E' }} /> Favorable</span>
-					<span><span className={styles.legendPip} style={{ background: '#F59E0B' }} /> Moderate</span>
-					<span><span className={styles.legendPip} style={{ background: '#FB923C' }} /> Tough</span>
-					<span><span className={styles.legendPip} style={{ background: '#EF4444' }} /> Danger</span>
+					<span><span className={`${styles.legendPip} ${styles.legendPipFavorable}`} /> Favorable</span>
+					<span><span className={`${styles.legendPip} ${styles.legendPipModerate}`} /> Moderate</span>
+					<span><span className={`${styles.legendPip} ${styles.legendPipTough}`} /> Tough</span>
+					<span><span className={`${styles.legendPip} ${styles.legendPipDanger}`} /> Danger</span>
 				</div>
 			)}
 		</section>

@@ -23,7 +23,7 @@ export default function BracketCard({ path, card, isAct, stage }: BracketCardPro
 			<div className={styles.cardDate}>
 				{path?.date?.match(/^\d{4}/) ? formatDate(path.date) : (path?.date ?? '—')}
 			</div>
-			<div className={styles.cardCity} style={{ color: isAct ? '#818cf8' : 'var(--text-dim)' }}>
+			<div className={`${styles.cardCity} ${isAct ? styles.cardCityActive : ''}`}>
 				{path?.city ?? '—'}
 			</div>
 			<div className={styles.cardDetail} style={{ color: card.detColor }}>

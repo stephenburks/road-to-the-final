@@ -119,10 +119,27 @@
 }
 
 .legendPip {
-  display: inline-block;
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  vertical-align: middle;
-  margin-right: 3px;
+	display: inline-block;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	vertical-align: middle;
+	margin-right: 3px;
 }
+
+.legendPipFavorable { background: var(--green); }
+.legendPipModerate  { background: var(--amber); }
+.legendPipTough     { background: var(--orange); }
+.legendPipDanger    { background: var(--red); }
+
+/* ── No-feeder fallback message ── */
+.noFeederMsg {
+	margin-top: 20px;
+	font-family: var(--font-mono);
+	font-size: 10px;
+	color: var(--text-dim);
+	text-align: center;
+	line-height: 1.5;
+}
+
+.noFeederMsgExtra { margin-top: 24px; }

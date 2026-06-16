@@ -18,15 +18,7 @@ function MatchupRow({ opp, team, maxPct, data }: {
 				<span className={styles.matchupName}>
 					<FlagIcon code={team.id} flag={team.flag} name={team.name} /> {team.name} vs {name}
 					{tag && (
-						<span
-							style={{
-								fontFamily: 'var(--font-mono)',
-								fontSize: 9,
-								color: 'var(--text-dim)',
-								marginLeft: 6,
-								whiteSpace: 'nowrap',
-							}}
-						>
+						<span className={styles.groupTagBadge}>
 							G{tag.group}#{tag.pos}
 						</span>
 					)}
@@ -67,16 +59,12 @@ export default function MatchupMatrix({ flatList, team, maxPct, data }: {
 				{top4.map((opp, i) => (
 					<div
 						key={i}
-						className={styles.calloutCard}
-						style={{
-							background: i === 0 ? 'rgba(99,102,241,0.1)' : 'rgba(255,255,255,0.03)',
-							border: `1px solid ${i === 0 ? 'rgba(99,102,241,0.3)' : 'rgba(255,255,255,0.07)'}`,
-						}}
+						className={`${styles.calloutCard} ${i === 0 ? styles.calloutCardTop : ''}`}
 					>
 						<FlagIcon flag={opp.flag} />
 						<div>
 							<div className={styles.calloutVs}><FlagIcon code={team.id} flag={team.flag} name={team.name} /> vs {opp.opponent ?? opp.likelyTeam}</div>
-							<div className={styles.calloutPct} style={{ color: i === 0 ? '#a5b4fc' : 'var(--text-dim)' }}>
+							<div className={`${styles.calloutPct} ${i === 0 ? styles.calloutPctTop : ''}`}>
 								{opp.pct}%
 							</div>
 							{opp.note && <div className={styles.calloutNote}>{opp.note}</div>}

@@ -26,7 +26,10 @@
 	font-size: 10px;
 	margin-bottom: 3px;
 	word-break: break-word;
+	color: var(--text-dim);
 }
+
+.cardCityActive { color: #818cf8; }
 
 .cardDetail {
 	font-size: 9px;

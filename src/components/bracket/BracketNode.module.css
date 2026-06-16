@@ -7,6 +7,9 @@
 	justify-content: center;
 	font-family: var(--font-mono);
 	font-weight: 700;
+	font-size: 9px;
 	margin-bottom: 12px;
 	transition: box-shadow 0.3s;
 }
+
+.nodeLarge { font-size: 13px; }

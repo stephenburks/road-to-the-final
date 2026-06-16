@@ -15,14 +15,15 @@ import Disclaimer       from './components/Disclaimer'
 import Footer           from './components/Footer'
 import Loading          from './components/ui/Loading'
 import EliminatedView   from './components/ui/EliminatedView'
+import styles           from './App.module.css'
 
 function HistoricalBanner({ date, label, onGoLive }: { date: string; label: string; onGoLive: () => void }) {
   return (
-    <div role="alert" aria-live="polite" style={{ background:'rgba(245,158,11,0.07)', borderBottom:'1px solid rgba(245,158,11,0.2)', fontSize:12, color:'#fcd34d', fontFamily:'var(--font-mono)' }}>
-      <div className="wrap" style={{ paddingTop:9, paddingBottom:9, display:'flex', alignItems:'center', justifyContent:'center', gap:10, flexWrap:'wrap', textAlign:'center' }}>
-        <span className="emoji" aria-hidden="true">📅</span> Viewing snapshot from <strong>{label ?? date}</strong> — probabilities reflect that day
-        <button onClick={onGoLive} aria-label="Return to live data" style={{ padding:'3px 10px', borderRadius:5, border:'1px solid rgba(245,158,11,0.3)', color:'#fcd34d', fontSize:10, fontFamily:'var(--font-mono)', cursor:'pointer', background:'transparent' }}>
-          ← Back to Live
+    <div role="alert" aria-live="polite" className={styles.historicalBanner}>
+      <div className={`wrap ${styles.historicalInner}`}>
+        <span className="emoji" aria-hidden="true">{'\u{1F4C5}'}</span> Viewing snapshot from <strong>{label ?? date}</strong> {'\u2014'} probabilities reflect that day
+        <button onClick={onGoLive} aria-label="Return to live data" className={styles.historicalBtn}>
+          {'\u2190'} Back to Live
         </button>
       </div>
     </div>
@@ -31,11 +32,11 @@ function HistoricalBanner({ date, label, onGoLive }: { date: string; label: stri
 
 function ErrorScreen({ message }: { message: string }) {
   return (
-    <div role="alert" style={{ minHeight:'100vh', display:'flex', flexDirection:'column', alignItems:'center', justifyContent:'center', gap:12, fontFamily:'var(--font-mono)', color:'var(--red)', fontSize:12, textAlign:'center', padding:24 }}>
-      <span className="emoji" style={{ fontSize:28 }}>⚠️</span>
+    <div role="alert" className={styles.errorScreen}>
+      <span className={`emoji ${styles.errorIcon}`}>{'\u26A0\uFE0F'}</span>
       <p>{message}</p>
-      <p style={{ color:'var(--text-dim)', marginTop:8 }}>
-        Run <code style={{ background:'rgba(255,255,255,0.06)', padding:'1px 6px', borderRadius:3 }}>npm run dev</code> to serve the app locally.
+      <p className={styles.errorSubtext}>
+        Run <code className={styles.errorCode}>npm run dev</code> to serve the app locally.
       </p>
     </div>
   )
@@ -93,7 +94,7 @@ export default function App() {
 
       {loadingSnap ? <Loading message="Loading historical snapshot…" /> : (
         <main id="main-content">
-          <div className="wrap" style={{ paddingTop:22, paddingBottom:0 }}>
+          <div className={`wrap ${styles.tabWrapper}`}>
             <StageTabs team={team} selectedStage={activeStage} onSelect={handleStageSelect} />
           </div>
 

@@ -4,11 +4,11 @@ import { daysUntil, formatDate } from '../utils'
 import FlagIcon from './ui/FlagIcon'
 import styles from './Hero.module.css'
 
-const STAT_CARDS = [
-	{ key: 'r32', label: 'Reach Round of 32', color: '#22c55e', bg: 'rgba(34,197,94,0.08)', border: 'rgba(34,197,94,0.28)' },
-	{ key: 'r16', label: 'Reach Round of 16', color: '#6366f1', bg: 'rgba(99,102,241,0.08)', border: 'rgba(99,102,241,0.28)' },
-	{ key: 'qf', label: 'Reach Quarterfinal', color: '#f59e0b', bg: 'rgba(245,158,11,0.08)', border: 'rgba(245,158,11,0.28)' },
-	{ key: 'final', label: 'Reach the Final', color: '#ef4444', bg: 'rgba(239,68,68,0.08)', border: 'rgba(239,68,68,0.2)' },
+const STAT_CARD_DEFS = [
+	{ key: 'r32',   label: 'Reach Round of 32', cardClass: styles.statCardR32,   valueClass: styles.statValueR32 },
+	{ key: 'r16',   label: 'Reach Round of 16', cardClass: styles.statCardR16,   valueClass: styles.statValueR16 },
+	{ key: 'qf',    label: 'Reach Quarterfinal', cardClass: styles.statCardQf,    valueClass: styles.statValueQf },
+	{ key: 'final', label: 'Reach the Final',    cardClass: styles.statCardFinal, valueClass: styles.statValueFinal },
 ]
 
 function getEyebrow(team: Team, activeStage: Stage, isHistorical: boolean) {
@@ -79,15 +79,14 @@ export default function Hero({ team, activeStage, isHistorical }: HeroProps) {
 
 					{!team.eliminated && (
 						<div className={styles.statGrid} role="list" aria-label="Tournament advancement probabilities">
-							{STAT_CARDS.map(card => (
+							{STAT_CARD_DEFS.map(card => (
 								<div
 									key={card.key}
 									role="listitem"
-									className={styles.statCard}
-									style={{ background: card.bg, border: `1px solid ${card.border}` }}
+									className={`${styles.statCard} ${card.cardClass}`}
 									aria-label={`${card.label}: ${ap[card.key as keyof AdvanceProbabilities] ?? 0}%`}
 								>
-									<div className={styles.statValue} style={{ color: card.color }}>
+									<div className={`${styles.statValue} ${card.valueClass}`}>
 										{ap[card.key as keyof AdvanceProbabilities] ?? 0}%
 									</div>
 									<div className={styles.statLabel}>{card.label}</div>

@@ -12,6 +12,31 @@
 	margin-top: 16px;
 }
 
+/* ── Disclaimer note ── */
+.disclaimer {
+	background: rgba(245,158,11,0.06);
+	border: 1px solid rgba(245,158,11,0.15);
+	color: #fcd34d;
+	font-size: 11px;
+	padding: 10px 14px;
+	border-radius: 8px;
+	font-family: var(--font-mono);
+	margin-top: 12px;
+	margin-bottom: 4px;
+	line-height: 1.5;
+}
+
+/* ── No-feeder message ── */
+.noFeederMsg {
+	font-family: var(--font-mono);
+	font-size: 10px;
+	color: var(--text-dim);
+	text-align: center;
+	line-height: 1.5;
+	align-self: center;
+	padding: 0 16px;
+}
+
 @media (max-width: 900px) {
 	.groupGrid {
 		grid-template-columns: 1fr;

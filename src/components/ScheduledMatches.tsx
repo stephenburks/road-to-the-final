@@ -6,13 +6,13 @@ import FlagIcon from './ui/FlagIcon'
 import styles from './ScheduledMatches.module.css'
 
 /**
- * Determines the status icon and style for a match row.
+ * Determines the status icon and CSS class for a match row.
  */
 function matchStatus(result: GroupMatch['result']) {
-  if (result === 'W') return { icon: '✓', color: '#22c55e', label: 'Win' }
-  if (result === 'D') return { icon: '½', color: '#a8a29e', label: 'Draw' }
-  if (result === 'L') return { icon: '✗', color: '#ef4444', label: 'Loss' }
-  return { icon: '?', color: 'var(--text-dim)', label: 'Upcoming' }
+  if (result === 'W') return { icon: '\u2713', className: styles.statusWin,   label: 'Win' }
+  if (result === 'D') return { icon: '\u00BD', className: styles.statusDraw,  label: 'Draw' }
+  if (result === 'L') return { icon: '\u2717', className: styles.statusLoss,  label: 'Loss' }
+  return { icon: '?', className: styles.statusUpcoming, label: 'Upcoming' }
 }
 
 interface MatchRowProps {
@@ -39,8 +39,8 @@ function MatchRow({ match, teamFlag, teamId, isConditional = false }: MatchRowPr
       className={`${styles.matchRow} ${match.result ? styles.played : styles.upcoming} ${isConditional ? styles.conditional : ''}`}
       aria-label={`${match.result ? status.label : 'Upcoming'}: vs ${match.opponent ?? match.opponentDesc ?? 'TBD'}`}
     >
-      <div className={`${styles.matchStatus} emoji`} aria-hidden="true">
-        <span style={{ color: status.color }}>{status.icon}</span>
+      <div className={`${styles.matchStatus} emoji ${status.className}`} aria-hidden="true">
+        <span>{status.icon}</span>
       </div>
 
       <div className={styles.matchDate}>{formatDate(match.date)}</div>
@@ -54,7 +54,7 @@ function MatchRow({ match, teamFlag, teamId, isConditional = false }: MatchRowPr
             <span className={styles.opponentName}>{match.opponent}</span>
           </>
         ) : (
-          <span className={styles.opponentName} style={{ color: isConditional ? 'var(--text-dim)' : 'var(--text-lo)' }}>
+          <span className={`${styles.opponentName} ${isConditional ? styles.opponentNameConditional : ''}`}>
             {match.opponent ?? match.opponentDesc ?? 'TBD'}
           </span>
         )}

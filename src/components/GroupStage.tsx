@@ -25,37 +25,13 @@ export default function GroupStage({ team, data }: { team: Team; data: AppData }
 					/>
 				)}
 				{!feeder && (
-					<div
-						style={{
-							fontFamily: 'var(--font-mono)',
-							fontSize: 10,
-							color: 'var(--text-dim)',
-							textAlign: 'center',
-							lineHeight: 1.5,
-							alignSelf: 'center',
-							padding: '0 16px',
-						}}
-					>
+					<div className={styles.noFeederMsg}>
 						The Round of 16 opponent isn&rsquo;t determined by a single group — depends on results from multiple R32 matches. Will update as the bracket fills in.
 					</div>
 				)}
 			</div>
 
-			<div
-				role="note"
-				style={{
-					background: 'rgba(245,158,11,0.06)',
-					border: '1px solid rgba(245,158,11,0.15)',
-					color: '#fcd34d',
-					fontSize: 11,
-					padding: '10px 14px',
-					borderRadius: 8,
-					fontFamily: 'var(--font-mono)',
-					marginTop: 12,
-					marginBottom: 4,
-					lineHeight: 1.5,
-				}}
-			>
+			<div className={styles.disclaimer} role="note">
 				⚠️ Bracket path, opponent scenarios, and venues assume {team.name} finishes 1st in Group {team.group}. If they finish 2nd or 3rd, the Round of 16 opponent, subsequent knockout path, and venues will be different.
 			</div>
 

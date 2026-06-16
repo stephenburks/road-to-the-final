@@ -1,0 +1,55 @@
+.historicalBanner {
+	background: var(--amber-lo);
+	border-bottom: 1px solid var(--amber-b);
+	font-size: 12px;
+	color: #fcd34d;
+	font-family: var(--font-mono);
+}
+
+.historicalInner {
+	padding-top: 9px;
+	padding-bottom: 9px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 10px;
+	flex-wrap: wrap;
+	text-align: center;
+}
+
+.historicalBtn {
+	padding: 3px 10px;
+	border-radius: 5px;
+	border: 1px solid rgba(245,158,11,0.3);
+	color: #fcd34d;
+	font-size: 10px;
+	font-family: var(--font-mono);
+	cursor: pointer;
+	background: transparent;
+}
+
+.errorScreen {
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 12px;
+	font-family: var(--font-mono);
+	color: var(--red);
+	font-size: 12px;
+	text-align: center;
+	padding: 24px;
+}
+
+.errorIcon { font-size: 28px; }
+
+.errorSubtext { color: var(--text-dim); margin-top: 8px; }
+
+.errorCode {
+	background: rgba(255,255,255,0.06);
+	padding: 1px 6px;
+	border-radius: 3px;
+}
+
+.tabWrapper { padding-top: 22px; padding-bottom: 0; }

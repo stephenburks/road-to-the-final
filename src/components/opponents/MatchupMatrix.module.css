@@ -60,11 +60,28 @@
 	display: flex;
 	align-items: flex-start;
 	gap: 9px;
+	background: rgba(255,255,255,0.03);
+	border: 1px solid rgba(255,255,255,0.07);
+}
+
+.calloutCardTop {
+	background: rgba(99,102,241,0.1);
+	border: 1px solid rgba(99,102,241,0.3);
 }
 
 .calloutVs   { font-size: 11px; color: var(--text-lo); margin-bottom: 3px; }
-.calloutPct  { font-family: var(--font-display); font-weight: 800; font-size: 1.2rem; }
+.calloutPct  { font-family: var(--font-display); font-weight: 800; font-size: 1.2rem; color: var(--text-dim); }
+.calloutPctTop { color: #a5b4fc; }
 .calloutNote { font-size: 9px; color: var(--text-dim); margin-top: 3px; line-height: 1.4; }
+
+/* ── Group tag inside matchup row ── */
+.groupTagBadge {
+	font-family: var(--font-mono);
+	font-size: 9px;
+	color: var(--text-dim);
+	margin-left: 6px;
+	white-space: nowrap;
+}
 
 @media (max-width: 600px) {
 	.matchupRow { grid-template-columns: 1fr 80px 36px; }
