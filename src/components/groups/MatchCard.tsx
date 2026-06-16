@@ -15,6 +15,11 @@ interface TeamMatchCardProps {
 		score: string
 		clock: string
 		status: 'IN_PROGRESS' | 'FINISHED'
+		homeScorers?: string[]
+		awayScorers?: string[]
+		homeCards?: Card[]
+		awayCards?: Card[]
+		broadcasts?: string[]
 	}
 }
 
@@ -160,7 +165,11 @@ export default function MatchCard(props: MatchCardProps) {
 	const oppTeam = teams?.find(t => t.name === match.opponent)
 	const oppMatch = oppTeam?.groupResults?.find(g => g.matchday === match.matchday)
 
-	const hasEvents = !!match.result || (isLive && (match.scorers?.length > 0 || match.cards?.length > 0 || oppMatch?.scorers?.length > 0 || oppMatch?.cards?.length > 0))
+	const hasEvents = !!match.result || (isLive && ((match.scorers?.length ?? 0) > 0 || (match.cards?.length ?? 0) > 0 || (oppMatch?.scorers?.length ?? 0) > 0 || (oppMatch?.cards?.length ?? 0) > 0 || (liveData?.homeScorers?.length ?? 0) > 0 || (liveData?.awayScorers?.length ?? 0) > 0 || (liveData?.homeCards?.length ?? 0) > 0 || (liveData?.awayCards?.length ?? 0) > 0))
+	const myScorers = liveData?.homeScorers ?? match.scorers ?? []
+	const myCards = liveData?.homeCards ?? match.cards ?? []
+	const oppScorers = liveData?.awayScorers ?? oppMatch?.scorers ?? []
+	const oppCards = liveData?.awayCards ?? oppMatch?.cards ?? []
 
 	return (
 		<div className={`${styles.matchCard} ${cardClass}`}>
@@ -187,22 +196,26 @@ export default function MatchCard(props: MatchCardProps) {
 				<div className={styles.matchEvents}>
 					<EventColumn
 						flag={teamFlag} teamId={teamId} teamName=""
-						scorers={match.scorers ?? []} cards={match.cards ?? []}
+						scorers={myScorers} cards={myCards}
 						scorerLabel={`${teamId} goal scorers`}
 						cardLabel={`${teamId} cards`}
 					/>
-					{oppMatch && (
-						<EventColumn
-							flag={match.opponentFlag} teamName={match.opponent}
-							scorers={oppMatch.scorers ?? []} cards={oppMatch.cards ?? []}
-							scorerLabel={`${match.opponent} goal scorers`}
-							cardLabel={`${match.opponent} cards`}
-						/>
-					)}
+					<EventColumn
+						flag={match.opponentFlag} teamName={match.opponent}
+						scorers={oppScorers} cards={oppCards}
+						scorerLabel={`${match.opponent} goal scorers`}
+						cardLabel={`${match.opponent} cards`}
+					/>
 				</div>
 			)}
 
-			{!match.result && !isLive && <div className={styles.venue}>{match.venue}</div>}
+			{(liveData?.broadcasts && liveData.broadcasts.length > 0) && (
+					<div className={styles.matchBroadcasts}>
+						{liveData.broadcasts.join(' / ')}
+					</div>
+				)}
+
+				{!match.result && !isLive && <div className={styles.venue}>{match.venue}</div>}
 		</div>
 	)
 }

@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { ESPN_SLUG_MAP } from '../data/tournamentSchedule'
 
 interface TeamRecord {
@@ -43,6 +43,8 @@ const EMPTY: TeamRecordData = { record: null, standingSummary: null, nextEvent: 
 
 export function useTeamRecord(teamId: string, isHistorical: boolean): TeamRecordData {
 	const [data, setData] = useState<TeamRecordData>(EMPTY)
+	const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null)
+	const fetchRef = useRef<((c: { current: boolean }) => Promise<void>) | null>(null)
 
 	const slug = isHistorical ? null : (ESPN_SLUG_MAP[teamId] ?? null)
 
@@ -52,17 +54,15 @@ export function useTeamRecord(teamId: string, isHistorical: boolean): TeamRecord
 			return
 		}
 
-		let cancelled = false
+		const cancelled = { current: false }
 
-		fetch(`${ESPN_TEAM_URL}/${slug}`)
-			.then(res => res.json())
-			.then(json => {
-				if (cancelled) return
+		async function doFetch(c: { current: boolean }) {
+			try {
+				const res = await fetch(`${ESPN_TEAM_URL}/${slug}`)
+				const json = await res.json()
+				if (c.current) return
 				const team = json?.team
-				if (!team) {
-					setData(EMPTY)
-					return
-				}
+				if (!team) { setData(EMPTY); return }
 
 				const recordItem = team.record?.items?.[0]
 				let record: TeamRecord | null = null
@@ -108,19 +108,28 @@ export function useTeamRecord(teamId: string, isHistorical: boolean): TeamRecord
 						clock,
 						score,
 					}
+
+					if (isLive && !intervalRef.current) {
+						intervalRef.current = setInterval(() => fetchRef.current?.(c), 75000)
+					} else if (!isLive && intervalRef.current) {
+						clearInterval(intervalRef.current)
+						intervalRef.current = null
+					}
 				}
 
-				setData({
-					record,
-					standingSummary: team.standingSummary ?? null,
-					nextEvent,
-				})
-			})
-			.catch(() => {
-				if (!cancelled) setData(EMPTY)
-			})
+				setData({ record, standingSummary: team.standingSummary ?? null, nextEvent })
+			} catch {
+				if (!c.current) setData(EMPTY)
+			}
+		}
 
-		return () => { cancelled = true }
+		fetchRef.current = doFetch
+		doFetch(cancelled)
+
+		return () => {
+			cancelled.current = true
+			if (intervalRef.current) { clearInterval(intervalRef.current); intervalRef.current = null }
+		}
 	}, [slug])
 
 	return data

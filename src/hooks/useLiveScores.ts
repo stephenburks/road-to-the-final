@@ -10,6 +10,7 @@ interface LiveMatchPatch {
 	awayScorers: string[]
 	homeCards: Card[]
 	awayCards: Card[]
+	broadcasts: string[]
 }
 
 export type { LiveMatchPatch }
@@ -121,6 +122,12 @@ export function useLiveScores(
 						}
 					}
 
+					// Extract broadcasts
+					const broadcasts: string[] = []
+					for (const b of (competition?.geoBroadcasts ?? [])) {
+						if (b.media?.shortName) broadcasts.push(b.media.shortName)
+					}
+
 					next.set(key, {
 						homeScore: parseInt(homeComp.score, 10) || 0,
 						awayScore: parseInt(awayComp.score, 10) || 0,
@@ -130,6 +137,7 @@ export function useLiveScores(
 						awayScorers,
 						homeCards,
 						awayCards,
+						broadcasts,
 					})
 				}
 

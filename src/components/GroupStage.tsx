@@ -28,11 +28,19 @@ export default function GroupStage({ team, data }: { team: Team; data: AppData }
 		if (!oppTeam) return undefined
 		const patch = livePatches.get(`${team.id}:${oppTeam.id}`) ?? livePatches.get(`${oppTeam.id}:${team.id}`)
 		if (!patch || patch.status === 'SCHEDULED') return undefined
-		// Determine score from team's perspective
 		const isHome = livePatches.has(`${team.id}:${oppTeam.id}`)
 		const myScore = isHome ? patch.homeScore : patch.awayScore
 		const opScore = isHome ? patch.awayScore : patch.homeScore
-		return { score: `${myScore}-${opScore}`, clock: patch.clock, status: patch.status }
+		return {
+			score: `${myScore}-${opScore}`,
+			clock: patch.clock,
+			status: patch.status,
+			homeScorers: isHome ? patch.homeScorers : patch.awayScorers,
+			awayScorers: isHome ? patch.awayScorers : patch.homeScorers,
+			homeCards: isHome ? patch.homeCards : patch.awayCards,
+			awayCards: isHome ? patch.awayCards : patch.homeCards,
+			broadcasts: patch.broadcasts,
+		}
 	}
 
 	return (
