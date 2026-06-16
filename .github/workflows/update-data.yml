@@ -27,8 +27,6 @@ jobs:
           node-version: '20'
 
       - name: Run data update
-        env:
-          FOOTBALL_DATA_KEY: ${{ secrets.FOOTBALL_DATA_KEY }}
         run: node scripts/update-data.js
 
       - name: Commit if changed

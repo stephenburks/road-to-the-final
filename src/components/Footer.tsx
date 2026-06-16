@@ -10,7 +10,7 @@ export default function Footer() {
       <div className="wrap">
         <div className={styles.inner}>
           <div className={styles.left}>
-            <span>Data: FIFA · Polymarket · football-data.org</span>
+            <span>Data: FIFA · Polymarket · ESPN</span>
             <span className={styles.sep} aria-hidden="true">·</span>
             <span>
               Refresh:{' '}

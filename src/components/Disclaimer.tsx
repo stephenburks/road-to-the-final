@@ -32,12 +32,12 @@ export default function Disclaimer() {
               <strong>Not intended for wagering or any consequential decisions.</strong>{' '}
               Group standings and match results update hourly on match days via{' '}
               <a
-                href="https://www.football-data.org"
+                href="https://www.espn.com/soccer/scoreboard/_/league/fifa.world"
                 target="_blank"
                 rel="noopener noreferrer"
                 className={styles.link}
               >
-                football-data.org
+                ESPN
               </a>
               . Match schedule sourced from the official FIFA 2026 bracket.
             </p>

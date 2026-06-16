@@ -13,8 +13,8 @@
  *
  * Usage:
  *   node scripts/update-data.js
- *   FOOTBALL_DATA_KEY=xxx node scripts/update-data.js
  *
+ * Data sources: ESPN (scores, standings, scorers, cards), Polymarket (probabilities).
  * Requires Node 18+ (built-in fetch). No npm dependencies needed for the script.
  */
 
@@ -28,12 +28,6 @@ const ROOT       = path.join(__dirname, '..');
 const LIVE_PATH  = path.join(ROOT, 'public', 'data', 'world-cup-2026.json');
 const SNAP_DIR   = path.join(ROOT, 'public', 'data', 'snapshots');
 const MF_PATH    = path.join(SNAP_DIR, 'manifest.json');
-
-// ─── API config ──────────────────────────────────────────────────────────────
-const FD_BASE    = 'https://api.football-data.org/v4';
-const FD_KEY     = process.env.FOOTBALL_DATA_KEY || '';
-const FD_HEADERS = FD_KEY ? { 'X-Auth-Token': FD_KEY } : {};
-const WC_ID      = 2000; // football-data.org FIFA WC 2026 ID
 
 // ─── All 48 teams (static info) ──────────────────────────────────────────────
 const ALL_TEAMS = [
@@ -201,48 +195,30 @@ const BRACKET_PATHS = {
                   'atlanta'),
 };
 
-// TLA (Three-Letter Abbreviation) → internal ID (primary lookup, from football-data.org)
-const TLA_TO_ID = {
-	MEX:'mexico', RSA:'southafrica', KOR:'southkorea', CZE:'czechia',
-	CAN:'canada', BIH:'bosnia', QAT:'qatar', SUI:'switzerland',
-	BRA:'brazil', MAR:'morocco', HAI:'haiti', SCO:'scotland',
-	USA:'usa', PAR:'paraguay', AUS:'australia', TUR:'turkey',
-	GER:'germany', CUW:'curacao', CIV:'ivorycoast', ECU:'ecuador',
-	NED:'netherlands', JPN:'japan', SWE:'sweden', TUN:'tunisia',
-	BEL:'belgium', EGY:'egypt', IRN:'iran', NZL:'newzealand',
-	ESP:'spain', CPV:'capeverde', KSA:'saudiarabia', URU:'uruguay',
-	FRA:'france', SEN:'senegal', IRQ:'iraq', NOR:'norway',
-	ARG:'argentina', ALG:'algeria', AUT:'austria', JOR:'jordan',
-	POR:'portugal', COD:'drcongo', UZB:'uzbekistan', COL:'colombia',
-	ENG:'england', CRO:'croatia', GHA:'ghana', PAN:'panama',
-};
-
-// Team name → ID mapping (fallback when TLA is not available in API response)
+// Team name → ID mapping (consolidated — all display name variants from ESPN + FD fallbacks)
 const NAME_TO_ID = {
-  'United States':'usa','USA':'usa','Mexico':'mexico','Canada':'canada',
-  'Brazil':'brazil','Argentina':'argentina','Colombia':'colombia','Ecuador':'ecuador',
-  'Uruguay':'uruguay','Paraguay':'paraguay',
-  'Spain':'spain','France':'france','Germany':'germany','England':'england',
-  'Netherlands':'netherlands','Portugal':'portugal','Belgium':'belgium',
-  'Switzerland':'switzerland','Croatia':'croatia','Austria':'austria',
-  'Sweden':'sweden','Norway':'norway','Scotland':'scotland',
-  'Czech Republic':'czechia','Czechia':'czechia','Bosnia and Herzegovina':'bosnia',
-  'Turkey':'turkey','Türkiye':'turkey',
-  'Morocco':'morocco','Senegal':'senegal','Egypt':'egypt','Ivory Coast':'ivorycoast',
-  "Côte d'Ivoire":'ivorycoast','Ghana':'ghana','South Africa':'southafrica',
-  'Algeria':'algeria','Tunisia':'tunisia','DR Congo':'drcongo','Congo DR':'drcongo',
-  'Cape Verde':'capeverde','Saudi Arabia':'saudiarabia',
-  'Japan':'japan','South Korea':'southkorea','Australia':'australia',
-  'Iran':'iran','Iraq':'iraq','Qatar':'qatar','Jordan':'jordan',
-  'Uzbekistan':'uzbekistan','New Zealand':'newzealand',
-  'Haiti':'haiti','Panama':'panama','Curaçao':'curacao','Curacao':'curacao',
+	'United States':'usa','USA':'usa','Mexico':'mexico','Canada':'canada',
+	'Brazil':'brazil','Argentina':'argentina','Colombia':'colombia','Ecuador':'ecuador',
+	'Uruguay':'uruguay','Paraguay':'paraguay',
+	'Spain':'spain','France':'france','Germany':'germany','England':'england',
+	'Netherlands':'netherlands','Portugal':'portugal','Belgium':'belgium',
+	'Switzerland':'switzerland','Croatia':'croatia','Austria':'austria',
+	'Sweden':'sweden','Norway':'norway','Scotland':'scotland',
+	'Czech Republic':'czechia','Czechia':'czechia',
+	'Bosnia and Herzegovina':'bosnia','Bosnia-Herzegovina':'bosnia',
+	'Turkey':'turkey','Türkiye':'turkey',
+	'Morocco':'morocco','Senegal':'senegal','Egypt':'egypt','Ivory Coast':'ivorycoast',
+	"Côte d'Ivoire":'ivorycoast','Ghana':'ghana','South Africa':'southafrica',
+	'Algeria':'algeria','Tunisia':'tunisia','DR Congo':'drcongo','Congo DR':'drcongo',
+	'Cape Verde':'capeverde','Saudi Arabia':'saudiarabia',
+	'Japan':'japan','South Korea':'southkorea','Australia':'australia',
+	'Iran':'iran','Iraq':'iraq','Qatar':'qatar','Jordan':'jordan',
+	'Uzbekistan':'uzbekistan','New Zealand':'newzealand',
+	'Haiti':'haiti','Panama':'panama','Curaçao':'curacao','Curacao':'curacao',
 };
 
-function nameToId(name, tla) {
-	if (tla && TLA_TO_ID[tla]) return TLA_TO_ID[tla];
-	const id = NAME_TO_ID[name] || null;
-	if (id && tla) log(`⚠  TLA '${tla}' not in TLA_TO_ID, resolved '${name}' via name fallback`);
-	return id;
+function nameToId(name) {
+	return NAME_TO_ID[name] || null;
 }
 
 function log(msg) { console.log(`[${new Date().toISOString()}] ${msg}`); }
@@ -282,16 +258,6 @@ async function tryFetch(url, headers = {}, timeoutMs = 10000) {
 }
 
 // ─── API response validators ──────────────────────────────────────────────────
-function validateStandingsResponse(data) {
-	if (!data || !Array.isArray(data.standings))
-		throw new Error('Invalid standings response: expected { standings: [...] }');
-	return data;
-}
-function validateMatchesResponse(data) {
-	if (!data || !Array.isArray(data.matches))
-		throw new Error('Invalid matches response: expected { matches: [...] }');
-	return data;
-}
 function validatePolymarketResponse(data) {
 	if (!Array.isArray(data))
 		throw new Error('Invalid polymarket response: expected array');
@@ -306,85 +272,12 @@ function loadExisting() {
   return null;
 }
 
-// ─── Fetch today + yesterday matches to find active team IDs ─────────────────
-async function fetchActiveTeamIds() {
-  const today     = todayStr();
-  const yesterday = yesterdayStr();
-
-  const data = await tryFetch(
-    `${FD_BASE}/competitions/${WC_ID}/matches?dateFrom=${yesterday}&dateTo=${today}`,
-    FD_HEADERS
-  );
-
-  if (!data?.matches?.length) return new Set();
-
-  const ids = new Set();
-  for (const m of data.matches) {
-    const hId = nameToId(m.homeTeam?.name, m.homeTeam?.tla);
-    const aId = nameToId(m.awayTeam?.name, m.awayTeam?.tla);
-    if (hId) ids.add(hId);
-    if (aId) ids.add(aId);
-  }
-  log(`Active teams (today + yesterday): ${[...ids].join(', ') || 'none'}`);
-  return ids;
-}
-
-// ─── Fetch all group standings ────────────────────────────────────────────────
-async function fetchStandings() {
-  const data = await tryFetch(`${FD_BASE}/competitions/${WC_ID}/standings`, FD_HEADERS);
-  if (!data || data === FETCH_ERROR) return {};
-  validateStandingsResponse(data);
-
-  const groups = {};
-  for (const s of (data.standings || [])) {
-    const g = s.group?.replace('Group ', '');
-    if (!g) continue;
-    groups[g] = s.table.map((row, i) => ({
-      pos:    i + 1,
-      teamId: nameToId(row.team.name, row.team.tla),
-      team:   row.team.name,
-      played: row.playedGames,
-      w: row.won, d: row.draw, l: row.lost,
-      gf: row.goalsFor, ga: row.goalsAgainst, gd: row.goalDifference,
-      pts: row.points,
-    }));
-  }
-  return groups;
-}
-
-// ─── Fetch all match results ──────────────────────────────────────────────────
-async function fetchMatches() {
-  const data = await tryFetch(`${FD_BASE}/competitions/${WC_ID}/matches`, FD_HEADERS);
-  if (!data || data === FETCH_ERROR) return [];
-  validateMatchesResponse(data);
-  return data.matches;
-}
-
-// ─── ESPN: fetch goal scorer data (free, no auth required) ────────────────────
-const ESPN_TEAM_MAP = {
-	'United States': 'usa', 'Mexico': 'mexico', 'Canada': 'canada',
-	'Brazil': 'brazil', 'Argentina': 'argentina', 'Colombia': 'colombia',
-	'Ecuador': 'ecuador', 'Uruguay': 'uruguay', 'Paraguay': 'paraguay',
-	'Spain': 'spain', 'France': 'france', 'Germany': 'germany',
-	'England': 'england', 'Netherlands': 'netherlands', 'Portugal': 'portugal',
-	'Belgium': 'belgium', 'Switzerland': 'switzerland', 'Croatia': 'croatia',
-	'Austria': 'austria', 'Sweden': 'sweden', 'Norway': 'norway',
-	'Scotland': 'scotland', 'Czechia': 'czechia', 'Türkiye': 'turkey',
-	'Bosnia-Herzegovina': 'bosnia',
-	'Morocco': 'morocco', 'Senegal': 'senegal', 'Egypt': 'egypt',
-	'Ivory Coast': 'ivorycoast', 'Ghana': 'ghana', 'Algeria': 'algeria',
-	'Tunisia': 'tunisia', 'Congo DR': 'drcongo', 'Cape Verde': 'capeverde',
-	'South Africa': 'southafrica',
-	'Japan': 'japan', 'South Korea': 'southkorea', 'Australia': 'australia',
-	'Iran': 'iran', 'Iraq': 'iraq', 'Qatar': 'qatar', 'Jordan': 'jordan',
-	'Saudi Arabia': 'saudiarabia', 'Uzbekistan': 'uzbekistan',
-	'New Zealand': 'newzealand',
-	'Haiti': 'haiti', 'Panama': 'panama', 'Curaçao': 'curacao',
-};
-
+// ─── ESPN: fetch scores, scorers, cards, and active teams (free, no auth required)
 async function fetchESPNEventDetails(dateFrom, dateTo) {
 	const scorers = {};
 	const cards = {};
+	const matches = new Map();
+	const activeTeams = new Set();
 
 	const ESPN_BASE = 'https://site.web.api.espn.com/apis/site/v2/sports/soccer/fifa.world/scoreboard';
 
@@ -396,6 +289,9 @@ async function fetchESPNEventDetails(dateFrom, dateTo) {
 		dates.push(d.toISOString().split('T')[0].replace(/-/g, ''));
 	}
 
+	const today     = todayStr();
+	const yesterday = yesterdayStr();
+
 	let fetched = 0;
 	for (const date of dates) {
 		const data = await tryFetch(`${ESPN_BASE}?dates=${date}`);
@@ -404,17 +300,53 @@ async function fetchESPNEventDetails(dateFrom, dateTo) {
 
 		for (const event of data.events) {
 			const eventDate = event.date?.split('T')[0];
-			const competitors = event.competitions?.[0]?.competitors || [];
-			const homeTeam = competitors.find(c => c.homeAway === 'home');
-			const awayTeam = competitors.find(c => c.homeAway === 'away');
-			const matchStr = `${homeTeam?.team?.displayName || '?'} vs ${awayTeam?.team?.displayName || '?'}`;
-			const teamIdByEspn = {}; // ESPN team id → our id
+			const competition = event.competitions?.[0];
+			const competitors = competition?.competitors || [];
+			const homeComp = competitors.find(c => c.homeAway === 'home');
+			const awayComp = competitors.find(c => c.homeAway === 'away');
+			const matchStr = `${homeComp?.team?.displayName || '?'} vs ${awayComp?.team?.displayName || '?'}`;
+
+			// Resolve ESPN display names to our internal IDs (use consolidated NAME_TO_ID)
+			const homeId = NAME_TO_ID[homeComp?.team?.displayName] || null;
+			const awayId = NAME_TO_ID[awayComp?.team?.displayName] || null;
+
+			// ── Match result extraction ──────────────────────────────────
+			const statusTypeName = competition?.status?.type?.name;
+			const statusCompleted = competition?.status?.type?.completed;
+			const isFinished = statusTypeName === 'STATUS_FULL_TIME' || statusCompleted === true;
+			const matchStatus = isFinished ? 'FINISHED' : 'SCHEDULED';
+
+			if (homeId && awayId) {
+				const hScore = parseInt(homeComp?.score, 10) || 0;
+				const aScore = parseInt(awayComp?.score, 10) || 0;
+
+				// Add to match map: finished matches always, non-finished only if scores present
+				if (isFinished || hScore > 0 || aScore > 0) {
+					const key = `${homeId}:${awayId}`;
+					if (!matches.has(key)) {
+						matches.set(key, {
+							homeId, awayId, homeScore: hScore, awayScore: aScore,
+							status: matchStatus, date: eventDate,
+						});
+					}
+				}
+			}
+
+			// ── Active team detection ────────────────────────────────────
+			if ((eventDate === today || eventDate === yesterday) && homeId && awayId) {
+				activeTeams.add(homeId);
+				activeTeams.add(awayId);
+			}
+
+			// ── Scorer / card extraction ─────────────────────────────────
+			// Build ESPN teamId → ourId map for detail lookups
+			const teamIdByEspn = {};
 			for (const c of competitors) {
-				const ourId = ESPN_TEAM_MAP[c.team?.displayName];
+				const ourId = NAME_TO_ID[c.team?.displayName];
 				if (ourId) teamIdByEspn[String(c.team?.id)] = ourId;
 			}
 
-			const details = event.competitions?.[0]?.details || [];
+			const details = competition?.details || [];
 			for (const d of details) {
 				if (d.scoringPlay) {
 					const ourId = teamIdByEspn[String(d.team?.id)];
@@ -451,7 +383,71 @@ async function fetchESPNEventDetails(dateFrom, dateTo) {
 		const totalC = Object.values(cards).reduce((s, arr) => s + arr.length, 0);
 		log(`ESPN: ${totalS} scorer + ${totalC} card entries across ${Object.keys(scorers).length}/${Object.keys(cards).length} teams (${fetched} dates)`);
 	}
-	return { scorers, cards };
+	log(`ESPN matches: ${matches.size} extracted, ${activeTeams.size} active teams`);
+	return { matches, scorers, cards, activeTeams };
+}
+
+// ─── Compute group standings from ESPN match data ─────────────────────────────
+function computeStandings(espnMatches) {
+	const GROUP_LETTERS = 'ABCDEFGHIJKL'.split('');
+	const groups = {};
+
+	for (const g of GROUP_LETTERS) {
+		const sched = GROUP_SCHEDULE[g] || [];
+		const teamIds = [...new Set([...sched.map(f => f.h), ...sched.map(f => f.a)])];
+		groups[g] = {};
+		for (const tid of teamIds) {
+			groups[g][tid] = { played: 0, w: 0, d: 0, l: 0, gf: 0, ga: 0, pts: 0 };
+		}
+	}
+
+	for (const [key, match] of espnMatches.entries()) {
+		if (match.status !== 'FINISHED') continue;
+		const [homeId, awayId] = key.split(':');
+		const { homeScore, awayScore } = match;
+
+		let group = null;
+		for (const g of GROUP_LETTERS) {
+			const sched = GROUP_SCHEDULE[g] || [];
+			if (sched.find(f => (f.h === homeId && f.a === awayId) || (f.h === awayId && f.a === homeId))) {
+				group = g; break;
+			}
+		}
+		if (!group) continue;
+
+		const homeStats = groups[group][homeId];
+		if (homeStats) {
+			homeStats.played++;
+			homeStats.gf += homeScore;
+			homeStats.ga += awayScore;
+			if (homeScore > awayScore) { homeStats.w++; homeStats.pts += 3; }
+			else if (homeScore < awayScore) { homeStats.l++; }
+			else { homeStats.d++; homeStats.pts++; }
+		}
+
+		const awayStats = groups[group][awayId];
+		if (awayStats) {
+			awayStats.played++;
+			awayStats.gf += awayScore;
+			awayStats.ga += homeScore;
+			if (awayScore > homeScore) { awayStats.w++; awayStats.pts += 3; }
+			else if (awayScore < homeScore) { awayStats.l++; }
+			else { awayStats.d++; awayStats.pts++; }
+		}
+	}
+
+	const result = {};
+	for (const g of GROUP_LETTERS) {
+		const teamStats = Object.entries(groups[g]).map(([teamId, stats]) => ({
+			teamId,
+			team: ALL_TEAMS.find(t => t.id === teamId)?.name || teamId,
+			...stats,
+			gd: stats.gf - stats.ga,
+		}));
+		teamStats.sort((a, b) => b.pts - a.pts || (b.gd - a.gd) || (b.gf - a.gf));
+		result[g] = teamStats.map((s, i) => ({ ...s, pos: i + 1 }));
+	}
+	return result;
 }
 
 // ─── Polymarket team name → ID (names as they appear in groupItemTitle) ─────────
@@ -460,10 +456,9 @@ const PM_NAME_TO_ID = {
 };
 
 function pmNameToId(name) {
-  // First try dedicated Polymarket mapping, then fall back to general nameToId
-  if (PM_NAME_TO_ID[name]) return PM_NAME_TO_ID[name];
-  // nameToId handles TLA=null case (just name lookup)
-  return nameToId(name, null);
+	// First try dedicated Polymarket mapping, then fall back to general nameToId
+	if (PM_NAME_TO_ID[name]) return PM_NAME_TO_ID[name];
+	return nameToId(name);
 }
 
 // ─── Polymarket: fetch ALL stage probabilities (18 events total) ─────────────────
@@ -626,8 +621,8 @@ function buildGroupResults(teamId, group, matchIndex, existingGroupResults = [])
       let result = null, score = null;
       if (match?.status === 'FINISHED') {
         const isMyTeamHome = isHome !== matchReversed;
-        const myG = isMyTeamHome ? match.score.fullTime.home : match.score.fullTime.away;
-        const opG = isMyTeamHome ? match.score.fullTime.away : match.score.fullTime.home;
+        const myG = isMyTeamHome ? match.homeScore : match.awayScore;
+        const opG = isMyTeamHome ? match.awayScore : match.homeScore;
         result = myG > opG ? 'W' : myG < opG ? 'L' : 'D';
         score  = `${myG}-${opG}`;
       }
@@ -833,7 +828,7 @@ function buildOpponents(teamId, group, opponentDesc, standings) {
 
 const STAGE_ORDER = ['group_stage', 'r32', 'r16', 'qf', 'sf', 'final'];
 
-function determineCurrentStage(teamId, group, rawStandings, matchIndex) {
+function determineCurrentStage(teamId, group, rawStandings, espnMatches) {
 	const groupRows = rawStandings?.[group];
 	if (!groupRows?.length) return 'group_stage';
 
@@ -851,21 +846,16 @@ function determineCurrentStage(teamId, group, rawStandings, matchIndex) {
 
 	const knockoutStages = ['r32', 'r16', 'qf', 'sf', 'final'];
 	for (const stage of knockoutStages) {
-		const pathKey = `${group}-${pos}`;
-		const bp = BRACKET_PATHS[pathKey];
-		if (!bp?.[stage]) continue;
-
-		const matchNum = bp[stage].match;
-		const match = findMatchByNumber(matchNum, matchIndex);
+		const match = findKnockoutMatch(teamId, group, pos, stage, espnMatches);
 		if (!match) continue;
 
-		const isTeamHome = nameToId(match.homeTeam?.name, match.homeTeam?.tla) === teamId;
-		const isTeamAway = nameToId(match.awayTeam?.name, match.awayTeam?.tla) === teamId;
+		const isTeamHome = match.homeId === teamId;
+		const isTeamAway = match.awayId === teamId;
 
 		if (match.status === 'FINISHED') {
 			if (isTeamHome || isTeamAway) {
-				const myGoals = isTeamHome ? match.score.fullTime.home : match.score.fullTime.away;
-				const oppGoals = isTeamHome ? match.score.fullTime.away : match.score.fullTime.home;
+				const myGoals = isTeamHome ? match.homeScore : match.awayScore;
+				const oppGoals = isTeamHome ? match.awayScore : match.homeScore;
 				if (myGoals < oppGoals) {
 					return { stage, eliminated: true, eliminatedIn: stage };
 				}
@@ -883,9 +873,19 @@ function determineCurrentStage(teamId, group, rawStandings, matchIndex) {
 	return { stage: 'final', eliminated: false };
 }
 
-function findMatchByNumber(matchNum, matchIndex) {
-	for (const [_key, m] of matchIndex.entries()) {
-		if (m.matchNumber === matchNum) return m;
+function findKnockoutMatch(teamId, group, pos, stage, espnMatches) {
+	const pathKey = `${group}-${pos}`;
+	const bp = BRACKET_PATHS[pathKey];
+	if (!bp?.[stage]?.date) return null;
+
+	const matchDate = bp[stage].date;
+
+	for (const [key, match] of espnMatches.entries()) {
+		if (match.date !== matchDate) continue;
+		const [hId, aId] = key.split(':');
+		if (hId === teamId || aId === teamId) {
+			return match;
+		}
 	}
 	return null;
 }
@@ -1020,38 +1020,26 @@ async function main() {
   validateBracketPaths();
 
   const existing   = loadExisting();
-  const activeIds  = await fetchActiveTeamIds();
+
+  // Polymarket + ESPN always run (no API key needed for either)
+  const polyData = await fetchPolymarketAll();
+
+  const TOURNAMENT_START_ESPN = '2026-06-11';
+  const { matches: espnMatches, scorers: espnScorers, cards: espnCards, activeTeams: espnActiveTeams }
+    = await fetchESPNEventDetails(TOURNAMENT_START_ESPN, todayStr());
+
+  const activeIds  = espnActiveTeams;
   const hasActive  = activeIds.size > 0;
 
   log(`Active teams today/yesterday: ${hasActive ? activeIds.size : 'none — carrying forward all team data'}`);
 
-  // Polymarket + ESPN always run (independent of football-data.org API availability)
-  const polyData = await fetchPolymarketAll();
+  if (!Object.keys(polyData.winner || {}).length && !Object.keys(polyData.r32 || {}).length)
+    log('⚠  No Polymarket data returned — API may be unavailable');
 
-  const TOURNAMENT_START_ESPN = '2026-06-11';
-  const { scorers: espnScorers, cards: espnCards } = await fetchESPNEventDetails(TOURNAMENT_START_ESPN, todayStr());
+  // Compute standings directly from ESPN match data (no separate API call)
+  const rawStandings = computeStandings(espnMatches);
 
-  // Only fetch football-data.org data when there are active teams (cost-saving)
-  const [rawStandings, allMatches] = hasActive
-    ? await Promise.all([fetchStandings(), fetchMatches()])
-    : [{}, []];
-
-  if (hasActive) {
-    if (!Object.keys(rawStandings).length) log('⚠  No standings data returned — API may be unavailable');
-    if (!allMatches.length)             log('⚠  No match data returned — API may be unavailable');
-    if (!Object.keys(polyData.winner || {}).length && !Object.keys(polyData.r32 || {}).length)
-      log('⚠  No Polymarket data returned — API may be unavailable');
-  }
-
-  log(`Standings: ${Object.keys(rawStandings).length} groups | Matches: ${allMatches.length} | Polymarket: ${Object.keys(polyData.winner || {}).length} winner + ${Object.keys(polyData.group || {}).length} group + ${Object.keys(polyData.r32 || {}).length} R32 teams`);
-
-  // Index matches by "homeId:awayId" for O(1) lookup
-  const matchIndex = new Map();
-  for (const m of allMatches) {
-    const hId = nameToId(m.homeTeam?.name, m.homeTeam?.tla);
-    const aId = nameToId(m.awayTeam?.name, m.awayTeam?.tla);
-    if (hId && aId) matchIndex.set(`${hId}:${aId}`, m);
-  }
+  log(`ESPN standings: ${Object.keys(rawStandings).length} groups | ESPN matches: ${espnMatches.size} | Polymarket: ${Object.keys(polyData.winner || {}).length} winner + ${Object.keys(polyData.group || {}).length} group + ${Object.keys(polyData.r32 || {}).length} R32 teams`);
 
   // Build group data — per-group carry-forward for healthy groups
   const groupsData = {};
@@ -1062,7 +1050,7 @@ async function main() {
     const existingGroup = existingGroups[g];
 
     if (hasActive && Object.keys(rawStandings).length > 0) {
-      // Fresh API data: always rebuild from standings
+      // Fresh ESPN data: always rebuild from standings
       const standArr = buildGroupStandings(g, rawStandings);
       const winProbs = {};
       standArr.forEach(s => {
@@ -1122,7 +1110,7 @@ async function main() {
     }
 
     // Knockout stage detection — only when tournament has knockout data
-    const stageResult = determineCurrentStage(t.id, t.group, rawStandings, matchIndex);
+    const stageResult = determineCurrentStage(t.id, t.group, rawStandings, espnMatches);
     const stage = stageResult?.stage ?? 'group_stage';
     if (stageResult?.eliminated) {
       eliminated = true;
@@ -1174,7 +1162,7 @@ async function main() {
     const existingGroupResults = existingTeam?.groupResults || []
     const groupResults  = injectCards(
       injectScorers(
-        buildGroupResults(t.id, t.group, matchIndex, existingGroupResults),
+        buildGroupResults(t.id, t.group, espnMatches, existingGroupResults),
         espnScorers[t.id]
       ),
       espnCards[t.id]
@@ -1234,7 +1222,7 @@ async function main() {
     snapshotDate: today,
     isHistorical: false,
     sourceSummary: (() => {
-      const s = { market: 0, calculated: 0 };
+      const s = { dataSource: 'ESPN', market: 0, calculated: 0 };
       for (const t of teams) {
         if (t.advanceProbabilities?.source === 'market') s.market++;
         else s.calculated++;

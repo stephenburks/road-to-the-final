@@ -15,7 +15,7 @@ A fan-made tracker for the 2026 FIFA World Cup. Pick any of the 48 teams and fol
 - **Opponent watchlist** with difficulty ratings (R32) and matchup probability bars (R16)
 - **Historical snapshots** — view probabilities as they were on any prior day
 - **Shareable URLs** — `?team=argentina&date=2026-06-14&stage=r16` encodes your view
-- **Hourly data updates** via GitHub Actions + football-data.org API
+- **Hourly data updates** via GitHub Actions + ESPN API
 - **Dark theme** with Space Grotesk, Inter, and JetBrains Mono
 - **Fully accessible** — keyboard-navigable tabs, ARIA roles, focus-visible states
 
@@ -103,22 +103,11 @@ Data is served from `public/data/` — you need a local server, not `file://`. V
 The update script runs hourly via GitHub Actions:
 
 ```bash
-# Run manually (requires football-data.org API key for live data)
+# Run manually (no API key required)
 node scripts/update-data.js
-FOOTBALL_DATA_KEY=your_key node scripts/update-data.js
 ```
 
-- Only fully recalculates teams that played today or yesterday
-- Carries forward existing data for all other teams
-- Uses ~6 API requests per match day, ~1 on quiet days
-- Writes `world-cup-2026.json`, daily snapshots, and `manifest.json`
-
-### Setup
-
-1. Get a free API key from [football-data.org](https://www.football-data.org/)
-2. Add it as a GitHub secret: **Settings → Secrets and variables → Actions → `FOOTBALL_DATA_KEY`**
-3. The `update-data.yml` workflow runs every hour and commits changes automatically
-4. The `deploy.yml` workflow rebuilds and deploys on every push to `main`
+- All data sourced from the free ESPN scoreboard API — no auth needed
 
 ---
 
@@ -164,8 +153,8 @@ Defaults are omitted from the URL to keep links clean.
 
 ## Data Sources
 
-- **Match results & standings** — [football-data.org](https://www.football-data.org/) (free tier, 100 req/day)
-- **Market probabilities** — [Polymarket](https://polymarket.com/) (group winner markets, no auth required)
+- **Match results, standings, scorers & cards** — [ESPN](https://www.espn.com/soccer/scoreboard/_/league/fifa.world) (free, no auth required)
+- **Market probabilities** — [Polymarket](https://polymarket.com/) (group winner + tournament stage markets, no auth required)
 - **Tournament bracket** — Official FIFA 2026 World Cup schedule and venue assignments
 
 ---
