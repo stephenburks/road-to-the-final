@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-16T22:17:03.042Z",
+  "lastUpdated": "2026-06-16T23:02:07.351Z",
   "snapshotDate": "2026-06-16",
   "isHistorical": false,
   "sourceSummary": {
@@ -239,7 +239,7 @@
         "scotland": 11,
         "brazil": 59,
         "morocco": 30,
-        "haiti": 1
+        "haiti": 0
       }
     },
     "D": {
@@ -566,7 +566,7 @@
         }
       ],
       "winProbabilities": {
-        "saudiarabia": 2,
+        "saudiarabia": 3,
         "uruguay": 22,
         "spain": 73,
         "capeverde": 3
@@ -632,9 +632,9 @@
         }
       ],
       "winProbabilities": {
-        "france": 81,
+        "france": 79,
         "iraq": 0,
-        "norway": 19,
+        "norway": 20,
         "senegal": 2
       }
     },
@@ -699,7 +699,7 @@
       ],
       "winProbabilities": {
         "argentina": 70,
-        "austria": 19,
+        "austria": 18,
         "jordan": 1,
         "algeria": 12
       }
@@ -898,9 +898,9 @@
       ],
       "advanceProbabilities": {
         "r32": 97,
-        "r16": 61,
-        "qf": 31,
-        "sf": 11,
+        "r16": 63,
+        "qf": 32,
+        "sf": 12,
         "final": 5,
         "winner": 1,
         "source": "market"
@@ -1254,8 +1254,8 @@
       ],
       "advanceProbabilities": {
         "r32": 93,
-        "r16": 48,
-        "qf": 16,
+        "r16": 49,
+        "qf": 15,
         "sf": 5,
         "final": 2,
         "winner": 0,
@@ -1777,7 +1777,7 @@
       "advanceProbabilities": {
         "r32": 68,
         "r16": 23,
-        "qf": 5,
+        "qf": 4,
         "sf": 3,
         "final": 1,
         "winner": 0,
@@ -2122,7 +2122,7 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 88,
+        "r32": 87,
         "r16": 52,
         "qf": 26,
         "sf": 10,
@@ -2301,7 +2301,7 @@
         "r32": 96,
         "r16": 68,
         "qf": 47,
-        "sf": 23,
+        "sf": 24,
         "final": 14,
         "winner": 7,
         "source": "market"
@@ -2545,7 +2545,7 @@
       ],
       "advanceProbabilities": {
         "r32": 5,
-        "r16": 2,
+        "r16": 3,
         "qf": 1,
         "sf": 0,
         "final": 0,
@@ -2681,7 +2681,7 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 75,
+        "r32": 76,
         "r16": 28,
         "qf": 9,
         "sf": 3,
@@ -2856,10 +2856,10 @@
       ],
       "advanceProbabilities": {
         "r32": 98,
-        "r16": 65,
+        "r16": 66,
         "qf": 36,
-        "sf": 15,
-        "final": 6,
+        "sf": 16,
+        "final": 7,
         "winner": 2,
         "source": "market"
       },
@@ -3169,7 +3169,7 @@
       "advanceProbabilities": {
         "r32": 87,
         "r16": 35,
-        "qf": 10,
+        "qf": 9,
         "sf": 3,
         "final": 1,
         "winner": 0,
@@ -3292,10 +3292,10 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 52,
+        "r32": 51,
         "r16": 24,
-        "qf": 12,
-        "sf": 7,
+        "qf": 13,
+        "sf": 13,
         "final": 1,
         "winner": 0,
         "source": "market"
@@ -3421,7 +3421,7 @@
       "advanceProbabilities": {
         "r32": 100,
         "r16": 73,
-        "qf": 41,
+        "qf": 40,
         "sf": 26,
         "final": 14,
         "winner": 6,
@@ -3722,7 +3722,7 @@
       ],
       "advanceProbabilities": {
         "r32": 96,
-        "r16": 40,
+        "r16": 42,
         "qf": 14,
         "sf": 6,
         "final": 2,
@@ -3846,10 +3846,10 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 78,
+        "r32": 79,
         "r16": 36,
         "qf": 16,
-        "sf": 4,
+        "sf": 5,
         "final": 3,
         "winner": 0,
         "source": "market"
@@ -3985,7 +3985,7 @@
       ],
       "advanceProbabilities": {
         "r32": 93,
-        "r16": 56,
+        "r16": 55,
         "qf": 36,
         "sf": 22,
         "final": 11,
@@ -4234,7 +4234,7 @@
         "r32": 94,
         "r16": 40,
         "qf": 15,
-        "sf": 5,
+        "sf": 6,
         "final": 3,
         "winner": 1,
         "source": "market"
@@ -4491,7 +4491,7 @@
       ],
       "advanceProbabilities": {
         "r32": 93,
-        "r16": 59,
+        "r16": 61,
         "qf": 36,
         "sf": 15,
         "final": 6,
@@ -4750,7 +4750,7 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 41,
+        "r32": 42,
         "r16": 16,
         "qf": 5,
         "sf": 2,
@@ -5045,8 +5045,8 @@
         "r16": 74,
         "qf": 56,
         "sf": 41,
-        "final": 26,
-        "winner": 14,
+        "final": 27,
+        "winner": 13,
         "source": "market"
       },
       "path": {
@@ -5167,9 +5167,9 @@
       ],
       "advanceProbabilities": {
         "r32": 43,
-        "r16": 10,
+        "r16": 9,
         "qf": 7,
-        "sf": 4,
+        "sf": 3,
         "final": 1,
         "winner": 0,
         "source": "market"
@@ -5294,7 +5294,7 @@
       ],
       "advanceProbabilities": {
         "r32": 43,
-        "r16": 11,
+        "r16": 12,
         "qf": 11,
         "sf": 1,
         "final": 1,
@@ -5417,7 +5417,7 @@
         "r32": 78,
         "r16": 38,
         "qf": 22,
-        "sf": 7,
+        "sf": 6,
         "final": 4,
         "winner": 1,
         "source": "market"
@@ -5538,9 +5538,9 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 82,
-        "qf": 60,
-        "sf": 41,
+        "r16": 83,
+        "qf": 61,
+        "sf": 43,
         "final": 28,
         "winner": 18,
         "source": "market"
@@ -5702,10 +5702,10 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 68,
-        "r16": 34,
-        "qf": 19,
-        "sf": 7,
+        "r32": 69,
+        "r16": 33,
+        "qf": 18,
+        "sf": 6,
         "final": 3,
         "winner": 1,
         "source": "market"
@@ -5791,7 +5791,7 @@
           "opponent": "Norway",
           "opponentFlag": "🇳🇴",
           "result": null,
-          "score": "0-0",
+          "score": "1-2",
           "date": "2026-06-16",
           "venue": "Gillette Stadium, Boston",
           "scorers": [],
@@ -5821,8 +5821,8 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 11,
-        "r16": 11,
+        "r32": 10,
+        "r16": 10,
         "qf": 2,
         "sf": 0,
         "final": 0,
@@ -5910,7 +5910,7 @@
           "opponent": "Iraq",
           "opponentFlag": "🇮🇶",
           "result": null,
-          "score": "0-0",
+          "score": "2-1",
           "date": "2026-06-16",
           "venue": "Gillette Stadium, Boston",
           "scorers": [],
@@ -5940,11 +5940,11 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 86,
+        "r32": 85,
         "r16": 55,
         "qf": 22,
-        "sf": 15,
-        "final": 9,
+        "sf": 16,
+        "final": 10,
         "winner": 3,
         "source": "market"
       },
@@ -6061,8 +6061,8 @@
       "advanceProbabilities": {
         "r32": 96,
         "r16": 71,
-        "qf": 56,
-        "sf": 34,
+        "qf": 55,
+        "sf": 33,
         "final": 19,
         "winner": 10,
         "source": "market"
@@ -6222,7 +6222,7 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 67,
+        "r32": 66,
         "r16": 22,
         "qf": 9,
         "sf": 3,
@@ -6342,8 +6342,8 @@
       ],
       "advanceProbabilities": {
         "r32": 81,
-        "r16": 28,
-        "qf": 16,
+        "r16": 29,
+        "qf": 15,
         "sf": 6,
         "final": 2,
         "winner": 0,
@@ -6460,7 +6460,7 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 21,
+        "r32": 20,
         "r16": 6,
         "qf": 2,
         "sf": 2,
@@ -6581,8 +6581,8 @@
       "advanceProbabilities": {
         "r32": 97,
         "r16": 76,
-        "qf": 52,
-        "sf": 33,
+        "qf": 53,
+        "sf": 34,
         "final": 20,
         "winner": 10,
         "source": "market"
@@ -7337,7 +7337,7 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 49,
+        "r32": 48,
         "r16": 14,
         "qf": 5,
         "sf": 3,
@@ -7856,11 +7856,11 @@
         "awayTeam": "Norway",
         "awayFlag": "🇳🇴",
         "awayId": "norway",
-        "homeScore": 0,
-        "awayScore": 0,
+        "homeScore": 1,
+        "awayScore": 2,
         "status": "IN_PROGRESS",
         "date": "2026-06-16",
-        "clock": "16'",
+        "clock": "HT",
         "broadcasts": [
           "FOX",
           "Tele",
