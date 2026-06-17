@@ -49,7 +49,7 @@ describe('Roster', () => {
 	})
 
 	it('renders six skeleton cards while loading', () => {
-		const { container } = render(<Roster players={null} loading={true} />)
+		render(<Roster players={null} loading={true} />)
 		const grid = screen.getByRole('status', { name: 'Loading roster' })
 		// Each skeleton card contains skelJersey, skelHeadshot, skelName children
 		expect(grid.children).toHaveLength(6)

@@ -62,3 +62,15 @@
   border-radius: 50%;
   animation: blink 2s ease-in-out infinite;
 }
+
+.badgeLive { color: var(--green); }
+.badgeLive .dot {
+  background: var(--green);
+  box-shadow: 0 0 6px var(--green);
+}
+
+.badgeHistorical { color: var(--amber); }
+.badgeHistorical .dot {
+  background: var(--amber);
+  box-shadow: 0 0 6px var(--amber);
+}

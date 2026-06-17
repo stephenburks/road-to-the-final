@@ -29,7 +29,7 @@ export default function Nav({ view, onViewChange, isHistorical }: NavProps) {
 	const [activeSection, setActiveSection] = useState<string | null>(null)
 
 	useEffect(() => {
-		if (view !== 'team') { setActiveSection(null); return }
+		if (view !== 'team') return
 		const sections = SECTION_LINKS.map(({ id }) => document.getElementById(id)).filter(Boolean) as HTMLElement[]
 		const observer = new IntersectionObserver(
 			entries => {
@@ -42,7 +42,10 @@ export default function Nav({ view, onViewChange, isHistorical }: NavProps) {
 			{ rootMargin: '-10% 0px -60% 0px', threshold: 0 }
 		)
 		sections.forEach(el => observer.observe(el))
-		return () => observer.disconnect()
+		return () => {
+			observer.disconnect()
+			setActiveSection(null)
+		}
 	}, [view])
 
 	const handleSectionClick = useCallback((sectionId: string) => {
@@ -84,18 +87,9 @@ export default function Nav({ view, onViewChange, isHistorical }: NavProps) {
 					</button>
 				))}
 
-				<div className={styles.badge} aria-live="polite">
-					<div
-						className={styles.dot}
-						style={{
-							background: isHistorical ? 'var(--amber)' : 'var(--green)',
-							boxShadow: isHistorical ? '0 0 6px var(--amber)' : '0 0 6px var(--green)',
-						}}
-						aria-hidden="true"
-					/>
-					<span style={{ color: isHistorical ? 'var(--amber)' : 'var(--green)' }}>
-						{isHistorical ? 'Historical' : 'Live'}
-					</span>
+				<div className={`${styles.badge} ${isHistorical ? styles.badgeHistorical : styles.badgeLive}`} aria-live="polite">
+					<div className={styles.dot} aria-hidden="true" />
+					<span>{isHistorical ? 'Historical' : 'Live'}</span>
 				</div>
 			</div>
 		</nav>

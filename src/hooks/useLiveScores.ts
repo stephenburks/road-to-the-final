@@ -137,7 +137,7 @@ export function useLiveScores(
 ): Map<string, LiveMatchPatch> | null {
 	const today = localDateStr()
 	const tomorrow = nextDay(today)
-	const todayMatches = dailyMatches?.[today] ?? []
+	const todayMatches = useMemo(() => dailyMatches?.[today] ?? [], [dailyMatches, today])
 
 	// Build a lookup of expected team-pair keys from today's schedule.
 	// We use this instead of an event-date string comparison because ESPN

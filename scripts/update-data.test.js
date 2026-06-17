@@ -215,7 +215,7 @@ describe('buildR16Opponents', () => {
 		const positions = R32_MATCH_TO_POSITIONS[matchNum]
 		// positions = ['A-1', 'J-1'] (example)
 		const [grp1, pos1] = positions[0].split('-')
-		const [grp2, pos2] = positions[1].split('-')
+		const [grp2] = positions[1].split('-')
 
 		// Build mock standings where each group has two entries
 		const standings = {
@@ -235,7 +235,6 @@ describe('buildR16Opponents', () => {
 
 		// Should return the OTHER team in that match (not ourselves)
 		expect(results.length).toBeGreaterThan(0)
-		const returnedIds = results.map(r => r.likelyTeam)
 		// None of the returned opponents should be the requesting team itself
 		expect(results.every(r => r.group === grp2 || r.group === grp1)).toBe(true)
 	})

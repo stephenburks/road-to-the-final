@@ -126,7 +126,6 @@ async function fetchTeamRecordWithLiveFallback(slug: string, signal: AbortSignal
 					for (const b of (comp?.geoBroadcasts ?? [])) {
 						if (b.media?.shortName) broadcasts.push(b.media.shortName)
 					}
-					isLive = true
 					nextEvent = {
 						opponent: opp?.team?.displayName ?? 'TBD',
 						opponentFlag: opp?.team?.abbreviation

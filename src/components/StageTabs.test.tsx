@@ -1,9 +1,9 @@
-import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest'
+import { describe, it, expect, vi, afterEach } from 'vitest'
 import { screen, fireEvent } from '@testing-library/react'
 import { renderWithQuery } from '../test-utils'
 import StageTabs from './StageTabs'
 import { STAGE_ORDER } from '../constants'
-import type { Team, Stage } from '../types'
+import type { Team } from '../types'
 
 function mockTeam(overrides: Partial<Team> = {}): Team {
 	return {
@@ -216,7 +216,7 @@ describe('StageTabs', () => {
 			},
 		})
 		const onSelect = vi.fn()
-		const { container } = renderWithQuery(
+		renderWithQuery(
 			<StageTabs team={team} selectedStage='r32' onSelect={onSelect} />
 		)
 
