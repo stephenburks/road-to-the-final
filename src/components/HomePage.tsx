@@ -15,18 +15,10 @@ interface HomePageProps {
 	onViewChange: (v: View) => void
 }
 
-function todayStr(): string { return localDateStr() }
-
-function yesterdayStr(): string {
-	const d = new Date()
-	d.setDate(d.getDate() - 1)
-	return localDateStr(d)
-}
-
-function tomorrowStr(): string {
-	const d = new Date()
-	d.setDate(d.getDate() + 1)
-	return localDateStr(d)
+function dateOffset(base: string, days: number): string {
+	const d = new Date(base + 'T12:00:00Z')
+	d.setUTCDate(d.getUTCDate() + days)
+	return d.toISOString().slice(0, 10)
 }
 
 const DAY_LABELS: Record<string, string> = {
@@ -81,9 +73,12 @@ export default function HomePage({ data, selectedTeamId, onTeamChange, onViewCha
 	const dailyMatches = useMemo(() => data.dailyMatches ?? {}, [data.dailyMatches])
 	const livePatches = useLiveScores(dailyMatches, data.teams, data.isHistorical)
 
-	const today = todayStr()
-	const yesterday = yesterdayStr()
-	const tomorrow = tomorrowStr()
+	// In historical mode, use the snapshot date as the anchor so "Today" shows
+	// the snapshot day's matches rather than the actual current date.
+	const baseDate = data.isHistorical && data.snapshotDate ? data.snapshotDate : localDateStr()
+	const today = baseDate
+	const yesterday = dateOffset(baseDate, -1)
+	const tomorrow = dateOffset(baseDate, 1)
 
 	const sections = useMemo(() => [
 		{ key: 'today', date: today, matches: (dailyMatches[today] ?? []).map(m => enrich(m, data.teams, livePatches?.get(`${m.homeId}:${m.awayId}`))) },
