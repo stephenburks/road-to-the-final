@@ -80,11 +80,23 @@ export default function HomePage({ data, selectedTeamId, onTeamChange, onViewCha
 	const yesterday = dateOffset(baseDate, -1)
 	const tomorrow = dateOffset(baseDate, 1)
 
-	const sections = useMemo(() => [
-		{ key: 'today', date: today, matches: (dailyMatches[today] ?? []).map(m => enrich(m, data.teams, livePatches?.get(`${m.homeId}:${m.awayId}`))) },
-		{ key: 'yesterday', date: yesterday, matches: (dailyMatches[yesterday] ?? []).map(m => enrich(m, data.teams, livePatches?.get(`${m.homeId}:${m.awayId}`))) },
-		{ key: 'tomorrow', date: tomorrow, matches: (dailyMatches[tomorrow] ?? []).map(m => enrich(m, data.teams, livePatches?.get(`${m.homeId}:${m.awayId}`))) },
-	], [dailyMatches, data.teams, today, yesterday, tomorrow, livePatches])
+	const sections = useMemo(() => {
+		const enrichDay = (date: string) =>
+			(dailyMatches[date] ?? []).map(m => enrich(m, data.teams, livePatches?.get(`${m.homeId}:${m.awayId}`)))
+
+		const todayMatches = enrichDay(today)
+		// Pin any in-progress match to the top of today's list; leave other days as-is
+		const todaySorted = [
+			...todayMatches.filter(m => m.status === 'in_progress'),
+			...todayMatches.filter(m => m.status !== 'in_progress'),
+		]
+
+		return [
+			{ key: 'today',    date: today,    matches: todaySorted },
+			{ key: 'tomorrow', date: tomorrow, matches: enrichDay(tomorrow) },
+			{ key: 'yesterday', date: yesterday, matches: enrichDay(yesterday) },
+		]
+	}, [dailyMatches, data.teams, today, yesterday, tomorrow, livePatches])
 
 	return (
 		<div className={styles.page}>
