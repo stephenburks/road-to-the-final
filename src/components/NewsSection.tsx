@@ -1,4 +1,5 @@
-import { useState, useEffect } from 'react'
+import { useQuery } from '@tanstack/react-query'
+import { ESPN_NEWS_URL } from '../constants'
 import styles from './NewsSection.module.css'
 
 interface ESPNArticle {
@@ -12,11 +13,6 @@ interface ESPNArticle {
 	links: { web: { href: string } }
 }
 
-interface ESPNNewsResponse {
-	header: string
-	articles: ESPNArticle[]
-}
-
 function timeAgo(isoStr: string): string {
 	const diff = Date.now() - new Date(isoStr).getTime()
 	const mins = Math.floor(diff / 60000)
@@ -28,48 +24,27 @@ function timeAgo(isoStr: string): string {
 }
 
 export default function NewsSection() {
-	const [articles, setArticles] = useState<ESPNArticle[]>([])
-	const [error, setError] = useState<string | null>(null)
-	const [loading, setLoading] = useState(true)
+	const { data: articles = [], isLoading, isError } = useQuery({
+		queryKey: ['news'],
+		queryFn: async ({ signal }) => {
+			const r = await fetch(ESPN_NEWS_URL, { signal })
+			if (!r.ok) throw new Error(`HTTP ${r.status}`)
+			const j = await r.json()
+			return (j.articles ?? []).filter((a: ESPNArticle) => !a.premium).slice(0, 5) as ESPNArticle[]
+		},
+		staleTime: 5 * 60 * 1000,
+	})
 
-	useEffect(() => {
-		const controller = new AbortController()
-
-		fetch('https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world/news', {
-			signal: controller.signal,
-		})
-			.then(res => {
-				if (!res.ok) throw new Error(`HTTP ${res.status}`)
-				return res.json() as Promise<ESPNNewsResponse>
-			})
-			.then(data => {
-				const filtered = (data.articles ?? [])
-					.filter(a => !a.premium)
-					.slice(0, 5)
-				setArticles(filtered)
-				setLoading(false)
-			})
-			.catch(err => {
-				if (err.name !== 'AbortError') {
-					console.error('[NewsSection] fetch failed:', err)
-					setError('Could not load news.')
-				}
-				setLoading(false)
-			})
-
-		return () => controller.abort()
-	}, [])
-
-	if (error) {
+	if (isError) {
 		return (
 			<section className={styles.section} aria-label="FIFA World Cup News">
 				<h2 className={styles.heading}>FIFA World Cup News</h2>
-				<p className={styles.error}>{error}</p>
+				<p className={styles.error}>Could not load news.</p>
 			</section>
 		)
 	}
 
-	if (loading) {
+	if (isLoading) {
 		return (
 			<section className={styles.section} aria-label="FIFA World Cup News">
 				<h2 className={styles.heading}>FIFA World Cup News</h2>

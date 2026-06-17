@@ -1,5 +1,6 @@
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest'
-import { render, screen, waitFor } from '@testing-library/react'
+import { screen, waitFor } from '@testing-library/react'
+import { renderWithQuery } from '../test-utils'
 import NewsSection from './NewsSection'
 
 const mockArticles = [
@@ -27,7 +28,7 @@ const mockArticles = [
 
 describe('NewsSection', () => {
 	beforeEach(() => {
-		vi.spyOn(global, 'fetch')
+		vi.spyOn(globalThis, 'fetch')
 	})
 
 	afterEach(() => {
@@ -40,7 +41,7 @@ describe('NewsSection', () => {
 			json: () => Promise.resolve({ header: 'FIFA World Cup News', articles: mockArticles }),
 		} as Response)
 
-		render(<NewsSection />)
+		renderWithQuery(<NewsSection />)
 		await waitFor(() => {
 			expect(screen.getByText('FIFA World Cup News')).toBeInTheDocument()
 		})
@@ -52,7 +53,7 @@ describe('NewsSection', () => {
 			json: () => Promise.resolve({ header: 'FIFA World Cup News', articles: mockArticles }),
 		} as Response)
 
-		render(<NewsSection />)
+		renderWithQuery(<NewsSection />)
 		await waitFor(() => {
 			expect(screen.getByText('News provided by ESPN')).toBeInTheDocument()
 		})
@@ -64,7 +65,7 @@ describe('NewsSection', () => {
 			json: () => Promise.resolve({ header: 'FIFA World Cup News', articles: mockArticles }),
 		} as Response)
 
-		render(<NewsSection />)
+		renderWithQuery(<NewsSection />)
 		await waitFor(() => {
 			expect(screen.getByText('Test Headline 1')).toBeInTheDocument()
 			expect(screen.getByText('Test Headline 2')).toBeInTheDocument()
@@ -77,7 +78,7 @@ describe('NewsSection', () => {
 			json: () => Promise.resolve({ header: 'FIFA World Cup News', articles: mockArticles }),
 		} as Response)
 
-		render(<NewsSection />)
+		renderWithQuery(<NewsSection />)
 		await waitFor(() => {
 			expect(screen.getByText('Test Author')).toBeInTheDocument()
 			expect(screen.getByText('2h ago')).toBeInTheDocument()
@@ -90,7 +91,7 @@ describe('NewsSection', () => {
 			json: () => Promise.resolve({ header: 'FIFA World Cup News', articles: mockArticles }),
 		} as Response)
 
-		render(<NewsSection />)
+		renderWithQuery(<NewsSection />)
 		await waitFor(() => {
 			const links = screen.getAllByRole('link')
 			expect(links[0]).toHaveAttribute('href', 'https://espn.com/article/1')
@@ -100,7 +101,7 @@ describe('NewsSection', () => {
 	it('shows error state on fetch failure', async () => {
 		vi.mocked(fetch).mockRejectedValue(new Error('Network error'))
 
-		render(<NewsSection />)
+		renderWithQuery(<NewsSection />)
 		await waitFor(() => {
 			expect(screen.getByText('Could not load news.')).toBeInTheDocument()
 		})
@@ -112,7 +113,7 @@ describe('NewsSection', () => {
 			json: () => Promise.resolve({ header: 'FIFA World Cup News', articles: [] }),
 		} as Response)
 
-		render(<NewsSection />)
+		renderWithQuery(<NewsSection />)
 		await waitFor(() => {
 			expect(screen.getByText('No news articles available.')).toBeInTheDocument()
 		})
