@@ -20,10 +20,11 @@ export default function OpponentCard({ opp, compact = false }: OpponentCardProps
 	return (
 		<article
 			className={`${styles.card} ${compact ? styles.cardCompact : ''} ${borderClass}`}
+			data-diff={opp.difficulty ?? 3}
 			aria-label={`${teamName}${opp.label ? `, ${opp.label}` : ''}${opp.pct != null ? `, ${opp.pct}% probability` : ''}`}
 		>
-			{opp.color && (
-				<div className={styles.topBar} style={{ background: opp.color }} aria-hidden="true" />
+			{opp.difficulty != null && (
+				<div className={styles.topBar} aria-hidden="true" />
 			)}
 			<div className={styles.cardHeader}>
 				<FlagIcon flag={opp.flag} />
@@ -33,8 +34,8 @@ export default function OpponentCard({ opp, compact = false }: OpponentCardProps
 			{opp.fifaRank && <div className={styles.rank}>FIFA #{opp.fifaRank}</div>}
 			{opp.difficulty != null && (
 				<div className={styles.diffRow}>
-					<span className={styles.diffLabel} style={{ color: opp.color ?? 'var(--amber)' }}>{opp.label ?? ''}</span>
-					<DiffPips level={opp.difficulty} color={opp.color ?? 'var(--amber)'} />
+					<span className={styles.diffLabel}>{opp.label ?? ''}</span>
+					<DiffPips level={opp.difficulty} />
 				</div>
 			)}
 			{opp.pct != null && (

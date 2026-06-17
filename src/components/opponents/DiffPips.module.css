@@ -6,3 +6,8 @@
 }
 
 .pipEmpty { background: rgba(255,255,255,0.1); }
+
+[data-diff="1"] .pipActive, [data-diff="2"] .pipActive { background: var(--green); }
+[data-diff="3"] .pipActive { background: var(--amber); }
+[data-diff="4"] .pipActive { background: var(--orange); }
+[data-diff="5"] .pipActive { background: var(--red); }

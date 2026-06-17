@@ -20,6 +20,16 @@
 	opacity: 0.8;
 }
 
+[data-diff="1"] .topBar, [data-diff="2"] .topBar { background: var(--green); }
+[data-diff="3"] .topBar { background: var(--amber); }
+[data-diff="4"] .topBar { background: var(--orange); }
+[data-diff="5"] .topBar { background: var(--red); }
+
+[data-diff="1"] .diffLabel, [data-diff="2"] .diffLabel { color: var(--green); }
+[data-diff="3"] .diffLabel { color: var(--amber); }
+[data-diff="4"] .diffLabel { color: var(--orange); }
+[data-diff="5"] .diffLabel { color: var(--red); }
+
 .cardHeader {
 	display: flex;
 	align-items: center;
