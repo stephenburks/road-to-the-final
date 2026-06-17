@@ -1,5 +1,4 @@
 import type { AppData, SnapshotManifest } from '../types'
-import { formatUpdated } from '../utils'
 import TeamSelector from './TeamSelector'
 import DateSelector from './DateSelector'
 import styles from './Header.module.css'
@@ -38,12 +37,6 @@ export default function Header({
 
         {/* Controls */}
         <div className={styles.controls}>
-          {selectedDate === 'live' && (
-            <div className={styles.updated} aria-label={`Live scores · base data updated ${formatUpdated(data?.lastUpdated)}`}>
-              Live scores
-              <br /><span className={styles.updatedSub}>data {formatUpdated(data?.lastUpdated)}</span>
-            </div>
-          )}
 
           <DateSelector
             manifest={manifest}

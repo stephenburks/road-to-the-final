@@ -49,18 +49,6 @@
   flex-wrap: nowrap;
 }
 
-.updated {
-  font-size: 10px;
-  color: var(--text-dim);
-  font-family: var(--font-mono);
-  white-space: nowrap;
-}
-
-.updatedSub {
-  opacity: 0.6;
-}
-
 @media (max-width: 580px) {
-  .updated { display: none; }
   .controls { gap: 6px; flex-wrap: wrap; }
 }
