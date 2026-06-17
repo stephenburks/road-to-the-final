@@ -1,6 +1,7 @@
 import type { Team, GroupMatch, Card } from '../../types'
 import { formatDate } from '../../utils'
-import FlagIcon, { getTeamTLA } from '../ui/FlagIcon'
+import FlagIcon from '../ui/FlagIcon'
+import { getTeamTLA } from '../ui/teamLookup'
 import { RESULT_LABELS } from './groupStageConstants'
 import styles from './MatchCard.module.css'
 

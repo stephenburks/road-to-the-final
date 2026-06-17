@@ -2,7 +2,7 @@ import { useMemo } from 'react'
 import { useQuery } from '@tanstack/react-query'
 import { ESPN_SCOREBOARD_URL } from '../constants'
 import { localDateStr } from '../utils'
-import { getTeamIdByTLA } from '../components/ui/FlagIcon'
+import { getTeamIdByTLA } from '../components/ui/teamLookup'
 import type { AppData, Card } from '../types'
 
 interface LiveMatchPatch {
