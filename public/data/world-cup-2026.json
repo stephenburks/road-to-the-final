@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-17T21:59:50.793Z",
+  "lastUpdated": "2026-06-17T23:45:49.296Z",
   "snapshotDate": "2026-06-17",
   "isHistorical": false,
   "sourceSummary": {
@@ -173,7 +173,7 @@
         "canada": 35,
         "qatar": 3,
         "switzerland": 48,
-        "bosnia": 15
+        "bosnia": 16
       }
     },
     "C": {
@@ -236,7 +236,7 @@
         }
       ],
       "winProbabilities": {
-        "scotland": 12,
+        "scotland": 11,
         "brazil": 59,
         "morocco": 31,
         "haiti": 0
@@ -437,7 +437,7 @@
         "sweden": 28,
         "netherlands": 44,
         "japan": 28,
-        "tunisia": 0
+        "tunisia": 1
       }
     },
     "G": {
@@ -764,9 +764,9 @@
         }
       ],
       "winProbabilities": {
-        "portugal": 43,
+        "portugal": 46,
         "drcongo": 8,
-        "uzbekistan": 5,
+        "uzbekistan": 3,
         "colombia": 44
       }
     },
@@ -775,14 +775,14 @@
         {
           "teamId": "england",
           "team": "England",
-          "played": 0,
-          "w": 0,
+          "played": 1,
+          "w": 1,
           "d": 0,
           "l": 0,
-          "gf": 0,
-          "ga": 0,
-          "pts": 0,
-          "gd": 0,
+          "gf": 4,
+          "ga": 2,
+          "pts": 3,
+          "gd": 2,
           "pos": 1,
           "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿"
         },
@@ -817,23 +817,23 @@
         {
           "teamId": "croatia",
           "team": "Croatia",
-          "played": 0,
+          "played": 1,
           "w": 0,
           "d": 0,
-          "l": 0,
-          "gf": 0,
-          "ga": 0,
+          "l": 1,
+          "gf": 2,
+          "ga": 4,
           "pts": 0,
-          "gd": 0,
+          "gd": -2,
           "pos": 4,
           "flag": "🇭🇷"
         }
       ],
       "winProbabilities": {
-        "england": 87,
+        "england": 91,
         "ghana": 4,
         "panama": 2,
-        "croatia": 7
+        "croatia": 6
       }
     }
   },
@@ -898,7 +898,7 @@
       ],
       "advanceProbabilities": {
         "r32": 97,
-        "r16": 60,
+        "r16": 59,
         "qf": 30,
         "sf": 11,
         "final": 6,
@@ -1310,7 +1310,7 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 93,
+        "r32": 94,
         "r16": 46,
         "qf": 17,
         "sf": 6,
@@ -1509,7 +1509,7 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 56,
+        "r32": 55,
         "r16": 22,
         "qf": 6,
         "sf": 3,
@@ -1731,8 +1731,8 @@
       ],
       "advanceProbabilities": {
         "r32": 84,
-        "r16": 43,
-        "qf": 14,
+        "r16": 44,
+        "qf": 13,
         "sf": 2,
         "final": 2,
         "winner": 0,
@@ -1924,7 +1924,7 @@
       ],
       "advanceProbabilities": {
         "r32": 68,
-        "r16": 26,
+        "r16": 24,
         "qf": 6,
         "sf": 3,
         "final": 1,
@@ -2123,7 +2123,7 @@
       ],
       "advanceProbabilities": {
         "r32": 27,
-        "r16": 5,
+        "r16": 4,
         "qf": 3,
         "sf": 2,
         "final": 1,
@@ -2305,7 +2305,7 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 87,
+        "r32": 88,
         "r16": 50,
         "qf": 21,
         "sf": 9,
@@ -2652,7 +2652,7 @@
         "r16": 51,
         "qf": 30,
         "sf": 14,
-        "final": 6,
+        "final": 7,
         "winner": 2,
         "source": "market"
       },
@@ -2957,7 +2957,7 @@
       ],
       "advanceProbabilities": {
         "r32": 76,
-        "r16": 25,
+        "r16": 26,
         "qf": 9,
         "sf": 4,
         "final": 1,
@@ -3371,7 +3371,7 @@
         "r16": 14,
         "qf": 4,
         "sf": 2,
-        "final": 2,
+        "final": 1,
         "winner": 0,
         "source": "market"
       },
@@ -3511,8 +3511,8 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 88,
-        "r16": 40,
+        "r32": 86,
+        "r16": 38,
         "qf": 10,
         "sf": 4,
         "final": 1,
@@ -3660,9 +3660,9 @@
       ],
       "advanceProbabilities": {
         "r32": 51,
-        "r16": 24,
+        "r16": 22,
         "qf": 13,
-        "sf": 5,
+        "sf": 7,
         "final": 1,
         "winner": 0,
         "source": "market"
@@ -3813,7 +3813,7 @@
         "r16": 74,
         "qf": 40,
         "sf": 27,
-        "final": 13,
+        "final": 14,
         "winner": 6,
         "source": "market"
       },
@@ -4157,7 +4157,7 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 96,
+        "r32": 95,
         "r16": 36,
         "qf": 14,
         "sf": 6,
@@ -4296,7 +4296,7 @@
       "advanceProbabilities": {
         "r32": 78,
         "r16": 38,
-        "qf": 14,
+        "qf": 13,
         "sf": 5,
         "final": 2,
         "winner": 0,
@@ -4456,9 +4456,9 @@
       ],
       "advanceProbabilities": {
         "r32": 92,
-        "r16": 56,
-        "qf": 37,
-        "sf": 22,
+        "r16": 53,
+        "qf": 39,
+        "sf": 21,
         "final": 11,
         "winner": 4,
         "source": "market"
@@ -4601,9 +4601,9 @@
       ],
       "advanceProbabilities": {
         "r32": 85,
-        "r16": 42,
-        "qf": 26,
-        "sf": 13,
+        "r16": 40,
+        "qf": 25,
+        "sf": 12,
         "final": 5,
         "winner": 2,
         "source": "market"
@@ -4749,9 +4749,9 @@
       ],
       "advanceProbabilities": {
         "r32": 93,
-        "r16": 38,
-        "qf": 18,
-        "sf": 6,
+        "r16": 35,
+        "qf": 15,
+        "sf": 5,
         "final": 3,
         "winner": 1,
         "source": "market"
@@ -4899,7 +4899,7 @@
       ],
       "advanceProbabilities": {
         "r32": 9,
-        "r16": 4,
+        "r16": 3,
         "qf": 2,
         "sf": 1,
         "final": 1,
@@ -5053,10 +5053,10 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 93,
-        "r16": 62,
-        "qf": 35,
-        "sf": 15,
+        "r32": 94,
+        "r16": 63,
+        "qf": 36,
+        "sf": 14,
         "final": 6,
         "winner": 2,
         "source": "market"
@@ -5210,7 +5210,7 @@
       "advanceProbabilities": {
         "r32": 82,
         "r16": 34,
-        "qf": 12,
+        "qf": 13,
         "sf": 3,
         "final": 1,
         "winner": 0,
@@ -5362,7 +5362,7 @@
         "r32": 41,
         "r16": 16,
         "qf": 5,
-        "sf": 3,
+        "sf": 2,
         "final": 1,
         "winner": 0,
         "source": "market"
@@ -5700,7 +5700,7 @@
         "r16": 76,
         "qf": 57,
         "sf": 41,
-        "final": 25,
+        "final": 24,
         "winner": 14,
         "source": "market"
       },
@@ -6039,9 +6039,9 @@
       ],
       "advanceProbabilities": {
         "r32": 43,
-        "r16": 13,
+        "r16": 11,
         "qf": 6,
-        "sf": 3,
+        "sf": 4,
         "final": 1,
         "winner": 0,
         "source": "market"
@@ -6182,10 +6182,10 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 79,
-        "r16": 38,
+        "r32": 78,
+        "r16": 36,
         "qf": 22,
-        "sf": 6,
+        "sf": 5,
         "final": 3,
         "winner": 1,
         "source": "market"
@@ -6343,7 +6343,7 @@
         "r16": 85,
         "qf": 63,
         "sf": 47,
-        "final": 32,
+        "final": 30,
         "winner": 18,
         "source": "market"
       },
@@ -6473,9 +6473,9 @@
       ],
       "advanceProbabilities": {
         "r32": 69,
-        "r16": 28,
-        "qf": 14,
-        "sf": 3,
+        "r16": 31,
+        "qf": 15,
+        "sf": 4,
         "final": 2,
         "winner": 1,
         "source": "market"
@@ -6623,7 +6623,7 @@
       ],
       "advanceProbabilities": {
         "r32": 5,
-        "r16": 4,
+        "r16": 5,
         "qf": 1,
         "sf": 0,
         "final": 0,
@@ -6772,7 +6772,7 @@
         "r32": 96,
         "r16": 59,
         "qf": 31,
-        "sf": 18,
+        "sf": 19,
         "final": 7,
         "winner": 3,
         "source": "market"
@@ -6948,12 +6948,12 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 99,
-        "r16": 75,
+        "r32": 100,
+        "r16": 74,
         "qf": 60,
-        "sf": 37,
+        "sf": 40,
         "final": 20,
-        "winner": 11,
+        "winner": 12,
         "source": "market"
       },
       "path": {
@@ -7276,7 +7276,7 @@
       ],
       "advanceProbabilities": {
         "r32": 92,
-        "r16": 30,
+        "r16": 31,
         "qf": 14,
         "sf": 8,
         "final": 2,
@@ -7420,7 +7420,7 @@
       ],
       "advanceProbabilities": {
         "r32": 9,
-        "r16": 2,
+        "r16": 4,
         "qf": 1,
         "sf": 1,
         "final": 0,
@@ -7580,10 +7580,10 @@
       ],
       "advanceProbabilities": {
         "r32": 96,
-        "r16": 72,
+        "r16": 74,
         "qf": 48,
-        "sf": 27,
-        "final": 22,
+        "sf": 31,
+        "final": 19,
         "winner": 8,
         "source": "market"
       },
@@ -7785,7 +7785,7 @@
       ],
       "advanceProbabilities": {
         "r32": 57,
-        "r16": 16,
+        "r16": 17,
         "qf": 6,
         "sf": 4,
         "final": 1,
@@ -7915,7 +7915,7 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 30,
+        "r32": 29,
         "r16": 10,
         "qf": 2,
         "sf": 2,
@@ -8058,7 +8058,7 @@
       ],
       "advanceProbabilities": {
         "r32": 90,
-        "r16": 50,
+        "r16": 51,
         "qf": 28,
         "sf": 14,
         "final": 6,
@@ -8168,11 +8168,16 @@
           "matchday": 1,
           "opponent": "Croatia",
           "opponentFlag": "🇭🇷",
-          "result": null,
+          "result": "W",
           "score": "4-2",
           "date": "2026-06-17",
           "venue": "AT&T Stadium, Dallas",
-          "scorers": [],
+          "scorers": [
+            "Harry Kane 12' (P)",
+            "Harry Kane 42'",
+            "Jude Bellingham 47'",
+            "Marcus Rashford 85'"
+          ],
           "cards": []
         },
         {
@@ -8200,11 +8205,11 @@
       ],
       "advanceProbabilities": {
         "r32": 99,
-        "r16": 77,
-        "qf": 60,
-        "sf": 36,
+        "r16": 78,
+        "qf": 61,
+        "sf": 39,
         "final": 24,
-        "winner": 12,
+        "winner": 13,
         "source": "market"
       },
       "path": {
@@ -8213,7 +8218,7 @@
           "city": "Dallas · Philadelphia · New Jersey",
           "venue": "Various venues",
           "date": "Jun 17–27",
-          "detail": "0pts after MD0"
+          "detail": "3pts after MD1"
         },
         "r32": {
           "status": "upcoming",
@@ -8299,11 +8304,14 @@
           "matchday": 1,
           "opponent": "England",
           "opponentFlag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
-          "result": null,
+          "result": "L",
           "score": "2-4",
           "date": "2026-06-17",
           "venue": "AT&T Stadium, Dallas",
-          "scorers": [],
+          "scorers": [
+            "Martin Baturina 36'",
+            "Petar Musa 45'+5'"
+          ],
           "cards": []
         },
         {
@@ -8330,10 +8338,10 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 74,
-        "r16": 39,
-        "qf": 20,
-        "sf": 10,
+        "r32": 75,
+        "r16": 38,
+        "qf": 18,
+        "sf": 9,
         "final": 3,
         "winner": 1,
         "source": "market"
@@ -8344,7 +8352,7 @@
           "city": "Dallas · Toronto · Philadelphia",
           "venue": "Various venues",
           "date": "Jun 17–27",
-          "detail": "0pts after MD0"
+          "detail": "0pts after MD1"
         },
         "r32": {
           "status": "upcoming",
@@ -8464,7 +8472,7 @@
           "opponent": "Panama",
           "opponentFlag": "🇵🇦",
           "result": null,
-          "score": null,
+          "score": "0-0",
           "date": "2026-06-17",
           "venue": "BMO Field, Toronto",
           "scorers": [],
@@ -8494,8 +8502,8 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 43,
-        "r16": 12,
+        "r32": 41,
+        "r16": 14,
         "qf": 5,
         "sf": 3,
         "final": 2,
@@ -8617,7 +8625,7 @@
           "opponent": "Ghana",
           "opponentFlag": "🇬🇭",
           "result": null,
-          "score": null,
+          "score": "0-0",
           "date": "2026-06-17",
           "venue": "BMO Field, Toronto",
           "scorers": [],
@@ -8647,7 +8655,7 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 35,
+        "r32": 37,
         "r16": 7,
         "qf": 2,
         "sf": 1,
@@ -9134,8 +9142,7 @@
         "date": "2026-06-16",
         "broadcasts": [
           "FS1",
-          "Tele",
-          "Peacock"
+          "Tele"
         ],
         "time": "2026-06-17T04:00Z"
       }
@@ -9168,9 +9175,8 @@
         "awayId": "croatia",
         "homeScore": 4,
         "awayScore": 2,
-        "status": "IN_PROGRESS",
+        "status": "FINISHED",
         "date": "2026-06-17",
-        "clock": "90'+6'",
         "broadcasts": [
           "FOX",
           "Tele",
@@ -9187,12 +9193,13 @@
         "awayId": "panama",
         "homeScore": 0,
         "awayScore": 0,
-        "status": "SCHEDULED",
+        "status": "IN_PROGRESS",
         "date": "2026-06-17",
+        "clock": "45'",
         "broadcasts": [
           "FS1",
           "Tele",
-          "Peacock"
+          "FOX One"
         ],
         "time": "2026-06-17T23:00Z"
       },
@@ -9210,7 +9217,7 @@
         "broadcasts": [
           "FS1",
           "Tele",
-          "Peacock"
+          "FOX One"
         ],
         "time": "2026-06-18T02:00Z"
       }
@@ -9230,7 +9237,7 @@
         "broadcasts": [
           "FOX",
           "Tele",
-          "Peacock"
+          "FOX One"
         ],
         "time": "2026-06-18T16:00Z"
       },
@@ -9248,7 +9255,7 @@
         "broadcasts": [
           "FOX",
           "Tele",
-          "Peacock"
+          "FOX One"
         ],
         "time": "2026-06-18T19:00Z"
       },
@@ -9266,7 +9273,7 @@
         "broadcasts": [
           "FS1",
           "Tele",
-          "Peacock"
+          "FOX One"
         ],
         "time": "2026-06-18T22:00Z"
       },
@@ -9284,7 +9291,7 @@
         "broadcasts": [
           "FOX",
           "Tele",
-          "Peacock"
+          "FOX One"
         ],
         "time": "2026-06-19T01:00Z"
       }
@@ -9304,7 +9311,7 @@
         "broadcasts": [
           "FOX",
           "Tele",
-          "Peacock"
+          "FOX One"
         ],
         "time": "2026-06-19T19:00Z"
       },
@@ -9322,7 +9329,7 @@
         "broadcasts": [
           "FOX",
           "Tele",
-          "Peacock"
+          "FOX One"
         ],
         "time": "2026-06-19T22:00Z"
       },
@@ -9340,7 +9347,7 @@
         "broadcasts": [
           "FOX",
           "Tele",
-          "Peacock"
+          "FOX One"
         ],
         "time": "2026-06-20T00:30Z"
       },
@@ -9358,7 +9365,7 @@
         "broadcasts": [
           "FS1",
           "Tele",
-          "Peacock"
+          "FOX One"
         ],
         "time": "2026-06-20T03:00Z"
       }
@@ -9378,7 +9385,7 @@
         "broadcasts": [
           "FOX",
           "Tele",
-          "Peacock"
+          "FOX One"
         ],
         "time": "2026-06-20T17:00Z"
       },
@@ -9396,7 +9403,7 @@
         "broadcasts": [
           "FOX",
           "Tele",
-          "Peacock"
+          "FOX One"
         ],
         "time": "2026-06-20T20:00Z"
       },
@@ -9414,7 +9421,7 @@
         "broadcasts": [
           "FS1",
           "Tele",
-          "Peacock"
+          "FOX One"
         ],
         "time": "2026-06-21T00:00Z"
       },
@@ -9432,7 +9439,7 @@
         "broadcasts": [
           "FS1",
           "Tele",
-          "Peacock"
+          "FOX One"
         ],
         "time": "2026-06-21T04:00Z"
       }
@@ -9452,7 +9459,7 @@
         "broadcasts": [
           "FOX",
           "Tele",
-          "Peacock"
+          "FOX One"
         ],
         "time": "2026-06-21T16:00Z"
       },
@@ -9470,7 +9477,7 @@
         "broadcasts": [
           "FS1",
           "Tele",
-          "Peacock"
+          "FOX One"
         ],
         "time": "2026-06-21T19:00Z"
       },
@@ -9488,7 +9495,7 @@
         "broadcasts": [
           "FS1",
           "Tele",
-          "Peacock"
+          "FOX One"
         ],
         "time": "2026-06-21T22:00Z"
       },
@@ -9506,7 +9513,7 @@
         "broadcasts": [
           "FS1",
           "Tele",
-          "Peacock"
+          "FOX One"
         ],
         "time": "2026-06-22T01:00Z"
       }
@@ -9526,7 +9533,7 @@
         "broadcasts": [
           "FOX",
           "Tele",
-          "Peacock"
+          "FOX One"
         ],
         "time": "2026-06-22T17:00Z"
       },
@@ -9544,7 +9551,7 @@
         "broadcasts": [
           "FOX",
           "Tele",
-          "Peacock"
+          "FOX One"
         ],
         "time": "2026-06-22T21:00Z"
       },
@@ -9562,7 +9569,7 @@
         "broadcasts": [
           "FOX",
           "Tele",
-          "Peacock"
+          "FOX One"
         ],
         "time": "2026-06-23T00:00Z"
       },
@@ -9580,7 +9587,7 @@
         "broadcasts": [
           "FS1",
           "Tele",
-          "Peacock"
+          "FOX One"
         ],
         "time": "2026-06-23T03:00Z"
       }
@@ -9600,7 +9607,7 @@
         "broadcasts": [
           "FOX",
           "Tele",
-          "Peacock"
+          "FOX One"
         ],
         "time": "2026-06-23T17:00Z"
       },
@@ -9618,7 +9625,7 @@
         "broadcasts": [
           "FOX",
           "Tele",
-          "Peacock"
+          "FOX One"
         ],
         "time": "2026-06-23T20:00Z"
       },
@@ -9636,7 +9643,7 @@
         "broadcasts": [
           "FOX",
           "Tele",
-          "Peacock"
+          "FOX One"
         ],
         "time": "2026-06-23T23:00Z"
       },
@@ -9654,7 +9661,7 @@
         "broadcasts": [
           "FS1",
           "Tele",
-          "Peacock"
+          "FOX One"
         ],
         "time": "2026-06-24T02:00Z"
       }
@@ -9674,7 +9681,7 @@
         "broadcasts": [
           "FS1",
           "Tele",
-          "Peacock"
+          "FOX One"
         ],
         "time": "2026-06-24T19:00Z"
       },
@@ -9692,7 +9699,7 @@
         "broadcasts": [
           "FOX",
           "Tele",
-          "Peacock"
+          "FOX One"
         ],
         "time": "2026-06-24T19:00Z"
       },
@@ -9710,7 +9717,7 @@
         "broadcasts": [
           "FS1",
           "Tele",
-          "Peacock"
+          "FOX One"
         ],
         "time": "2026-06-24T22:00Z"
       },
@@ -9728,7 +9735,7 @@
         "broadcasts": [
           "FOX",
           "Tele",
-          "Peacock"
+          "FOX One"
         ],
         "time": "2026-06-24T22:00Z"
       },
@@ -9746,7 +9753,7 @@
         "broadcasts": [
           "FOX",
           "Tele",
-          "Peacock"
+          "FOX One"
         ],
         "time": "2026-06-25T01:00Z"
       },
@@ -9764,7 +9771,7 @@
         "broadcasts": [
           "FS1",
           "Tele",
-          "Peacock"
+          "FOX One"
         ],
         "time": "2026-06-25T01:00Z"
       }
@@ -9784,7 +9791,7 @@
         "broadcasts": [
           "FS1",
           "Tele",
-          "Peacock"
+          "FOX One"
         ],
         "time": "2026-06-25T20:00Z"
       },
@@ -9802,7 +9809,7 @@
         "broadcasts": [
           "FOX",
           "Tele",
-          "Peacock"
+          "FOX One"
         ],
         "time": "2026-06-25T20:00Z"
       },
@@ -9820,7 +9827,7 @@
         "broadcasts": [
           "FS1",
           "Tele",
-          "Peacock"
+          "FOX One"
         ],
         "time": "2026-06-25T23:00Z"
       },
@@ -9838,7 +9845,7 @@
         "broadcasts": [
           "FOX",
           "Tele",
-          "Peacock"
+          "FOX One"
         ],
         "time": "2026-06-25T23:00Z"
       },
@@ -9856,7 +9863,7 @@
         "broadcasts": [
           "FS1",
           "Tele",
-          "Peacock"
+          "FOX One"
         ],
         "time": "2026-06-26T02:00Z"
       },
@@ -9874,7 +9881,7 @@
         "broadcasts": [
           "FOX",
           "Tele",
-          "Peacock"
+          "FOX One"
         ],
         "time": "2026-06-26T02:00Z"
       }
@@ -9894,7 +9901,7 @@
         "broadcasts": [
           "FOX",
           "Tele",
-          "Peacock"
+          "FOX One"
         ],
         "time": "2026-06-26T19:00Z"
       },
@@ -9912,7 +9919,7 @@
         "broadcasts": [
           "FS1",
           "Tele",
-          "Peacock"
+          "FOX One"
         ],
         "time": "2026-06-26T19:00Z"
       },
@@ -9930,7 +9937,7 @@
         "broadcasts": [
           "FS1",
           "Tele",
-          "Peacock"
+          "FOX One"
         ],
         "time": "2026-06-27T00:00Z"
       },
@@ -9948,7 +9955,7 @@
         "broadcasts": [
           "FOX",
           "Tele",
-          "Peacock"
+          "FOX One"
         ],
         "time": "2026-06-27T00:00Z"
       },
@@ -9966,7 +9973,7 @@
         "broadcasts": [
           "FS1",
           "Tele",
-          "Peacock"
+          "FOX One"
         ],
         "time": "2026-06-27T03:00Z"
       },
@@ -9984,7 +9991,7 @@
         "broadcasts": [
           "FOX",
           "Tele",
-          "Peacock"
+          "FOX One"
         ],
         "time": "2026-06-27T03:00Z"
       }
@@ -10004,7 +10011,7 @@
         "broadcasts": [
           "FS1",
           "Tele",
-          "Peacock"
+          "FOX One"
         ],
         "time": "2026-06-27T21:00Z"
       },
@@ -10022,7 +10029,7 @@
         "broadcasts": [
           "FOX",
           "Tele",
-          "Peacock"
+          "FOX One"
         ],
         "time": "2026-06-27T21:00Z"
       },
@@ -10040,7 +10047,7 @@
         "broadcasts": [
           "FOX",
           "Tele",
-          "Peacock"
+          "FOX One"
         ],
         "time": "2026-06-27T23:30Z"
       },
@@ -10058,7 +10065,7 @@
         "broadcasts": [
           "FS1",
           "Tele",
-          "Peacock"
+          "FOX One"
         ],
         "time": "2026-06-27T23:30Z"
       },
@@ -10076,7 +10083,7 @@
         "broadcasts": [
           "FS1",
           "Tele",
-          "Peacock"
+          "FOX One"
         ],
         "time": "2026-06-28T02:00Z"
       },
@@ -10094,7 +10101,7 @@
         "broadcasts": [
           "FOX",
           "Tele",
-          "Peacock"
+          "FOX One"
         ],
         "time": "2026-06-28T02:00Z"
       }
