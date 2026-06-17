@@ -38,10 +38,12 @@ export default function Header({
 
         {/* Controls */}
         <div className={styles.controls}>
-          <div className={styles.updated} aria-label={`Data last updated ${formatUpdated(data?.lastUpdated)} · every 30 minutes`}>
-            Updated {formatUpdated(data?.lastUpdated)}
-            <br /><span style={{ opacity: 0.7 }}>every 30 min</span>
-          </div>
+          {selectedDate === 'live' && (
+            <div className={styles.updated} aria-label={`Live scores · base data updated ${formatUpdated(data?.lastUpdated)}`}>
+              Live scores
+              <br /><span className={styles.updatedSub}>data {formatUpdated(data?.lastUpdated)}</span>
+            </div>
+          )}
 
           <DateSelector
             manifest={manifest}

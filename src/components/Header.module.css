@@ -56,6 +56,10 @@
   white-space: nowrap;
 }
 
+.updatedSub {
+  opacity: 0.6;
+}
+
 @media (max-width: 580px) {
   .updated { display: none; }
   .controls { gap: 6px; flex-wrap: wrap; }
