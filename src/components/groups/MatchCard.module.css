@@ -101,7 +101,15 @@
 
 .eventTeam {
 	margin-bottom: 2px;
-	opacity: 0.6;
+}
+
+.eventTeamTla {
+	font-family: var(--font-mono);
+	font-size: 9px;
+	font-weight: 700;
+	letter-spacing: 0.08em;
+	color: var(--text-dim);
+	text-transform: uppercase;
 }
 
 .cards {

@@ -31,6 +31,7 @@ const DAY_LABELS: Record<string, string> = {
 function enrich(
 	match: DailyMatch,
 	teams: AppData['teams'],
+	today: string,
 	livePatch?: LiveMatchPatch
 ) {
 	const homeTeam = teams.find(t => t.id === match.homeId)
@@ -45,7 +46,10 @@ function enrich(
 		g => g.opponent === match.homeTeam
 	)
 
-	const effectiveStatus = live?.status ?? match.status
+	const rawStatus = live?.status ?? match.status
+	// If static data says IN_PROGRESS for a past-date match but no live patch
+	// confirms it, treat as FINISHED — the update script may have been captured mid-game.
+	const effectiveStatus = rawStatus === 'IN_PROGRESS' && !live && match.date < today ? 'FINISHED' : rawStatus
 	const effectiveScore = live ? `${live.homeScore}-${live.awayScore}` : (match.status !== 'SCHEDULED' ? `${match.homeScore}-${match.awayScore}` : null)
 
 	return {
@@ -82,7 +86,7 @@ export default function HomePage({ data, selectedTeamId, onTeamChange, onViewCha
 
 	const sections = useMemo(() => {
 		const enrichDay = (date: string) =>
-			(dailyMatches[date] ?? []).map(m => enrich(m, data.teams, livePatches?.get(`${m.homeId}:${m.awayId}`)))
+			(dailyMatches[date] ?? []).map(m => enrich(m, data.teams, today, livePatches?.get(`${m.homeId}:${m.awayId}`)))
 
 		const todayMatches = enrichDay(today)
 		// Pin any in-progress match to the top of today's list; leave other days as-is

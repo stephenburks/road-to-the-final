@@ -56,6 +56,11 @@ const ID_TO_ISO  = Object.fromEntries(TEAM_MAPPINGS.map(t => [t.id,  t.iso]))
 const ID_TO_TLA  = Object.fromEntries(TEAM_MAPPINGS.map(t => [t.id,  t.tla]))
 const NAME_TO_ID = Object.fromEntries(TEAM_MAPPINGS.map(t => [t.name, t.id]))
 
+export function getTeamTLA(id?: string, name?: string): string {
+	const resolvedId = id || (name ? NAME_TO_ID[name] : '') || ''
+	return ID_TO_TLA[resolvedId] || ''
+}
+
 function resolveCode(code?: string, opponentName?: string): string {
 	if (code) return code
 	if (opponentName) return NAME_TO_ID[opponentName] || ''

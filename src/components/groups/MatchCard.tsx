@@ -1,6 +1,6 @@
 import type { Team, GroupMatch, Card } from '../../types'
 import { formatDate } from '../../utils'
-import FlagIcon from '../ui/FlagIcon'
+import FlagIcon, { getTeamTLA } from '../ui/FlagIcon'
 import { RESULT_LABELS } from './groupStageConstants'
 import styles from './MatchCard.module.css'
 
@@ -73,8 +73,7 @@ function CardList({ cards, label }: { cards: Card[]; label: string }) {
 	)
 }
 
-function EventColumn({ flag, teamId, teamName, scorers, cards, scorerLabel, cardLabel }: {
-	flag: string
+function EventColumn({ teamId, teamName, scorers, cards, scorerLabel, cardLabel }: {
 	teamId?: string
 	teamName: string
 	scorers: string[]
@@ -82,11 +81,10 @@ function EventColumn({ flag, teamId, teamName, scorers, cards, scorerLabel, card
 	scorerLabel: string
 	cardLabel: string
 }) {
+	const tla = getTeamTLA(teamId, teamName)
 	return (
 		<div className={styles.eventSide}>
-			<div className={styles.eventTeam}>
-				{teamId ? <FlagIcon code={teamId} flag={flag} small /> : <FlagIcon flag={flag} opponent={teamName} small />}
-			</div>
+			{tla && <div className={styles.eventTeam}><span className={styles.eventTeamTla}>{tla}</span></div>}
 			<ScorerList scorers={scorers} label={scorerLabel} />
 			<CardList cards={cards} label={cardLabel} />
 		</div>
@@ -129,13 +127,13 @@ export default function MatchCard(props: MatchCardProps) {
 				{hasResult && (
 					<div className={styles.matchEvents}>
 						<EventColumn
-							flag={homeFlag} teamId={homeId} teamName={homeTeam}
+							teamId={homeId} teamName={homeTeam}
 							scorers={homeScorers} cards={homeCards}
 							scorerLabel={`${homeTeam} goal scorers`}
 							cardLabel={`${homeTeam} cards`}
 						/>
 						<EventColumn
-							flag={awayFlag} teamId={awayId} teamName={awayTeam}
+							teamId={awayId} teamName={awayTeam}
 							scorers={awayScorers} cards={awayCards}
 							scorerLabel={`${awayTeam} goal scorers`}
 							cardLabel={`${awayTeam} cards`}
@@ -204,13 +202,13 @@ export default function MatchCard(props: MatchCardProps) {
 			{hasEvents && (
 				<div className={styles.matchEvents}>
 					<EventColumn
-						flag={teamFlag} teamId={teamId} teamName=""
+						teamId={teamId} teamName=""
 						scorers={myScorers} cards={myCards}
 						scorerLabel={`${teamId} goal scorers`}
 						cardLabel={`${teamId} cards`}
 					/>
 					<EventColumn
-						flag={match.opponentFlag} teamName={match.opponent}
+						teamName={match.opponent}
 						scorers={oppScorers} cards={oppCards}
 						scorerLabel={`${match.opponent} goal scorers`}
 						cardLabel={`${match.opponent} cards`}
