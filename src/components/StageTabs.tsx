@@ -38,7 +38,7 @@ export default function StageTabs({ team, selectedStage, onSelect }: StageTabsPr
 	}
 
 	return (
-		<div className={styles.outer} role="tablist" aria-label="Tournament stage">
+		<div className={styles.outer} role="group" aria-label="Tournament stage">
 			<div className={styles.inner}>
 				{STAGE_ORDER.map((stage, i) => {
 					const path = team.path?.[stage]
@@ -46,8 +46,7 @@ export default function StageTabs({ team, selectedStage, onSelect }: StageTabsPr
 					return (
 						<button
 							key={stage}
-							role="tab"
-							aria-selected={stage === selectedStage}
+							aria-pressed={stage === selectedStage}
 							aria-label={`${STAGE_LABELS[stage]}${path?.city ? `, ${path.city}` : ''}${i < currentIdx ? ', completed' : stage === team.currentStage ? ', current stage' : ''}`}
 							className={getTabClasses(styles, i, currentIdx, stage, team, selectedStage) + ' stage-tab'}
 							onClick={() => onSelect(stage)}
