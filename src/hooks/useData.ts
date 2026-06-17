@@ -1,8 +1,6 @@
-import { useState, useEffect, useRef } from 'react'
+import { useQuery } from '@tanstack/react-query'
 import { LIVE_DATA_URL, MANIFEST_URL, SNAPSHOT_URL } from '../constants'
 import type { AppData, SnapshotManifest } from '../types'
-
-const snapCache = new Map<string, AppData>()
 
 interface UseDataReturn {
 	liveData: AppData | null
@@ -12,100 +10,52 @@ interface UseDataReturn {
 	error: string | null
 }
 
-/**
- * Manages all remote data for the app:
- *   - live JSON (always loaded)
- *   - snapshots manifest (always loaded)
- *   - historical snapshot (loaded on demand, cached)
- */
 export function useData(selectedDate: string): UseDataReturn {
-	const [liveData, setLiveData]   = useState<AppData | null>(null)
-	const [manifest, setManifest]   = useState<SnapshotManifest | null>(null)
-	const [snapData, setSnapData]   = useState<AppData | null>(null)
-	const [loadingSnap, setLoadSnap] = useState(false)
-	const [error, setError]         = useState<string | null>(null)
-	const inFlight = useRef<Map<string, Promise<unknown>>>(new Map())
-
-	useEffect(() => {
-		let refreshTimer: ReturnType<typeof setInterval> | null = null
-
-		async function fetchLive() {
-			const res = await fetch(`${LIVE_DATA_URL}?_=${Date.now()}`)
+	const liveQuery = useQuery<AppData, Error>({
+		queryKey: ['liveData'],
+		queryFn: async ({ signal }) => {
+			const res = await fetch(`${LIVE_DATA_URL}?_=${Date.now()}`, { signal })
 			if (!res.ok) throw new Error(`HTTP ${res.status} loading live data`)
 			return res.json() as Promise<AppData>
-		}
+		},
+		refetchInterval: 10 * 60 * 1000,
+	})
 
-		Promise.all([
-			fetchLive(),
-			fetch(MANIFEST_URL)
-				.then(r => r.ok ? r.json() as Promise<SnapshotManifest> : null)
-				.catch(() => null),
-		])
-			.then(([live, mf]) => {
-				setLiveData(live)
-				setManifest(mf)
-			})
-			.catch(err => {
-				console.error('[useData] initial load failed:', err)
-				const e = err as Error
-				setError(
-					'Could not load match data. ' +
-					'Make sure world-cup-2026.json is in the public/data/ folder ' +
-					"and you're running via a local server (npx serve . or npm run dev).\n\n" +
-					'Details: ' + (e.message ?? 'unknown error')
-				)
-			})
+	const manifestQuery = useQuery<SnapshotManifest | null, Error>({
+		queryKey: ['manifest'],
+		queryFn: async ({ signal }) => {
+			const res = await fetch(MANIFEST_URL, { signal })
+			return res.ok ? (res.json() as Promise<SnapshotManifest>) : null
+		},
+		staleTime: 60 * 60 * 1000,
+	})
 
-		// Re-fetch live data every 10 minutes so the session stays fresh
-		// without requiring a page reload. This also re-triggers useLiveScores
-		// to start polling when a match transitions from SCHEDULED to IN_PROGRESS.
-		refreshTimer = setInterval(() => {
-			fetchLive()
-				.then(live => setLiveData(live))
-				.catch(() => {}) // silently keep existing data on transient errors
-		}, 10 * 60 * 1000)
+	const snapEnabled = selectedDate !== 'live' && !!selectedDate
+	const snapQuery = useQuery<AppData, Error>({
+		queryKey: ['snapshot', selectedDate],
+		queryFn: async ({ signal }) => {
+			const res = await fetch(SNAPSHOT_URL(selectedDate), { signal })
+			if (!res.ok) throw new Error(`HTTP ${res.status}`)
+			return res.json() as Promise<AppData>
+		},
+		enabled: snapEnabled,
+		staleTime: Infinity,
+	})
 
-		return () => {
-			if (refreshTimer) clearInterval(refreshTimer)
-		}
-	}, [])
+	const error = liveQuery.error
+		? (
+			'Could not load match data. ' +
+			'Make sure world-cup-2026.json is in the public/data/ folder ' +
+			"and you're running via a local server (npx serve . or npm run dev).\n\n" +
+			'Details: ' + (liveQuery.error.message ?? 'unknown error')
+		)
+		: null
 
-	useEffect(() => {
-		if (selectedDate === 'live' || !selectedDate) {
-			// eslint-disable-next-line react-hooks/set-state-in-effect
-			setSnapData(null)
-			return
-		}
-
-		if (snapCache.has(selectedDate)) {
-			setSnapData(snapCache.get(selectedDate) ?? null)
-			setLoadSnap(false)
-			return
-		}
-
-		if (inFlight.current.has(selectedDate)) return
-
-		setLoadSnap(true)
-		const promise = fetch(SNAPSHOT_URL(selectedDate))
-			.then(r => {
-				if (!r.ok) throw new Error(`HTTP ${r.status}`)
-				return r.json() as Promise<AppData>
-			})
-			.then(d => {
-				snapCache.set(selectedDate, d)
-				setSnapData(d)
-				setLoadSnap(false)
-				inFlight.current.delete(selectedDate)
-			})
-			.catch(err => {
-				console.error('[useData] snapshot load failed:', err)
-				setSnapData(null)
-				setLoadSnap(false)
-				inFlight.current.delete(selectedDate)
-			})
-
-		inFlight.current.set(selectedDate, promise)
-	}, [selectedDate])
-
-	return { liveData, manifest, snapData, loadingSnap, error }
+	return {
+		liveData: liveQuery.data ?? null,
+		manifest: manifestQuery.data ?? null,
+		snapData: snapEnabled ? (snapQuery.data ?? null) : null,
+		loadingSnap: snapEnabled && snapQuery.isLoading,
+		error,
+	}
 }

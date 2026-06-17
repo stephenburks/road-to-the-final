@@ -1,5 +1,7 @@
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest'
 import { renderHook, waitFor } from '@testing-library/react'
+import { createElement } from 'react'
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { useData } from './useData'
 
 const mockLive: unknown = {
@@ -28,17 +30,20 @@ const mockManifest = {
 	generated: '2026-06-15T00:00:00Z',
 }
 
-function mockFetch(jsonBody: unknown, ok = true, status = 200) {
-	return vi.fn().mockResolvedValue({
-		ok,
-		status,
-		json: () => Promise.resolve(jsonBody),
-	})
+function createWrapper() {
+	const client = new QueryClient({ defaultOptions: { queries: { retry: false } } })
+	return function Wrapper({ children }: { children: React.ReactNode }) {
+		return createElement(QueryClientProvider, { client }, children)
+	}
 }
 
 describe('useData', () => {
 	beforeEach(() => {
-		vi.stubGlobal('fetch', mockFetch({}))
+		vi.stubGlobal('fetch', vi.fn().mockResolvedValue({
+			ok: true,
+			status: 200,
+			json: () => Promise.resolve({}),
+		}))
 	})
 
 	afterEach(() => {
@@ -50,7 +55,7 @@ describe('useData', () => {
 			.mockResolvedValueOnce({ ok: true, status: 200, json: () => Promise.resolve(mockLive) })
 			.mockResolvedValueOnce({ ok: true, status: 200, json: () => Promise.resolve(mockManifest) }))
 
-		const { result } = renderHook(() => useData('live'))
+		const { result } = renderHook(() => useData('live'), { wrapper: createWrapper() })
 
 		await waitFor(() => {
 			expect(result.current.liveData).toBeTruthy()
@@ -63,23 +68,20 @@ describe('useData', () => {
 	it('sets loadingSnap to true when a snapshot date is selected', async () => {
 		vi.stubGlobal('fetch', vi.fn()
 			.mockResolvedValueOnce({ ok: true, status: 200, json: () => Promise.resolve(mockLive) })
-			.mockResolvedValueOnce({ ok: true, status: 200, json: () => Promise.resolve(mockManifest) }))
+			.mockResolvedValueOnce({ ok: true, status: 200, json: () => Promise.resolve(mockManifest) })
+			.mockResolvedValueOnce({ ok: true, status: 200, json: () => Promise.resolve(mockSnap) }))
 
 		const { result, rerender } = renderHook(
 			({ date }) => useData(date),
-			{ initialProps: { date: 'live' } }
+			{ initialProps: { date: 'live' }, wrapper: createWrapper() }
 		)
 
 		await waitFor(() => {
 			expect(result.current.liveData).toBeTruthy()
 		})
 
-		vi.stubGlobal('fetch', vi.fn()
-			.mockResolvedValueOnce({ ok: true, status: 200, json: () => Promise.resolve(mockSnap) }))
-
 		rerender({ date: '2026-06-01' })
 
-		// loadingSnap should become true immediately
 		await waitFor(() => {
 			expect(result.current.loadingSnap).toBe(true)
 		})
@@ -88,19 +90,17 @@ describe('useData', () => {
 	it('transitions loadingSnap to false after snapshot resolves', async () => {
 		vi.stubGlobal('fetch', vi.fn()
 			.mockResolvedValueOnce({ ok: true, status: 200, json: () => Promise.resolve(mockLive) })
-			.mockResolvedValueOnce({ ok: true, status: 200, json: () => Promise.resolve(mockManifest) }))
+			.mockResolvedValueOnce({ ok: true, status: 200, json: () => Promise.resolve(mockManifest) })
+			.mockResolvedValueOnce({ ok: true, status: 200, json: () => Promise.resolve(mockSnap) }))
 
 		const { result, rerender } = renderHook(
 			({ date }) => useData(date),
-			{ initialProps: { date: 'live' } }
+			{ initialProps: { date: 'live' }, wrapper: createWrapper() }
 		)
 
 		await waitFor(() => {
 			expect(result.current.liveData).toBeTruthy()
 		})
-
-		vi.stubGlobal('fetch', vi.fn()
-			.mockResolvedValueOnce({ ok: true, status: 200, json: () => Promise.resolve(mockSnap) }))
 
 		rerender({ date: '2026-06-01' })
 
@@ -116,13 +116,12 @@ describe('useData', () => {
 			.mockResolvedValueOnce({ ok: true, status: 200, json: () => Promise.resolve(mockLive) })
 			.mockRejectedValueOnce(new Error('Network error')))
 
-		const { result } = renderHook(() => useData('live'))
+		const { result } = renderHook(() => useData('live'), { wrapper: createWrapper() })
 
 		await waitFor(() => {
 			expect(result.current.liveData).toBeTruthy()
 		})
 
-		// manifest should be null, not an error
 		expect(result.current.manifest).toBeNull()
 		expect(result.current.error).toBeNull()
 	})
@@ -132,7 +131,7 @@ describe('useData', () => {
 			.mockImplementationOnce(() => Promise.reject(new Error('Network failure')))
 			.mockImplementationOnce(() => Promise.resolve({ ok: true, status: 200, json: () => Promise.resolve(mockManifest) })))
 
-		const { result } = renderHook(() => useData('live'))
+		const { result } = renderHook(() => useData('live'), { wrapper: createWrapper() })
 
 		await waitFor(() => {
 			expect(result.current.error).toBeTruthy()
@@ -146,7 +145,7 @@ describe('useData', () => {
 			.mockResolvedValueOnce({ ok: true, status: 200, json: () => Promise.resolve(mockLive) })
 			.mockResolvedValueOnce({ ok: true, status: 200, json: () => Promise.resolve(mockManifest) }))
 
-		const { result } = renderHook(() => useData('live'))
+		const { result } = renderHook(() => useData('live'), { wrapper: createWrapper() })
 
 		await waitFor(() => {
 			expect(result.current.liveData).toBeTruthy()
@@ -162,14 +161,13 @@ describe('useData', () => {
 
 		const { result, rerender } = renderHook(
 			({ date }) => useData(date),
-			{ initialProps: { date: 'live' } }
+			{ initialProps: { date: 'live' }, wrapper: createWrapper() }
 		)
 
 		await waitFor(() => {
 			expect(result.current.liveData).toBeTruthy()
 		})
 
-		// Set up one fetch for the snapshot
 		let resolveSnap: (value: unknown) => void
 		const snapPromise = new Promise<unknown>(resolve => { resolveSnap = resolve })
 		vi.stubGlobal('fetch', vi.fn()
@@ -179,7 +177,6 @@ describe('useData', () => {
 		rerender({ date: '2026-06-15' })
 		rerender({ date: '2026-06-15' })
 
-		// Should only have been called once (dedup via inFlight)
 		resolveSnap!(mockSnap)
 
 		await waitFor(() => {
