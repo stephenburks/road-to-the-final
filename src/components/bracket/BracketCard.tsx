@@ -30,12 +30,9 @@ export default function BracketCard({ path, card, isAct, stage }: BracketCardPro
 				{path?.detail ?? path?.opponentDesc ?? '—'}
 			</div>
 			{path?.conditional && (
-				<div
-					className={styles.cardConditional}
-					title={path.conditionNote ?? 'Venue depends on finishing position'}
-					aria-label={path.conditionNote ?? 'Conditional venue'}
-				>
+				<div className={styles.cardConditional}>
 					Conditional
+					<span className="sr-only"> — {path.conditionNote ?? 'venue depends on finishing position'}</span>
 				</div>
 			)}
 		</div>

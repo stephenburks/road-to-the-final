@@ -47,7 +47,7 @@ export default function StageTabs({ team, selectedStage, onSelect }: StageTabsPr
 						<button
 							key={stage}
 							aria-pressed={stage === selectedStage}
-							aria-label={`${STAGE_LABELS[stage]}${path?.city ? `, ${path.city}` : ''}${i < currentIdx ? ', completed' : stage === team.currentStage ? ', current stage' : ''}`}
+							aria-label={`${STAGE_LABELS[stage]}${path?.city ? `, ${path.city}` : ''}${i < currentIdx ? ', completed' : stage === team.currentStage ? ', current stage' : ''}${path?.conditional && stage !== team.currentStage && i >= currentIdx ? `, ${path.conditionNote ?? 'Conditional venue'}` : ''}`}
 							className={getTabClasses(styles, i, currentIdx, stage, team, selectedStage) + ' stage-tab'}
 							onClick={() => onSelect(stage)}
 							onKeyDown={e => handleKeyDown(e, stage)}
@@ -66,7 +66,7 @@ export default function StageTabs({ team, selectedStage, onSelect }: StageTabsPr
 								</span>
 							)}
 							{path?.conditional && stage !== team.currentStage && i >= currentIdx && (
-								<span className={styles.conditional} aria-label="Conditional on finishing position" title={path.conditionNote ?? 'Conditional venue'} />
+								<span className={styles.conditional} aria-hidden="true" />
 							)}
 						</button>
 					)
