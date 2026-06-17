@@ -1,5 +1,6 @@
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest'
-import { render, screen } from '@testing-library/react'
+import { screen } from '@testing-library/react'
+import { renderWithQuery } from '../test-utils'
 import Hero from './Hero'
 import type { Team, Stage } from '../types'
 
@@ -36,31 +37,36 @@ const ACTIVE_STAGE: Stage = 'r32'
 describe('Hero', () => {
 	beforeEach(() => {
 		vi.setSystemTime(new Date('2026-06-15T12:00:00Z'))
+		vi.spyOn(globalThis, 'fetch').mockResolvedValue({
+			ok: true,
+			json: () => Promise.resolve({ team: null }),
+		} as Response)
 	})
 
 	afterEach(() => {
 		vi.useRealTimers()
+		vi.restoreAllMocks()
 	})
 
 	// ── Active team rendering ──────────────────────────────────────────
 
 	it('renders team name as heading for active team', () => {
-		render(<Hero team={mockTeam()} activeStage={ACTIVE_STAGE} isHistorical={false} />)
+		renderWithQuery(<Hero team={mockTeam()} activeStage={ACTIVE_STAGE} isHistorical={false} />)
 		expect(screen.getByRole('heading', { name: /USA/ })).toBeInTheDocument()
 	})
 
 	it('renders stage label in eyebrow for active team', () => {
-		render(<Hero team={mockTeam()} activeStage={ACTIVE_STAGE} isHistorical={false} />)
+		renderWithQuery(<Hero team={mockTeam()} activeStage={ACTIVE_STAGE} isHistorical={false} />)
 		expect(screen.getByText('Round of 32')).toBeInTheDocument()
 	})
 
 	it('renders city and date as subhead for active team', () => {
-		render(<Hero team={mockTeam()} activeStage={ACTIVE_STAGE} isHistorical={false} />)
+		renderWithQuery(<Hero team={mockTeam()} activeStage={ACTIVE_STAGE} isHistorical={false} />)
 		expect(screen.getByText(/Los Angeles/)).toBeInTheDocument()
 	})
 
 	it('shows stat grid with advancement probabilities for active team', () => {
-		render(<Hero team={mockTeam()} activeStage={ACTIVE_STAGE} isHistorical={false} />)
+		renderWithQuery(<Hero team={mockTeam()} activeStage={ACTIVE_STAGE} isHistorical={false} />)
 		expect(screen.getByRole('list', { name: /advancement probabilities/i })).toBeInTheDocument()
 		expect(screen.getByText('100%')).toBeInTheDocument()
 		expect(screen.getByText('70%')).toBeInTheDocument()
@@ -69,7 +75,7 @@ describe('Hero', () => {
 	})
 
 	it('shows Polymarket as source label when source is market', () => {
-		render(<Hero team={mockTeam()} activeStage={ACTIVE_STAGE} isHistorical={false} />)
+		renderWithQuery(<Hero team={mockTeam()} activeStage={ACTIVE_STAGE} isHistorical={false} />)
 		expect(screen.getAllByText('Polymarket')).toHaveLength(7)
 	})
 
@@ -80,17 +86,17 @@ describe('Hero', () => {
 				source: 'calculated',
 			},
 		})
-		render(<Hero team={team} activeStage={ACTIVE_STAGE} isHistorical={false} />)
+		renderWithQuery(<Hero team={team} activeStage={ACTIVE_STAGE} isHistorical={false} />)
 		expect(screen.getAllByText('Calculated')).toHaveLength(6)
 	})
 
 	it('shows historical source label when isHistorical is true', () => {
-		render(<Hero team={mockTeam()} activeStage={ACTIVE_STAGE} isHistorical={true} />)
+		renderWithQuery(<Hero team={mockTeam()} activeStage={ACTIVE_STAGE} isHistorical={true} />)
 		expect(screen.getAllByText('As of snapshot')).toHaveLength(6)
 	})
 
 	it('shows historical suffix in eyebrow when isHistorical', () => {
-		render(<Hero team={mockTeam()} activeStage={ACTIVE_STAGE} isHistorical={true} />)
+		renderWithQuery(<Hero team={mockTeam()} activeStage={ACTIVE_STAGE} isHistorical={true} />)
 		expect(screen.getByText(/Historical/)).toBeInTheDocument()
 	})
 
@@ -98,27 +104,27 @@ describe('Hero', () => {
 
 	it('renders group win probability card when groupWinProb is provided', () => {
 		const groupWinProb = { probability: 7, groupLetter: 'D' }
-		render(<Hero team={mockTeam()} activeStage={ACTIVE_STAGE} isHistorical={false} groupWinProb={groupWinProb} />)
+		renderWithQuery(<Hero team={mockTeam()} activeStage={ACTIVE_STAGE} isHistorical={false} groupWinProb={groupWinProb} />)
 		expect(screen.getByText('7%')).toBeInTheDocument()
 		expect(screen.getByText('Win Group D')).toBeInTheDocument()
 	})
 
 	it('renders correct aria-label on group win card', () => {
 		const groupWinProb = { probability: 12, groupLetter: 'A' }
-		render(<Hero team={mockTeam()} activeStage={ACTIVE_STAGE} isHistorical={false} groupWinProb={groupWinProb} />)
+		renderWithQuery(<Hero team={mockTeam()} activeStage={ACTIVE_STAGE} isHistorical={false} groupWinProb={groupWinProb} />)
 		expect(screen.getByRole('listitem', { name: 'Win Group A: 12%' })).toBeInTheDocument()
 	})
 
 	it('shows group win card placeholder when groupWinProb is undefined', () => {
-		render(<Hero team={mockTeam()} activeStage={ACTIVE_STAGE} isHistorical={false} />)
+		renderWithQuery(<Hero team={mockTeam()} activeStage={ACTIVE_STAGE} isHistorical={false} />)
 		expect(screen.getByText('Win Group')).toBeInTheDocument()
-		expect(screen.getByText('\u2014%')).toBeInTheDocument()
+		expect(screen.getByText('—%')).toBeInTheDocument()
 	})
 
 	it('does not render group win card for eliminated team even if groupWinProb provided', () => {
 		const groupWinProb = { probability: 5, groupLetter: 'A' }
 		const team = mockTeam({ eliminated: true, currentStage: 'r16' })
-		render(<Hero team={team} activeStage="r16" isHistorical={false} groupWinProb={groupWinProb} />)
+		renderWithQuery(<Hero team={team} activeStage="r16" isHistorical={false} groupWinProb={groupWinProb} />)
 		expect(screen.queryByText(/Win Group/)).not.toBeInTheDocument()
 	})
 
@@ -131,7 +137,7 @@ describe('Hero', () => {
 				r32: { status: 'active', date: '2026-07-01' },
 			},
 		})
-		render(<Hero team={team} activeStage={ACTIVE_STAGE} isHistorical={false} />)
+		renderWithQuery(<Hero team={team} activeStage={ACTIVE_STAGE} isHistorical={false} />)
 		expect(screen.getByText(/16 days away/)).toBeInTheDocument()
 	})
 
@@ -142,7 +148,7 @@ describe('Hero', () => {
 				r32: { status: 'active', date: '2026-06-15' },
 			},
 		})
-		render(<Hero team={team} activeStage={ACTIVE_STAGE} isHistorical={false} />)
+		renderWithQuery(<Hero team={team} activeStage={ACTIVE_STAGE} isHistorical={false} />)
 		expect(screen.getByText(/0 days away/)).toBeInTheDocument()
 	})
 
@@ -153,7 +159,7 @@ describe('Hero', () => {
 				r32: { status: 'active', date: '2026-06-16' },
 			},
 		})
-		render(<Hero team={team} activeStage={ACTIVE_STAGE} isHistorical={false} />)
+		renderWithQuery(<Hero team={team} activeStage={ACTIVE_STAGE} isHistorical={false} />)
 		expect(screen.getByText(/1 day away/)).toBeInTheDocument()
 	})
 
@@ -164,8 +170,7 @@ describe('Hero', () => {
 				r32: { status: 'active', date: '2026-06-01' },
 			},
 		})
-		// daysUntil returns negative, but Math.max(days, 0) in getSubtext clamps to 0
-		render(<Hero team={team} activeStage={ACTIVE_STAGE} isHistorical={false} />)
+		renderWithQuery(<Hero team={team} activeStage={ACTIVE_STAGE} isHistorical={false} />)
 		expect(screen.getByText(/0 days away/)).toBeInTheDocument()
 	})
 
@@ -176,8 +181,7 @@ describe('Hero', () => {
 				r32: { status: 'active', date: 'TBD' },
 			},
 		})
-		render(<Hero team={team} activeStage={ACTIVE_STAGE} isHistorical={false} />)
-		// When days is null, subtext shows "Next: {path date}" or "Next: —"
+		renderWithQuery(<Hero team={team} activeStage={ACTIVE_STAGE} isHistorical={false} />)
 		expect(screen.getByText(/Next:/)).toBeInTheDocument()
 	})
 
@@ -185,32 +189,31 @@ describe('Hero', () => {
 
 	it('renders "Journey Ended" heading for eliminated team', () => {
 		const team = mockTeam({ eliminated: true, currentStage: 'r16' })
-		render(<Hero team={team} activeStage="r16" isHistorical={false} />)
+		renderWithQuery(<Hero team={team} activeStage="r16" isHistorical={false} />)
 		expect(screen.getByRole('heading', { name: /Journey Ended/ })).toBeInTheDocument()
 	})
 
 	it('renders eliminated eyebrow text for eliminated team', () => {
 		const team = mockTeam({ eliminated: true, currentStage: 'r16' })
-		render(<Hero team={team} activeStage="r16" isHistorical={false} />)
+		renderWithQuery(<Hero team={team} activeStage="r16" isHistorical={false} />)
 		expect(screen.getByText(/Eliminated/)).toBeInTheDocument()
 	})
 
 	it('does not render stat grid for eliminated team', () => {
 		const team = mockTeam({ eliminated: true, currentStage: 'r16' })
-		render(<Hero team={team} activeStage="r16" isHistorical={false} />)
+		renderWithQuery(<Hero team={team} activeStage="r16" isHistorical={false} />)
 		expect(screen.queryByRole('list', { name: /advancement/i })).toBeFalsy()
 	})
 
 	it('does not render subhead for eliminated team', () => {
 		const team = mockTeam({ eliminated: true, currentStage: 'r16' })
-		render(<Hero team={team} activeStage="r16" isHistorical={false} />)
-		// subhead contains city — should not appear
+		renderWithQuery(<Hero team={team} activeStage="r16" isHistorical={false} />)
 		expect(screen.queryByText(/Los Angeles/)).toBeFalsy()
 	})
 
 	it('shows knockout stage in subtext for eliminated team', () => {
 		const team = mockTeam({ eliminated: true, currentStage: 'r16' })
-		render(<Hero team={team} activeStage="r16" isHistorical={false} />)
+		renderWithQuery(<Hero team={team} activeStage="r16" isHistorical={false} />)
 		expect(screen.getByText(/knocked out in the Round of 16/)).toBeInTheDocument()
 	})
 
@@ -223,7 +226,7 @@ describe('Hero', () => {
 				r32: { status: 'active', conditional: true, conditionNote: 'Venue TBD' },
 			},
 		})
-		render(<Hero team={team} activeStage={ACTIVE_STAGE} isHistorical={false} />)
+		renderWithQuery(<Hero team={team} activeStage={ACTIVE_STAGE} isHistorical={false} />)
 		expect(screen.getByRole('note')).toBeInTheDocument()
 		expect(screen.getByText('Venue TBD')).toBeInTheDocument()
 	})
@@ -235,12 +238,12 @@ describe('Hero', () => {
 				r32: { status: 'active', conditional: true },
 			},
 		})
-		render(<Hero team={team} activeStage={ACTIVE_STAGE} isHistorical={false} />)
+		renderWithQuery(<Hero team={team} activeStage={ACTIVE_STAGE} isHistorical={false} />)
 		expect(screen.getByText(/Venue assumes current group standing/)).toBeInTheDocument()
 	})
 
 	it('does not render conditional note when not conditional', () => {
-		render(<Hero team={mockTeam()} activeStage={ACTIVE_STAGE} isHistorical={false} />)
+		renderWithQuery(<Hero team={mockTeam()} activeStage={ACTIVE_STAGE} isHistorical={false} />)
 		expect(screen.queryByRole('note')).toBeFalsy()
 	})
 
@@ -252,7 +255,7 @@ describe('Hero', () => {
 				r16: { status: 'done', conditional: true, conditionNote: 'Should not show' },
 			},
 		})
-		render(<Hero team={team} activeStage="r16" isHistorical={false} />)
+		renderWithQuery(<Hero team={team} activeStage="r16" isHistorical={false} />)
 		expect(screen.queryByRole('note')).toBeFalsy()
 	})
 })

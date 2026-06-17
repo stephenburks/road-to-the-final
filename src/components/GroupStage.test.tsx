@@ -1,5 +1,6 @@
-import { describe, it, expect } from 'vitest'
-import { render, screen } from '@testing-library/react'
+import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest'
+import { screen } from '@testing-library/react'
+import { renderWithQuery } from '../test-utils'
 import GroupStage from './GroupStage'
 import type { Team, AppData } from '../types'
 
@@ -22,8 +23,8 @@ function mockTeam(overrides: Partial<Team> = {}): Team {
 				score: '2-1',
 				date: '2026-06-12',
 				venue: 'SoFi Stadium, Los Angeles',
-				scorers: ['Pulisic 34\'', 'McKennie 67\''],
-				cards: [{ player: 'Adams', minute: '45\'', type: 'yellow' }],
+				scorers: ["Pulisic 34'", "McKennie 67'"],
+				cards: [{ player: 'Adams', minute: "45'", type: 'yellow' }],
 			},
 			{
 				matchday: 2,
@@ -33,7 +34,7 @@ function mockTeam(overrides: Partial<Team> = {}): Team {
 				score: '1-1',
 				date: '2026-06-17',
 				venue: 'SoFi Stadium, Los Angeles',
-				scorers: ['Pulisic 78\''],
+				scorers: ["Pulisic 78'"],
 				cards: [],
 			},
 			{
@@ -45,7 +46,7 @@ function mockTeam(overrides: Partial<Team> = {}): Team {
 				date: '2026-06-22',
 				venue: 'MetLife, New York',
 				scorers: [],
-				cards: [{ player: 'McKennie', minute: '72\'', type: 'red' }],
+				cards: [{ player: 'McKennie', minute: "72'", type: 'red' }],
 			},
 			{
 				matchday: 4,
@@ -110,19 +111,29 @@ function mockData(overrides: Partial<AppData> = {}): AppData {
 }
 
 describe('GroupStage', () => {
+	beforeEach(() => {
+		vi.spyOn(globalThis, 'fetch').mockResolvedValue({
+			ok: true,
+			json: () => Promise.resolve({ events: [] }),
+		} as Response)
+	})
+
+	afterEach(() => {
+		vi.restoreAllMocks()
+	})
+
 	// ── Group table rendering ──────────────────────────────────────────
 
 	it('renders group table with standings', () => {
-		render(<GroupStage team={mockTeam()} data={mockData()} />)
+		renderWithQuery(<GroupStage team={mockTeam()} data={mockData()} />)
 		expect(screen.getByText('Group A')).toBeInTheDocument()
-		// "Standings" and team names may appear in both main table and feeder table
 		expect(screen.getAllByText('Standings').length).toBeGreaterThanOrEqual(1)
 		expect(screen.getAllByText('USA').length).toBeGreaterThanOrEqual(1)
 		expect(screen.getAllByText('Germany').length).toBeGreaterThanOrEqual(1)
 	})
 
 	it('highlights the selected team in group table', () => {
-		render(<GroupStage team={mockTeam()} data={mockData()} />)
+		renderWithQuery(<GroupStage team={mockTeam()} data={mockData()} />)
 		expect(document.querySelector('[aria-current="true"]')).toBeTruthy()
 		expect(screen.getByText('YOU')).toBeInTheDocument()
 	})
@@ -131,8 +142,7 @@ describe('GroupStage', () => {
 
 	it('renders match cards for all groupResults', () => {
 		const team = mockTeam()
-		render(<GroupStage team={team} data={mockData()} />)
-		// MatchCard renders "MD1 · Jun 12" etc. — use regex for substring match
+		renderWithQuery(<GroupStage team={team} data={mockData()} />)
 		expect(screen.getByText(/MD1/)).toBeInTheDocument()
 		expect(screen.getByText(/MD2/)).toBeInTheDocument()
 		expect(screen.getByText(/MD3/)).toBeInTheDocument()
@@ -140,27 +150,27 @@ describe('GroupStage', () => {
 	})
 
 	it('shows W badge for won matches', () => {
-		render(<GroupStage team={mockTeam()} data={mockData()} />)
+		renderWithQuery(<GroupStage team={mockTeam()} data={mockData()} />)
 		expect(screen.getByLabelText('Win')).toBeInTheDocument()
 	})
 
 	it('shows D badge for drawn matches', () => {
-		render(<GroupStage team={mockTeam()} data={mockData()} />)
+		renderWithQuery(<GroupStage team={mockTeam()} data={mockData()} />)
 		expect(screen.getByLabelText('Draw')).toBeInTheDocument()
 	})
 
 	it('shows L badge for lost matches', () => {
-		render(<GroupStage team={mockTeam()} data={mockData()} />)
+		renderWithQuery(<GroupStage team={mockTeam()} data={mockData()} />)
 		expect(screen.getByLabelText('Loss')).toBeInTheDocument()
 	})
 
 	it('shows TBD badge for upcoming matches', () => {
-		render(<GroupStage team={mockTeam()} data={mockData()} />)
+		renderWithQuery(<GroupStage team={mockTeam()} data={mockData()} />)
 		expect(screen.getByLabelText('To be played')).toBeInTheDocument()
 	})
 
 	it('renders scores for completed matches', () => {
-		render(<GroupStage team={mockTeam()} data={mockData()} />)
+		renderWithQuery(<GroupStage team={mockTeam()} data={mockData()} />)
 		expect(screen.getByLabelText('Score: 2-1')).toBeInTheDocument()
 		expect(screen.getByLabelText('Score: 1-1')).toBeInTheDocument()
 	})
@@ -168,31 +178,29 @@ describe('GroupStage', () => {
 	// ── Scorer details ─────────────────────────────────────────────────
 
 	it('renders goal scorers for team', () => {
-		render(<GroupStage team={mockTeam()} data={mockData()} />)
-		expect(screen.getByText('Pulisic 34\'')).toBeInTheDocument()
-		expect(screen.getByText('McKennie 67\'')).toBeInTheDocument()
+		renderWithQuery(<GroupStage team={mockTeam()} data={mockData()} />)
+		expect(screen.getByText("Pulisic 34'")).toBeInTheDocument()
+		expect(screen.getByText("McKennie 67'")).toBeInTheDocument()
 	})
 
 	// ── Card details ───────────────────────────────────────────────────
 
 	it('renders yellow card with screen reader text', () => {
-		render(<GroupStage team={mockTeam()} data={mockData()} />)
+		renderWithQuery(<GroupStage team={mockTeam()} data={mockData()} />)
 		expect(screen.getByText(/Adams 45'/)).toBeInTheDocument()
-		// Yellow card indicator should be visible
 		expect(document.querySelector('[class*="cardYellow"]')).toBeTruthy()
 	})
 
 	it('renders red card with screen reader text', () => {
-		render(<GroupStage team={mockTeam()} data={mockData()} />)
+		renderWithQuery(<GroupStage team={mockTeam()} data={mockData()} />)
 		expect(screen.getByText(/McKennie 72'/)).toBeInTheDocument()
-		// Red card indicator should be visible
 		expect(document.querySelector('[class*="cardRed"]')).toBeTruthy()
 	})
 
 	// ── Venue for upcoming matches ────────────────────────────────────
 
 	it('shows venue for upcoming matches without result', () => {
-		render(<GroupStage team={mockTeam()} data={mockData()} />)
+		renderWithQuery(<GroupStage team={mockTeam()} data={mockData()} />)
 		expect(screen.getByText('AT&T Stadium, Dallas')).toBeInTheDocument()
 	})
 
@@ -205,8 +213,7 @@ describe('GroupStage', () => {
 				r16: { status: 'upcoming', opponentDesc: 'Winner Group G' },
 			},
 		})
-		render(<GroupStage team={team} data={mockData()} />)
-		// FeederGroupPanel explanation contains specific text about Group G
+		renderWithQuery(<GroupStage team={team} data={mockData()} />)
 		expect(screen.getByText(/if USA wins Group A, the winner of Group G/)).toBeInTheDocument()
 	})
 
@@ -219,14 +226,14 @@ describe('GroupStage', () => {
 				r16: { status: 'upcoming', opponentDesc: 'Winner Match 94' },
 			},
 		})
-		render(<GroupStage team={team} data={mockData()} />)
+		renderWithQuery(<GroupStage team={team} data={mockData()} />)
 		expect(screen.getByText(/depends on results from multiple R32 matches/)).toBeInTheDocument()
 	})
 
 	// ── Disclaimer ─────────────────────────────────────────────────────
 
 	it('renders disclaimer note with team name', () => {
-		render(<GroupStage team={mockTeam()} data={mockData()} />)
+		renderWithQuery(<GroupStage team={mockTeam()} data={mockData()} />)
 		expect(screen.getByText(/Bracket path, opponent scenarios, and venues assume USA finishes 1st/)).toBeInTheDocument()
 	})
 
@@ -234,8 +241,7 @@ describe('GroupStage', () => {
 
 	it('handles missing group data gracefully', () => {
 		const data = mockData({ groups: {} })
-		render(<GroupStage team={mockTeam()} data={data} />)
-		// Should still render section but no table
+		renderWithQuery(<GroupStage team={mockTeam()} data={data} />)
 		expect(screen.queryByText('Group A')).toBeFalsy()
 	})
 })
