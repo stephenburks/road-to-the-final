@@ -87,6 +87,14 @@
 	flex-shrink: 0;
 }
 
+.probNote {
+	margin: 8px 0 0;
+	font-size: 11px;
+	color: var(--text-lo);
+	font-style: italic;
+	max-width: 640px;
+}
+
 .subtext {
 	font-family: var(--font-display);
 	font-weight: 400;

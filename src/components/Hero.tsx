@@ -149,7 +149,16 @@ export default function Hero({ team, activeStage, isHistorical, groupWinProb }: 
 
 	const goalsFor = record?.stats?.pointsFor
 
+	const probNote = !team.eliminated && !isHistorical
+		? source === 'market'
+			? 'Advancement probabilities from Polymarket prediction markets — crowd-sourced estimates based on live trading.'
+			: 'Advancement probabilities estimated from FIFA rankings and simulated outcomes. No Polymarket data available for this team.'
+		: isHistorical
+			? 'Probabilities reflect the selected historical snapshot — not current market prices.'
+			: null
+
 	const statGridEl = !team.eliminated ? (
+		<>
 		<div className={styles.statGrid} role="list" aria-label="Tournament statistics and advancement probabilities">
 
 			{/* ── Goals ── */}
@@ -194,7 +203,10 @@ export default function Hero({ team, activeStage, isHistorical, groupWinProb }: 
 				</div>
 			))}
 		</div>
-	) : null
+		{probNote && (
+			<p className={styles.probNote}>{probNote}</p>
+		)}
+	</>) : null
 
 	return (
 		<div className="wrap">
