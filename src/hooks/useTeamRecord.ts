@@ -94,16 +94,17 @@ async function fetchTeamRecordWithLiveFallback(slug: string, signal: AbortSignal
 		}
 	}
 
-	// When ESPN returns no nextEvent the team is probably playing right now.
-	// Check the live scoreboard so we can show the current match in the Hero.
-	if (!nextEvent) {
+	// The team API's scores lag during live matches. Always cross-check with the
+	// scoreboard when the game is live or when nextEvent is missing (team is playing now).
+	if (!nextEvent || isLive) {
 		const todayYMD = new Date().toISOString().slice(0, 10).replace(/-/g, '')
 		const sbRes = await fetch(`${ESPN_SCOREBOARD_URL}?dates=${todayYMD}&_=${Date.now()}`, { signal })
 		if (sbRes.ok) {
 			const sbJson = await sbRes.json()
 			for (const event of (sbJson?.events ?? [])) {
 				const comp = event.competitions?.[0]
-				if (comp?.status?.type?.state !== 'in') continue
+				const state = comp?.status?.type?.state
+				if (state !== 'in') continue
 				const competitors = comp?.competitors ?? []
 				const myComp = competitors.find(
 					(cp: { team?: { id?: string | number } }) => String(cp.team?.id) === String(team.id)
@@ -112,25 +113,33 @@ async function fetchTeamRecordWithLiveFallback(slug: string, signal: AbortSignal
 
 				const home = competitors.find((cp: { homeAway: string }) => cp.homeAway === 'home')
 				const away = competitors.find((cp: { homeAway: string }) => cp.homeAway === 'away')
-				const opp = home?.team?.id === team.id ? away : home
-				const broadcasts: string[] = []
-				for (const b of (comp?.geoBroadcasts ?? [])) {
-					if (b.media?.shortName) broadcasts.push(b.media.shortName)
-				}
+				const liveScore = `${parseInt(home?.score, 10) || 0}-${parseInt(away?.score, 10) || 0}`
+				const liveClock = comp?.status?.type?.detail || 'LIVE'
 
-				isLive = true
-				nextEvent = {
-					opponent: opp?.team?.displayName ?? 'TBD',
-					opponentFlag: opp?.team?.abbreviation
-						? (ESPN_FLAG_MAP[opp.team.abbreviation] ?? '🏳️')
-						: '🏳️',
-					date: event.date ?? '',
-					venue: comp?.venue?.fullName ?? '',
-					broadcasts,
-					isHome: home?.team?.id === team.id,
-					isLive: true,
-					clock: comp?.status?.type?.detail || 'LIVE',
-					score: `${parseInt(home?.score, 10) || 0}-${parseInt(away?.score, 10) || 0}`,
+				if (nextEvent) {
+					// Update stale team-API score with real-time scoreboard data
+					nextEvent.score = liveScore
+					nextEvent.clock = liveClock
+				} else {
+					const opp = home?.team?.id === team.id ? away : home
+					const broadcasts: string[] = []
+					for (const b of (comp?.geoBroadcasts ?? [])) {
+						if (b.media?.shortName) broadcasts.push(b.media.shortName)
+					}
+					isLive = true
+					nextEvent = {
+						opponent: opp?.team?.displayName ?? 'TBD',
+						opponentFlag: opp?.team?.abbreviation
+							? (ESPN_FLAG_MAP[opp.team.abbreviation] ?? '🏳️')
+							: '🏳️',
+						date: event.date ?? '',
+						venue: comp?.venue?.fullName ?? '',
+						broadcasts,
+						isHome: home?.team?.id === team.id,
+						isLive: true,
+						clock: liveClock,
+						score: liveScore,
+					}
 				}
 				break
 			}
