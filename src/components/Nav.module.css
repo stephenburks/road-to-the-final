@@ -43,6 +43,10 @@
   background: rgba(99, 102, 241, 0.15);
 }
 
+.currentSection {
+  border-bottom: 2px solid var(--accent, #6366f1);
+}
+
 .badge {
   margin-left: auto;
   display: flex;

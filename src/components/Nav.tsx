@@ -1,4 +1,4 @@
-import { useCallback } from 'react'
+import { useCallback, useEffect, useState } from 'react'
 import type { View } from '../hooks/useAppState'
 import styles from './Nav.module.css'
 
@@ -26,6 +26,25 @@ function scrollToSection(id: string) {
  * Section links navigate to team view first when not already there.
  */
 export default function Nav({ view, onViewChange, isHistorical }: NavProps) {
+	const [activeSection, setActiveSection] = useState<string | null>(null)
+
+	useEffect(() => {
+		if (view !== 'team') { setActiveSection(null); return }
+		const sections = SECTION_LINKS.map(({ id }) => document.getElementById(id)).filter(Boolean) as HTMLElement[]
+		const observer = new IntersectionObserver(
+			entries => {
+				// Pick the visible entry closest to the top of the viewport
+				const visible = entries
+					.filter(e => e.isIntersecting)
+					.sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top)
+				if (visible.length > 0) setActiveSection(visible[0].target.id)
+			},
+			{ rootMargin: '-10% 0px -60% 0px', threshold: 0 }
+		)
+		sections.forEach(el => observer.observe(el))
+		return () => observer.disconnect()
+	}, [view])
+
 	const handleSectionClick = useCallback((sectionId: string) => {
 		if (view !== 'team') {
 			onViewChange('team')
@@ -57,8 +76,9 @@ export default function Nav({ view, onViewChange, isHistorical }: NavProps) {
 				{SECTION_LINKS.map(({ id, label }) => (
 					<button
 						key={id}
-						className={`${styles.link} ${view === 'team' ? styles.active : ''}`}
+						className={`${styles.link} ${view === 'team' ? styles.active : ''} ${activeSection === id ? styles.currentSection : ''}`}
 						onClick={() => handleSectionClick(id)}
+						aria-current={activeSection === id ? 'location' : undefined}
 					>
 						{label}
 					</button>
