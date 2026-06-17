@@ -1,3 +1,9 @@
+.groupStagePlaceholder {
+  font-size: 12px;
+  color: var(--text-dim);
+  padding: 16px 0;
+}
+
 /* ── Path Difficulty ── */
 .schedDiff {
   display: flex;

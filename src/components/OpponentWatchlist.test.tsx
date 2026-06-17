@@ -135,12 +135,13 @@ describe('OpponentWatchlist', () => {
 
 	// ── group_stage: returns null ─────────────────────────────────────
 
-	it('returns null for group_stage', () => {
+	it('shows a placeholder section for group_stage so the nav scroll target exists', () => {
 		const team = mockTeam({ currentStage: 'group_stage' })
 		const { container } = render(
 			<OpponentWatchlist team={team} activeStage="group_stage" data={mockData()} />
 		)
-		expect(container.innerHTML).toBe('')
+		expect(container.querySelector('#opponents')).toBeTruthy()
+		expect(container.textContent).toMatch(/knockout opponents will appear/)
 	})
 
 	// ── Late stage: FutureStagePlaceholder ─────────────────────────────

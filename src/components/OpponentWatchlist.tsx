@@ -85,7 +85,18 @@ export default function OpponentWatchlist({
 	const stagePath = team.path?.[activeStage]
 	const schedDiff = computeScheduleDifficulty(team)
 
-	if (activeStage === 'group_stage') return null
+	if (activeStage === 'group_stage') {
+		return (
+			<section id="opponents" aria-labelledby="opponents-heading" className="wrap section">
+				<SectionLabel text="Opponents" />
+				<h2 id="opponents-heading" className="sr-only">Opponents</h2>
+				<p className={styles.groupStagePlaceholder}>
+					Possible knockout opponents will appear here once the group stage bracket is set.
+					Group opponents are shown in the Group Stage Tracker above.
+				</p>
+			</section>
+		)
+	}
 
 	const oppData =
 		activeStage === 'r32' || activeStage === 'r16' ? team.possibleOpponents[activeStage] : undefined
