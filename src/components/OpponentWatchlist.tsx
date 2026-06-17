@@ -1,10 +1,11 @@
 import { STAGE_LABELS } from '../constants'
 import type { Stage, Team, AppData, Scenario } from '../types'
-import { formatDate, getFeederGroup } from '../utils'
+import { formatDate, getFeederGroup, computeScheduleDifficulty } from '../utils'
 import SectionLabel from './ui/SectionLabel'
 import FeederGroupPanel from './ui/FeederGroupPanel'
 import OpponentCard from './opponents/OpponentCard'
 import MatchupMatrix from './opponents/MatchupMatrix'
+import DiffPips from './opponents/DiffPips'
 import styles from './OpponentWatchlist.module.css'
 
 function FutureStagePlaceholder({
@@ -82,6 +83,7 @@ export default function OpponentWatchlist({
 }) {
 
 	const stagePath = team.path?.[activeStage]
+	const schedDiff = computeScheduleDifficulty(team)
 
 	if (activeStage === 'group_stage') return null
 
@@ -110,6 +112,14 @@ export default function OpponentWatchlist({
 				{isLateStage ? 'Path ahead in the ' : 'Possible opponents in the '}
 				{STAGE_LABELS[activeStage]}
 			</h2>
+
+			{schedDiff && (
+				<div className={styles.schedDiff} data-diff={schedDiff.score} aria-label={`Path difficulty: ${schedDiff.label}`}>
+					<span className={styles.schedDiffLabel}>Path Difficulty</span>
+					<DiffPips level={schedDiff.score} />
+					<span className={styles.schedDiffText}>{schedDiff.label}</span>
+				</div>
+			)}
 
 			{stagePath && <VenueBanner stagePath={stagePath} activeStage={activeStage} />}
 

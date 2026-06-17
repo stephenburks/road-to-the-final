@@ -1,5 +1,5 @@
 import { STAGE_ORDER } from './constants'
-import type { Stage, Team, AppData, GroupData } from './types'
+import type { Stage, Team, AppData, GroupData, Opponent, Scenario } from './types'
 
 /**
  * Days until a given date string (YYYY-MM-DD or ISO).
@@ -125,6 +125,42 @@ export function getGroupTag(teamName: string, data: AppData | null): { group: st
 		if (s) return { group: key, pos: s.pos }
 	}
 	return null
+}
+
+const DIFF_LABELS: Record<number, string> = { 1: 'Easy', 2: 'Favorable', 3: 'Moderate', 4: 'Tough', 5: 'Gauntlet' }
+
+function extractOpponentDifficulties(opps: Opponent[], baseWeight = 1): { difficulty: number; weight: number }[] {
+	return opps
+		.filter(o => o.difficulty != null)
+		.map(o => ({ difficulty: o.difficulty!, weight: (o.pct ?? 100) * baseWeight }))
+}
+
+/**
+ * Compute a weighted average difficulty score across all possible r32 + r16 opponents.
+ * Weights are proportional to matchup probability (pct field).
+ */
+export function computeScheduleDifficulty(team: Team): { score: number; label: string } | null {
+	const entries: { difficulty: number; weight: number }[] = []
+
+	for (const bucket of [team.possibleOpponents?.r32, team.possibleOpponents?.r16]) {
+		if (!bucket) continue
+		if (Array.isArray(bucket)) {
+			entries.push(...extractOpponentDifficulties(bucket as Opponent[]))
+		} else if ('scenarios' in bucket) {
+			for (const s of (bucket as { scenarios: Scenario[] }).scenarios) {
+				entries.push(...extractOpponentDifficulties(s.opponents, s.probability ?? 1))
+			}
+		}
+	}
+
+	if (entries.length === 0) return null
+
+	const totalWeight = entries.reduce((sum, e) => sum + e.weight, 0)
+	if (totalWeight === 0) return null
+
+	const avg = entries.reduce((sum, e) => sum + e.difficulty * e.weight, 0) / totalWeight
+	const score = Math.min(5, Math.max(1, Math.round(avg)))
+	return { score, label: DIFF_LABELS[score] ?? 'Moderate' }
 }
 
 export function getFeederGroup(team: Team, stage: Stage, data: AppData | null): { key: string; group: GroupData } | null {

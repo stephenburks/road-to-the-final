@@ -1,3 +1,30 @@
+/* ── Path Difficulty ── */
+.schedDiff {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+
+.schedDiffLabel {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  letter-spacing: 0.08em;
+  color: var(--text-dim);
+  text-transform: uppercase;
+}
+
+.schedDiffText {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 700;
+}
+
+[data-diff="1"] .schedDiffText, [data-diff="2"] .schedDiffText { color: var(--green); }
+[data-diff="3"] .schedDiffText { color: var(--amber); }
+[data-diff="4"] .schedDiffText { color: var(--orange); }
+[data-diff="5"] .schedDiffText { color: var(--red); }
+
 /* ── Banner ── */
 .banner {
   border-radius: 8px;
