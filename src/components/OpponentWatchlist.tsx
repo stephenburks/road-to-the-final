@@ -1,4 +1,3 @@
-import { useMemo } from 'react'
 import { STAGE_LABELS } from '../constants'
 import type { Stage, Team, AppData, Scenario } from '../types'
 import { formatDate, getFeederGroup } from '../utils'
@@ -74,18 +73,13 @@ export default function OpponentWatchlist({
 	team,
 	activeStage,
 	data,
+	eliminatedTeamIds = new Set(),
 }: {
 	team: Team
 	activeStage: Stage
 	data: AppData
+	eliminatedTeamIds?: Set<string>
 }) {
-	const eliminatedTeamIds = useMemo(() => {
-		const set = new Set<string>()
-		for (const t of data?.teams ?? []) {
-			if (t.eliminated) set.add(t.id)
-		}
-		return set
-	}, [data?.teams])
 
 	const stagePath = team.path?.[activeStage]
 

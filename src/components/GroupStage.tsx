@@ -1,4 +1,3 @@
-import { useMemo } from 'react'
 import type { Team, AppData } from '../types'
 import { getFeederGroup } from '../utils'
 import { useLiveScores } from '../hooks/useLiveScores'
@@ -8,19 +7,11 @@ import FeederGroupPanel from './ui/FeederGroupPanel'
 import MatchCard from './groups/MatchCard'
 import styles from './GroupStage.module.css'
 
-export default function GroupStage({ team, data }: { team: Team; data: AppData }) {
+export default function GroupStage({ team, data, eliminatedTeamIds = new Set() }: { team: Team; data: AppData; eliminatedTeamIds?: Set<string> }) {
 	const myGroup = data?.groups?.[team.group]
 	const feeder = getFeederGroup(team, 'r16', data)
 
 	const livePatches = useLiveScores(data.dailyMatches ?? {}, data.teams, data.isHistorical)
-
-	const eliminatedTeamIds = useMemo(() => {
-		const set = new Set<string>()
-		for (const t of (data.teams ?? [])) {
-			if (t.eliminated) set.add(t.id)
-		}
-		return set
-	}, [data.teams])
 
 	const resolveLiveData = (opponentName: string) => {
 		if (!livePatches) return undefined

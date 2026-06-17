@@ -70,6 +70,14 @@ export default function App() {
 
   const activeStage = useMemo(() => resolveActiveStage(selectedStage, team), [selectedStage, team])
 
+	const eliminatedTeamIds = useMemo(() => {
+		const set = new Set<string>()
+		for (const t of (data?.teams ?? [])) {
+			if (t.eliminated) set.add(t.id)
+		}
+		return set
+	}, [data?.teams])
+
 	const groupWinProb = useMemo(() => {
 		if (!team || !data?.groups) return undefined
 		const group = data.groups[team.group]
@@ -173,13 +181,13 @@ export default function App() {
 			{!team.eliminated && <ErrorBoundary name="upcoming matches"><GamesToWatch team={team} data={data} /></ErrorBoundary>}
 			<ErrorBoundary name="bracket"><RoadBracket team={team} activeStage={activeStage} onStageSelect={handleStageSelect} /></ErrorBoundary>
 
-          {showGroups && !showElim && <ErrorBoundary name="group stage"><GroupStage team={team} data={data} /></ErrorBoundary>}
+          {showGroups && !showElim && <ErrorBoundary name="group stage"><GroupStage team={team} data={data} eliminatedTeamIds={eliminatedTeamIds} /></ErrorBoundary>}
 
           {showElim ? (
             <EliminatedView team={team} />
           ) : (
             <>
-              <ErrorBoundary name="opponent watchlist"><OpponentWatchlist team={team} activeStage={activeStage} data={data} /></ErrorBoundary>
+              <ErrorBoundary name="opponent watchlist"><OpponentWatchlist team={team} activeStage={activeStage} data={data} eliminatedTeamIds={eliminatedTeamIds} /></ErrorBoundary>
               <ErrorBoundary name="schedule"><ScheduledMatches team={team} /></ErrorBoundary>
             </>
           )}
