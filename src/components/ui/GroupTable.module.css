@@ -153,3 +153,36 @@ tbody td {
 .probLabel { min-width: 28px; }
 .probLabelLow  { color: var(--text-dim); }
 .probLabelHigh { color: #a5b4fc; }
+
+.liveMatch {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 8px;
+  margin-bottom: 6px;
+  background: rgba(34, 197, 94, 0.06);
+  border: 1px solid rgba(34, 197, 94, 0.18);
+  border-radius: 5px;
+  font-family: var(--font-mono);
+  font-size: 10px;
+}
+
+.liveDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--green);
+  box-shadow: 0 0 5px var(--green);
+  flex-shrink: 0;
+  animation: blink 2s ease-in-out infinite;
+}
+
+.liveLabel {
+  color: var(--green);
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.liveScore {
+  color: var(--text-hi);
+}

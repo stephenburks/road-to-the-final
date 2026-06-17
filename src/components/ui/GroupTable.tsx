@@ -1,15 +1,34 @@
 import type { GroupData } from '../../types'
+import type { LiveMatchPatch } from '../../hooks/useLiveScores'
 import FlagIcon from './FlagIcon'
 import styles from './GroupTable.module.css'
 
-export function GroupTable({ groupKey, groupData, highlightTeamId, eliminatedTeamIds }: {
+export function GroupTable({ groupKey, groupData, highlightTeamId, eliminatedTeamIds, livePatches }: {
 	groupKey: string
 	groupData: GroupData
 	highlightTeamId: string | null
 	eliminatedTeamIds?: Set<string>
+	livePatches?: Map<string, LiveMatchPatch> | null
 }) {
 	const probs = groupData.winProbabilities ?? {}
 	const standings = groupData.standings ?? []
+
+	// Find any in-progress match between teams in this group
+	const groupTeamIds = new Set(standings.map(r => r.teamId).filter(Boolean) as string[])
+	const liveInGroup = (() => {
+		if (!livePatches || groupTeamIds.size === 0) return null
+		for (const [key, patch] of livePatches) {
+			if (patch.status !== 'IN_PROGRESS') continue
+			const [homeId, awayId] = key.split(':')
+			if (!groupTeamIds.has(homeId) || !groupTeamIds.has(awayId)) continue
+			// livePatches has both home:away and away:home — only process one direction
+			if (homeId > awayId) continue
+			const home = standings.find(r => r.teamId === homeId)
+			const away = standings.find(r => r.teamId === awayId)
+			if (home && away) return { home, away, patch }
+		}
+		return null
+	})()
 
 	// Compute clinched: a team has mathematically secured top-2 if their
 	// current points exceed the maximum possible points of the 3rd-place team.
@@ -28,6 +47,16 @@ export function GroupTable({ groupKey, groupData, highlightTeamId, eliminatedTea
 				<span className={styles.groupLetter}>Group {groupKey}</span>
 				<span className={styles.tableTitle}>Standings</span>
 			</div>
+
+			{liveInGroup && (
+				<div className={styles.liveMatch} role="status" aria-label={`Live match in progress`}>
+					<span className={styles.liveDot} aria-hidden="true" />
+					<span className={styles.liveLabel}>LIVE {liveInGroup.patch.clock || ''}</span>
+					<span className={styles.liveScore}>
+						{liveInGroup.home.team} {liveInGroup.patch.homeScore}–{liveInGroup.patch.awayScore} {liveInGroup.away.team}
+					</span>
+				</div>
+			)}
 
 			<table aria-label={`Group ${groupKey} standings`}>
 				<thead>

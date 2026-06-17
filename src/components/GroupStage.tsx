@@ -64,6 +64,7 @@ export default function GroupStage({ team, data, eliminatedTeamIds = new Set() }
 						groupData={myGroup}
 						highlightTeamId={team.id}
 						eliminatedTeamIds={eliminatedTeamIds}
+						livePatches={livePatches}
 					/>
 				)}
 				{feeder && (
