@@ -35,6 +35,11 @@ export const LIVE_DATA_URL  = `${BASE}data/world-cup-2026.json`
 export const MANIFEST_URL   = `${BASE}data/snapshots/manifest.json`
 export const SNAPSHOT_URL   = (date: string) => `${BASE}data/snapshots/${date}.json`
 
+export const ESPN_BASE           = 'https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world'
+export const ESPN_SCOREBOARD_URL = `${ESPN_BASE}/scoreboard`
+export const ESPN_TEAM_URL       = `${ESPN_BASE}/teams`
+export const ESPN_NEWS_URL       = `${ESPN_BASE}/news`
+
 /** Attribution */
 export const AUTHOR_NAME       = 'Stephen Burks'
 export const AUTHOR_GITHUB_URL = 'https://github.com/stephenburks/'
