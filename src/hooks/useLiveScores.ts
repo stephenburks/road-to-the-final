@@ -39,6 +39,11 @@ export function useLiveScores(
 ): Map<string, LiveMatchPatch> | null {
 	const [patches, setPatches] = useState<Map<string, LiveMatchPatch> | null>(null)
 	const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null)
+	const teamsRef = useRef(teams)
+
+	useEffect(() => {
+		teamsRef.current = teams
+	}, [teams])
 
 	useEffect(() => {
 		if (isHistorical) {
@@ -47,15 +52,14 @@ export function useLiveScores(
 		}
 
 		const today = localDateStr()
-
 		const todayMatches = dailyMatches?.[today] ?? []
-		const liveMatches = todayMatches.filter((m: { status: string }) => m.status === 'IN_PROGRESS')
 
-		if (liveMatches.length === 0) {
+		if (todayMatches.length === 0) {
 			setPatches(null)
-			if (intervalRef.current) { clearInterval(intervalRef.current); intervalRef.current = null }
 			return
 		}
+
+		let cancelled = false
 
 		async function poll() {
 			try {
@@ -63,7 +67,10 @@ export function useLiveScores(
 				const json = await res.json()
 				const events = json?.events ?? []
 
+				if (cancelled) return
+
 				const next = new Map<string, LiveMatchPatch>()
+				const currentTeams = teamsRef.current
 
 				for (const event of events) {
 					const eventDate = event.date?.split('T')[0]
@@ -77,8 +84,8 @@ export function useLiveScores(
 
 					if (!homeComp || !awayComp) continue
 
-					const homeTeam = teams.find(t => t.name === homeComp.team?.displayName)
-					const awayTeam = teams.find(t => t.name === awayComp.team?.displayName)
+					const homeTeam = currentTeams.find(t => t.name === homeComp.team?.displayName)
+					const awayTeam = currentTeams.find(t => t.name === awayComp.team?.displayName)
 
 					if (!homeTeam || !awayTeam) continue
 
@@ -89,9 +96,6 @@ export function useLiveScores(
 
 					if (matchStatus === 'SCHEDULED') continue
 
-					const key = `${homeTeam.id}:${awayTeam.id}`
-
-					// Parse scorers and cards from event details
 					const homeScorers: string[] = []
 					const awayScorers: string[] = []
 					const homeCards: Card[] = []
@@ -122,13 +126,12 @@ export function useLiveScores(
 						}
 					}
 
-					// Extract broadcasts
 					const broadcasts: string[] = []
 					for (const b of (competition?.geoBroadcasts ?? [])) {
 						if (b.media?.shortName) broadcasts.push(b.media.shortName)
 					}
 
-					next.set(key, {
+					const patch: LiveMatchPatch = {
 						homeScore: parseInt(homeComp.score, 10) || 0,
 						awayScore: parseInt(awayComp.score, 10) || 0,
 						clock,
@@ -138,18 +141,17 @@ export function useLiveScores(
 						homeCards,
 						awayCards,
 						broadcasts,
-					})
+					}
+
+					next.set(`${homeTeam.id}:${awayTeam.id}`, patch)
+					next.set(`${awayTeam.id}:${homeTeam.id}`, patch)
 				}
 
-				const stillLive = [...next.values()].some((p: LiveMatchPatch) => p.status === 'IN_PROGRESS')
-				setPatches(next)
+				if (cancelled) return
 
-				if (!stillLive && intervalRef.current) {
-					clearInterval(intervalRef.current)
-					intervalRef.current = null
-				}
-			} catch {
-				// Silently keep existing patches on error
+				setPatches(next.size > 0 ? next : null)
+			} catch (err) {
+				if (!cancelled) console.error('Live scores poll failed:', err)
 			}
 		}
 
@@ -157,9 +159,10 @@ export function useLiveScores(
 		intervalRef.current = setInterval(poll, 75000)
 
 		return () => {
+			cancelled = true
 			if (intervalRef.current) { clearInterval(intervalRef.current); intervalRef.current = null }
 		}
-	}, [dailyMatches, teams, isHistorical])
+	}, [dailyMatches, isHistorical])
 
 	return patches
 }

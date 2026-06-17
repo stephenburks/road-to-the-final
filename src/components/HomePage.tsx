@@ -114,27 +114,30 @@ export default function HomePage({ data, selectedTeamId, onTeamChange, onViewCha
 				</div>
 			</div>
 
-			{sections.map(({ key, date, matches }) => (
-				<section key={key} className={`wrap ${styles.section}`}>
-					<h2 className={styles.sectionHeading}>
-						{DAY_LABELS[key] ?? `Matches for ${date}`}
-						{matches.length > 0 && (
-							<span className={styles.matchCount}>{matches.length}</span>
-						)}
-					</h2>
-					{matches.length > 0 ? (
-						<div className={styles.matchGrid} role="list" aria-label={`${DAY_LABELS[key] ?? date} matches`}>
-							{matches.map((m, i) => (
-								<div key={`${m.homeTeam}-${m.awayTeam}-${i}`} role="listitem">
-									<MatchCard {...m} />
+			{sections.map(({ key, date, matches }) => {
+					const hasLiveMatch = matches.some(m => m.status === 'in_progress')
+					return (
+						<section key={key} className={`wrap ${styles.section}`}>
+							<h2 className={styles.sectionHeading}>
+								{DAY_LABELS[key] ?? `Matches for ${date}`}
+								{matches.length > 0 && (
+									<span className={styles.matchCount}>{matches.length}</span>
+								)}
+							</h2>
+							{matches.length > 0 ? (
+								<div className={styles.matchGrid} role="list" aria-label={`${DAY_LABELS[key] ?? date} matches`} aria-live={hasLiveMatch ? 'polite' : 'off'}>
+									{matches.map((m, i) => (
+										<div key={`${m.homeTeam}-${m.awayTeam}-${i}`} role="listitem">
+											<MatchCard {...m} />
+										</div>
+									))}
 								</div>
-							))}
-						</div>
-					) : (
-						<p className={styles.emptyState}>No matches scheduled for this date.</p>
-					)}
-				</section>
-			))}
+							) : (
+								<p className={styles.emptyState}>No matches scheduled for this date.</p>
+							)}
+						</section>
+					)
+				})}
 
 			<section className={`wrap ${styles.section}`}>
 				<NewsSection />

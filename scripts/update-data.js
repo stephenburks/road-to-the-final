@@ -2,7 +2,7 @@
 /**
  * update-data.js — Road to the Final · Smart Data Refresh
  * ─────────────────────────────────────────────────────────
- * Designed to run every 30 minutes via GitHub Actions with minimal API usage.
+ * Designed to run hourly via GitHub Actions with minimal API usage.
  * Only fully recalculates teams that played today or yesterday.
  * All other teams carry forward existing data unchanged.
  *
