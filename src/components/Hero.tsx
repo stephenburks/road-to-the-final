@@ -59,7 +59,7 @@ export default function Hero({ team, activeStage, isHistorical, groupWinProb }: 
 	const source = ap.source
 	const sourceLabel = isHistorical ? 'As of snapshot' : source === 'market' ? 'Polymarket' : 'Calculated'
 
-	const { record, nextEvent, error: teamRecordError } = useTeamRecord(team.id, isHistorical)
+	const { record, nextEvent, error: teamRecordError, loading: teamRecordLoading } = useTeamRecord(team.id, isHistorical)
 
 	const eyebrow = getEyebrow(team, activeStage, isHistorical)
 	const heading = getHeading(team)
@@ -69,7 +69,7 @@ export default function Hero({ team, activeStage, isHistorical, groupWinProb }: 
 		? (path.conditionNote ?? 'Venue assumes current group standing — may change.')
 		: null
 
-	const useTopRowLayout = !team.eliminated && !!nextEvent
+	const useTopRowLayout = !team.eliminated && (!!nextEvent || teamRecordLoading)
 
 	const textCol = (
 		<div className={styles.textCol}>
@@ -84,6 +84,9 @@ export default function Hero({ team, activeStage, isHistorical, groupWinProb }: 
 						<span className={styles.recordBadge} aria-label={`Record: ${record.summary.replace(/-/g, ' wins, ').replace(/-/g, ' draws, ')} losses`}>
 							{record.summary}
 						</span>
+					)}
+					{teamRecordLoading && !record && (
+						<span className={`${styles.recordBadge} ${styles.skeleton}`} aria-hidden="true" style={{ width: '56px', minHeight: '18px' }} />
 					)}
 					{teamRecordError && !record && (
 						<span className={styles.recordError}>Couldn&apos;t load record</span>
@@ -135,6 +138,12 @@ export default function Hero({ team, activeStage, isHistorical, groupWinProb }: 
 					{nextEvent.broadcasts.join(' / ')}
 				</div>
 			)}
+		</div>
+	) : teamRecordLoading ? (
+		<div className={`${styles.nextMatch} ${styles.skeleton}`} aria-hidden="true" role="presentation">
+			<div className={styles.skelLine} style={{ width: '80px', height: '10px', marginBottom: '10px' }} />
+			<div className={styles.skelLine} style={{ width: '100%', height: '24px', marginBottom: '8px' }} />
+			<div className={styles.skelLine} style={{ width: '70%', height: '12px' }} />
 		</div>
 	) : null
 
