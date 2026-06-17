@@ -1,5 +1,7 @@
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest'
 import { renderHook, waitFor } from '@testing-library/react'
+import { createElement } from 'react'
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { useTeamRecord } from './useTeamRecord'
 
 const MOCK_USA_RESPONSE = {
@@ -45,6 +47,13 @@ const MOCK_USA_RESPONSE = {
 	},
 }
 
+function createWrapper() {
+	const client = new QueryClient({ defaultOptions: { queries: { retry: false } } })
+	return function Wrapper({ children }: { children: React.ReactNode }) {
+		return createElement(QueryClientProvider, { client }, children)
+	}
+}
+
 describe('useTeamRecord', () => {
 	beforeEach(() => {
 		vi.stubGlobal('fetch', vi.fn())
@@ -59,7 +68,7 @@ describe('useTeamRecord', () => {
 			json: () => Promise.resolve(MOCK_USA_RESPONSE),
 		} as Response)
 
-		const { result } = renderHook(() => useTeamRecord('usa', false))
+		const { result } = renderHook(() => useTeamRecord('usa', false), { wrapper: createWrapper() })
 
 		expect(result.current.record).toBeNull()
 		expect(result.current.standingSummary).toBeNull()
@@ -71,7 +80,7 @@ describe('useTeamRecord', () => {
 			json: () => Promise.resolve(MOCK_USA_RESPONSE),
 		} as Response)
 
-		const { result } = renderHook(() => useTeamRecord('usa', false))
+		const { result } = renderHook(() => useTeamRecord('usa', false), { wrapper: createWrapper() })
 
 		await waitFor(() => {
 			expect(result.current.record).not.toBeNull()
@@ -87,7 +96,7 @@ describe('useTeamRecord', () => {
 			json: () => Promise.resolve(MOCK_USA_RESPONSE),
 		} as Response)
 
-		const { result } = renderHook(() => useTeamRecord('usa', false))
+		const { result } = renderHook(() => useTeamRecord('usa', false), { wrapper: createWrapper() })
 
 		await waitFor(() => {
 			expect(result.current.nextEvent).not.toBeNull()
@@ -104,7 +113,7 @@ describe('useTeamRecord', () => {
 			json: () => Promise.resolve(MOCK_USA_RESPONSE),
 		} as Response)
 
-		const { result } = renderHook(() => useTeamRecord('usa', true))
+		const { result } = renderHook(() => useTeamRecord('usa', true), { wrapper: createWrapper() })
 
 		expect(result.current.record).toBeNull()
 		expect(result.current.standingSummary).toBeNull()
@@ -117,7 +126,7 @@ describe('useTeamRecord', () => {
 			json: () => Promise.resolve(MOCK_USA_RESPONSE),
 		} as Response)
 
-		const { result } = renderHook(() => useTeamRecord('unknown_team', false))
+		const { result } = renderHook(() => useTeamRecord('unknown_team', false), { wrapper: createWrapper() })
 
 		expect(result.current.record).toBeNull()
 		expect(fetch).not.toHaveBeenCalled()
@@ -126,13 +135,12 @@ describe('useTeamRecord', () => {
 	it('handles fetch errors gracefully', async () => {
 		vi.mocked(fetch).mockRejectedValue(new Error('Network error'))
 
-		const { result } = renderHook(() => useTeamRecord('usa', false))
+		const { result } = renderHook(() => useTeamRecord('usa', false), { wrapper: createWrapper() })
 
 		await waitFor(() => {
 			expect(result.current.record).toBeNull()
 		})
 
-		// Should still have null values
 		expect(result.current.nextEvent).toBeNull()
 	})
 })
