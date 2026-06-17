@@ -70,8 +70,7 @@ describe('BracketCard', () => {
 			/>
 		)
 		expect(screen.getByText('Conditional')).toBeInTheDocument()
-		const condEl = screen.getByLabelText('Based on position')
-		expect(condEl).toBeTruthy()
+		expect(screen.getByText(/Based on position/)).toBeInTheDocument()
 	})
 
 	it('does not show conditional badge when path.conditional is false', () => {
