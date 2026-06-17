@@ -63,7 +63,7 @@ main {
 
 @media (max-width: 580px) {
   main {
-    overflow: hidden;
+    overflow-x: clip;
   }
 }
 
