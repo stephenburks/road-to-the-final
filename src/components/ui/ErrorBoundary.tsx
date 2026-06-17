@@ -3,6 +3,8 @@ import styles from './ErrorBoundary.module.css'
 
 interface ErrorBoundaryProps {
 	children: ReactNode
+	/** When set, renders a compact inline fallback instead of the full-page crash UI */
+	name?: string
 }
 
 interface ErrorBoundaryState {
@@ -39,6 +41,17 @@ export default class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBo
 
 	render() {
 		if (!this.state.error) return this.props.children
+
+		if (this.props.name) {
+			return (
+				<div className={styles.section} role="alert">
+					<span aria-hidden="true">⚠</span> Couldn&apos;t load {this.props.name}.{' '}
+					<button type="button" className={styles.inlineRetry} onClick={this.handleReload}>
+						Retry
+					</button>
+				</div>
+			)
+		}
 
 		return (
 			<div className={styles.container} role="alert">

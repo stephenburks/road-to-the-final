@@ -18,6 +18,7 @@ import Disclaimer       from './components/Disclaimer'
 import Footer           from './components/Footer'
 import Loading          from './components/ui/Loading'
 import EliminatedView   from './components/ui/EliminatedView'
+import ErrorBoundary    from './components/ui/ErrorBoundary'
 import HomePage         from './components/HomePage'
 import StandingsPage    from './components/StandingsPage'
 import styles           from './App.module.css'
@@ -168,21 +169,21 @@ export default function App() {
             <StageTabs team={team} selectedStage={activeStage} onSelect={handleStageSelect} />
           </div>
 
-			<Hero team={team} activeStage={activeStage} isHistorical={isHistorical} groupWinProb={groupWinProb} />
-			{!team.eliminated && <GamesToWatch team={team} data={data} />}
-			<RoadBracket team={team} activeStage={activeStage} onStageSelect={handleStageSelect} />
+			<ErrorBoundary name="team overview"><Hero team={team} activeStage={activeStage} isHistorical={isHistorical} groupWinProb={groupWinProb} /></ErrorBoundary>
+			{!team.eliminated && <ErrorBoundary name="upcoming matches"><GamesToWatch team={team} data={data} /></ErrorBoundary>}
+			<ErrorBoundary name="bracket"><RoadBracket team={team} activeStage={activeStage} onStageSelect={handleStageSelect} /></ErrorBoundary>
 
-          {showGroups && !showElim && <GroupStage team={team} data={data} />}
+          {showGroups && !showElim && <ErrorBoundary name="group stage"><GroupStage team={team} data={data} /></ErrorBoundary>}
 
           {showElim ? (
             <EliminatedView team={team} />
           ) : (
             <>
-              <OpponentWatchlist team={team} activeStage={activeStage} data={data} />
-              <ScheduledMatches team={team} />
+              <ErrorBoundary name="opponent watchlist"><OpponentWatchlist team={team} activeStage={activeStage} data={data} /></ErrorBoundary>
+              <ErrorBoundary name="schedule"><ScheduledMatches team={team} /></ErrorBoundary>
             </>
           )}
-          <Roster players={rosterPlayers} loading={rosterLoading} />
+          <ErrorBoundary name="squad roster"><Roster players={rosterPlayers} loading={rosterLoading} /></ErrorBoundary>
         </main>
       )}
 

@@ -5,6 +5,7 @@ import { useLiveScores, type LiveMatchPatch } from '../hooks/useLiveScores'
 import { localDateStr } from '../utils'
 import MatchCard from './groups/MatchCard'
 import NewsSection from './NewsSection'
+import ErrorBoundary from './ui/ErrorBoundary'
 import styles from './HomePage.module.css'
 
 interface HomePageProps {
@@ -137,7 +138,7 @@ export default function HomePage({ data, selectedTeamId, onTeamChange, onViewCha
 				})}
 
 			<section className={`wrap ${styles.section}`}>
-				<NewsSection />
+				<ErrorBoundary name="news"><NewsSection /></ErrorBoundary>
 			</section>
 		</div>
 	)
