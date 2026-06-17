@@ -1,6 +1,7 @@
 import { useMemo } from 'react'
 import type { Team, AppData, DailyMatch } from '../types'
 import { GROUP_SCHEDULE, MATCH_DATES } from '../data/tournamentSchedule'
+import { useLiveScores, type LiveMatchPatch } from '../hooks/useLiveScores'
 import MatchCard from './groups/MatchCard'
 import styles from './GamesToWatch.module.css'
 
@@ -11,11 +12,16 @@ function dateStr(daysOffset = 0): string {
 	return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`
 }
 
-function enrich(match: DailyMatch, teams: AppData['teams']) {
+function enrich(match: DailyMatch, teams: AppData['teams'], livePatch?: LiveMatchPatch) {
 	const homeTeam = teams.find((t) => t.id === match.homeId)
 	const awayTeam = teams.find((t) => t.id === match.awayId)
 	const homeResult = homeTeam?.groupResults?.find((g) => g.opponent === match.awayTeam)
 	const awayResult = awayTeam?.groupResults?.find((g) => g.opponent === match.homeTeam)
+
+	const effectiveStatus = livePatch?.status ?? match.status
+	const effectiveScore = livePatch
+		? `${livePatch.homeScore}-${livePatch.awayScore}`
+		: match.status !== 'SCHEDULED' ? `${match.homeScore}-${match.awayScore}` : null
 
 	return {
 		mode: 'neutral' as const,
@@ -25,20 +31,21 @@ function enrich(match: DailyMatch, teams: AppData['teams']) {
 		awayTeam: match.awayTeam,
 		awayFlag: match.awayFlag,
 		awayId: match.awayId,
-		score: match.status !== 'SCHEDULED' ? `${match.homeScore}-${match.awayScore}` : null,
+		score: effectiveScore,
 		status:
-			match.status === 'FINISHED'
+			effectiveStatus === 'FINISHED'
 				? ('finished' as const)
-				: match.status === 'IN_PROGRESS'
+				: effectiveStatus === 'IN_PROGRESS'
 					? ('in_progress' as const)
 					: ('upcoming' as const),
+		clock: livePatch?.clock ?? match.clock,
 		date: match.date,
 		time: match.time,
 		broadcasts: match.broadcasts,
-		homeScorers: homeResult?.scorers ?? [],
-		awayScorers: awayResult?.scorers ?? [],
-		homeCards: homeResult?.cards ?? [],
-		awayCards: awayResult?.cards ?? [],
+		homeScorers: livePatch?.homeScorers ?? homeResult?.scorers ?? [],
+		awayScorers: livePatch?.awayScorers ?? awayResult?.scorers ?? [],
+		homeCards: livePatch?.homeCards ?? homeResult?.cards ?? [],
+		awayCards: livePatch?.awayCards ?? awayResult?.cards ?? [],
 	}
 }
 
@@ -47,7 +54,7 @@ interface WatchMatch {
 	note: string
 }
 
-function findGroupWatchMatches(team: Team, data: AppData, targetDates: string[]): WatchMatch[] {
+function findGroupWatchMatches(team: Team, data: AppData, targetDates: string[], livePatches: Map<string, LiveMatchPatch> | null): WatchMatch[] {
 	const groupLetter = team.group
 	const groupStandings = data.groups?.[groupLetter]?.standings ?? []
 	const groupTeamIds = new Set(groupStandings.map((s) => s.teamId).filter(Boolean) as string[])
@@ -56,13 +63,11 @@ function findGroupWatchMatches(team: Team, data: AppData, targetDates: string[])
 	for (const date of targetDates) {
 		const matches = data.dailyMatches?.[date] ?? []
 		for (const match of matches) {
-			// Only matches where BOTH teams are in the same group
 			if (!groupTeamIds.has(match.homeId) || !groupTeamIds.has(match.awayId)) continue
-			// Exclude matches involving the selected team (already shown elsewhere)
 			if (match.homeId === team.id || match.awayId === team.id) continue
-
+			const livePatch = livePatches?.get(`${match.homeId}:${match.awayId}`)
 			results.push({
-				match: enrich(match, data.teams),
+				match: enrich(match, data.teams, livePatch),
 				note: `This result affects ${team.name}'s group standing`,
 			})
 		}
@@ -70,12 +75,11 @@ function findGroupWatchMatches(team: Team, data: AppData, targetDates: string[])
 	return results
 }
 
-function findKnockoutWatchMatches(team: Team, data: AppData, _targetDates: string[]): WatchMatch[] {
+function findKnockoutWatchMatches(team: Team, data: AppData, _targetDates: string[], livePatches: Map<string, LiveMatchPatch> | null): WatchMatch[] {
 	const path = team.path?.[team.currentStage ?? 'r32']
 	const desc = path?.opponentDesc ?? ''
 	const results: WatchMatch[] = []
 
-	// "Winner Match N" pattern — show regardless of date (upcoming feeder match)
 	const matchNumM = desc.match(/Winner\s+Match\s+(\d+)/i)
 	if (matchNumM) {
 		const matchNum = parseInt(matchNumM[1], 10)
@@ -83,8 +87,9 @@ function findKnockoutWatchMatches(team: Team, data: AppData, _targetDates: strin
 		if (matchDate) {
 			const dayMatches = data.dailyMatches?.[matchDate] ?? []
 			for (const match of dayMatches) {
+				const livePatch = livePatches?.get(`${match.homeId}:${match.awayId}`)
 				results.push({
-					match: enrich(match, data.teams),
+					match: enrich(match, data.teams, livePatch),
 					note: `Winner faces ${team.name} in ${team.currentStage?.toUpperCase() || 'next round'}`,
 				})
 			}
@@ -92,7 +97,6 @@ function findKnockoutWatchMatches(team: Team, data: AppData, _targetDates: strin
 		return results
 	}
 
-	// "Winner Group X" or "Runner-up Group X" pattern — show upcoming group matches
 	const groupM = desc.match(/(Winner|Runner-up)\s+Group\s+([A-L])/i)
 	if (groupM) {
 		const oppGroup = groupM[2].toUpperCase()
@@ -104,8 +108,9 @@ function findKnockoutWatchMatches(team: Team, data: AppData, _targetDates: strin
 			for (const match of dayMatches) {
 				const scheduleIds = new Set(schedules.map((s) => [s.h, s.a]).flat())
 				if (scheduleIds.has(match.homeId) || scheduleIds.has(match.awayId)) {
+					const livePatch = livePatches?.get(`${match.homeId}:${match.awayId}`)
 					results.push({
-						match: enrich(match, data.teams),
+						match: enrich(match, data.teams, livePatch),
 						note: `Decides ${team.name}'s next opponent in ${team.currentStage?.toUpperCase() || 'next round'}`,
 					})
 				}
@@ -123,6 +128,8 @@ interface GamesToWatchProps {
 }
 
 export default function GamesToWatch({ team, data }: GamesToWatchProps) {
+	const livePatches = useLiveScores(data.dailyMatches ?? {}, data.teams, data.isHistorical)
+
 	const watchMatches = useMemo<WatchMatch[]>(() => {
 		const today = dateStr(0)
 		const tomorrow = dateStr(1)
@@ -131,10 +138,10 @@ export default function GamesToWatch({ team, data }: GamesToWatchProps) {
 		const isGroupStage = team.currentStage === 'group_stage'
 
 		if (isGroupStage) {
-			return findGroupWatchMatches(team, data, targetDates)
+			return findGroupWatchMatches(team, data, targetDates, livePatches)
 		}
-		return findKnockoutWatchMatches(team, data, targetDates)
-	}, [team, data])
+		return findKnockoutWatchMatches(team, data, targetDates, livePatches)
+	}, [team, data, livePatches])
 
 	if (watchMatches.length === 0) return null
 

@@ -1,7 +1,13 @@
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest'
 import { render, screen } from '@testing-library/react'
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import GamesToWatch from './GamesToWatch'
 import type { Team, AppData } from '../types'
+
+function renderWithQuery(ui: React.ReactElement) {
+	const client = new QueryClient({ defaultOptions: { queries: { retry: false } } })
+	return render(<QueryClientProvider client={client}>{ui}</QueryClientProvider>)
+}
 
 function mockTeam(overrides: Partial<Team> = {}): Team {
 	return {
@@ -82,7 +88,7 @@ describe('GamesToWatch', () => {
 	})
 
 	it('returns null when no group matches for today/tomorrow', () => {
-		const { container } = render(
+		const { container } = renderWithQuery(
 			<GamesToWatch team={mockTeam()} data={mockData({})} />
 		)
 		expect(container.firstChild).toBeNull()
@@ -100,7 +106,7 @@ describe('GamesToWatch', () => {
 			],
 		}
 
-		render(<GamesToWatch team={mockTeam()} data={mockData(dailyMatches)} />)
+		renderWithQuery(<GamesToWatch team={mockTeam()} data={mockData(dailyMatches)} />)
 
 		expect(screen.getByText('Games to Watch')).toBeInTheDocument()
 		expect(screen.getByText(/Australia/)).toBeInTheDocument()
@@ -120,7 +126,7 @@ describe('GamesToWatch', () => {
 			],
 		}
 
-		const { container } = render(
+		const { container } = renderWithQuery(
 			<GamesToWatch team={mockTeam()} data={mockData(dailyMatches)} />
 		)
 		expect(container.firstChild).toBeNull()
@@ -138,7 +144,7 @@ describe('GamesToWatch', () => {
 			],
 		}
 
-		render(<GamesToWatch team={mockTeam()} data={mockData(dailyMatches)} />)
+		renderWithQuery(<GamesToWatch team={mockTeam()} data={mockData(dailyMatches)} />)
 
 		expect(screen.getByText('Games to Watch')).toBeInTheDocument()
 		expect(screen.getByText(/Paraguay/)).toBeInTheDocument()
@@ -156,7 +162,7 @@ describe('GamesToWatch', () => {
 			],
 		}
 
-		const { container } = render(
+		const { container } = renderWithQuery(
 			<GamesToWatch team={mockTeam()} data={mockData(dailyMatches)} />
 		)
 		expect(container.firstChild).toBeNull()
@@ -190,7 +196,7 @@ describe('GamesToWatch', () => {
 			],
 		}
 
-		render(<GamesToWatch team={team} data={data} />)
+		renderWithQuery(<GamesToWatch team={team} data={data} />)
 
 		expect(screen.getByText('Games to Watch')).toBeInTheDocument()
 		expect(screen.getByText(/faces USA/)).toBeInTheDocument()
