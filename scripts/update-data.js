@@ -195,6 +195,16 @@ const BRACKET_PATHS = {
                   'atlanta'),
 };
 
+// Reverse lookup: r32 match number → bracket position keys (e.g. 82 → ['B-2', 'G-1'])
+// Used by buildOpponents() to resolve "Winner Match X" R16 opponent descriptions.
+const R32_MATCH_TO_POSITIONS = {};
+for (const [key, path] of Object.entries(BRACKET_PATHS)) {
+  const m = path.r32?.match;
+  if (m) {
+    (R32_MATCH_TO_POSITIONS[m] = R32_MATCH_TO_POSITIONS[m] || []).push(key);
+  }
+}
+
 // Team name → ID mapping (consolidated — all display name variants from ESPN + FD fallbacks)
 const NAME_TO_ID = {
 	'United States':'usa','USA':'usa','Mexico':'mexico','Canada':'canada',
@@ -828,8 +838,8 @@ function diffRating(rank) {
 function diffLabel(r) { return ['','Favorable','Favorable','Moderate','Tough','Danger'][r]||'Moderate'; }
 function diffColor(r) { return ['','#22C55E','#22C55E','#F59E0B','#FB923C','#EF4444'][r]||'#F59E0B'; }
 
-function buildOpponents(teamId, group, opponentDesc, standings) {
-	const desc = opponentDesc ?? ''
+function buildOpponents(teamId, group, r32Desc, r16Desc, standings) {
+	const desc = r32Desc ?? ''
 
 	const directMatch = desc.match(/Winner\s+Group\s+([A-L])|Runner-up\s+Group\s+([A-L])/i)
 	if (directMatch) {
@@ -850,7 +860,7 @@ function buildOpponents(teamId, group, opponentDesc, standings) {
 			note:        isWinner ? `Winner of Group ${oppGroup}` : `Runner-up of Group ${oppGroup}`,
 			pct:         null,
 		}]
-		return { r32: r32Opps, r16: [] }
+		return { r32: r32Opps, r16: buildR16Opponents(teamId, r16Desc, standings) }
 	}
 
 	const poolMatch = desc.match(/Best\s+3rd\s+from\s+(.+)/i)
@@ -873,10 +883,73 @@ function buildOpponents(teamId, group, opponentDesc, standings) {
 				pct:         null,
 			}
 		})
-		return { r32: r32Opps, r16: [] }
+		return { r32: r32Opps, r16: buildR16Opponents(teamId, r16Desc, standings) }
 	}
 
-	return { r32: [], r16: [] }
+	return { r32: [], r16: buildR16Opponents(teamId, r16Desc, standings) }
+}
+
+// Builds the list of possible R16 opponents from the R16 opponentDesc.
+// Handles "Winner Match X" and "Winner Group X (Match Y)" patterns.
+function buildR16Opponents(teamId, r16Desc, standings) {
+	const desc = r16Desc ?? ''
+
+	// Extract match number from "Winner Match 82" or "Winner Group G (Match 82)"
+	const matchRef = desc.match(/\(Match\s+(\d+)\)|Winner\s+Match\s+(\d+)/i)
+	if (matchRef) {
+		const matchNum = parseInt(matchRef[1] ?? matchRef[2], 10)
+		const posKeys = R32_MATCH_TO_POSITIONS[matchNum] || []
+		return posKeys
+			.filter(key => {
+				// Exclude the current team's own bracket slot to avoid self-referential results
+				const [grp, pos] = key.split('-')
+				const gRows = standings[grp] || []
+				const target = pos === '1' ? gRows[0] : gRows[1]
+				return target?.teamId !== teamId
+			})
+			.map(key => {
+				const [grp, pos] = key.split('-')
+				const gRows = standings[grp] || []
+				const target = pos === '1' ? gRows[0] : gRows[1]
+				const info = ALL_TEAMS.find(t => t.id === target?.teamId)
+				const rating = diffRating(info?.fifaRank)
+				return {
+					group:      grp,
+					likelyTeam: info?.name || 'TBD',
+					flag:       info?.flag || '🏳️',
+					fifaRank:   info?.fifaRank || 50,
+					difficulty: rating,
+					label:      diffLabel(rating),
+					color:      diffColor(rating),
+					note:       `${pos === '1' ? 'Winner' : 'Runner-up'} of Group ${grp}`,
+					pct:        null,
+				}
+			})
+	}
+
+	// "Winner Group X" without a match number — direct group lookup
+	const groupRef = desc.match(/Winner\s+Group\s+([A-L])|Runner-up\s+Group\s+([A-L])/i)
+	if (groupRef) {
+		const oppGroup = (groupRef[1] ?? groupRef[2]).toUpperCase()
+		const isWinner = !!groupRef[1]
+		const gRows = standings[oppGroup] || []
+		const target = isWinner ? gRows[0] : gRows[1]
+		const info = ALL_TEAMS.find(t => t.id === target?.teamId)
+		const rating = diffRating(info?.fifaRank)
+		return [{
+			group:      oppGroup,
+			likelyTeam: info?.name || 'TBD',
+			flag:       info?.flag || '🏳️',
+			fifaRank:   info?.fifaRank || 50,
+			difficulty: rating,
+			label:      diffLabel(rating),
+			color:      diffColor(rating),
+			note:       isWinner ? `Winner of Group ${oppGroup}` : `Runner-up of Group ${oppGroup}`,
+			pct:        null,
+		}]
+	}
+
+	return []
 }
 
 const STAGE_ORDER = ['group_stage', 'r32', 'r16', 'qf', 'sf', 'final'];
@@ -1189,7 +1262,7 @@ async function main() {
       // Carry forward but always update computed fields if standings exist
       if (Object.keys(rawStandings).length > 0) {
         const teamPath = buildPath(t.id, t.group, rawStandings);
-        const possibleOpps = buildOpponents(t.id, t.group, teamPath.r32?.opponentDesc ?? '', rawStandings);
+        const possibleOpps = buildOpponents(t.id, t.group, teamPath.r32?.opponentDesc ?? '', teamPath.r16?.opponentDesc ?? '', rawStandings);
         return {
           ...existingTeam,
           eliminated,
@@ -1244,7 +1317,7 @@ async function main() {
       : calcProbs(t.id, t.group, rawStandings, polyData);
 
     const teamPath      = buildPath(t.id, t.group, rawStandings);
-    const possibleOpps  = buildOpponents(t.id, t.group, teamPath.r32?.opponentDesc ?? '', rawStandings);
+    const possibleOpps  = buildOpponents(t.id, t.group, teamPath.r32?.opponentDesc ?? '', teamPath.r16?.opponentDesc ?? '', rawStandings);
 
     return {
       id: t.id, name: t.name, flag: t.flag,
