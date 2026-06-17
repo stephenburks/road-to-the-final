@@ -22,6 +22,12 @@ function ymd(dateStr: string): string {
 	return dateStr.replace(/-/g, '')
 }
 
+function nextDay(dateStr: string): string {
+	const d = new Date(dateStr + 'T12:00:00Z')
+	d.setUTCDate(d.getUTCDate() + 1)
+	return d.toISOString().slice(0, 10)
+}
+
 function formatScorer(athlete: { displayName?: string } | undefined, type: string, minute: string): string {
 	if (!athlete?.displayName) return ''
 	if (type === 'Own Goal') return `${athlete.displayName} OG ${minute}`
@@ -31,13 +37,19 @@ function formatScorer(athlete: { displayName?: string } | undefined, type: strin
 
 async function fetchScoreboardPatches(
 	today: string,
+	tomorrow: string,
 	todayPairKeys: Set<string>,
 	teams: AppData['teams'],
 	signal: AbortSignal
 ): Promise<Map<string, LiveMatchPatch> | null> {
-	const res = await fetch(`${ESPN_SCOREBOARD_URL}?dates=${ymd(today)}&_=${Date.now()}`, { signal })
-	const json = await res.json()
-	const events = json?.events ?? []
+	// Fetch both today and tomorrow — ESPN buckets late-night games (e.g. 04:00Z)
+	// under the next UTC date even though they belong to today's local match day.
+	const ts = Date.now()
+	const [todayJson, tomorrowJson] = await Promise.all([
+		fetch(`${ESPN_SCOREBOARD_URL}?dates=${ymd(today)}&_=${ts}`, { signal }).then(r => r.json()),
+		fetch(`${ESPN_SCOREBOARD_URL}?dates=${ymd(tomorrow)}&_=${ts}`, { signal }).then(r => r.json()),
+	])
+	const events = [...(todayJson?.events ?? []), ...(tomorrowJson?.events ?? [])]
 
 	const next = new Map<string, LiveMatchPatch>()
 
@@ -124,6 +136,7 @@ export function useLiveScores(
 	isHistorical: boolean
 ): Map<string, LiveMatchPatch> | null {
 	const today = localDateStr()
+	const tomorrow = nextDay(today)
 	const todayMatches = dailyMatches?.[today] ?? []
 
 	// Build a lookup of expected team-pair keys from today's schedule.
@@ -145,7 +158,7 @@ export function useLiveScores(
 
 	const { data: patches = null } = useQuery({
 		queryKey: ['liveScores', today, [...todayPairKeys].sort().join(',')],
-		queryFn: ({ signal }) => fetchScoreboardPatches(today, todayPairKeys, teams, signal),
+		queryFn: ({ signal }) => fetchScoreboardPatches(today, tomorrow, todayPairKeys, teams, signal),
 		enabled: shouldPoll,
 		refetchInterval: shouldPoll ? 75_000 : false,
 	})
