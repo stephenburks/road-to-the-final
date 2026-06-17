@@ -64,6 +64,8 @@ const DAILY_MATCHES_TODAY: AppData['dailyMatches'] = {
 function makeESPNEvent(overrides: {
 	homeDisplayName?: string
 	awayDisplayName?: string
+	homeAbbr?: string
+	awayAbbr?: string
 	homeId?: string
 	awayId?: string
 	homeScore?: string
@@ -76,6 +78,8 @@ function makeESPNEvent(overrides: {
 	const {
 		homeDisplayName = 'United States',
 		awayDisplayName = 'Mexico',
+		homeAbbr = 'USA',
+		awayAbbr = 'MEX',
 		homeId = '660',
 		awayId = '472',
 		homeScore = '2',
@@ -92,12 +96,12 @@ function makeESPNEvent(overrides: {
 				{
 					homeAway: 'home',
 					score: homeScore,
-					team: { id: homeId, displayName: homeDisplayName },
+					team: { id: homeId, displayName: homeDisplayName, abbreviation: homeAbbr },
 				},
 				{
 					homeAway: 'away',
 					score: awayScore,
-					team: { id: awayId, displayName: awayDisplayName },
+					team: { id: awayId, displayName: awayDisplayName, abbreviation: awayAbbr },
 				},
 			],
 			status: {

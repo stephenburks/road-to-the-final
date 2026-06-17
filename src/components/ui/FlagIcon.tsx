@@ -55,10 +55,16 @@ const TEAM_MAPPINGS = [
 const ID_TO_ISO  = Object.fromEntries(TEAM_MAPPINGS.map(t => [t.id,  t.iso]))
 const ID_TO_TLA  = Object.fromEntries(TEAM_MAPPINGS.map(t => [t.id,  t.tla]))
 const NAME_TO_ID = Object.fromEntries(TEAM_MAPPINGS.map(t => [t.name, t.id]))
+const TLA_TO_ID  = Object.fromEntries(TEAM_MAPPINGS.map(t => [t.tla,  t.id]))
 
 export function getTeamTLA(id?: string, name?: string): string {
 	const resolvedId = id || (name ? NAME_TO_ID[name] : '') || ''
 	return ID_TO_TLA[resolvedId] || ''
+}
+
+export function getTeamIdByTLA(tla?: string): string | undefined {
+	if (!tla) return undefined
+	return TLA_TO_ID[tla.toUpperCase()]
 }
 
 function resolveCode(code?: string, opponentName?: string): string {

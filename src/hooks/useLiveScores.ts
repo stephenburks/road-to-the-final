@@ -2,6 +2,7 @@ import { useMemo } from 'react'
 import { useQuery } from '@tanstack/react-query'
 import { ESPN_SCOREBOARD_URL } from '../constants'
 import { localDateStr } from '../utils'
+import { getTeamIdByTLA } from '../components/ui/FlagIcon'
 import type { AppData, Card } from '../types'
 
 interface LiveMatchPatch {
@@ -62,8 +63,12 @@ async function fetchScoreboardPatches(
 
 		if (!homeComp || !awayComp) continue
 
-		const homeTeam = teams.find(t => t.name === homeComp.team?.displayName)
-		const awayTeam = teams.find(t => t.name === awayComp.team?.displayName)
+		// Match by FIFA TLA (ESPN's `abbreviation`) rather than displayName —
+		// ESPN's display names (e.g. "Congo DR") don't always match ours ("DR Congo").
+		const homeId = getTeamIdByTLA(homeComp.team?.abbreviation)
+		const awayId = getTeamIdByTLA(awayComp.team?.abbreviation)
+		const homeTeam = homeId ? teams.find(t => t.id === homeId) : undefined
+		const awayTeam = awayId ? teams.find(t => t.id === awayId) : undefined
 
 		if (!homeTeam || !awayTeam) continue
 
