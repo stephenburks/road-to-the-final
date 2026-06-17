@@ -1,6 +1,7 @@
 import { useMemo } from 'react'
 import { useQuery } from '@tanstack/react-query'
 import { ESPN_SCOREBOARD_URL } from '../constants'
+import { localDateStr } from '../utils'
 import type { AppData, Card } from '../types'
 
 interface LiveMatchPatch {
@@ -16,10 +17,6 @@ interface LiveMatchPatch {
 }
 
 export type { LiveMatchPatch }
-
-function localDateStr(date = new Date()): string {
-	return `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, '0')}-${String(date.getDate()).padStart(2, '0')}`
-}
 
 function ymd(dateStr: string): string {
 	return dateStr.replace(/-/g, '')

@@ -7,7 +7,19 @@ import type { Stage, Team, AppData, GroupData } from './types'
  */
 export function daysUntil(dateStr?: string): number | null {
   if (!dateStr?.match(/^\d{4}/)) return null
-  return Math.ceil((new Date(dateStr).getTime() - Date.now()) / 864e5)
+  // Compare UTC noon of target vs UTC noon of today — avoids off-by-one from
+  // local timezone offsets against the UTC midnight the bare date string parses to.
+  const target = Date.parse(dateStr.slice(0, 10) + 'T12:00:00Z')
+  const now = new Date()
+  const todayNoon = Date.UTC(now.getFullYear(), now.getMonth(), now.getDate(), 12)
+  return Math.round((target - todayNoon) / 864e5)
+}
+
+/**
+ * Returns today's date as "YYYY-MM-DD" in local time.
+ */
+export function localDateStr(date = new Date()): string {
+  return `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, '0')}-${String(date.getDate()).padStart(2, '0')}`
 }
 
 /**

@@ -2,6 +2,7 @@ import { useMemo } from 'react'
 import type { AppData, DailyMatch } from '../types'
 import type { View } from '../hooks/useAppState'
 import { useLiveScores, type LiveMatchPatch } from '../hooks/useLiveScores'
+import { localDateStr } from '../utils'
 import MatchCard from './groups/MatchCard'
 import NewsSection from './NewsSection'
 import styles from './HomePage.module.css'
@@ -11,10 +12,6 @@ interface HomePageProps {
 	selectedTeamId: string
 	onTeamChange: (id: string) => void
 	onViewChange: (v: View) => void
-}
-
-function localDateStr(date = new Date()): string {
-	return `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, '0')}-${String(date.getDate()).padStart(2, '0')}`
 }
 
 function todayStr(): string { return localDateStr() }

@@ -47,7 +47,7 @@ export default function DateSelector({
 			</button>
 
 			{open && (
-				<div className={styles.dropdown} role="dialog" aria-label="Date selection">
+				<div className={styles.dropdown} aria-label="Date selection">
 					{/* Live option */}
 					<button
 						className={`${styles.liveOption} ${isLive ? styles.liveActive : ''}`}
