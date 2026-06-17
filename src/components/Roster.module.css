@@ -174,3 +174,9 @@
 @media (max-width: 400px) {
 	.grid { grid-template-columns: repeat(2, 1fr); }
 }
+
+.errorMsg {
+	font-size: 13px;
+	color: var(--text-lo);
+	padding: 8px 0;
+}

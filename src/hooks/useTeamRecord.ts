@@ -140,10 +140,10 @@ async function fetchTeamRecordWithLiveFallback(slug: string, signal: AbortSignal
 	return { record, standingSummary: team.standingSummary ?? null, nextEvent }
 }
 
-export function useTeamRecord(teamId: string, isHistorical: boolean): TeamRecordData {
+export function useTeamRecord(teamId: string, isHistorical: boolean): TeamRecordData & { error: boolean } {
 	const slug = isHistorical ? null : (ESPN_SLUG_MAP[teamId] ?? null)
 
-	const { data = EMPTY } = useQuery({
+	const { data = EMPTY, isError } = useQuery({
 		queryKey: ['teamRecord', slug],
 		queryFn: ({ signal }) => fetchTeamRecordWithLiveFallback(slug!, signal),
 		enabled: !!slug,
@@ -151,5 +151,5 @@ export function useTeamRecord(teamId: string, isHistorical: boolean): TeamRecord
 		staleTime: 30_000,
 	})
 
-	return data
+	return { ...data, error: isError }
 }

@@ -59,7 +59,7 @@ export default function Hero({ team, activeStage, isHistorical, groupWinProb }: 
 	const source = ap.source
 	const sourceLabel = isHistorical ? 'As of snapshot' : source === 'market' ? 'Polymarket' : 'Calculated'
 
-	const { record, nextEvent } = useTeamRecord(team.id, isHistorical)
+	const { record, nextEvent, error: teamRecordError } = useTeamRecord(team.id, isHistorical)
 
 	const eyebrow = getEyebrow(team, activeStage, isHistorical)
 	const heading = getHeading(team)
@@ -84,6 +84,9 @@ export default function Hero({ team, activeStage, isHistorical, groupWinProb }: 
 						<span className={styles.recordBadge} aria-label={`Record: ${record.summary.replace(/-/g, ' wins, ').replace(/-/g, ' draws, ')} losses`}>
 							{record.summary}
 						</span>
+					)}
+					{teamRecordError && !record && (
+						<span className={styles.recordError}>Couldn&apos;t load record</span>
 					)}
 					<p className={styles.subhead}>{subhead}</p>
 				</div>

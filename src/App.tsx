@@ -53,7 +53,7 @@ export default function App() {
 
   const { liveData, manifest, snapData, loadingSnap, error } = useData(selectedDate)
 
-  const { players: rosterPlayers, loading: rosterLoading } = useRoster(selectedTeamId, isHistorical)
+  const { players: rosterPlayers, loading: rosterLoading, error: rosterError } = useRoster(selectedTeamId, isHistorical)
 
   const data       = selectedDate === 'live' ? liveData : snapData
 
@@ -183,7 +183,7 @@ export default function App() {
               <ErrorBoundary name="schedule"><ScheduledMatches team={team} /></ErrorBoundary>
             </>
           )}
-          <ErrorBoundary name="squad roster"><Roster players={rosterPlayers} loading={rosterLoading} /></ErrorBoundary>
+          <ErrorBoundary name="squad roster"><Roster players={rosterPlayers} loading={rosterLoading} error={rosterError} /></ErrorBoundary>
         </main>
       )}
 

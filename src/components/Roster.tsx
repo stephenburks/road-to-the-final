@@ -40,14 +40,15 @@ function PlayerCard({ p }: { p: RosterPlayer }) {
 interface RosterProps {
 	players: RosterPlayer[] | null
 	loading: boolean
+	error?: boolean
 }
 
 const POSITION_LABELS: Record<string, string> = {
 	G: 'Goalkeepers', D: 'Defenders', M: 'Midfielders', F: 'Forwards',
 }
 
-export default function Roster({ players, loading }: RosterProps) {
-	if (!players && !loading) return null
+export default function Roster({ players, loading, error }: RosterProps) {
+	if (!players && !loading && !error) return null
 
 	const grouped: Record<string, RosterPlayer[]> = {}
 	if (players) {
@@ -62,7 +63,11 @@ export default function Roster({ players, loading }: RosterProps) {
 		<section className="wrap section" id="squad" aria-labelledby="roster-heading">
 			<h2 id="roster-heading" className={styles.heading}>Squad</h2>
 
-			{loading && !players && (
+			{error && (
+			<p className={styles.errorMsg}>Couldn&apos;t load squad data.</p>
+		)}
+
+		{loading && !players && (
 				<div className={styles.grid} role="status" aria-label="Loading roster">
 					{Array.from({ length: 6 }).map((_, i) => (
 						<div key={i} className={`${styles.card} ${styles.skeleton}`}>

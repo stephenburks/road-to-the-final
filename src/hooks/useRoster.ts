@@ -77,10 +77,11 @@ async function fetchRoster(slug: string, signal: AbortSignal): Promise<RosterPla
 export function useRoster(teamId: string, isHistorical: boolean): {
 	players: RosterPlayer[] | null
 	loading: boolean
+	error: boolean
 } {
 	const slug = isHistorical ? null : (ESPN_SLUG_MAP[teamId] ?? null)
 
-	const { data, isLoading } = useQuery({
+	const { data, isLoading, isError } = useQuery({
 		queryKey: ['roster', slug],
 		queryFn: ({ signal }) => fetchRoster(slug!, signal),
 		enabled: !!slug,
@@ -90,5 +91,6 @@ export function useRoster(teamId: string, isHistorical: boolean): {
 	return {
 		players: data ?? null,
 		loading: isLoading,
+		error: isError,
 	}
 }

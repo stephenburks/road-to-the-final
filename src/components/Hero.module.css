@@ -80,6 +80,13 @@
 	flex-shrink: 0;
 }
 
+.recordError {
+	font-family: var(--font-mono);
+	font-size: 11px;
+	color: var(--text-lo);
+	flex-shrink: 0;
+}
+
 .subtext {
 	font-family: var(--font-display);
 	font-weight: 400;
