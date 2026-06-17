@@ -147,7 +147,7 @@ export function useTeamRecord(teamId: string, isHistorical: boolean): TeamRecord
 		queryKey: ['teamRecord', slug],
 		queryFn: ({ signal }) => fetchTeamRecordWithLiveFallback(slug!, signal),
 		enabled: !!slug,
-		refetchInterval: (query) => query.state.data?.nextEvent?.isLive ? 75_000 : false,
+		refetchInterval: (query) => query.state.data?.nextEvent?.isLive ? 90_000 : false,
 		staleTime: 30_000,
 	})
 
