@@ -817,12 +817,14 @@ function calcProbsFallback(teamId, group, standings) {
     seed = tier ? Math.round(tier.pct * (rankScore / 50)) : 2;
   }
 
-  const winner = Math.min(seed, 30);
-  const r32 = Math.min(Math.round(winner * 2.8 + (pos <= 2 ? 20 : 5)), 99);
+  const seedWinner = Math.min(seed, 30);
+  const r32 = Math.min(Math.round(seedWinner * 2.8 + (pos <= 2 ? 20 : 5)), 99);
   const r16 = Math.round(r32 * 0.55);
   const qf   = Math.round(r16 * 0.52);
   const sf   = Math.round(qf  * 0.50);
   const final = Math.round(sf  * 0.50);
+  // Derive winner from the chain so all stages remain monotonically decreasing
+  const winner = Math.round(final * 0.50);
 
   return { r32, r16, qf, sf, final, winner, source: 'calculated' };
 }
@@ -1447,4 +1449,8 @@ async function main() {
   log('=== Done ===');
 }
 
-main().catch(err => { console.error('Fatal:', err); process.exit(1); });
+if (require.main === module) {
+  main().catch(err => { console.error('Fatal:', err); process.exit(1); });
+}
+
+module.exports = { calcProbs, calcProbsFallback, diffRating, diffLabel, diffColor, buildOpponents, buildR16Opponents, R32_MATCH_TO_POSITIONS };
