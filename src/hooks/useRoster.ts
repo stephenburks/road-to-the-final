@@ -1,20 +1,27 @@
-import { useState, useEffect } from 'react'
+import { useQuery } from '@tanstack/react-query'
 import { ESPN_SLUG_MAP } from '../data/tournamentSchedule'
+import { ESPN_TEAM_URL } from '../constants'
 import type { RosterPlayer } from '../types'
 
-const ESPN_ROSTER_URL = 'https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world/teams'
+interface StatCategory {
+	stats?: Array<{ name: string; value: number }>
+}
 
-function parseStats(athlete: Record<string, unknown>): RosterPlayer['statistics'] {
+interface AthleteStatistics {
+	splits?: { categories?: StatCategory[] }
+}
+
+function parseStats(raw: Record<string, unknown>): RosterPlayer['statistics'] {
 	const stats: RosterPlayer['statistics'] = {
 		appearances: 0, goals: 0, assists: 0,
 		shots: 0, shotsOnTarget: 0, foulsCommitted: 0, foulsSuffered: 0,
 		yellowCards: 0, redCards: 0, saves: 0, goalsConceded: 0,
 	}
-	const categories = (athlete.statistics as Record<string, unknown>)?.splits?.categories ?? []
-	for (const cat of categories as Array<Record<string, unknown>>) {
-		for (const s of (cat.stats as Array<Record<string, unknown>>) ?? []) {
-			const name = s.name as string
-			const value = s.value as number
+	const statistics = raw.statistics as AthleteStatistics | undefined
+	const categories = statistics?.splits?.categories ?? []
+	for (const cat of categories) {
+		for (const s of cat.stats ?? []) {
+			const { name, value } = s
 			if (name === 'totalGoals') stats.goals = value ?? 0
 			else if (name === 'goalAssists') stats.assists = value ?? 0
 			else if (name === 'totalShots') stats.shots = value ?? 0
@@ -59,45 +66,29 @@ export function sortByPosition(players: RosterPlayer[]): RosterPlayer[] {
 	})
 }
 
+async function fetchRoster(slug: string, signal: AbortSignal): Promise<RosterPlayer[]> {
+	const res = await fetch(`${ESPN_TEAM_URL}/${slug}/roster?season=2026`, { signal })
+	const json = await res.json()
+	const athletes = json?.athletes
+	if (!Array.isArray(athletes) || athletes.length === 0) return []
+	return sortByPosition(athletes.map((a: Record<string, unknown>) => parseAthlete(a)))
+}
+
 export function useRoster(teamId: string, isHistorical: boolean): {
 	players: RosterPlayer[] | null
 	loading: boolean
 } {
-	const [players, setPlayers] = useState<RosterPlayer[] | null>(null)
-	const [loading, setLoading] = useState(true)
-
 	const slug = isHistorical ? null : (ESPN_SLUG_MAP[teamId] ?? null)
 
-	useEffect(() => {
-		if (!slug) {
-			setPlayers(null) // eslint-disable-line react-hooks/set-state-in-effect
-			setLoading(false)
-			return
-		}
+	const { data, isLoading } = useQuery({
+		queryKey: ['roster', slug],
+		queryFn: ({ signal }) => fetchRoster(slug!, signal),
+		enabled: !!slug,
+		staleTime: 60 * 60 * 1000,
+	})
 
-		let cancelled = false
-		setLoading(true)
-
-		fetch(`${ESPN_ROSTER_URL}/${slug}/roster?season=2026`)
-			.then(res => res.json())
-			.then(json => {
-				if (cancelled) return
-				const athletes = json?.athletes
-				if (!Array.isArray(athletes) || athletes.length === 0) {
-					setPlayers(null)
-					setLoading(false)
-					return
-				}
-				const parsed = sortByPosition(athletes.map((a: Record<string, unknown>) => parseAthlete(a)))
-				setPlayers(parsed)
-				setLoading(false)
-			})
-			.catch(() => {
-				if (!cancelled) { setPlayers(null); setLoading(false) }
-			})
-
-		return () => { cancelled = true }
-	}, [slug])
-
-	return { players, loading }
+	return {
+		players: data ?? null,
+		loading: isLoading,
+	}
 }

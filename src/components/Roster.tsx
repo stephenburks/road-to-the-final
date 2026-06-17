@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import type { RosterPlayer } from '../../types'
+import type { RosterPlayer } from '../types'
 import styles from './Roster.module.css'
 
 function PlayerCard({ p }: { p: RosterPlayer }) {

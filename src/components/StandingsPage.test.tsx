@@ -1,7 +1,7 @@
 import { describe, it, expect } from 'vitest'
 import { render, screen } from '@testing-library/react'
 import StandingsPage from './StandingsPage'
-import type { AppData, Team, StandingRow } from '../../types'
+import type { AppData, Team, StandingRow, Stage } from '../types'
 
 const makeTeam = (id: string, name: string, flag: string, group: string): Team => ({
 	id, name, flag, group, confederation: 'UEFA', fifaRank: 10,

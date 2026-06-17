@@ -1,7 +1,8 @@
-import { describe, it, expect, vi } from 'vitest'
-import { render, screen } from '@testing-library/react'
+import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest'
+import { screen } from '@testing-library/react'
+import { renderWithQuery } from '../test-utils'
 import HomePage from './HomePage'
-import type { AppData, DailyMatch, Team } from '../../types'
+import type { AppData, DailyMatch, Team } from '../types'
 
 const todayStr = (): string => {
 	const d = new Date()
@@ -63,8 +64,19 @@ const makeMatch = (overrides: Partial<DailyMatch> = {}): DailyMatch => ({
 })
 
 describe('HomePage', () => {
+	beforeEach(() => {
+		vi.spyOn(globalThis, 'fetch').mockResolvedValue({
+			ok: true,
+			json: () => Promise.resolve({ articles: [] }),
+		} as Response)
+	})
+
+	afterEach(() => {
+		vi.restoreAllMocks()
+	})
+
 	it('renders the hero title and subtitle', () => {
-		render(
+		renderWithQuery(
 			<HomePage
 				data={createData()}
 				selectedTeamId="usa"
@@ -77,7 +89,7 @@ describe('HomePage', () => {
 	})
 
 	it('renders View Your Team and View Standings buttons', () => {
-		render(
+		renderWithQuery(
 			<HomePage
 				data={createData()}
 				selectedTeamId="usa"
@@ -91,7 +103,7 @@ describe('HomePage', () => {
 
 	it('calls onTeamChange when View Your Team is clicked', () => {
 		const onTeamChange = vi.fn()
-		render(
+		renderWithQuery(
 			<HomePage
 				data={createData()}
 				selectedTeamId="usa"
@@ -105,7 +117,7 @@ describe('HomePage', () => {
 
 	it('calls onViewChange when View Standings is clicked', () => {
 		const onViewChange = vi.fn()
-		render(
+		renderWithQuery(
 			<HomePage
 				data={createData()}
 				selectedTeamId="usa"
@@ -122,7 +134,7 @@ describe('HomePage', () => {
 		const data = createData({
 			[today]: [makeMatch({ date: today })],
 		})
-		render(
+		renderWithQuery(
 			<HomePage
 				data={data}
 				selectedTeamId="usa"
@@ -136,7 +148,7 @@ describe('HomePage', () => {
 	})
 
 	it('shows empty state when no matches for a day', () => {
-		render(
+		renderWithQuery(
 			<HomePage
 				data={createData()}
 				selectedTeamId="usa"
@@ -152,7 +164,7 @@ describe('HomePage', () => {
 		const data = createData({
 			[today]: [makeMatch({ date: today, status: 'IN_PROGRESS', homeScore: 1, awayScore: 0 })],
 		})
-		render(
+		renderWithQuery(
 			<HomePage
 				data={data}
 				selectedTeamId="usa"
@@ -165,7 +177,7 @@ describe('HomePage', () => {
 	})
 
 	it('renders section headings for yesterday, today, tomorrow', () => {
-		render(
+		renderWithQuery(
 			<HomePage
 				data={createData()}
 				selectedTeamId="usa"
