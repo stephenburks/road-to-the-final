@@ -59,6 +59,18 @@ export function useLiveScores(
 			return
 		}
 
+		// Build a lookup of expected team-pair keys from today's schedule.
+		// We use this instead of an event-date string comparison because ESPN
+		// returns UTC timestamps: late US evening games (e.g. 01:00Z) have a
+		// UTC date of tomorrow even though they belong to today's match day.
+		const todayPairKeys = new Set<string>()
+		for (const m of todayMatches as { homeId?: string; awayId?: string }[]) {
+			if (m.homeId && m.awayId) {
+				todayPairKeys.add(`${m.homeId}:${m.awayId}`)
+				todayPairKeys.add(`${m.awayId}:${m.homeId}`)
+			}
+		}
+
 		let cancelled = false
 
 		async function poll() {
@@ -73,9 +85,6 @@ export function useLiveScores(
 				const currentTeams = teamsRef.current
 
 				for (const event of events) {
-					const eventDate = event.date?.split('T')[0]
-					if (eventDate !== today) continue
-
 					const competition = event.competitions?.[0]
 					const competitors = competition?.competitors ?? []
 
@@ -88,6 +97,9 @@ export function useLiveScores(
 					const awayTeam = currentTeams.find(t => t.name === awayComp.team?.displayName)
 
 					if (!homeTeam || !awayTeam) continue
+
+					// Only process matches that belong to today's schedule
+					if (!todayPairKeys.has(`${homeTeam.id}:${awayTeam.id}`)) continue
 
 					const statusState = competition?.status?.type?.state
 					const statusDetail = competition?.status?.type?.detail

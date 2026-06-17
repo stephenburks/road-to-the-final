@@ -27,11 +27,16 @@ export function useData(selectedDate: string): UseDataReturn {
 	const inFlight = useRef<Map<string, Promise<unknown>>>(new Map())
 
 	useEffect(() => {
+		let refreshTimer: ReturnType<typeof setInterval> | null = null
+
+		async function fetchLive() {
+			const res = await fetch(`${LIVE_DATA_URL}?_=${Date.now()}`)
+			if (!res.ok) throw new Error(`HTTP ${res.status} loading live data`)
+			return res.json() as Promise<AppData>
+		}
+
 		Promise.all([
-			fetch(LIVE_DATA_URL).then(r => {
-				if (!r.ok) throw new Error(`HTTP ${r.status} loading live data`)
-				return r.json() as Promise<AppData>
-			}),
+			fetchLive(),
 			fetch(MANIFEST_URL)
 				.then(r => r.ok ? r.json() as Promise<SnapshotManifest> : null)
 				.catch(() => null),
@@ -50,6 +55,19 @@ export function useData(selectedDate: string): UseDataReturn {
 					'Details: ' + (e.message ?? 'unknown error')
 				)
 			})
+
+		// Re-fetch live data every 10 minutes so the session stays fresh
+		// without requiring a page reload. This also re-triggers useLiveScores
+		// to start polling when a match transitions from SCHEDULED to IN_PROGRESS.
+		refreshTimer = setInterval(() => {
+			fetchLive()
+				.then(live => setLiveData(live))
+				.catch(() => {}) // silently keep existing data on transient errors
+		}, 10 * 60 * 1000)
+
+		return () => {
+			if (refreshTimer) clearInterval(refreshTimer)
+		}
 	}, [])
 
 	useEffect(() => {

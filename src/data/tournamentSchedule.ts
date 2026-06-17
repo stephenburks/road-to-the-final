@@ -118,7 +118,7 @@ export const ESPN_SLUG_MAP: Record<string, string> = {
 	australia: 'aus',
 	turkey: 'tur',
 	germany: 'ger',
-	curacao: 'fifa.curacao',
+	curacao: '11678',
 	ivorycoast: 'civ',
 	ecuador: 'ecu',
 	netherlands: 'ned',

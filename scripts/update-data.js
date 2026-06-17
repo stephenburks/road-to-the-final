@@ -1078,7 +1078,7 @@ async function main() {
   const polyData = await fetchPolymarketAll();
 
   const TOURNAMENT_START_ESPN = '2026-06-11';
-  const TOURNAMENT_END_ESPN   = '2026-06-27'; // full group stage
+  const TOURNAMENT_END_ESPN   = '2026-07-19'; // full tournament through the Final
   const { matches: espnMatches, scorers: espnScorers, cards: espnCards, activeTeams: espnActiveTeams }
     = await fetchESPNEventDetails(TOURNAMENT_START_ESPN, TOURNAMENT_END_ESPN);
 

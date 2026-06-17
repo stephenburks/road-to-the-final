@@ -75,6 +75,8 @@ export function useTeamRecord(teamId: string, isHistorical: boolean): TeamRecord
 				}
 
 				let nextEvent: NextEvent | null = null
+				let isLive = false
+
 				const evt = team.nextEvent?.[0]
 				if (evt) {
 					const comp = evt.competitions?.[0]
@@ -89,7 +91,7 @@ export function useTeamRecord(teamId: string, isHistorical: boolean): TeamRecord
 
 					const statusState = comp?.status?.type?.state
 					const statusDetail = comp?.status?.type?.detail
-					const isLive = statusState === 'in'
+					isLive = statusState === 'in'
 					const clock = isLive ? (statusDetail || undefined) : undefined
 					const score = isLive
 						? `${parseInt(home?.score, 10) || 0}-${parseInt(away?.score, 10) || 0}`
@@ -108,18 +110,62 @@ export function useTeamRecord(teamId: string, isHistorical: boolean): TeamRecord
 						clock,
 						score,
 					}
+				}
+
+				// When ESPN returns no nextEvent the team is probably playing right now.
+				// Check the live scoreboard so we can show the current match in the Hero.
+				if (!nextEvent) {
+					const todayYMD = new Date().toISOString().slice(0, 10).replace(/-/g, '')
+					const sbRes = await fetch(
+						`https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world/scoreboard?dates=${todayYMD}&_=${Date.now()}`
+					)
+					if (sbRes.ok && !c.current) {
+						const sbJson = await sbRes.json()
+						for (const event of (sbJson?.events ?? [])) {
+							if (c.current) break
+							const comp = event.competitions?.[0]
+							if (comp?.status?.type?.state !== 'in') continue
+							const competitors = comp?.competitors ?? []
+							const myComp = competitors.find(
+								(cp: { team?: { id?: string | number } }) => String(cp.team?.id) === String(team.id)
+							)
+							if (!myComp) continue
+
+							const home = competitors.find((cp: { homeAway: string }) => cp.homeAway === 'home')
+							const away = competitors.find((cp: { homeAway: string }) => cp.homeAway === 'away')
+							const opp = home?.team?.id === team.id ? away : home
+							const broadcasts: string[] = []
+							for (const b of (comp?.geoBroadcasts ?? [])) {
+								if (b.media?.shortName) broadcasts.push(b.media.shortName)
+							}
+
+							isLive = true
+							nextEvent = {
+								opponent: opp?.team?.displayName ?? 'TBD',
+								opponentFlag: opp?.team?.abbreviation
+									? (ESPN_FLAG_MAP[opp.team.abbreviation] ?? '🏳️')
+									: '🏳️',
+								date: event.date ?? '',
+								venue: comp?.venue?.fullName ?? '',
+								broadcasts,
+								isHome: home?.team?.id === team.id,
+								isLive: true,
+								clock: comp?.status?.type?.detail || 'LIVE',
+								score: `${parseInt(home?.score, 10) || 0}-${parseInt(away?.score, 10) || 0}`,
+							}
+							break
+						}
+					}
+				}
 
 				if (isLive && !intervalRef.current) {
 					intervalRef.current = setInterval(() => fetchRef.current?.(c), 75000)
 				} else if (!isLive && intervalRef.current) {
-					// Match just ended — do one more fetch after delay then stop
 					clearInterval(intervalRef.current)
 					intervalRef.current = null
-					setTimeout(() => fetchRef.current?.(c), 30000)
-				}
 				}
 
-				setData({ record, standingSummary: team.standingSummary ?? null, nextEvent })
+				if (!c.current) setData({ record, standingSummary: team.standingSummary ?? null, nextEvent })
 			} catch {
 				if (!c.current) setData(EMPTY)
 			}
