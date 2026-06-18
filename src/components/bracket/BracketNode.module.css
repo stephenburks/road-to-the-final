@@ -10,6 +10,7 @@
 	font-size: 9px;
 	margin-bottom: 12px;
 	transition: box-shadow 0.3s;
+	border: 2px solid transparent;
 }
 
 /* Render icon text via CSS content from data attribute */
@@ -18,3 +19,35 @@
 }
 
 .nodeLarge { font-size: 13px; }
+
+.node[data-state="elim"] {
+	background: rgba(239, 68, 68, 0.15);
+	border-color: var(--red);
+	color: #fca5a5;
+}
+
+.node[data-state="done"] {
+	background: rgba(34, 197, 94, 0.12);
+	border-color: rgba(34, 197, 94, 0.4);
+	color: #86efac;
+}
+
+.node[data-state="current"] {
+	background: var(--green);
+	border-color: var(--green);
+	color: #052e16;
+	box-shadow: 0 0 14px rgba(34, 197, 94, 0.5);
+}
+
+.node[data-state="active"] {
+	background: var(--purple-lo);
+	border-color: var(--purple);
+	color: #a5b4fc;
+	box-shadow: 0 0 10px rgba(99, 102, 241, 0.4);
+}
+
+.node[data-state="default"] {
+	background: rgba(255, 255, 255, 0.03);
+	border-color: rgba(255, 255, 255, 0.1);
+	color: var(--text-dim);
+}

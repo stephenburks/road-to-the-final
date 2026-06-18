@@ -50,16 +50,23 @@ interface HeroProps {
 	activeStage: Stage
 	isHistorical: boolean
 	groupWinProb?: GroupWinCard
+	groupPosition?: number
 }
 
-export default function Hero({ team, activeStage, isHistorical, groupWinProb }: HeroProps) {
+function ordinal(n: number): string {
+	const s = ['th', 'st', 'nd', 'rd']
+	const v = n % 100
+	return n + (s[(v - 20) % 10] || s[v] || s[0])
+}
+
+export default function Hero({ team, activeStage, isHistorical, groupWinProb, groupPosition }: HeroProps) {
 	const path = team.path?.[activeStage]
 	const ap = team.advanceProbabilities ?? {}
 	const days = daysUntil(path?.date)
 	const source = ap.source
 	const sourceLabel = isHistorical ? 'As of snapshot' : source === 'market' ? 'Polymarket' : 'Calculated'
 
-	const { record, nextEvent, error: teamRecordError, loading: teamRecordLoading } = useTeamRecord(team.id, isHistorical)
+	const { record, nextEvent, links, error: teamRecordError, loading: teamRecordLoading } = useTeamRecord(team.id, isHistorical)
 
 	const eyebrow = getEyebrow(team, activeStage, isHistorical)
 	const heading = getHeading(team)
@@ -91,6 +98,16 @@ export default function Hero({ team, activeStage, isHistorical, groupWinProb }: 
 					{teamRecordError && !record && (
 						<span className={styles.recordError}>Couldn&apos;t load record</span>
 					)}
+					{groupPosition != null && (
+						<span className={styles.contextBadge} aria-label={`${ordinal(groupPosition)} in Group ${team.group}`}>
+							{ordinal(groupPosition)} in Group {team.group}
+						</span>
+					)}
+					{team.fifaRank != null && (
+						<span className={styles.contextBadge} aria-label={`FIFA world rank ${team.fifaRank}`}>
+							FIFA #{team.fifaRank}
+						</span>
+					)}
 					<p className={styles.subhead}>{subhead}</p>
 				</div>
 			)}
@@ -99,6 +116,22 @@ export default function Hero({ team, activeStage, isHistorical, groupWinProb }: 
 				<div className={styles.conditionalNote} role="note">
 					<span className={styles.conditionalNoteIcon} aria-hidden="true" />
 					{conditionalNote}
+				</div>
+			)}
+			{!isHistorical && links.length > 0 && (
+				<div className={styles.espnLinks} aria-label="External links">
+					<span className={styles.espnLinksLabel}>On ESPN:</span>
+					{links.map(l => (
+						<a
+							key={l.rel}
+							href={l.href}
+							target="_blank"
+							rel="noopener noreferrer"
+							className={styles.espnLink}
+						>
+							{l.text}
+						</a>
+					))}
 				</div>
 			)}
 		</div>

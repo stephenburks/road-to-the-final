@@ -42,13 +42,7 @@ export default function RoadBracket({ team, activeStage, onStageSelect }: {
 								className={styles.stage}
 								onClick={() => onStageSelect(stage)}
 							>
-								<BracketNode
-									bg={node.bg}
-									border={node.border}
-									color={node.color}
-									shadow={node.shadow}
-									icon={node.icon}
-								/>
+								<BracketNode state={node.state} icon={node.icon} />
 								<BracketCard path={path} card={card} isAct={isAct} stage={stage} />
 							</button>
 						)

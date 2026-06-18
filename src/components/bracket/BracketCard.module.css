@@ -3,6 +3,7 @@
 	padding: 10px 11px;
 	width: calc(100% - 14px);
 	text-align: center;
+	border: 1px solid transparent;
 }
 
 .cardTitle {
@@ -49,3 +50,33 @@
 .cardConditional::before {
 	content: '\26A0\FE0F\00A0';   /* ⚠️ + nbsp */
 }
+
+/* ── State variants ── */
+
+.card[data-state="current"] {
+	background: var(--green-lo);
+	border-color: var(--green-b);
+}
+.card[data-state="current"] .cardTitle { color: #86efac; }
+.card[data-state="current"] .cardDetail { color: var(--green); }
+
+.card[data-state="done"] {
+	background: rgba(255, 255, 255, 0.02);
+	border-color: rgba(255, 255, 255, 0.05);
+}
+.card[data-state="done"] .cardTitle { color: #86efac; }
+.card[data-state="done"] .cardDetail { color: #86efac; }
+
+.card[data-state="active"] {
+	background: var(--purple-lo);
+	border-color: var(--purple-b);
+}
+.card[data-state="active"] .cardTitle { color: #c7d2fe; }
+.card[data-state="active"] .cardDetail { color: #818cf8; }
+
+.card[data-state="default"] {
+	background: rgba(255, 255, 255, 0.02);
+	border-color: rgba(255, 255, 255, 0.05);
+}
+.card[data-state="default"] .cardTitle { color: var(--text-lo); }
+.card[data-state="default"] .cardDetail { color: var(--text-dim); }

@@ -87,6 +87,48 @@
 	flex-shrink: 0;
 }
 
+.contextBadge {
+	font-family: var(--font-mono);
+	font-size: 11px;
+	font-weight: 600;
+	color: var(--text-dim);
+	background: rgba(255, 255, 255, 0.04);
+	border: 1px solid rgba(255, 255, 255, 0.08);
+	padding: 2px 8px;
+	border-radius: 4px;
+	letter-spacing: 0.04em;
+	flex-shrink: 0;
+}
+
+.espnLinks {
+	margin-top: 12px;
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	flex-wrap: wrap;
+	font-family: var(--font-mono);
+	font-size: 11px;
+}
+
+.espnLinksLabel {
+	color: var(--text-dim);
+	letter-spacing: 0.04em;
+}
+
+.espnLink {
+	color: var(--text-lo);
+	text-decoration: none;
+	border-bottom: 1px dashed rgba(255, 255, 255, 0.15);
+	padding-bottom: 1px;
+	transition: color 120ms ease, border-color 120ms ease;
+}
+
+.espnLink:hover,
+.espnLink:focus-visible {
+	color: var(--text-hi);
+	border-bottom-color: var(--purple);
+}
+
 .probNote {
 	margin: 8px 0 0;
 	font-size: 11px;

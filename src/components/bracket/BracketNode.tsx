@@ -1,20 +1,19 @@
+import type { NodeState } from './bracketStyles'
 import styles from './BracketNode.module.css'
 
 interface BracketNodeProps {
-	bg: string
-	border: string
-	color: string
-	shadow: string
+	state: NodeState
 	icon: string
 }
 
-export default function BracketNode({ bg, border, color, shadow, icon }: BracketNodeProps) {
-	const isLarge = icon === '\u2715' || icon === '\u2713' || color === '#052e16'
+const LARGE_STATES: Set<NodeState> = new Set(['elim', 'done', 'current'])
 
+export default function BracketNode({ state, icon }: BracketNodeProps) {
+	const isLarge = LARGE_STATES.has(state)
 	return (
 		<div
 			className={`${styles.node} ${isLarge ? styles.nodeLarge : ''}`}
-			style={{ background: bg, border: `2px solid ${border}`, color, boxShadow: shadow }}
+			data-state={state}
 			data-icon={icon}
 			aria-hidden="true"
 		/>

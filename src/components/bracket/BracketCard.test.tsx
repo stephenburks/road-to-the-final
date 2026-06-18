@@ -3,12 +3,7 @@ import { render, screen } from '@testing-library/react'
 import BracketCard from './BracketCard'
 import type { CardStyle } from './bracketStyles'
 
-const baseCard: CardStyle = {
-	bg: 'var(--green-lo)',
-	border: 'var(--green-b)',
-	titleColor: '#86efac',
-	detColor: 'var(--green)',
-}
+const baseCard: CardStyle = { state: 'current' }
 
 describe('BracketCard', () => {
 	it('renders stage label', () => {
@@ -97,16 +92,10 @@ describe('BracketCard', () => {
 		expect(container.querySelector('[class*="cardCityActive"]')).toBeTruthy()
 	})
 
-	it('applies inline styles from card prop', () => {
+	it('sets data-state attribute from card prop for CSS-driven styling', () => {
 		const { container } = render(
-			<BracketCard
-				path={null}
-				card={{ bg: '#123', border: '#456', titleColor: '#789', detColor: '#abc' }}
-				isAct={false}
-				stage="final"
-			/>
+			<BracketCard path={null} card={{ state: 'active' }} isAct={false} stage="final" />
 		)
-		const cardEl = container.firstElementChild as HTMLElement
-		expect(cardEl.style.background).toBe('rgb(17, 34, 51)')
+		expect(container.firstElementChild?.getAttribute('data-state')).toBe('active')
 	})
 })

@@ -13,20 +13,15 @@ interface BracketCardProps {
 
 export default function BracketCard({ path, card, isAct, stage }: BracketCardProps) {
 	return (
-		<div
-			className={styles.card}
-			style={{ background: card.bg, border: `1px solid ${card.border}` }}
-		>
-			<div className={styles.cardTitle} style={{ color: card.titleColor }}>
-				{STAGE_LABELS[stage]}
-			</div>
+		<div className={styles.card} data-state={card.state}>
+			<div className={styles.cardTitle}>{STAGE_LABELS[stage]}</div>
 			<div className={styles.cardDate}>
 				{path?.date?.match(/^\d{4}/) ? formatDate(path.date) : (path?.date ?? '—')}
 			</div>
 			<div className={`${styles.cardCity} ${isAct ? styles.cardCityActive : ''}`}>
 				{path?.city ?? '—'}
 			</div>
-			<div className={styles.cardDetail} style={{ color: card.detColor }}>
+			<div className={styles.cardDetail}>
 				{path?.detail ?? path?.opponentDesc ?? '—'}
 			</div>
 			{path?.conditional && (

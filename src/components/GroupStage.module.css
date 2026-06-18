@@ -6,11 +6,12 @@
 	min-width: 0;
 }
 
-/* Prevent grid children from auto-expanding past their column */
+/* Prevent grid children from auto-expanding past their column.
+   Don't set overflow:hidden here — it would clobber the inner table's
+   overflow-x:auto and break horizontal scrolling on narrow viewports. */
 .groupGrid > * {
 	min-width: 0;
 	max-width: 100%;
-	overflow: hidden;
 }
 
 .matchGrid {

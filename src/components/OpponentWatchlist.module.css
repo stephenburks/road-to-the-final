@@ -26,6 +26,12 @@
   font-weight: 700;
 }
 
+.schedDiffRank {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--text-lo);
+}
+
 [data-diff="1"] .schedDiffText, [data-diff="2"] .schedDiffText { color: var(--green); }
 [data-diff="3"] .schedDiffText { color: var(--amber); }
 [data-diff="4"] .schedDiffText { color: var(--orange); }

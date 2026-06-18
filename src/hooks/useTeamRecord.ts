@@ -19,10 +19,17 @@ interface NextEvent {
 	score?: string
 }
 
+export interface TeamLink {
+	rel: string
+	href: string
+	text: string
+}
+
 export interface TeamRecordData {
 	record: TeamRecord | null
 	standingSummary: string | null
 	nextEvent: NextEvent | null
+	links: TeamLink[]
 }
 
 const ESPN_FLAG_MAP: Record<string, string> = {
@@ -38,7 +45,9 @@ const ESPN_FLAG_MAP: Record<string, string> = {
 	HAI: '🇭🇹', PAN: '🇵🇦', CUW: '🇨🇼',
 }
 
-const EMPTY: TeamRecordData = { record: null, standingSummary: null, nextEvent: null }
+const EMPTY: TeamRecordData = { record: null, standingSummary: null, nextEvent: null, links: [] }
+
+const LINK_RELS_TO_KEEP = new Set(['clubhouse', 'stats', 'roster', 'schedule'])
 
 async function fetchTeamRecordWithLiveFallback(slug: string, signal: AbortSignal): Promise<TeamRecordData> {
 	const res = await fetch(`${ESPN_TEAM_URL}/${slug}?_=${Date.now()}`, { signal })
@@ -145,7 +154,16 @@ async function fetchTeamRecordWithLiveFallback(slug: string, signal: AbortSignal
 		}
 	}
 
-	return { record, standingSummary: team.standingSummary ?? null, nextEvent }
+	const links: TeamLink[] = []
+	for (const l of (team.links ?? [])) {
+		const rels: string[] = Array.isArray(l?.rel) ? l.rel : []
+		const match = rels.find((r: string) => LINK_RELS_TO_KEEP.has(r))
+		if (match && l?.href && l?.text) {
+			links.push({ rel: match, href: l.href, text: l.text })
+		}
+	}
+
+	return { record, standingSummary: team.standingSummary ?? null, nextEvent, links }
 }
 
 export function useTeamRecord(teamId: string, isHistorical: boolean): TeamRecordData & { error: boolean; loading: boolean } {

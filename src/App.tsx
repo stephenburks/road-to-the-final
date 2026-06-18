@@ -87,6 +87,13 @@ export default function App() {
 		return { probability, groupLetter: team.group }
 	}, [team, data])
 
+	const groupPosition = useMemo(() => {
+		if (!team || !data?.groups) return undefined
+		const standings = data.groups[team.group]?.standings ?? []
+		const row = standings.find(r => r.teamId === team.id)
+		return row?.pos
+	}, [team, data])
+
   useEffect(() => {
     if (!team) return
     document.title = `${team.name} • Road to the Final • World Cup 2026`
@@ -177,7 +184,7 @@ export default function App() {
             <StageTabs team={team} selectedStage={activeStage} onSelect={handleStageSelect} />
           </div>
 
-			<ErrorBoundary name="team overview"><Hero team={team} activeStage={activeStage} isHistorical={isHistorical} groupWinProb={groupWinProb} /></ErrorBoundary>
+			<ErrorBoundary name="team overview"><Hero team={team} activeStage={activeStage} isHistorical={isHistorical} groupWinProb={groupWinProb} groupPosition={groupPosition} /></ErrorBoundary>
 			{!team.eliminated && <ErrorBoundary name="upcoming matches"><GamesToWatch team={team} data={data} /></ErrorBoundary>}
 			<ErrorBoundary name="bracket"><RoadBracket team={team} activeStage={activeStage} onStageSelect={handleStageSelect} /></ErrorBoundary>
 

@@ -1,6 +1,10 @@
 import { STAGE_LABELS } from '../constants'
-import type { Stage, Team, AppData, Scenario } from '../types'
+import type { Stage, Team, AppData, PossibleOpponentData, Scenario } from '../types'
 import { formatDate, getFeederGroup, computeScheduleDifficulty } from '../utils'
+
+function hasScenarioData(d: PossibleOpponentData | undefined): d is { scenarios: Scenario[] } {
+	return d != null && !Array.isArray(d) && 'scenarios' in d && Array.isArray(d.scenarios)
+}
 import SectionLabel from './ui/SectionLabel'
 import FeederGroupPanel from './ui/FeederGroupPanel'
 import OpponentCard from './opponents/OpponentCard'
@@ -101,11 +105,7 @@ export default function OpponentWatchlist({
 	const oppData =
 		activeStage === 'r32' || activeStage === 'r16' ? team.possibleOpponents[activeStage] : undefined
 
-	const hasScenarios =
-		oppData != null &&
-		!Array.isArray(oppData) &&
-		'scenarios' in oppData &&
-		Array.isArray(oppData.scenarios)
+	const scenarioData = hasScenarioData(oppData) ? oppData : null
 	const flatList = Array.isArray(oppData) ? oppData : []
 	const hasFlat = flatList.length > 0
 	const isLateStage = ['qf', 'sf', 'final'].includes(activeStage)
@@ -129,6 +129,11 @@ export default function OpponentWatchlist({
 					<span className={styles.schedDiffLabel}>Path Difficulty</span>
 					<DiffPips level={schedDiff.score} />
 					<span className={styles.schedDiffText}>{schedDiff.label}</span>
+					{schedDiff.avgRank != null && (
+						<span className={styles.schedDiffRank} aria-label={`Average opponent FIFA rank ${schedDiff.avgRank}`}>
+							· Avg opponent FIFA #{schedDiff.avgRank}
+						</span>
+					)}
 				</div>
 			)}
 
@@ -136,11 +141,9 @@ export default function OpponentWatchlist({
 
 			{isLateStage && <FutureStagePlaceholder stage={activeStage} path={stagePath} />}
 
-			{!isLateStage && hasScenarios && (
+			{!isLateStage && scenarioData && (
 				<div className={styles.scenarios}>
-					{/* Scenarios code path: currently unused by live data.
-						If data with scenarios is added, verify this rendering path. */}
-					{(oppData as { scenarios: Scenario[] }).scenarios.map((scenario, i) => (
+					{scenarioData.scenarios.map((scenario, i) => (
 						<div key={i} className={styles.scenario}>
 							<div className={styles.scenarioHeader}>
 								<span className={styles.scenarioLabel}>{scenario.condition}</span>
@@ -161,7 +164,7 @@ export default function OpponentWatchlist({
 				</div>
 			)}
 
-			{!isLateStage && !hasScenarios && hasFlat && !r16WithPct && (
+			{!isLateStage && !scenarioData && hasFlat && !r16WithPct && (
 				<div className={styles.grid}>
 					{flatList.map((opp, i) => (
 						<OpponentCard key={i} opp={opp} />
@@ -199,7 +202,7 @@ export default function OpponentWatchlist({
 				</div>
 			)}
 
-			{activeStage === 'r32' && (hasFlat || hasScenarios) && (
+			{activeStage === 'r32' && (hasFlat || scenarioData) && (
 				<div className={styles.legend} role="note" aria-label="Difficulty key">
 					<span>
 						<span className={`${styles.legendPip} ${styles.legendPipFavorable}`} /> Favorable
