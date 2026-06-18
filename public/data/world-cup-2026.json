@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-18T03:51:26.780Z",
+  "lastUpdated": "2026-06-18T08:46:21.390Z",
   "snapshotDate": "2026-06-18",
   "isHistorical": false,
   "sourceSummary": {
@@ -368,10 +368,10 @@
         }
       ],
       "winProbabilities": {
-        "germany": 73,
+        "germany": 72,
         "ivorycoast": 22,
         "ecuador": 5,
-        "curacao": 1
+        "curacao": 0
       }
     },
     "F": {
@@ -434,7 +434,7 @@
         }
       ],
       "winProbabilities": {
-        "sweden": 28,
+        "sweden": 30,
         "netherlands": 44,
         "japan": 28,
         "tunisia": 1
@@ -500,9 +500,9 @@
         }
       ],
       "winProbabilities": {
-        "iran": 7,
+        "iran": 8,
         "newzealand": 3,
-        "belgium": 63,
+        "belgium": 64,
         "egypt": 26
       }
     },
@@ -698,7 +698,7 @@
         }
       ],
       "winProbabilities": {
-        "argentina": 86,
+        "argentina": 85,
         "austria": 14,
         "jordan": 0,
         "algeria": 1
@@ -706,6 +706,20 @@
     },
     "K": {
       "standings": [
+        {
+          "teamId": "colombia",
+          "team": "Colombia",
+          "played": 1,
+          "w": 1,
+          "d": 0,
+          "l": 0,
+          "gf": 3,
+          "ga": 1,
+          "pts": 3,
+          "gd": 2,
+          "pos": 1,
+          "flag": "🇨🇴"
+        },
         {
           "teamId": "portugal",
           "team": "Portugal",
@@ -717,7 +731,7 @@
           "ga": 1,
           "pts": 1,
           "gd": 0,
-          "pos": 1,
+          "pos": 2,
           "flag": "🇵🇹"
         },
         {
@@ -731,43 +745,29 @@
           "ga": 1,
           "pts": 1,
           "gd": 0,
-          "pos": 2,
+          "pos": 3,
           "flag": "🇨🇩"
         },
         {
           "teamId": "uzbekistan",
           "team": "Uzbekistan",
-          "played": 0,
+          "played": 1,
           "w": 0,
           "d": 0,
-          "l": 0,
-          "gf": 0,
-          "ga": 0,
+          "l": 1,
+          "gf": 1,
+          "ga": 3,
           "pts": 0,
-          "gd": 0,
-          "pos": 3,
-          "flag": "🇺🇿"
-        },
-        {
-          "teamId": "colombia",
-          "team": "Colombia",
-          "played": 0,
-          "w": 0,
-          "d": 0,
-          "l": 0,
-          "gf": 0,
-          "ga": 0,
-          "pts": 0,
-          "gd": 0,
+          "gd": -2,
           "pos": 4,
-          "flag": "🇨🇴"
+          "flag": "🇺🇿"
         }
       ],
       "winProbabilities": {
-        "portugal": 48,
+        "colombia": 49,
+        "portugal": 45,
         "drcongo": 5,
-        "uzbekistan": 1,
-        "colombia": 48
+        "uzbekistan": 1
       }
     },
     "L": {
@@ -830,7 +830,7 @@
         }
       ],
       "winProbabilities": {
-        "england": 91,
+        "england": 92,
         "ghana": 6,
         "panama": 1,
         "croatia": 3
@@ -897,10 +897,10 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 96,
-        "r16": 59,
+        "r32": 97,
+        "r16": 60,
         "qf": 31,
-        "sf": 12,
+        "sf": 11,
         "final": 6,
         "winner": 1,
         "source": "market"
@@ -1198,10 +1198,10 @@
           },
           {
             "group": "K",
-            "likelyTeam": "Uzbekistan",
-            "flag": "🇺🇿",
-            "fifaRank": 50,
-            "difficulty": 2,
+            "likelyTeam": "DR Congo",
+            "flag": "🇨🇩",
+            "fifaRank": 56,
+            "difficulty": 1,
             "label": "Favorable",
             "color": "#22C55E",
             "note": "3rd-place team from Group K",
@@ -1233,12 +1233,12 @@
           },
           {
             "group": "K",
-            "likelyTeam": "Portugal",
-            "flag": "🇵🇹",
-            "fifaRank": 6,
-            "difficulty": 5,
-            "label": "Danger",
-            "color": "#EF4444",
+            "likelyTeam": "Colombia",
+            "flag": "🇨🇴",
+            "fifaRank": 13,
+            "difficulty": 4,
+            "label": "Tough",
+            "color": "#FB923C",
             "note": "Winner of Group K",
             "pct": null
           },
@@ -1415,10 +1415,10 @@
           },
           {
             "group": "K",
-            "likelyTeam": "Uzbekistan",
-            "flag": "🇺🇿",
-            "fifaRank": 50,
-            "difficulty": 2,
+            "likelyTeam": "DR Congo",
+            "flag": "🇨🇩",
+            "fifaRank": 56,
+            "difficulty": 1,
             "label": "Favorable",
             "color": "#22C55E",
             "note": "3rd-place team from Group K",
@@ -1439,12 +1439,12 @@
           },
           {
             "group": "K",
-            "likelyTeam": "Portugal",
-            "flag": "🇵🇹",
-            "fifaRank": 6,
-            "difficulty": 5,
-            "label": "Danger",
-            "color": "#EF4444",
+            "likelyTeam": "Colombia",
+            "flag": "🇨🇴",
+            "fifaRank": 13,
+            "difficulty": 4,
+            "label": "Tough",
+            "color": "#FB923C",
             "note": "Winner of Group K",
             "pct": null
           },
@@ -1509,8 +1509,8 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 55,
-        "r16": 21,
+        "r32": 54,
+        "r16": 22,
         "qf": 6,
         "sf": 3,
         "final": 1,
@@ -1614,10 +1614,10 @@
           },
           {
             "group": "K",
-            "likelyTeam": "Uzbekistan",
-            "flag": "🇺🇿",
-            "fifaRank": 50,
-            "difficulty": 2,
+            "likelyTeam": "DR Congo",
+            "flag": "🇨🇩",
+            "fifaRank": 56,
+            "difficulty": 1,
             "label": "Favorable",
             "color": "#22C55E",
             "note": "3rd-place team from Group K",
@@ -1649,12 +1649,12 @@
           },
           {
             "group": "K",
-            "likelyTeam": "Portugal",
-            "flag": "🇵🇹",
-            "fifaRank": 6,
-            "difficulty": 5,
-            "label": "Danger",
-            "color": "#EF4444",
+            "likelyTeam": "Colombia",
+            "flag": "🇨🇴",
+            "fifaRank": 13,
+            "difficulty": 4,
+            "label": "Tough",
+            "color": "#FB923C",
             "note": "Winner of Group K",
             "pct": null
           },
@@ -1732,7 +1732,7 @@
       "advanceProbabilities": {
         "r32": 84,
         "r16": 42,
-        "qf": 14,
+        "qf": 13,
         "sf": 3,
         "final": 2,
         "winner": 0,
@@ -1924,7 +1924,7 @@
       ],
       "advanceProbabilities": {
         "r32": 69,
-        "r16": 22,
+        "r16": 21,
         "qf": 6,
         "sf": 3,
         "final": 1,
@@ -2124,7 +2124,7 @@
       "advanceProbabilities": {
         "r32": 27,
         "r16": 4,
-        "qf": 2,
+        "qf": 3,
         "sf": 1,
         "final": 1,
         "winner": 0,
@@ -2307,9 +2307,9 @@
       "advanceProbabilities": {
         "r32": 87,
         "r16": 50,
-        "qf": 19,
-        "sf": 8,
-        "final": 3,
+        "qf": 20,
+        "sf": 7,
+        "final": 2,
         "winner": 1,
         "source": "market"
       },
@@ -2505,10 +2505,10 @@
       ],
       "advanceProbabilities": {
         "r32": 96,
-        "r16": 68,
+        "r16": 66,
         "qf": 47,
         "sf": 25,
-        "final": 16,
+        "final": 17,
         "winner": 7,
         "source": "market"
       },
@@ -2648,11 +2648,11 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 93,
+        "r32": 94,
         "r16": 51,
         "qf": 30,
         "sf": 14,
-        "final": 7,
+        "final": 6,
         "winner": 2,
         "source": "market"
       },
@@ -2798,7 +2798,7 @@
       "advanceProbabilities": {
         "r32": 5,
         "r16": 2,
-        "qf": 1,
+        "qf": 2,
         "sf": 0,
         "final": 0,
         "winner": 0,
@@ -2958,9 +2958,9 @@
       "advanceProbabilities": {
         "r32": 77,
         "r16": 26,
-        "qf": 9,
-        "sf": 3,
-        "final": 2,
+        "qf": 8,
+        "sf": 4,
+        "final": 1,
         "winner": 0,
         "source": "market"
       },
@@ -3154,9 +3154,9 @@
       ],
       "advanceProbabilities": {
         "r32": 97,
-        "r16": 66,
+        "r16": 65,
         "qf": 37,
-        "sf": 18,
+        "sf": 17,
         "final": 6,
         "winner": 2,
         "source": "market"
@@ -3369,7 +3369,7 @@
       "advanceProbabilities": {
         "r32": 39,
         "r16": 12,
-        "qf": 4,
+        "qf": 6,
         "sf": 2,
         "final": 1,
         "winner": 0,
@@ -3511,8 +3511,8 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 87,
-        "r16": 38,
+        "r32": 86,
+        "r16": 39,
         "qf": 10,
         "sf": 4,
         "final": 1,
@@ -3659,10 +3659,10 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 51,
-        "r16": 21,
+        "r32": 50,
+        "r16": 24,
         "qf": 13,
-        "sf": 7,
+        "sf": 5,
         "final": 1,
         "winner": 0,
         "source": "market"
@@ -3810,10 +3810,10 @@
       ],
       "advanceProbabilities": {
         "r32": 99,
-        "r16": 74,
+        "r16": 73,
         "qf": 40,
-        "sf": 27,
-        "final": 14,
+        "sf": 26,
+        "final": 13,
         "winner": 6,
         "source": "market"
       },
@@ -3999,8 +3999,8 @@
       "advanceProbabilities": {
         "r32": 2,
         "r16": 2,
-        "qf": 2,
-        "sf": 1,
+        "qf": 0,
+        "sf": 0,
         "final": 0,
         "winner": 0,
         "source": "market"
@@ -4157,10 +4157,10 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 97,
+        "r32": 96,
         "r16": 37,
         "qf": 14,
-        "sf": 6,
+        "sf": 7,
         "final": 2,
         "winner": 1,
         "source": "market"
@@ -4294,8 +4294,8 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 79,
-        "r16": 38,
+        "r32": 78,
+        "r16": 36,
         "qf": 13,
         "sf": 6,
         "final": 2,
@@ -4456,10 +4456,10 @@
       ],
       "advanceProbabilities": {
         "r32": 92,
-        "r16": 55,
+        "r16": 54,
         "qf": 38,
         "sf": 20,
-        "final": 11,
+        "final": 10,
         "winner": 4,
         "source": "market"
       },
@@ -4516,12 +4516,12 @@
         "r32": [
           {
             "group": "K",
-            "likelyTeam": "Portugal",
-            "flag": "🇵🇹",
-            "fifaRank": 6,
-            "difficulty": 5,
-            "label": "Danger",
-            "color": "#EF4444",
+            "likelyTeam": "Colombia",
+            "flag": "🇨🇴",
+            "fifaRank": 13,
+            "difficulty": 4,
+            "label": "Tough",
+            "color": "#FB923C",
             "note": "Winner of Group K",
             "pct": null
           }
@@ -4600,9 +4600,9 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 85,
-        "r16": 42,
-        "qf": 23,
+        "r32": 86,
+        "r16": 43,
+        "qf": 22,
         "sf": 12,
         "final": 5,
         "winner": 2,
@@ -4661,12 +4661,12 @@
         "r32": [
           {
             "group": "K",
-            "likelyTeam": "Portugal",
-            "flag": "🇵🇹",
-            "fifaRank": 6,
-            "difficulty": 5,
-            "label": "Danger",
-            "color": "#EF4444",
+            "likelyTeam": "Colombia",
+            "flag": "🇨🇴",
+            "fifaRank": 13,
+            "difficulty": 4,
+            "label": "Tough",
+            "color": "#FB923C",
             "note": "Winner of Group K",
             "pct": null
           }
@@ -4748,9 +4748,9 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 93,
-        "r16": 34,
-        "qf": 15,
+        "r32": 94,
+        "r16": 37,
+        "qf": 14,
         "sf": 5,
         "final": 3,
         "winner": 1,
@@ -4898,7 +4898,7 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 8,
+        "r32": 7,
         "r16": 3,
         "qf": 2,
         "sf": 1,
@@ -4959,12 +4959,12 @@
         "r32": [
           {
             "group": "K",
-            "likelyTeam": "Portugal",
-            "flag": "🇵🇹",
-            "fifaRank": 6,
-            "difficulty": 5,
-            "label": "Danger",
-            "color": "#EF4444",
+            "likelyTeam": "Colombia",
+            "flag": "🇨🇴",
+            "fifaRank": 13,
+            "difficulty": 4,
+            "label": "Tough",
+            "color": "#FB923C",
             "note": "Winner of Group K",
             "pct": null
           }
@@ -5209,8 +5209,8 @@
       ],
       "advanceProbabilities": {
         "r32": 82,
-        "r16": 33,
-        "qf": 13,
+        "r16": 31,
+        "qf": 12,
         "sf": 3,
         "final": 1,
         "winner": 0,
@@ -5360,7 +5360,7 @@
       ],
       "advanceProbabilities": {
         "r32": 41,
-        "r16": 14,
+        "r16": 15,
         "qf": 5,
         "sf": 2,
         "final": 1,
@@ -5697,9 +5697,9 @@
       ],
       "advanceProbabilities": {
         "r32": 97,
-        "r16": 75,
+        "r16": 72,
         "qf": 57,
-        "sf": 43,
+        "sf": 42,
         "final": 25,
         "winner": 14,
         "source": "market"
@@ -5792,12 +5792,12 @@
           },
           {
             "group": "K",
-            "likelyTeam": "Portugal",
-            "flag": "🇵🇹",
-            "fifaRank": 6,
-            "difficulty": 5,
-            "label": "Danger",
-            "color": "#EF4444",
+            "likelyTeam": "Colombia",
+            "flag": "🇨🇴",
+            "fifaRank": 13,
+            "difficulty": 4,
+            "label": "Tough",
+            "color": "#FB923C",
             "note": "Winner of Group K",
             "pct": null
           },
@@ -5867,7 +5867,7 @@
       ],
       "advanceProbabilities": {
         "r32": 45,
-        "r16": 6,
+        "r16": 9,
         "qf": 5,
         "sf": 2,
         "final": 1,
@@ -5962,12 +5962,12 @@
           },
           {
             "group": "K",
-            "likelyTeam": "Portugal",
-            "flag": "🇵🇹",
-            "fifaRank": 6,
-            "difficulty": 5,
-            "label": "Danger",
-            "color": "#EF4444",
+            "likelyTeam": "Colombia",
+            "flag": "🇨🇴",
+            "fifaRank": 13,
+            "difficulty": 4,
+            "label": "Tough",
+            "color": "#FB923C",
             "note": "Winner of Group K",
             "pct": null
           },
@@ -6040,8 +6040,8 @@
       "advanceProbabilities": {
         "r32": 44,
         "r16": 10,
-        "qf": 6,
-        "sf": 4,
+        "qf": 8,
+        "sf": 3,
         "final": 1,
         "winner": 0,
         "source": "market"
@@ -6183,10 +6183,10 @@
       ],
       "advanceProbabilities": {
         "r32": 78,
-        "r16": 34,
-        "qf": 22,
-        "sf": 6,
-        "final": 3,
+        "r16": 33,
+        "qf": 21,
+        "sf": 9,
+        "final": 2,
         "winner": 1,
         "source": "market"
       },
@@ -6267,12 +6267,12 @@
           },
           {
             "group": "K",
-            "likelyTeam": "Portugal",
-            "flag": "🇵🇹",
-            "fifaRank": 6,
-            "difficulty": 5,
-            "label": "Danger",
-            "color": "#EF4444",
+            "likelyTeam": "Colombia",
+            "flag": "🇨🇴",
+            "fifaRank": 13,
+            "difficulty": 4,
+            "label": "Tough",
+            "color": "#FB923C",
             "note": "Winner of Group K",
             "pct": null
           },
@@ -6339,7 +6339,7 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 100,
+        "r32": 99,
         "r16": 85,
         "qf": 63,
         "sf": 48,
@@ -6473,7 +6473,7 @@
       ],
       "advanceProbabilities": {
         "r32": 69,
-        "r16": 27,
+        "r16": 30,
         "qf": 14,
         "sf": 5,
         "final": 2,
@@ -6771,8 +6771,8 @@
       "advanceProbabilities": {
         "r32": 96,
         "r16": 59,
-        "qf": 31,
-        "sf": 16,
+        "qf": 32,
+        "sf": 18,
         "final": 7,
         "winner": 3,
         "source": "market"
@@ -6949,11 +6949,11 @@
       ],
       "advanceProbabilities": {
         "r32": 99,
-        "r16": 74,
+        "r16": 75,
         "qf": 59,
         "sf": 38,
-        "final": 20,
-        "winner": 12,
+        "final": 22,
+        "winner": 13,
         "source": "market"
       },
       "path": {
@@ -7124,7 +7124,7 @@
       ],
       "advanceProbabilities": {
         "r32": 56,
-        "r16": 20,
+        "r16": 17,
         "qf": 6,
         "sf": 3,
         "final": 1,
@@ -7276,9 +7276,9 @@
       ],
       "advanceProbabilities": {
         "r32": 92,
-        "r16": 30,
+        "r16": 31,
         "qf": 14,
-        "sf": 5,
+        "sf": 4,
         "final": 2,
         "winner": 0,
         "source": "market"
@@ -7419,11 +7419,11 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 10,
-        "r16": 3,
+        "r32": 9,
+        "r16": 4,
         "qf": 1,
         "sf": 1,
-        "final": 0,
+        "final": 1,
         "winner": 0,
         "source": "market"
       },
@@ -7580,7 +7580,7 @@
       ],
       "advanceProbabilities": {
         "r32": 95,
-        "r16": 73,
+        "r16": 71,
         "qf": 47,
         "sf": 30,
         "final": 17,
@@ -7594,6 +7594,447 @@
           "venue": "Various venues",
           "date": "Jun 17–27",
           "detail": "1pt after MD1"
+        },
+        "r32": {
+          "status": "upcoming",
+          "match": 83,
+          "date": "2026-06-29",
+          "city": "Toronto",
+          "venue": "BMO Field",
+          "opponentDesc": "Runner-up Group L"
+        },
+        "r16": {
+          "status": "future",
+          "match": 95,
+          "date": "2026-07-07",
+          "city": "Atlanta",
+          "venue": "Mercedes-Benz Stadium",
+          "opponentDesc": "Winner Match 83"
+        },
+        "qf": {
+          "status": "future",
+          "match": 99,
+          "date": "2026-07-11",
+          "city": "Miami",
+          "venue": "Hard Rock Stadium",
+          "opponentDesc": "Winner Match 95"
+        },
+        "sf": {
+          "status": "future",
+          "match": 102,
+          "date": "2026-07-15",
+          "city": "Atlanta",
+          "venue": "Mercedes-Benz Stadium",
+          "opponentDesc": "Winner QF bracket"
+        },
+        "final": {
+          "status": "future",
+          "match": 104,
+          "date": "2026-07-19",
+          "city": "New Jersey",
+          "venue": "MetLife Stadium",
+          "opponentDesc": "Winner other SF"
+        }
+      },
+      "possibleOpponents": {
+        "r32": [
+          {
+            "group": "L",
+            "likelyTeam": "Ghana",
+            "flag": "🇬🇭",
+            "fifaRank": 60,
+            "difficulty": 1,
+            "label": "Favorable",
+            "color": "#22C55E",
+            "note": "Runner-up of Group L",
+            "pct": null
+          }
+        ],
+        "r16": [
+          {
+            "group": "L",
+            "likelyTeam": "England",
+            "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+            "fifaRank": 5,
+            "difficulty": 5,
+            "label": "Danger",
+            "color": "#EF4444",
+            "note": "Winner of Group L",
+            "pct": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "drcongo",
+      "name": "DR Congo",
+      "flag": "🇨🇩",
+      "group": "K",
+      "confederation": "CAF",
+      "fifaRank": 56,
+      "eliminated": false,
+      "currentStage": "group_stage",
+      "groupResults": [
+        {
+          "matchday": 1,
+          "opponent": "Portugal",
+          "opponentFlag": "🇵🇹",
+          "result": "D",
+          "score": "1-1",
+          "date": "2026-06-17",
+          "venue": "NRG Stadium, Houston",
+          "scorers": [
+            "Yoane Wissa 45'+5'"
+          ],
+          "cards": [
+            {
+              "player": "Chancel Mbemba",
+              "minute": "32'",
+              "type": "yellow"
+            }
+          ]
+        },
+        {
+          "matchday": 2,
+          "opponent": "Colombia",
+          "opponentFlag": "🇨🇴",
+          "result": null,
+          "score": null,
+          "date": "2026-06-23",
+          "venue": "Estadio Azteca, Mexico City",
+          "scorers": [],
+          "cards": []
+        },
+        {
+          "matchday": 3,
+          "opponent": "Uzbekistan",
+          "opponentFlag": "🇺🇿",
+          "result": null,
+          "score": null,
+          "date": "2026-06-27",
+          "venue": "Mercedes-Benz Stadium, Atlanta",
+          "scorers": [],
+          "cards": []
+        }
+      ],
+      "advanceProbabilities": {
+        "r32": 59,
+        "r16": 18,
+        "qf": 6,
+        "sf": 4,
+        "final": 1,
+        "winner": 0,
+        "source": "market"
+      },
+      "path": {
+        "group_stage": {
+          "status": "active",
+          "city": "Houston · Mexico City · Atlanta",
+          "venue": "Various venues",
+          "date": "Jun 17–27",
+          "detail": "1pt after MD1"
+        },
+        "r32": {
+          "status": "upcoming",
+          "match": 83,
+          "date": "2026-06-29",
+          "city": "Toronto",
+          "venue": "BMO Field",
+          "opponentDesc": "Runner-up Group L"
+        },
+        "r16": {
+          "status": "future",
+          "match": 95,
+          "date": "2026-07-07",
+          "city": "Atlanta",
+          "venue": "Mercedes-Benz Stadium",
+          "opponentDesc": "Winner Match 83"
+        },
+        "qf": {
+          "status": "future",
+          "match": 99,
+          "date": "2026-07-11",
+          "city": "Miami",
+          "venue": "Hard Rock Stadium",
+          "opponentDesc": "Winner Match 95"
+        },
+        "sf": {
+          "status": "future",
+          "match": 102,
+          "date": "2026-07-15",
+          "city": "Atlanta",
+          "venue": "Mercedes-Benz Stadium",
+          "opponentDesc": "Winner QF bracket"
+        },
+        "final": {
+          "status": "future",
+          "match": 104,
+          "date": "2026-07-19",
+          "city": "New Jersey",
+          "venue": "MetLife Stadium",
+          "opponentDesc": "Winner other SF"
+        }
+      },
+      "possibleOpponents": {
+        "r32": [
+          {
+            "group": "L",
+            "likelyTeam": "Ghana",
+            "flag": "🇬🇭",
+            "fifaRank": 60,
+            "difficulty": 1,
+            "label": "Favorable",
+            "color": "#22C55E",
+            "note": "Runner-up of Group L",
+            "pct": null
+          }
+        ],
+        "r16": [
+          {
+            "group": "K",
+            "likelyTeam": "Portugal",
+            "flag": "🇵🇹",
+            "fifaRank": 6,
+            "difficulty": 5,
+            "label": "Danger",
+            "color": "#EF4444",
+            "note": "Runner-up of Group K",
+            "pct": null
+          },
+          {
+            "group": "L",
+            "likelyTeam": "England",
+            "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+            "fifaRank": 5,
+            "difficulty": 5,
+            "label": "Danger",
+            "color": "#EF4444",
+            "note": "Winner of Group L",
+            "pct": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "uzbekistan",
+      "name": "Uzbekistan",
+      "flag": "🇺🇿",
+      "group": "K",
+      "confederation": "AFC",
+      "fifaRank": 50,
+      "eliminated": false,
+      "currentStage": "group_stage",
+      "groupResults": [
+        {
+          "matchday": 1,
+          "opponent": "Colombia",
+          "opponentFlag": "🇨🇴",
+          "result": "L",
+          "score": "1-3",
+          "date": "2026-06-17",
+          "venue": "Estadio Azteca, Mexico City",
+          "scorers": [
+            "Abbosbek Fayzullaev 60'"
+          ],
+          "cards": [
+            {
+              "player": "Abdukodir Khusanov",
+              "minute": "34'",
+              "type": "yellow"
+            }
+          ]
+        },
+        {
+          "matchday": 2,
+          "opponent": "Portugal",
+          "opponentFlag": "🇵🇹",
+          "result": null,
+          "score": null,
+          "date": "2026-06-23",
+          "venue": "NRG Stadium, Houston",
+          "scorers": [],
+          "cards": []
+        },
+        {
+          "matchday": 3,
+          "opponent": "DR Congo",
+          "opponentFlag": "🇨🇩",
+          "result": null,
+          "score": null,
+          "date": "2026-06-27",
+          "venue": "Mercedes-Benz Stadium, Atlanta",
+          "scorers": [],
+          "cards": []
+        }
+      ],
+      "advanceProbabilities": {
+        "r32": 22,
+        "r16": 6,
+        "qf": 2,
+        "sf": 2,
+        "final": 0,
+        "winner": 0,
+        "source": "market"
+      },
+      "path": {
+        "group_stage": {
+          "status": "active",
+          "city": "Mexico City · Houston · Atlanta",
+          "venue": "Various venues",
+          "date": "Jun 17–27",
+          "detail": "0pts after MD1"
+        },
+        "r32": {
+          "status": "upcoming",
+          "match": 83,
+          "date": "2026-06-29",
+          "city": "Toronto",
+          "venue": "BMO Field",
+          "opponentDesc": "Runner-up Group L"
+        },
+        "r16": {
+          "status": "future",
+          "match": 95,
+          "date": "2026-07-07",
+          "city": "Atlanta",
+          "venue": "Mercedes-Benz Stadium",
+          "opponentDesc": "Winner Match 83"
+        },
+        "qf": {
+          "status": "future",
+          "match": 99,
+          "date": "2026-07-11",
+          "city": "Miami",
+          "venue": "Hard Rock Stadium",
+          "opponentDesc": "Winner Match 95"
+        },
+        "sf": {
+          "status": "future",
+          "match": 102,
+          "date": "2026-07-15",
+          "city": "Atlanta",
+          "venue": "Mercedes-Benz Stadium",
+          "opponentDesc": "Winner QF bracket"
+        },
+        "final": {
+          "status": "future",
+          "match": 104,
+          "date": "2026-07-19",
+          "city": "New Jersey",
+          "venue": "MetLife Stadium",
+          "opponentDesc": "Winner other SF"
+        }
+      },
+      "possibleOpponents": {
+        "r32": [
+          {
+            "group": "L",
+            "likelyTeam": "Ghana",
+            "flag": "🇬🇭",
+            "fifaRank": 60,
+            "difficulty": 1,
+            "label": "Favorable",
+            "color": "#22C55E",
+            "note": "Runner-up of Group L",
+            "pct": null
+          }
+        ],
+        "r16": [
+          {
+            "group": "K",
+            "likelyTeam": "Portugal",
+            "flag": "🇵🇹",
+            "fifaRank": 6,
+            "difficulty": 5,
+            "label": "Danger",
+            "color": "#EF4444",
+            "note": "Runner-up of Group K",
+            "pct": null
+          },
+          {
+            "group": "L",
+            "likelyTeam": "England",
+            "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+            "fifaRank": 5,
+            "difficulty": 5,
+            "label": "Danger",
+            "color": "#EF4444",
+            "note": "Winner of Group L",
+            "pct": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "colombia",
+      "name": "Colombia",
+      "flag": "🇨🇴",
+      "group": "K",
+      "confederation": "CONMEBOL",
+      "fifaRank": 13,
+      "eliminated": false,
+      "currentStage": "group_stage",
+      "groupResults": [
+        {
+          "matchday": 1,
+          "opponent": "Uzbekistan",
+          "opponentFlag": "🇺🇿",
+          "result": "W",
+          "score": "3-1",
+          "date": "2026-06-17",
+          "venue": "Estadio Azteca, Mexico City",
+          "scorers": [
+            "Daniel Muñoz 40'",
+            "Luis Díaz 65'",
+            "Jáminton Campaz 90'+9'"
+          ],
+          "cards": [
+            {
+              "player": "Johan Mojica",
+              "minute": "7'",
+              "type": "yellow"
+            }
+          ]
+        },
+        {
+          "matchday": 2,
+          "opponent": "DR Congo",
+          "opponentFlag": "🇨🇩",
+          "result": null,
+          "score": null,
+          "date": "2026-06-23",
+          "venue": "Estadio Azteca, Mexico City",
+          "scorers": [],
+          "cards": []
+        },
+        {
+          "matchday": 3,
+          "opponent": "Portugal",
+          "opponentFlag": "🇵🇹",
+          "result": null,
+          "score": null,
+          "date": "2026-06-27",
+          "venue": "Hard Rock Stadium, Miami",
+          "scorers": [],
+          "cards": []
+        }
+      ],
+      "advanceProbabilities": {
+        "r32": 98,
+        "r16": 55,
+        "qf": 29,
+        "sf": 14,
+        "final": 6,
+        "winner": 2,
+        "source": "market"
+      },
+      "path": {
+        "group_stage": {
+          "status": "active",
+          "city": "Mexico City · Miami",
+          "venue": "Various venues",
+          "date": "Jun 17–27",
+          "detail": "3pts after MD1"
         },
         "r32": {
           "status": "upcoming",
@@ -7684,10 +8125,10 @@
           },
           {
             "group": "K",
-            "likelyTeam": "Uzbekistan",
-            "flag": "🇺🇿",
-            "fifaRank": 50,
-            "difficulty": 2,
+            "likelyTeam": "DR Congo",
+            "flag": "🇨🇩",
+            "fifaRank": 56,
+            "difficulty": 1,
             "label": "Favorable",
             "color": "#22C55E",
             "note": "3rd-place team from Group K",
@@ -7726,429 +8167,6 @@
             "label": "Favorable",
             "color": "#22C55E",
             "note": "Runner-up of Group L",
-            "pct": null
-          }
-        ]
-      }
-    },
-    {
-      "id": "drcongo",
-      "name": "DR Congo",
-      "flag": "🇨🇩",
-      "group": "K",
-      "confederation": "CAF",
-      "fifaRank": 56,
-      "eliminated": false,
-      "currentStage": "group_stage",
-      "groupResults": [
-        {
-          "matchday": 1,
-          "opponent": "Portugal",
-          "opponentFlag": "🇵🇹",
-          "result": "D",
-          "score": "1-1",
-          "date": "2026-06-17",
-          "venue": "NRG Stadium, Houston",
-          "scorers": [
-            "Yoane Wissa 45'+5'"
-          ],
-          "cards": [
-            {
-              "player": "Chancel Mbemba",
-              "minute": "32'",
-              "type": "yellow"
-            }
-          ]
-        },
-        {
-          "matchday": 2,
-          "opponent": "Colombia",
-          "opponentFlag": "🇨🇴",
-          "result": null,
-          "score": null,
-          "date": "2026-06-23",
-          "venue": "Estadio Azteca, Mexico City",
-          "scorers": [],
-          "cards": []
-        },
-        {
-          "matchday": 3,
-          "opponent": "Uzbekistan",
-          "opponentFlag": "🇺🇿",
-          "result": null,
-          "score": null,
-          "date": "2026-06-27",
-          "venue": "Mercedes-Benz Stadium, Atlanta",
-          "scorers": [],
-          "cards": []
-        }
-      ],
-      "advanceProbabilities": {
-        "r32": 58,
-        "r16": 16,
-        "qf": 6,
-        "sf": 4,
-        "final": 1,
-        "winner": 0,
-        "source": "market"
-      },
-      "path": {
-        "group_stage": {
-          "status": "active",
-          "city": "Houston · Mexico City · Atlanta",
-          "venue": "Various venues",
-          "date": "Jun 17–27",
-          "detail": "1pt after MD1"
-        },
-        "r32": {
-          "status": "upcoming",
-          "match": 83,
-          "date": "2026-06-29",
-          "city": "Toronto",
-          "venue": "BMO Field",
-          "opponentDesc": "Runner-up Group L"
-        },
-        "r16": {
-          "status": "future",
-          "match": 95,
-          "date": "2026-07-07",
-          "city": "Atlanta",
-          "venue": "Mercedes-Benz Stadium",
-          "opponentDesc": "Winner Match 83"
-        },
-        "qf": {
-          "status": "future",
-          "match": 99,
-          "date": "2026-07-11",
-          "city": "Miami",
-          "venue": "Hard Rock Stadium",
-          "opponentDesc": "Winner Match 95"
-        },
-        "sf": {
-          "status": "future",
-          "match": 102,
-          "date": "2026-07-15",
-          "city": "Atlanta",
-          "venue": "Mercedes-Benz Stadium",
-          "opponentDesc": "Winner QF bracket"
-        },
-        "final": {
-          "status": "future",
-          "match": 104,
-          "date": "2026-07-19",
-          "city": "New Jersey",
-          "venue": "MetLife Stadium",
-          "opponentDesc": "Winner other SF"
-        }
-      },
-      "possibleOpponents": {
-        "r32": [
-          {
-            "group": "L",
-            "likelyTeam": "Ghana",
-            "flag": "🇬🇭",
-            "fifaRank": 60,
-            "difficulty": 1,
-            "label": "Favorable",
-            "color": "#22C55E",
-            "note": "Runner-up of Group L",
-            "pct": null
-          }
-        ],
-        "r16": [
-          {
-            "group": "L",
-            "likelyTeam": "England",
-            "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
-            "fifaRank": 5,
-            "difficulty": 5,
-            "label": "Danger",
-            "color": "#EF4444",
-            "note": "Winner of Group L",
-            "pct": null
-          }
-        ]
-      }
-    },
-    {
-      "id": "uzbekistan",
-      "name": "Uzbekistan",
-      "flag": "🇺🇿",
-      "group": "K",
-      "confederation": "AFC",
-      "fifaRank": 50,
-      "eliminated": false,
-      "currentStage": "group_stage",
-      "groupResults": [
-        {
-          "matchday": 1,
-          "opponent": "Colombia",
-          "opponentFlag": "🇨🇴",
-          "result": null,
-          "score": "1-2",
-          "date": "2026-06-17",
-          "venue": "Estadio Azteca, Mexico City",
-          "scorers": [],
-          "cards": []
-        },
-        {
-          "matchday": 2,
-          "opponent": "Portugal",
-          "opponentFlag": "🇵🇹",
-          "result": null,
-          "score": null,
-          "date": "2026-06-23",
-          "venue": "NRG Stadium, Houston",
-          "scorers": [],
-          "cards": []
-        },
-        {
-          "matchday": 3,
-          "opponent": "DR Congo",
-          "opponentFlag": "🇨🇩",
-          "result": null,
-          "score": null,
-          "date": "2026-06-27",
-          "venue": "Mercedes-Benz Stadium, Atlanta",
-          "scorers": [],
-          "cards": []
-        }
-      ],
-      "advanceProbabilities": {
-        "r32": 19,
-        "r16": 8,
-        "qf": 2,
-        "sf": 2,
-        "final": 0,
-        "winner": 0,
-        "source": "market"
-      },
-      "path": {
-        "group_stage": {
-          "status": "active",
-          "city": "Mexico City · Houston · Atlanta",
-          "venue": "Various venues",
-          "date": "Jun 17–27",
-          "detail": "0pts after MD0"
-        },
-        "r32": {
-          "status": "upcoming",
-          "match": 83,
-          "date": "2026-06-29",
-          "city": "Toronto",
-          "venue": "BMO Field",
-          "opponentDesc": "Runner-up Group L"
-        },
-        "r16": {
-          "status": "future",
-          "match": 95,
-          "date": "2026-07-07",
-          "city": "Atlanta",
-          "venue": "Mercedes-Benz Stadium",
-          "opponentDesc": "Winner Match 83"
-        },
-        "qf": {
-          "status": "future",
-          "match": 99,
-          "date": "2026-07-11",
-          "city": "Miami",
-          "venue": "Hard Rock Stadium",
-          "opponentDesc": "Winner Match 95"
-        },
-        "sf": {
-          "status": "future",
-          "match": 102,
-          "date": "2026-07-15",
-          "city": "Atlanta",
-          "venue": "Mercedes-Benz Stadium",
-          "opponentDesc": "Winner QF bracket"
-        },
-        "final": {
-          "status": "future",
-          "match": 104,
-          "date": "2026-07-19",
-          "city": "New Jersey",
-          "venue": "MetLife Stadium",
-          "opponentDesc": "Winner other SF"
-        }
-      },
-      "possibleOpponents": {
-        "r32": [
-          {
-            "group": "L",
-            "likelyTeam": "Ghana",
-            "flag": "🇬🇭",
-            "fifaRank": 60,
-            "difficulty": 1,
-            "label": "Favorable",
-            "color": "#22C55E",
-            "note": "Runner-up of Group L",
-            "pct": null
-          }
-        ],
-        "r16": [
-          {
-            "group": "K",
-            "likelyTeam": "DR Congo",
-            "flag": "🇨🇩",
-            "fifaRank": 56,
-            "difficulty": 1,
-            "label": "Favorable",
-            "color": "#22C55E",
-            "note": "Runner-up of Group K",
-            "pct": null
-          },
-          {
-            "group": "L",
-            "likelyTeam": "England",
-            "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
-            "fifaRank": 5,
-            "difficulty": 5,
-            "label": "Danger",
-            "color": "#EF4444",
-            "note": "Winner of Group L",
-            "pct": null
-          }
-        ]
-      }
-    },
-    {
-      "id": "colombia",
-      "name": "Colombia",
-      "flag": "🇨🇴",
-      "group": "K",
-      "confederation": "CONMEBOL",
-      "fifaRank": 13,
-      "eliminated": false,
-      "currentStage": "group_stage",
-      "groupResults": [
-        {
-          "matchday": 1,
-          "opponent": "Uzbekistan",
-          "opponentFlag": "🇺🇿",
-          "result": null,
-          "score": "2-1",
-          "date": "2026-06-17",
-          "venue": "Estadio Azteca, Mexico City",
-          "scorers": [],
-          "cards": []
-        },
-        {
-          "matchday": 2,
-          "opponent": "DR Congo",
-          "opponentFlag": "🇨🇩",
-          "result": null,
-          "score": null,
-          "date": "2026-06-23",
-          "venue": "Estadio Azteca, Mexico City",
-          "scorers": [],
-          "cards": []
-        },
-        {
-          "matchday": 3,
-          "opponent": "Portugal",
-          "opponentFlag": "🇵🇹",
-          "result": null,
-          "score": null,
-          "date": "2026-06-27",
-          "venue": "Hard Rock Stadium, Miami",
-          "scorers": [],
-          "cards": []
-        }
-      ],
-      "advanceProbabilities": {
-        "r32": 93,
-        "r16": 52,
-        "qf": 28,
-        "sf": 13,
-        "final": 6,
-        "winner": 2,
-        "source": "market"
-      },
-      "path": {
-        "group_stage": {
-          "status": "active",
-          "city": "Mexico City · Miami",
-          "venue": "Various venues",
-          "date": "Jun 17–27",
-          "detail": "0pts after MD0"
-        },
-        "r32": {
-          "status": "upcoming",
-          "match": 83,
-          "date": "2026-06-29",
-          "city": "Toronto",
-          "venue": "BMO Field",
-          "opponentDesc": "Runner-up Group L"
-        },
-        "r16": {
-          "status": "future",
-          "match": 95,
-          "date": "2026-07-07",
-          "city": "Atlanta",
-          "venue": "Mercedes-Benz Stadium",
-          "opponentDesc": "Winner Match 83"
-        },
-        "qf": {
-          "status": "future",
-          "match": 99,
-          "date": "2026-07-11",
-          "city": "Miami",
-          "venue": "Hard Rock Stadium",
-          "opponentDesc": "Winner Match 95"
-        },
-        "sf": {
-          "status": "future",
-          "match": 102,
-          "date": "2026-07-15",
-          "city": "Atlanta",
-          "venue": "Mercedes-Benz Stadium",
-          "opponentDesc": "Winner QF bracket"
-        },
-        "final": {
-          "status": "future",
-          "match": 104,
-          "date": "2026-07-19",
-          "city": "New Jersey",
-          "venue": "MetLife Stadium",
-          "opponentDesc": "Winner other SF"
-        }
-      },
-      "possibleOpponents": {
-        "r32": [
-          {
-            "group": "L",
-            "likelyTeam": "Ghana",
-            "flag": "🇬🇭",
-            "fifaRank": 60,
-            "difficulty": 1,
-            "label": "Favorable",
-            "color": "#22C55E",
-            "note": "Runner-up of Group L",
-            "pct": null
-          }
-        ],
-        "r16": [
-          {
-            "group": "K",
-            "likelyTeam": "DR Congo",
-            "flag": "🇨🇩",
-            "fifaRank": 56,
-            "difficulty": 1,
-            "label": "Favorable",
-            "color": "#22C55E",
-            "note": "Runner-up of Group K",
-            "pct": null
-          },
-          {
-            "group": "L",
-            "likelyTeam": "England",
-            "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
-            "fifaRank": 5,
-            "difficulty": 5,
-            "label": "Danger",
-            "color": "#EF4444",
-            "note": "Winner of Group L",
             "pct": null
           }
         ]
@@ -8205,9 +8223,9 @@
       ],
       "advanceProbabilities": {
         "r32": 99,
-        "r16": 79,
-        "qf": 59,
-        "sf": 39,
+        "r16": 81,
+        "qf": 61,
+        "sf": 40,
         "final": 26,
         "winner": 13,
         "source": "market"
@@ -8265,12 +8283,12 @@
         "r32": [
           {
             "group": "K",
-            "likelyTeam": "DR Congo",
-            "flag": "🇨🇩",
-            "fifaRank": 56,
-            "difficulty": 1,
-            "label": "Favorable",
-            "color": "#22C55E",
+            "likelyTeam": "Portugal",
+            "flag": "🇵🇹",
+            "fifaRank": 6,
+            "difficulty": 5,
+            "label": "Danger",
+            "color": "#EF4444",
             "note": "Runner-up of Group K",
             "pct": null
           }
@@ -8278,12 +8296,12 @@
         "r16": [
           {
             "group": "K",
-            "likelyTeam": "DR Congo",
-            "flag": "🇨🇩",
-            "fifaRank": 56,
-            "difficulty": 1,
-            "label": "Favorable",
-            "color": "#22C55E",
+            "likelyTeam": "Portugal",
+            "flag": "🇵🇹",
+            "fifaRank": 6,
+            "difficulty": 5,
+            "label": "Danger",
+            "color": "#EF4444",
             "note": "Runner-up of Group K",
             "pct": null
           }
@@ -8338,10 +8356,10 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 74,
-        "r16": 37,
-        "qf": 19,
-        "sf": 9,
+        "r32": 75,
+        "r16": 46,
+        "qf": 17,
+        "sf": 8,
         "final": 3,
         "winner": 1,
         "source": "market"
@@ -8399,12 +8417,12 @@
         "r32": [
           {
             "group": "K",
-            "likelyTeam": "Portugal",
-            "flag": "🇵🇹",
-            "fifaRank": 6,
-            "difficulty": 5,
-            "label": "Danger",
-            "color": "#EF4444",
+            "likelyTeam": "Colombia",
+            "flag": "🇨🇴",
+            "fifaRank": 13,
+            "difficulty": 4,
+            "label": "Tough",
+            "color": "#FB923C",
             "note": "Winner of Group K",
             "pct": null
           }
@@ -8434,12 +8452,12 @@
           },
           {
             "group": "K",
-            "likelyTeam": "Portugal",
-            "flag": "🇵🇹",
-            "fifaRank": 6,
-            "difficulty": 5,
-            "label": "Danger",
-            "color": "#EF4444",
+            "likelyTeam": "Colombia",
+            "flag": "🇨🇴",
+            "fifaRank": 13,
+            "difficulty": 4,
+            "label": "Tough",
+            "color": "#FB923C",
             "note": "Winner of Group K",
             "pct": null
           },
@@ -8510,11 +8528,11 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 69,
-        "r16": 17,
-        "qf": 4,
+        "r32": 72,
+        "r16": 19,
+        "qf": 5,
         "sf": 3,
-        "final": 2,
+        "final": 1,
         "winner": 0,
         "source": "market"
       },
@@ -8571,12 +8589,12 @@
         "r32": [
           {
             "group": "K",
-            "likelyTeam": "Portugal",
-            "flag": "🇵🇹",
-            "fifaRank": 6,
-            "difficulty": 5,
-            "label": "Danger",
-            "color": "#EF4444",
+            "likelyTeam": "Colombia",
+            "flag": "🇨🇴",
+            "fifaRank": 13,
+            "difficulty": 4,
+            "label": "Tough",
+            "color": "#FB923C",
             "note": "Winner of Group K",
             "pct": null
           }
@@ -8606,12 +8624,12 @@
           },
           {
             "group": "K",
-            "likelyTeam": "Portugal",
-            "flag": "🇵🇹",
-            "fifaRank": 6,
-            "difficulty": 5,
-            "label": "Danger",
-            "color": "#EF4444",
+            "likelyTeam": "Colombia",
+            "flag": "🇨🇴",
+            "fifaRank": 13,
+            "difficulty": 4,
+            "label": "Tough",
+            "color": "#FB923C",
             "note": "Winner of Group K",
             "pct": null
           }
@@ -8674,8 +8692,8 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 13,
-        "r16": 6,
+        "r32": 12,
+        "r16": 4,
         "qf": 2,
         "sf": 1,
         "final": 0,
@@ -8735,12 +8753,12 @@
         "r32": [
           {
             "group": "K",
-            "likelyTeam": "Portugal",
-            "flag": "🇵🇹",
-            "fifaRank": 6,
-            "difficulty": 5,
-            "label": "Danger",
-            "color": "#EF4444",
+            "likelyTeam": "Colombia",
+            "flag": "🇨🇴",
+            "fifaRank": 13,
+            "difficulty": 4,
+            "label": "Tough",
+            "color": "#FB923C",
             "note": "Winner of Group K",
             "pct": null
           }
@@ -8770,12 +8788,12 @@
           },
           {
             "group": "K",
-            "likelyTeam": "Portugal",
-            "flag": "🇵🇹",
-            "fifaRank": 6,
-            "difficulty": 5,
-            "label": "Danger",
-            "color": "#EF4444",
+            "likelyTeam": "Colombia",
+            "flag": "🇨🇴",
+            "fifaRank": 13,
+            "difficulty": 4,
+            "label": "Tough",
+            "color": "#FB923C",
             "note": "Winner of Group K",
             "pct": null
           },
@@ -9229,10 +9247,9 @@
         "awayFlag": "🇨🇴",
         "awayId": "colombia",
         "homeScore": 1,
-        "awayScore": 2,
-        "status": "IN_PROGRESS",
+        "awayScore": 3,
+        "status": "FINISHED",
         "date": "2026-06-17",
-        "clock": "90'+1'",
         "broadcasts": [
           "FS1",
           "Tele",
