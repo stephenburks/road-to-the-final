@@ -1,6 +1,6 @@
 {
-  "lastUpdated": "2026-06-17T23:45:49.296Z",
-  "snapshotDate": "2026-06-17",
+  "lastUpdated": "2026-06-18T03:51:26.780Z",
+  "snapshotDate": "2026-06-18",
   "isHistorical": false,
   "sourceSummary": {
     "dataSource": "ESPN",
@@ -105,7 +105,7 @@
       ],
       "winProbabilities": {
         "mexico": 61,
-        "southkorea": 35,
+        "southkorea": 36,
         "czechia": 4,
         "southafrica": 1
       }
@@ -239,7 +239,7 @@
         "scotland": 11,
         "brazil": 59,
         "morocco": 31,
-        "haiti": 0
+        "haiti": 1
       }
     },
     "D": {
@@ -305,7 +305,7 @@
         "usa": 70,
         "australia": 21,
         "turkey": 8,
-        "paraguay": 2
+        "paraguay": 3
       }
     },
     "E": {
@@ -701,7 +701,7 @@
         "argentina": 86,
         "austria": 14,
         "jordan": 0,
-        "algeria": 2
+        "algeria": 1
       }
     },
     "K": {
@@ -764,10 +764,10 @@
         }
       ],
       "winProbabilities": {
-        "portugal": 46,
-        "drcongo": 8,
-        "uzbekistan": 3,
-        "colombia": 44
+        "portugal": 48,
+        "drcongo": 5,
+        "uzbekistan": 1,
+        "colombia": 48
       }
     },
     "L": {
@@ -789,28 +789,28 @@
         {
           "teamId": "ghana",
           "team": "Ghana",
-          "played": 0,
-          "w": 0,
+          "played": 1,
+          "w": 1,
           "d": 0,
           "l": 0,
-          "gf": 0,
+          "gf": 1,
           "ga": 0,
-          "pts": 0,
-          "gd": 0,
+          "pts": 3,
+          "gd": 1,
           "pos": 2,
           "flag": "🇬🇭"
         },
         {
           "teamId": "panama",
           "team": "Panama",
-          "played": 0,
+          "played": 1,
           "w": 0,
           "d": 0,
-          "l": 0,
+          "l": 1,
           "gf": 0,
-          "ga": 0,
+          "ga": 1,
           "pts": 0,
-          "gd": 0,
+          "gd": -1,
           "pos": 3,
           "flag": "🇵🇦"
         },
@@ -831,9 +831,9 @@
       ],
       "winProbabilities": {
         "england": 91,
-        "ghana": 4,
-        "panama": 2,
-        "croatia": 6
+        "ghana": 6,
+        "panama": 1,
+        "croatia": 3
       }
     }
   },
@@ -897,10 +897,10 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 97,
+        "r32": 96,
         "r16": 59,
-        "qf": 30,
-        "sf": 11,
+        "qf": 31,
+        "sf": 12,
         "final": 6,
         "winner": 1,
         "source": "market"
@@ -1313,7 +1313,7 @@
         "r32": 94,
         "r16": 46,
         "qf": 17,
-        "sf": 6,
+        "sf": 5,
         "final": 2,
         "winner": 0,
         "source": "market"
@@ -1510,7 +1510,7 @@
       ],
       "advanceProbabilities": {
         "r32": 55,
-        "r16": 22,
+        "r16": 21,
         "qf": 6,
         "sf": 3,
         "final": 1,
@@ -1731,9 +1731,9 @@
       ],
       "advanceProbabilities": {
         "r32": 84,
-        "r16": 44,
-        "qf": 13,
-        "sf": 2,
+        "r16": 42,
+        "qf": 14,
+        "sf": 3,
         "final": 2,
         "winner": 0,
         "source": "market"
@@ -1923,8 +1923,8 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 68,
-        "r16": 24,
+        "r32": 69,
+        "r16": 22,
         "qf": 6,
         "sf": 3,
         "final": 1,
@@ -2124,8 +2124,8 @@
       "advanceProbabilities": {
         "r32": 27,
         "r16": 4,
-        "qf": 3,
-        "sf": 2,
+        "qf": 2,
+        "sf": 1,
         "final": 1,
         "winner": 0,
         "source": "market"
@@ -2305,10 +2305,10 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 88,
+        "r32": 87,
         "r16": 50,
-        "qf": 21,
-        "sf": 9,
+        "qf": 19,
+        "sf": 8,
         "final": 3,
         "winner": 1,
         "source": "market"
@@ -2956,11 +2956,11 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 76,
+        "r32": 77,
         "r16": 26,
         "qf": 9,
-        "sf": 4,
-        "final": 1,
+        "sf": 3,
+        "final": 2,
         "winner": 0,
         "source": "market"
       },
@@ -3155,8 +3155,8 @@
       "advanceProbabilities": {
         "r32": 97,
         "r16": 66,
-        "qf": 36,
-        "sf": 19,
+        "qf": 37,
+        "sf": 18,
         "final": 6,
         "winner": 2,
         "source": "market"
@@ -3367,8 +3367,8 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 40,
-        "r16": 14,
+        "r32": 39,
+        "r16": 12,
         "qf": 4,
         "sf": 2,
         "final": 1,
@@ -3511,7 +3511,7 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 86,
+        "r32": 87,
         "r16": 38,
         "qf": 10,
         "sf": 4,
@@ -3660,7 +3660,7 @@
       ],
       "advanceProbabilities": {
         "r32": 51,
-        "r16": 22,
+        "r16": 21,
         "qf": 13,
         "sf": 7,
         "final": 1,
@@ -3997,10 +3997,10 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 3,
-        "r16": 3,
+        "r32": 2,
+        "r16": 2,
         "qf": 2,
-        "sf": 2,
+        "sf": 1,
         "final": 0,
         "winner": 0,
         "source": "market"
@@ -4157,8 +4157,8 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 95,
-        "r16": 36,
+        "r32": 97,
+        "r16": 37,
         "qf": 14,
         "sf": 6,
         "final": 2,
@@ -4294,10 +4294,10 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 78,
+        "r32": 79,
         "r16": 38,
         "qf": 13,
-        "sf": 5,
+        "sf": 6,
         "final": 2,
         "winner": 0,
         "source": "market"
@@ -4456,9 +4456,9 @@
       ],
       "advanceProbabilities": {
         "r32": 92,
-        "r16": 53,
-        "qf": 39,
-        "sf": 21,
+        "r16": 55,
+        "qf": 38,
+        "sf": 20,
         "final": 11,
         "winner": 4,
         "source": "market"
@@ -4601,8 +4601,8 @@
       ],
       "advanceProbabilities": {
         "r32": 85,
-        "r16": 40,
-        "qf": 25,
+        "r16": 42,
+        "qf": 23,
         "sf": 12,
         "final": 5,
         "winner": 2,
@@ -4749,7 +4749,7 @@
       ],
       "advanceProbabilities": {
         "r32": 93,
-        "r16": 35,
+        "r16": 34,
         "qf": 15,
         "sf": 5,
         "final": 3,
@@ -4898,7 +4898,7 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 9,
+        "r32": 8,
         "r16": 3,
         "qf": 2,
         "sf": 1,
@@ -5053,9 +5053,9 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 94,
-        "r16": 63,
-        "qf": 36,
+        "r32": 95,
+        "r16": 62,
+        "qf": 34,
         "sf": 14,
         "final": 6,
         "winner": 2,
@@ -5209,7 +5209,7 @@
       ],
       "advanceProbabilities": {
         "r32": 82,
-        "r16": 34,
+        "r16": 33,
         "qf": 13,
         "sf": 3,
         "final": 1,
@@ -5360,7 +5360,7 @@
       ],
       "advanceProbabilities": {
         "r32": 41,
-        "r16": 16,
+        "r16": 14,
         "qf": 5,
         "sf": 2,
         "final": 1,
@@ -5549,7 +5549,7 @@
       ],
       "advanceProbabilities": {
         "r32": 31,
-        "r16": 9,
+        "r16": 8,
         "qf": 2,
         "sf": 2,
         "final": 2,
@@ -5697,10 +5697,10 @@
       ],
       "advanceProbabilities": {
         "r32": 97,
-        "r16": 76,
+        "r16": 75,
         "qf": 57,
-        "sf": 41,
-        "final": 24,
+        "sf": 43,
+        "final": 25,
         "winner": 14,
         "source": "market"
       },
@@ -5867,7 +5867,7 @@
       ],
       "advanceProbabilities": {
         "r32": 45,
-        "r16": 9,
+        "r16": 6,
         "qf": 5,
         "sf": 2,
         "final": 1,
@@ -6038,8 +6038,8 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 43,
-        "r16": 11,
+        "r32": 44,
+        "r16": 10,
         "qf": 6,
         "sf": 4,
         "final": 1,
@@ -6183,9 +6183,9 @@
       ],
       "advanceProbabilities": {
         "r32": 78,
-        "r16": 36,
+        "r16": 34,
         "qf": 22,
-        "sf": 5,
+        "sf": 6,
         "final": 3,
         "winner": 1,
         "source": "market"
@@ -6339,11 +6339,11 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 99,
+        "r32": 100,
         "r16": 85,
         "qf": 63,
-        "sf": 47,
-        "final": 30,
+        "sf": 48,
+        "final": 28,
         "winner": 18,
         "source": "market"
       },
@@ -6473,9 +6473,9 @@
       ],
       "advanceProbabilities": {
         "r32": 69,
-        "r16": 31,
-        "qf": 15,
-        "sf": 4,
+        "r16": 27,
+        "qf": 14,
+        "sf": 5,
         "final": 2,
         "winner": 1,
         "source": "market"
@@ -6623,7 +6623,7 @@
       ],
       "advanceProbabilities": {
         "r32": 5,
-        "r16": 5,
+        "r16": 3,
         "qf": 1,
         "sf": 0,
         "final": 0,
@@ -6772,7 +6772,7 @@
         "r32": 96,
         "r16": 59,
         "qf": 31,
-        "sf": 19,
+        "sf": 16,
         "final": 7,
         "winner": 3,
         "source": "market"
@@ -6948,10 +6948,10 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 100,
+        "r32": 99,
         "r16": 74,
-        "qf": 60,
-        "sf": 40,
+        "qf": 59,
+        "sf": 38,
         "final": 20,
         "winner": 12,
         "source": "market"
@@ -7124,7 +7124,7 @@
       ],
       "advanceProbabilities": {
         "r32": 56,
-        "r16": 21,
+        "r16": 20,
         "qf": 6,
         "sf": 3,
         "final": 1,
@@ -7276,9 +7276,9 @@
       ],
       "advanceProbabilities": {
         "r32": 92,
-        "r16": 31,
+        "r16": 30,
         "qf": 14,
-        "sf": 8,
+        "sf": 5,
         "final": 2,
         "winner": 0,
         "source": "market"
@@ -7419,8 +7419,8 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 9,
-        "r16": 4,
+        "r32": 10,
+        "r16": 3,
         "qf": 1,
         "sf": 1,
         "final": 0,
@@ -7579,11 +7579,11 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 96,
-        "r16": 74,
-        "qf": 48,
-        "sf": 31,
-        "final": 19,
+        "r32": 95,
+        "r16": 73,
+        "qf": 47,
+        "sf": 30,
+        "final": 17,
         "winner": 8,
         "source": "market"
       },
@@ -7784,8 +7784,8 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 57,
-        "r16": 17,
+        "r32": 58,
+        "r16": 16,
         "qf": 6,
         "sf": 4,
         "final": 1,
@@ -7885,7 +7885,7 @@
           "opponent": "Colombia",
           "opponentFlag": "🇨🇴",
           "result": null,
-          "score": null,
+          "score": "1-2",
           "date": "2026-06-17",
           "venue": "Estadio Azteca, Mexico City",
           "scorers": [],
@@ -7915,8 +7915,8 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 29,
-        "r16": 10,
+        "r32": 19,
+        "r16": 8,
         "qf": 2,
         "sf": 2,
         "final": 0,
@@ -8027,7 +8027,7 @@
           "opponent": "Uzbekistan",
           "opponentFlag": "🇺🇿",
           "result": null,
-          "score": null,
+          "score": "2-1",
           "date": "2026-06-17",
           "venue": "Estadio Azteca, Mexico City",
           "scorers": [],
@@ -8057,12 +8057,12 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 90,
-        "r16": 51,
+        "r32": 93,
+        "r16": 52,
         "qf": 28,
-        "sf": 14,
+        "sf": 13,
         "final": 6,
-        "winner": 1,
+        "winner": 2,
         "source": "market"
       },
       "path": {
@@ -8205,10 +8205,10 @@
       ],
       "advanceProbabilities": {
         "r32": 99,
-        "r16": 78,
-        "qf": 61,
+        "r16": 79,
+        "qf": 59,
         "sf": 39,
-        "final": 24,
+        "final": 26,
         "winner": 13,
         "source": "market"
       },
@@ -8338,9 +8338,9 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 75,
-        "r16": 38,
-        "qf": 18,
+        "r32": 74,
+        "r16": 37,
+        "qf": 19,
         "sf": 9,
         "final": 3,
         "winner": 1,
@@ -8471,12 +8471,20 @@
           "matchday": 1,
           "opponent": "Panama",
           "opponentFlag": "🇵🇦",
-          "result": null,
-          "score": "0-0",
+          "result": "W",
+          "score": "1-0",
           "date": "2026-06-17",
           "venue": "BMO Field, Toronto",
-          "scorers": [],
-          "cards": []
+          "scorers": [
+            "Caleb Yirenkyi 90'+5'"
+          ],
+          "cards": [
+            {
+              "player": "Caleb Yirenkyi",
+              "minute": "16'",
+              "type": "yellow"
+            }
+          ]
         },
         {
           "matchday": 2,
@@ -8502,9 +8510,9 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 41,
-        "r16": 14,
-        "qf": 5,
+        "r32": 69,
+        "r16": 17,
+        "qf": 4,
         "sf": 3,
         "final": 2,
         "winner": 0,
@@ -8516,7 +8524,7 @@
           "city": "Toronto · Philadelphia",
           "venue": "Various venues",
           "date": "Jun 17–27",
-          "detail": "0pts after MD0"
+          "detail": "3pts after MD1"
         },
         "r32": {
           "status": "upcoming",
@@ -8624,12 +8632,23 @@
           "matchday": 1,
           "opponent": "Ghana",
           "opponentFlag": "🇬🇭",
-          "result": null,
-          "score": "0-0",
+          "result": "L",
+          "score": "0-1",
           "date": "2026-06-17",
           "venue": "BMO Field, Toronto",
           "scorers": [],
-          "cards": []
+          "cards": [
+            {
+              "player": "César Blackman",
+              "minute": "72'",
+              "type": "yellow"
+            },
+            {
+              "player": "Carlos Harvey",
+              "minute": "90'+9'",
+              "type": "yellow"
+            }
+          ]
         },
         {
           "matchday": 2,
@@ -8655,8 +8674,8 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 37,
-        "r16": 7,
+        "r32": 13,
+        "r16": 6,
         "qf": 2,
         "sf": 1,
         "final": 0,
@@ -8669,7 +8688,7 @@
           "city": "Toronto · New Jersey",
           "venue": "Various venues",
           "date": "Jun 17–27",
-          "detail": "0pts after MD0"
+          "detail": "0pts after MD1"
         },
         "r32": {
           "status": "upcoming",
@@ -9191,11 +9210,10 @@
         "awayTeam": "Panama",
         "awayFlag": "🇵🇦",
         "awayId": "panama",
-        "homeScore": 0,
+        "homeScore": 1,
         "awayScore": 0,
-        "status": "IN_PROGRESS",
+        "status": "FINISHED",
         "date": "2026-06-17",
-        "clock": "45'",
         "broadcasts": [
           "FS1",
           "Tele",
@@ -9210,10 +9228,11 @@
         "awayTeam": "Colombia",
         "awayFlag": "🇨🇴",
         "awayId": "colombia",
-        "homeScore": 0,
-        "awayScore": 0,
-        "status": "SCHEDULED",
+        "homeScore": 1,
+        "awayScore": 2,
+        "status": "IN_PROGRESS",
         "date": "2026-06-17",
+        "clock": "90'+1'",
         "broadcasts": [
           "FS1",
           "Tele",
