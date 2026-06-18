@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-18T08:46:21.390Z",
+  "lastUpdated": "2026-06-18T12:25:30.443Z",
   "snapshotDate": "2026-06-18",
   "isHistorical": false,
   "sourceSummary": {
@@ -105,7 +105,7 @@
       ],
       "winProbabilities": {
         "mexico": 61,
-        "southkorea": 36,
+        "southkorea": 35,
         "czechia": 4,
         "southafrica": 1
       }
@@ -173,7 +173,7 @@
         "canada": 35,
         "qatar": 3,
         "switzerland": 48,
-        "bosnia": 16
+        "bosnia": 14
       }
     },
     "C": {
@@ -239,7 +239,7 @@
         "scotland": 11,
         "brazil": 59,
         "morocco": 31,
-        "haiti": 1
+        "haiti": 0
       }
     },
     "D": {
@@ -369,7 +369,7 @@
       ],
       "winProbabilities": {
         "germany": 72,
-        "ivorycoast": 22,
+        "ivorycoast": 21,
         "ecuador": 5,
         "curacao": 0
       }
@@ -503,7 +503,7 @@
         "iran": 8,
         "newzealand": 3,
         "belgium": 64,
-        "egypt": 26
+        "egypt": 25
       }
     },
     "H": {
@@ -566,7 +566,7 @@
         }
       ],
       "winProbabilities": {
-        "saudiarabia": 2,
+        "saudiarabia": 3,
         "uruguay": 21,
         "spain": 73,
         "capeverde": 3
@@ -764,9 +764,9 @@
         }
       ],
       "winProbabilities": {
-        "colombia": 49,
-        "portugal": 45,
-        "drcongo": 5,
+        "colombia": 48,
+        "portugal": 46,
+        "drcongo": 6,
         "uzbekistan": 1
       }
     },
@@ -832,7 +832,7 @@
       "winProbabilities": {
         "england": 92,
         "ghana": 6,
-        "panama": 1,
+        "panama": 0,
         "croatia": 3
       }
     }
@@ -898,9 +898,9 @@
       ],
       "advanceProbabilities": {
         "r32": 97,
-        "r16": 60,
+        "r16": 59,
         "qf": 31,
-        "sf": 11,
+        "sf": 12,
         "final": 6,
         "winner": 1,
         "source": "market"
@@ -1310,8 +1310,8 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 94,
-        "r16": 46,
+        "r32": 93,
+        "r16": 44,
         "qf": 17,
         "sf": 5,
         "final": 2,
@@ -1509,7 +1509,7 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 54,
+        "r32": 55,
         "r16": 22,
         "qf": 6,
         "sf": 3,
@@ -1731,7 +1731,7 @@
       ],
       "advanceProbabilities": {
         "r32": 84,
-        "r16": 42,
+        "r16": 40,
         "qf": 13,
         "sf": 3,
         "final": 2,
@@ -1924,7 +1924,7 @@
       ],
       "advanceProbabilities": {
         "r32": 69,
-        "r16": 21,
+        "r16": 19,
         "qf": 6,
         "sf": 3,
         "final": 1,
@@ -2122,9 +2122,9 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 27,
+        "r32": 25,
         "r16": 4,
-        "qf": 3,
+        "qf": 2,
         "sf": 1,
         "final": 1,
         "winner": 0,
@@ -2309,7 +2309,7 @@
         "r16": 50,
         "qf": 20,
         "sf": 7,
-        "final": 2,
+        "final": 3,
         "winner": 1,
         "source": "market"
       },
@@ -2507,7 +2507,7 @@
         "r32": 96,
         "r16": 66,
         "qf": 47,
-        "sf": 25,
+        "sf": 24,
         "final": 17,
         "winner": 7,
         "source": "market"
@@ -2652,7 +2652,7 @@
         "r16": 51,
         "qf": 30,
         "sf": 14,
-        "final": 6,
+        "final": 7,
         "winner": 2,
         "source": "market"
       },
@@ -2959,8 +2959,8 @@
         "r32": 77,
         "r16": 26,
         "qf": 8,
-        "sf": 4,
-        "final": 1,
+        "sf": 5,
+        "final": 2,
         "winner": 0,
         "source": "market"
       },
@@ -3659,10 +3659,10 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 50,
-        "r16": 24,
-        "qf": 13,
-        "sf": 5,
+        "r32": 51,
+        "r16": 23,
+        "qf": 14,
+        "sf": 6,
         "final": 1,
         "winner": 0,
         "source": "market"
@@ -3810,7 +3810,7 @@
       ],
       "advanceProbabilities": {
         "r32": 99,
-        "r16": 73,
+        "r16": 72,
         "qf": 40,
         "sf": 26,
         "final": 13,
@@ -3997,8 +3997,8 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 2,
-        "r16": 2,
+        "r32": 3,
+        "r16": 3,
         "qf": 0,
         "sf": 0,
         "final": 0,
@@ -4157,10 +4157,10 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 96,
-        "r16": 37,
+        "r32": 95,
+        "r16": 36,
         "qf": 14,
-        "sf": 7,
+        "sf": 6,
         "final": 2,
         "winner": 1,
         "source": "market"
@@ -4294,7 +4294,7 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 78,
+        "r32": 79,
         "r16": 36,
         "qf": 13,
         "sf": 6,
@@ -4455,11 +4455,11 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 92,
-        "r16": 54,
-        "qf": 38,
+        "r32": 93,
+        "r16": 55,
+        "qf": 37,
         "sf": 20,
-        "final": 10,
+        "final": 9,
         "winner": 4,
         "source": "market"
       },
@@ -4601,9 +4601,9 @@
       ],
       "advanceProbabilities": {
         "r32": 86,
-        "r16": 43,
-        "qf": 22,
-        "sf": 12,
+        "r16": 42,
+        "qf": 23,
+        "sf": 11,
         "final": 5,
         "winner": 2,
         "source": "market"
@@ -4749,9 +4749,9 @@
       ],
       "advanceProbabilities": {
         "r32": 94,
-        "r16": 37,
+        "r16": 34,
         "qf": 14,
-        "sf": 5,
+        "sf": 6,
         "final": 3,
         "winner": 1,
         "source": "market"
@@ -4899,7 +4899,7 @@
       ],
       "advanceProbabilities": {
         "r32": 7,
-        "r16": 3,
+        "r16": 2,
         "qf": 2,
         "sf": 1,
         "final": 1,
@@ -5054,7 +5054,7 @@
       ],
       "advanceProbabilities": {
         "r32": 95,
-        "r16": 62,
+        "r16": 63,
         "qf": 34,
         "sf": 14,
         "final": 6,
@@ -5208,9 +5208,9 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 82,
-        "r16": 31,
-        "qf": 12,
+        "r32": 83,
+        "r16": 32,
+        "qf": 10,
         "sf": 3,
         "final": 1,
         "winner": 0,
@@ -5360,7 +5360,7 @@
       ],
       "advanceProbabilities": {
         "r32": 41,
-        "r16": 15,
+        "r16": 14,
         "qf": 5,
         "sf": 2,
         "final": 1,
@@ -5549,10 +5549,10 @@
       ],
       "advanceProbabilities": {
         "r32": 31,
-        "r16": 8,
+        "r16": 7,
         "qf": 2,
-        "sf": 2,
-        "final": 2,
+        "sf": 1,
+        "final": 1,
         "winner": 0,
         "source": "market"
       },
@@ -5697,8 +5697,8 @@
       ],
       "advanceProbabilities": {
         "r32": 97,
-        "r16": 72,
-        "qf": 57,
+        "r16": 70,
+        "qf": 56,
         "sf": 42,
         "final": 25,
         "winner": 14,
@@ -5866,8 +5866,8 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 45,
-        "r16": 9,
+        "r32": 44,
+        "r16": 7,
         "qf": 5,
         "sf": 2,
         "final": 1,
@@ -6039,8 +6039,8 @@
       ],
       "advanceProbabilities": {
         "r32": 44,
-        "r16": 10,
-        "qf": 8,
+        "r16": 8,
+        "qf": 3,
         "sf": 3,
         "final": 1,
         "winner": 0,
@@ -6182,11 +6182,11 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 78,
-        "r16": 33,
+        "r32": 79,
+        "r16": 32,
         "qf": 21,
         "sf": 9,
-        "final": 2,
+        "final": 3,
         "winner": 1,
         "source": "market"
       },
@@ -6340,10 +6340,10 @@
       ],
       "advanceProbabilities": {
         "r32": 99,
-        "r16": 85,
+        "r16": 84,
         "qf": 63,
-        "sf": 48,
-        "final": 28,
+        "sf": 46,
+        "final": 30,
         "winner": 18,
         "source": "market"
       },
@@ -6472,10 +6472,10 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 69,
-        "r16": 30,
+        "r32": 67,
+        "r16": 27,
         "qf": 14,
-        "sf": 5,
+        "sf": 7,
         "final": 2,
         "winner": 1,
         "source": "market"
@@ -6771,8 +6771,8 @@
       "advanceProbabilities": {
         "r32": 96,
         "r16": 59,
-        "qf": 32,
-        "sf": 18,
+        "qf": 31,
+        "sf": 16,
         "final": 7,
         "winner": 3,
         "source": "market"
@@ -6949,11 +6949,11 @@
       ],
       "advanceProbabilities": {
         "r32": 99,
-        "r16": 75,
+        "r16": 74,
         "qf": 59,
         "sf": 38,
-        "final": 22,
-        "winner": 13,
+        "final": 21,
+        "winner": 12,
         "source": "market"
       },
       "path": {
@@ -7124,7 +7124,7 @@
       ],
       "advanceProbabilities": {
         "r32": 56,
-        "r16": 17,
+        "r16": 18,
         "qf": 6,
         "sf": 3,
         "final": 1,
@@ -7275,10 +7275,10 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 92,
+        "r32": 93,
         "r16": 31,
         "qf": 14,
-        "sf": 4,
+        "sf": 5,
         "final": 2,
         "winner": 0,
         "source": "market"
@@ -7581,9 +7581,9 @@
       "advanceProbabilities": {
         "r32": 95,
         "r16": 71,
-        "qf": 47,
+        "qf": 46,
         "sf": 30,
-        "final": 17,
+        "final": 16,
         "winner": 8,
         "source": "market"
       },
@@ -7719,7 +7719,7 @@
       ],
       "advanceProbabilities": {
         "r32": 59,
-        "r16": 18,
+        "r16": 16,
         "qf": 6,
         "sf": 4,
         "final": 1,
@@ -7868,11 +7868,11 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 22,
-        "r16": 6,
+        "r32": 18,
+        "r16": 4,
         "qf": 2,
         "sf": 2,
-        "final": 0,
+        "final": 1,
         "winner": 0,
         "source": "market"
       },
@@ -8021,7 +8021,7 @@
       ],
       "advanceProbabilities": {
         "r32": 98,
-        "r16": 55,
+        "r16": 54,
         "qf": 29,
         "sf": 14,
         "final": 6,
@@ -8224,8 +8224,8 @@
       "advanceProbabilities": {
         "r32": 99,
         "r16": 81,
-        "qf": 61,
-        "sf": 40,
+        "qf": 60,
+        "sf": 39,
         "final": 26,
         "winner": 13,
         "source": "market"
@@ -8356,10 +8356,10 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 75,
-        "r16": 46,
-        "qf": 17,
-        "sf": 8,
+        "r32": 76,
+        "r16": 40,
+        "qf": 16,
+        "sf": 7,
         "final": 3,
         "winner": 1,
         "source": "market"
@@ -8528,7 +8528,7 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 72,
+        "r32": 70,
         "r16": 19,
         "qf": 5,
         "sf": 3,
