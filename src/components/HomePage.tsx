@@ -12,6 +12,7 @@ interface HomePageProps {
 	data: AppData
 	selectedTeamId: string
 	onTeamChange: (id: string) => void
+	onTeamPeek?: (id: string) => void
 	onViewChange: (v: View) => void
 }
 
@@ -73,7 +74,7 @@ function enrich(
 	}
 }
 
-export default function HomePage({ data, selectedTeamId, onTeamChange, onViewChange }: HomePageProps) {
+export default function HomePage({ data, selectedTeamId, onTeamChange, onTeamPeek, onViewChange }: HomePageProps) {
 	const dailyMatches = useMemo(() => data.dailyMatches ?? {}, [data.dailyMatches])
 	const livePatches = useLiveScores(dailyMatches, data.teams, data.isHistorical)
 
@@ -137,7 +138,7 @@ export default function HomePage({ data, selectedTeamId, onTeamChange, onViewCha
 								<div className={styles.matchGrid} role="list" aria-label={`${DAY_LABELS[key] ?? date} matches`} aria-live={hasLiveMatch ? 'polite' : 'off'}>
 									{matches.map((m, i) => (
 										<div key={`${m.homeTeam}-${m.awayTeam}-${i}`} role="listitem">
-											<MatchCard {...m} />
+											<MatchCard {...m} onTeamPeek={onTeamPeek} />
 										</div>
 									))}
 								</div>

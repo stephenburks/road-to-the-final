@@ -8,9 +8,10 @@ const GROUP_LETTERS = 'ABCDEFGHIJKL'.split('')
 interface StandingsPageProps {
 	data: AppData
 	selectedTeamId: string
+	onTeamPeek?: (id: string) => void
 }
 
-export default function StandingsPage({ data, selectedTeamId }: StandingsPageProps) {
+export default function StandingsPage({ data, selectedTeamId, onTeamPeek }: StandingsPageProps) {
 	const groups = data.groups ?? {}
 
 	const eliminatedTeamIds = useMemo(() => {
@@ -39,6 +40,7 @@ export default function StandingsPage({ data, selectedTeamId }: StandingsPagePro
 								groupData={group}
 								highlightTeamId={selectedTeamId}
 								eliminatedTeamIds={eliminatedTeamIds}
+								onTeamPeek={onTeamPeek}
 							/>
 						</div>
 					)

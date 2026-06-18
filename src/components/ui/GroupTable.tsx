@@ -3,12 +3,13 @@ import type { LiveMatchPatch } from '../../hooks/useLiveScores'
 import FlagIcon from './FlagIcon'
 import styles from './GroupTable.module.css'
 
-export function GroupTable({ groupKey, groupData, highlightTeamId, eliminatedTeamIds, livePatches }: {
+export function GroupTable({ groupKey, groupData, highlightTeamId, eliminatedTeamIds, livePatches, onTeamPeek }: {
 	groupKey: string
 	groupData: GroupData
 	highlightTeamId: string | null
 	eliminatedTeamIds?: Set<string>
 	livePatches?: Map<string, LiveMatchPatch> | null
+	onTeamPeek?: (id: string) => void
 }) {
 	const probs = groupData.winProbabilities ?? {}
 	const standings = groupData.standings ?? []
@@ -81,29 +82,42 @@ export function GroupTable({ groupKey, groupData, highlightTeamId, eliminatedTea
 						const probBarClass = wp > 40 ? styles.probBarHigh : wp > 15 ? styles.probBarMid : styles.probBarLow
 						const probLabelClass = wp > 40 ? styles.probLabelHigh : styles.probLabelLow
 
+						const isClickable = !!(onTeamPeek && row.teamId && !isSelected)
+						const handleRowClick = isClickable ? () => onTeamPeek!(row.teamId!) : undefined
+						const handleRowKey = isClickable
+							? (e: React.KeyboardEvent) => {
+								if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); onTeamPeek!(row.teamId!) }
+							}
+							: undefined
+
 						return (
 							<tr
 								key={row.teamId ?? row.team}
-								className={isSelected ? styles.rowSelected : undefined}
+								className={`${isSelected ? styles.rowSelected : ''} ${isClickable ? styles.rowClickable : ''}`}
 								aria-current={isSelected ? 'true' : undefined}
+								role={isClickable ? 'button' : undefined}
+								tabIndex={isClickable ? 0 : undefined}
+								aria-label={isClickable ? `View ${row.team}` : undefined}
+								onClick={handleRowClick}
+								onKeyDown={handleRowKey}
 							>
 								<td className={styles.colPos}>{row.pos}</td>
 								<td>
 								<div className={styles.teamCell}>
 									<FlagIcon code={row.teamId ?? undefined} flag={row.flag} small />
-										<span className={isSelected ? styles.teamNameSelected : styles.teamName}>
-											{row.team}
-										</span>
-										{isSelected && (
-											<span className={styles.youTag} aria-label="Your selected team">YOU</span>
-										)}
-										{clinched && (
-											<span className={styles.badgeClinched} aria-label="Clinched advancement">CLNCH</span>
-										)}
-										{isElim && (
-											<span className={styles.badgeEliminated} aria-label="Eliminated">ELIM</span>
-										)}
-									</div>
+									<span className={isSelected ? styles.teamNameSelected : styles.teamName}>
+										{row.team}
+									</span>
+									{isSelected && (
+										<span className={styles.youTag} aria-label="Your selected team">YOU</span>
+									)}
+									{clinched && (
+										<span className={styles.badgeClinched} aria-label="Clinched advancement">CLNCH</span>
+									)}
+									{isElim && (
+										<span className={styles.badgeEliminated} aria-label="Eliminated">ELIM</span>
+									)}
+								</div>
 								</td>
 								{[row.played, row.w, row.d, row.l, row.gd >= 0 ? `+${row.gd}` : row.gd, row.pts].map((val, j) => {
 									const isPts = j === 5

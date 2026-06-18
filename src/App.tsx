@@ -21,6 +21,7 @@ import EliminatedView   from './components/ui/EliminatedView'
 import ErrorBoundary    from './components/ui/ErrorBoundary'
 import HomePage         from './components/HomePage'
 import StandingsPage    from './components/StandingsPage'
+import BrowsingBanner   from './components/ui/BrowsingBanner'
 import styles           from './App.module.css'
 
 function HistoricalBanner({ date, label, onGoLive }: { date: string; label: string; onGoLive: () => void }) {
@@ -49,7 +50,7 @@ function ErrorScreen({ message }: { message: string }) {
 }
 
 export default function App() {
-  const { selectedTeamId, selectedDate, selectedStage, view, isHistorical, handleTeamChange, handleDateChange, handleStageSelect, handleViewChange } = useAppState()
+  const { selectedTeamId, preferredTeamId, isBrowsing, selectedDate, selectedStage, view, isHistorical, handleTeamChange, handleTeamPeek, handleReturnToPreferred, handleDateChange, handleStageSelect, handleViewChange } = useAppState()
 
   const { liveData, manifest, snapData, loadingSnap, error } = useData(selectedDate)
 
@@ -138,6 +139,7 @@ export default function App() {
                 data={data}
                 selectedTeamId={selectedTeamId}
                 onTeamChange={handleTeamChange}
+                onTeamPeek={handleTeamPeek}
                 onViewChange={handleViewChange}
               />
             )}
@@ -145,6 +147,7 @@ export default function App() {
               <StandingsPage
                 data={data}
                 selectedTeamId={selectedTeamId}
+                onTeamPeek={handleTeamPeek}
               />
             )}
           </main>
@@ -180,22 +183,26 @@ export default function App() {
 
       {loadingSnap ? <Loading message="Loading historical snapshot…" /> : (
         <main id="main-content">
+          {isBrowsing && view === 'team' && team && (() => {
+            const preferred = teamsMap.get(preferredTeamId)
+            return preferred ? <BrowsingBanner viewing={team} preferred={preferred} onReturn={handleReturnToPreferred} /> : null
+          })()}
           <div className={`wrap ${styles.tabWrapper}`}>
             <StageTabs team={team} selectedStage={activeStage} onSelect={handleStageSelect} />
           </div>
 
-			<ErrorBoundary name="team overview"><Hero team={team} activeStage={activeStage} isHistorical={isHistorical} groupWinProb={groupWinProb} groupPosition={groupPosition} /></ErrorBoundary>
-			{!team.eliminated && <ErrorBoundary name="upcoming matches"><GamesToWatch team={team} data={data} /></ErrorBoundary>}
+			<ErrorBoundary name="team overview"><Hero team={team} activeStage={activeStage} isHistorical={isHistorical} groupWinProb={groupWinProb} groupPosition={groupPosition} onTeamPeek={handleTeamPeek} /></ErrorBoundary>
+			{!team.eliminated && <ErrorBoundary name="upcoming matches"><GamesToWatch team={team} data={data} onTeamPeek={handleTeamPeek} /></ErrorBoundary>}
 			<ErrorBoundary name="bracket"><RoadBracket team={team} activeStage={activeStage} onStageSelect={handleStageSelect} /></ErrorBoundary>
 
-          {showGroups && !showElim && <ErrorBoundary name="group stage"><GroupStage team={team} data={data} eliminatedTeamIds={eliminatedTeamIds} /></ErrorBoundary>}
+          {showGroups && !showElim && <ErrorBoundary name="group stage"><GroupStage team={team} data={data} eliminatedTeamIds={eliminatedTeamIds} onTeamPeek={handleTeamPeek} /></ErrorBoundary>}
 
           {showElim ? (
             <EliminatedView team={team} />
           ) : (
             <>
-              <ErrorBoundary name="opponent watchlist"><OpponentWatchlist team={team} activeStage={activeStage} data={data} eliminatedTeamIds={eliminatedTeamIds} /></ErrorBoundary>
-              <ErrorBoundary name="schedule"><ScheduledMatches team={team} /></ErrorBoundary>
+              <ErrorBoundary name="opponent watchlist"><OpponentWatchlist team={team} activeStage={activeStage} data={data} eliminatedTeamIds={eliminatedTeamIds} onTeamPeek={handleTeamPeek} /></ErrorBoundary>
+              <ErrorBoundary name="schedule"><ScheduledMatches team={team} onTeamPeek={handleTeamPeek} /></ErrorBoundary>
             </>
           )}
           <ErrorBoundary name="squad roster"><Roster players={rosterPlayers} loading={rosterLoading} error={rosterError} /></ErrorBoundary>

@@ -9,6 +9,36 @@
 
 .cardCompact { padding: 9px 10px; }
 
+.cardClickable {
+	cursor: pointer;
+	transition: transform 120ms ease, border-color 120ms ease, box-shadow 120ms ease;
+}
+
+.cardClickable:hover,
+.cardClickable:focus-visible {
+	transform: translateY(-1px);
+	border-color: rgba(99, 102, 241, 0.4);
+	box-shadow: 0 4px 12px rgba(99, 102, 241, 0.18);
+	outline: none;
+}
+
+.cardClickable::after {
+	content: '\203A View team';
+	display: block;
+	margin-top: 8px;
+	font-family: var(--font-mono);
+	font-size: 9px;
+	color: var(--purple);
+	letter-spacing: 0.08em;
+	opacity: 0;
+	transition: opacity 120ms ease;
+}
+
+.cardClickable:hover::after,
+.cardClickable:focus-visible::after {
+	opacity: 1;
+}
+
 .borderDanger  { border-color: rgba(239, 68, 68, 0.22); }
 .borderTough   { border-color: rgba(251, 146, 60, 0.16); }
 .borderDefault { border-color: rgba(255, 255, 255, 0.07); }

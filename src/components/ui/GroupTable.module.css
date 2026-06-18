@@ -76,6 +76,23 @@ tbody tr:last-child {
 /* ── Row states ── */
 .rowSelected { background: rgba(99,102,241,0.07); }
 
+.rowClickable { cursor: pointer; transition: background 120ms ease; }
+.rowClickable:hover,
+.rowClickable:focus-visible {
+	background: rgba(99, 102, 241, 0.14);
+	outline: none;
+}
+.rowClickable:hover .teamName,
+.rowClickable:focus-visible .teamName {
+	color: var(--text-hi);
+}
+.rowClickable:hover .teamName::after,
+.rowClickable:focus-visible .teamName::after {
+	content: ' \203A';
+	color: var(--purple);
+	font-weight: 700;
+}
+
 tbody td {
 	padding: 8px 8px;
 	font-size: 11px;

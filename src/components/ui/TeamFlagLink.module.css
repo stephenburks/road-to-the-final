@@ -1,0 +1,43 @@
+.link {
+	display: inline-flex;
+	align-items: center;
+	gap: 6px;
+	background: transparent;
+	border: none;
+	padding: 2px 6px;
+	margin: -2px -6px;
+	border-radius: 4px;
+	color: inherit;
+	font: inherit;
+	cursor: pointer;
+	text-align: left;
+	transition: background 120ms ease, box-shadow 120ms ease;
+}
+
+.link::after {
+	content: '\203A';
+	margin-left: 4px;
+	color: var(--purple);
+	opacity: 0;
+	transition: opacity 120ms ease, transform 120ms ease;
+	font-weight: 700;
+}
+
+.link:hover,
+.link:focus-visible {
+	background: rgba(99, 102, 241, 0.18);
+	box-shadow: 0 0 0 1px rgba(99, 102, 241, 0.3) inset;
+	outline: none;
+}
+
+.link:hover::after,
+.link:focus-visible::after {
+	opacity: 1;
+	transform: translateX(2px);
+}
+
+.static {
+	display: inline-flex;
+	align-items: center;
+	gap: 6px;
+}

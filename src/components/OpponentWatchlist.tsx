@@ -79,11 +79,13 @@ export default function OpponentWatchlist({
 	activeStage,
 	data,
 	eliminatedTeamIds = new Set(),
+	onTeamPeek,
 }: {
 	team: Team
 	activeStage: Stage
 	data: AppData
 	eliminatedTeamIds?: Set<string>
+	onTeamPeek?: (id: string) => void
 }) {
 
 	const stagePath = team.path?.[activeStage]
@@ -156,7 +158,7 @@ export default function OpponentWatchlist({
 							)}
 							<div className={styles.grid}>
 								{scenario.opponents.map((opp, j) => (
-									<OpponentCard key={j} opp={opp} />
+									<OpponentCard key={j} opp={opp} onTeamPeek={onTeamPeek} />
 								))}
 							</div>
 						</div>
@@ -167,7 +169,7 @@ export default function OpponentWatchlist({
 			{!isLateStage && !scenarioData && hasFlat && !r16WithPct && (
 				<div className={styles.grid}>
 					{flatList.map((opp, i) => (
-						<OpponentCard key={i} opp={opp} />
+						<OpponentCard key={i} opp={opp} onTeamPeek={onTeamPeek} />
 					))}
 				</div>
 			)}
@@ -176,6 +178,7 @@ export default function OpponentWatchlist({
 				<FeederGroupPanel
 					feeder={r32Feeder}
 					eliminatedTeamIds={eliminatedTeamIds}
+					onTeamPeek={onTeamPeek}
 					explanation={`Potential opponent's group — based on current standings: Group ${r32Feeder.key}`}
 				/>
 			)}
@@ -185,13 +188,14 @@ export default function OpponentWatchlist({
 				</div>
 			)}
 
-			{r16WithPct && <MatchupMatrix flatList={flatList} team={team} maxPct={maxPct} data={data} />}
+			{r16WithPct && <MatchupMatrix flatList={flatList} team={team} maxPct={maxPct} data={data} onTeamPeek={onTeamPeek} />}
 
 			{r16Feeder && (
 				<FeederGroupPanel
 					feeder={r16Feeder}
 					marginTop={r16WithPct ? 24 : 0}
 					eliminatedTeamIds={eliminatedTeamIds}
+					onTeamPeek={onTeamPeek}
 					explanation={`Potential R16 opponent's group — if ${team.name} wins Group ${team.group}, they face the winner of Group ${r16Feeder.key}`}
 				/>
 			)}

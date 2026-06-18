@@ -3,6 +3,8 @@ import type { Stage, Team, GroupMatch } from '../types'
 import { formatDate, stageIndex } from '../utils'
 import SectionLabel from './ui/SectionLabel'
 import FlagIcon from './ui/FlagIcon'
+import TeamFlagLink from './ui/TeamFlagLink'
+import { NAME_TO_ID } from './ui/teamLookup'
 import styles from './ScheduledMatches.module.css'
 
 /**
@@ -28,10 +30,11 @@ interface MatchRowProps {
 	teamFlag: string
 	teamId: string
 	isConditional?: boolean
+	onTeamPeek?: (id: string) => void
 }
 
 /** A single match row */
-function MatchRow({ match, teamFlag, teamId, isConditional = false }: MatchRowProps) {
+function MatchRow({ match, teamFlag, teamId, isConditional = false, onTeamPeek }: MatchRowProps) {
   const status = matchStatus(match.result ?? null)
 
   return (
@@ -48,8 +51,15 @@ function MatchRow({ match, teamFlag, teamId, isConditional = false }: MatchRowPr
           <>
             <FlagIcon code={teamId} flag={teamFlag} />
             <span className={styles.vs}>vs</span>
-            <FlagIcon flag={match.opponentFlag} opponent={match.opponent ?? undefined} />
-            <span className={styles.opponentName}>{match.opponent}</span>
+            <TeamFlagLink
+              teamId={match.opponent ? NAME_TO_ID[match.opponent] : undefined}
+              teamName={match.opponent ?? ''}
+              onPeek={onTeamPeek ?? (() => {})}
+              disabled={!onTeamPeek}
+            >
+              <FlagIcon flag={match.opponentFlag} opponent={match.opponent ?? undefined} />
+              <span className={styles.opponentName}>{match.opponent}</span>
+            </TeamFlagLink>
           </>
         ) : (
           <span className={`${styles.opponentName} ${isConditional ? styles.opponentNameConditional : ''}`}>
@@ -76,10 +86,11 @@ function MatchRow({ match, teamFlag, teamId, isConditional = false }: MatchRowPr
 interface StageBlockProps {
 	stageKey: Stage
 	team: Team
+	onTeamPeek?: (id: string) => void
 }
 
 /** A stage block (Group Stage, R32, etc.) */
-function StageBlock({ stageKey, team }: StageBlockProps) {
+function StageBlock({ stageKey, team, onTeamPeek }: StageBlockProps) {
   const path = team.path?.[stageKey]
   const currentIdx = stageIndex(team.currentStage ?? 'group_stage')
   const stageIdx2  = stageIndex(stageKey)
@@ -100,7 +111,7 @@ function StageBlock({ stageKey, team }: StageBlockProps) {
           </span>
         </div>
         {results.map((match, i) => (
-          <MatchRow key={i} match={match} teamFlag={team.flag} teamId={team.id} />
+          <MatchRow key={i} match={match} teamFlag={team.flag} teamId={team.id} onTeamPeek={onTeamPeek} />
         ))}
       </div>
     )
@@ -133,6 +144,7 @@ function StageBlock({ stageKey, team }: StageBlockProps) {
         teamFlag={team.flag}
         teamId={team.id}
         isConditional={isFuture || isCurrent}
+        onTeamPeek={onTeamPeek}
       />
     </div>
   )
@@ -142,7 +154,7 @@ function StageBlock({ stageKey, team }: StageBlockProps) {
  * Full schedule section — all matches from group stage through the final,
  * with conditional future matches shown clearly as tentative.
  */
-export default function ScheduledMatches({ team }: { team: Team }) {
+export default function ScheduledMatches({ team, onTeamPeek }: { team: Team; onTeamPeek?: (id: string) => void }) {
   return (
     <section
       className="wrap section"
@@ -156,7 +168,7 @@ export default function ScheduledMatches({ team }: { team: Team }) {
 
       <div className={styles.schedule}>
         {STAGE_ORDER.map(stage => (
-          <StageBlock key={stage} stageKey={stage} team={team} />
+          <StageBlock key={stage} stageKey={stage} team={team} onTeamPeek={onTeamPeek} />
         ))}
       </div>
 

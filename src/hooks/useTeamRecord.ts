@@ -23,6 +23,7 @@ export interface TeamLink {
 	rel: string
 	href: string
 	text: string
+	isDesktop: boolean
 }
 
 export interface TeamRecordData {
@@ -33,23 +34,64 @@ export interface TeamRecordData {
 }
 
 const ESPN_FLAG_MAP: Record<string, string> = {
-	USA: '🇺🇸', MEX: '🇲🇽', CAN: '🇨🇦', BRA: '🇧🇷', ARG: '🇦🇷', COL: '🇨🇴',
-	ECU: '🇪🇨', URU: '🇺🇾', PAR: '🇵🇾', ESP: '🇪🇸', FRA: '🇫🇷', GER: '🇩🇪',
-	ENG: '🏴󠁧󠁢󠁥󠁮󠁧󠁿', NED: '🇳🇱', POR: '🇵🇹', BEL: '🇧🇪', SUI: '🇨🇭',
-	CRO: '🇭🇷', AUT: '🇦🇹', SWE: '🇸🇪', NOR: '🇳🇴', SCO: '🏴󠁧󠁢󠁳󠁣󠁴󠁿',
-	CZE: '🇨🇿', BIH: '🇧🇦', TUR: '🇹🇷', MAR: '🇲🇦', SEN: '🇸🇳',
-	EGY: '🇪🇬', CIV: '🇨🇮', GHA: '🇬🇭', RSA: '🇿🇦', ALG: '🇩🇿',
-	TUN: '🇹🇳', RDC: '🇨🇩', CPV: '🇨🇻', KSA: '🇸🇦',
-	JPN: '🇯🇵', KOR: '🇰🇷', AUS: '🇦🇺', IRN: '🇮🇷', IRQ: '🇮🇶',
-	QAT: '🇶🇦', JOR: '🇯🇴', UZB: '🇺🇿', NZL: '🇳🇿',
-	HAI: '🇭🇹', PAN: '🇵🇦', CUW: '🇨🇼',
+	USA: '🇺🇸',
+	MEX: '🇲🇽',
+	CAN: '🇨🇦',
+	BRA: '🇧🇷',
+	ARG: '🇦🇷',
+	COL: '🇨🇴',
+	ECU: '🇪🇨',
+	URU: '🇺🇾',
+	PAR: '🇵🇾',
+	ESP: '🇪🇸',
+	FRA: '🇫🇷',
+	GER: '🇩🇪',
+	ENG: '🏴󠁧󠁢󠁥󠁮󠁧󠁿',
+	NED: '🇳🇱',
+	POR: '🇵🇹',
+	BEL: '🇧🇪',
+	SUI: '🇨🇭',
+	CRO: '🇭🇷',
+	AUT: '🇦🇹',
+	SWE: '🇸🇪',
+	NOR: '🇳🇴',
+	SCO: '🏴󠁧󠁢󠁳󠁣󠁴󠁿',
+	CZE: '🇨🇿',
+	BIH: '🇧🇦',
+	TUR: '🇹🇷',
+	MAR: '🇲🇦',
+	SEN: '🇸🇳',
+	EGY: '🇪🇬',
+	CIV: '🇨🇮',
+	GHA: '🇬🇭',
+	RSA: '🇿🇦',
+	ALG: '🇩🇿',
+	TUN: '🇹🇳',
+	RDC: '🇨🇩',
+	CPV: '🇨🇻',
+	KSA: '🇸🇦',
+	JPN: '🇯🇵',
+	KOR: '🇰🇷',
+	AUS: '🇦🇺',
+	IRN: '🇮🇷',
+	IRQ: '🇮🇶',
+	QAT: '🇶🇦',
+	JOR: '🇯🇴',
+	UZB: '🇺🇿',
+	NZL: '🇳🇿',
+	HAI: '🇭🇹',
+	PAN: '🇵🇦',
+	CUW: '🇨🇼',
 }
 
 const EMPTY: TeamRecordData = { record: null, standingSummary: null, nextEvent: null, links: [] }
 
 const LINK_RELS_TO_KEEP = new Set(['clubhouse', 'stats', 'roster', 'schedule'])
 
-async function fetchTeamRecordWithLiveFallback(slug: string, signal: AbortSignal): Promise<TeamRecordData> {
+async function fetchTeamRecordWithLiveFallback(
+	slug: string,
+	signal: AbortSignal
+): Promise<TeamRecordData> {
 	const res = await fetch(`${ESPN_TEAM_URL}/${slug}?_=${Date.now()}`, { signal })
 	const json = await res.json()
 	const team = json?.team
@@ -59,7 +101,7 @@ async function fetchTeamRecordWithLiveFallback(slug: string, signal: AbortSignal
 	let record: TeamRecord | null = null
 	if (recordItem) {
 		const stats: Record<string, number> = {}
-		for (const s of (recordItem.stats ?? [])) {
+		for (const s of recordItem.stats ?? []) {
 			if (s.name) stats[s.name] = s.value
 		}
 		record = { summary: recordItem.summary ?? '0-0-0', stats }
@@ -76,23 +118,21 @@ async function fetchTeamRecordWithLiveFallback(slug: string, signal: AbortSignal
 		const away = competitors.find((c: { homeAway: string }) => c.homeAway === 'away')
 		const opp = home?.team?.id === team.id ? away : home
 		const broadcasts: string[] = []
-		for (const b of (comp?.broadcasts ?? [])) {
+		for (const b of comp?.broadcasts ?? []) {
 			if (b.media?.shortName) broadcasts.push(b.media.shortName)
 		}
 
 		const statusState = comp?.status?.type?.state
 		const statusDetail = comp?.status?.type?.detail
 		isLive = statusState === 'in'
-		const clock = isLive ? (statusDetail || undefined) : undefined
+		const clock = isLive ? statusDetail || undefined : undefined
 		const score = isLive
 			? `${parseInt(home?.score, 10) || 0}-${parseInt(away?.score, 10) || 0}`
 			: undefined
 
 		nextEvent = {
 			opponent: opp?.team?.displayName ?? 'TBD',
-			opponentFlag: opp?.team?.abbreviation
-				? (ESPN_FLAG_MAP[opp.team.abbreviation] ?? '🏳️')
-				: '🏳️',
+			opponentFlag: opp?.team?.abbreviation ? (ESPN_FLAG_MAP[opp.team.abbreviation] ?? '🏳️') : '🏳️',
 			date: evt.date ?? '',
 			venue: comp?.venue?.fullName ?? '',
 			broadcasts,
@@ -107,10 +147,12 @@ async function fetchTeamRecordWithLiveFallback(slug: string, signal: AbortSignal
 	// scoreboard when the game is live or when nextEvent is missing (team is playing now).
 	if (!nextEvent || isLive) {
 		const todayYMD = new Date().toISOString().slice(0, 10).replace(/-/g, '')
-		const sbRes = await fetch(`${ESPN_SCOREBOARD_URL}?dates=${todayYMD}&_=${Date.now()}`, { signal })
+		const sbRes = await fetch(`${ESPN_SCOREBOARD_URL}?dates=${todayYMD}&_=${Date.now()}`, {
+			signal,
+		})
 		if (sbRes.ok) {
 			const sbJson = await sbRes.json()
-			for (const event of (sbJson?.events ?? [])) {
+			for (const event of sbJson?.events ?? []) {
 				const comp = event.competitions?.[0]
 				const state = comp?.status?.type?.state
 				if (state !== 'in') continue
@@ -132,7 +174,7 @@ async function fetchTeamRecordWithLiveFallback(slug: string, signal: AbortSignal
 				} else {
 					const opp = home?.team?.id === team.id ? away : home
 					const broadcasts: string[] = []
-					for (const b of (comp?.geoBroadcasts ?? [])) {
+					for (const b of comp?.geoBroadcasts ?? []) {
 						if (b.media?.shortName) broadcasts.push(b.media.shortName)
 					}
 					nextEvent = {
@@ -155,25 +197,32 @@ async function fetchTeamRecordWithLiveFallback(slug: string, signal: AbortSignal
 	}
 
 	const links: TeamLink[] = []
-	for (const l of (team.links ?? [])) {
+	for (const l of team.links ?? []) {
 		const rels: string[] = Array.isArray(l?.rel) ? l.rel : []
 		const match = rels.find((r: string) => LINK_RELS_TO_KEEP.has(r))
 		if (match && l?.href && l?.text) {
-			links.push({ rel: match, href: l.href, text: l.text })
+			links.push({ rel: match, href: l.href, text: l.text, isDesktop: rels.includes('desktop') })
 		}
 	}
 
 	return { record, standingSummary: team.standingSummary ?? null, nextEvent, links }
 }
 
-export function useTeamRecord(teamId: string, isHistorical: boolean): TeamRecordData & { error: boolean; loading: boolean } {
+export function useTeamRecord(
+	teamId: string,
+	isHistorical: boolean
+): TeamRecordData & { error: boolean; loading: boolean } {
 	const slug = isHistorical ? null : (ESPN_SLUG_MAP[teamId] ?? null)
 
-	const { data = EMPTY, isError, isLoading } = useQuery({
+	const {
+		data = EMPTY,
+		isError,
+		isLoading,
+	} = useQuery({
 		queryKey: ['teamRecord', slug],
 		queryFn: ({ signal }) => fetchTeamRecordWithLiveFallback(slug!, signal),
 		enabled: !!slug,
-		refetchInterval: (query) => query.state.data?.nextEvent?.isLive ? 90_000 : false,
+		refetchInterval: (query) => (query.state.data?.nextEvent?.isLive ? 90_000 : false),
 		staleTime: 30_000,
 	})
 

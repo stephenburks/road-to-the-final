@@ -1,7 +1,8 @@
 import type { Team, GroupMatch, Card } from '../../types'
 import { formatDate } from '../../utils'
 import FlagIcon from '../ui/FlagIcon'
-import { getTeamTLA } from '../ui/teamLookup'
+import { getTeamTLA, NAME_TO_ID } from '../ui/teamLookup'
+import TeamFlagLink from '../ui/TeamFlagLink'
 import { RESULT_LABELS } from './groupStageConstants'
 import styles from './MatchCard.module.css'
 
@@ -24,6 +25,7 @@ interface TeamMatchCardProps {
 	}
 	matchTime?: string
 	matchBroadcasts?: string[]
+	onTeamPeek?: (id: string) => void
 }
 
 // ── Neutral mode (used by HomePage) ──
@@ -46,6 +48,7 @@ interface NeutralMatchCardProps {
 	awayScorers: string[]
 	homeCards: Card[]
 	awayCards: Card[]
+	onTeamPeek?: (id: string) => void
 }
 
 type MatchCardProps = TeamMatchCardProps | NeutralMatchCardProps
@@ -115,11 +118,15 @@ export default function MatchCard(props: MatchCardProps) {
 				</div>
 
 				<div className={styles.matchTeams}>
-					<FlagIcon code={homeId} flag={homeFlag} name={homeTeam} />
-					<span className={styles.opponentName}>{homeTeam}</span>
+					<TeamFlagLink teamId={homeId} teamName={homeTeam} onPeek={props.onTeamPeek ?? (() => {})} disabled={!props.onTeamPeek}>
+						<FlagIcon code={homeId} flag={homeFlag} name={homeTeam} />
+						<span className={styles.opponentName}>{homeTeam}</span>
+					</TeamFlagLink>
 					<span className={styles.vsLabel}>vs</span>
-					<FlagIcon code={awayId} flag={awayFlag} name={awayTeam} />
-					<span className={styles.opponentName}>{awayTeam}</span>
+					<TeamFlagLink teamId={awayId} teamName={awayTeam} onPeek={props.onTeamPeek ?? (() => {})} disabled={!props.onTeamPeek}>
+						<FlagIcon code={awayId} flag={awayFlag} name={awayTeam} />
+						<span className={styles.opponentName}>{awayTeam}</span>
+					</TeamFlagLink>
 					{score && (
 						<span className={`${styles.score} ${isLive ? styles.scoreLive : ''}`} aria-label={`Score: ${score}`}>{score}</span>
 					)}
@@ -191,8 +198,15 @@ export default function MatchCard(props: MatchCardProps) {
 			<div className={styles.matchTeams}>
 				<FlagIcon code={teamId} flag={teamFlag} />
 				<span className={styles.vsLabel}>vs</span>
-				<FlagIcon flag={match.opponentFlag} opponent={match.opponent} />
-				<span className={styles.opponentName}>{match.opponent}</span>
+				<TeamFlagLink
+					teamId={NAME_TO_ID[match.opponent]}
+					teamName={match.opponent}
+					onPeek={props.onTeamPeek ?? (() => {})}
+					disabled={!props.onTeamPeek}
+				>
+					<FlagIcon flag={match.opponentFlag} opponent={match.opponent} />
+					<span className={styles.opponentName}>{match.opponent}</span>
+				</TeamFlagLink>
 				{effectiveScore && (
 					<span className={`${styles.score} ${isLive ? styles.scoreLive : ''}`} aria-label={`Score: ${effectiveScore}`}>
 						{effectiveScore}

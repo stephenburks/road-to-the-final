@@ -69,6 +69,18 @@
 	border: 1px solid rgba(99,102,241,0.3);
 }
 
+.calloutCardClickable {
+	cursor: pointer;
+	transition: transform 120ms ease, border-color 120ms ease, box-shadow 120ms ease;
+}
+.calloutCardClickable:hover,
+.calloutCardClickable:focus-visible {
+	transform: translateY(-1px);
+	border-color: rgba(99, 102, 241, 0.5);
+	box-shadow: 0 4px 12px rgba(99, 102, 241, 0.18);
+	outline: none;
+}
+
 .calloutVs   { font-size: 11px; color: var(--text-lo); margin-bottom: 3px; }
 .calloutPct  { font-family: var(--font-display); font-weight: 800; font-size: 1.2rem; color: var(--text-dim); }
 .calloutPctTop { color: #a5b4fc; }

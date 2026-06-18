@@ -125,9 +125,10 @@ function findKnockoutWatchMatches(team: Team, data: AppData, _targetDates: strin
 interface GamesToWatchProps {
 	team: Team
 	data: AppData
+	onTeamPeek?: (id: string) => void
 }
 
-export default function GamesToWatch({ team, data }: GamesToWatchProps) {
+export default function GamesToWatch({ team, data, onTeamPeek }: GamesToWatchProps) {
 	const livePatches = useLiveScores(data.dailyMatches ?? {}, data.teams, data.isHistorical)
 
 	const watchMatches = useMemo<WatchMatch[]>(() => {
@@ -156,7 +157,7 @@ export default function GamesToWatch({ team, data }: GamesToWatchProps) {
 			<div className={styles.grid} role="list" aria-label="Games to watch">
 				{watchMatches.map((item, i) => (
 					<div key={`${item.match.homeTeam}-${item.match.awayTeam}-${i}`} role="listitem">
-						<MatchCard {...item.match} />
+						<MatchCard {...item.match} onTeamPeek={onTeamPeek} />
 						<p className={styles.note} role="note">
 							{item.note}
 						</p>

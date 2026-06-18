@@ -7,7 +7,7 @@ import FeederGroupPanel from './ui/FeederGroupPanel'
 import MatchCard from './groups/MatchCard'
 import styles from './GroupStage.module.css'
 
-export default function GroupStage({ team, data, eliminatedTeamIds = new Set() }: { team: Team; data: AppData; eliminatedTeamIds?: Set<string> }) {
+export default function GroupStage({ team, data, eliminatedTeamIds = new Set(), onTeamPeek }: { team: Team; data: AppData; eliminatedTeamIds?: Set<string>; onTeamPeek?: (id: string) => void }) {
 	const myGroup = data?.groups?.[team.group]
 	const feeder = getFeederGroup(team, 'r16', data)
 
@@ -65,6 +65,7 @@ export default function GroupStage({ team, data, eliminatedTeamIds = new Set() }
 						highlightTeamId={team.id}
 						eliminatedTeamIds={eliminatedTeamIds}
 						livePatches={livePatches}
+						onTeamPeek={onTeamPeek}
 					/>
 				)}
 				{feeder && (
@@ -72,6 +73,7 @@ export default function GroupStage({ team, data, eliminatedTeamIds = new Set() }
 						feeder={feeder}
 						marginTop={0}
 						eliminatedTeamIds={eliminatedTeamIds}
+						onTeamPeek={onTeamPeek}
 						explanation={`The table shows Group ${feeder.key} standings — if ${team.name} wins Group ${team.group}, the winner of Group ${feeder.key} would be their Round of 16 opponent.`}
 					/>
 				)}
@@ -95,6 +97,7 @@ export default function GroupStage({ team, data, eliminatedTeamIds = new Set() }
 						teamFlag={team.flag}
 						teamId={team.id}
 						teams={data.teams}
+						onTeamPeek={onTeamPeek}
 						liveData={resolveLiveData(match.opponent)}
 						matchTime={resolveTime(match.opponent, match.date)}
 						matchBroadcasts={resolveBroadcasts(match.opponent, match.date)}

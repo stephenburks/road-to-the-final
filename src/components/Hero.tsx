@@ -3,15 +3,47 @@ import type { Stage, Team, AdvanceProbabilities } from '../types'
 import { daysUntil, formatDate } from '../utils'
 import { useTeamRecord } from '../hooks/useTeamRecord'
 import FlagIcon from './ui/FlagIcon'
+import TeamFlagLink from './ui/TeamFlagLink'
+import { NAME_TO_ID } from './ui/teamLookup'
 import styles from './Hero.module.css'
 
 const STAT_CARD_DEFS = [
-	{ key: 'r32',   label: 'Reach Round of 32', cardClass: styles.statCardR32,   valueClass: styles.statValueR32 },
-	{ key: 'r16',   label: 'Reach Round of 16', cardClass: styles.statCardR16,   valueClass: styles.statValueR16 },
-	{ key: 'qf',    label: 'Reach Quarterfinal', cardClass: styles.statCardQf,    valueClass: styles.statValueQf },
-	{ key: 'sf',    label: 'Reach Semifinal',    cardClass: styles.statCardSf,    valueClass: styles.statValueSf },
-	{ key: 'final', label: 'Reach the Final',    cardClass: styles.statCardFinal, valueClass: styles.statValueFinal },
-	{ key: 'winner',label: 'Win World Cup',      cardClass: styles.statCardWin,   valueClass: styles.statValueWin },
+	{
+		key: 'r32',
+		label: 'Reach Round of 32',
+		cardClass: styles.statCardR32,
+		valueClass: styles.statValueR32,
+	},
+	{
+		key: 'r16',
+		label: 'Reach Round of 16',
+		cardClass: styles.statCardR16,
+		valueClass: styles.statValueR16,
+	},
+	{
+		key: 'qf',
+		label: 'Reach Quarterfinal',
+		cardClass: styles.statCardQf,
+		valueClass: styles.statValueQf,
+	},
+	{
+		key: 'sf',
+		label: 'Reach Semifinal',
+		cardClass: styles.statCardSf,
+		valueClass: styles.statValueSf,
+	},
+	{
+		key: 'final',
+		label: 'Reach the Final',
+		cardClass: styles.statCardFinal,
+		valueClass: styles.statValueFinal,
+	},
+	{
+		key: 'winner',
+		label: 'Win World Cup',
+		cardClass: styles.statCardWin,
+		valueClass: styles.statValueWin,
+	},
 ]
 
 interface GroupWinCard {
@@ -51,6 +83,7 @@ interface HeroProps {
 	isHistorical: boolean
 	groupWinProb?: GroupWinCard
 	groupPosition?: number
+	onTeamPeek?: (id: string) => void
 }
 
 function ordinal(n: number): string {
@@ -59,22 +92,40 @@ function ordinal(n: number): string {
 	return n + (s[(v - 20) % 10] || s[v] || s[0])
 }
 
-export default function Hero({ team, activeStage, isHistorical, groupWinProb, groupPosition }: HeroProps) {
+export default function Hero({
+	team,
+	activeStage,
+	isHistorical,
+	groupWinProb,
+	groupPosition,
+	onTeamPeek,
+}: HeroProps) {
 	const path = team.path?.[activeStage]
 	const ap = team.advanceProbabilities ?? {}
 	const days = daysUntil(path?.date)
 	const source = ap.source
-	const sourceLabel = isHistorical ? 'As of snapshot' : source === 'market' ? 'Polymarket' : 'Calculated'
+	const sourceLabel = isHistorical
+		? 'As of snapshot'
+		: source === 'market'
+			? 'Polymarket'
+			: 'Calculated'
 
-	const { record, nextEvent, links, error: teamRecordError, loading: teamRecordLoading } = useTeamRecord(team.id, isHistorical)
+	const {
+		record,
+		nextEvent,
+		links,
+		error: teamRecordError,
+		loading: teamRecordLoading,
+	} = useTeamRecord(team.id, isHistorical)
 
 	const eyebrow = getEyebrow(team, activeStage, isHistorical)
 	const heading = getHeading(team)
 	const subhead = getSubhead(path)
 	const subtext = getSubtext(team, activeStage, days)
-	const conditionalNote = path?.conditional && !team.eliminated
-		? (path.conditionNote ?? 'Venue assumes current group standing — may change.')
-		: null
+	const conditionalNote =
+		path?.conditional && !team.eliminated
+			? (path.conditionNote ?? 'Venue assumes current group standing — may change.')
+			: null
 
 	const useTopRowLayout = !team.eliminated && (!!nextEvent || teamRecordLoading)
 
@@ -82,32 +133,48 @@ export default function Hero({ team, activeStage, isHistorical, groupWinProb, gr
 		<div className={styles.textCol}>
 			<p className={styles.eyebrow}>{eyebrow}</p>
 			<h1 id="hero-heading" className={styles.heading}>
-				{!team.eliminated && <><FlagIcon code={team.id} flag={team.flag} name={team.name} size={40} />{' '}</>}
+				{!team.eliminated && (
+					<>
+						<FlagIcon code={team.id} flag={team.flag} name={team.name} size={40} />{' '}
+					</>
+				)}
 				{heading}
 			</h1>
 			{!team.eliminated && (
-				<div className={styles.metaRow}>
-					{record && (
-						<span className={styles.recordBadge} aria-label={`Record: ${record.summary.replace(/-/g, ' wins, ').replace(/-/g, ' draws, ')} losses`}>
-							{record.summary}
-						</span>
-					)}
-					{teamRecordLoading && !record && (
-						<span className={`${styles.recordBadge} ${styles.skeleton}`} aria-hidden="true" style={{ width: '56px', minHeight: '18px' }} />
-					)}
-					{teamRecordError && !record && (
-						<span className={styles.recordError}>Couldn&apos;t load record</span>
-					)}
-					{groupPosition != null && (
-						<span className={styles.contextBadge} aria-label={`${ordinal(groupPosition)} in Group ${team.group}`}>
-							{ordinal(groupPosition)} in Group {team.group}
-						</span>
-					)}
-					{team.fifaRank != null && (
-						<span className={styles.contextBadge} aria-label={`FIFA world rank ${team.fifaRank}`}>
-							FIFA #{team.fifaRank}
-						</span>
-					)}
+				<div>
+					<div className={styles.metaRow}>
+						{record && (
+							<span
+								className={styles.recordBadge}
+								aria-label={`Record: ${record.summary.replace(/-/g, ' wins, ').replace(/-/g, ' draws, ')} losses`}
+							>
+								{record.summary}
+							</span>
+						)}
+						{teamRecordLoading && !record && (
+							<span
+								className={`${styles.recordBadge} ${styles.skeleton}`}
+								aria-hidden="true"
+								style={{ width: '56px', minHeight: '18px' }}
+							/>
+						)}
+						{teamRecordError && !record && (
+							<span className={styles.recordError}>Couldn&apos;t load record</span>
+						)}
+						{groupPosition != null && (
+							<span
+								className={styles.contextBadge}
+								aria-label={`${ordinal(groupPosition)} in Group ${team.group}`}
+							>
+								{ordinal(groupPosition)} in Group {team.group}
+							</span>
+						)}
+						{team.fifaRank != null && (
+							<span className={styles.contextBadge} aria-label={`FIFA world rank ${team.fifaRank}`}>
+								FIFA #{team.fifaRank}
+							</span>
+						)}
+					</div>
 					<p className={styles.subhead}>{subhead}</p>
 				</div>
 			)}
@@ -121,17 +188,19 @@ export default function Hero({ team, activeStage, isHistorical, groupWinProb, gr
 			{!isHistorical && links.length > 0 && (
 				<div className={styles.espnLinks} aria-label="External links">
 					<span className={styles.espnLinksLabel}>On ESPN:</span>
-					{links.map(l => (
-						<a
-							key={l.rel}
-							href={l.href}
-							target="_blank"
-							rel="noopener noreferrer"
-							className={styles.espnLink}
-						>
-							{l.text}
-						</a>
-					))}
+					{links
+						.filter((l) => l.isDesktop && (l.rel === 'stats' || l.rel === 'clubhouse'))
+						.map((l) => (
+							<a
+								key={l.rel}
+								href={l.href}
+								target="_blank"
+								rel="noopener noreferrer"
+								className={styles.espnLink}
+							>
+								{l.text}
+							</a>
+						))}
 				</div>
 			)}
 		</div>
@@ -152,8 +221,15 @@ export default function Hero({ team, activeStage, isHistorical, groupWinProb, gr
 			<div className={styles.nextMatchTeams}>
 				<FlagIcon code={team.id} flag={team.flag} name={team.name} />
 				<span className={styles.nextMatchVs}>vs</span>
-				<FlagIcon flag={nextEvent.opponentFlag} opponent={nextEvent.opponent} />
-				<span className={styles.nextMatchOpponent}>{nextEvent.opponent}</span>
+				<TeamFlagLink
+					teamId={NAME_TO_ID[nextEvent.opponent]}
+					teamName={nextEvent.opponent}
+					onPeek={onTeamPeek ?? (() => {})}
+					disabled={!onTeamPeek}
+				>
+					<FlagIcon flag={nextEvent.opponentFlag} opponent={nextEvent.opponent} />
+					<span className={styles.nextMatchOpponent}>{nextEvent.opponent}</span>
+				</TeamFlagLink>
 			</div>
 			{nextEvent.isLive && nextEvent.score && (
 				<div className={styles.nextMatchScore} aria-label={`Live score: ${nextEvent.score}`}>
@@ -162,84 +238,108 @@ export default function Hero({ team, activeStage, isHistorical, groupWinProb, gr
 			)}
 			<div className={styles.nextMatchDetails}>
 				{nextEvent.date && (
-					<span>{formatDate(nextEvent.date)} · {new Date(nextEvent.date).toLocaleTimeString([], { hour: 'numeric', minute: '2-digit', timeZoneName: 'short' })}</span>
+					<span>
+						{formatDate(nextEvent.date)} ·{' '}
+						{new Date(nextEvent.date).toLocaleTimeString([], {
+							hour: 'numeric',
+							minute: '2-digit',
+							timeZoneName: 'short',
+						})}
+					</span>
 				)}
 				{nextEvent.venue && <span className={styles.nextMatchVenue}>{nextEvent.venue}</span>}
 			</div>
 			{nextEvent.broadcasts.length > 0 && (
-				<div className={styles.nextMatchBroadcasts}>
-					{nextEvent.broadcasts.join(' / ')}
-				</div>
+				<div className={styles.nextMatchBroadcasts}>{nextEvent.broadcasts.join(' / ')}</div>
 			)}
 		</div>
 	) : teamRecordLoading ? (
-		<div className={`${styles.nextMatch} ${styles.skeleton}`} aria-hidden="true" role="presentation">
-			<div className={styles.skelLine} style={{ width: '80px', height: '10px', marginBottom: '10px' }} />
-			<div className={styles.skelLine} style={{ width: '100%', height: '24px', marginBottom: '8px' }} />
+		<div
+			className={`${styles.nextMatch} ${styles.skeleton}`}
+			aria-hidden="true"
+			role="presentation"
+		>
+			<div
+				className={styles.skelLine}
+				style={{ width: '80px', height: '10px', marginBottom: '10px' }}
+			/>
+			<div
+				className={styles.skelLine}
+				style={{ width: '100%', height: '24px', marginBottom: '8px' }}
+			/>
 			<div className={styles.skelLine} style={{ width: '70%', height: '12px' }} />
 		</div>
 	) : null
 
 	const goalsFor = record?.stats?.pointsFor
 
-	const probNote = !team.eliminated && !isHistorical
-		? source === 'market'
-			? 'Advancement probabilities from Polymarket prediction markets — crowd-sourced estimates based on live trading.'
-			: 'Advancement probabilities estimated from FIFA rankings and simulated outcomes. No Polymarket data available for this team.'
-		: isHistorical
-			? 'Probabilities reflect the selected historical snapshot — not current market prices.'
-			: null
+	const probNote =
+		!team.eliminated && !isHistorical
+			? source === 'market'
+				? 'Advancement probabilities from Polymarket prediction markets — crowd-sourced estimates based on live trading.'
+				: 'Advancement probabilities estimated from FIFA rankings and simulated outcomes. No Polymarket data available for this team.'
+			: isHistorical
+				? 'Probabilities reflect the selected historical snapshot — not current market prices.'
+				: null
 
 	const statGridEl = !team.eliminated ? (
 		<>
-		<div className={styles.statGrid} role="list" aria-label="Tournament statistics and advancement probabilities">
-
-			{/* ── Goals ── */}
-			<div role="listitem" className={`${styles.statCard} ${styles.statCardGoals}`} aria-label={`Total goals: ${goalsFor ?? '\u2014'}`}>
-				<div className={`${styles.statValue} ${styles.statValueGoals}`}>
-					{goalsFor ?? '\u2014'}
-				</div>
-				<div className={styles.statLabel}>Total Goals</div>
-				<div className={styles.statSub}>ESPN</div>
-			</div>
-
-			{/* ── Group Win ── */}
 			<div
-				role="listitem"
-				className={`${styles.statCard} ${styles.statCardGroup}`}
-				aria-label={groupWinProb ? `Win Group ${groupWinProb.groupLetter}: ${groupWinProb.probability}%` : 'Win group probability not available'}
+				className={styles.statGrid}
+				role="list"
+				aria-label="Tournament statistics and advancement probabilities"
 			>
-				<div className={`${styles.statValue} ${styles.statValueGroup}`}>
-					{groupWinProb?.probability ?? '\u2014'}%
-				</div>
-				<div className={styles.statLabel}>
-					{groupWinProb ? `Win Group ${groupWinProb.groupLetter}` : 'Win Group'}
-				</div>
-				<div className={styles.statSub}>Polymarket</div>
-			</div>
-
-			{/* ── Stage probabilities ── */}
-			{STAT_CARD_DEFS.map(card => (
+				{/* ── Goals ── */}
 				<div
-					key={card.key}
 					role="listitem"
-					className={`${styles.statCard} ${card.cardClass}`}
-					aria-label={`${card.label}: ${ap[card.key as keyof AdvanceProbabilities] ?? 0}%`}
+					className={`${styles.statCard} ${styles.statCardGoals}`}
+					aria-label={`Total goals: ${goalsFor ?? '\u2014'}`}
 				>
-					<div className={`${styles.statValue} ${card.valueClass}`}>
-						{ap[card.key as keyof AdvanceProbabilities] ?? 0}%
+					<div className={`${styles.statValue} ${styles.statValueGoals}`}>
+						{goalsFor ?? '\u2014'}
 					</div>
-					<div className={styles.statLabel}>{card.label}</div>
-					<div className={styles.statSub}>
-						{sourceLabel}
-					</div>
+					<div className={styles.statLabel}>Total Goals</div>
+					<div className={styles.statSub}>ESPN</div>
 				</div>
-			))}
-		</div>
-		{probNote && (
-			<p className={styles.probNote}>{probNote}</p>
-		)}
-	</>) : null
+
+				{/* ── Group Win ── */}
+				<div
+					role="listitem"
+					className={`${styles.statCard} ${styles.statCardGroup}`}
+					aria-label={
+						groupWinProb
+							? `Win Group ${groupWinProb.groupLetter}: ${groupWinProb.probability}%`
+							: 'Win group probability not available'
+					}
+				>
+					<div className={`${styles.statValue} ${styles.statValueGroup}`}>
+						{groupWinProb?.probability ?? '\u2014'}%
+					</div>
+					<div className={styles.statLabel}>
+						{groupWinProb ? `Win Group ${groupWinProb.groupLetter}` : 'Win Group'}
+					</div>
+					<div className={styles.statSub}>Polymarket</div>
+				</div>
+
+				{/* ── Stage probabilities ── */}
+				{STAT_CARD_DEFS.map((card) => (
+					<div
+						key={card.key}
+						role="listitem"
+						className={`${styles.statCard} ${card.cardClass}`}
+						aria-label={`${card.label}: ${ap[card.key as keyof AdvanceProbabilities] ?? 0}%`}
+					>
+						<div className={`${styles.statValue} ${card.valueClass}`}>
+							{ap[card.key as keyof AdvanceProbabilities] ?? 0}%
+						</div>
+						<div className={styles.statLabel}>{card.label}</div>
+						<div className={styles.statSub}>{sourceLabel}</div>
+					</div>
+				))}
+			</div>
+			{probNote && <p className={styles.probNote}>{probNote}</p>}
+		</>
+	) : null
 
 	return (
 		<div className="wrap">
