@@ -6,6 +6,8 @@ import { getTeamIdByTLA } from '../components/ui/teamLookup'
 import type { AppData, Card } from '../types'
 
 interface LiveMatchPatch {
+	homeId: string
+	awayId: string
 	homeScore: number
 	awayScore: number
 	clock: string
@@ -117,6 +119,8 @@ async function fetchScoreboardPatches(
 		}
 
 		const patch: LiveMatchPatch = {
+			homeId: homeTeam.id,
+			awayId: awayTeam.id,
 			homeScore: parseInt(homeComp.score, 10) || 0,
 			awayScore: parseInt(awayComp.score, 10) || 0,
 			clock,

@@ -14,18 +14,20 @@ export function GroupTable({ groupKey, groupData, highlightTeamId, eliminatedTea
 	const probs = groupData.winProbabilities ?? {}
 	const standings = groupData.standings ?? []
 
-	// Find any in-progress match between teams in this group
+	// Find any in-progress match between teams in this group. Use the patch's
+	// canonical homeId/awayId (the key direction is duplicated in both orders).
 	const groupTeamIds = new Set(standings.map(r => r.teamId).filter(Boolean) as string[])
 	const liveInGroup = (() => {
 		if (!livePatches || groupTeamIds.size === 0) return null
-		for (const [key, patch] of livePatches) {
+		const seen = new Set<string>()
+		for (const [, patch] of livePatches) {
 			if (patch.status !== 'IN_PROGRESS') continue
-			const [homeId, awayId] = key.split(':')
-			if (!groupTeamIds.has(homeId) || !groupTeamIds.has(awayId)) continue
-			// livePatches has both home:away and away:home — only process one direction
-			if (homeId > awayId) continue
-			const home = standings.find(r => r.teamId === homeId)
-			const away = standings.find(r => r.teamId === awayId)
+			if (!groupTeamIds.has(patch.homeId) || !groupTeamIds.has(patch.awayId)) continue
+			const dedupeKey = `${patch.homeId}:${patch.awayId}`
+			if (seen.has(dedupeKey)) continue
+			seen.add(dedupeKey)
+			const home = standings.find(r => r.teamId === patch.homeId)
+			const away = standings.find(r => r.teamId === patch.awayId)
 			if (home && away) return { home, away, patch }
 		}
 		return null

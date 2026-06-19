@@ -19,7 +19,10 @@ export default function GroupStage({ team, data, eliminatedTeamIds = new Set(), 
 		if (!oppTeam) return undefined
 		const patch = livePatches.get(`${team.id}:${oppTeam.id}`) ?? livePatches.get(`${oppTeam.id}:${team.id}`)
 		if (!patch || patch.status === 'SCHEDULED') return undefined
-		const isHome = livePatches.has(`${team.id}:${oppTeam.id}`)
+		// Determine which side of the actual fixture our team is on. Both directions
+		// of the team-pair key are stored, so we can't infer this from .has(); the
+		// patch carries the canonical homeId/awayId from ESPN.
+		const isHome = patch.homeId === team.id
 		const myScore = isHome ? patch.homeScore : patch.awayScore
 		const opScore = isHome ? patch.awayScore : patch.homeScore
 		return {
