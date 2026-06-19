@@ -126,9 +126,12 @@ async function fetchTeamRecordWithLiveFallback(
 		const statusDetail = comp?.status?.type?.detail
 		isLive = statusState === 'in'
 		const clock = isLive ? statusDetail || undefined : undefined
-		const score = isLive
-			? `${parseInt(home?.score, 10) || 0}-${parseInt(away?.score, 10) || 0}`
-			: undefined
+		// Score must read as `myScore-opponentScore` since the Hero renders teams
+		// in `MyTeam vs Opponent` order — not as ESPN's home-away format.
+		const evtIsHome = home?.team?.id === team.id
+		const myScore = evtIsHome ? parseInt(home?.score, 10) || 0 : parseInt(away?.score, 10) || 0
+		const oppScore = evtIsHome ? parseInt(away?.score, 10) || 0 : parseInt(home?.score, 10) || 0
+		const score = isLive ? `${myScore}-${oppScore}` : undefined
 
 		nextEvent = {
 			opponent: opp?.team?.displayName ?? 'TBD',
@@ -136,7 +139,7 @@ async function fetchTeamRecordWithLiveFallback(
 			date: evt.date ?? '',
 			venue: comp?.venue?.fullName ?? '',
 			broadcasts,
-			isHome: home?.team?.id === team.id,
+			isHome: evtIsHome,
 			isLive,
 			clock,
 			score,
@@ -164,7 +167,11 @@ async function fetchTeamRecordWithLiveFallback(
 
 				const home = competitors.find((cp: { homeAway: string }) => cp.homeAway === 'home')
 				const away = competitors.find((cp: { homeAway: string }) => cp.homeAway === 'away')
-				const liveScore = `${parseInt(home?.score, 10) || 0}-${parseInt(away?.score, 10) || 0}`
+				// Orient as myScore-opponentScore to match the Hero's `MyTeam vs Opp` layout.
+				const sbIsHome = String(home?.team?.id) === String(team.id)
+				const myScore = sbIsHome ? parseInt(home?.score, 10) || 0 : parseInt(away?.score, 10) || 0
+				const oppScore = sbIsHome ? parseInt(away?.score, 10) || 0 : parseInt(home?.score, 10) || 0
+				const liveScore = `${myScore}-${oppScore}`
 				const liveClock = comp?.status?.type?.detail || 'LIVE'
 
 				if (nextEvent) {
