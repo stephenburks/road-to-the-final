@@ -10,6 +10,7 @@
 	padding: 8px 0;
 	font-size: 12px;
 	font-family: var(--font-mono);
+	max-width: 1060px;
 }
 
 .label {
@@ -38,7 +39,10 @@
 	padding: 4px 10px;
 	border-radius: 4px;
 	cursor: pointer;
-	transition: background 120ms ease, border-color 120ms ease, color 120ms ease;
+	transition:
+		background 120ms ease,
+		border-color 120ms ease,
+		color 120ms ease;
 }
 
 .btn:hover,
