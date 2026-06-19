@@ -1,6 +1,6 @@
 {
-  "lastUpdated": "2026-06-18T23:17:54.679Z",
-  "snapshotDate": "2026-06-18",
+  "lastUpdated": "2026-06-19T02:16:50.383Z",
+  "snapshotDate": "2026-06-19",
   "isHistorical": false,
   "sourceSummary": {
     "dataSource": "ESPN",
@@ -104,14 +104,28 @@
         }
       ],
       "winProbabilities": {
-        "mexico": 63,
-        "southkorea": 39,
+        "mexico": 69,
+        "southkorea": 27,
         "czechia": 0,
         "southafrica": 0
       }
     },
     "B": {
       "standings": [
+        {
+          "teamId": "canada",
+          "team": "Canada",
+          "played": 2,
+          "w": 1,
+          "d": 1,
+          "l": 0,
+          "gf": 7,
+          "ga": 1,
+          "pts": 4,
+          "gd": 6,
+          "pos": 1,
+          "flag": "🇨🇦"
+        },
         {
           "teamId": "switzerland",
           "team": "Switzerland",
@@ -123,36 +137,8 @@
           "ga": 2,
           "pts": 4,
           "gd": 3,
-          "pos": 1,
-          "flag": "🇨🇭"
-        },
-        {
-          "teamId": "canada",
-          "team": "Canada",
-          "played": 1,
-          "w": 0,
-          "d": 1,
-          "l": 0,
-          "gf": 1,
-          "ga": 1,
-          "pts": 1,
-          "gd": 0,
           "pos": 2,
-          "flag": "🇨🇦"
-        },
-        {
-          "teamId": "qatar",
-          "team": "Qatar",
-          "played": 1,
-          "w": 0,
-          "d": 1,
-          "l": 0,
-          "gf": 1,
-          "ga": 1,
-          "pts": 1,
-          "gd": 0,
-          "pos": 3,
-          "flag": "🇶🇦"
+          "flag": "🇨🇭"
         },
         {
           "teamId": "bosnia",
@@ -165,15 +151,29 @@
           "ga": 5,
           "pts": 1,
           "gd": -3,
-          "pos": 4,
+          "pos": 3,
           "flag": "🇧🇦"
+        },
+        {
+          "teamId": "qatar",
+          "team": "Qatar",
+          "played": 2,
+          "w": 0,
+          "d": 1,
+          "l": 1,
+          "gf": 1,
+          "ga": 7,
+          "pts": 1,
+          "gd": -6,
+          "pos": 4,
+          "flag": "🇶🇦"
         }
       ],
       "winProbabilities": {
-        "switzerland": 43,
-        "canada": 55,
-        "qatar": 0,
-        "bosnia": 0
+        "canada": 60,
+        "switzerland": 41,
+        "bosnia": 0,
+        "qatar": 0
       }
     },
     "C": {
@@ -236,7 +236,7 @@
         }
       ],
       "winProbabilities": {
-        "scotland": 11,
+        "scotland": 10,
         "brazil": 59,
         "morocco": 30,
         "haiti": 0
@@ -566,7 +566,7 @@
         }
       ],
       "winProbabilities": {
-        "saudiarabia": 4,
+        "saudiarabia": 3,
         "uruguay": 21,
         "spain": 73,
         "capeverde": 3
@@ -634,7 +634,7 @@
       "winProbabilities": {
         "norway": 22,
         "france": 77,
-        "senegal": 2,
+        "senegal": 1,
         "iraq": 0
       }
     },
@@ -764,10 +764,10 @@
         }
       ],
       "winProbabilities": {
-        "colombia": 48,
+        "colombia": 49,
         "portugal": 46,
-        "drcongo": 7,
-        "uzbekistan": 1
+        "drcongo": 6,
+        "uzbekistan": 0
       }
     },
     "L": {
@@ -878,7 +878,7 @@
           "opponent": "South Korea",
           "opponentFlag": "🇰🇷",
           "result": null,
-          "score": null,
+          "score": "1-0",
           "date": "2026-06-18",
           "venue": "Estadio Akron, Zapopan",
           "scorers": [],
@@ -898,8 +898,8 @@
       ],
       "advanceProbabilities": {
         "r32": 97,
-        "r16": 59,
-        "qf": 33,
+        "r16": 60,
+        "qf": 29,
         "sf": 11,
         "final": 6,
         "winner": 1,
@@ -1108,7 +1108,7 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 15,
+        "r32": 16,
         "r16": 5,
         "qf": 2,
         "sf": 2,
@@ -1306,7 +1306,7 @@
           "opponent": "Mexico",
           "opponentFlag": "🇲🇽",
           "result": null,
-          "score": null,
+          "score": "0-1",
           "date": "2026-06-18",
           "venue": "Estadio Akron, Zapopan",
           "scorers": [],
@@ -1325,10 +1325,10 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 94,
+        "r32": 95,
         "r16": 54,
-        "qf": 17,
-        "sf": 5,
+        "qf": 18,
+        "sf": 4,
         "final": 2,
         "winner": 0,
         "source": "market"
@@ -1538,10 +1538,10 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 21,
-        "r16": 9,
+        "r32": 19,
+        "r16": 14,
         "qf": 4,
-        "sf": 3,
+        "sf": 2,
         "final": 1,
         "winner": 0,
         "source": "market"
@@ -1739,12 +1739,25 @@
           "matchday": 2,
           "opponent": "Qatar",
           "opponentFlag": "🇶🇦",
-          "result": null,
-          "score": "3-0",
+          "result": "W",
+          "score": "6-0",
           "date": "2026-06-18",
           "venue": "BC Place, Vancouver",
-          "scorers": [],
-          "cards": []
+          "scorers": [
+            "Cyle Larin 16'",
+            "Jonathan David 29'",
+            "Jonathan David 45'+3'",
+            "Nathan Saliba 64'",
+            "Mohamed Manai OG 75'",
+            "Jonathan David 90'+2'"
+          ],
+          "cards": [
+            {
+              "player": "Derek Cornelius",
+              "minute": "9'",
+              "type": "yellow"
+            }
+          ]
         },
         {
           "matchday": 3,
@@ -1760,8 +1773,8 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 53,
-        "qf": 17,
+        "r16": 51,
+        "qf": 16,
         "sf": 3,
         "final": 2,
         "winner": 0,
@@ -1773,621 +1786,6 @@
           "city": "Toronto · Vancouver",
           "venue": "Various venues",
           "date": "Jun 12–24",
-          "detail": "1pt after MD1"
-        },
-        "r32": {
-          "status": "upcoming",
-          "match": 82,
-          "date": "2026-07-01",
-          "city": "Seattle",
-          "venue": "Lumen Field",
-          "opponentDesc": "Best 3rd from A/E/H/I/J"
-        },
-        "r16": {
-          "status": "future",
-          "match": 94,
-          "date": "2026-07-06",
-          "city": "Seattle",
-          "venue": "Lumen Field",
-          "opponentDesc": "Winner Match 82"
-        },
-        "qf": {
-          "status": "future",
-          "match": 98,
-          "date": "2026-07-10",
-          "city": "Los Angeles",
-          "venue": "SoFi Stadium",
-          "opponentDesc": "Winner Match 94"
-        },
-        "sf": {
-          "status": "future",
-          "match": 102,
-          "date": "2026-07-15",
-          "city": "Atlanta",
-          "venue": "Mercedes-Benz Stadium",
-          "opponentDesc": "Winner QF bracket"
-        },
-        "final": {
-          "status": "future",
-          "match": 104,
-          "date": "2026-07-19",
-          "city": "New Jersey",
-          "venue": "MetLife Stadium",
-          "opponentDesc": "Winner other SF"
-        }
-      },
-      "possibleOpponents": {
-        "r32": [
-          {
-            "group": "A",
-            "likelyTeam": "Czechia",
-            "flag": "🇨🇿",
-            "fifaRank": 37,
-            "difficulty": 2,
-            "label": "Favorable",
-            "color": "#22C55E",
-            "note": "3rd-place team from Group A",
-            "pct": null
-          },
-          {
-            "group": "E",
-            "likelyTeam": "Ecuador",
-            "flag": "🇪🇨",
-            "fifaRank": 23,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group E",
-            "pct": null
-          },
-          {
-            "group": "H",
-            "likelyTeam": "Spain",
-            "flag": "🇪🇸",
-            "fifaRank": 1,
-            "difficulty": 5,
-            "label": "Danger",
-            "color": "#EF4444",
-            "note": "3rd-place team from Group H",
-            "pct": null
-          },
-          {
-            "group": "I",
-            "likelyTeam": "Senegal",
-            "flag": "🇸🇳",
-            "fifaRank": 14,
-            "difficulty": 4,
-            "label": "Tough",
-            "color": "#FB923C",
-            "note": "3rd-place team from Group I",
-            "pct": null
-          },
-          {
-            "group": "J",
-            "likelyTeam": "Jordan",
-            "flag": "🇯🇴",
-            "fifaRank": 66,
-            "difficulty": 1,
-            "label": "Favorable",
-            "color": "#22C55E",
-            "note": "3rd-place team from Group J",
-            "pct": null
-          }
-        ],
-        "r16": [
-          {
-            "group": "G",
-            "likelyTeam": "Iran",
-            "flag": "🇮🇷",
-            "fifaRank": 21,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "Winner of Group G",
-            "pct": null
-          }
-        ]
-      }
-    },
-    {
-      "id": "bosnia",
-      "name": "Bosnia & Herz.",
-      "flag": "🇧🇦",
-      "group": "B",
-      "confederation": "UEFA",
-      "fifaRank": 71,
-      "eliminated": false,
-      "currentStage": "group_stage",
-      "groupResults": [
-        {
-          "matchday": 1,
-          "opponent": "Canada",
-          "opponentFlag": "🇨🇦",
-          "result": "D",
-          "score": "1-1",
-          "date": "2026-06-12",
-          "venue": "BMO Field, Toronto",
-          "scorers": [
-            "Džeko 44'"
-          ],
-          "cards": [
-            {
-              "player": "Ermedin Demirovic",
-              "minute": "45'",
-              "type": "yellow"
-            },
-            {
-              "player": "Jovo Lukic",
-              "minute": "45'+1'",
-              "type": "yellow"
-            },
-            {
-              "player": "Nikola Katic",
-              "minute": "90'+3'",
-              "type": "yellow"
-            }
-          ]
-        },
-        {
-          "matchday": 2,
-          "opponent": "Switzerland",
-          "opponentFlag": "🇨🇭",
-          "result": "L",
-          "score": "1-4",
-          "date": "2026-06-18",
-          "venue": "Levi's Stadium, San Francisco",
-          "scorers": [
-            "Ermin Mahmic 90'+3'"
-          ],
-          "cards": [
-            {
-              "player": "Amar Dedic",
-              "minute": "59'",
-              "type": "yellow"
-            },
-            {
-              "player": "Edin Dzeko",
-              "minute": "61'",
-              "type": "yellow"
-            },
-            {
-              "player": "Tarik Muharemovic",
-              "minute": "80'",
-              "type": "red"
-            }
-          ]
-        },
-        {
-          "matchday": 3,
-          "opponent": "Qatar",
-          "opponentFlag": "🇶🇦",
-          "result": null,
-          "score": null,
-          "date": "2026-06-24",
-          "venue": "Lumen Field, Seattle",
-          "scorers": [],
-          "cards": []
-        }
-      ],
-      "advanceProbabilities": {
-        "r32": 69,
-        "r16": 18,
-        "qf": 5,
-        "sf": 2,
-        "final": 1,
-        "winner": 0,
-        "source": "market"
-      },
-      "path": {
-        "group_stage": {
-          "status": "active",
-          "city": "Toronto · San Francisco · Seattle",
-          "venue": "Various venues",
-          "date": "Jun 12–24",
-          "detail": "1pt after MD2"
-        },
-        "r32": {
-          "status": "upcoming",
-          "match": 82,
-          "date": "2026-07-01",
-          "city": "Seattle",
-          "venue": "Lumen Field",
-          "opponentDesc": "Best 3rd from A/E/H/I/J"
-        },
-        "r16": {
-          "status": "future",
-          "match": 94,
-          "date": "2026-07-06",
-          "city": "Seattle",
-          "venue": "Lumen Field",
-          "opponentDesc": "Winner Match 82"
-        },
-        "qf": {
-          "status": "future",
-          "match": 98,
-          "date": "2026-07-10",
-          "city": "Los Angeles",
-          "venue": "SoFi Stadium",
-          "opponentDesc": "Winner Match 94"
-        },
-        "sf": {
-          "status": "future",
-          "match": 102,
-          "date": "2026-07-15",
-          "city": "Atlanta",
-          "venue": "Mercedes-Benz Stadium",
-          "opponentDesc": "Winner QF bracket"
-        },
-        "final": {
-          "status": "future",
-          "match": 104,
-          "date": "2026-07-19",
-          "city": "New Jersey",
-          "venue": "MetLife Stadium",
-          "opponentDesc": "Winner other SF"
-        }
-      },
-      "possibleOpponents": {
-        "r32": [
-          {
-            "group": "A",
-            "likelyTeam": "Czechia",
-            "flag": "🇨🇿",
-            "fifaRank": 37,
-            "difficulty": 2,
-            "label": "Favorable",
-            "color": "#22C55E",
-            "note": "3rd-place team from Group A",
-            "pct": null
-          },
-          {
-            "group": "E",
-            "likelyTeam": "Ecuador",
-            "flag": "🇪🇨",
-            "fifaRank": 23,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group E",
-            "pct": null
-          },
-          {
-            "group": "H",
-            "likelyTeam": "Spain",
-            "flag": "🇪🇸",
-            "fifaRank": 1,
-            "difficulty": 5,
-            "label": "Danger",
-            "color": "#EF4444",
-            "note": "3rd-place team from Group H",
-            "pct": null
-          },
-          {
-            "group": "I",
-            "likelyTeam": "Senegal",
-            "flag": "🇸🇳",
-            "fifaRank": 14,
-            "difficulty": 4,
-            "label": "Tough",
-            "color": "#FB923C",
-            "note": "3rd-place team from Group I",
-            "pct": null
-          },
-          {
-            "group": "J",
-            "likelyTeam": "Jordan",
-            "flag": "🇯🇴",
-            "fifaRank": 66,
-            "difficulty": 1,
-            "label": "Favorable",
-            "color": "#22C55E",
-            "note": "3rd-place team from Group J",
-            "pct": null
-          }
-        ],
-        "r16": [
-          {
-            "group": "B",
-            "likelyTeam": "Canada",
-            "flag": "🇨🇦",
-            "fifaRank": 27,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "Runner-up of Group B",
-            "pct": null
-          },
-          {
-            "group": "G",
-            "likelyTeam": "Iran",
-            "flag": "🇮🇷",
-            "fifaRank": 21,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "Winner of Group G",
-            "pct": null
-          }
-        ]
-      }
-    },
-    {
-      "id": "qatar",
-      "name": "Qatar",
-      "flag": "🇶🇦",
-      "group": "B",
-      "confederation": "AFC",
-      "fifaRank": 51,
-      "eliminated": false,
-      "currentStage": "group_stage",
-      "groupResults": [
-        {
-          "matchday": 1,
-          "opponent": "Switzerland",
-          "opponentFlag": "🇨🇭",
-          "result": "D",
-          "score": "1-1",
-          "date": "2026-06-13",
-          "venue": "Levi's Stadium, San Francisco",
-          "scorers": [
-            "Miro Muheim OG 90'+4'"
-          ],
-          "cards": [
-            {
-              "player": "Mahmoud Abunada",
-              "minute": "16'",
-              "type": "yellow"
-            },
-            {
-              "player": "Jassem Gaber",
-              "minute": "23'",
-              "type": "yellow"
-            }
-          ]
-        },
-        {
-          "matchday": 2,
-          "opponent": "Canada",
-          "opponentFlag": "🇨🇦",
-          "result": null,
-          "score": "0-3",
-          "date": "2026-06-18",
-          "venue": "BC Place, Vancouver",
-          "scorers": [],
-          "cards": []
-        },
-        {
-          "matchday": 3,
-          "opponent": "Bosnia & Herz.",
-          "opponentFlag": "🇧🇦",
-          "result": null,
-          "score": null,
-          "date": "2026-06-24",
-          "venue": "Lumen Field, Seattle",
-          "scorers": [],
-          "cards": []
-        }
-      ],
-      "advanceProbabilities": {
-        "r32": 13,
-        "r16": 3,
-        "qf": 2,
-        "sf": 1,
-        "final": 1,
-        "winner": 0,
-        "source": "market"
-      },
-      "path": {
-        "group_stage": {
-          "status": "active",
-          "city": "San Francisco · Vancouver · Seattle",
-          "venue": "Various venues",
-          "date": "Jun 13–24",
-          "detail": "1pt after MD1"
-        },
-        "r32": {
-          "status": "upcoming",
-          "match": 82,
-          "date": "2026-07-01",
-          "city": "Seattle",
-          "venue": "Lumen Field",
-          "opponentDesc": "Best 3rd from A/E/H/I/J"
-        },
-        "r16": {
-          "status": "future",
-          "match": 94,
-          "date": "2026-07-06",
-          "city": "Seattle",
-          "venue": "Lumen Field",
-          "opponentDesc": "Winner Match 82"
-        },
-        "qf": {
-          "status": "future",
-          "match": 98,
-          "date": "2026-07-10",
-          "city": "Los Angeles",
-          "venue": "SoFi Stadium",
-          "opponentDesc": "Winner Match 94"
-        },
-        "sf": {
-          "status": "future",
-          "match": 102,
-          "date": "2026-07-15",
-          "city": "Atlanta",
-          "venue": "Mercedes-Benz Stadium",
-          "opponentDesc": "Winner QF bracket"
-        },
-        "final": {
-          "status": "future",
-          "match": 104,
-          "date": "2026-07-19",
-          "city": "New Jersey",
-          "venue": "MetLife Stadium",
-          "opponentDesc": "Winner other SF"
-        }
-      },
-      "possibleOpponents": {
-        "r32": [
-          {
-            "group": "A",
-            "likelyTeam": "Czechia",
-            "flag": "🇨🇿",
-            "fifaRank": 37,
-            "difficulty": 2,
-            "label": "Favorable",
-            "color": "#22C55E",
-            "note": "3rd-place team from Group A",
-            "pct": null
-          },
-          {
-            "group": "E",
-            "likelyTeam": "Ecuador",
-            "flag": "🇪🇨",
-            "fifaRank": 23,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group E",
-            "pct": null
-          },
-          {
-            "group": "H",
-            "likelyTeam": "Spain",
-            "flag": "🇪🇸",
-            "fifaRank": 1,
-            "difficulty": 5,
-            "label": "Danger",
-            "color": "#EF4444",
-            "note": "3rd-place team from Group H",
-            "pct": null
-          },
-          {
-            "group": "I",
-            "likelyTeam": "Senegal",
-            "flag": "🇸🇳",
-            "fifaRank": 14,
-            "difficulty": 4,
-            "label": "Tough",
-            "color": "#FB923C",
-            "note": "3rd-place team from Group I",
-            "pct": null
-          },
-          {
-            "group": "J",
-            "likelyTeam": "Jordan",
-            "flag": "🇯🇴",
-            "fifaRank": 66,
-            "difficulty": 1,
-            "label": "Favorable",
-            "color": "#22C55E",
-            "note": "3rd-place team from Group J",
-            "pct": null
-          }
-        ],
-        "r16": [
-          {
-            "group": "B",
-            "likelyTeam": "Canada",
-            "flag": "🇨🇦",
-            "fifaRank": 27,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "Runner-up of Group B",
-            "pct": null
-          },
-          {
-            "group": "G",
-            "likelyTeam": "Iran",
-            "flag": "🇮🇷",
-            "fifaRank": 21,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "Winner of Group G",
-            "pct": null
-          }
-        ]
-      }
-    },
-    {
-      "id": "switzerland",
-      "name": "Switzerland",
-      "flag": "🇨🇭",
-      "group": "B",
-      "confederation": "UEFA",
-      "fifaRank": 17,
-      "eliminated": false,
-      "currentStage": "group_stage",
-      "groupResults": [
-        {
-          "matchday": 1,
-          "opponent": "Qatar",
-          "opponentFlag": "🇶🇦",
-          "result": "D",
-          "score": "1-1",
-          "date": "2026-06-13",
-          "venue": "Levi's Stadium, San Francisco",
-          "scorers": [
-            "Breel Embolo 17' (P)"
-          ],
-          "cards": [
-            {
-              "player": "Denis Zakaria",
-              "minute": "42'",
-              "type": "yellow"
-            }
-          ]
-        },
-        {
-          "matchday": 2,
-          "opponent": "Bosnia & Herz.",
-          "opponentFlag": "🇧🇦",
-          "result": "W",
-          "score": "4-1",
-          "date": "2026-06-18",
-          "venue": "Levi's Stadium, San Francisco",
-          "scorers": [
-            "Johan Manzambi 74'",
-            "Rubén Vargas 84'",
-            "Johan Manzambi 90'",
-            "Granit Xhaka 90'+7' (P)"
-          ],
-          "cards": [
-            {
-              "player": "Nico Elvedi",
-              "minute": "65'",
-              "type": "yellow"
-            }
-          ]
-        },
-        {
-          "matchday": 3,
-          "opponent": "Canada",
-          "opponentFlag": "🇨🇦",
-          "result": null,
-          "score": null,
-          "date": "2026-06-24",
-          "venue": "BC Place, Vancouver",
-          "scorers": [],
-          "cards": []
-        }
-      ],
-      "advanceProbabilities": {
-        "r32": 100,
-        "r16": 54,
-        "qf": 25,
-        "sf": 6,
-        "final": 3,
-        "winner": 1,
-        "source": "market"
-      },
-      "path": {
-        "group_stage": {
-          "status": "active",
-          "city": "San Francisco · Vancouver",
-          "venue": "Various venues",
-          "date": "Jun 13–24",
           "detail": "4pts after MD2"
         },
         "r32": {
@@ -2505,6 +1903,639 @@
       }
     },
     {
+      "id": "bosnia",
+      "name": "Bosnia & Herz.",
+      "flag": "🇧🇦",
+      "group": "B",
+      "confederation": "UEFA",
+      "fifaRank": 71,
+      "eliminated": false,
+      "currentStage": "group_stage",
+      "groupResults": [
+        {
+          "matchday": 1,
+          "opponent": "Canada",
+          "opponentFlag": "🇨🇦",
+          "result": "D",
+          "score": "1-1",
+          "date": "2026-06-12",
+          "venue": "BMO Field, Toronto",
+          "scorers": [
+            "Džeko 44'"
+          ],
+          "cards": [
+            {
+              "player": "Ermedin Demirovic",
+              "minute": "45'",
+              "type": "yellow"
+            },
+            {
+              "player": "Jovo Lukic",
+              "minute": "45'+1'",
+              "type": "yellow"
+            },
+            {
+              "player": "Nikola Katic",
+              "minute": "90'+3'",
+              "type": "yellow"
+            }
+          ]
+        },
+        {
+          "matchday": 2,
+          "opponent": "Switzerland",
+          "opponentFlag": "🇨🇭",
+          "result": "L",
+          "score": "1-4",
+          "date": "2026-06-18",
+          "venue": "Levi's Stadium, San Francisco",
+          "scorers": [
+            "Ermin Mahmic 90'+3'"
+          ],
+          "cards": [
+            {
+              "player": "Amar Dedic",
+              "minute": "59'",
+              "type": "yellow"
+            },
+            {
+              "player": "Edin Dzeko",
+              "minute": "61'",
+              "type": "yellow"
+            },
+            {
+              "player": "Tarik Muharemovic",
+              "minute": "80'",
+              "type": "red"
+            }
+          ]
+        },
+        {
+          "matchday": 3,
+          "opponent": "Qatar",
+          "opponentFlag": "🇶🇦",
+          "result": null,
+          "score": null,
+          "date": "2026-06-24",
+          "venue": "Lumen Field, Seattle",
+          "scorers": [],
+          "cards": []
+        }
+      ],
+      "advanceProbabilities": {
+        "r32": 69,
+        "r16": 19,
+        "qf": 7,
+        "sf": 2,
+        "final": 1,
+        "winner": 0,
+        "source": "market"
+      },
+      "path": {
+        "group_stage": {
+          "status": "active",
+          "city": "Toronto · San Francisco · Seattle",
+          "venue": "Various venues",
+          "date": "Jun 12–24",
+          "detail": "1pt after MD2"
+        },
+        "r32": {
+          "status": "upcoming",
+          "match": 82,
+          "date": "2026-07-01",
+          "city": "Seattle",
+          "venue": "Lumen Field",
+          "opponentDesc": "Best 3rd from A/E/H/I/J"
+        },
+        "r16": {
+          "status": "future",
+          "match": 94,
+          "date": "2026-07-06",
+          "city": "Seattle",
+          "venue": "Lumen Field",
+          "opponentDesc": "Winner Match 82"
+        },
+        "qf": {
+          "status": "future",
+          "match": 98,
+          "date": "2026-07-10",
+          "city": "Los Angeles",
+          "venue": "SoFi Stadium",
+          "opponentDesc": "Winner Match 94"
+        },
+        "sf": {
+          "status": "future",
+          "match": 102,
+          "date": "2026-07-15",
+          "city": "Atlanta",
+          "venue": "Mercedes-Benz Stadium",
+          "opponentDesc": "Winner QF bracket"
+        },
+        "final": {
+          "status": "future",
+          "match": 104,
+          "date": "2026-07-19",
+          "city": "New Jersey",
+          "venue": "MetLife Stadium",
+          "opponentDesc": "Winner other SF"
+        }
+      },
+      "possibleOpponents": {
+        "r32": [
+          {
+            "group": "A",
+            "likelyTeam": "Czechia",
+            "flag": "🇨🇿",
+            "fifaRank": 37,
+            "difficulty": 2,
+            "label": "Favorable",
+            "color": "#22C55E",
+            "note": "3rd-place team from Group A",
+            "pct": null
+          },
+          {
+            "group": "E",
+            "likelyTeam": "Ecuador",
+            "flag": "🇪🇨",
+            "fifaRank": 23,
+            "difficulty": 3,
+            "label": "Moderate",
+            "color": "#F59E0B",
+            "note": "3rd-place team from Group E",
+            "pct": null
+          },
+          {
+            "group": "H",
+            "likelyTeam": "Spain",
+            "flag": "🇪🇸",
+            "fifaRank": 1,
+            "difficulty": 5,
+            "label": "Danger",
+            "color": "#EF4444",
+            "note": "3rd-place team from Group H",
+            "pct": null
+          },
+          {
+            "group": "I",
+            "likelyTeam": "Senegal",
+            "flag": "🇸🇳",
+            "fifaRank": 14,
+            "difficulty": 4,
+            "label": "Tough",
+            "color": "#FB923C",
+            "note": "3rd-place team from Group I",
+            "pct": null
+          },
+          {
+            "group": "J",
+            "likelyTeam": "Jordan",
+            "flag": "🇯🇴",
+            "fifaRank": 66,
+            "difficulty": 1,
+            "label": "Favorable",
+            "color": "#22C55E",
+            "note": "3rd-place team from Group J",
+            "pct": null
+          }
+        ],
+        "r16": [
+          {
+            "group": "B",
+            "likelyTeam": "Switzerland",
+            "flag": "🇨🇭",
+            "fifaRank": 17,
+            "difficulty": 4,
+            "label": "Tough",
+            "color": "#FB923C",
+            "note": "Runner-up of Group B",
+            "pct": null
+          },
+          {
+            "group": "G",
+            "likelyTeam": "Iran",
+            "flag": "🇮🇷",
+            "fifaRank": 21,
+            "difficulty": 3,
+            "label": "Moderate",
+            "color": "#F59E0B",
+            "note": "Winner of Group G",
+            "pct": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "qatar",
+      "name": "Qatar",
+      "flag": "🇶🇦",
+      "group": "B",
+      "confederation": "AFC",
+      "fifaRank": 51,
+      "eliminated": false,
+      "currentStage": "group_stage",
+      "groupResults": [
+        {
+          "matchday": 1,
+          "opponent": "Switzerland",
+          "opponentFlag": "🇨🇭",
+          "result": "D",
+          "score": "1-1",
+          "date": "2026-06-13",
+          "venue": "Levi's Stadium, San Francisco",
+          "scorers": [
+            "Miro Muheim OG 90'+4'"
+          ],
+          "cards": [
+            {
+              "player": "Mahmoud Abunada",
+              "minute": "16'",
+              "type": "yellow"
+            },
+            {
+              "player": "Jassem Gaber",
+              "minute": "23'",
+              "type": "yellow"
+            }
+          ]
+        },
+        {
+          "matchday": 2,
+          "opponent": "Canada",
+          "opponentFlag": "🇨🇦",
+          "result": "L",
+          "score": "0-6",
+          "date": "2026-06-18",
+          "venue": "BC Place, Vancouver",
+          "scorers": [
+            "Miro Muheim OG 90'+4'"
+          ],
+          "cards": [
+            {
+              "player": "Homam Ahmed",
+              "minute": "33'",
+              "type": "red"
+            },
+            {
+              "player": "Assim Madibo",
+              "minute": "53'",
+              "type": "red"
+            },
+            {
+              "player": "Ahmed Fathy",
+              "minute": "62'",
+              "type": "yellow"
+            }
+          ]
+        },
+        {
+          "matchday": 3,
+          "opponent": "Bosnia & Herz.",
+          "opponentFlag": "🇧🇦",
+          "result": null,
+          "score": null,
+          "date": "2026-06-24",
+          "venue": "Lumen Field, Seattle",
+          "scorers": [],
+          "cards": []
+        }
+      ],
+      "advanceProbabilities": {
+        "r32": 13,
+        "r16": 2,
+        "qf": 1,
+        "sf": 1,
+        "final": 1,
+        "winner": 0,
+        "source": "market"
+      },
+      "path": {
+        "group_stage": {
+          "status": "active",
+          "city": "San Francisco · Vancouver · Seattle",
+          "venue": "Various venues",
+          "date": "Jun 13–24",
+          "detail": "1pt after MD2"
+        },
+        "r32": {
+          "status": "upcoming",
+          "match": 82,
+          "date": "2026-07-01",
+          "city": "Seattle",
+          "venue": "Lumen Field",
+          "opponentDesc": "Best 3rd from A/E/H/I/J"
+        },
+        "r16": {
+          "status": "future",
+          "match": 94,
+          "date": "2026-07-06",
+          "city": "Seattle",
+          "venue": "Lumen Field",
+          "opponentDesc": "Winner Match 82"
+        },
+        "qf": {
+          "status": "future",
+          "match": 98,
+          "date": "2026-07-10",
+          "city": "Los Angeles",
+          "venue": "SoFi Stadium",
+          "opponentDesc": "Winner Match 94"
+        },
+        "sf": {
+          "status": "future",
+          "match": 102,
+          "date": "2026-07-15",
+          "city": "Atlanta",
+          "venue": "Mercedes-Benz Stadium",
+          "opponentDesc": "Winner QF bracket"
+        },
+        "final": {
+          "status": "future",
+          "match": 104,
+          "date": "2026-07-19",
+          "city": "New Jersey",
+          "venue": "MetLife Stadium",
+          "opponentDesc": "Winner other SF"
+        }
+      },
+      "possibleOpponents": {
+        "r32": [
+          {
+            "group": "A",
+            "likelyTeam": "Czechia",
+            "flag": "🇨🇿",
+            "fifaRank": 37,
+            "difficulty": 2,
+            "label": "Favorable",
+            "color": "#22C55E",
+            "note": "3rd-place team from Group A",
+            "pct": null
+          },
+          {
+            "group": "E",
+            "likelyTeam": "Ecuador",
+            "flag": "🇪🇨",
+            "fifaRank": 23,
+            "difficulty": 3,
+            "label": "Moderate",
+            "color": "#F59E0B",
+            "note": "3rd-place team from Group E",
+            "pct": null
+          },
+          {
+            "group": "H",
+            "likelyTeam": "Spain",
+            "flag": "🇪🇸",
+            "fifaRank": 1,
+            "difficulty": 5,
+            "label": "Danger",
+            "color": "#EF4444",
+            "note": "3rd-place team from Group H",
+            "pct": null
+          },
+          {
+            "group": "I",
+            "likelyTeam": "Senegal",
+            "flag": "🇸🇳",
+            "fifaRank": 14,
+            "difficulty": 4,
+            "label": "Tough",
+            "color": "#FB923C",
+            "note": "3rd-place team from Group I",
+            "pct": null
+          },
+          {
+            "group": "J",
+            "likelyTeam": "Jordan",
+            "flag": "🇯🇴",
+            "fifaRank": 66,
+            "difficulty": 1,
+            "label": "Favorable",
+            "color": "#22C55E",
+            "note": "3rd-place team from Group J",
+            "pct": null
+          }
+        ],
+        "r16": [
+          {
+            "group": "B",
+            "likelyTeam": "Switzerland",
+            "flag": "🇨🇭",
+            "fifaRank": 17,
+            "difficulty": 4,
+            "label": "Tough",
+            "color": "#FB923C",
+            "note": "Runner-up of Group B",
+            "pct": null
+          },
+          {
+            "group": "G",
+            "likelyTeam": "Iran",
+            "flag": "🇮🇷",
+            "fifaRank": 21,
+            "difficulty": 3,
+            "label": "Moderate",
+            "color": "#F59E0B",
+            "note": "Winner of Group G",
+            "pct": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "switzerland",
+      "name": "Switzerland",
+      "flag": "🇨🇭",
+      "group": "B",
+      "confederation": "UEFA",
+      "fifaRank": 17,
+      "eliminated": false,
+      "currentStage": "group_stage",
+      "groupResults": [
+        {
+          "matchday": 1,
+          "opponent": "Qatar",
+          "opponentFlag": "🇶🇦",
+          "result": "D",
+          "score": "1-1",
+          "date": "2026-06-13",
+          "venue": "Levi's Stadium, San Francisco",
+          "scorers": [
+            "Breel Embolo 17' (P)"
+          ],
+          "cards": [
+            {
+              "player": "Denis Zakaria",
+              "minute": "42'",
+              "type": "yellow"
+            }
+          ]
+        },
+        {
+          "matchday": 2,
+          "opponent": "Bosnia & Herz.",
+          "opponentFlag": "🇧🇦",
+          "result": "W",
+          "score": "4-1",
+          "date": "2026-06-18",
+          "venue": "Levi's Stadium, San Francisco",
+          "scorers": [
+            "Johan Manzambi 74'",
+            "Rubén Vargas 84'",
+            "Johan Manzambi 90'",
+            "Granit Xhaka 90'+7' (P)"
+          ],
+          "cards": [
+            {
+              "player": "Nico Elvedi",
+              "minute": "65'",
+              "type": "yellow"
+            }
+          ]
+        },
+        {
+          "matchday": 3,
+          "opponent": "Canada",
+          "opponentFlag": "🇨🇦",
+          "result": null,
+          "score": null,
+          "date": "2026-06-24",
+          "venue": "BC Place, Vancouver",
+          "scorers": [],
+          "cards": []
+        }
+      ],
+      "advanceProbabilities": {
+        "r32": 100,
+        "r16": 52,
+        "qf": 23,
+        "sf": 6,
+        "final": 2,
+        "winner": 1,
+        "source": "market"
+      },
+      "path": {
+        "group_stage": {
+          "status": "active",
+          "city": "San Francisco · Vancouver",
+          "venue": "Various venues",
+          "date": "Jun 13–24",
+          "detail": "4pts after MD2"
+        },
+        "r32": {
+          "status": "upcoming",
+          "match": 82,
+          "date": "2026-07-01",
+          "city": "Seattle",
+          "venue": "Lumen Field",
+          "opponentDesc": "Best 3rd from A/E/H/I/J"
+        },
+        "r16": {
+          "status": "future",
+          "match": 94,
+          "date": "2026-07-06",
+          "city": "Seattle",
+          "venue": "Lumen Field",
+          "opponentDesc": "Winner Match 82"
+        },
+        "qf": {
+          "status": "future",
+          "match": 98,
+          "date": "2026-07-10",
+          "city": "Los Angeles",
+          "venue": "SoFi Stadium",
+          "opponentDesc": "Winner Match 94"
+        },
+        "sf": {
+          "status": "future",
+          "match": 102,
+          "date": "2026-07-15",
+          "city": "Atlanta",
+          "venue": "Mercedes-Benz Stadium",
+          "opponentDesc": "Winner QF bracket"
+        },
+        "final": {
+          "status": "future",
+          "match": 104,
+          "date": "2026-07-19",
+          "city": "New Jersey",
+          "venue": "MetLife Stadium",
+          "opponentDesc": "Winner other SF"
+        }
+      },
+      "possibleOpponents": {
+        "r32": [
+          {
+            "group": "A",
+            "likelyTeam": "Czechia",
+            "flag": "🇨🇿",
+            "fifaRank": 37,
+            "difficulty": 2,
+            "label": "Favorable",
+            "color": "#22C55E",
+            "note": "3rd-place team from Group A",
+            "pct": null
+          },
+          {
+            "group": "E",
+            "likelyTeam": "Ecuador",
+            "flag": "🇪🇨",
+            "fifaRank": 23,
+            "difficulty": 3,
+            "label": "Moderate",
+            "color": "#F59E0B",
+            "note": "3rd-place team from Group E",
+            "pct": null
+          },
+          {
+            "group": "H",
+            "likelyTeam": "Spain",
+            "flag": "🇪🇸",
+            "fifaRank": 1,
+            "difficulty": 5,
+            "label": "Danger",
+            "color": "#EF4444",
+            "note": "3rd-place team from Group H",
+            "pct": null
+          },
+          {
+            "group": "I",
+            "likelyTeam": "Senegal",
+            "flag": "🇸🇳",
+            "fifaRank": 14,
+            "difficulty": 4,
+            "label": "Tough",
+            "color": "#FB923C",
+            "note": "3rd-place team from Group I",
+            "pct": null
+          },
+          {
+            "group": "J",
+            "likelyTeam": "Jordan",
+            "flag": "🇯🇴",
+            "fifaRank": 66,
+            "difficulty": 1,
+            "label": "Favorable",
+            "color": "#22C55E",
+            "note": "3rd-place team from Group J",
+            "pct": null
+          }
+        ],
+        "r16": [
+          {
+            "group": "G",
+            "likelyTeam": "Iran",
+            "flag": "🇮🇷",
+            "fifaRank": 21,
+            "difficulty": 3,
+            "label": "Moderate",
+            "color": "#F59E0B",
+            "note": "Winner of Group G",
+            "pct": null
+          }
+        ]
+      }
+    },
+    {
       "id": "brazil",
       "name": "Brazil",
       "flag": "🇧🇷",
@@ -2563,10 +2594,10 @@
       ],
       "advanceProbabilities": {
         "r32": 97,
-        "r16": 69,
+        "r16": 68,
         "qf": 46,
         "sf": 24,
-        "final": 15,
+        "final": 16,
         "winner": 7,
         "source": "market"
       },
@@ -2706,10 +2737,10 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 94,
+        "r32": 95,
         "r16": 52,
         "qf": 30,
-        "sf": 14,
+        "sf": 10,
         "final": 6,
         "winner": 2,
         "source": "market"
@@ -2855,8 +2886,8 @@
       ],
       "advanceProbabilities": {
         "r32": 4,
-        "r16": 2,
-        "qf": 2,
+        "r16": 1,
+        "qf": 1,
         "sf": 0,
         "final": 0,
         "winner": 0,
@@ -3018,7 +3049,7 @@
         "r16": 25,
         "qf": 8,
         "sf": 2,
-        "final": 2,
+        "final": 1,
         "winner": 0,
         "source": "market"
       },
@@ -3211,8 +3242,8 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 97,
-        "r16": 65,
+        "r32": 98,
+        "r16": 64,
         "qf": 36,
         "sf": 17,
         "final": 7,
@@ -3272,10 +3303,10 @@
         "r32": [
           {
             "group": "B",
-            "likelyTeam": "Qatar",
-            "flag": "🇶🇦",
-            "fifaRank": 51,
-            "difficulty": 2,
+            "likelyTeam": "Bosnia & Herz.",
+            "flag": "🇧🇦",
+            "fifaRank": 71,
+            "difficulty": 1,
             "label": "Favorable",
             "color": "#22C55E",
             "note": "3rd-place team from Group B",
@@ -3329,12 +3360,12 @@
         "r16": [
           {
             "group": "B",
-            "likelyTeam": "Canada",
-            "flag": "🇨🇦",
-            "fifaRank": 27,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
+            "likelyTeam": "Switzerland",
+            "flag": "🇨🇭",
+            "fifaRank": 17,
+            "difficulty": 4,
+            "label": "Tough",
+            "color": "#FB923C",
             "note": "Runner-up of Group B",
             "pct": null
           },
@@ -3717,10 +3748,10 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 50,
-        "r16": 22,
-        "qf": 13,
-        "sf": 5,
+        "r32": 47,
+        "r16": 24,
+        "qf": 11,
+        "sf": 7,
         "final": 1,
         "winner": 0,
         "source": "market"
@@ -3868,7 +3899,7 @@
       ],
       "advanceProbabilities": {
         "r32": 99,
-        "r16": 74,
+        "r16": 72,
         "qf": 38,
         "sf": 27,
         "final": 13,
@@ -3928,10 +3959,10 @@
         "r32": [
           {
             "group": "B",
-            "likelyTeam": "Qatar",
-            "flag": "🇶🇦",
-            "fifaRank": 51,
-            "difficulty": 2,
+            "likelyTeam": "Bosnia & Herz.",
+            "flag": "🇧🇦",
+            "fifaRank": 71,
+            "difficulty": 1,
             "label": "Favorable",
             "color": "#22C55E",
             "note": "3rd-place team from Group B",
@@ -3985,12 +4016,12 @@
         "r16": [
           {
             "group": "B",
-            "likelyTeam": "Canada",
-            "flag": "🇨🇦",
-            "fifaRank": 27,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
+            "likelyTeam": "Switzerland",
+            "flag": "🇨🇭",
+            "fifaRank": 17,
+            "difficulty": 4,
+            "label": "Tough",
+            "color": "#FB923C",
             "note": "Runner-up of Group B",
             "pct": null
           },
@@ -4056,7 +4087,7 @@
       ],
       "advanceProbabilities": {
         "r32": 3,
-        "r16": 3,
+        "r16": 1,
         "qf": 0,
         "sf": 0,
         "final": 0,
@@ -4217,8 +4248,8 @@
       "advanceProbabilities": {
         "r32": 95,
         "r16": 36,
-        "qf": 14,
-        "sf": 6,
+        "qf": 12,
+        "sf": 4,
         "final": 2,
         "winner": 0,
         "source": "market"
@@ -4355,7 +4386,7 @@
         "r32": 79,
         "r16": 36,
         "qf": 14,
-        "sf": 6,
+        "sf": 5,
         "final": 2,
         "winner": 0,
         "source": "market"
@@ -4516,7 +4547,7 @@
         "r32": 93,
         "r16": 52,
         "qf": 37,
-        "sf": 20,
+        "sf": 18,
         "final": 9,
         "winner": 4,
         "source": "market"
@@ -4658,10 +4689,10 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 85,
-        "r16": 44,
+        "r32": 86,
+        "r16": 43,
         "qf": 24,
-        "sf": 10,
+        "sf": 8,
         "final": 5,
         "winner": 2,
         "source": "market"
@@ -4808,9 +4839,9 @@
       "advanceProbabilities": {
         "r32": 94,
         "r16": 35,
-        "qf": 13,
-        "sf": 5,
-        "final": 2,
+        "qf": 16,
+        "sf": 4,
+        "final": 3,
         "winner": 1,
         "source": "market"
       },
@@ -4957,7 +4988,7 @@
       ],
       "advanceProbabilities": {
         "r32": 8,
-        "r16": 7,
+        "r16": 2,
         "qf": 1,
         "sf": 1,
         "final": 1,
@@ -5114,7 +5145,7 @@
         "r32": 96,
         "r16": 60,
         "qf": 34,
-        "sf": 14,
+        "sf": 13,
         "final": 6,
         "winner": 2,
         "source": "market"
@@ -5268,8 +5299,8 @@
       "advanceProbabilities": {
         "r32": 83,
         "r16": 37,
-        "qf": 12,
-        "sf": 3,
+        "qf": 10,
+        "sf": 2,
         "final": 1,
         "winner": 0,
         "source": "market"
@@ -5418,8 +5449,8 @@
       ],
       "advanceProbabilities": {
         "r32": 41,
-        "r16": 14,
-        "qf": 4,
+        "r16": 13,
+        "qf": 3,
         "sf": 2,
         "final": 1,
         "winner": 0,
@@ -5606,9 +5637,9 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 31,
+        "r32": 32,
         "r16": 7,
-        "qf": 3,
+        "qf": 2,
         "sf": 1,
         "final": 1,
         "winner": 0,
@@ -5924,7 +5955,7 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 40,
+        "r32": 39,
         "r16": 8,
         "qf": 5,
         "sf": 2,
@@ -6097,9 +6128,9 @@
       ],
       "advanceProbabilities": {
         "r32": 44,
-        "r16": 9,
-        "qf": 4,
-        "sf": 2,
+        "r16": 8,
+        "qf": 3,
+        "sf": 1,
         "final": 1,
         "winner": 0,
         "source": "market"
@@ -6170,12 +6201,12 @@
         "r16": [
           {
             "group": "B",
-            "likelyTeam": "Switzerland",
-            "flag": "🇨🇭",
-            "fifaRank": 17,
-            "difficulty": 4,
-            "label": "Tough",
-            "color": "#FB923C",
+            "likelyTeam": "Canada",
+            "flag": "🇨🇦",
+            "fifaRank": 27,
+            "difficulty": 3,
+            "label": "Moderate",
+            "color": "#F59E0B",
             "note": "Winner of Group B",
             "pct": null
           },
@@ -6240,10 +6271,10 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 78,
+        "r32": 77,
         "r16": 31,
-        "qf": 21,
-        "sf": 10,
+        "qf": 19,
+        "sf": 6,
         "final": 3,
         "winner": 1,
         "source": "market"
@@ -6400,7 +6431,7 @@
         "r32": 99,
         "r16": 86,
         "qf": 61,
-        "sf": 45,
+        "sf": 44,
         "final": 28,
         "winner": 18,
         "source": "market"
@@ -6531,7 +6562,7 @@
       ],
       "advanceProbabilities": {
         "r32": 68,
-        "r16": 28,
+        "r16": 30,
         "qf": 14,
         "sf": 4,
         "final": 2,
@@ -6681,8 +6712,8 @@
       ],
       "advanceProbabilities": {
         "r32": 6,
-        "r16": 6,
-        "qf": 2,
+        "r16": 2,
+        "qf": 1,
         "sf": 0,
         "final": 0,
         "winner": 0,
@@ -6828,7 +6859,7 @@
       ],
       "advanceProbabilities": {
         "r32": 96,
-        "r16": 58,
+        "r16": 60,
         "qf": 31,
         "sf": 18,
         "final": 7,
@@ -6945,12 +6976,12 @@
         "r16": [
           {
             "group": "B",
-            "likelyTeam": "Switzerland",
-            "flag": "🇨🇭",
-            "fifaRank": 17,
-            "difficulty": 4,
-            "label": "Tough",
-            "color": "#FB923C",
+            "likelyTeam": "Canada",
+            "flag": "🇨🇦",
+            "fifaRank": 27,
+            "difficulty": 3,
+            "label": "Moderate",
+            "color": "#F59E0B",
             "note": "Winner of Group B",
             "pct": null
           }
@@ -7007,8 +7038,8 @@
       ],
       "advanceProbabilities": {
         "r32": 99,
-        "r16": 73,
-        "qf": 60,
+        "r16": 75,
+        "qf": 59,
         "sf": 38,
         "final": 21,
         "winner": 12,
@@ -7182,10 +7213,10 @@
       ],
       "advanceProbabilities": {
         "r32": 55,
-        "r16": 18,
+        "r16": 21,
         "qf": 8,
         "sf": 2,
-        "final": 2,
+        "final": 1,
         "winner": 0,
         "source": "market"
       },
@@ -7255,12 +7286,12 @@
         "r16": [
           {
             "group": "B",
-            "likelyTeam": "Switzerland",
-            "flag": "🇨🇭",
-            "fifaRank": 17,
-            "difficulty": 4,
-            "label": "Tough",
-            "color": "#FB923C",
+            "likelyTeam": "Canada",
+            "flag": "🇨🇦",
+            "fifaRank": 27,
+            "difficulty": 3,
+            "label": "Moderate",
+            "color": "#F59E0B",
             "note": "Winner of Group B",
             "pct": null
           },
@@ -7334,9 +7365,9 @@
       ],
       "advanceProbabilities": {
         "r32": 93,
-        "r16": 30,
+        "r16": 34,
         "qf": 13,
-        "sf": 4,
+        "sf": 5,
         "final": 2,
         "winner": 0,
         "source": "market"
@@ -7407,12 +7438,12 @@
         "r16": [
           {
             "group": "B",
-            "likelyTeam": "Switzerland",
-            "flag": "🇨🇭",
-            "fifaRank": 17,
-            "difficulty": 4,
-            "label": "Tough",
-            "color": "#FB923C",
+            "likelyTeam": "Canada",
+            "flag": "🇨🇦",
+            "fifaRank": 27,
+            "difficulty": 3,
+            "label": "Moderate",
+            "color": "#F59E0B",
             "note": "Winner of Group B",
             "pct": null
           },
@@ -7478,7 +7509,7 @@
       ],
       "advanceProbabilities": {
         "r32": 11,
-        "r16": 5,
+        "r16": 3,
         "qf": 1,
         "sf": 1,
         "final": 1,
@@ -7551,12 +7582,12 @@
         "r16": [
           {
             "group": "B",
-            "likelyTeam": "Switzerland",
-            "flag": "🇨🇭",
-            "fifaRank": 17,
-            "difficulty": 4,
-            "label": "Tough",
-            "color": "#FB923C",
+            "likelyTeam": "Canada",
+            "flag": "🇨🇦",
+            "fifaRank": 27,
+            "difficulty": 3,
+            "label": "Moderate",
+            "color": "#F59E0B",
             "note": "Winner of Group B",
             "pct": null
           },
@@ -7638,7 +7669,7 @@
       ],
       "advanceProbabilities": {
         "r32": 95,
-        "r16": 72,
+        "r16": 70,
         "qf": 43,
         "sf": 27,
         "final": 16,
@@ -7776,10 +7807,10 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 59,
-        "r16": 16,
+        "r32": 60,
+        "r16": 14,
         "qf": 6,
-        "sf": 4,
+        "sf": 3,
         "final": 1,
         "winner": 0,
         "source": "market"
@@ -7927,10 +7958,10 @@
       ],
       "advanceProbabilities": {
         "r32": 19,
-        "r16": 7,
-        "qf": 2,
-        "sf": 2,
-        "final": 2,
+        "r16": 5,
+        "qf": 1,
+        "sf": 1,
+        "final": 1,
         "winner": 0,
         "source": "market"
       },
@@ -8079,9 +8110,9 @@
       ],
       "advanceProbabilities": {
         "r32": 97,
-        "r16": 55,
-        "qf": 30,
-        "sf": 15,
+        "r16": 58,
+        "qf": 32,
+        "sf": 16,
         "final": 6,
         "winner": 2,
         "source": "market"
@@ -8281,9 +8312,9 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 81,
+        "r16": 80,
         "qf": 60,
-        "sf": 40,
+        "sf": 39,
         "final": 25,
         "winner": 13,
         "source": "market"
@@ -8414,11 +8445,11 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 77,
-        "r16": 40,
+        "r32": 78,
+        "r16": 39,
         "qf": 18,
-        "sf": 7,
-        "final": 2,
+        "sf": 8,
+        "final": 3,
         "winner": 1,
         "source": "market"
       },
@@ -8586,10 +8617,10 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 71,
-        "r16": 20,
+        "r32": 72,
+        "r16": 19,
         "qf": 4,
-        "sf": 3,
+        "sf": 2,
         "final": 1,
         "winner": 0,
         "source": "market"
@@ -8751,7 +8782,7 @@
       ],
       "advanceProbabilities": {
         "r32": 12,
-        "r16": 4,
+        "r16": 3,
         "qf": 2,
         "sf": 1,
         "final": 0,
@@ -9360,11 +9391,10 @@
         "awayTeam": "Qatar",
         "awayFlag": "🇶🇦",
         "awayId": "qatar",
-        "homeScore": 3,
+        "homeScore": 6,
         "awayScore": 0,
-        "status": "IN_PROGRESS",
+        "status": "FINISHED",
         "date": "2026-06-18",
-        "clock": "56'",
         "broadcasts": [
           "FS1",
           "Tele",
@@ -9379,10 +9409,11 @@
         "awayTeam": "South Korea",
         "awayFlag": "🇰🇷",
         "awayId": "southkorea",
-        "homeScore": 0,
+        "homeScore": 1,
         "awayScore": 0,
-        "status": "SCHEDULED",
+        "status": "IN_PROGRESS",
         "date": "2026-06-18",
+        "clock": "56'",
         "broadcasts": [
           "FOX",
           "Tele",
