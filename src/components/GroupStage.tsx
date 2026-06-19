@@ -55,6 +55,15 @@ export default function GroupStage({ team, data, eliminatedTeamIds = new Set(), 
 		return m?.broadcasts
 	}
 
+	const resolveOdds = (opponentName: string, matchDate: string) => {
+		const daily = data.dailyMatches?.[matchDate]
+		if (!daily) return undefined
+		const oppTeam = data.teams?.find(t => t.name === opponentName)
+		if (!oppTeam) return undefined
+		const m = daily.find(d => (d.homeId === team.id && d.awayId === oppTeam.id) || (d.homeId === oppTeam.id && d.awayId === team.id))
+		return m?.polymarket
+	}
+
 	return (
 		<section className="wrap section" id="groups" aria-labelledby="groups-heading">
 			<SectionLabel text="Group Stage Tracker" />
@@ -104,6 +113,7 @@ export default function GroupStage({ team, data, eliminatedTeamIds = new Set(), 
 						liveData={resolveLiveData(match.opponent)}
 						matchTime={resolveTime(match.opponent, match.date)}
 						matchBroadcasts={resolveBroadcasts(match.opponent, match.date)}
+						matchOdds={resolveOdds(match.opponent, match.date)}
 					/>
 				))}
 			</div>

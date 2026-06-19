@@ -67,10 +67,12 @@ function enrich(
 		time: match.time,
 		clock: live?.clock ?? match.clock,
 		broadcasts: match.broadcasts,
+		venue: match.venue,
 		homeScorers: live?.homeScorers ?? homeResult?.scorers ?? [],
 		awayScorers: live?.awayScorers ?? awayResult?.scorers ?? [],
 		homeCards: live?.homeCards ?? homeResult?.cards ?? [],
 		awayCards: live?.awayCards ?? awayResult?.cards ?? [],
+		polymarket: match.polymarket,
 	}
 }
 

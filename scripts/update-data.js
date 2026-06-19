@@ -336,6 +336,11 @@ async function fetchESPNEventDetails(dateFrom, dateTo) {
 				.filter(Boolean)
 				.filter((v, i, a) => a.indexOf(v) === i);
 
+			// ── Venue extraction ──────────────────────────────────────
+			const venueName = competition?.venue?.fullName || '';
+			const venueCity = competition?.venue?.address?.city || '';
+			const venue = venueName && venueCity ? `${venueName}, ${venueCity}` : (venueName || venueCity || '');
+
 			if (homeId && awayId) {
 				const hScore = parseInt(homeComp?.score, 10) || 0;
 				const aScore = parseInt(awayComp?.score, 10) || 0;
@@ -345,7 +350,7 @@ async function fetchESPNEventDetails(dateFrom, dateTo) {
 					matches.set(key, {
 						homeId, awayId, homeScore: hScore, awayScore: aScore,
 						status: matchStatus, date: eventDate, clock: matchClock,
-						broadcasts, time: eventTime,
+						broadcasts, time: eventTime, venue,
 					});
 				}
 			}
@@ -519,6 +524,20 @@ function pmNameToId(name) {
 	return nameToId(name);
 }
 
+// ─── Team id → FIFA TLA (lowercased — Polymarket uses lowercase in matchup slugs) ─
+const ID_TO_TLA = {
+	mexico:'mex', southafrica:'rsa', southkorea:'kor', czechia:'cze', canada:'can',
+	bosnia:'bih', qatar:'qat', switzerland:'sui', brazil:'bra', morocco:'mar',
+	haiti:'hai', scotland:'sco', usa:'usa', paraguay:'par', australia:'aus',
+	turkey:'tur', germany:'ger', curacao:'cuw', ivorycoast:'civ', ecuador:'ecu',
+	netherlands:'ned', japan:'jpn', sweden:'swe', tunisia:'tun', belgium:'bel',
+	egypt:'egy', iran:'irn', newzealand:'nzl', spain:'esp', capeverde:'cpv',
+	saudiarabia:'ksa', uruguay:'uru', france:'fra', senegal:'sen', iraq:'irq',
+	norway:'nor', argentina:'arg', algeria:'alg', austria:'aut', jordan:'jor',
+	portugal:'por', drcongo:'cod', uzbekistan:'uzb', colombia:'col', england:'eng',
+	croatia:'cro', ghana:'gha', panama:'pan',
+};
+
 // ─── Polymarket: fetch ALL stage probabilities (18 events total) ─────────────────
 // Returns { group, r32, r16, qf, sf, final, winner } — each { teamId: pct }
 async function fetchPolymarketAll() {
@@ -580,6 +599,69 @@ async function fetchPolymarketAll() {
   const allIds = [...new Set(Object.values(result).flatMap(Object.keys))];
   log(`Polymarket combined: ${allIds.length} unique teams across all stages`);
   return result;
+}
+
+// ─── Polymarket: per-matchup odds (fifwc-{home}-{away}-{date} event) ─────────────
+// Returns { homeWinPct, awayWinPct, drawPct, eventSlug } or null when no event exists.
+async function fetchMatchupOdds(homeId, awayId, date) {
+	const homeTla = ID_TO_TLA[homeId];
+	const awayTla = ID_TO_TLA[awayId];
+	if (!homeTla || !awayTla) return null;
+
+	const trySlug = async (slug) => {
+		const data = await tryFetch(`https://gamma-api.polymarket.com/events?slug=${slug}`);
+		if (data === FETCH_ERROR || !Array.isArray(data) || data.length === 0) return null;
+		return data[0];
+	};
+
+	// Try home-first then away-first; Polymarket's slug ordering isn't documented.
+	let event = await trySlug(`fifwc-${homeTla}-${awayTla}-${date}`);
+	if (!event) event = await trySlug(`fifwc-${awayTla}-${homeTla}-${date}`);
+	if (!event?.markets?.length) return null;
+
+	const pricePct = (priceStr) => {
+		try {
+			const parsed = JSON.parse(priceStr || '[]');
+			const yes = parseFloat(parsed[0]);
+			return isNaN(yes) ? null : Math.round(yes * 100);
+		} catch { return null; }
+	};
+
+	let homeWinPct = null, awayWinPct = null, drawPct = null;
+	for (const m of event.markets) {
+		const slug = m.slug || '';
+		const pct = pricePct(m.outcomePrices);
+		if (pct == null) continue;
+		if (slug.endsWith('-draw')) drawPct = pct;
+		else if (slug.endsWith(`-${homeTla}`)) homeWinPct = pct;
+		else if (slug.endsWith(`-${awayTla}`)) awayWinPct = pct;
+	}
+
+	if (homeWinPct == null && awayWinPct == null && drawPct == null) return null;
+	return {
+		homeWinPct: homeWinPct ?? 0,
+		awayWinPct: awayWinPct ?? 0,
+		drawPct: drawPct ?? 0,
+		eventSlug: event.slug,
+	};
+}
+
+// Run fetches in batches to avoid hammering Polymarket.
+async function attachMatchupOdds(dailyMatches) {
+	const all = Object.values(dailyMatches).flat();
+	// Markets stay live until resolved — fetch for scheduled AND in-progress matches.
+	// Skip FINISHED (already resolved to 100/0, not useful).
+	const pending = all.filter(m => m.status === 'SCHEDULED' || m.status === 'IN_PROGRESS');
+	const BATCH = 8;
+	let hits = 0;
+	for (let i = 0; i < pending.length; i += BATCH) {
+		const slice = pending.slice(i, i + BATCH);
+		await Promise.all(slice.map(async (m) => {
+			const odds = await fetchMatchupOdds(m.homeId, m.awayId, m.date);
+			if (odds) { m.polymarket = odds; hits++; }
+		}));
+	}
+	log(`Polymarket matchup odds: ${hits}/${pending.length} active matches`);
 }
 
 // ─── Build group results for a team from match data ──────────────────────────
@@ -1357,9 +1439,12 @@ async function main() {
       clock: match.clock || undefined,
       broadcasts: match.broadcasts?.length ? match.broadcasts : undefined,
       time: match.time || undefined,
+      venue: match.venue || undefined,
     });
   }
   log(`Daily matches: ${Object.keys(dailyMatches).length} dates, ${Object.values(dailyMatches).reduce((s, a) => s + a.length, 0)} matches`);
+
+  await attachMatchupOdds(dailyMatches);
 
   // Assemble output
   const today = todayStr();

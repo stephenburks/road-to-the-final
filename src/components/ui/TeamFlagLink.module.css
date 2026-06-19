@@ -11,15 +11,18 @@
 	font: inherit;
 	cursor: pointer;
 	text-align: left;
-	transition: background 120ms ease, box-shadow 120ms ease;
+	transition:
+		background 120ms ease,
+		box-shadow 120ms ease;
 }
 
 .link::after {
 	content: '\203A';
-	margin-left: 4px;
 	color: var(--purple);
 	opacity: 0;
-	transition: opacity 120ms ease, transform 120ms ease;
+	transition:
+		opacity 120ms ease,
+		transform 120ms ease;
 	font-weight: 700;
 }
 

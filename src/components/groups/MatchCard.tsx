@@ -1,4 +1,4 @@
-import type { Team, GroupMatch, Card } from '../../types'
+import type { Team, GroupMatch, Card, MatchupOdds } from '../../types'
 import { formatDate } from '../../utils'
 import FlagIcon from '../ui/FlagIcon'
 import { getTeamTLA, NAME_TO_ID } from '../ui/teamLookup'
@@ -25,6 +25,7 @@ interface TeamMatchCardProps {
 	}
 	matchTime?: string
 	matchBroadcasts?: string[]
+	matchOdds?: MatchupOdds
 	onTeamPeek?: (id: string) => void
 }
 
@@ -48,6 +49,7 @@ interface NeutralMatchCardProps {
 	awayScorers: string[]
 	homeCards: Card[]
 	awayCards: Card[]
+	polymarket?: MatchupOdds
 	onTeamPeek?: (id: string) => void
 }
 
@@ -74,6 +76,27 @@ function CardList({ cards, label }: { cards: Card[]; label: string }) {
 				</li>
 			))}
 		</ul>
+	)
+}
+
+function PolymarketSubhead({ odds, homeTla, awayTla }: { odds: MatchupOdds; homeTla: string; awayTla: string }) {
+	const url = `https://polymarket.com/sports/world-cup/${odds.eventSlug}`
+	return (
+		<a
+			href={url}
+			target="_blank"
+			rel="noopener noreferrer"
+			className={styles.polymarket}
+			aria-label={`Polymarket odds: ${homeTla} ${odds.homeWinPct}% · ${awayTla} ${odds.awayWinPct}% · Draw ${odds.drawPct}% — opens in a new tab`}
+		>
+			<span className={styles.polymarketLabel}>Polymarket</span>
+			<span>{homeTla} {odds.homeWinPct}%</span>
+			<span className={styles.polymarketDot}>·</span>
+			<span>{awayTla} {odds.awayWinPct}%</span>
+			<span className={styles.polymarketDot}>·</span>
+			<span>Draw {odds.drawPct}%</span>
+			<span className={styles.polymarketArrow} aria-hidden="true">↗</span>
+		</a>
 	)
 }
 
@@ -131,6 +154,14 @@ export default function MatchCard(props: MatchCardProps) {
 						<span className={`${styles.score} ${isLive ? styles.scoreLive : ''}`} aria-label={`Score: ${score}`}>{score}</span>
 					)}
 				</div>
+
+				{props.polymarket && (
+					<PolymarketSubhead
+						odds={props.polymarket}
+						homeTla={getTeamTLA(homeId, homeTeam) || homeTeam}
+						awayTla={getTeamTLA(awayId, awayTeam) || awayTeam}
+					/>
+				)}
 
 				{hasResult && (
 					<div className={styles.matchEvents}>
@@ -213,6 +244,27 @@ export default function MatchCard(props: MatchCardProps) {
 					</span>
 				)}
 			</div>
+
+			{props.matchOdds && (() => {
+				// Reorient odds so the team being viewed shows first (matches the
+				// `MyTeam vs Opponent` visual order). The eventSlug tells us which
+				// side our team is on: it ends with -{myTla} only if we're listed
+				// second in the slug (i.e. the away team).
+				const oddsRaw = props.matchOdds
+				const myTla = (getTeamTLA(teamId) || '').toLowerCase()
+				const oppTla = (getTeamTLA(NAME_TO_ID[match.opponent], match.opponent) || '').toLowerCase()
+				const slugParts = oddsRaw.eventSlug.split('-')
+				const myIsHome = slugParts[1] === myTla
+				const myPct = myIsHome ? oddsRaw.homeWinPct : oddsRaw.awayWinPct
+				const oppPct = myIsHome ? oddsRaw.awayWinPct : oddsRaw.homeWinPct
+				return (
+					<PolymarketSubhead
+						odds={{ ...oddsRaw, homeWinPct: myPct, awayWinPct: oppPct }}
+						homeTla={(myTla || teamId).toUpperCase()}
+						awayTla={(oppTla || match.opponent).toUpperCase()}
+					/>
+				)
+			})()}
 
 			{hasEvents && (
 				<div className={styles.matchEvents}>

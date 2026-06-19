@@ -159,3 +159,57 @@
 	color: var(--amber);
 	font-family: var(--font-mono);
 }
+
+.polymarket {
+	display: flex;
+	align-items: center;
+	gap: 6px;
+	flex-wrap: wrap;
+	margin-top: 6px;
+	padding: 4px 8px;
+	border-radius: 4px;
+	font-family: var(--font-mono);
+	font-size: 9px;
+	color: var(--text-dim);
+	text-decoration: none;
+	background: rgba(99, 102, 241, 0.05);
+	border: 1px solid rgba(99, 102, 241, 0.12);
+	transition: background 120ms ease, border-color 120ms ease, color 120ms ease;
+}
+
+.polymarket:hover,
+.polymarket:focus-visible {
+	background: rgba(99, 102, 241, 0.12);
+	border-color: rgba(99, 102, 241, 0.35);
+	color: var(--text-hi);
+	outline: none;
+}
+
+.polymarketLabel {
+	color: var(--purple);
+	font-weight: 700;
+	letter-spacing: 0.06em;
+	text-transform: uppercase;
+	font-size: 8px;
+}
+
+.polymarketDot {
+	color: var(--text-dim);
+	opacity: 0.5;
+}
+
+.polymarketArrow {
+	margin-left: auto;
+	color: var(--text-dim);
+	opacity: 0;
+	transform: translate(-2px, 2px);
+	transition: opacity 120ms ease, transform 120ms ease, color 120ms ease;
+	font-weight: 700;
+}
+
+.polymarket:hover .polymarketArrow,
+.polymarket:focus-visible .polymarketArrow {
+	opacity: 1;
+	transform: translate(0, 0);
+	color: var(--purple);
+}

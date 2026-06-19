@@ -10,6 +10,13 @@ export interface Card {
 	type: 'yellow' | 'red'
 }
 
+export interface MatchupOdds {
+	homeWinPct: number
+	awayWinPct: number
+	drawPct: number
+	eventSlug: string
+}
+
 export interface GroupMatch {
 	matchday: number
 	opponent: string
@@ -138,6 +145,8 @@ export interface DailyMatch {
 	clock?: string
 	broadcasts?: string[]
 	time?: string
+	venue?: string
+	polymarket?: MatchupOdds
 }
 
 export interface DailyMatches {

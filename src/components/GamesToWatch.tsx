@@ -46,6 +46,8 @@ function enrich(match: DailyMatch, teams: AppData['teams'], livePatch?: LiveMatc
 		awayScorers: livePatch?.awayScorers ?? awayResult?.scorers ?? [],
 		homeCards: livePatch?.homeCards ?? homeResult?.cards ?? [],
 		awayCards: livePatch?.awayCards ?? awayResult?.cards ?? [],
+		venue: match.venue,
+		polymarket: match.polymarket,
 	}
 }
 
