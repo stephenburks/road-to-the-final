@@ -176,6 +176,44 @@
 	border-radius: var(--radius);
 	padding: 16px 18px;
 	animation: fadeIn 0.3s ease;
+	position: relative;
+}
+
+/* Polymarket external-link affordance — only applied when card is an <a> */
+.statCardLink {
+	text-decoration: none;
+	color: inherit;
+	display: block;
+	cursor: pointer;
+	transition: transform 120ms ease, box-shadow 120ms ease, border-color 120ms ease;
+}
+
+.statCardLink::after {
+	content: '\2197';
+	position: absolute;
+	top: 8px;
+	right: 10px;
+	font-size: 13px;
+	font-weight: 700;
+	color: var(--text-dim);
+	opacity: 0;
+	transform: translate(-2px, 2px);
+	transition: opacity 120ms ease, transform 120ms ease, color 120ms ease;
+	pointer-events: none;
+}
+
+.statCardLink:hover,
+.statCardLink:focus-visible {
+	transform: translateY(-1px);
+	box-shadow: 0 4px 12px rgba(99, 102, 241, 0.18);
+	outline: none;
+}
+
+.statCardLink:hover::after,
+.statCardLink:focus-visible::after {
+	opacity: 1;
+	transform: translate(0, 0);
+	color: var(--text-hi);
 }
 
 .statCardR32 {

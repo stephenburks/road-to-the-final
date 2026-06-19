@@ -43,3 +43,19 @@ export const ESPN_NEWS_URL       = `${ESPN_BASE}/news`
 /** Attribution */
 export const AUTHOR_NAME       = 'Stephen Burks'
 export const AUTHOR_GITHUB_URL = 'https://github.com/stephenburks/'
+
+/** Polymarket event URLs — one event per stage (and one per group winner).
+ * Slugs match scripts/update-data.js — update both if Polymarket renames. */
+const POLYMARKET_EVENT = (slug: string) => `https://polymarket.com/event/${slug}`
+
+export const POLYMARKET_STAGE_URLS: Partial<Record<Stage | 'winner', string>> = {
+  r32:    POLYMARKET_EVENT('world-cup-team-to-advance-to-knockout-stages'),
+  r16:    POLYMARKET_EVENT('world-cup-nation-to-reach-round-of-16'),
+  qf:     POLYMARKET_EVENT('world-cup-nation-to-reach-quarterfinals'),
+  sf:     POLYMARKET_EVENT('world-cup-nation-to-reach-semifinals'),
+  final:  POLYMARKET_EVENT('world-cup-nation-to-reach-final'),
+  winner: POLYMARKET_EVENT('world-cup-winner'),
+}
+
+export const polymarketGroupUrl = (groupLetter: string) =>
+  POLYMARKET_EVENT(`world-cup-group-${groupLetter.toLowerCase()}-winner`)

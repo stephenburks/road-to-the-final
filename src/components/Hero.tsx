@@ -1,4 +1,4 @@
-import { STAGE_LABELS } from '../constants'
+import { STAGE_LABELS, POLYMARKET_STAGE_URLS, polymarketGroupUrl } from '../constants'
 import type { Stage, Team, AdvanceProbabilities } from '../types'
 import { daysUntil, formatDate } from '../utils'
 import { useTeamRecord } from '../hooks/useTeamRecord'
@@ -303,39 +303,84 @@ export default function Hero({
 				</div>
 
 				{/* ── Group Win ── */}
-				<div
-					role="listitem"
-					className={`${styles.statCard} ${styles.statCardGroup}`}
-					aria-label={
-						groupWinProb
-							? `Win Group ${groupWinProb.groupLetter}: ${groupWinProb.probability}%`
-							: 'Win group probability not available'
-					}
-				>
-					<div className={`${styles.statValue} ${styles.statValueGroup}`}>
-						{groupWinProb?.probability ?? '\u2014'}%
-					</div>
-					<div className={styles.statLabel}>
-						{groupWinProb ? `Win Group ${groupWinProb.groupLetter}` : 'Win Group'}
-					</div>
-					<div className={styles.statSub}>Polymarket</div>
-				</div>
+				{(() => {
+					const groupUrl = groupWinProb && !isHistorical
+						? polymarketGroupUrl(groupWinProb.groupLetter)
+						: undefined
+					const groupLabel = groupWinProb ? `Win Group ${groupWinProb.groupLetter}` : 'Win Group'
+					const groupAria = groupWinProb
+						? `Win Group ${groupWinProb.groupLetter}: ${groupWinProb.probability}%`
+						: 'Win group probability not available'
+					const groupContent = (
+						<>
+							<div className={`${styles.statValue} ${styles.statValueGroup}`}>
+								{groupWinProb?.probability ?? '\u2014'}%
+							</div>
+							<div className={styles.statLabel}>{groupLabel}</div>
+							<div className={styles.statSub}>Polymarket</div>
+						</>
+					)
+					return groupUrl ? (
+						<a
+							role="listitem"
+							href={groupUrl}
+							target="_blank"
+							rel="noopener noreferrer"
+							className={`${styles.statCard} ${styles.statCardGroup} ${styles.statCardLink}`}
+							aria-label={`${groupAria} \u2014 opens Polymarket in a new tab`}
+						>
+							{groupContent}
+						</a>
+					) : (
+						<div
+							role="listitem"
+							className={`${styles.statCard} ${styles.statCardGroup}`}
+							aria-label={groupAria}
+						>
+							{groupContent}
+						</div>
+					)
+				})()}
 
 				{/* ── Stage probabilities ── */}
-				{STAT_CARD_DEFS.map((card) => (
-					<div
-						key={card.key}
-						role="listitem"
-						className={`${styles.statCard} ${card.cardClass}`}
-						aria-label={`${card.label}: ${ap[card.key as keyof AdvanceProbabilities] ?? 0}%`}
-					>
-						<div className={`${styles.statValue} ${card.valueClass}`}>
-							{ap[card.key as keyof AdvanceProbabilities] ?? 0}%
+				{STAT_CARD_DEFS.map((card) => {
+					const value = ap[card.key as keyof AdvanceProbabilities] ?? 0
+					const stageUrl = !isHistorical && source === 'market'
+						? POLYMARKET_STAGE_URLS[card.key as keyof typeof POLYMARKET_STAGE_URLS]
+						: undefined
+					const aria = `${card.label}: ${value}%`
+					const inner = (
+						<>
+							<div className={`${styles.statValue} ${card.valueClass}`}>
+								{value}%
+							</div>
+							<div className={styles.statLabel}>{card.label}</div>
+							<div className={styles.statSub}>{sourceLabel}</div>
+						</>
+					)
+					return stageUrl ? (
+						<a
+							key={card.key}
+							role="listitem"
+							href={stageUrl}
+							target="_blank"
+							rel="noopener noreferrer"
+							className={`${styles.statCard} ${card.cardClass} ${styles.statCardLink}`}
+							aria-label={`${aria} — opens Polymarket in a new tab`}
+						>
+							{inner}
+						</a>
+					) : (
+						<div
+							key={card.key}
+							role="listitem"
+							className={`${styles.statCard} ${card.cardClass}`}
+							aria-label={aria}
+						>
+							{inner}
 						</div>
-						<div className={styles.statLabel}>{card.label}</div>
-						<div className={styles.statSub}>{sourceLabel}</div>
-					</div>
-				))}
+					)
+				})}
 			</div>
 			{probNote && <p className={styles.probNote}>{probNote}</p>}
 		</>

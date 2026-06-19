@@ -112,7 +112,7 @@ describe('Hero', () => {
 	it('renders correct aria-label on group win card', () => {
 		const groupWinProb = { probability: 12, groupLetter: 'A' }
 		renderWithQuery(<Hero team={mockTeam()} activeStage={ACTIVE_STAGE} isHistorical={false} groupWinProb={groupWinProb} />)
-		expect(screen.getByRole('listitem', { name: 'Win Group A: 12%' })).toBeInTheDocument()
+		expect(screen.getByRole('listitem', { name: /Win Group A: 12%/ })).toBeInTheDocument()
 	})
 
 	it('shows group win card placeholder when groupWinProb is undefined', () => {
