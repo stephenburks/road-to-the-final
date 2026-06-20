@@ -112,22 +112,35 @@ function GroupChangeArrow({ value }: { value: number | undefined }) {
 }
 
 /**
- * Has the team mathematically secured this stage? "Reach R32" is clinched
- * when team.currentStage is r32 or beyond, etc. The "winner" card never
- * auto-clinches — that would require tracking the final champion.
+ * Has the team secured this stage? Two signals:
+ *   1. The effective probability (live overlay or static) is 100 — Polymarket
+ *      encodes mathematical clinching as 100% (or pulls the market entirely).
+ *   2. The team has already progressed past this stage (team.currentStage is
+ *      further along in STAGE_ORDER).
  */
-function isStageClinched(team: Team, cardKey: keyof AdvanceProbabilities): boolean {
-	if (cardKey === 'winner') return false
+function isStageClinched(
+	team: Team,
+	cardKey: keyof AdvanceProbabilities,
+	effectiveValue: number
+): boolean {
 	if (cardKey === 'source') return false
+	if (effectiveValue >= 100) return true
+	if (cardKey === 'winner') return false
 	if (!STAGE_ORDER.includes(cardKey as Stage)) return false
-	return stageIndex(team.currentStage) >= stageIndex(cardKey as Stage)
+	return stageIndex(team.currentStage) > stageIndex(cardKey as Stage)
 }
 
 /**
- * Group winner is clinched when all four teams in the group have completed
- * their three matches and this team finished first.
+ * Group winner is clinched when the effective probability is 100% (Polymarket
+ * has resolved the market) or when all four teams have finished their three
+ * matches and this team is in first place.
  */
-function isGroupWinClinched(team: Team, data: AppData | undefined): boolean {
+function isGroupWinClinched(
+	team: Team,
+	data: AppData | undefined,
+	effectiveValue: number | undefined
+): boolean {
+	if (effectiveValue != null && effectiveValue >= 100) return true
 	const standings = data?.groups?.[team.group]?.standings
 	if (!standings || standings.length === 0) return false
 	const row = standings.find(r => r.teamId === team.id)
@@ -400,7 +413,7 @@ export default function Hero({
 				{/* ── Group Win ── */}
 				{(() => {
 					const effectivePct = liveGroupVal ?? groupWinProb?.probability
-					const clinched = isGroupWinClinched(team, data)
+					const clinched = isGroupWinClinched(team, data, effectivePct)
 					const groupUrl = !clinched && groupWinProb && !isHistorical
 						? polymarketGroupUrl(groupWinProb.groupLetter)
 						: undefined
@@ -453,10 +466,10 @@ export default function Hero({
 				{/* ── Stage probabilities ── */}
 				{STAT_CARD_DEFS.map((card) => {
 					const cardKey = card.key as keyof AdvanceProbabilities
-					const clinched = isStageClinched(team, cardKey)
 					const staticValue = (ap[cardKey] ?? 0) as number
 					const live = liveStageVal(cardKey)
 					const value: number = live ?? staticValue
+					const clinched = isStageClinched(team, cardKey, value)
 					const stageUrl = !clinched && !isHistorical && source === 'market'
 						? POLYMARKET_STAGE_URLS[card.key as keyof typeof POLYMARKET_STAGE_URLS]
 						: undefined
