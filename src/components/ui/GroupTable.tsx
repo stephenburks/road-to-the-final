@@ -114,7 +114,9 @@ export function GroupTable({ groupKey, groupData, highlightTeamId, eliminatedTea
 										<span className={styles.youTag} aria-label="Your selected team">YOU</span>
 									)}
 									{clinched && (
-										<span className={styles.badgeClinched} aria-label="Clinched advancement">CLNCH</span>
+										<span className={styles.badgeClinched} aria-label="Clinched advancement">
+											<span className={styles.badgeClinchedCheck} aria-hidden="true">✓</span>
+										</span>
 									)}
 									{isElim && (
 										<span className={styles.badgeEliminated} aria-label="Eliminated">ELIM</span>

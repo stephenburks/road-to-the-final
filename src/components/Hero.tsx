@@ -426,7 +426,7 @@ export default function Hero({
 					const groupContent = clinched ? (
 						<>
 							<div className={`${styles.statValue} ${styles.statValueGroup} ${styles.statValueClinched}`}>
-								<span className={styles.clinchedCheck} aria-hidden="true">\u2713</span> Clinched
+								<span className={styles.clinchedCheck} aria-hidden="true">✓</span> Clinched
 							</div>
 							<div className={styles.statLabel}>{groupLabel}</div>
 							<div className={styles.statSub}>Confirmed</div>
