@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-20T00:08:48.843Z",
+  "lastUpdated": "2026-06-20T04:50:59.977Z",
   "snapshotDate": "2026-06-20",
   "isHistorical": false,
   "sourceSummary": {
@@ -179,6 +179,20 @@
     "C": {
       "standings": [
         {
+          "teamId": "brazil",
+          "team": "Brazil",
+          "played": 2,
+          "w": 1,
+          "d": 1,
+          "l": 0,
+          "gf": 4,
+          "ga": 1,
+          "pts": 4,
+          "gd": 3,
+          "pos": 1,
+          "flag": "🇧🇷"
+        },
+        {
           "teamId": "morocco",
           "team": "Morocco",
           "played": 2,
@@ -189,7 +203,7 @@
           "ga": 1,
           "pts": 4,
           "gd": 1,
-          "pos": 1,
+          "pos": 2,
           "flag": "🇲🇦"
         },
         {
@@ -203,42 +217,28 @@
           "ga": 1,
           "pts": 3,
           "gd": 0,
-          "pos": 2,
-          "flag": "🏴󠁧󠁢󠁳󠁣󠁴󠁿"
-        },
-        {
-          "teamId": "brazil",
-          "team": "Brazil",
-          "played": 1,
-          "w": 0,
-          "d": 1,
-          "l": 0,
-          "gf": 1,
-          "ga": 1,
-          "pts": 1,
-          "gd": 0,
           "pos": 3,
-          "flag": "🇧🇷"
+          "flag": "🏴󠁧󠁢󠁳󠁣󠁴󠁿"
         },
         {
           "teamId": "haiti",
           "team": "Haiti",
-          "played": 1,
+          "played": 2,
           "w": 0,
           "d": 0,
-          "l": 1,
+          "l": 2,
           "gf": 0,
-          "ga": 1,
+          "ga": 4,
           "pts": 0,
-          "gd": -1,
+          "gd": -4,
           "pos": 4,
           "flag": "🇭🇹"
         }
       ],
       "winProbabilities": {
-        "morocco": 36,
-        "scotland": 5,
-        "brazil": 62,
+        "brazil": 69,
+        "morocco": 28,
+        "scotland": 2,
         "haiti": 0
       }
     },
@@ -302,9 +302,9 @@
         }
       ],
       "winProbabilities": {
-        "usa": 87,
+        "usa": 98,
         "australia": 0,
-        "turkey": 14,
+        "turkey": 2,
         "paraguay": 0
       }
     },
@@ -569,7 +569,7 @@
         "saudiarabia": 4,
         "uruguay": 21,
         "spain": 74,
-        "capeverde": 3
+        "capeverde": 2
       }
     },
     "I": {
@@ -701,7 +701,7 @@
         "argentina": 85,
         "austria": 14,
         "jordan": 0,
-        "algeria": 1
+        "algeria": 2
       }
     },
     "K": {
@@ -765,7 +765,7 @@
       ],
       "winProbabilities": {
         "colombia": 49,
-        "portugal": 47,
+        "portugal": 46,
         "drcongo": 5,
         "uzbekistan": 1
       }
@@ -913,7 +913,7 @@
         "r32": 100,
         "r16": 62,
         "qf": 25,
-        "sf": 13,
+        "sf": 14,
         "final": 6,
         "winner": 1,
         "source": "market"
@@ -971,12 +971,12 @@
         "r32": [
           {
             "group": "C",
-            "likelyTeam": "Brazil",
-            "flag": "🇧🇷",
-            "fifaRank": 4,
-            "difficulty": 5,
-            "label": "Danger",
-            "color": "#EF4444",
+            "likelyTeam": "Scotland",
+            "flag": "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
+            "fifaRank": 39,
+            "difficulty": 2,
+            "label": "Favorable",
+            "color": "#22C55E",
             "note": "3rd-place team from Group C",
             "pct": null
           },
@@ -1121,7 +1121,7 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 18,
+        "r32": 19,
         "r16": 5,
         "qf": 2,
         "sf": 2,
@@ -1566,9 +1566,9 @@
       ],
       "advanceProbabilities": {
         "r32": 30,
-        "r16": 10,
+        "r16": 12,
         "qf": 4,
-        "sf": 3,
+        "sf": 2,
         "final": 1,
         "winner": 0,
         "source": "market"
@@ -1802,7 +1802,7 @@
         "r32": 100,
         "r16": 53,
         "qf": 18,
-        "sf": 4,
+        "sf": 3,
         "final": 2,
         "winner": 0,
         "source": "market"
@@ -2228,7 +2228,7 @@
       ],
       "advanceProbabilities": {
         "r32": 12,
-        "r16": 1,
+        "r16": 3,
         "qf": 1,
         "sf": 1,
         "final": 1,
@@ -2434,9 +2434,9 @@
       "advanceProbabilities": {
         "r32": 99,
         "r16": 59,
-        "qf": 26,
-        "sf": 9,
-        "final": 3,
+        "qf": 27,
+        "sf": 8,
+        "final": 2,
         "winner": 1,
         "source": "market"
       },
@@ -2600,12 +2600,22 @@
           "matchday": 2,
           "opponent": "Haiti",
           "opponentFlag": "🇭🇹",
-          "result": null,
-          "score": null,
+          "result": "W",
+          "score": "3-0",
           "date": "2026-06-19",
           "venue": "Lincoln Financial Field, Philadelphia",
-          "scorers": [],
-          "cards": []
+          "scorers": [
+            "Matheus Cunha 23'",
+            "Matheus Cunha 36'",
+            "Vinícius Júnior 45'+3'"
+          ],
+          "cards": [
+            {
+              "player": "Douglas Santos",
+              "minute": "65'",
+              "type": "yellow"
+            }
+          ]
         },
         {
           "matchday": 3,
@@ -2620,176 +2630,18 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 98,
-        "r16": 68,
-        "qf": 46,
-        "sf": 24,
-        "final": 14,
-        "winner": 7,
+        "r32": 99,
+        "r16": 72,
+        "qf": 49,
+        "sf": 23,
+        "final": 16,
+        "winner": 6,
         "source": "market"
       },
       "path": {
         "group_stage": {
           "status": "active",
           "city": "New Jersey · Philadelphia · Miami",
-          "venue": "Various venues",
-          "date": "Jun 13–24",
-          "detail": "1pt after MD1"
-        },
-        "r32": {
-          "status": "upcoming",
-          "match": 88,
-          "date": "2026-07-03",
-          "city": "Dallas",
-          "venue": "AT&T Stadium",
-          "opponentDesc": "Runner-up Group D"
-        },
-        "r16": {
-          "status": "future",
-          "match": 95,
-          "date": "2026-07-07",
-          "city": "Atlanta",
-          "venue": "Mercedes-Benz Stadium",
-          "opponentDesc": "Winner Match 87"
-        },
-        "qf": {
-          "status": "future",
-          "match": 99,
-          "date": "2026-07-11",
-          "city": "Miami",
-          "venue": "Hard Rock Stadium",
-          "opponentDesc": "Winner Match 95"
-        },
-        "sf": {
-          "status": "future",
-          "match": 102,
-          "date": "2026-07-15",
-          "city": "Atlanta",
-          "venue": "Mercedes-Benz Stadium",
-          "opponentDesc": "Winner QF bracket"
-        },
-        "final": {
-          "status": "future",
-          "match": 104,
-          "date": "2026-07-19",
-          "city": "New Jersey",
-          "venue": "MetLife Stadium",
-          "opponentDesc": "Winner other SF"
-        }
-      },
-      "possibleOpponents": {
-        "r32": [
-          {
-            "group": "D",
-            "likelyTeam": "Australia",
-            "flag": "🇦🇺",
-            "fifaRank": 26,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "Runner-up of Group D",
-            "pct": null
-          }
-        ],
-        "r16": [
-          {
-            "group": "C",
-            "likelyTeam": "Morocco",
-            "flag": "🇲🇦",
-            "fifaRank": 14,
-            "difficulty": 4,
-            "label": "Tough",
-            "color": "#FB923C",
-            "note": "Winner of Group C",
-            "pct": null
-          },
-          {
-            "group": "F",
-            "likelyTeam": "Netherlands",
-            "flag": "🇳🇱",
-            "fifaRank": 7,
-            "difficulty": 5,
-            "label": "Danger",
-            "color": "#EF4444",
-            "note": "Runner-up of Group F",
-            "pct": null
-          }
-        ]
-      }
-    },
-    {
-      "id": "morocco",
-      "name": "Morocco",
-      "flag": "🇲🇦",
-      "group": "C",
-      "confederation": "CAF",
-      "fifaRank": 14,
-      "eliminated": false,
-      "currentStage": "group_stage",
-      "groupResults": [
-        {
-          "matchday": 1,
-          "opponent": "Brazil",
-          "opponentFlag": "🇧🇷",
-          "result": "D",
-          "score": "1-1",
-          "date": "2026-06-13",
-          "venue": "MetLife Stadium, New Jersey",
-          "scorers": [
-            "Saibari 22'"
-          ],
-          "cards": [
-            {
-              "player": "Issa Diop",
-              "minute": "23'",
-              "type": "yellow"
-            }
-          ]
-        },
-        {
-          "matchday": 2,
-          "opponent": "Scotland",
-          "opponentFlag": "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
-          "result": "W",
-          "score": "1-0",
-          "date": "2026-06-19",
-          "venue": "Gillette Stadium, Boston",
-          "scorers": [
-            "Ismael Saibari 2'"
-          ],
-          "cards": [
-            {
-              "player": "Issa Diop",
-              "minute": "23'",
-              "type": "yellow"
-            }
-          ]
-        },
-        {
-          "matchday": 3,
-          "opponent": "Haiti",
-          "opponentFlag": "🇭🇹",
-          "result": null,
-          "score": null,
-          "date": "2026-06-24",
-          "venue": "Mercedes-Benz Stadium, Atlanta",
-          "scorers": [],
-          "cards": []
-        }
-      ],
-      "advanceProbabilities": {
-        "r32": 99,
-        "r16": 55,
-        "qf": 34,
-        "sf": 17,
-        "final": 6,
-        "winner": 3,
-        "source": "market"
-      },
-      "path": {
-        "group_stage": {
-          "status": "active",
-          "city": "New Jersey · Boston · Atlanta",
           "venue": "Various venues",
           "date": "Jun 13–24",
           "detail": "4pts after MD2"
@@ -2920,47 +2772,57 @@
       }
     },
     {
-      "id": "haiti",
-      "name": "Haiti",
-      "flag": "🇭🇹",
+      "id": "morocco",
+      "name": "Morocco",
+      "flag": "🇲🇦",
       "group": "C",
-      "confederation": "CONCACAF",
-      "fifaRank": 83,
+      "confederation": "CAF",
+      "fifaRank": 14,
       "eliminated": false,
       "currentStage": "group_stage",
       "groupResults": [
         {
           "matchday": 1,
-          "opponent": "Scotland",
-          "opponentFlag": "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
-          "result": "L",
-          "score": "0-1",
+          "opponent": "Brazil",
+          "opponentFlag": "🇧🇷",
+          "result": "D",
+          "score": "1-1",
           "date": "2026-06-13",
-          "venue": "Gillette Stadium, Boston",
-          "scorers": [],
+          "venue": "MetLife Stadium, New Jersey",
+          "scorers": [
+            "Saibari 22'"
+          ],
           "cards": [
             {
-              "player": "Jean-Ricner Bellegarde",
-              "minute": "39'",
+              "player": "Issa Diop",
+              "minute": "23'",
               "type": "yellow"
             }
           ]
         },
         {
           "matchday": 2,
-          "opponent": "Brazil",
-          "opponentFlag": "🇧🇷",
-          "result": null,
-          "score": null,
+          "opponent": "Scotland",
+          "opponentFlag": "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
+          "result": "W",
+          "score": "1-0",
           "date": "2026-06-19",
-          "venue": "Lincoln Financial Field, Philadelphia",
-          "scorers": [],
-          "cards": []
+          "venue": "Gillette Stadium, Boston",
+          "scorers": [
+            "Ismael Saibari 2'"
+          ],
+          "cards": [
+            {
+              "player": "Issa Diop",
+              "minute": "23'",
+              "type": "yellow"
+            }
+          ]
         },
         {
           "matchday": 3,
-          "opponent": "Morocco",
-          "opponentFlag": "🇲🇦",
+          "opponent": "Haiti",
+          "opponentFlag": "🇭🇹",
           "result": null,
           "score": null,
           "date": "2026-06-24",
@@ -2970,21 +2832,21 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 3,
-        "r16": 1,
-        "qf": 1,
-        "sf": 0,
-        "final": 0,
-        "winner": 0,
+        "r32": 100,
+        "r16": 59,
+        "qf": 32,
+        "sf": 15,
+        "final": 7,
+        "winner": 3,
         "source": "market"
       },
       "path": {
         "group_stage": {
           "status": "active",
-          "city": "Boston · Philadelphia · Atlanta",
+          "city": "New Jersey · Boston · Atlanta",
           "venue": "Various venues",
           "date": "Jun 13–24",
-          "detail": "0pts after MD1"
+          "detail": "4pts after MD2"
         },
         "r32": {
           "status": "upcoming",
@@ -3044,12 +2906,176 @@
         "r16": [
           {
             "group": "C",
-            "likelyTeam": "Morocco",
-            "flag": "🇲🇦",
-            "fifaRank": 14,
-            "difficulty": 4,
-            "label": "Tough",
-            "color": "#FB923C",
+            "likelyTeam": "Brazil",
+            "flag": "🇧🇷",
+            "fifaRank": 4,
+            "difficulty": 5,
+            "label": "Danger",
+            "color": "#EF4444",
+            "note": "Winner of Group C",
+            "pct": null
+          },
+          {
+            "group": "F",
+            "likelyTeam": "Netherlands",
+            "flag": "🇳🇱",
+            "fifaRank": 7,
+            "difficulty": 5,
+            "label": "Danger",
+            "color": "#EF4444",
+            "note": "Runner-up of Group F",
+            "pct": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "haiti",
+      "name": "Haiti",
+      "flag": "🇭🇹",
+      "group": "C",
+      "confederation": "CONCACAF",
+      "fifaRank": 83,
+      "eliminated": true,
+      "currentStage": "group_stage",
+      "groupResults": [
+        {
+          "matchday": 1,
+          "opponent": "Scotland",
+          "opponentFlag": "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
+          "result": "L",
+          "score": "0-1",
+          "date": "2026-06-13",
+          "venue": "Gillette Stadium, Boston",
+          "scorers": [],
+          "cards": [
+            {
+              "player": "Jean-Ricner Bellegarde",
+              "minute": "39'",
+              "type": "yellow"
+            }
+          ]
+        },
+        {
+          "matchday": 2,
+          "opponent": "Brazil",
+          "opponentFlag": "🇧🇷",
+          "result": "L",
+          "score": "0-3",
+          "date": "2026-06-19",
+          "venue": "Lincoln Financial Field, Philadelphia",
+          "scorers": [],
+          "cards": [
+            {
+              "player": "Carlens Arcus",
+              "minute": "4'",
+              "type": "yellow"
+            },
+            {
+              "player": "Frantzdy Pierrot",
+              "minute": "45'+4'",
+              "type": "yellow"
+            },
+            {
+              "player": "Danley Jean Jacques",
+              "minute": "72'",
+              "type": "yellow"
+            }
+          ]
+        },
+        {
+          "matchday": 3,
+          "opponent": "Morocco",
+          "opponentFlag": "🇲🇦",
+          "result": null,
+          "score": null,
+          "date": "2026-06-24",
+          "venue": "Mercedes-Benz Stadium, Atlanta",
+          "scorers": [],
+          "cards": []
+        }
+      ],
+      "advanceProbabilities": {
+        "r32": 0,
+        "r16": 0,
+        "qf": 0,
+        "sf": 0,
+        "final": 0,
+        "winner": 0,
+        "source": "market"
+      },
+      "path": {
+        "group_stage": {
+          "status": "active",
+          "city": "Boston · Philadelphia · Atlanta",
+          "venue": "Various venues",
+          "date": "Jun 13–24",
+          "detail": "0pts after MD2"
+        },
+        "r32": {
+          "status": "upcoming",
+          "match": 88,
+          "date": "2026-07-03",
+          "city": "Dallas",
+          "venue": "AT&T Stadium",
+          "opponentDesc": "Runner-up Group D"
+        },
+        "r16": {
+          "status": "future",
+          "match": 95,
+          "date": "2026-07-07",
+          "city": "Atlanta",
+          "venue": "Mercedes-Benz Stadium",
+          "opponentDesc": "Winner Match 87"
+        },
+        "qf": {
+          "status": "future",
+          "match": 99,
+          "date": "2026-07-11",
+          "city": "Miami",
+          "venue": "Hard Rock Stadium",
+          "opponentDesc": "Winner Match 95"
+        },
+        "sf": {
+          "status": "future",
+          "match": 102,
+          "date": "2026-07-15",
+          "city": "Atlanta",
+          "venue": "Mercedes-Benz Stadium",
+          "opponentDesc": "Winner QF bracket"
+        },
+        "final": {
+          "status": "future",
+          "match": 104,
+          "date": "2026-07-19",
+          "city": "New Jersey",
+          "venue": "MetLife Stadium",
+          "opponentDesc": "Winner other SF"
+        }
+      },
+      "possibleOpponents": {
+        "r32": [
+          {
+            "group": "D",
+            "likelyTeam": "Australia",
+            "flag": "🇦🇺",
+            "fifaRank": 26,
+            "difficulty": 3,
+            "label": "Moderate",
+            "color": "#F59E0B",
+            "note": "Runner-up of Group D",
+            "pct": null
+          }
+        ],
+        "r16": [
+          {
+            "group": "C",
+            "likelyTeam": "Brazil",
+            "flag": "🇧🇷",
+            "fifaRank": 4,
+            "difficulty": 5,
+            "label": "Danger",
+            "color": "#EF4444",
             "note": "Winner of Group C",
             "pct": null
           },
@@ -3138,11 +3164,11 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 65,
-        "r16": 21,
+        "r32": 68,
+        "r16": 20,
         "qf": 7,
-        "sf": 5,
-        "final": 2,
+        "sf": 3,
+        "final": 3,
         "winner": 0,
         "source": "market"
       },
@@ -3212,12 +3238,12 @@
         "r16": [
           {
             "group": "C",
-            "likelyTeam": "Morocco",
-            "flag": "🇲🇦",
-            "fifaRank": 14,
-            "difficulty": 4,
-            "label": "Tough",
-            "color": "#FB923C",
+            "likelyTeam": "Brazil",
+            "flag": "🇧🇷",
+            "fifaRank": 4,
+            "difficulty": 5,
+            "label": "Danger",
+            "color": "#EF4444",
             "note": "Winner of Group C",
             "pct": null
           },
@@ -3311,10 +3337,10 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 66,
-        "qf": 41,
+        "r16": 71,
+        "qf": 43,
         "sf": 23,
-        "final": 8,
+        "final": 11,
         "winner": 3,
         "source": "market"
       },
@@ -3505,7 +3531,7 @@
           "opponent": "Türkiye",
           "opponentFlag": "🇹🇷",
           "result": null,
-          "score": null,
+          "score": "1-0",
           "date": "2026-06-19",
           "venue": "Levi's Stadium, San Francisco",
           "scorers": [],
@@ -3524,8 +3550,8 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 41,
-        "r16": 11,
+        "r32": 53,
+        "r16": 16,
         "qf": 5,
         "sf": 2,
         "final": 2,
@@ -3585,12 +3611,12 @@
         "r32": [
           {
             "group": "C",
-            "likelyTeam": "Morocco",
-            "flag": "🇲🇦",
-            "fifaRank": 14,
-            "difficulty": 4,
-            "label": "Tough",
-            "color": "#FB923C",
+            "likelyTeam": "Brazil",
+            "flag": "🇧🇷",
+            "fifaRank": 4,
+            "difficulty": 5,
+            "label": "Danger",
+            "color": "#EF4444",
             "note": "Winner of Group C",
             "pct": null
           }
@@ -3598,12 +3624,12 @@
         "r16": [
           {
             "group": "C",
-            "likelyTeam": "Morocco",
-            "flag": "🇲🇦",
-            "fifaRank": 14,
-            "difficulty": 4,
-            "label": "Tough",
-            "color": "#FB923C",
+            "likelyTeam": "Brazil",
+            "flag": "🇧🇷",
+            "fifaRank": 4,
+            "difficulty": 5,
+            "label": "Danger",
+            "color": "#EF4444",
             "note": "Winner of Group C",
             "pct": null
           },
@@ -3704,7 +3730,7 @@
       ],
       "advanceProbabilities": {
         "r32": 80,
-        "r16": 35,
+        "r16": 36,
         "qf": 8,
         "sf": 1,
         "final": 1,
@@ -3764,12 +3790,12 @@
         "r32": [
           {
             "group": "C",
-            "likelyTeam": "Morocco",
-            "flag": "🇲🇦",
-            "fifaRank": 14,
-            "difficulty": 4,
-            "label": "Tough",
-            "color": "#FB923C",
+            "likelyTeam": "Brazil",
+            "flag": "🇧🇷",
+            "fifaRank": 4,
+            "difficulty": 5,
+            "label": "Danger",
+            "color": "#EF4444",
             "note": "Winner of Group C",
             "pct": null
           }
@@ -3777,12 +3803,12 @@
         "r16": [
           {
             "group": "C",
-            "likelyTeam": "Morocco",
-            "flag": "🇲🇦",
-            "fifaRank": 14,
-            "difficulty": 4,
-            "label": "Tough",
-            "color": "#FB923C",
+            "likelyTeam": "Brazil",
+            "flag": "🇧🇷",
+            "fifaRank": 4,
+            "difficulty": 5,
+            "label": "Danger",
+            "color": "#EF4444",
             "note": "Winner of Group C",
             "pct": null
           },
@@ -3832,7 +3858,7 @@
           "opponent": "Paraguay",
           "opponentFlag": "🇵🇾",
           "result": null,
-          "score": null,
+          "score": "0-1",
           "date": "2026-06-19",
           "venue": "Levi's Stadium, San Francisco",
           "scorers": [],
@@ -3851,10 +3877,10 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 47,
-        "r16": 23,
-        "qf": 7,
-        "sf": 4,
+        "r32": 23,
+        "r16": 13,
+        "qf": 10,
+        "sf": 7,
         "final": 1,
         "winner": 0,
         "source": "market"
@@ -3912,12 +3938,12 @@
         "r32": [
           {
             "group": "C",
-            "likelyTeam": "Morocco",
-            "flag": "🇲🇦",
-            "fifaRank": 14,
-            "difficulty": 4,
-            "label": "Tough",
-            "color": "#FB923C",
+            "likelyTeam": "Brazil",
+            "flag": "🇧🇷",
+            "fifaRank": 4,
+            "difficulty": 5,
+            "label": "Danger",
+            "color": "#EF4444",
             "note": "Winner of Group C",
             "pct": null
           }
@@ -3925,12 +3951,12 @@
         "r16": [
           {
             "group": "C",
-            "likelyTeam": "Morocco",
-            "flag": "🇲🇦",
-            "fifaRank": 14,
-            "difficulty": 4,
-            "label": "Tough",
-            "color": "#FB923C",
+            "likelyTeam": "Brazil",
+            "flag": "🇧🇷",
+            "fifaRank": 4,
+            "difficulty": 5,
+            "label": "Danger",
+            "color": "#EF4444",
             "note": "Winner of Group C",
             "pct": null
           },
@@ -4002,7 +4028,7 @@
       ],
       "advanceProbabilities": {
         "r32": 99,
-        "r16": 73,
+        "r16": 71,
         "qf": 41,
         "sf": 27,
         "final": 13,
@@ -4350,9 +4376,9 @@
       ],
       "advanceProbabilities": {
         "r32": 96,
-        "r16": 38,
-        "qf": 14,
-        "sf": 5,
+        "r16": 39,
+        "qf": 16,
+        "sf": 3,
         "final": 2,
         "winner": 0,
         "source": "market"
@@ -4486,10 +4512,10 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 82,
-        "r16": 36,
+        "r32": 81,
+        "r16": 35,
         "qf": 14,
-        "sf": 6,
+        "sf": 5,
         "final": 2,
         "winner": 0,
         "source": "market"
@@ -4648,9 +4674,9 @@
       ],
       "advanceProbabilities": {
         "r32": 93,
-        "r16": 52,
+        "r16": 53,
         "qf": 37,
-        "sf": 20,
+        "sf": 22,
         "final": 14,
         "winner": 4,
         "source": "market"
@@ -4794,7 +4820,7 @@
       "advanceProbabilities": {
         "r32": 87,
         "r16": 42,
-        "qf": 21,
+        "qf": 22,
         "sf": 7,
         "final": 5,
         "winner": 1,
@@ -4940,11 +4966,11 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 95,
-        "r16": 34,
-        "qf": 16,
-        "sf": 5,
-        "final": 3,
+        "r32": 94,
+        "r16": 33,
+        "qf": 17,
+        "sf": 4,
+        "final": 2,
         "winner": 0,
         "source": "market"
       },
@@ -5014,12 +5040,12 @@
         "r16": [
           {
             "group": "C",
-            "likelyTeam": "Morocco",
-            "flag": "🇲🇦",
-            "fifaRank": 14,
-            "difficulty": 4,
-            "label": "Tough",
-            "color": "#FB923C",
+            "likelyTeam": "Brazil",
+            "flag": "🇧🇷",
+            "fifaRank": 4,
+            "difficulty": 5,
+            "label": "Danger",
+            "color": "#EF4444",
             "note": "Winner of Group C",
             "pct": null
           },
@@ -5091,7 +5117,7 @@
       ],
       "advanceProbabilities": {
         "r32": 9,
-        "r16": 2,
+        "r16": 3,
         "qf": 2,
         "sf": 1,
         "final": 1,
@@ -5249,7 +5275,7 @@
         "r16": 61,
         "qf": 37,
         "sf": 14,
-        "final": 5,
+        "final": 6,
         "winner": 2,
         "source": "market"
       },
@@ -5319,12 +5345,12 @@
         "r16": [
           {
             "group": "C",
-            "likelyTeam": "Morocco",
-            "flag": "🇲🇦",
-            "fifaRank": 14,
-            "difficulty": 4,
-            "label": "Tough",
-            "color": "#FB923C",
+            "likelyTeam": "Brazil",
+            "flag": "🇧🇷",
+            "fifaRank": 4,
+            "difficulty": 5,
+            "label": "Danger",
+            "color": "#EF4444",
             "note": "Winner of Group C",
             "pct": null
           },
@@ -5402,7 +5428,7 @@
       "advanceProbabilities": {
         "r32": 83,
         "r16": 33,
-        "qf": 11,
+        "qf": 13,
         "sf": 3,
         "final": 1,
         "winner": 0,
@@ -5474,12 +5500,12 @@
         "r16": [
           {
             "group": "C",
-            "likelyTeam": "Morocco",
-            "flag": "🇲🇦",
-            "fifaRank": 14,
-            "difficulty": 4,
-            "label": "Tough",
-            "color": "#FB923C",
+            "likelyTeam": "Brazil",
+            "flag": "🇧🇷",
+            "fifaRank": 4,
+            "difficulty": 5,
+            "label": "Danger",
+            "color": "#EF4444",
             "note": "Winner of Group C",
             "pct": null
           },
@@ -5743,8 +5769,8 @@
         "r32": 28,
         "r16": 8,
         "qf": 2,
-        "sf": 1,
-        "final": 1,
+        "sf": 2,
+        "final": 2,
         "winner": 0,
         "source": "market"
       },
@@ -5814,12 +5840,12 @@
         "r16": [
           {
             "group": "C",
-            "likelyTeam": "Morocco",
-            "flag": "🇲🇦",
-            "fifaRank": 14,
-            "difficulty": 4,
-            "label": "Tough",
-            "color": "#FB923C",
+            "likelyTeam": "Brazil",
+            "flag": "🇧🇷",
+            "fifaRank": 4,
+            "difficulty": 5,
+            "label": "Danger",
+            "color": "#EF4444",
             "note": "Winner of Group C",
             "pct": null
           },
@@ -6376,8 +6402,8 @@
       "advanceProbabilities": {
         "r32": 77,
         "r16": 31,
-        "qf": 17,
-        "sf": 8,
+        "qf": 19,
+        "sf": 11,
         "final": 3,
         "winner": 1,
         "source": "market"
@@ -6664,8 +6690,8 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 68,
-        "r16": 29,
+        "r32": 67,
+        "r16": 28,
         "qf": 14,
         "sf": 6,
         "final": 2,
@@ -6815,7 +6841,7 @@
       ],
       "advanceProbabilities": {
         "r32": 5,
-        "r16": 3,
+        "r16": 5,
         "qf": 1,
         "sf": 0,
         "final": 0,
@@ -6961,8 +6987,8 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 96,
-        "r16": 61,
+        "r32": 97,
+        "r16": 62,
         "qf": 35,
         "sf": 20,
         "final": 8,
@@ -7143,7 +7169,7 @@
         "r32": 99,
         "r16": 73,
         "qf": 59,
-        "sf": 40,
+        "sf": 39,
         "final": 21,
         "winner": 12,
         "source": "market"
@@ -7201,12 +7227,12 @@
         "r32": [
           {
             "group": "C",
-            "likelyTeam": "Brazil",
-            "flag": "🇧🇷",
-            "fifaRank": 4,
-            "difficulty": 5,
-            "label": "Danger",
-            "color": "#EF4444",
+            "likelyTeam": "Scotland",
+            "flag": "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
+            "fifaRank": 39,
+            "difficulty": 2,
+            "label": "Favorable",
+            "color": "#22C55E",
             "note": "3rd-place team from Group C",
             "pct": null
           },
@@ -7316,8 +7342,8 @@
       ],
       "advanceProbabilities": {
         "r32": 55,
-        "r16": 20,
-        "qf": 9,
+        "r16": 19,
+        "qf": 7,
         "sf": 2,
         "final": 2,
         "winner": 0,
@@ -7468,9 +7494,9 @@
       ],
       "advanceProbabilities": {
         "r32": 93,
-        "r16": 30,
+        "r16": 31,
         "qf": 13,
-        "sf": 6,
+        "sf": 5,
         "final": 2,
         "winner": 0,
         "source": "market"
@@ -7611,7 +7637,7 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 11,
+        "r32": 10,
         "r16": 2,
         "qf": 1,
         "sf": 1,
@@ -7773,7 +7799,7 @@
       "advanceProbabilities": {
         "r32": 93,
         "r16": 69,
-        "qf": 48,
+        "qf": 44,
         "sf": 31,
         "final": 16,
         "winner": 7,
@@ -8060,8 +8086,8 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 19,
-        "r16": 7,
+        "r32": 17,
+        "r16": 5,
         "qf": 1,
         "sf": 1,
         "final": 1,
@@ -8215,7 +8241,7 @@
         "r32": 97,
         "r16": 56,
         "qf": 32,
-        "sf": 16,
+        "sf": 15,
         "final": 6,
         "winner": 2,
         "source": "market"
@@ -8415,10 +8441,10 @@
       ],
       "advanceProbabilities": {
         "r32": 99,
-        "r16": 85,
-        "qf": 62,
+        "r16": 84,
+        "qf": 61,
         "sf": 40,
-        "final": 25,
+        "final": 24,
         "winner": 13,
         "source": "market"
       },
@@ -8549,9 +8575,9 @@
       ],
       "advanceProbabilities": {
         "r32": 77,
-        "r16": 37,
-        "qf": 16,
-        "sf": 8,
+        "r16": 38,
+        "qf": 15,
+        "sf": 7,
         "final": 2,
         "winner": 1,
         "source": "market"
@@ -8721,8 +8747,8 @@
       ],
       "advanceProbabilities": {
         "r32": 71,
-        "r16": 24,
-        "qf": 6,
+        "r16": 25,
+        "qf": 7,
         "sf": 3,
         "final": 2,
         "winner": 0,
@@ -9598,9 +9624,9 @@
         "awayTeam": "Haiti",
         "awayFlag": "🇭🇹",
         "awayId": "haiti",
-        "homeScore": 0,
+        "homeScore": 3,
         "awayScore": 0,
-        "status": "SCHEDULED",
+        "status": "FINISHED",
         "date": "2026-06-19",
         "broadcasts": [
           "FOX",
@@ -9608,13 +9634,7 @@
           "FOX One"
         ],
         "time": "2026-06-20T00:30Z",
-        "venue": "Lincoln Financial Field, Philadelphia, Pennsylvania",
-        "polymarket": {
-          "homeWinPct": 89,
-          "awayWinPct": 4,
-          "drawPct": 8,
-          "eventSlug": "fifwc-bra-hai-2026-06-19"
-        }
+        "venue": "Lincoln Financial Field, Philadelphia, Pennsylvania"
       },
       {
         "homeTeam": "Türkiye",
@@ -9624,9 +9644,10 @@
         "awayFlag": "🇵🇾",
         "awayId": "paraguay",
         "homeScore": 0,
-        "awayScore": 0,
-        "status": "SCHEDULED",
+        "awayScore": 1,
+        "status": "IN_PROGRESS",
         "date": "2026-06-19",
+        "clock": "84'",
         "broadcasts": [
           "FS1",
           "Tele",
@@ -9635,9 +9656,9 @@
         "time": "2026-06-20T03:00Z",
         "venue": "Levi's Stadium, Santa Clara, California",
         "polymarket": {
-          "homeWinPct": 47,
-          "awayWinPct": 25,
-          "drawPct": 28,
+          "homeWinPct": 8,
+          "awayWinPct": 63,
+          "drawPct": 30,
           "eventSlug": "fifwc-tur-par-2026-06-19"
         }
       }
@@ -9842,8 +9863,8 @@
         "time": "2026-06-22T17:00Z",
         "venue": "AT&T Stadium, Arlington, Texas",
         "polymarket": {
-          "homeWinPct": 62,
-          "awayWinPct": 16,
+          "homeWinPct": 63,
+          "awayWinPct": 14,
           "drawPct": 24,
           "eventSlug": "fifwc-arg-aut-2026-06-22"
         }
@@ -10072,9 +10093,9 @@
         "time": "2026-06-24T22:00Z",
         "venue": "Mercedes-Benz Stadium, Atlanta, Georgia",
         "polymarket": {
-          "homeWinPct": 78,
-          "awayWinPct": 8,
-          "drawPct": 16,
+          "homeWinPct": 81,
+          "awayWinPct": 7,
+          "drawPct": 14,
           "eventSlug": "fifwc-mar-hai-2026-06-24"
         }
       },
@@ -10098,8 +10119,8 @@
         "venue": "Hard Rock Stadium, Miami Gardens, Florida",
         "polymarket": {
           "homeWinPct": 13,
-          "awayWinPct": 70,
-          "drawPct": 19,
+          "awayWinPct": 71,
+          "drawPct": 18,
           "eventSlug": "fifwc-sco-bra-2026-06-24"
         }
       },
@@ -10213,7 +10234,7 @@
         "venue": "AT&T Stadium, Arlington, Texas",
         "polymarket": {
           "homeWinPct": 44,
-          "awayWinPct": 29,
+          "awayWinPct": 28,
           "drawPct": 28,
           "eventSlug": "fifwc-jpn-swe-2026-06-25"
         }
@@ -10257,8 +10278,8 @@
         "venue": "Levi's Stadium, Santa Clara, California",
         "polymarket": {
           "homeWinPct": 45,
-          "awayWinPct": 28,
-          "drawPct": 28,
+          "awayWinPct": 27,
+          "drawPct": 30,
           "eventSlug": "fifwc-par-aus-2026-06-25"
         }
       },
@@ -10281,9 +10302,9 @@
         "time": "2026-06-26T02:00Z",
         "venue": "SoFi Stadium, Inglewood, California",
         "polymarket": {
-          "homeWinPct": 37,
-          "awayWinPct": 40,
-          "drawPct": 25,
+          "homeWinPct": 32,
+          "awayWinPct": 46,
+          "drawPct": 24,
           "eventSlug": "fifwc-tur-usa-2026-06-25"
         }
       }
@@ -10335,7 +10356,7 @@
         "polymarket": {
           "homeWinPct": 75,
           "awayWinPct": 9,
-          "drawPct": 18,
+          "drawPct": 17,
           "eventSlug": "fifwc-sen-irq-2026-06-26"
         }
       },
