@@ -524,18 +524,22 @@ function pmNameToId(name) {
 	return nameToId(name);
 }
 
-// ─── Team id → FIFA TLA (lowercased — Polymarket uses lowercase in matchup slugs) ─
-const ID_TO_TLA = {
-	mexico:'mex', southafrica:'rsa', southkorea:'kor', czechia:'cze', canada:'can',
-	bosnia:'bih', qatar:'qat', switzerland:'sui', brazil:'bra', morocco:'mar',
-	haiti:'hai', scotland:'sco', usa:'usa', paraguay:'par', australia:'aus',
-	turkey:'tur', germany:'ger', curacao:'cuw', ivorycoast:'civ', ecuador:'ecu',
-	netherlands:'ned', japan:'jpn', sweden:'swe', tunisia:'tun', belgium:'bel',
-	egypt:'egy', iran:'irn', newzealand:'nzl', spain:'esp', capeverde:'cpv',
-	saudiarabia:'ksa', uruguay:'uru', france:'fra', senegal:'sen', iraq:'irq',
-	norway:'nor', argentina:'arg', algeria:'alg', austria:'aut', jordan:'jor',
-	portugal:'por', drcongo:'cod', uzbekistan:'uzb', colombia:'col', england:'eng',
-	croatia:'cro', ghana:'gha', panama:'pan',
+// ─── Team id → Polymarket-compatible TLA(s) for matchup slug lookup ──────────────
+// Polymarket uses ISO 3166-1 alpha-3 codes for matchup slugs, not FIFA TLAs.
+// Most teams differ: NED → NLD, POR → PRT, SUI → CHE, CRO → HRV, URU → URY,
+// CPV → CVI, COD → CDR. South Korea's market uses both 'kor' and 'kr'
+// inconsistently, so we list multiple to try.
+const ID_TO_PM_TLA = {
+	mexico:['mex'], southafrica:['rsa'], southkorea:['kor', 'kr'], czechia:['cze'], canada:['can'],
+	bosnia:['bih'], qatar:['qat'], switzerland:['che'], brazil:['bra'], morocco:['mar'],
+	haiti:['hai'], scotland:['sco'], usa:['usa'], paraguay:['par'], australia:['aus'],
+	turkey:['tur'], germany:['ger'], curacao:['cuw'], ivorycoast:['civ'], ecuador:['ecu'],
+	netherlands:['nld'], japan:['jpn'], sweden:['swe'], tunisia:['tun'], belgium:['bel'],
+	egypt:['egy'], iran:['irn'], newzealand:['nzl'], spain:['esp'], capeverde:['cvi'],
+	saudiarabia:['ksa'], uruguay:['ury'], france:['fra'], senegal:['sen'], iraq:['irq'],
+	norway:['nor'], argentina:['arg'], algeria:['alg'], austria:['aut'], jordan:['jor'],
+	portugal:['prt'], drcongo:['cdr'], uzbekistan:['uzb'], colombia:['col'], england:['eng'],
+	croatia:['hrv'], ghana:['gha'], panama:['pan'],
 };
 
 // ─── Polymarket: fetch ALL stage probabilities (18 events total) ─────────────────
@@ -602,11 +606,14 @@ async function fetchPolymarketAll() {
 }
 
 // ─── Polymarket: per-matchup odds (fifwc-{home}-{away}-{date} event) ─────────────
-// Returns { homeWinPct, awayWinPct, drawPct, eventSlug } or null when no event exists.
+// Returns { homeId, awayId, homeWinPct, awayWinPct, drawPct, eventSlug } or null.
+// Persists homeId/awayId so the frontend can determine orientation by id (not by
+// parsing TLAs out of the slug, which avoids ambiguity when Polymarket uses ISO
+// codes vs. our FIFA TLAs for display).
 async function fetchMatchupOdds(homeId, awayId, date) {
-	const homeTla = ID_TO_TLA[homeId];
-	const awayTla = ID_TO_TLA[awayId];
-	if (!homeTla || !awayTla) return null;
+	const homeTlas = ID_TO_PM_TLA[homeId];
+	const awayTlas = ID_TO_PM_TLA[awayId];
+	if (!homeTlas?.length || !awayTlas?.length) return null;
 
 	const trySlug = async (slug) => {
 		const data = await tryFetch(`https://gamma-api.polymarket.com/events?slug=${slug}`);
@@ -614,9 +621,20 @@ async function fetchMatchupOdds(homeId, awayId, date) {
 		return data[0];
 	};
 
-	// Try home-first then away-first; Polymarket's slug ordering isn't documented.
-	let event = await trySlug(`fifwc-${homeTla}-${awayTla}-${date}`);
-	if (!event) event = await trySlug(`fifwc-${awayTla}-${homeTla}-${date}`);
+	// Polymarket's slug ordering isn't documented and TLAs can be ISO or
+	// inconsistent (e.g. South Korea uses both 'kor' and 'kr'). Try every
+	// combination of {primary, alternates} × {home-first, away-first} until one hits.
+	let event = null;
+	let matchedHomeTla = null;
+	let matchedAwayTla = null;
+	outer: for (const h of homeTlas) {
+		for (const a of awayTlas) {
+			const fwd = await trySlug(`fifwc-${h}-${a}-${date}`);
+			if (fwd) { event = fwd; matchedHomeTla = h; matchedAwayTla = a; break outer; }
+			const rev = await trySlug(`fifwc-${a}-${h}-${date}`);
+			if (rev) { event = rev; matchedHomeTla = h; matchedAwayTla = a; break outer; }
+		}
+	}
 	if (!event?.markets?.length) return null;
 
 	const pricePct = (priceStr) => {
@@ -633,12 +651,14 @@ async function fetchMatchupOdds(homeId, awayId, date) {
 		const pct = pricePct(m.outcomePrices);
 		if (pct == null) continue;
 		if (slug.endsWith('-draw')) drawPct = pct;
-		else if (slug.endsWith(`-${homeTla}`)) homeWinPct = pct;
-		else if (slug.endsWith(`-${awayTla}`)) awayWinPct = pct;
+		else if (slug.endsWith(`-${matchedHomeTla}`)) homeWinPct = pct;
+		else if (slug.endsWith(`-${matchedAwayTla}`)) awayWinPct = pct;
 	}
 
 	if (homeWinPct == null && awayWinPct == null && drawPct == null) return null;
 	return {
+		homeId,
+		awayId,
 		homeWinPct: homeWinPct ?? 0,
 		awayWinPct: awayWinPct ?? 0,
 		drawPct: drawPct ?? 0,

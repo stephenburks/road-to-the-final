@@ -79,12 +79,14 @@ export default function OpponentWatchlist({
 	activeStage,
 	data,
 	eliminatedTeamIds = new Set(),
+	clinchedTeamIds,
 	onTeamPeek,
 }: {
 	team: Team
 	activeStage: Stage
 	data: AppData
 	eliminatedTeamIds?: Set<string>
+	clinchedTeamIds?: Set<string>
 	onTeamPeek?: (id: string) => void
 }) {
 
@@ -178,6 +180,7 @@ export default function OpponentWatchlist({
 				<FeederGroupPanel
 					feeder={r32Feeder}
 					eliminatedTeamIds={eliminatedTeamIds}
+					clinchedTeamIds={clinchedTeamIds}
 					onTeamPeek={onTeamPeek}
 					explanation={`Potential opponent's group — based on current standings: Group ${r32Feeder.key}`}
 				/>
@@ -195,6 +198,7 @@ export default function OpponentWatchlist({
 					feeder={r16Feeder}
 					marginTop={r16WithPct ? 24 : 0}
 					eliminatedTeamIds={eliminatedTeamIds}
+					clinchedTeamIds={clinchedTeamIds}
 					onTeamPeek={onTeamPeek}
 					explanation={`Potential R16 opponent's group — if ${team.name} wins Group ${team.group}, they face the winner of Group ${r16Feeder.key}`}
 				/>

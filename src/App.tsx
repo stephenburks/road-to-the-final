@@ -71,6 +71,14 @@ export default function App() {
 
   const activeStage = useMemo(() => resolveActiveStage(selectedStage, team), [selectedStage, team])
 
+	const clinchedTeamIds = useMemo(() => {
+		const set = new Set<string>()
+		for (const t of (data?.teams ?? [])) {
+			if ((t.advanceProbabilities?.r32 ?? 0) >= 100) set.add(t.id)
+		}
+		return set
+	}, [data?.teams])
+
 	const eliminatedTeamIds = useMemo(() => {
 		const set = new Set<string>()
 		for (const t of (data?.teams ?? [])) {
@@ -147,6 +155,7 @@ export default function App() {
               <StandingsPage
                 data={data}
                 selectedTeamId={selectedTeamId}
+                clinchedTeamIds={clinchedTeamIds}
                 onTeamPeek={handleTeamPeek}
               />
             )}
@@ -195,13 +204,13 @@ export default function App() {
 			{!team.eliminated && <ErrorBoundary name="upcoming matches"><GamesToWatch team={team} data={data} onTeamPeek={handleTeamPeek} /></ErrorBoundary>}
 			<ErrorBoundary name="bracket"><RoadBracket team={team} activeStage={activeStage} onStageSelect={handleStageSelect} /></ErrorBoundary>
 
-          {showGroups && !showElim && <ErrorBoundary name="group stage"><GroupStage team={team} data={data} eliminatedTeamIds={eliminatedTeamIds} onTeamPeek={handleTeamPeek} /></ErrorBoundary>}
+          {showGroups && !showElim && <ErrorBoundary name="group stage"><GroupStage team={team} data={data} eliminatedTeamIds={eliminatedTeamIds} clinchedTeamIds={clinchedTeamIds} onTeamPeek={handleTeamPeek} /></ErrorBoundary>}
 
           {showElim ? (
             <EliminatedView team={team} />
           ) : (
             <>
-              <ErrorBoundary name="opponent watchlist"><OpponentWatchlist team={team} activeStage={activeStage} data={data} eliminatedTeamIds={eliminatedTeamIds} onTeamPeek={handleTeamPeek} /></ErrorBoundary>
+              <ErrorBoundary name="opponent watchlist"><OpponentWatchlist team={team} activeStage={activeStage} data={data} eliminatedTeamIds={eliminatedTeamIds} clinchedTeamIds={clinchedTeamIds} onTeamPeek={handleTeamPeek} /></ErrorBoundary>
               <ErrorBoundary name="schedule"><ScheduledMatches team={team} onTeamPeek={handleTeamPeek} /></ErrorBoundary>
             </>
           )}

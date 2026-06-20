@@ -252,14 +252,14 @@ export default function MatchCard(props: MatchCardProps) {
 
 			{props.matchOdds && (() => {
 				// Reorient odds so the team being viewed shows first (matches the
-				// `MyTeam vs Opponent` visual order). The eventSlug tells us which
-				// side our team is on: it ends with -{myTla} only if we're listed
-				// second in the slug (i.e. the away team).
+				// `MyTeam vs Opponent` visual order). Prefer the persisted homeId
+				// when present; fall back to slug-parsing for legacy entries.
 				const oddsRaw = props.matchOdds
 				const myTla = (getTeamTLA(teamId) || '').toLowerCase()
 				const oppTla = (getTeamTLA(NAME_TO_ID[match.opponent], match.opponent) || '').toLowerCase()
-				const slugParts = oddsRaw.eventSlug.split('-')
-				const myIsHome = slugParts[1] === myTla
+				const myIsHome = oddsRaw.homeId
+					? oddsRaw.homeId === teamId
+					: oddsRaw.eventSlug.split('-')[1] === myTla
 				const myPct = myIsHome ? oddsRaw.homeWinPct : oddsRaw.awayWinPct
 				const oppPct = myIsHome ? oddsRaw.awayWinPct : oddsRaw.homeWinPct
 				return (

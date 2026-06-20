@@ -7,10 +7,11 @@ interface FeederGroupPanelProps {
 	explanation: string
 	marginTop?: number
 	eliminatedTeamIds?: Set<string>
+	clinchedTeamIds?: Set<string>
 	onTeamPeek?: (id: string) => void
 }
 
-export default function FeederGroupPanel({ feeder, explanation, marginTop, eliminatedTeamIds, onTeamPeek }: FeederGroupPanelProps) {
+export default function FeederGroupPanel({ feeder, explanation, marginTop, eliminatedTeamIds, clinchedTeamIds, onTeamPeek }: FeederGroupPanelProps) {
 	return (
 		<div
 			className={styles.panel}
@@ -22,6 +23,7 @@ export default function FeederGroupPanel({ feeder, explanation, marginTop, elimi
 				groupData={feeder.group}
 				highlightTeamId={null}
 				eliminatedTeamIds={eliminatedTeamIds}
+				clinchedTeamIds={clinchedTeamIds}
 				onTeamPeek={onTeamPeek}
 			/>
 		</div>

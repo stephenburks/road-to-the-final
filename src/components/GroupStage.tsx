@@ -8,7 +8,7 @@ import FeederGroupPanel from './ui/FeederGroupPanel'
 import MatchCard from './groups/MatchCard'
 import styles from './GroupStage.module.css'
 
-export default function GroupStage({ team, data, eliminatedTeamIds = new Set(), onTeamPeek }: { team: Team; data: AppData; eliminatedTeamIds?: Set<string>; onTeamPeek?: (id: string) => void }) {
+export default function GroupStage({ team, data, eliminatedTeamIds = new Set(), clinchedTeamIds, onTeamPeek }: { team: Team; data: AppData; eliminatedTeamIds?: Set<string>; clinchedTeamIds?: Set<string>; onTeamPeek?: (id: string) => void }) {
 	const myGroup = data?.groups?.[team.group]
 	const feeder = getFeederGroup(team, 'r16', data)
 
@@ -80,6 +80,7 @@ export default function GroupStage({ team, data, eliminatedTeamIds = new Set(), 
 						groupData={myGroup}
 						highlightTeamId={team.id}
 						eliminatedTeamIds={eliminatedTeamIds}
+						clinchedTeamIds={clinchedTeamIds}
 						livePatches={livePatches}
 						onTeamPeek={onTeamPeek}
 					/>
@@ -89,6 +90,7 @@ export default function GroupStage({ team, data, eliminatedTeamIds = new Set(), 
 						feeder={feeder}
 						marginTop={0}
 						eliminatedTeamIds={eliminatedTeamIds}
+						clinchedTeamIds={clinchedTeamIds}
 						onTeamPeek={onTeamPeek}
 						explanation={`The table shows Group ${feeder.key} standings — if ${team.name} wins Group ${team.group}, the winner of Group ${feeder.key} would be their Round of 16 opponent.`}
 					/>

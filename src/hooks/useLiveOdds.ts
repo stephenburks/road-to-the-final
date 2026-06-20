@@ -49,6 +49,8 @@ async function fetchOddsForSlug(slug: string, signal: AbortSignal): Promise<Matc
 		awayWinPct: awayWinPct ?? 0,
 		drawPct: drawPct ?? 0,
 		eventSlug: slug,
+		// homeId/awayId left undefined here — the consumer passes the static
+		// match's polymarket field (which has them) and we only overlay pcts.
 	}
 }
 
@@ -59,8 +61,10 @@ async function fetchAllOdds(matches: LiveMatch[], signal: AbortSignal): Promise<
 	)
 	for (const { m, o } of results) {
 		if (!o) continue
-		next.set(`${m.homeId}:${m.awayId}`, o)
-		next.set(`${m.awayId}:${m.homeId}`, o)
+		// Attach the static match's IDs so frontend orientation logic stays robust.
+		const withIds: MatchupOdds = { ...o, homeId: m.homeId, awayId: m.awayId }
+		next.set(`${m.homeId}:${m.awayId}`, withIds)
+		next.set(`${m.awayId}:${m.homeId}`, withIds)
 	}
 	return next
 }

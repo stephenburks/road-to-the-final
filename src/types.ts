@@ -11,6 +11,8 @@ export interface Card {
 }
 
 export interface MatchupOdds {
+	homeId?: string         // optional for backward-compat with pre-existing JSON entries
+	awayId?: string
 	homeWinPct: number
 	awayWinPct: number
 	drawPct: number

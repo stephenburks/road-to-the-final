@@ -3,11 +3,12 @@ import type { LiveMatchPatch } from '../../hooks/useLiveScores'
 import FlagIcon from './FlagIcon'
 import styles from './GroupTable.module.css'
 
-export function GroupTable({ groupKey, groupData, highlightTeamId, eliminatedTeamIds, livePatches, onTeamPeek }: {
+export function GroupTable({ groupKey, groupData, highlightTeamId, eliminatedTeamIds, clinchedTeamIds, livePatches, onTeamPeek }: {
 	groupKey: string
 	groupData: GroupData
 	highlightTeamId: string | null
 	eliminatedTeamIds?: Set<string>
+	clinchedTeamIds?: Set<string>
 	livePatches?: Map<string, LiveMatchPatch> | null
 	onTeamPeek?: (id: string) => void
 }) {
@@ -33,13 +34,16 @@ export function GroupTable({ groupKey, groupData, highlightTeamId, eliminatedTea
 		return null
 	})()
 
-	// Compute clinched: a team has mathematically secured top-2 if their
-	// current points exceed the maximum possible points of the 3rd-place team.
+	// Clinched: prefer the caller-supplied set (typically computed from each
+	// team's advanceProbabilities.r32 >= 100, which matches what Polymarket /
+	// the Hero card displays). Fall back to the strict-math heuristic when no
+	// set is supplied.
 	const thirdMaxPossible = standings.length >= 3
 		? (standings[2].pts ?? 0) + 3 * (3 - (standings[2].played ?? 0))
 		: 0
 
 	function isClinched(row: typeof standings[number]): boolean {
+		if (clinchedTeamIds && row.teamId && clinchedTeamIds.has(row.teamId)) return true
 		if (row.pos > 2) return false
 		return row.pts > thirdMaxPossible
 	}

@@ -372,11 +372,13 @@
 	color: var(--text-dim);
 	font-family: var(--font-mono);
 	display: flex;
-	gap: 12px;
+	flex-direction: column;
+	gap: 2px;
 }
 
 .nextMatchVenue {
 	color: var(--text-lo);
+	display: block;
 }
 
 .nextMatchBroadcasts {
