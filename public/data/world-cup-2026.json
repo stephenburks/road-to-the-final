@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-20T04:50:59.977Z",
+  "lastUpdated": "2026-06-20T08:20:39.882Z",
   "snapshotDate": "2026-06-20",
   "isHistorical": false,
   "sourceSummary": {
@@ -236,7 +236,7 @@
         }
       ],
       "winProbabilities": {
-        "brazil": 69,
+        "brazil": 67,
         "morocco": 28,
         "scotland": 2,
         "haiti": 0
@@ -273,39 +273,39 @@
           "flag": "🇦🇺"
         },
         {
-          "teamId": "turkey",
-          "team": "Türkiye",
-          "played": 1,
-          "w": 0,
-          "d": 0,
-          "l": 1,
-          "gf": 0,
-          "ga": 2,
-          "pts": 0,
-          "gd": -2,
-          "pos": 3,
-          "flag": "🇹🇷"
-        },
-        {
           "teamId": "paraguay",
           "team": "Paraguay",
-          "played": 1,
-          "w": 0,
+          "played": 2,
+          "w": 1,
           "d": 0,
           "l": 1,
-          "gf": 1,
+          "gf": 2,
           "ga": 4,
+          "pts": 3,
+          "gd": -2,
+          "pos": 3,
+          "flag": "🇵🇾"
+        },
+        {
+          "teamId": "turkey",
+          "team": "Türkiye",
+          "played": 2,
+          "w": 0,
+          "d": 0,
+          "l": 2,
+          "gf": 0,
+          "ga": 3,
           "pts": 0,
           "gd": -3,
           "pos": 4,
-          "flag": "🇵🇾"
+          "flag": "🇹🇷"
         }
       ],
       "winProbabilities": {
-        "usa": 98,
+        "usa": 100,
         "australia": 0,
-        "turkey": 2,
-        "paraguay": 0
+        "paraguay": 0,
+        "turkey": 0
       }
     },
     "E": {
@@ -368,8 +368,8 @@
         }
       ],
       "winProbabilities": {
-        "germany": 74,
-        "ivorycoast": 21,
+        "germany": 76,
+        "ivorycoast": 22,
         "ecuador": 3,
         "curacao": 0
       }
@@ -566,7 +566,7 @@
         }
       ],
       "winProbabilities": {
-        "saudiarabia": 4,
+        "saudiarabia": 3,
         "uruguay": 21,
         "spain": 74,
         "capeverde": 2
@@ -767,7 +767,7 @@
         "colombia": 49,
         "portugal": 46,
         "drcongo": 5,
-        "uzbekistan": 1
+        "uzbekistan": 2
       }
     },
     "L": {
@@ -830,8 +830,8 @@
         }
       ],
       "winProbabilities": {
-        "england": 93,
-        "ghana": 5,
+        "england": 92,
+        "ghana": 4,
         "panama": 1,
         "croatia": 3
       }
@@ -911,8 +911,8 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 62,
-        "qf": 25,
+        "r16": 64,
+        "qf": 28,
         "sf": 14,
         "final": 6,
         "winner": 1,
@@ -1353,9 +1353,9 @@
       ],
       "advanceProbabilities": {
         "r32": 93,
-        "r16": 40,
+        "r16": 38,
         "qf": 16,
-        "sf": 5,
+        "sf": 4,
         "final": 1,
         "winner": 0,
         "source": "market"
@@ -1566,7 +1566,7 @@
       ],
       "advanceProbabilities": {
         "r32": 30,
-        "r16": 12,
+        "r16": 11,
         "qf": 4,
         "sf": 2,
         "final": 1,
@@ -1800,9 +1800,9 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 53,
-        "qf": 18,
-        "sf": 3,
+        "r16": 51,
+        "qf": 19,
+        "sf": 4,
         "final": 2,
         "winner": 0,
         "source": "market"
@@ -2011,7 +2011,7 @@
       ],
       "advanceProbabilities": {
         "r32": 68,
-        "r16": 17,
+        "r16": 21,
         "qf": 5,
         "sf": 2,
         "final": 1,
@@ -2432,10 +2432,10 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 99,
+        "r32": 100,
         "r16": 59,
-        "qf": 27,
-        "sf": 8,
+        "qf": 28,
+        "sf": 9,
         "final": 2,
         "winner": 1,
         "source": "market"
@@ -2631,10 +2631,10 @@
       ],
       "advanceProbabilities": {
         "r32": 99,
-        "r16": 72,
-        "qf": 49,
+        "r16": 69,
+        "qf": 48,
         "sf": 23,
-        "final": 16,
+        "final": 13,
         "winner": 6,
         "source": "market"
       },
@@ -2691,12 +2691,12 @@
         "r32": [
           {
             "group": "D",
-            "likelyTeam": "Türkiye",
-            "flag": "🇹🇷",
-            "fifaRank": 25,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
+            "likelyTeam": "Paraguay",
+            "flag": "🇵🇾",
+            "fifaRank": 39,
+            "difficulty": 2,
+            "label": "Favorable",
+            "color": "#22C55E",
             "note": "3rd-place team from Group D",
             "pct": null
           },
@@ -2833,9 +2833,9 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 59,
-        "qf": 32,
-        "sf": 15,
+        "r16": 56,
+        "qf": 33,
+        "sf": 17,
         "final": 7,
         "winner": 3,
         "source": "market"
@@ -3164,11 +3164,11 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 68,
-        "r16": 20,
-        "qf": 7,
+        "r32": 70,
+        "r16": 14,
+        "qf": 8,
         "sf": 3,
-        "final": 3,
+        "final": 2,
         "winner": 0,
         "source": "market"
       },
@@ -3338,9 +3338,9 @@
       "advanceProbabilities": {
         "r32": 100,
         "r16": 71,
-        "qf": 43,
-        "sf": 23,
-        "final": 11,
+        "qf": 44,
+        "sf": 22,
+        "final": 9,
         "winner": 3,
         "source": "market"
       },
@@ -3530,12 +3530,25 @@
           "matchday": 2,
           "opponent": "Türkiye",
           "opponentFlag": "🇹🇷",
-          "result": null,
+          "result": "W",
           "score": "1-0",
           "date": "2026-06-19",
           "venue": "Levi's Stadium, San Francisco",
-          "scorers": [],
-          "cards": []
+          "scorers": [
+            "Matías Galarza 2'"
+          ],
+          "cards": [
+            {
+              "player": "Matías Galarza",
+              "minute": "4'",
+              "type": "yellow"
+            },
+            {
+              "player": "Miguel Almirón",
+              "minute": "45'+3'",
+              "type": "red"
+            }
+          ]
         },
         {
           "matchday": 3,
@@ -3550,10 +3563,10 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 53,
-        "r16": 16,
-        "qf": 5,
-        "sf": 2,
+        "r32": 81,
+        "r16": 34,
+        "qf": 9,
+        "sf": 3,
         "final": 2,
         "winner": 0,
         "source": "market"
@@ -3564,7 +3577,7 @@
           "city": "Los Angeles · San Francisco",
           "venue": "Various venues",
           "date": "Jun 12–25",
-          "detail": "0pts after MD1"
+          "detail": "3pts after MD2"
         },
         "r32": {
           "status": "upcoming",
@@ -3729,10 +3742,10 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 80,
-        "r16": 36,
+        "r32": 89,
+        "r16": 38,
         "qf": 8,
-        "sf": 1,
+        "sf": 3,
         "final": 1,
         "winner": 0,
         "source": "market"
@@ -3857,12 +3870,18 @@
           "matchday": 2,
           "opponent": "Paraguay",
           "opponentFlag": "🇵🇾",
-          "result": null,
+          "result": "L",
           "score": "0-1",
           "date": "2026-06-19",
           "venue": "Levi's Stadium, San Francisco",
           "scorers": [],
-          "cards": []
+          "cards": [
+            {
+              "player": "Eren Elmali",
+              "minute": "71'",
+              "type": "yellow"
+            }
+          ]
         },
         {
           "matchday": 3,
@@ -3877,11 +3896,11 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 23,
-        "r16": 13,
-        "qf": 10,
-        "sf": 7,
-        "final": 1,
+        "r32": 0,
+        "r16": 0,
+        "qf": 0,
+        "sf": 0,
+        "final": 0,
         "winner": 0,
         "source": "market"
       },
@@ -3891,7 +3910,7 @@
           "city": "Vancouver · San Francisco · Los Angeles",
           "venue": "Various venues",
           "date": "Jun 13–25",
-          "detail": "0pts after MD1"
+          "detail": "0pts after MD2"
         },
         "r32": {
           "status": "upcoming",
@@ -4028,10 +4047,10 @@
       ],
       "advanceProbabilities": {
         "r32": 99,
-        "r16": 71,
+        "r16": 73,
         "qf": 41,
         "sf": 27,
-        "final": 13,
+        "final": 11,
         "winner": 6,
         "source": "market"
       },
@@ -4376,9 +4395,9 @@
       ],
       "advanceProbabilities": {
         "r32": 96,
-        "r16": 39,
-        "qf": 16,
-        "sf": 3,
+        "r16": 38,
+        "qf": 14,
+        "sf": 5,
         "final": 2,
         "winner": 0,
         "source": "market"
@@ -4514,7 +4533,7 @@
       "advanceProbabilities": {
         "r32": 81,
         "r16": 35,
-        "qf": 14,
+        "qf": 13,
         "sf": 5,
         "final": 2,
         "winner": 0,
@@ -4674,10 +4693,10 @@
       ],
       "advanceProbabilities": {
         "r32": 93,
-        "r16": 53,
+        "r16": 55,
         "qf": 37,
-        "sf": 22,
-        "final": 14,
+        "sf": 20,
+        "final": 13,
         "winner": 4,
         "source": "market"
       },
@@ -4819,10 +4838,10 @@
       ],
       "advanceProbabilities": {
         "r32": 87,
-        "r16": 42,
-        "qf": 22,
-        "sf": 7,
-        "final": 5,
+        "r16": 41,
+        "qf": 21,
+        "sf": 9,
+        "final": 6,
         "winner": 1,
         "source": "market"
       },
@@ -4967,10 +4986,10 @@
       ],
       "advanceProbabilities": {
         "r32": 94,
-        "r16": 33,
-        "qf": 17,
+        "r16": 32,
+        "qf": 14,
         "sf": 4,
-        "final": 2,
+        "final": 3,
         "winner": 0,
         "source": "market"
       },
@@ -5116,9 +5135,9 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 9,
-        "r16": 3,
-        "qf": 2,
+        "r32": 7,
+        "r16": 2,
+        "qf": 1,
         "sf": 1,
         "final": 1,
         "winner": 0,
@@ -5271,7 +5290,7 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 95,
+        "r32": 96,
         "r16": 61,
         "qf": 37,
         "sf": 14,
@@ -5428,7 +5447,7 @@
       "advanceProbabilities": {
         "r32": 83,
         "r16": 33,
-        "qf": 13,
+        "qf": 12,
         "sf": 3,
         "final": 1,
         "winner": 0,
@@ -5578,9 +5597,9 @@
       ],
       "advanceProbabilities": {
         "r32": 42,
-        "r16": 14,
-        "qf": 3,
-        "sf": 2,
+        "r16": 16,
+        "qf": 4,
+        "sf": 1,
         "final": 1,
         "winner": 0,
         "source": "market"
@@ -5767,7 +5786,7 @@
       ],
       "advanceProbabilities": {
         "r32": 28,
-        "r16": 8,
+        "r16": 6,
         "qf": 2,
         "sf": 2,
         "final": 2,
@@ -5915,10 +5934,10 @@
       ],
       "advanceProbabilities": {
         "r32": 97,
-        "r16": 72,
+        "r16": 74,
         "qf": 56,
-        "sf": 40,
-        "final": 24,
+        "sf": 39,
+        "final": 23,
         "winner": 14,
         "source": "market"
       },
@@ -6085,7 +6104,7 @@
       ],
       "advanceProbabilities": {
         "r32": 43,
-        "r16": 6,
+        "r16": 5,
         "qf": 5,
         "sf": 2,
         "final": 1,
@@ -6402,8 +6421,8 @@
       "advanceProbabilities": {
         "r32": 77,
         "r16": 31,
-        "qf": 19,
-        "sf": 11,
+        "qf": 18,
+        "sf": 7,
         "final": 3,
         "winner": 1,
         "source": "market"
@@ -6558,10 +6577,10 @@
       ],
       "advanceProbabilities": {
         "r32": 99,
-        "r16": 84,
+        "r16": 86,
         "qf": 61,
         "sf": 46,
-        "final": 32,
+        "final": 28,
         "winner": 18,
         "source": "market"
       },
@@ -6691,7 +6710,7 @@
       ],
       "advanceProbabilities": {
         "r32": 67,
-        "r16": 28,
+        "r16": 30,
         "qf": 14,
         "sf": 6,
         "final": 2,
@@ -6841,7 +6860,7 @@
       ],
       "advanceProbabilities": {
         "r32": 5,
-        "r16": 5,
+        "r16": 3,
         "qf": 1,
         "sf": 0,
         "final": 0,
@@ -6988,7 +7007,7 @@
       ],
       "advanceProbabilities": {
         "r32": 97,
-        "r16": 62,
+        "r16": 61,
         "qf": 35,
         "sf": 20,
         "final": 8,
@@ -7170,7 +7189,7 @@
         "r16": 73,
         "qf": 59,
         "sf": 39,
-        "final": 21,
+        "final": 20,
         "winner": 12,
         "source": "market"
       },
@@ -7342,8 +7361,8 @@
       ],
       "advanceProbabilities": {
         "r32": 55,
-        "r16": 19,
-        "qf": 7,
+        "r16": 20,
+        "qf": 8,
         "sf": 2,
         "final": 2,
         "winner": 0,
@@ -7494,7 +7513,7 @@
       ],
       "advanceProbabilities": {
         "r32": 93,
-        "r16": 31,
+        "r16": 32,
         "qf": 13,
         "sf": 5,
         "final": 2,
@@ -7638,10 +7657,10 @@
       ],
       "advanceProbabilities": {
         "r32": 10,
-        "r16": 2,
+        "r16": 1,
         "qf": 1,
         "sf": 1,
-        "final": 1,
+        "final": 0,
         "winner": 0,
         "source": "market"
       },
@@ -7797,11 +7816,11 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 93,
-        "r16": 69,
+        "r32": 94,
+        "r16": 67,
         "qf": 44,
         "sf": 31,
-        "final": 16,
+        "final": 13,
         "winner": 7,
         "source": "market"
       },
@@ -7936,8 +7955,8 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 60,
-        "r16": 16,
+        "r32": 59,
+        "r16": 14,
         "qf": 3,
         "sf": 3,
         "final": 1,
@@ -8086,7 +8105,7 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 17,
+        "r32": 18,
         "r16": 5,
         "qf": 1,
         "sf": 1,
@@ -8239,9 +8258,9 @@
       ],
       "advanceProbabilities": {
         "r32": 97,
-        "r16": 56,
+        "r16": 57,
         "qf": 32,
-        "sf": 15,
+        "sf": 16,
         "final": 6,
         "winner": 2,
         "source": "market"
@@ -8444,7 +8463,7 @@
         "r16": 84,
         "qf": 61,
         "sf": 40,
-        "final": 24,
+        "final": 22,
         "winner": 13,
         "source": "market"
       },
@@ -8576,8 +8595,8 @@
       "advanceProbabilities": {
         "r32": 77,
         "r16": 38,
-        "qf": 15,
-        "sf": 7,
+        "qf": 14,
+        "sf": 9,
         "final": 2,
         "winner": 1,
         "source": "market"
@@ -8747,7 +8766,7 @@
       ],
       "advanceProbabilities": {
         "r32": 71,
-        "r16": 25,
+        "r16": 22,
         "qf": 7,
         "sf": 3,
         "final": 2,
@@ -8910,8 +8929,8 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 12,
-        "r16": 4,
+        "r32": 10,
+        "r16": 3,
         "qf": 2,
         "sf": 1,
         "final": 0,
@@ -9645,22 +9664,15 @@
         "awayId": "paraguay",
         "homeScore": 0,
         "awayScore": 1,
-        "status": "IN_PROGRESS",
+        "status": "FINISHED",
         "date": "2026-06-19",
-        "clock": "84'",
         "broadcasts": [
           "FS1",
           "Tele",
           "FOX One"
         ],
         "time": "2026-06-20T03:00Z",
-        "venue": "Levi's Stadium, Santa Clara, California",
-        "polymarket": {
-          "homeWinPct": 8,
-          "awayWinPct": 63,
-          "drawPct": 30,
-          "eventSlug": "fifwc-tur-par-2026-06-19"
-        }
+        "venue": "Levi's Stadium, Santa Clara, California"
       }
     ],
     "2026-06-20": [
@@ -9768,7 +9780,7 @@
         "venue": "Mercedes-Benz Stadium, Atlanta, Georgia",
         "polymarket": {
           "homeWinPct": 89,
-          "awayWinPct": 4,
+          "awayWinPct": 3,
           "drawPct": 9,
           "eventSlug": "fifwc-esp-ksa-2026-06-21"
         }
@@ -9888,7 +9900,7 @@
         "time": "2026-06-22T21:00Z",
         "venue": "Lincoln Financial Field, Philadelphia, Pennsylvania",
         "polymarket": {
-          "homeWinPct": 90,
+          "homeWinPct": 91,
           "awayWinPct": 3,
           "drawPct": 8,
           "eventSlug": "fifwc-fra-irq-2026-06-22"
@@ -10094,7 +10106,7 @@
         "venue": "Mercedes-Benz Stadium, Atlanta, Georgia",
         "polymarket": {
           "homeWinPct": 81,
-          "awayWinPct": 7,
+          "awayWinPct": 6,
           "drawPct": 14,
           "eventSlug": "fifwc-mar-hai-2026-06-24"
         }
@@ -10118,7 +10130,7 @@
         "time": "2026-06-24T22:00Z",
         "venue": "Hard Rock Stadium, Miami Gardens, Florida",
         "polymarket": {
-          "homeWinPct": 13,
+          "homeWinPct": 12,
           "awayWinPct": 71,
           "drawPct": 18,
           "eventSlug": "fifwc-sco-bra-2026-06-24"
@@ -10144,7 +10156,7 @@
         "venue": "Estadio Banorte, Mexico City",
         "polymarket": {
           "homeWinPct": 28,
-          "awayWinPct": 49,
+          "awayWinPct": 50,
           "drawPct": 24,
           "eventSlug": "fifwc-cze-mex-2026-06-24"
         }
@@ -10234,7 +10246,7 @@
         "venue": "AT&T Stadium, Arlington, Texas",
         "polymarket": {
           "homeWinPct": 44,
-          "awayWinPct": 28,
+          "awayWinPct": 30,
           "drawPct": 28,
           "eventSlug": "fifwc-jpn-swe-2026-06-25"
         }
@@ -10277,9 +10289,9 @@
         "time": "2026-06-26T02:00Z",
         "venue": "Levi's Stadium, Santa Clara, California",
         "polymarket": {
-          "homeWinPct": 45,
-          "awayWinPct": 27,
-          "drawPct": 30,
+          "homeWinPct": 35,
+          "awayWinPct": 25,
+          "drawPct": 40,
           "eventSlug": "fifwc-par-aus-2026-06-25"
         }
       },
@@ -10302,8 +10314,8 @@
         "time": "2026-06-26T02:00Z",
         "venue": "SoFi Stadium, Inglewood, California",
         "polymarket": {
-          "homeWinPct": 32,
-          "awayWinPct": 46,
+          "homeWinPct": 31,
+          "awayWinPct": 47,
           "drawPct": 24,
           "eventSlug": "fifwc-tur-usa-2026-06-25"
         }
@@ -10418,7 +10430,7 @@
         "venue": "Lumen Field, Seattle, Washington",
         "polymarket": {
           "homeWinPct": 47,
-          "awayWinPct": 24,
+          "awayWinPct": 25,
           "drawPct": 30,
           "eventSlug": "fifwc-egy-irn-2026-06-26"
         }
@@ -10488,7 +10500,7 @@
         "time": "2026-06-27T21:00Z",
         "venue": "MetLife Stadium, East Rutherford, New Jersey",
         "polymarket": {
-          "homeWinPct": 9,
+          "homeWinPct": 8,
           "awayWinPct": 80,
           "drawPct": 13,
           "eventSlug": "fifwc-pan-eng-2026-06-27"
