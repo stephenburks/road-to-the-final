@@ -610,7 +610,7 @@ async function fetchPolymarketAll() {
 // Persists homeId/awayId so the frontend can determine orientation by id (not by
 // parsing TLAs out of the slug, which avoids ambiguity when Polymarket uses ISO
 // codes vs. our FIFA TLAs for display).
-async function fetchMatchupOdds(homeId, awayId, date) {
+async function fetchMatchupOdds(homeId, awayId, date, time) {
 	const homeTlas = ID_TO_PM_TLA[homeId];
 	const awayTlas = ID_TO_PM_TLA[awayId];
 	if (!homeTlas?.length || !awayTlas?.length) return null;
@@ -621,18 +621,28 @@ async function fetchMatchupOdds(homeId, awayId, date) {
 		return data[0];
 	};
 
-	// Polymarket's slug ordering isn't documented and TLAs can be ISO or
-	// inconsistent (e.g. South Korea uses both 'kor' and 'kr'). Try every
-	// combination of {primary, alternates} × {home-first, away-first} until one hits.
+	// Build candidate date list — Polymarket slugs use the kickoff's UTC date,
+	// but our `date` field is the local match-day (Pacific), which differs for
+	// late-evening kickoffs (e.g., 7pm PT = 02:00 UTC next day).
+	const dates = [date];
+	if (time) {
+		const utcDate = new Date(time).toISOString().slice(0, 10);
+		if (utcDate && utcDate !== date) dates.push(utcDate);
+	}
+
+	// Try every combination of {primary, alternate} TLAs × {home-first,
+	// away-first} ordering × {match date, UTC date} until one hits.
 	let event = null;
 	let matchedHomeTla = null;
 	let matchedAwayTla = null;
-	outer: for (const h of homeTlas) {
-		for (const a of awayTlas) {
-			const fwd = await trySlug(`fifwc-${h}-${a}-${date}`);
-			if (fwd) { event = fwd; matchedHomeTla = h; matchedAwayTla = a; break outer; }
-			const rev = await trySlug(`fifwc-${a}-${h}-${date}`);
-			if (rev) { event = rev; matchedHomeTla = h; matchedAwayTla = a; break outer; }
+	outer: for (const d of dates) {
+		for (const h of homeTlas) {
+			for (const a of awayTlas) {
+				const fwd = await trySlug(`fifwc-${h}-${a}-${d}`);
+				if (fwd) { event = fwd; matchedHomeTla = h; matchedAwayTla = a; break outer; }
+				const rev = await trySlug(`fifwc-${a}-${h}-${d}`);
+				if (rev) { event = rev; matchedHomeTla = h; matchedAwayTla = a; break outer; }
+			}
 		}
 	}
 	if (!event?.markets?.length) return null;
@@ -689,7 +699,7 @@ async function attachMatchupOdds(dailyMatches, existing) {
 	for (let i = 0; i < pending.length; i += BATCH) {
 		const slice = pending.slice(i, i + BATCH);
 		await Promise.all(slice.map(async (m) => {
-			const odds = await fetchMatchupOdds(m.homeId, m.awayId, m.date);
+			const odds = await fetchMatchupOdds(m.homeId, m.awayId, m.date, m.time);
 			if (odds) {
 				m.polymarket = odds;
 				hits++;

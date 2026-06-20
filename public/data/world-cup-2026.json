@@ -9766,7 +9766,15 @@
 					"FOX One"
 				],
 				"time": "2026-06-21T04:00Z",
-				"venue": "Estadio BBVA, Guadalupe"
+				"venue": "Estadio BBVA, Guadalupe",
+				"polymarket": {
+					"homeId": "tunisia",
+					"awayId": "japan",
+					"homeWinPct": 14,
+					"awayWinPct": 65,
+					"drawPct": 24,
+					"eventSlug": "fifwc-tun-jpn-2026-06-21"
+				}
 			}
 		],
 		"2026-06-21": [
