@@ -257,6 +257,29 @@
 	margin-bottom: 5px;
 }
 
+.statValueClinched {
+	font-size: 1.1rem;
+	font-weight: 700;
+	color: var(--green);
+	display: inline-flex;
+	align-items: center;
+	gap: 4px;
+	letter-spacing: 0.02em;
+}
+
+.clinchedCheck {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 18px;
+	height: 18px;
+	border-radius: 50%;
+	background: rgba(34, 197, 94, 0.15);
+	border: 1px solid rgba(34, 197, 94, 0.4);
+	font-size: 11px;
+	font-weight: 700;
+}
+
 .statValueR32 {
 	color: var(--green);
 }

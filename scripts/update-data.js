@@ -647,21 +647,39 @@ async function fetchMatchupOdds(homeId, awayId, date) {
 }
 
 // Run fetches in batches to avoid hammering Polymarket.
-async function attachMatchupOdds(dailyMatches) {
+async function attachMatchupOdds(dailyMatches, existing) {
 	const all = Object.values(dailyMatches).flat();
 	// Markets stay live until resolved — fetch for scheduled AND in-progress matches.
 	// Skip FINISHED (already resolved to 100/0, not useful).
 	const pending = all.filter(m => m.status === 'SCHEDULED' || m.status === 'IN_PROGRESS');
+
+	// Build a lookup of previously-persisted odds so we can carry forward when
+	// a fetch returns null (Polymarket transient failure).
+	const prevOdds = new Map();
+	const prevDaily = existing?.dailyMatches || {};
+	for (const arr of Object.values(prevDaily)) {
+		for (const m of arr) {
+			if (m.polymarket) prevOdds.set(`${m.homeId}:${m.awayId}:${m.date}`, m.polymarket);
+		}
+	}
+
 	const BATCH = 8;
 	let hits = 0;
+	let carried = 0;
 	for (let i = 0; i < pending.length; i += BATCH) {
 		const slice = pending.slice(i, i + BATCH);
 		await Promise.all(slice.map(async (m) => {
 			const odds = await fetchMatchupOdds(m.homeId, m.awayId, m.date);
-			if (odds) { m.polymarket = odds; hits++; }
+			if (odds) {
+				m.polymarket = odds;
+				hits++;
+			} else {
+				const prev = prevOdds.get(`${m.homeId}:${m.awayId}:${m.date}`);
+				if (prev) { m.polymarket = prev; carried++; }
+			}
 		}));
 	}
-	log(`Polymarket matchup odds: ${hits}/${pending.length} active matches`);
+	log(`Polymarket matchup odds: ${hits} fresh + ${carried} carried-forward / ${pending.length} active matches`);
 }
 
 // ─── Build group results for a team from match data ──────────────────────────
@@ -811,7 +829,7 @@ function buildPath(teamId, group, standings) {
   };
 }
 
-function calcProbs(teamId, group, standings, polyData) {
+function calcProbs(teamId, group, standings, polyData, existingProbs) {
   // Use Polymarket data DIRECTLY for every stage where it exists.
   // NO interpolation for stages with market data — pull from source of truth.
   // Only use 'calculated' for stages where Polymarket truly has no price.
@@ -836,11 +854,24 @@ function calcProbs(teamId, group, standings, polyData) {
     return calcProbsFallback(teamId, group, standings);
   }
 
+  // Idempotency guard: when a stage is missing from the current Polymarket
+  // fetch but was present (with source='market') in the previous JSON, prefer
+  // the previous value over interpolation. Protects against transient
+  // Polymarket gaps reducing market-quality data to interpolated estimates.
+  const prevSource = existingProbs?.source;
+  const prevWasMarket = prevSource === 'market';
+
   // Build result: use market data where available, interpolate only the gaps
   const result = {};
   for (let i = 0; i < stages.length; i++) {
-    if (typeof market[stages[i]] === 'number') {
-      result[stages[i]] = market[stages[i]];
+    const stageKey = stages[i];
+    if (typeof market[stageKey] === 'number') {
+      result[stageKey] = market[stageKey];
+      continue;
+    }
+    // Stage missing from current Polymarket fetch — try previous market value first
+    if (prevWasMarket && typeof existingProbs?.[stageKey] === 'number') {
+      result[stageKey] = existingProbs[stageKey];
       continue;
     }
     // Find nearest known stages before and after
@@ -851,17 +882,17 @@ function calcProbs(teamId, group, standings, polyData) {
       // Geometric interpolation between two known stages
       const steps = after.idx - before.idx;
       const t = (i - before.idx) / steps;
-      result[stages[i]] = Math.round(before.val * Math.pow(after.val / before.val, t));
+      result[stageKey] = Math.round(before.val * Math.pow(after.val / before.val, t));
     } else if (before) {
       // Extrapolate forward from last known stage
       const stepsFrom = i - before.idx;
       const perRound = 0.48; // conservative per-round advancement factor
-      result[stages[i]] = Math.round(before.val * Math.pow(perRound, stepsFrom));
+      result[stageKey] = Math.round(before.val * Math.pow(perRound, stepsFrom));
     } else if (after) {
       // Extrapolate backward from first known stage
       const stepsTo = after.idx - i;
       const perRound = 1 / 0.48;
-      result[stages[i]] = Math.min(Math.round(after.val * Math.pow(perRound, stepsTo)), 99);
+      result[stageKey] = Math.min(Math.round(after.val * Math.pow(perRound, stepsTo)), 99);
     }
   }
 
@@ -1340,7 +1371,7 @@ async function main() {
         || typeof polyData.final?.[t.id] === 'number'
         || typeof polyData.winner?.[t.id] === 'number';
       const teamAdvP = hasFreshPoly
-        ? calcProbs(t.id, t.group, rawStandings, polyData)
+        ? calcProbs(t.id, t.group, rawStandings, polyData, existingTeam.advanceProbabilities)
         : existingTeam.advanceProbabilities;
 
       // Carry forward but always update computed fields if standings exist
@@ -1398,7 +1429,7 @@ async function main() {
       || typeof polyData.winner?.[t.id] === 'number';
     const teamAdvanceProbs = existingHadMarket && !hasFreshPoly
       ? existingTeam.advanceProbabilities
-      : calcProbs(t.id, t.group, rawStandings, polyData);
+      : calcProbs(t.id, t.group, rawStandings, polyData, existingTeam?.advanceProbabilities);
 
     const teamPath      = buildPath(t.id, t.group, rawStandings);
     const possibleOpps  = buildOpponents(t.id, t.group, teamPath.r32?.opponentDesc ?? '', teamPath.r16?.opponentDesc ?? '', rawStandings);
@@ -1444,7 +1475,7 @@ async function main() {
   }
   log(`Daily matches: ${Object.keys(dailyMatches).length} dates, ${Object.values(dailyMatches).reduce((s, a) => s + a.length, 0)} matches`);
 
-  await attachMatchupOdds(dailyMatches);
+  await attachMatchupOdds(dailyMatches, existing);
 
   // Assemble output
   const today = todayStr();

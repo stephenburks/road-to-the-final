@@ -7,7 +7,7 @@ interface TeamRecord {
 	stats: Record<string, number>
 }
 
-interface NextEvent {
+export interface NextEvent {
 	opponent: string
 	opponentFlag: string
 	date: string

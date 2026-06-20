@@ -1,7 +1,7 @@
-import { STAGE_LABELS, POLYMARKET_STAGE_URLS, polymarketGroupUrl } from '../constants'
+import { STAGE_LABELS, STAGE_ORDER, POLYMARKET_STAGE_URLS, polymarketGroupUrl } from '../constants'
 import type { Stage, Team, AppData, AdvanceProbabilities } from '../types'
-import { daysUntil, formatDate } from '../utils'
-import { useTeamRecord } from '../hooks/useTeamRecord'
+import { daysUntil, formatDate, stageIndex } from '../utils'
+import { useTeamRecord, type NextEvent } from '../hooks/useTeamRecord'
 import { useLiveScores } from '../hooks/useLiveScores'
 import { useLiveTournamentProbs } from '../hooks/useLiveTournamentProbs'
 import { useChangeIndicator } from '../hooks/useChangeIndicator'
@@ -111,6 +111,62 @@ function GroupChangeArrow({ value }: { value: number | undefined }) {
 	return <ChangeArrow delta={delta} />
 }
 
+/**
+ * Has the team mathematically secured this stage? "Reach R32" is clinched
+ * when team.currentStage is r32 or beyond, etc. The "winner" card never
+ * auto-clinches — that would require tracking the final champion.
+ */
+function isStageClinched(team: Team, cardKey: keyof AdvanceProbabilities): boolean {
+	if (cardKey === 'winner') return false
+	if (cardKey === 'source') return false
+	if (!STAGE_ORDER.includes(cardKey as Stage)) return false
+	return stageIndex(team.currentStage) >= stageIndex(cardKey as Stage)
+}
+
+/**
+ * Group winner is clinched when all four teams in the group have completed
+ * their three matches and this team finished first.
+ */
+function isGroupWinClinched(team: Team, data: AppData | undefined): boolean {
+	const standings = data?.groups?.[team.group]?.standings
+	if (!standings || standings.length === 0) return false
+	const row = standings.find(r => r.teamId === team.id)
+	if (!row || row.pos !== 1) return false
+	return standings.every(s => (s.played ?? 0) >= 3)
+}
+
+/**
+ * When ESPN's team API has no nextEvent (typically when the next match is
+ * more than a week out), construct one from our static schedule data so the
+ * Hero card stays populated.
+ */
+function buildFallbackNextEvent(team: Team, data: AppData | undefined): NextEvent | null {
+	if (!data?.dailyMatches) return null
+	const today = new Date().toISOString().slice(0, 10)
+	const dates = Object.keys(data.dailyMatches).sort()
+	for (const date of dates) {
+		if (date < today) continue
+		const matches = data.dailyMatches[date] ?? []
+		for (const m of matches) {
+			if (m.homeId !== team.id && m.awayId !== team.id) continue
+			if (m.status === 'FINISHED') continue
+			const isHome = m.homeId === team.id
+			const opponent = isHome ? m.awayTeam : m.homeTeam
+			const opponentFlag = isHome ? m.awayFlag : m.homeFlag
+			return {
+				opponent,
+				opponentFlag,
+				date: m.time ?? m.date,
+				venue: m.venue ?? '',
+				broadcasts: m.broadcasts ?? [],
+				isHome,
+				isLive: false,
+			}
+		}
+	}
+	return null
+}
+
 export default function Hero({
 	team,
 	activeStage,
@@ -146,11 +202,16 @@ export default function Hero({
 
 	const {
 		record,
-		nextEvent,
+		nextEvent: espnNextEvent,
 		links,
 		error: teamRecordError,
 		loading: teamRecordLoading,
 	} = useTeamRecord(team.id, isHistorical)
+
+	// ESPN's team API only exposes nextEvent within ~1 week of kickoff. For
+	// teams between rounds or with a longer gap, fall back to our static
+	// schedule so the Next Match card still renders.
+	const nextEvent = espnNextEvent ?? (!isHistorical ? buildFallbackNextEvent(team, data) : null)
 
 	const eyebrow = getEyebrow(team, activeStage, isHistorical)
 	const heading = getHeading(team)
@@ -339,14 +400,25 @@ export default function Hero({
 				{/* ── Group Win ── */}
 				{(() => {
 					const effectivePct = liveGroupVal ?? groupWinProb?.probability
-					const groupUrl = groupWinProb && !isHistorical
+					const clinched = isGroupWinClinched(team, data)
+					const groupUrl = !clinched && groupWinProb && !isHistorical
 						? polymarketGroupUrl(groupWinProb.groupLetter)
 						: undefined
 					const groupLabel = groupWinProb ? `Win Group ${groupWinProb.groupLetter}` : 'Win Group'
-					const groupAria = groupWinProb
-						? `Win Group ${groupWinProb.groupLetter}: ${effectivePct ?? 0}%`
-						: 'Win group probability not available'
-					const groupContent = (
+					const groupAria = clinched
+						? `Group ${groupWinProb?.groupLetter ?? team.group} clinched`
+						: groupWinProb
+							? `Win Group ${groupWinProb.groupLetter}: ${effectivePct ?? 0}%`
+							: 'Win group probability not available'
+					const groupContent = clinched ? (
+						<>
+							<div className={`${styles.statValue} ${styles.statValueGroup} ${styles.statValueClinched}`}>
+								<span className={styles.clinchedCheck} aria-hidden="true">\u2713</span> Clinched
+							</div>
+							<div className={styles.statLabel}>{groupLabel}</div>
+							<div className={styles.statSub}>Confirmed</div>
+						</>
+					) : (
 						<>
 							<div className={`${styles.statValue} ${styles.statValueGroup}`}>
 								{effectivePct ?? '\u2014'}%
@@ -380,14 +452,26 @@ export default function Hero({
 
 				{/* ── Stage probabilities ── */}
 				{STAT_CARD_DEFS.map((card) => {
-					const staticValue = (ap[card.key as keyof AdvanceProbabilities] ?? 0) as number
-					const live = liveStageVal(card.key as keyof AdvanceProbabilities)
+					const cardKey = card.key as keyof AdvanceProbabilities
+					const clinched = isStageClinched(team, cardKey)
+					const staticValue = (ap[cardKey] ?? 0) as number
+					const live = liveStageVal(cardKey)
 					const value: number = live ?? staticValue
-					const stageUrl = !isHistorical && source === 'market'
+					const stageUrl = !clinched && !isHistorical && source === 'market'
 						? POLYMARKET_STAGE_URLS[card.key as keyof typeof POLYMARKET_STAGE_URLS]
 						: undefined
-					const aria = `${card.label}: ${value}%`
-					const inner = (
+					const aria = clinched
+						? `${card.label}: clinched`
+						: `${card.label}: ${value}%`
+					const inner = clinched ? (
+						<>
+							<div className={`${styles.statValue} ${card.valueClass} ${styles.statValueClinched}`}>
+								<span className={styles.clinchedCheck} aria-hidden="true">✓</span> Clinched
+							</div>
+							<div className={styles.statLabel}>{card.label}</div>
+							<div className={styles.statSub}>Confirmed</div>
+						</>
+					) : (
 						<>
 							<div className={`${styles.statValue} ${card.valueClass}`}>
 								{value}%

@@ -68,15 +68,22 @@ describe('Hero', () => {
 	it('shows stat grid with advancement probabilities for active team', () => {
 		renderWithQuery(<Hero team={mockTeam()} activeStage={ACTIVE_STAGE} isHistorical={false} />)
 		expect(screen.getByRole('list', { name: /advancement probabilities/i })).toBeInTheDocument()
-		expect(screen.getByText('100%')).toBeInTheDocument()
+		// r32 card shows 'Clinched' since team.currentStage is r32; other stages show %
 		expect(screen.getByText('70%')).toBeInTheDocument()
 		expect(screen.getByText('40%')).toBeInTheDocument()
 		expect(screen.getByText('5%')).toBeInTheDocument()
 	})
 
+	it('shows clinched label on cards for stages the team has already reached', () => {
+		renderWithQuery(<Hero team={mockTeam()} activeStage={ACTIVE_STAGE} isHistorical={false} />)
+		// team.currentStage === 'r32' => "Reach R32" is clinched
+		expect(screen.getAllByText(/Clinched/).length).toBeGreaterThanOrEqual(1)
+	})
+
 	it('shows Polymarket as source label when source is market', () => {
 		renderWithQuery(<Hero team={mockTeam()} activeStage={ACTIVE_STAGE} isHistorical={false} />)
-		expect(screen.getAllByText('Polymarket')).toHaveLength(7)
+		// r32 card is clinched (sub = "Confirmed"), so Polymarket appears on 5 stage cards + Win Group
+		expect(screen.getAllByText('Polymarket')).toHaveLength(6)
 	})
 
 	it('shows calculated as source label when source is calculated', () => {
@@ -87,12 +94,14 @@ describe('Hero', () => {
 			},
 		})
 		renderWithQuery(<Hero team={team} activeStage={ACTIVE_STAGE} isHistorical={false} />)
-		expect(screen.getAllByText('Calculated')).toHaveLength(6)
+		// r32 card clinched => 5 stage cards left showing Calculated
+		expect(screen.getAllByText('Calculated')).toHaveLength(5)
 	})
 
 	it('shows historical source label when isHistorical is true', () => {
 		renderWithQuery(<Hero team={mockTeam()} activeStage={ACTIVE_STAGE} isHistorical={true} />)
-		expect(screen.getAllByText('As of snapshot')).toHaveLength(6)
+		// r32 card clinched => 5 stage cards left showing snapshot label
+		expect(screen.getAllByText('As of snapshot')).toHaveLength(5)
 	})
 
 	it('shows historical suffix in eyebrow when isHistorical', () => {

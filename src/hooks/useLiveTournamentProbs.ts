@@ -91,8 +91,10 @@ async function fetchAll(signal: AbortSignal): Promise<LiveTournamentProbs> {
 }
 
 /**
- * Polls the 18 Polymarket stage + group-winner events at 75s when any of
- * today's matches is IN_PROGRESS (per static data or per live patch).
+ * Fetches the 18 Polymarket stage + group-winner events. Always enabled
+ * (outside historical mode) so users get fresh probabilities on load even
+ * when the GHA data is stale. Polls every 75s ONLY while a match is live;
+ * otherwise relies on a 5-min staleTime cache to avoid refetching.
  */
 export function useLiveTournamentProbs(
 	dailyMatches: AppData['dailyMatches'],
@@ -111,14 +113,12 @@ export function useLiveTournamentProbs(
 		return false
 	}, [dailyMatches, today, livePatches])
 
-	const shouldPoll = !isHistorical && anyLive
-
 	const { data = null } = useQuery({
 		queryKey: ['liveTournamentProbs'],
 		queryFn: ({ signal }) => fetchAll(signal),
-		enabled: shouldPoll,
-		refetchInterval: shouldPoll ? 75_000 : false,
-		staleTime: 30_000,
+		enabled: !isHistorical,
+		refetchInterval: !isHistorical && anyLive ? 75_000 : false,
+		staleTime: anyLive ? 30_000 : 5 * 60_000,
 	})
 
 	return data
