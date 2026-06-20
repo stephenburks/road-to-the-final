@@ -1,7 +1,8 @@
 import { useMemo } from 'react'
-import type { Team, AppData, DailyMatch } from '../types'
+import type { Team, AppData, DailyMatch, MatchupOdds } from '../types'
 import { GROUP_SCHEDULE, MATCH_DATES } from '../data/tournamentSchedule'
 import { useLiveScores, type LiveMatchPatch } from '../hooks/useLiveScores'
+import { useLiveOdds } from '../hooks/useLiveOdds'
 import MatchCard from './groups/MatchCard'
 import styles from './GamesToWatch.module.css'
 
@@ -12,7 +13,7 @@ function dateStr(daysOffset = 0): string {
 	return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`
 }
 
-function enrich(match: DailyMatch, teams: AppData['teams'], livePatch?: LiveMatchPatch) {
+function enrich(match: DailyMatch, teams: AppData['teams'], livePatch?: LiveMatchPatch, liveOdds?: MatchupOdds) {
 	const homeTeam = teams.find((t) => t.id === match.homeId)
 	const awayTeam = teams.find((t) => t.id === match.awayId)
 	const homeResult = homeTeam?.groupResults?.find((g) => g.opponent === match.awayTeam)
@@ -47,7 +48,7 @@ function enrich(match: DailyMatch, teams: AppData['teams'], livePatch?: LiveMatc
 		homeCards: livePatch?.homeCards ?? homeResult?.cards ?? [],
 		awayCards: livePatch?.awayCards ?? awayResult?.cards ?? [],
 		venue: match.venue,
-		polymarket: match.polymarket,
+		polymarket: liveOdds ?? match.polymarket,
 	}
 }
 
@@ -56,7 +57,7 @@ interface WatchMatch {
 	note: string
 }
 
-function findGroupWatchMatches(team: Team, data: AppData, targetDates: string[], livePatches: Map<string, LiveMatchPatch> | null): WatchMatch[] {
+function findGroupWatchMatches(team: Team, data: AppData, targetDates: string[], livePatches: Map<string, LiveMatchPatch> | null, liveOdds: Map<string, MatchupOdds> | null): WatchMatch[] {
 	const groupLetter = team.group
 	const groupStandings = data.groups?.[groupLetter]?.standings ?? []
 	const groupTeamIds = new Set(groupStandings.map((s) => s.teamId).filter(Boolean) as string[])
@@ -69,7 +70,7 @@ function findGroupWatchMatches(team: Team, data: AppData, targetDates: string[],
 			if (match.homeId === team.id || match.awayId === team.id) continue
 			const livePatch = livePatches?.get(`${match.homeId}:${match.awayId}`)
 			results.push({
-				match: enrich(match, data.teams, livePatch),
+				match: enrich(match, data.teams, livePatch, liveOdds?.get(`${match.homeId}:${match.awayId}`)),
 				note: `This result affects ${team.name}'s group standing`,
 			})
 		}
@@ -77,7 +78,7 @@ function findGroupWatchMatches(team: Team, data: AppData, targetDates: string[],
 	return results
 }
 
-function findKnockoutWatchMatches(team: Team, data: AppData, _targetDates: string[], livePatches: Map<string, LiveMatchPatch> | null): WatchMatch[] {
+function findKnockoutWatchMatches(team: Team, data: AppData, _targetDates: string[], livePatches: Map<string, LiveMatchPatch> | null, liveOdds: Map<string, MatchupOdds> | null): WatchMatch[] {
 	const path = team.path?.[team.currentStage ?? 'r32']
 	const desc = path?.opponentDesc ?? ''
 	const results: WatchMatch[] = []
@@ -91,7 +92,7 @@ function findKnockoutWatchMatches(team: Team, data: AppData, _targetDates: strin
 			for (const match of dayMatches) {
 				const livePatch = livePatches?.get(`${match.homeId}:${match.awayId}`)
 				results.push({
-					match: enrich(match, data.teams, livePatch),
+					match: enrich(match, data.teams, livePatch, liveOdds?.get(`${match.homeId}:${match.awayId}`)),
 					note: `Winner faces ${team.name} in ${team.currentStage?.toUpperCase() || 'next round'}`,
 				})
 			}
@@ -112,7 +113,7 @@ function findKnockoutWatchMatches(team: Team, data: AppData, _targetDates: strin
 				if (scheduleIds.has(match.homeId) || scheduleIds.has(match.awayId)) {
 					const livePatch = livePatches?.get(`${match.homeId}:${match.awayId}`)
 					results.push({
-						match: enrich(match, data.teams, livePatch),
+						match: enrich(match, data.teams, livePatch, liveOdds?.get(`${match.homeId}:${match.awayId}`)),
 						note: `Decides ${team.name}'s next opponent in ${team.currentStage?.toUpperCase() || 'next round'}`,
 					})
 				}
@@ -132,6 +133,7 @@ interface GamesToWatchProps {
 
 export default function GamesToWatch({ team, data, onTeamPeek }: GamesToWatchProps) {
 	const livePatches = useLiveScores(data.dailyMatches ?? {}, data.teams, data.isHistorical)
+	const liveOdds = useLiveOdds(data.dailyMatches ?? {}, livePatches, data.isHistorical)
 
 	const watchMatches = useMemo<WatchMatch[]>(() => {
 		const today = dateStr(0)
@@ -141,10 +143,10 @@ export default function GamesToWatch({ team, data, onTeamPeek }: GamesToWatchPro
 		const isGroupStage = team.currentStage === 'group_stage'
 
 		if (isGroupStage) {
-			return findGroupWatchMatches(team, data, targetDates, livePatches)
+			return findGroupWatchMatches(team, data, targetDates, livePatches, liveOdds)
 		}
-		return findKnockoutWatchMatches(team, data, targetDates, livePatches)
-	}, [team, data, livePatches])
+		return findKnockoutWatchMatches(team, data, targetDates, livePatches, liveOdds)
+	}, [team, data, livePatches, liveOdds])
 
 	if (watchMatches.length === 0) return null
 

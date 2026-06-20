@@ -191,7 +191,7 @@ export default function App() {
             <StageTabs team={team} selectedStage={activeStage} onSelect={handleStageSelect} />
           </div>
 
-			<ErrorBoundary name="team overview"><Hero team={team} activeStage={activeStage} isHistorical={isHistorical} groupWinProb={groupWinProb} groupPosition={groupPosition} onTeamPeek={handleTeamPeek} /></ErrorBoundary>
+			<ErrorBoundary name="team overview"><Hero team={team} activeStage={activeStage} isHistorical={isHistorical} groupWinProb={groupWinProb} groupPosition={groupPosition} data={data} onTeamPeek={handleTeamPeek} /></ErrorBoundary>
 			{!team.eliminated && <ErrorBoundary name="upcoming matches"><GamesToWatch team={team} data={data} onTeamPeek={handleTeamPeek} /></ErrorBoundary>}
 			<ErrorBoundary name="bracket"><RoadBracket team={team} activeStage={activeStage} onStageSelect={handleStageSelect} /></ErrorBoundary>
 

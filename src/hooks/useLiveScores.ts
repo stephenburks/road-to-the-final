@@ -3,6 +3,7 @@ import { useQuery } from '@tanstack/react-query'
 import { ESPN_SCOREBOARD_URL } from '../constants'
 import { localDateStr } from '../utils'
 import { getTeamIdByTLA } from '../components/ui/teamLookup'
+import { useActiveMatchWindow } from './useActiveMatchWindow'
 import type { AppData, Card } from '../types'
 
 interface LiveMatchPatch {
@@ -163,7 +164,8 @@ export function useLiveScores(
 		return keys
 	}, [todayMatches])
 
-	const shouldPoll = !isHistorical && todayMatches.length > 0
+	const activeWindow = useActiveMatchWindow(dailyMatches, today)
+	const shouldPoll = !isHistorical && activeWindow
 
 	const { data: patches = null } = useQuery({
 		queryKey: ['liveScores', today, [...todayPairKeys].sort().join(',')],

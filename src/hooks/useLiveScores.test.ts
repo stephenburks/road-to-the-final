@@ -55,7 +55,7 @@ const DAILY_MATCHES_TODAY: AppData['dailyMatches'] = {
 			awayId: 'mexico',
 			homeScore: 0,
 			awayScore: 0,
-			status: 'SCHEDULED',
+			status: 'IN_PROGRESS',
 			date: TODAY,
 		},
 	],

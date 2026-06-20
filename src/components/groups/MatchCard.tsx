@@ -3,6 +3,8 @@ import { formatDate } from '../../utils'
 import FlagIcon from '../ui/FlagIcon'
 import { getTeamTLA, NAME_TO_ID } from '../ui/teamLookup'
 import TeamFlagLink from '../ui/TeamFlagLink'
+import ChangeArrow from '../ui/ChangeArrow'
+import { useChangeIndicator } from '../../hooks/useChangeIndicator'
 import { RESULT_LABELS } from './groupStageConstants'
 import styles from './MatchCard.module.css'
 
@@ -81,6 +83,9 @@ function CardList({ cards, label }: { cards: Card[]; label: string }) {
 
 function PolymarketSubhead({ odds, homeTla, awayTla }: { odds: MatchupOdds; homeTla: string; awayTla: string }) {
 	const url = `https://polymarket.com/sports/world-cup/${odds.eventSlug}`
+	const homeDelta = useChangeIndicator(odds.homeWinPct)
+	const awayDelta = useChangeIndicator(odds.awayWinPct)
+	const drawDelta = useChangeIndicator(odds.drawPct)
 	return (
 		<a
 			href={url}
@@ -90,11 +95,11 @@ function PolymarketSubhead({ odds, homeTla, awayTla }: { odds: MatchupOdds; home
 			aria-label={`Polymarket odds: ${homeTla} ${odds.homeWinPct}% · ${awayTla} ${odds.awayWinPct}% · Draw ${odds.drawPct}% — opens in a new tab`}
 		>
 			<span className={styles.polymarketLabel}>Polymarket</span>
-			<span>{homeTla} {odds.homeWinPct}%</span>
+			<span>{homeTla} {odds.homeWinPct}%<ChangeArrow delta={homeDelta} /></span>
 			<span className={styles.polymarketDot}>·</span>
-			<span>{awayTla} {odds.awayWinPct}%</span>
+			<span>{awayTla} {odds.awayWinPct}%<ChangeArrow delta={awayDelta} /></span>
 			<span className={styles.polymarketDot}>·</span>
-			<span>Draw {odds.drawPct}%</span>
+			<span>Draw {odds.drawPct}%<ChangeArrow delta={drawDelta} /></span>
 			<span className={styles.polymarketArrow} aria-hidden="true">↗</span>
 		</a>
 	)

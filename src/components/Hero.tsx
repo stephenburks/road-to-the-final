@@ -1,9 +1,13 @@
 import { STAGE_LABELS, POLYMARKET_STAGE_URLS, polymarketGroupUrl } from '../constants'
-import type { Stage, Team, AdvanceProbabilities } from '../types'
+import type { Stage, Team, AppData, AdvanceProbabilities } from '../types'
 import { daysUntil, formatDate } from '../utils'
 import { useTeamRecord } from '../hooks/useTeamRecord'
+import { useLiveScores } from '../hooks/useLiveScores'
+import { useLiveTournamentProbs } from '../hooks/useLiveTournamentProbs'
+import { useChangeIndicator } from '../hooks/useChangeIndicator'
 import FlagIcon from './ui/FlagIcon'
 import TeamFlagLink from './ui/TeamFlagLink'
+import ChangeArrow from './ui/ChangeArrow'
 import { NAME_TO_ID } from './ui/teamLookup'
 import styles from './Hero.module.css'
 
@@ -83,6 +87,7 @@ interface HeroProps {
 	isHistorical: boolean
 	groupWinProb?: GroupWinCard
 	groupPosition?: number
+	data?: AppData
 	onTeamPeek?: (id: string) => void
 }
 
@@ -92,16 +97,45 @@ function ordinal(n: number): string {
 	return n + (s[(v - 20) % 10] || s[v] || s[0])
 }
 
+/**
+ * Small wrappers — each owns its own change-indicator ref so per-card animations
+ * fire independently when their value updates.
+ */
+function StageChangeArrow({ value }: { value: number }) {
+	const delta = useChangeIndicator(value)
+	return <ChangeArrow delta={delta} />
+}
+
+function GroupChangeArrow({ value }: { value: number | undefined }) {
+	const delta = useChangeIndicator(value)
+	return <ChangeArrow delta={delta} />
+}
+
 export default function Hero({
 	team,
 	activeStage,
 	isHistorical,
 	groupWinProb,
 	groupPosition,
+	data,
 	onTeamPeek,
 }: HeroProps) {
 	const path = team.path?.[activeStage]
 	const ap = team.advanceProbabilities ?? {}
+
+	// Live overlay for advancement probabilities while a match is in progress.
+	const livePatches = useLiveScores(data?.dailyMatches ?? {}, data?.teams ?? [], isHistorical)
+	const liveProbs = useLiveTournamentProbs(data?.dailyMatches ?? {}, livePatches, isHistorical)
+
+	const liveStageVal = (key: keyof AdvanceProbabilities): number | undefined => {
+		if (!liveProbs) return undefined
+		const bucket = liveProbs[key as keyof typeof liveProbs]
+		if (bucket && typeof bucket === 'object' && team.id in bucket) {
+			return (bucket as Record<string, number>)[team.id]
+		}
+		return undefined
+	}
+	const liveGroupVal = liveProbs?.group[team.id]
 	const days = daysUntil(path?.date)
 	const source = ap.source
 	const sourceLabel = isHistorical
@@ -304,17 +338,19 @@ export default function Hero({
 
 				{/* ── Group Win ── */}
 				{(() => {
+					const effectivePct = liveGroupVal ?? groupWinProb?.probability
 					const groupUrl = groupWinProb && !isHistorical
 						? polymarketGroupUrl(groupWinProb.groupLetter)
 						: undefined
 					const groupLabel = groupWinProb ? `Win Group ${groupWinProb.groupLetter}` : 'Win Group'
 					const groupAria = groupWinProb
-						? `Win Group ${groupWinProb.groupLetter}: ${groupWinProb.probability}%`
+						? `Win Group ${groupWinProb.groupLetter}: ${effectivePct ?? 0}%`
 						: 'Win group probability not available'
 					const groupContent = (
 						<>
 							<div className={`${styles.statValue} ${styles.statValueGroup}`}>
-								{groupWinProb?.probability ?? '\u2014'}%
+								{effectivePct ?? '\u2014'}%
+								<GroupChangeArrow value={effectivePct} />
 							</div>
 							<div className={styles.statLabel}>{groupLabel}</div>
 							<div className={styles.statSub}>Polymarket</div>
@@ -344,7 +380,9 @@ export default function Hero({
 
 				{/* ── Stage probabilities ── */}
 				{STAT_CARD_DEFS.map((card) => {
-					const value = ap[card.key as keyof AdvanceProbabilities] ?? 0
+					const staticValue = (ap[card.key as keyof AdvanceProbabilities] ?? 0) as number
+					const live = liveStageVal(card.key as keyof AdvanceProbabilities)
+					const value: number = live ?? staticValue
 					const stageUrl = !isHistorical && source === 'market'
 						? POLYMARKET_STAGE_URLS[card.key as keyof typeof POLYMARKET_STAGE_URLS]
 						: undefined
@@ -353,6 +391,7 @@ export default function Hero({
 						<>
 							<div className={`${styles.statValue} ${card.valueClass}`}>
 								{value}%
+								<StageChangeArrow value={value} />
 							</div>
 							<div className={styles.statLabel}>{card.label}</div>
 							<div className={styles.statSub}>{sourceLabel}</div>

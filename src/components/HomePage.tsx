@@ -1,7 +1,8 @@
 import { useMemo } from 'react'
-import type { AppData, DailyMatch } from '../types'
+import type { AppData, DailyMatch, MatchupOdds } from '../types'
 import type { View } from '../hooks/useAppState'
 import { useLiveScores, type LiveMatchPatch } from '../hooks/useLiveScores'
+import { useLiveOdds } from '../hooks/useLiveOdds'
 import { localDateStr } from '../utils'
 import MatchCard from './groups/MatchCard'
 import NewsSection from './NewsSection'
@@ -33,7 +34,8 @@ function enrich(
 	match: DailyMatch,
 	teams: AppData['teams'],
 	today: string,
-	livePatch?: LiveMatchPatch
+	livePatch?: LiveMatchPatch,
+	liveOdds?: MatchupOdds
 ) {
 	const homeTeam = teams.find(t => t.id === match.homeId)
 	const awayTeam = teams.find(t => t.id === match.awayId)
@@ -72,13 +74,14 @@ function enrich(
 		awayScorers: live?.awayScorers ?? awayResult?.scorers ?? [],
 		homeCards: live?.homeCards ?? homeResult?.cards ?? [],
 		awayCards: live?.awayCards ?? awayResult?.cards ?? [],
-		polymarket: match.polymarket,
+		polymarket: liveOdds ?? match.polymarket,
 	}
 }
 
 export default function HomePage({ data, selectedTeamId, onTeamChange, onTeamPeek, onViewChange }: HomePageProps) {
 	const dailyMatches = useMemo(() => data.dailyMatches ?? {}, [data.dailyMatches])
 	const livePatches = useLiveScores(dailyMatches, data.teams, data.isHistorical)
+	const liveOdds = useLiveOdds(dailyMatches, livePatches, data.isHistorical)
 
 	// In historical mode, use the snapshot date as the anchor so "Today" shows
 	// the snapshot day's matches rather than the actual current date.
@@ -89,7 +92,13 @@ export default function HomePage({ data, selectedTeamId, onTeamChange, onTeamPee
 
 	const sections = useMemo(() => {
 		const enrichDay = (date: string) =>
-			(dailyMatches[date] ?? []).map(m => enrich(m, data.teams, today, livePatches?.get(`${m.homeId}:${m.awayId}`)))
+			(dailyMatches[date] ?? []).map(m => enrich(
+				m,
+				data.teams,
+				today,
+				livePatches?.get(`${m.homeId}:${m.awayId}`),
+				liveOdds?.get(`${m.homeId}:${m.awayId}`),
+			))
 
 		const todayMatches = enrichDay(today)
 		// Pin any in-progress match to the top of today's list; leave other days as-is
@@ -103,7 +112,7 @@ export default function HomePage({ data, selectedTeamId, onTeamChange, onTeamPee
 			{ key: 'tomorrow', date: tomorrow, matches: enrichDay(tomorrow) },
 			{ key: 'yesterday', date: yesterday, matches: enrichDay(yesterday) },
 		]
-	}, [dailyMatches, data.teams, today, yesterday, tomorrow, livePatches])
+	}, [dailyMatches, data.teams, today, yesterday, tomorrow, livePatches, liveOdds])
 
 	return (
 		<div className={styles.page}>

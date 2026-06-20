@@ -1,6 +1,7 @@
 import type { Team, AppData } from '../types'
 import { getFeederGroup } from '../utils'
 import { useLiveScores } from '../hooks/useLiveScores'
+import { useLiveOdds } from '../hooks/useLiveOdds'
 import SectionLabel from './ui/SectionLabel'
 import { GroupTable } from './ui/GroupTable'
 import FeederGroupPanel from './ui/FeederGroupPanel'
@@ -12,6 +13,7 @@ export default function GroupStage({ team, data, eliminatedTeamIds = new Set(), 
 	const feeder = getFeederGroup(team, 'r16', data)
 
 	const livePatches = useLiveScores(data.dailyMatches ?? {}, data.teams, data.isHistorical)
+	const liveOdds = useLiveOdds(data.dailyMatches ?? {}, livePatches, data.isHistorical)
 
 	const resolveLiveData = (opponentName: string) => {
 		if (!livePatches) return undefined
@@ -61,7 +63,9 @@ export default function GroupStage({ team, data, eliminatedTeamIds = new Set(), 
 		const oppTeam = data.teams?.find(t => t.name === opponentName)
 		if (!oppTeam) return undefined
 		const m = daily.find(d => (d.homeId === team.id && d.awayId === oppTeam.id) || (d.homeId === oppTeam.id && d.awayId === team.id))
-		return m?.polymarket
+		if (!m) return undefined
+		const live = liveOdds?.get(`${m.homeId}:${m.awayId}`)
+		return live ?? m.polymarket
 	}
 
 	return (
