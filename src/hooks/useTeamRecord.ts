@@ -88,6 +88,23 @@ const EMPTY: TeamRecordData = { record: null, standingSummary: null, nextEvent: 
 
 const LINK_RELS_TO_KEEP = new Set(['clubhouse', 'stats', 'roster', 'schedule'])
 
+/**
+ * ESPN's score field shape varies: the scoreboard endpoint returns a primitive
+ * string like '2', while the team endpoint returns an object
+ * `{value: 2.0, displayValue: '2', winner: true, ...}`. Normalize both.
+ */
+function parseEspnScore(score: unknown): number {
+	if (score == null) return 0
+	if (typeof score === 'number') return Math.floor(score)
+	if (typeof score === 'string') return parseInt(score, 10) || 0
+	if (typeof score === 'object') {
+		const obj = score as { displayValue?: string; value?: number }
+		if (typeof obj.displayValue === 'string') return parseInt(obj.displayValue, 10) || 0
+		if (typeof obj.value === 'number') return Math.floor(obj.value)
+	}
+	return 0
+}
+
 async function fetchTeamRecordWithLiveFallback(
 	slug: string,
 	signal: AbortSignal
@@ -116,7 +133,7 @@ async function fetchTeamRecordWithLiveFallback(
 		const competitors = comp?.competitors ?? []
 		const home = competitors.find((c: { homeAway: string }) => c.homeAway === 'home')
 		const away = competitors.find((c: { homeAway: string }) => c.homeAway === 'away')
-		const opp = home?.team?.id === team.id ? away : home
+		const opp = String(home?.team?.id) === String(team.id) ? away : home
 		const broadcasts: string[] = []
 		for (const b of comp?.broadcasts ?? []) {
 			if (b.media?.shortName) broadcasts.push(b.media.shortName)
@@ -128,9 +145,9 @@ async function fetchTeamRecordWithLiveFallback(
 		const clock = isLive ? statusDetail || undefined : undefined
 		// Score must read as `myScore-opponentScore` since the Hero renders teams
 		// in `MyTeam vs Opponent` order — not as ESPN's home-away format.
-		const evtIsHome = home?.team?.id === team.id
-		const myScore = evtIsHome ? parseInt(home?.score, 10) || 0 : parseInt(away?.score, 10) || 0
-		const oppScore = evtIsHome ? parseInt(away?.score, 10) || 0 : parseInt(home?.score, 10) || 0
+		const evtIsHome = String(home?.team?.id) === String(team.id)
+		const myScore = evtIsHome ? parseEspnScore(home?.score) : parseEspnScore(away?.score)
+		const oppScore = evtIsHome ? parseEspnScore(away?.score) : parseEspnScore(home?.score)
 		const score = isLive ? `${myScore}-${oppScore}` : undefined
 
 		nextEvent = {
@@ -169,8 +186,8 @@ async function fetchTeamRecordWithLiveFallback(
 				const away = competitors.find((cp: { homeAway: string }) => cp.homeAway === 'away')
 				// Orient as myScore-opponentScore to match the Hero's `MyTeam vs Opp` layout.
 				const sbIsHome = String(home?.team?.id) === String(team.id)
-				const myScore = sbIsHome ? parseInt(home?.score, 10) || 0 : parseInt(away?.score, 10) || 0
-				const oppScore = sbIsHome ? parseInt(away?.score, 10) || 0 : parseInt(home?.score, 10) || 0
+				const myScore = sbIsHome ? parseEspnScore(home?.score) : parseEspnScore(away?.score)
+				const oppScore = sbIsHome ? parseEspnScore(away?.score) : parseEspnScore(home?.score)
 				const liveScore = `${myScore}-${oppScore}`
 				const liveClock = comp?.status?.type?.detail || 'LIVE'
 
@@ -179,7 +196,7 @@ async function fetchTeamRecordWithLiveFallback(
 					nextEvent.score = liveScore
 					nextEvent.clock = liveClock
 				} else {
-					const opp = home?.team?.id === team.id ? away : home
+					const opp = String(home?.team?.id) === String(team.id) ? away : home
 					const broadcasts: string[] = []
 					for (const b of comp?.geoBroadcasts ?? []) {
 						if (b.media?.shortName) broadcasts.push(b.media.shortName)
@@ -192,7 +209,7 @@ async function fetchTeamRecordWithLiveFallback(
 						date: event.date ?? '',
 						venue: comp?.venue?.fullName ?? '',
 						broadcasts,
-						isHome: home?.team?.id === team.id,
+						isHome: String(home?.team?.id) === String(team.id),
 						isLive: true,
 						clock: liveClock,
 						score: liveScore,
