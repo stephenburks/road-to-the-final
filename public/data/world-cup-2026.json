@@ -1,6 +1,6 @@
 {
-  "lastUpdated": "2026-06-20T22:17:08.915Z",
-  "snapshotDate": "2026-06-20",
+  "lastUpdated": "2026-06-21T08:06:30.085Z",
+  "snapshotDate": "2026-06-21",
   "isHistorical": false,
   "sourceSummary": {
     "dataSource": "ESPN",
@@ -170,7 +170,7 @@
         }
       ],
       "winProbabilities": {
-        "canada": 61,
+        "canada": 62,
         "switzerland": 40,
         "bosnia": 0,
         "qatar": 0
@@ -237,7 +237,7 @@
       ],
       "winProbabilities": {
         "brazil": 67,
-        "morocco": 30,
+        "morocco": 33,
         "scotland": 2,
         "haiti": 0
       }
@@ -341,13 +341,13 @@
         {
           "teamId": "ecuador",
           "team": "Ecuador",
-          "played": 1,
+          "played": 2,
           "w": 0,
-          "d": 0,
+          "d": 1,
           "l": 1,
           "gf": 0,
           "ga": 1,
-          "pts": 0,
+          "pts": 1,
           "gd": -1,
           "pos": 3,
           "flag": "🇪🇨"
@@ -355,22 +355,22 @@
         {
           "teamId": "curacao",
           "team": "Curaçao",
-          "played": 1,
+          "played": 2,
           "w": 0,
-          "d": 0,
+          "d": 1,
           "l": 1,
           "gf": 1,
           "ga": 7,
-          "pts": 0,
+          "pts": 1,
           "gd": -6,
           "pos": 4,
           "flag": "🇨🇼"
         }
       ],
       "winProbabilities": {
-        "germany": 95,
+        "germany": 100,
         "ivorycoast": 0,
-        "ecuador": 5,
+        "ecuador": 0,
         "curacao": 0
       }
     },
@@ -391,6 +391,20 @@
           "flag": "🇳🇱"
         },
         {
+          "teamId": "japan",
+          "team": "Japan",
+          "played": 2,
+          "w": 1,
+          "d": 1,
+          "l": 0,
+          "gf": 6,
+          "ga": 2,
+          "pts": 4,
+          "gd": 4,
+          "pos": 2,
+          "flag": "🇯🇵"
+        },
+        {
           "teamId": "sweden",
           "team": "Sweden",
           "played": 2,
@@ -401,43 +415,29 @@
           "ga": 6,
           "pts": 3,
           "gd": 0,
-          "pos": 2,
-          "flag": "🇸🇪"
-        },
-        {
-          "teamId": "japan",
-          "team": "Japan",
-          "played": 1,
-          "w": 0,
-          "d": 1,
-          "l": 0,
-          "gf": 2,
-          "ga": 2,
-          "pts": 1,
-          "gd": 0,
           "pos": 3,
-          "flag": "🇯🇵"
+          "flag": "🇸🇪"
         },
         {
           "teamId": "tunisia",
           "team": "Tunisia",
-          "played": 1,
+          "played": 2,
           "w": 0,
           "d": 0,
-          "l": 1,
+          "l": 2,
           "gf": 1,
-          "ga": 5,
+          "ga": 9,
           "pts": 0,
-          "gd": -4,
+          "gd": -8,
           "pos": 4,
           "flag": "🇹🇳"
         }
       ],
       "winProbabilities": {
-        "netherlands": 86,
-        "sweden": 5,
-        "japan": 9,
-        "tunisia": 1
+        "netherlands": 77,
+        "japan": 20,
+        "sweden": 3,
+        "tunisia": 0
       }
     },
     "G": {
@@ -569,7 +569,7 @@
         "saudiarabia": 3,
         "uruguay": 21,
         "spain": 74,
-        "capeverde": 2
+        "capeverde": 3
       }
     },
     "I": {
@@ -633,8 +633,8 @@
       ],
       "winProbabilities": {
         "norway": 22,
-        "france": 78,
-        "senegal": 2,
+        "france": 77,
+        "senegal": 1,
         "iraq": 0
       }
     },
@@ -764,10 +764,10 @@
         }
       ],
       "winProbabilities": {
-        "colombia": 49,
+        "colombia": 48,
         "portugal": 46,
-        "drcongo": 5,
-        "uzbekistan": 1
+        "drcongo": 4,
+        "uzbekistan": 0
       }
     },
     "L": {
@@ -832,7 +832,7 @@
       "winProbabilities": {
         "england": 93,
         "ghana": 5,
-        "panama": 1,
+        "panama": 0,
         "croatia": 3
       }
     }
@@ -913,7 +913,7 @@
         "r32": 100,
         "r16": 64,
         "qf": 27,
-        "sf": 14,
+        "sf": 13,
         "final": 6,
         "winner": 1,
         "source": "market"
@@ -993,12 +993,12 @@
           },
           {
             "group": "F",
-            "likelyTeam": "Japan",
-            "flag": "🇯🇵",
-            "fifaRank": 13,
-            "difficulty": 4,
-            "label": "Tough",
-            "color": "#FB923C",
+            "likelyTeam": "Sweden",
+            "flag": "🇸🇪",
+            "fifaRank": 29,
+            "difficulty": 3,
+            "label": "Moderate",
+            "color": "#F59E0B",
             "note": "3rd-place team from Group F",
             "pct": null
           },
@@ -1122,7 +1122,7 @@
       ],
       "advanceProbabilities": {
         "r32": 18,
-        "r16": 3,
+        "r16": 4,
         "qf": 2,
         "sf": 2,
         "final": 1,
@@ -1352,9 +1352,9 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 93,
-        "r16": 40,
-        "qf": 13,
+        "r32": 94,
+        "r16": 36,
+        "qf": 12,
         "sf": 4,
         "final": 1,
         "winner": 0,
@@ -1565,8 +1565,8 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 28,
-        "r16": 10,
+        "r32": 27,
+        "r16": 12,
         "qf": 3,
         "sf": 2,
         "final": 1,
@@ -1800,7 +1800,7 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 52,
+        "r16": 53,
         "qf": 19,
         "sf": 4,
         "final": 2,
@@ -1871,12 +1871,12 @@
           },
           {
             "group": "F",
-            "likelyTeam": "Japan",
-            "flag": "🇯🇵",
-            "fifaRank": 13,
-            "difficulty": 4,
-            "label": "Tough",
-            "color": "#FB923C",
+            "likelyTeam": "Sweden",
+            "flag": "🇸🇪",
+            "fifaRank": 29,
+            "difficulty": 3,
+            "label": "Moderate",
+            "color": "#F59E0B",
             "note": "3rd-place team from Group F",
             "pct": null
           },
@@ -2011,8 +2011,8 @@
       ],
       "advanceProbabilities": {
         "r32": 68,
-        "r16": 22,
-        "qf": 5,
+        "r16": 18,
+        "qf": 4,
         "sf": 1,
         "final": 1,
         "winner": 0,
@@ -2227,11 +2227,11 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 12,
-        "r16": 1,
+        "r32": 13,
+        "r16": 3,
         "qf": 1,
-        "sf": 1,
-        "final": 1,
+        "sf": 0,
+        "final": 0,
         "winner": 0,
         "source": "market"
       },
@@ -2435,7 +2435,7 @@
         "r32": 100,
         "r16": 60,
         "qf": 26,
-        "sf": 9,
+        "sf": 10,
         "final": 2,
         "winner": 1,
         "source": "market"
@@ -2630,9 +2630,9 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 99,
+        "r32": 100,
         "r16": 68,
-        "qf": 43,
+        "qf": 44,
         "sf": 22,
         "final": 14,
         "winner": 6,
@@ -2833,7 +2833,7 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 49,
+        "r16": 51,
         "qf": 30,
         "sf": 14,
         "final": 7,
@@ -2917,12 +2917,12 @@
           },
           {
             "group": "F",
-            "likelyTeam": "Sweden",
-            "flag": "🇸🇪",
-            "fifaRank": 29,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
+            "likelyTeam": "Japan",
+            "flag": "🇯🇵",
+            "fifaRank": 13,
+            "difficulty": 4,
+            "label": "Tough",
+            "color": "#FB923C",
             "note": "Runner-up of Group F",
             "pct": null
           }
@@ -3081,12 +3081,12 @@
           },
           {
             "group": "F",
-            "likelyTeam": "Sweden",
-            "flag": "🇸🇪",
-            "fifaRank": 29,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
+            "likelyTeam": "Japan",
+            "flag": "🇯🇵",
+            "fifaRank": 13,
+            "difficulty": 4,
+            "label": "Tough",
+            "color": "#FB923C",
             "note": "Runner-up of Group F",
             "pct": null
           }
@@ -3164,8 +3164,8 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 67,
-        "r16": 16,
+        "r32": 70,
+        "r16": 17,
         "qf": 7,
         "sf": 2,
         "final": 1,
@@ -3249,12 +3249,12 @@
           },
           {
             "group": "F",
-            "likelyTeam": "Sweden",
-            "flag": "🇸🇪",
-            "fifaRank": 29,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
+            "likelyTeam": "Japan",
+            "flag": "🇯🇵",
+            "fifaRank": 13,
+            "difficulty": 4,
+            "label": "Tough",
+            "color": "#FB923C",
             "note": "Runner-up of Group F",
             "pct": null
           }
@@ -3337,10 +3337,10 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 71,
+        "r16": 73,
         "qf": 44,
-        "sf": 21,
-        "final": 9,
+        "sf": 22,
+        "final": 7,
         "winner": 4,
         "source": "market"
       },
@@ -3419,12 +3419,12 @@
           },
           {
             "group": "F",
-            "likelyTeam": "Japan",
-            "flag": "🇯🇵",
-            "fifaRank": 13,
-            "difficulty": 4,
-            "label": "Tough",
-            "color": "#FB923C",
+            "likelyTeam": "Sweden",
+            "flag": "🇸🇪",
+            "fifaRank": 29,
+            "difficulty": 3,
+            "label": "Moderate",
+            "color": "#F59E0B",
             "note": "3rd-place team from Group F",
             "pct": null
           },
@@ -3563,9 +3563,9 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 85,
-        "r16": 32,
-        "qf": 8,
+        "r32": 88,
+        "r16": 30,
+        "qf": 7,
         "sf": 2,
         "final": 1,
         "winner": 0,
@@ -3648,12 +3648,12 @@
           },
           {
             "group": "F",
-            "likelyTeam": "Sweden",
-            "flag": "🇸🇪",
-            "fifaRank": 29,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
+            "likelyTeam": "Japan",
+            "flag": "🇯🇵",
+            "fifaRank": 13,
+            "difficulty": 4,
+            "label": "Tough",
+            "color": "#FB923C",
             "note": "Runner-up of Group F",
             "pct": null
           }
@@ -3742,8 +3742,8 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 88,
-        "r16": 37,
+        "r32": 91,
+        "r16": 38,
         "qf": 9,
         "sf": 3,
         "final": 1,
@@ -3827,12 +3827,12 @@
           },
           {
             "group": "F",
-            "likelyTeam": "Sweden",
-            "flag": "🇸🇪",
-            "fifaRank": 29,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
+            "likelyTeam": "Japan",
+            "flag": "🇯🇵",
+            "fifaRank": 13,
+            "difficulty": 4,
+            "label": "Tough",
+            "color": "#FB923C",
             "note": "Runner-up of Group F",
             "pct": null
           }
@@ -3981,12 +3981,12 @@
           },
           {
             "group": "F",
-            "likelyTeam": "Sweden",
-            "flag": "🇸🇪",
-            "fifaRank": 29,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
+            "likelyTeam": "Japan",
+            "flag": "🇯🇵",
+            "fifaRank": 13,
+            "difficulty": 4,
+            "label": "Tough",
+            "color": "#FB923C",
             "note": "Runner-up of Group F",
             "pct": null
           }
@@ -4050,11 +4050,11 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 76,
+        "r16": 82,
         "qf": 41,
         "sf": 27,
-        "final": 11,
-        "winner": 6,
+        "final": 14,
+        "winner": 5,
         "source": "market"
       },
       "path": {
@@ -4132,12 +4132,12 @@
           },
           {
             "group": "F",
-            "likelyTeam": "Japan",
-            "flag": "🇯🇵",
-            "fifaRank": 13,
-            "difficulty": 4,
-            "label": "Tough",
-            "color": "#FB923C",
+            "likelyTeam": "Sweden",
+            "flag": "🇸🇪",
+            "fifaRank": 29,
+            "difficulty": 3,
+            "label": "Moderate",
+            "color": "#F59E0B",
             "note": "3rd-place team from Group F",
             "pct": null
           },
@@ -4211,18 +4211,72 @@
           "scorers": [
             "Livano Comenencia 21''"
           ],
-          "cards": []
+          "cards": [
+            {
+              "player": "Leandro Bacuna",
+              "minute": "39'",
+              "type": "yellow"
+            },
+            {
+              "player": "Juninho Bacuna",
+              "minute": "53'",
+              "type": "yellow"
+            },
+            {
+              "player": "Livano Comenencia",
+              "minute": "56'",
+              "type": "yellow"
+            },
+            {
+              "player": "Juriën Gaari",
+              "minute": "75'",
+              "type": "yellow"
+            },
+            {
+              "player": "Gervane Kastaneer",
+              "minute": "90'+1'",
+              "type": "yellow"
+            }
+          ]
         },
         {
           "matchday": 2,
           "opponent": "Ecuador",
           "opponentFlag": "🇪🇨",
-          "result": null,
-          "score": null,
+          "result": "D",
+          "score": "0-0",
           "date": "2026-06-20",
           "venue": "MetLife Stadium, New Jersey",
-          "scorers": [],
-          "cards": []
+          "scorers": [
+            "Livano Comenencia 21'"
+          ],
+          "cards": [
+            {
+              "player": "Leandro Bacuna",
+              "minute": "39'",
+              "type": "yellow"
+            },
+            {
+              "player": "Juninho Bacuna",
+              "minute": "53'",
+              "type": "yellow"
+            },
+            {
+              "player": "Livano Comenencia",
+              "minute": "56'",
+              "type": "yellow"
+            },
+            {
+              "player": "Juriën Gaari",
+              "minute": "75'",
+              "type": "yellow"
+            },
+            {
+              "player": "Gervane Kastaneer",
+              "minute": "90'+1'",
+              "type": "yellow"
+            }
+          ]
         },
         {
           "matchday": 3,
@@ -4237,8 +4291,8 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 3,
-        "r16": 3,
+        "r32": 5,
+        "r16": 2,
         "qf": 0,
         "sf": 0,
         "final": 0,
@@ -4251,7 +4305,7 @@
           "city": "Houston · New Jersey · Philadelphia",
           "venue": "Various venues",
           "date": "Jun 14–25",
-          "detail": "0pts after MD1"
+          "detail": "1pt after MD2"
         },
         "r32": {
           "status": "upcoming",
@@ -4415,10 +4469,10 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 94,
-        "r16": 41,
-        "qf": 20,
-        "sf": 6,
+        "r32": 98,
+        "r16": 34,
+        "qf": 14,
+        "sf": 3,
         "final": 2,
         "winner": 1,
         "source": "market"
@@ -4532,12 +4586,18 @@
           "matchday": 2,
           "opponent": "Curaçao",
           "opponentFlag": "🇨🇼",
-          "result": null,
-          "score": null,
+          "result": "D",
+          "score": "0-0",
           "date": "2026-06-20",
           "venue": "MetLife Stadium, New Jersey",
           "scorers": [],
-          "cards": []
+          "cards": [
+            {
+              "player": "Jordy Alcívar",
+              "minute": "38'",
+              "type": "yellow"
+            }
+          ]
         },
         {
           "matchday": 3,
@@ -4552,10 +4612,10 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 80,
-        "r16": 36,
-        "qf": 17,
-        "sf": 6,
+        "r32": 26,
+        "r16": 6,
+        "qf": 6,
+        "sf": 3,
         "final": 2,
         "winner": 0,
         "source": "market"
@@ -4566,7 +4626,7 @@
           "city": "Philadelphia · New Jersey",
           "venue": "Various venues",
           "date": "Jun 14–25",
-          "detail": "0pts after MD1"
+          "detail": "1pt after MD2"
         },
         "r32": {
           "status": "upcoming",
@@ -4737,7 +4797,7 @@
       "advanceProbabilities": {
         "r32": 100,
         "r16": 62,
-        "qf": 41,
+        "qf": 44,
         "sf": 25,
         "final": 14,
         "winner": 6,
@@ -4820,12 +4880,12 @@
           },
           {
             "group": "F",
-            "likelyTeam": "Sweden",
-            "flag": "🇸🇪",
-            "fifaRank": 29,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
+            "likelyTeam": "Japan",
+            "flag": "🇯🇵",
+            "fifaRank": 13,
+            "difficulty": 4,
+            "label": "Tough",
+            "color": "#FB923C",
             "note": "Runner-up of Group F",
             "pct": null
           }
@@ -4860,11 +4920,16 @@
           "matchday": 2,
           "opponent": "Tunisia",
           "opponentFlag": "🇹🇳",
-          "result": null,
-          "score": null,
+          "result": "W",
+          "score": "4-0",
           "date": "2026-06-20",
           "venue": "Arrowhead Stadium, Kansas City",
-          "scorers": [],
+          "scorers": [
+            "Daichi Kamada 4'",
+            "Ayase Ueda 31'",
+            "Junya Ito 69'",
+            "Ayase Ueda 83'"
+          ],
           "cards": []
         },
         {
@@ -4880,11 +4945,11 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 88,
-        "r16": 38,
-        "qf": 21,
+        "r32": 99,
+        "r16": 46,
+        "qf": 28,
         "sf": 11,
-        "final": 5,
+        "final": 6,
         "winner": 2,
         "source": "market"
       },
@@ -4894,7 +4959,7 @@
           "city": "Kansas City · Dallas",
           "venue": "Various venues",
           "date": "Jun 14–25",
-          "detail": "1pt after MD1"
+          "detail": "4pts after MD2"
         },
         "r32": {
           "status": "upcoming",
@@ -5062,11 +5127,11 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 86,
-        "r16": 24,
-        "qf": 14,
-        "sf": 3,
-        "final": 3,
+        "r32": 79,
+        "r16": 28,
+        "qf": 12,
+        "sf": 6,
+        "final": 2,
         "winner": 0,
         "source": "market"
       },
@@ -5166,7 +5231,7 @@
       "group": "F",
       "confederation": "CAF",
       "fifaRank": 36,
-      "eliminated": false,
+      "eliminated": true,
       "currentStage": "group_stage",
       "groupResults": [
         {
@@ -5192,12 +5257,20 @@
           "matchday": 2,
           "opponent": "Japan",
           "opponentFlag": "🇯🇵",
-          "result": null,
-          "score": null,
+          "result": "L",
+          "score": "0-4",
           "date": "2026-06-20",
           "venue": "Arrowhead Stadium, Kansas City",
-          "scorers": [],
-          "cards": []
+          "scorers": [
+            "Omar Rekik 43'"
+          ],
+          "cards": [
+            {
+              "player": "Rani Khedira",
+              "minute": "54'",
+              "type": "yellow"
+            }
+          ]
         },
         {
           "matchday": 3,
@@ -5212,11 +5285,11 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 5,
-        "r16": 2,
-        "qf": 2,
-        "sf": 1,
-        "final": 1,
+        "r32": 0,
+        "r16": 0,
+        "qf": 0,
+        "sf": 0,
+        "final": 0,
         "winner": 0,
         "source": "market"
       },
@@ -5226,7 +5299,7 @@
           "city": "Kansas City",
           "venue": "Various venues",
           "date": "Jun 14–25",
-          "detail": "0pts after MD1"
+          "detail": "0pts after MD2"
         },
         "r32": {
           "status": "upcoming",
@@ -5368,7 +5441,7 @@
       ],
       "advanceProbabilities": {
         "r32": 95,
-        "r16": 62,
+        "r16": 63,
         "qf": 34,
         "sf": 14,
         "final": 6,
@@ -5452,12 +5525,12 @@
           },
           {
             "group": "F",
-            "likelyTeam": "Sweden",
-            "flag": "🇸🇪",
-            "fifaRank": 29,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
+            "likelyTeam": "Japan",
+            "flag": "🇯🇵",
+            "fifaRank": 13,
+            "difficulty": 4,
+            "label": "Tough",
+            "color": "#FB923C",
             "note": "Runner-up of Group F",
             "pct": null
           }
@@ -5524,8 +5597,8 @@
       "advanceProbabilities": {
         "r32": 82,
         "r16": 36,
-        "qf": 12,
-        "sf": 3,
+        "qf": 11,
+        "sf": 2,
         "final": 1,
         "winner": 0,
         "source": "market"
@@ -5607,12 +5680,12 @@
           },
           {
             "group": "F",
-            "likelyTeam": "Sweden",
-            "flag": "🇸🇪",
-            "fifaRank": 29,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
+            "likelyTeam": "Japan",
+            "flag": "🇯🇵",
+            "fifaRank": 13,
+            "difficulty": 4,
+            "label": "Tough",
+            "color": "#FB923C",
             "note": "Runner-up of Group F",
             "pct": null
           }
@@ -5862,8 +5935,8 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 28,
-        "r16": 8,
+        "r32": 29,
+        "r16": 7,
         "qf": 2,
         "sf": 1,
         "final": 1,
@@ -5947,12 +6020,12 @@
           },
           {
             "group": "F",
-            "likelyTeam": "Sweden",
-            "flag": "🇸🇪",
-            "fifaRank": 29,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
+            "likelyTeam": "Japan",
+            "flag": "🇯🇵",
+            "fifaRank": 13,
+            "difficulty": 4,
+            "label": "Tough",
+            "color": "#FB923C",
             "note": "Runner-up of Group F",
             "pct": null
           }
@@ -6011,10 +6084,10 @@
       ],
       "advanceProbabilities": {
         "r32": 97,
-        "r16": 74,
+        "r16": 77,
         "qf": 56,
         "sf": 41,
-        "final": 23,
+        "final": 24,
         "winner": 14,
         "source": "market"
       },
@@ -6181,7 +6254,7 @@
       ],
       "advanceProbabilities": {
         "r32": 43,
-        "r16": 5,
+        "r16": 7,
         "qf": 5,
         "sf": 2,
         "final": 1,
@@ -6352,7 +6425,7 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 44,
+        "r32": 40,
         "r16": 9,
         "qf": 3,
         "sf": 1,
@@ -6496,11 +6569,11 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 77,
-        "r16": 31,
+        "r32": 78,
+        "r16": 32,
         "qf": 18,
         "sf": 7,
-        "final": 2,
+        "final": 3,
         "winner": 1,
         "source": "market"
       },
@@ -6654,9 +6727,9 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 84,
+        "r16": 89,
         "qf": 62,
-        "sf": 46,
+        "sf": 47,
         "final": 30,
         "winner": 20,
         "source": "market"
@@ -6786,8 +6859,8 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 67,
-        "r16": 28,
+        "r32": 68,
+        "r16": 31,
         "qf": 14,
         "sf": 5,
         "final": 2,
@@ -6937,7 +7010,7 @@
       ],
       "advanceProbabilities": {
         "r32": 4,
-        "r16": 4,
+        "r16": 2,
         "qf": 1,
         "sf": 0,
         "final": 0,
@@ -7085,8 +7158,8 @@
       "advanceProbabilities": {
         "r32": 97,
         "r16": 60,
-        "qf": 34,
-        "sf": 18,
+        "qf": 35,
+        "sf": 17,
         "final": 8,
         "winner": 2,
         "source": "market"
@@ -7155,12 +7228,12 @@
           },
           {
             "group": "F",
-            "likelyTeam": "Japan",
-            "flag": "🇯🇵",
-            "fifaRank": 13,
-            "difficulty": 4,
-            "label": "Tough",
-            "color": "#FB923C",
+            "likelyTeam": "Sweden",
+            "flag": "🇸🇪",
+            "fifaRank": 29,
+            "difficulty": 3,
+            "label": "Moderate",
+            "color": "#F59E0B",
             "note": "3rd-place team from Group F",
             "pct": null
           },
@@ -7263,10 +7336,10 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 72,
+        "r16": 78,
         "qf": 60,
         "sf": 41,
-        "final": 22,
+        "final": 23,
         "winner": 12,
         "source": "market"
       },
@@ -7345,12 +7418,12 @@
           },
           {
             "group": "F",
-            "likelyTeam": "Japan",
-            "flag": "🇯🇵",
-            "fifaRank": 13,
-            "difficulty": 4,
-            "label": "Tough",
-            "color": "#FB923C",
+            "likelyTeam": "Sweden",
+            "flag": "🇸🇪",
+            "fifaRank": 29,
+            "difficulty": 3,
+            "label": "Moderate",
+            "color": "#F59E0B",
             "note": "3rd-place team from Group F",
             "pct": null
           },
@@ -7591,8 +7664,8 @@
       "advanceProbabilities": {
         "r32": 95,
         "r16": 33,
-        "qf": 13,
-        "sf": 6,
+        "qf": 14,
+        "sf": 5,
         "final": 1,
         "winner": 0,
         "source": "market"
@@ -7893,11 +7966,11 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 95,
-        "r16": 67,
-        "qf": 41,
-        "sf": 27,
-        "final": 14,
+        "r32": 94,
+        "r16": 66,
+        "qf": 42,
+        "sf": 25,
+        "final": 15,
         "winner": 7,
         "source": "market"
       },
@@ -8032,8 +8105,8 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 59,
-        "r16": 16,
+        "r32": 61,
+        "r16": 17,
         "qf": 3,
         "sf": 2,
         "final": 1,
@@ -8182,8 +8255,8 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 19,
-        "r16": 5,
+        "r32": 17,
+        "r16": 2,
         "qf": 1,
         "sf": 1,
         "final": 1,
@@ -8337,8 +8410,8 @@
         "r32": 98,
         "r16": 56,
         "qf": 32,
-        "sf": 15,
-        "final": 5,
+        "sf": 14,
+        "final": 6,
         "winner": 1,
         "source": "market"
       },
@@ -8537,10 +8610,10 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 81,
-        "qf": 61,
+        "r16": 86,
+        "qf": 63,
         "sf": 39,
-        "final": 25,
+        "final": 26,
         "winner": 13,
         "source": "market"
       },
@@ -8671,9 +8744,9 @@
       ],
       "advanceProbabilities": {
         "r32": 75,
-        "r16": 37,
-        "qf": 13,
-        "sf": 7,
+        "r16": 35,
+        "qf": 14,
+        "sf": 6,
         "final": 2,
         "winner": 1,
         "source": "market"
@@ -8842,11 +8915,11 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 73,
+        "r32": 75,
         "r16": 24,
         "qf": 6,
         "sf": 3,
-        "final": 2,
+        "final": 1,
         "winner": 0,
         "source": "market"
       },
@@ -9006,10 +9079,10 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 8,
+        "r32": 9,
         "r16": 3,
-        "qf": 2,
-        "sf": 2,
+        "qf": 1,
+        "sf": 1,
         "final": 0,
         "winner": 0,
         "source": "market"
@@ -9800,7 +9873,7 @@
         "awayId": "curacao",
         "homeScore": 0,
         "awayScore": 0,
-        "status": "SCHEDULED",
+        "status": "FINISHED",
         "date": "2026-06-20",
         "broadcasts": [
           "FS1",
@@ -9818,8 +9891,8 @@
         "awayFlag": "🇯🇵",
         "awayId": "japan",
         "homeScore": 0,
-        "awayScore": 0,
-        "status": "SCHEDULED",
+        "awayScore": 4,
+        "status": "FINISHED",
         "date": "2026-06-20",
         "broadcasts": [
           "FS1",
@@ -9827,15 +9900,7 @@
           "FOX One"
         ],
         "time": "2026-06-21T04:00Z",
-        "venue": "Estadio BBVA, Guadalupe",
-        "polymarket": {
-          "homeId": "tunisia",
-          "awayId": "japan",
-          "homeWinPct": 13,
-          "awayWinPct": 67,
-          "drawPct": 23,
-          "eventSlug": "fifwc-tun-jpn-2026-06-21"
-        }
+        "venue": "Estadio BBVA, Guadalupe"
       }
     ],
     "2026-06-21": [
@@ -9861,7 +9926,7 @@
           "homeId": "spain",
           "awayId": "saudiarabia",
           "homeWinPct": 89,
-          "awayWinPct": 3,
+          "awayWinPct": 4,
           "drawPct": 9,
           "eventSlug": "fifwc-esp-ksa-2026-06-21"
         }
@@ -9888,7 +9953,7 @@
           "homeId": "belgium",
           "awayId": "iran",
           "homeWinPct": 68,
-          "awayWinPct": 12,
+          "awayWinPct": 13,
           "drawPct": 21,
           "eventSlug": "fifwc-bel-irn-2026-06-21"
         }
@@ -9970,7 +10035,7 @@
         "polymarket": {
           "homeId": "argentina",
           "awayId": "austria",
-          "homeWinPct": 63,
+          "homeWinPct": 64,
           "awayWinPct": 14,
           "drawPct": 23,
           "eventSlug": "fifwc-arg-aut-2026-06-22"
@@ -10024,7 +10089,7 @@
         "polymarket": {
           "homeId": "norway",
           "awayId": "senegal",
-          "homeWinPct": 44,
+          "homeWinPct": 43,
           "awayWinPct": 31,
           "drawPct": 28,
           "eventSlug": "fifwc-nor-sen-2026-06-22"
@@ -10080,7 +10145,7 @@
         "polymarket": {
           "homeId": "portugal",
           "awayId": "uzbekistan",
-          "homeWinPct": 82,
+          "homeWinPct": 81,
           "awayWinPct": 6,
           "drawPct": 13,
           "eventSlug": "fifwc-prt-uzb-2026-06-23"
@@ -10107,7 +10172,7 @@
         "polymarket": {
           "homeId": "england",
           "awayId": "ghana",
-          "homeWinPct": 81,
+          "homeWinPct": 80,
           "awayWinPct": 7,
           "drawPct": 14,
           "eventSlug": "fifwc-eng-gha-2026-06-23"
@@ -10182,7 +10247,7 @@
         "date": "2026-06-24",
         "broadcasts": [
           "FS1",
-          "Tele",
+          "Universo",
           "FOX One"
         ],
         "time": "2026-06-24T19:00Z",
@@ -10236,7 +10301,7 @@
         "date": "2026-06-24",
         "broadcasts": [
           "FS1",
-          "Tele",
+          "Universo",
           "FOX One"
         ],
         "time": "2026-06-24T22:00Z",
@@ -10246,7 +10311,7 @@
           "awayId": "haiti",
           "homeWinPct": 82,
           "awayWinPct": 6,
-          "drawPct": 14,
+          "drawPct": 13,
           "eventSlug": "fifwc-mar-hai-2026-06-24"
         }
       },
@@ -10272,7 +10337,7 @@
           "homeId": "scotland",
           "awayId": "brazil",
           "homeWinPct": 12,
-          "awayWinPct": 71,
+          "awayWinPct": 70,
           "drawPct": 18,
           "eventSlug": "fifwc-sco-bra-2026-06-24"
         }
@@ -10298,8 +10363,8 @@
         "polymarket": {
           "homeId": "czechia",
           "awayId": "mexico",
-          "homeWinPct": 27,
-          "awayWinPct": 50,
+          "homeWinPct": 26,
+          "awayWinPct": 51,
           "drawPct": 24,
           "eventSlug": "fifwc-cze-mex-2026-06-24"
         }
@@ -10317,7 +10382,7 @@
         "date": "2026-06-24",
         "broadcasts": [
           "FS1",
-          "Tele",
+          "Universo",
           "FOX One"
         ],
         "time": "2026-06-25T01:00Z",
@@ -10325,7 +10390,7 @@
         "polymarket": {
           "homeId": "southafrica",
           "awayId": "southkorea",
-          "homeWinPct": 16,
+          "homeWinPct": 17,
           "awayWinPct": 60,
           "drawPct": 25,
           "eventSlug": "fifwc-rsa-kr-2026-06-24"
@@ -10346,7 +10411,7 @@
         "date": "2026-06-25",
         "broadcasts": [
           "FS1",
-          "Tele",
+          "Universo",
           "FOX One"
         ],
         "time": "2026-06-25T20:00Z",
@@ -10373,9 +10438,9 @@
         "polymarket": {
           "homeId": "ecuador",
           "awayId": "germany",
-          "homeWinPct": 22,
-          "awayWinPct": 53,
-          "drawPct": 27,
+          "homeWinPct": 27,
+          "awayWinPct": 50,
+          "drawPct": 25,
           "eventSlug": "fifwc-ecu-ger-2026-06-25"
         }
       },
@@ -10392,7 +10457,7 @@
         "date": "2026-06-25",
         "broadcasts": [
           "FS1",
-          "Tele",
+          "Universo",
           "FOX One"
         ],
         "time": "2026-06-25T23:00Z",
@@ -10400,8 +10465,8 @@
         "polymarket": {
           "homeId": "japan",
           "awayId": "sweden",
-          "homeWinPct": 46,
-          "awayWinPct": 27,
+          "homeWinPct": 48,
+          "awayWinPct": 26,
           "drawPct": 28,
           "eventSlug": "fifwc-jpn-swe-2026-06-25"
         }
@@ -10427,9 +10492,9 @@
         "polymarket": {
           "homeId": "tunisia",
           "awayId": "netherlands",
-          "homeWinPct": 8,
-          "awayWinPct": 77,
-          "drawPct": 16,
+          "homeWinPct": 5,
+          "awayWinPct": 84,
+          "drawPct": 12,
           "eventSlug": "fifwc-tun-nld-2026-06-25"
         }
       },
@@ -10446,7 +10511,7 @@
         "date": "2026-06-25",
         "broadcasts": [
           "FS1",
-          "Tele",
+          "Universo",
           "FOX One"
         ],
         "time": "2026-06-26T02:00Z",
@@ -10481,9 +10546,9 @@
         "polymarket": {
           "homeId": "turkey",
           "awayId": "usa",
-          "homeWinPct": 31,
-          "awayWinPct": 48,
-          "drawPct": 24,
+          "homeWinPct": 30,
+          "awayWinPct": 50,
+          "drawPct": 23,
           "eventSlug": "fifwc-tur-usa-2026-06-25"
         }
       }
@@ -10529,7 +10594,7 @@
         "date": "2026-06-26",
         "broadcasts": [
           "FS1",
-          "Tele",
+          "Universo",
           "FOX One"
         ],
         "time": "2026-06-26T19:00Z",
@@ -10556,7 +10621,7 @@
         "date": "2026-06-26",
         "broadcasts": [
           "FS1",
-          "Tele",
+          "Universo",
           "FOX One"
         ],
         "time": "2026-06-27T00:00Z",
@@ -10591,7 +10656,7 @@
         "polymarket": {
           "homeId": "uruguay",
           "awayId": "spain",
-          "homeWinPct": 16,
+          "homeWinPct": 14,
           "awayWinPct": 64,
           "drawPct": 23,
           "eventSlug": "fifwc-ury-esp-2026-06-26"
@@ -10637,7 +10702,7 @@
         "date": "2026-06-26",
         "broadcasts": [
           "FOX",
-          "Tele",
+          "Universo",
           "FOX One"
         ],
         "time": "2026-06-27T03:00Z",
@@ -10646,7 +10711,7 @@
           "homeId": "newzealand",
           "awayId": "belgium",
           "homeWinPct": 8,
-          "awayWinPct": 79,
+          "awayWinPct": 80,
           "drawPct": 14,
           "eventSlug": "fifwc-nzl-bel-2026-06-26"
         }
@@ -10666,7 +10731,7 @@
         "date": "2026-06-27",
         "broadcasts": [
           "FS1",
-          "Tele",
+          "Universo",
           "FOX One"
         ],
         "time": "2026-06-27T21:00Z",
@@ -10701,7 +10766,7 @@
         "polymarket": {
           "homeId": "panama",
           "awayId": "england",
-          "homeWinPct": 8,
+          "homeWinPct": 9,
           "awayWinPct": 80,
           "drawPct": 13,
           "eventSlug": "fifwc-pan-eng-2026-06-27"
@@ -10728,9 +10793,9 @@
         "polymarket": {
           "homeId": "colombia",
           "awayId": "portugal",
-          "homeWinPct": 27,
+          "homeWinPct": 28,
           "awayWinPct": 48,
-          "drawPct": 27,
+          "drawPct": 26,
           "eventSlug": "fifwc-col-prt-2026-06-27"
         }
       },
@@ -10747,7 +10812,7 @@
         "date": "2026-06-27",
         "broadcasts": [
           "FS1",
-          "Tele",
+          "Universo",
           "FOX One"
         ],
         "time": "2026-06-27T23:30Z",
@@ -10774,7 +10839,7 @@
         "date": "2026-06-27",
         "broadcasts": [
           "FS1",
-          "Tele",
+          "Universo",
           "FOX One"
         ],
         "time": "2026-06-28T02:00Z",
@@ -10809,7 +10874,7 @@
         "polymarket": {
           "homeId": "jordan",
           "awayId": "argentina",
-          "homeWinPct": 6,
+          "homeWinPct": 7,
           "awayWinPct": 83,
           "drawPct": 12,
           "eventSlug": "fifwc-jor-arg-2026-06-27"
