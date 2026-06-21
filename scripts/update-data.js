@@ -1612,38 +1612,56 @@ async function main() {
   fs.writeFileSync(LIVE_PATH, JSON.stringify(output, null, 2));
   log(`✅ Live data → ${LIVE_PATH}`);
 
-  // Write daily snapshot (one per day, overwrite if already exists today)
-  const snapPath = path.join(SNAP_DIR, `${today}.json`);
-  fs.writeFileSync(snapPath, JSON.stringify({ ...output, isHistorical: true }));
-  log(`✅ Snapshot → ${snapPath}`);
+  // ── Immutable end-of-Pacific-day snapshots ────────────────────────────────
+  // Snapshot files are written once per past PT date (yesterday or earlier)
+  // and never overwritten. This guarantees the historical view reflects the
+  // actual end-of-day state, not an arbitrary mid-day GHA capture.
+  const todayPT = new Date().toLocaleDateString('en-CA', { timeZone: 'America/Los_Angeles' });
+  const yesterdayPT = (() => {
+    const d = new Date(todayPT + 'T12:00:00Z');
+    d.setUTCDate(d.getUTCDate() - 1);
+    return d.toISOString().slice(0, 10);
+  })();
 
-  // Update manifest
-  const mf = fs.existsSync(MF_PATH)
-    ? JSON.parse(fs.readFileSync(MF_PATH, 'utf8'))
-    : { available: [], labels: {} };
-
-  if (!mf.available.includes(today)) {
-    mf.available.push(today);
-    mf.available.sort();
+  const snapPath = path.join(SNAP_DIR, `${yesterdayPT}.json`);
+  let snapshotWritten = false;
+  if (!fs.existsSync(snapPath)) {
+    fs.writeFileSync(snapPath, JSON.stringify({ ...output, snapshotDate: yesterdayPT, isHistorical: true }));
+    log(`✅ Snapshot → ${snapPath} (first write, immutable)`);
+    snapshotWritten = true;
+  } else {
+    log(`Snapshot for ${yesterdayPT} already exists, skipping (immutable end-of-day artifact)`);
   }
 
-  // Build human-readable labels
-  mf.available.forEach((d, i) => {
-    const isLatest = i === mf.available.length - 1;
-    const isEarliest = i === 0;
-    mf.labels[d] = isLatest
-      ? `${fmtLabel(d)} (Latest)`
-      : isEarliest
-        ? `${fmtLabel(d)} (Pre-tournament)`
-        : fmtLabel(d);
-  });
+  // Update manifest only if we just added a new snapshot OR labels are stale
+  if (snapshotWritten || !fs.existsSync(MF_PATH)) {
+    const mf = fs.existsSync(MF_PATH)
+      ? JSON.parse(fs.readFileSync(MF_PATH, 'utf8'))
+      : { available: [], labels: {} };
 
-  mf.earliest  = mf.available[0];
-  mf.latest    = today;
-  mf.generated = now;
+    if (!mf.available.includes(yesterdayPT)) {
+      mf.available.push(yesterdayPT);
+      mf.available.sort();
+    }
 
-  fs.writeFileSync(MF_PATH, JSON.stringify(mf, null, 2));
-  log(`✅ Manifest → ${mf.available.length} snapshots`);
+    // Build human-readable labels
+    mf.available.forEach((d, i) => {
+      const isLatest = i === mf.available.length - 1;
+      const isEarliest = i === 0;
+      mf.labels[d] = isLatest
+        ? `${fmtLabel(d)} (Latest)`
+        : isEarliest
+          ? `${fmtLabel(d)} (Pre-tournament)`
+          : fmtLabel(d);
+    });
+
+    mf.earliest  = mf.available[0];
+    mf.latest    = mf.available[mf.available.length - 1];
+    mf.generated = now;
+
+    fs.writeFileSync(MF_PATH, JSON.stringify(mf, null, 2));
+    log(`✅ Manifest → ${mf.available.length} snapshots`);
+  }
   log('=== Done ===');
 }
 

@@ -2,10 +2,10 @@ name: Update World Cup Data
 
 on:
   schedule:
-    # 4x/day at 09/15/21/03 UTC (~02/08/14/20 Pacific). Client-side overlays
-    # (useLiveScores, useLiveOdds, useLiveTournamentProbs) handle freshness
-    # between runs, so the GHA only seeds the baseline + writes snapshots.
-    - cron: '0 3,9,15,21 * * *'
+    # Hourly. GitHub frequently delays scheduled crons by 1-5 hours during
+    # peak load, so a tighter cadence gives more reliable coverage. The
+    # "commit only if changed" guard prevents empty/noisy commits.
+    - cron: '0 * * * *'
   workflow_dispatch:
 
 permissions:
