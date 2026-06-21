@@ -1099,6 +1099,57 @@ function buildR16Opponents(teamId, r16Desc, standings) {
 
 const STAGE_ORDER = ['group_stage', 'r32', 'r16', 'qf', 'sf', 'final'];
 
+/**
+ * Brute-force check: across all possible outcomes of remaining group matches,
+ * does at least one scenario have this team finishing in the top 2?
+ * Returns true if the team can still advance, false if mathematically eliminated.
+ * Uses minimum-margin scoreline assumptions (1-0 wins, 0-0 draws) — a team that
+ * can't advance under these can't advance under any.
+ */
+function canStillAdvance(teamId, group, rawStandings, espnMatches) {
+	const rows = rawStandings?.[group] ?? [];
+	if (rows.length === 0) return true;
+	const teamIds = new Set(rows.map(r => r.teamId).filter(Boolean));
+
+	const remaining = [];
+	for (const [key, match] of espnMatches.entries()) {
+		if (match.status === 'FINISHED') continue;
+		const [h, a] = key.split(':');
+		if (teamIds.has(h) && teamIds.has(a)) remaining.push([h, a]);
+	}
+
+	if (remaining.length === 0) {
+		const row = rows.find(r => r.teamId === teamId);
+		return !!row && row.pos <= 2;
+	}
+
+	const outcomes = [
+		{ hPts: 3, aPts: 0, hGd: 1, aGd: -1 },
+		{ hPts: 0, aPts: 3, hGd: -1, aGd: 1 },
+		{ hPts: 1, aPts: 1, hGd: 0, aGd: 0 },
+	];
+
+	function dfs(i, sim) {
+		if (i === remaining.length) {
+			const sorted = [...sim].sort((a, b) => (b.pts - a.pts) || (b.gd - a.gd) || ((b.gf || 0) - (a.gf || 0)));
+			const pos = sorted.findIndex(r => r.teamId === teamId) + 1;
+			return pos > 0 && pos <= 2;
+		}
+		const [h, a] = remaining[i];
+		for (const o of outcomes) {
+			const next = sim.map(r => ({ ...r }));
+			const hRow = next.find(r => r.teamId === h);
+			const aRow = next.find(r => r.teamId === a);
+			if (hRow) { hRow.pts += o.hPts; hRow.gd += o.hGd; }
+			if (aRow) { aRow.pts += o.aPts; aRow.gd += o.aGd; }
+			if (dfs(i + 1, next)) return true;
+		}
+		return false;
+	}
+
+	return dfs(0, rows.map(r => ({ ...r })));
+}
+
 function determineCurrentStage(teamId, group, rawStandings, espnMatches) {
 	const groupRows = rawStandings?.[group];
 	if (!groupRows?.length) return 'group_stage';
@@ -1370,18 +1421,19 @@ async function main() {
     const existingTeam = existing?.teams?.find(e => e.id === t.id);
     const isActive = hasActive && activeIds.has(t.id);
 
-    // Group elimination: compute for everyone whenever standings exist
+    // Group elimination: brute-force simulate all remaining match outcomes in
+    // the team's group and check if there's ANY scenario where this team
+    // finishes top 2. If not → eliminated. This is more accurate than the old
+    // "maxPossible < current 2nd-place pts" heuristic, which under-marked
+    // teams whose max equaled the current 2nd-place pts (e.g., Turkey at 0pts
+    // can't catch Australia at 3pts because Aus or Par will get ≥3 in MD3).
     let eliminated = false;
     if (rawStandings?.[t.group]) {
-      const gRows = rawStandings[t.group];
-      const teamRow = gRows.find(r => r.teamId === t.id);
-      if (teamRow) {
-        const remainingMatches = 3 - teamRow.played;
-        const maxPossible = teamRow.pts + 3 * remainingMatches;
-        const sorted = [...gRows].sort((a, b) => b.pts - a.pts);
-        const secondPlacePts = sorted[1]?.pts ?? 0;
-        eliminated = remainingMatches > 0 && maxPossible < secondPlacePts;
-      }
+      eliminated = !canStillAdvance(t.id, t.group, rawStandings, espnMatches);
+    }
+    // Polymarket signal: r32=0 means the market resolved against the team.
+    if (typeof polyData.r32?.[t.id] === 'number' && polyData.r32[t.id] === 0) {
+      eliminated = true;
     }
 
     // Knockout stage detection — only when tournament has knockout data
