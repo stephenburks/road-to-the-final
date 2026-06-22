@@ -32,6 +32,12 @@ function nextDay(dateStr: string): string {
 	return d.toISOString().slice(0, 10)
 }
 
+function prevDay(dateStr: string): string {
+	const d = new Date(dateStr + 'T12:00:00Z')
+	d.setUTCDate(d.getUTCDate() - 1)
+	return d.toISOString().slice(0, 10)
+}
+
 function formatScorer(athlete: { displayName?: string } | undefined, type: string, minute: string): string {
 	if (!athlete?.displayName) return ''
 	if (type === 'Own Goal') return `${athlete.displayName} OG ${minute}`
@@ -40,20 +46,23 @@ function formatScorer(athlete: { displayName?: string } | undefined, type: strin
 }
 
 async function fetchScoreboardPatches(
+	yesterday: string,
 	today: string,
 	tomorrow: string,
-	todayPairKeys: Set<string>,
+	relevantPairKeys: Set<string>,
 	teams: AppData['teams'],
 	signal: AbortSignal
 ): Promise<Map<string, LiveMatchPatch> | null> {
-	// Fetch both today and tomorrow — ESPN buckets late-night games (e.g. 04:00Z)
-	// under the next UTC date even though they belong to today's local match day.
+	// Fetch yesterday + today + tomorrow. Yesterday covers results that finished
+	// after the last GHA cron run (GitHub frequently delays scheduled crons by
+	// hours). Tomorrow covers ESPN's UTC-date spillover for late-night kickoffs.
 	const ts = Date.now()
-	const [todayJson, tomorrowJson] = await Promise.all([
+	const [yesterdayJson, todayJson, tomorrowJson] = await Promise.all([
+		fetch(`${ESPN_SCOREBOARD_URL}?dates=${ymd(yesterday)}&_=${ts}`, { signal }).then(r => r.json()),
 		fetch(`${ESPN_SCOREBOARD_URL}?dates=${ymd(today)}&_=${ts}`, { signal }).then(r => r.json()),
 		fetch(`${ESPN_SCOREBOARD_URL}?dates=${ymd(tomorrow)}&_=${ts}`, { signal }).then(r => r.json()),
 	])
-	const events = [...(todayJson?.events ?? []), ...(tomorrowJson?.events ?? [])]
+	const events = [...(yesterdayJson?.events ?? []), ...(todayJson?.events ?? []), ...(tomorrowJson?.events ?? [])]
 
 	const next = new Map<string, LiveMatchPatch>()
 
@@ -75,7 +84,7 @@ async function fetchScoreboardPatches(
 
 		if (!homeTeam || !awayTeam) continue
 
-		if (!todayPairKeys.has(`${homeTeam.id}:${awayTeam.id}`)) continue
+		if (!relevantPairKeys.has(`${homeTeam.id}:${awayTeam.id}`)) continue
 
 		const statusState = competition?.status?.type?.state
 		const statusDetail = competition?.status?.type?.detail
@@ -147,31 +156,43 @@ export function useLiveScores(
 ): Map<string, LiveMatchPatch> | null {
 	const today = localDateStr()
 	const tomorrow = nextDay(today)
-	const todayMatches = useMemo(() => dailyMatches?.[today] ?? [], [dailyMatches, today])
+	const yesterday = prevDay(today)
 
-	// Build a lookup of expected team-pair keys from today's schedule.
-	// We use this instead of an event-date string comparison because ESPN
-	// returns UTC timestamps: late US evening games (e.g. 01:00Z) have a
-	// UTC date of tomorrow even though they belong to today's match day.
-	const todayPairKeys = useMemo(() => {
+	// Relevant pair keys = matches from yesterday + today. Yesterday is included
+	// so that even when GHA is delayed (often hours), the client can still
+	// overlay late-finishing matches with real results from ESPN.
+	const relevantPairKeys = useMemo(() => {
 		const keys = new Set<string>()
-		for (const m of todayMatches as { homeId?: string; awayId?: string }[]) {
-			if (m.homeId && m.awayId) {
-				keys.add(`${m.homeId}:${m.awayId}`)
-				keys.add(`${m.awayId}:${m.homeId}`)
+		const fromDay = (date: string) => {
+			const arr = (dailyMatches?.[date] ?? []) as { homeId?: string; awayId?: string }[]
+			for (const m of arr) {
+				if (m.homeId && m.awayId) {
+					keys.add(`${m.homeId}:${m.awayId}`)
+					keys.add(`${m.awayId}:${m.homeId}`)
+				}
 			}
 		}
+		fromDay(yesterday)
+		fromDay(today)
 		return keys
-	}, [todayMatches])
+	}, [dailyMatches, today, yesterday])
 
 	const activeWindow = useActiveMatchWindow(dailyMatches, today)
-	const shouldPoll = !isHistorical && activeWindow
+
+	// Always run the query once (when not historical) so yesterday's results land
+	// in the patch map even when no match is currently live — this is the
+	// self-healing layer that protects against GHA cron delays.
+	// Only POLL (refetch every 75s) when we're in the active match window.
+	const enabled = !isHistorical && relevantPairKeys.size > 0
 
 	const { data: patches = null } = useQuery({
-		queryKey: ['liveScores', today, [...todayPairKeys].sort().join(',')],
-		queryFn: ({ signal }) => fetchScoreboardPatches(today, tomorrow, todayPairKeys, teams, signal),
-		enabled: shouldPoll,
-		refetchInterval: shouldPoll ? 75_000 : false,
+		queryKey: ['liveScores', today, [...relevantPairKeys].sort().join(',')],
+		queryFn: ({ signal }) => fetchScoreboardPatches(yesterday, today, tomorrow, relevantPairKeys, teams, signal),
+		enabled,
+		refetchInterval: enabled && activeWindow ? 75_000 : false,
+		// Cache stays fresh for 5 min when nothing's live, so background users
+		// get refresh without hammering ESPN.
+		staleTime: activeWindow ? 30_000 : 5 * 60_000,
 	})
 
 	return patches
