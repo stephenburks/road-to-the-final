@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-23T05:00:08.945Z",
+  "lastUpdated": "2026-06-23T09:38:20.519Z",
   "snapshotDate": "2026-06-23",
   "isHistorical": false,
   "sourceSummary": {
@@ -237,7 +237,7 @@
       ],
       "winProbabilities": {
         "brazil": 66,
-        "morocco": 34,
+        "morocco": 33,
         "scotland": 2,
         "haiti": 0
       }
@@ -500,7 +500,7 @@
         }
       ],
       "winProbabilities": {
-        "egypt": 63,
+        "egypt": 64,
         "iran": 12,
         "belgium": 26,
         "newzealand": 0
@@ -669,39 +669,39 @@
           "flag": "🇦🇹"
         },
         {
-          "teamId": "jordan",
-          "team": "Jordan",
-          "played": 1,
-          "w": 0,
-          "d": 0,
-          "l": 1,
-          "gf": 1,
-          "ga": 3,
-          "pts": 0,
-          "gd": -2,
-          "pos": 3,
-          "flag": "🇯🇴"
-        },
-        {
           "teamId": "algeria",
           "team": "Algeria",
-          "played": 1,
-          "w": 0,
+          "played": 2,
+          "w": 1,
           "d": 0,
           "l": 1,
-          "gf": 0,
-          "ga": 3,
+          "gf": 2,
+          "ga": 4,
+          "pts": 3,
+          "gd": -2,
+          "pos": 3,
+          "flag": "🇩🇿"
+        },
+        {
+          "teamId": "jordan",
+          "team": "Jordan",
+          "played": 2,
+          "w": 0,
+          "d": 0,
+          "l": 2,
+          "gf": 2,
+          "ga": 5,
           "pts": 0,
           "gd": -3,
           "pos": 4,
-          "flag": "🇩🇿"
+          "flag": "🇯🇴"
         }
       ],
       "winProbabilities": {
         "argentina": 100,
         "austria": 0,
-        "jordan": 0,
-        "algeria": 0
+        "algeria": 0,
+        "jordan": 0
       }
     },
     "K": {
@@ -764,9 +764,9 @@
         }
       ],
       "winProbabilities": {
-        "colombia": 51,
+        "colombia": 50,
         "portugal": 45,
-        "drcongo": 6,
+        "drcongo": 5,
         "uzbekistan": 0
       }
     },
@@ -914,7 +914,7 @@
         "r16": 69,
         "qf": 27,
         "sf": 14,
-        "final": 5,
+        "final": 6,
         "winner": 1,
         "source": "market"
       },
@@ -1215,12 +1215,12 @@
           },
           {
             "group": "J",
-            "likelyTeam": "Jordan",
-            "flag": "🇯🇴",
-            "fifaRank": 66,
-            "difficulty": 1,
-            "label": "Favorable",
-            "color": "#22C55E",
+            "likelyTeam": "Algeria",
+            "flag": "🇩🇿",
+            "fifaRank": 35,
+            "difficulty": 3,
+            "label": "Moderate",
+            "color": "#F59E0B",
             "note": "3rd-place team from Group J",
             "pct": null
           },
@@ -1352,7 +1352,7 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 94,
+        "r32": 96,
         "r16": 43,
         "qf": 11,
         "sf": 3,
@@ -1446,12 +1446,12 @@
           },
           {
             "group": "J",
-            "likelyTeam": "Jordan",
-            "flag": "🇯🇴",
-            "fifaRank": 66,
-            "difficulty": 1,
-            "label": "Favorable",
-            "color": "#22C55E",
+            "likelyTeam": "Algeria",
+            "flag": "🇩🇿",
+            "fifaRank": 35,
+            "difficulty": 3,
+            "label": "Moderate",
+            "color": "#F59E0B",
             "note": "3rd-place team from Group J",
             "pct": null
           },
@@ -1566,8 +1566,8 @@
       ],
       "advanceProbabilities": {
         "r32": 25,
-        "r16": 11,
-        "qf": 2,
+        "r16": 12,
+        "qf": 3,
         "sf": 2,
         "final": 1,
         "winner": 0,
@@ -1659,12 +1659,12 @@
           },
           {
             "group": "J",
-            "likelyTeam": "Jordan",
-            "flag": "🇯🇴",
-            "fifaRank": 66,
-            "difficulty": 1,
-            "label": "Favorable",
-            "color": "#22C55E",
+            "likelyTeam": "Algeria",
+            "flag": "🇩🇿",
+            "fifaRank": 35,
+            "difficulty": 3,
+            "label": "Moderate",
+            "color": "#F59E0B",
             "note": "3rd-place team from Group J",
             "pct": null
           },
@@ -1800,7 +1800,7 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 57,
+        "r16": 56,
         "qf": 19,
         "sf": 4,
         "final": 1,
@@ -1904,12 +1904,12 @@
           },
           {
             "group": "J",
-            "likelyTeam": "Jordan",
-            "flag": "🇯🇴",
-            "fifaRank": 66,
-            "difficulty": 1,
-            "label": "Favorable",
-            "color": "#22C55E",
+            "likelyTeam": "Algeria",
+            "flag": "🇩🇿",
+            "fifaRank": 35,
+            "difficulty": 3,
+            "label": "Moderate",
+            "color": "#F59E0B",
             "note": "3rd-place team from Group J",
             "pct": null
           }
@@ -2010,9 +2010,9 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 67,
-        "r16": 17,
-        "qf": 5,
+        "r32": 68,
+        "r16": 19,
+        "qf": 6,
         "sf": 1,
         "final": 1,
         "winner": 0,
@@ -2115,12 +2115,12 @@
           },
           {
             "group": "J",
-            "likelyTeam": "Jordan",
-            "flag": "🇯🇴",
-            "fifaRank": 66,
-            "difficulty": 1,
-            "label": "Favorable",
-            "color": "#22C55E",
+            "likelyTeam": "Algeria",
+            "flag": "🇩🇿",
+            "fifaRank": 35,
+            "difficulty": 3,
+            "label": "Moderate",
+            "color": "#F59E0B",
             "note": "3rd-place team from Group J",
             "pct": null
           }
@@ -2332,12 +2332,12 @@
           },
           {
             "group": "J",
-            "likelyTeam": "Jordan",
-            "flag": "🇯🇴",
-            "fifaRank": 66,
-            "difficulty": 1,
-            "label": "Favorable",
-            "color": "#22C55E",
+            "likelyTeam": "Algeria",
+            "flag": "🇩🇿",
+            "fifaRank": 35,
+            "difficulty": 3,
+            "label": "Moderate",
+            "color": "#F59E0B",
             "note": "3rd-place team from Group J",
             "pct": null
           }
@@ -2434,7 +2434,7 @@
       "advanceProbabilities": {
         "r32": 100,
         "r16": 66,
-        "qf": 24,
+        "qf": 23,
         "sf": 9,
         "final": 2,
         "winner": 1,
@@ -2537,12 +2537,12 @@
           },
           {
             "group": "J",
-            "likelyTeam": "Jordan",
-            "flag": "🇯🇴",
-            "fifaRank": 66,
-            "difficulty": 1,
-            "label": "Favorable",
-            "color": "#22C55E",
+            "likelyTeam": "Algeria",
+            "flag": "🇩🇿",
+            "fifaRank": 35,
+            "difficulty": 3,
+            "label": "Moderate",
+            "color": "#F59E0B",
             "note": "3rd-place team from Group J",
             "pct": null
           }
@@ -2631,9 +2631,9 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 66,
-        "qf": 46,
-        "sf": 25,
+        "r16": 65,
+        "qf": 45,
+        "sf": 24,
         "final": 14,
         "winner": 5,
         "source": "market"
@@ -2724,12 +2724,12 @@
           },
           {
             "group": "J",
-            "likelyTeam": "Jordan",
-            "flag": "🇯🇴",
-            "fifaRank": 66,
-            "difficulty": 1,
-            "label": "Favorable",
-            "color": "#22C55E",
+            "likelyTeam": "Algeria",
+            "flag": "🇩🇿",
+            "fifaRank": 35,
+            "difficulty": 3,
+            "label": "Moderate",
+            "color": "#F59E0B",
             "note": "3rd-place team from Group J",
             "pct": null
           },
@@ -2833,10 +2833,10 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 51,
+        "r16": 50,
         "qf": 28,
         "sf": 13,
-        "final": 6,
+        "final": 7,
         "winner": 2,
         "source": "market"
       },
@@ -3164,8 +3164,8 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 78,
-        "r16": 18,
+        "r32": 77,
+        "r16": 20,
         "qf": 8,
         "sf": 1,
         "final": 1,
@@ -3337,10 +3337,10 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 76,
-        "qf": 50,
+        "r16": 77,
+        "qf": 48,
         "sf": 20,
-        "final": 8,
+        "final": 7,
         "winner": 4,
         "source": "market"
       },
@@ -3441,12 +3441,12 @@
           },
           {
             "group": "J",
-            "likelyTeam": "Jordan",
-            "flag": "🇯🇴",
-            "fifaRank": 66,
-            "difficulty": 1,
-            "label": "Favorable",
-            "color": "#22C55E",
+            "likelyTeam": "Algeria",
+            "flag": "🇩🇿",
+            "fifaRank": 35,
+            "difficulty": 3,
+            "label": "Moderate",
+            "color": "#F59E0B",
             "note": "3rd-place team from Group J",
             "pct": null
           }
@@ -3564,7 +3564,7 @@
       ],
       "advanceProbabilities": {
         "r32": 86,
-        "r16": 24,
+        "r16": 26,
         "qf": 6,
         "sf": 1,
         "final": 1,
@@ -3743,10 +3743,10 @@
       ],
       "advanceProbabilities": {
         "r32": 92,
-        "r16": 28,
-        "qf": 7,
+        "r16": 30,
+        "qf": 8,
         "sf": 2,
-        "final": 2,
+        "final": 1,
         "winner": 0,
         "source": "market"
       },
@@ -4050,7 +4050,7 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 81,
+        "r16": 82,
         "qf": 42,
         "sf": 26,
         "final": 14,
@@ -4154,12 +4154,12 @@
           },
           {
             "group": "J",
-            "likelyTeam": "Jordan",
-            "flag": "🇯🇴",
-            "fifaRank": 66,
-            "difficulty": 1,
-            "label": "Favorable",
-            "color": "#22C55E",
+            "likelyTeam": "Algeria",
+            "flag": "🇩🇿",
+            "fifaRank": 35,
+            "difficulty": 3,
+            "label": "Moderate",
+            "color": "#F59E0B",
             "note": "3rd-place team from Group J",
             "pct": null
           }
@@ -4293,7 +4293,7 @@
       "advanceProbabilities": {
         "r32": 6,
         "r16": 2,
-        "qf": 1,
+        "qf": 0,
         "sf": 0,
         "final": 0,
         "winner": 0,
@@ -4470,7 +4470,7 @@
       ],
       "advanceProbabilities": {
         "r32": 99,
-        "r16": 37,
+        "r16": 36,
         "qf": 14,
         "sf": 4,
         "final": 2,
@@ -4612,8 +4612,8 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 26,
-        "r16": 10,
+        "r32": 25,
+        "r16": 12,
         "qf": 5,
         "sf": 2,
         "final": 1,
@@ -4796,8 +4796,8 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 65,
-        "qf": 46,
+        "r16": 63,
+        "qf": 47,
         "sf": 24,
         "final": 14,
         "winner": 5,
@@ -4945,8 +4945,8 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 98,
-        "r16": 49,
+        "r32": 100,
+        "r16": 44,
         "qf": 28,
         "sf": 13,
         "final": 5,
@@ -5127,7 +5127,7 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 92,
+        "r32": 91,
         "r16": 19,
         "qf": 11,
         "sf": 2,
@@ -5453,10 +5453,10 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 91,
-        "r16": 62,
+        "r32": 92,
+        "r16": 56,
         "qf": 25,
-        "sf": 12,
+        "sf": 11,
         "final": 4,
         "winner": 1,
         "source": "market"
@@ -5619,8 +5619,8 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 44,
-        "qf": 14,
+        "r16": 42,
+        "qf": 18,
         "sf": 3,
         "final": 1,
         "winner": 0,
@@ -5723,12 +5723,12 @@
           },
           {
             "group": "J",
-            "likelyTeam": "Jordan",
-            "flag": "🇯🇴",
-            "fifaRank": 66,
-            "difficulty": 1,
-            "label": "Favorable",
-            "color": "#22C55E",
+            "likelyTeam": "Algeria",
+            "flag": "🇩🇿",
+            "fifaRank": 35,
+            "difficulty": 3,
+            "label": "Moderate",
+            "color": "#F59E0B",
             "note": "3rd-place team from Group J",
             "pct": null
           }
@@ -5822,7 +5822,7 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 64,
+        "r32": 63,
         "r16": 22,
         "qf": 6,
         "sf": 1,
@@ -5992,10 +5992,10 @@
       ],
       "advanceProbabilities": {
         "r32": 8,
-        "r16": 4,
+        "r16": 3,
         "qf": 2,
         "sf": 1,
-        "final": 1,
+        "final": 0,
         "winner": 0,
         "source": "market"
       },
@@ -6157,8 +6157,8 @@
       "advanceProbabilities": {
         "r32": 100,
         "r16": 82,
-        "qf": 61,
-        "sf": 46,
+        "qf": 62,
+        "sf": 45,
         "final": 28,
         "winner": 14,
         "source": "market"
@@ -6321,7 +6321,7 @@
       "advanceProbabilities": {
         "r32": 69,
         "r16": 13,
-        "qf": 7,
+        "qf": 8,
         "sf": 3,
         "final": 1,
         "winner": 0,
@@ -6504,11 +6504,11 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 33,
-        "r16": 4,
+        "r32": 31,
+        "r16": 10,
         "qf": 2,
         "sf": 1,
-        "final": 1,
+        "final": 0,
         "winner": 0,
         "source": "market"
       },
@@ -6852,10 +6852,10 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 90,
-        "qf": 64,
-        "sf": 55,
-        "final": 38,
+        "r16": 89,
+        "qf": 65,
+        "sf": 49,
+        "final": 35,
         "winner": 20,
         "source": "market"
       },
@@ -6956,12 +6956,12 @@
           },
           {
             "group": "J",
-            "likelyTeam": "Jordan",
-            "flag": "🇯🇴",
-            "fifaRank": 66,
-            "difficulty": 1,
-            "label": "Favorable",
-            "color": "#22C55E",
+            "likelyTeam": "Algeria",
+            "flag": "🇩🇿",
+            "fifaRank": 35,
+            "difficulty": 3,
+            "label": "Moderate",
+            "color": "#F59E0B",
             "note": "3rd-place team from Group J",
             "pct": null
           }
@@ -7031,8 +7031,8 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 64,
-        "r16": 27,
+        "r32": 66,
+        "r16": 28,
         "qf": 14,
         "sf": 5,
         "final": 2,
@@ -7189,7 +7189,7 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 3,
+        "r32": 4,
         "r16": 2,
         "qf": 1,
         "sf": 0,
@@ -7341,8 +7341,8 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 67,
-        "qf": 41,
+        "r16": 68,
+        "qf": 35,
         "sf": 18,
         "final": 8,
         "winner": 3,
@@ -7501,9 +7501,9 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 84,
-        "qf": 71,
-        "sf": 50,
+        "r16": 85,
+        "qf": 70,
+        "sf": 48,
         "final": 28,
         "winner": 14,
         "source": "market"
@@ -7664,12 +7664,21 @@
           "matchday": 2,
           "opponent": "Jordan",
           "opponentFlag": "🇯🇴",
-          "result": null,
+          "result": "W",
           "score": "2-1",
           "date": "2026-06-22",
           "venue": "Arrowhead Stadium, Kansas City",
-          "scorers": [],
-          "cards": []
+          "scorers": [
+            "Nadhir Benbouali 69'",
+            "Amine Gouiri 82'"
+          ],
+          "cards": [
+            {
+              "player": "Ramiz Zerrouki",
+              "minute": "44'",
+              "type": "yellow"
+            }
+          ]
         },
         {
           "matchday": 3,
@@ -7684,11 +7693,11 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 72,
-        "r16": 35,
+        "r32": 75,
+        "r16": 21,
         "qf": 6,
         "sf": 2,
-        "final": 1,
+        "final": 2,
         "winner": 0,
         "source": "market"
       },
@@ -7698,7 +7707,7 @@
           "city": "Kansas City",
           "venue": "Various venues",
           "date": "Jun 16–27",
-          "detail": "0pts after MD1"
+          "detail": "3pts after MD2"
         },
         "r32": {
           "status": "upcoming",
@@ -7851,8 +7860,8 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 92,
-        "r16": 32,
+        "r32": 96,
+        "r16": 33,
         "qf": 13,
         "sf": 4,
         "final": 1,
@@ -7981,12 +7990,20 @@
           "matchday": 2,
           "opponent": "Algeria",
           "opponentFlag": "🇩🇿",
-          "result": null,
+          "result": "L",
           "score": "1-2",
           "date": "2026-06-22",
           "venue": "Arrowhead Stadium, Kansas City",
-          "scorers": [],
-          "cards": []
+          "scorers": [
+            "Nizar Al-Rashdan 36'"
+          ],
+          "cards": [
+            {
+              "player": "Husam Abu Dahab",
+              "minute": "64'",
+              "type": "yellow"
+            }
+          ]
         },
         {
           "matchday": 3,
@@ -8015,7 +8032,7 @@
           "city": "San Francisco · Kansas City · Dallas",
           "venue": "Various venues",
           "date": "Jun 16–27",
-          "detail": "0pts after MD1"
+          "detail": "0pts after MD2"
         },
         "r32": {
           "status": "upcoming",
@@ -8161,10 +8178,10 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 94,
-        "r16": 69,
-        "qf": 43,
-        "sf": 25,
+        "r32": 97,
+        "r16": 70,
+        "qf": 44,
+        "sf": 27,
         "final": 14,
         "winner": 7,
         "source": "market"
@@ -8300,7 +8317,7 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 63,
+        "r32": 62,
         "r16": 15,
         "qf": 4,
         "sf": 2,
@@ -8452,7 +8469,7 @@
       "advanceProbabilities": {
         "r32": 18,
         "r16": 4,
-        "qf": 1,
+        "qf": 2,
         "sf": 0,
         "final": 0,
         "winner": 0,
@@ -8604,7 +8621,7 @@
       "advanceProbabilities": {
         "r32": 98,
         "r16": 59,
-        "qf": 31,
+        "qf": 32,
         "sf": 14,
         "final": 5,
         "winner": 1,
@@ -8696,12 +8713,12 @@
           },
           {
             "group": "J",
-            "likelyTeam": "Jordan",
-            "flag": "🇯🇴",
-            "fifaRank": 66,
-            "difficulty": 1,
-            "label": "Favorable",
-            "color": "#22C55E",
+            "likelyTeam": "Algeria",
+            "flag": "🇩🇿",
+            "fifaRank": 35,
+            "difficulty": 3,
+            "label": "Moderate",
+            "color": "#F59E0B",
             "note": "3rd-place team from Group J",
             "pct": null
           },
@@ -8805,7 +8822,7 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 87,
+        "r16": 86,
         "qf": 66,
         "sf": 40,
         "final": 25,
@@ -8938,8 +8955,8 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 78,
-        "r16": 43,
+        "r32": 79,
+        "r16": 45,
         "qf": 14,
         "sf": 5,
         "final": 2,
@@ -9110,11 +9127,11 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 78,
-        "r16": 21,
+        "r32": 76,
+        "r16": 18,
         "qf": 6,
         "sf": 4,
-        "final": 1,
+        "final": 2,
         "winner": 0,
         "source": "market"
       },
@@ -9274,7 +9291,7 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 11,
+        "r32": 10,
         "r16": 4,
         "qf": 1,
         "sf": 1,
@@ -10243,24 +10260,15 @@
         "awayId": "algeria",
         "homeScore": 1,
         "awayScore": 2,
-        "status": "IN_PROGRESS",
+        "status": "FINISHED",
         "date": "2026-06-22",
-        "clock": "90'+8'",
         "broadcasts": [
           "FS1",
           "Tele",
           "FOX One"
         ],
         "time": "2026-06-23T03:00Z",
-        "venue": "Levi's Stadium, Santa Clara, California",
-        "polymarket": {
-          "homeId": "jordan",
-          "awayId": "algeria",
-          "homeWinPct": 0,
-          "awayWinPct": 96,
-          "drawPct": 5,
-          "eventSlug": "fifwc-jor-alg-2026-06-22"
-        }
+        "venue": "Levi's Stadium, Santa Clara, California"
       }
     ],
     "2026-06-23": [
@@ -10285,7 +10293,7 @@
         "polymarket": {
           "homeId": "portugal",
           "awayId": "uzbekistan",
-          "homeWinPct": 84,
+          "homeWinPct": 86,
           "awayWinPct": 5,
           "drawPct": 12,
           "eventSlug": "fifwc-prt-uzb-2026-06-23"
@@ -10312,9 +10320,9 @@
         "polymarket": {
           "homeId": "england",
           "awayId": "ghana",
-          "homeWinPct": 82,
-          "awayWinPct": 7,
-          "drawPct": 14,
+          "homeWinPct": 83,
+          "awayWinPct": 6,
+          "drawPct": 13,
           "eventSlug": "fifwc-eng-gha-2026-06-23"
         }
       },
@@ -10578,7 +10586,7 @@
         "polymarket": {
           "homeId": "ecuador",
           "awayId": "germany",
-          "homeWinPct": 26,
+          "homeWinPct": 25,
           "awayWinPct": 52,
           "drawPct": 24,
           "eventSlug": "fifwc-ecu-ger-2026-06-25"
@@ -10687,7 +10695,7 @@
           "homeId": "turkey",
           "awayId": "usa",
           "homeWinPct": 27,
-          "awayWinPct": 51,
+          "awayWinPct": 52,
           "drawPct": 23,
           "eventSlug": "fifwc-tur-usa-2026-06-25"
         }
@@ -10715,8 +10723,8 @@
         "polymarket": {
           "homeId": "norway",
           "awayId": "france",
-          "homeWinPct": 22,
-          "awayWinPct": 57,
+          "homeWinPct": 20,
+          "awayWinPct": 60,
           "drawPct": 23,
           "eventSlug": "fifwc-nor-fra-2026-06-26"
         }
@@ -10770,7 +10778,7 @@
           "homeId": "capeverde",
           "awayId": "saudiarabia",
           "homeWinPct": 41,
-          "awayWinPct": 33,
+          "awayWinPct": 32,
           "drawPct": 28,
           "eventSlug": "fifwc-cvi-ksa-2026-06-26"
         }
@@ -10825,7 +10833,7 @@
           "awayId": "iran",
           "homeWinPct": 40,
           "awayWinPct": 25,
-          "drawPct": 36,
+          "drawPct": 37,
           "eventSlug": "fifwc-egy-irn-2026-06-26"
         }
       },
@@ -10879,9 +10887,9 @@
         "polymarket": {
           "homeId": "croatia",
           "awayId": "ghana",
-          "homeWinPct": 60,
+          "homeWinPct": 59,
           "awayWinPct": 16,
-          "drawPct": 26,
+          "drawPct": 28,
           "eventSlug": "fifwc-hrv-gha-2026-06-27"
         }
       },
@@ -10906,8 +10914,8 @@
         "polymarket": {
           "homeId": "panama",
           "awayId": "england",
-          "homeWinPct": 9,
-          "awayWinPct": 80,
+          "homeWinPct": 7,
+          "awayWinPct": 81,
           "drawPct": 13,
           "eventSlug": "fifwc-pan-eng-2026-06-27"
         }
@@ -10934,7 +10942,7 @@
           "homeId": "colombia",
           "awayId": "portugal",
           "homeWinPct": 27,
-          "awayWinPct": 48,
+          "awayWinPct": 49,
           "drawPct": 26,
           "eventSlug": "fifwc-col-prt-2026-06-27"
         }
@@ -10960,7 +10968,7 @@
         "polymarket": {
           "homeId": "drcongo",
           "awayId": "uzbekistan",
-          "homeWinPct": 47,
+          "homeWinPct": 48,
           "awayWinPct": 28,
           "drawPct": 26,
           "eventSlug": "fifwc-cdr-uzb-2026-06-27"
@@ -10987,9 +10995,9 @@
         "polymarket": {
           "homeId": "algeria",
           "awayId": "austria",
-          "homeWinPct": 26,
-          "awayWinPct": 35,
-          "drawPct": 40,
+          "homeWinPct": 25,
+          "awayWinPct": 36,
+          "drawPct": 41,
           "eventSlug": "fifwc-alg-aut-2026-06-27"
         }
       },
@@ -11014,9 +11022,9 @@
         "polymarket": {
           "homeId": "jordan",
           "awayId": "argentina",
-          "homeWinPct": 7,
-          "awayWinPct": 81,
-          "drawPct": 13,
+          "homeWinPct": 5,
+          "awayWinPct": 82,
+          "drawPct": 14,
           "eventSlug": "fifwc-jor-arg-2026-06-27"
         }
       }
