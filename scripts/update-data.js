@@ -1101,12 +1101,14 @@ const STAGE_ORDER = ['group_stage', 'r32', 'r16', 'qf', 'sf', 'final'];
 
 /**
  * Brute-force check: across all possible outcomes of remaining group matches,
- * does at least one scenario have this team finishing in the top 2?
- * Returns true if the team can still advance, false if mathematically eliminated.
- * Uses minimum-margin scoreline assumptions (1-0 wins, 0-0 draws) — a team that
- * can't advance under these can't advance under any.
+ * does at least one scenario have this team finishing in the top 3?
+ *
+ * 2026 World Cup has 48 teams in 12 groups of 4. Top 2 + 8 best 3rd-place
+ * teams advance to R32, so a team is only mathematically locked out of R32
+ * if they're guaranteed to finish 4th. Polymarket=0% is the primary signal
+ * for the more nuanced "can finish 3rd but won't make wildcard" cases.
  */
-function canStillAdvance(teamId, group, rawStandings, espnMatches) {
+function canStillFinishTop3(teamId, group, rawStandings, espnMatches) {
 	const rows = rawStandings?.[group] ?? [];
 	if (rows.length === 0) return true;
 	const teamIds = new Set(rows.map(r => r.teamId).filter(Boolean));
@@ -1133,7 +1135,7 @@ function canStillAdvance(teamId, group, rawStandings, espnMatches) {
 		if (i === remaining.length) {
 			const sorted = [...sim].sort((a, b) => (b.pts - a.pts) || (b.gd - a.gd) || ((b.gf || 0) - (a.gf || 0)));
 			const pos = sorted.findIndex(r => r.teamId === teamId) + 1;
-			return pos > 0 && pos <= 2;
+			return pos > 0 && pos <= 3;
 		}
 		const [h, a] = remaining[i];
 		for (const o of outcomes) {
@@ -1421,15 +1423,14 @@ async function main() {
     const existingTeam = existing?.teams?.find(e => e.id === t.id);
     const isActive = hasActive && activeIds.has(t.id);
 
-    // Group elimination: brute-force simulate all remaining match outcomes in
-    // the team's group and check if there's ANY scenario where this team
-    // finishes top 2. If not → eliminated. This is more accurate than the old
-    // "maxPossible < current 2nd-place pts" heuristic, which under-marked
-    // teams whose max equaled the current 2nd-place pts (e.g., Turkey at 0pts
-    // can't catch Australia at 3pts because Aus or Par will get ≥3 in MD3).
+    // Group elimination: in the 48-team World Cup format, top 2 + 8 best 3rds
+    // advance, so a team is mathematically locked out only when guaranteed 4th.
+    // Brute-force simulate remaining match outcomes; if no scenario has this
+    // team finishing top 3, they're definitively out. Polymarket=0% (below)
+    // handles the more nuanced "can finish 3rd but won't make the wildcard 8".
     let eliminated = false;
     if (rawStandings?.[t.group]) {
-      eliminated = !canStillAdvance(t.id, t.group, rawStandings, espnMatches);
+      eliminated = !canStillFinishTop3(t.id, t.group, rawStandings, espnMatches);
     }
     // Polymarket signal: r32=0 means the market resolved against the team.
     if (typeof polyData.r32?.[t.id] === 'number' && polyData.r32[t.id] === 0) {

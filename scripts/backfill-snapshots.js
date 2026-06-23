@@ -9,7 +9,7 @@
  *  - dailyMatches[d] where d > D:  reset to SCHEDULED, 0-0, empty scorers/cards
  *  - teams[].groupResults:         each match reset if its date > D
  *  - groups[X].standings:          recomputed from finished matches with date <= D
- *  - teams[].eliminated:           recomputed via brute-force canStillAdvance
+ *  - teams[].eliminated:           recomputed via brute-force canStillFinishTop3
  *  - Polymarket-derived fields (advanceProbabilities, winProbabilities) left as-is
  *    (historical odds aren't available; current values are kept for visualization)
  *
@@ -68,8 +68,11 @@ function recomputeStandings(snapshot, cutoffDate) {
 	return out;
 }
 
-/** Brute-force: can this team still finish top 2 given the remaining matches? */
-function canStillAdvance(teamId, groupLetter, standings, snapshot, cutoffDate) {
+/** Brute-force: can this team still finish top 3 given the remaining matches?
+ * Top 2 + 8 best 3rd-place teams advance (48-team format), so we mark
+ * eliminated only when guaranteed 4th. Polymarket=0% handles the 3rd-place
+ * wildcard nuance separately (not used in backfill — historical odds unknown). */
+function canStillFinishTop3(teamId, groupLetter, standings, snapshot, cutoffDate) {
 	const rows = standings[groupLetter] ?? [];
 	if (rows.length === 0) return true;
 	const teamIds = new Set(rows.map(r => r.teamId));
@@ -96,7 +99,7 @@ function canStillAdvance(teamId, groupLetter, standings, snapshot, cutoffDate) {
 
 	if (remaining.length === 0) {
 		const r = rows.find(x => x.teamId === teamId);
-		return !!r && r.pos <= 2;
+		return !!r && r.pos <= 3;
 	}
 
 	const outcomes = [
@@ -107,7 +110,7 @@ function canStillAdvance(teamId, groupLetter, standings, snapshot, cutoffDate) {
 	function dfs(i, sim) {
 		if (i === remaining.length) {
 			const sorted = [...sim].sort((a, b) => (b.pts - a.pts) || (b.gd - a.gd));
-			return (sorted.findIndex(r => r.teamId === teamId) + 1) <= 2;
+			return (sorted.findIndex(r => r.teamId === teamId) + 1) <= 3;
 		}
 		const [h, a] = remaining[i];
 		for (const o of outcomes) {
@@ -173,7 +176,7 @@ for (const file of snapFiles) {
 	// 4. Recompute eliminations
 	let elimCount = 0;
 	for (const t of snap.teams) {
-		const isEliminated = !canStillAdvance(t.id, t.group, standings, snap, date);
+		const isEliminated = !canStillFinishTop3(t.id, t.group, standings, snap, date);
 		if (isEliminated !== t.eliminated) {
 			t.eliminated = isEliminated;
 		}
