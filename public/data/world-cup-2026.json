@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-23T00:05:39.738Z",
+  "lastUpdated": "2026-06-23T05:00:08.945Z",
   "snapshotDate": "2026-06-23",
   "isHistorical": false,
   "sourceSummary": {
@@ -436,7 +436,7 @@
       "winProbabilities": {
         "netherlands": 77,
         "japan": 21,
-        "sweden": 3,
+        "sweden": 4,
         "tunisia": 0
       }
     },
@@ -568,72 +568,72 @@
       "winProbabilities": {
         "spain": 87,
         "uruguay": 10,
-        "capeverde": 4,
+        "capeverde": 3,
         "saudiarabia": 0
       }
     },
     "I": {
       "standings": [
         {
-          "teamId": "norway",
-          "team": "Norway",
-          "played": 1,
-          "w": 1,
-          "d": 0,
-          "l": 0,
-          "gf": 4,
-          "ga": 1,
-          "pts": 3,
-          "gd": 3,
-          "pos": 1,
-          "flag": "🇳🇴"
-        },
-        {
           "teamId": "france",
           "team": "France",
-          "played": 1,
-          "w": 1,
+          "played": 2,
+          "w": 2,
           "d": 0,
           "l": 0,
-          "gf": 3,
+          "gf": 6,
           "ga": 1,
-          "pts": 3,
-          "gd": 2,
-          "pos": 2,
+          "pts": 6,
+          "gd": 5,
+          "pos": 1,
           "flag": "🇫🇷"
+        },
+        {
+          "teamId": "norway",
+          "team": "Norway",
+          "played": 2,
+          "w": 2,
+          "d": 0,
+          "l": 0,
+          "gf": 7,
+          "ga": 3,
+          "pts": 6,
+          "gd": 4,
+          "pos": 2,
+          "flag": "🇳🇴"
         },
         {
           "teamId": "senegal",
           "team": "Senegal",
-          "played": 1,
+          "played": 2,
           "w": 0,
           "d": 0,
-          "l": 1,
-          "gf": 1,
-          "ga": 3,
+          "l": 2,
+          "gf": 3,
+          "ga": 6,
           "pts": 0,
-          "gd": -2,
+          "gd": -3,
           "pos": 3,
           "flag": "🇸🇳"
         },
         {
           "teamId": "iraq",
           "team": "Iraq",
-          "played": 1,
+          "played": 2,
           "w": 0,
           "d": 0,
-          "l": 1,
+          "l": 2,
           "gf": 1,
-          "ga": 4,
+          "ga": 7,
           "pts": 0,
-          "gd": -3,
+          "gd": -6,
           "pos": 4,
           "flag": "🇮🇶"
         }
       ],
       "winProbabilities": {
-        "norway": 21,
         "france": 79,
+        "norway": 22,
         "senegal": 0,
         "iraq": 0
       }
@@ -764,7 +764,7 @@
         }
       ],
       "winProbabilities": {
-        "colombia": 50,
+        "colombia": 51,
         "portugal": 45,
         "drcongo": 6,
         "uzbekistan": 0
@@ -831,7 +831,7 @@
       ],
       "winProbabilities": {
         "england": 94,
-        "ghana": 5,
+        "ghana": 4,
         "panama": 0,
         "croatia": 2
       }
@@ -911,8 +911,8 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 68,
-        "qf": 26,
+        "r16": 69,
+        "qf": 27,
         "sf": 14,
         "final": 5,
         "winner": 1,
@@ -1122,7 +1122,7 @@
       ],
       "advanceProbabilities": {
         "r32": 18,
-        "r16": 3,
+        "r16": 2,
         "qf": 1,
         "sf": 1,
         "final": 0,
@@ -1352,11 +1352,11 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 93,
-        "r16": 41,
+        "r32": 94,
+        "r16": 43,
         "qf": 11,
         "sf": 3,
-        "final": 1,
+        "final": 2,
         "winner": 0,
         "source": "market"
       },
@@ -1565,7 +1565,7 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 26,
+        "r32": 25,
         "r16": 11,
         "qf": 2,
         "sf": 2,
@@ -1800,7 +1800,7 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 55,
+        "r16": 57,
         "qf": 19,
         "sf": 4,
         "final": 1,
@@ -1917,12 +1917,12 @@
         "r16": [
           {
             "group": "I",
-            "likelyTeam": "Norway",
-            "flag": "🇳🇴",
-            "fifaRank": 31,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
+            "likelyTeam": "France",
+            "flag": "🇫🇷",
+            "fifaRank": 3,
+            "difficulty": 5,
+            "label": "Danger",
+            "color": "#EF4444",
             "note": "Winner of Group I",
             "pct": null
           }
@@ -2011,7 +2011,7 @@
       ],
       "advanceProbabilities": {
         "r32": 67,
-        "r16": 19,
+        "r16": 17,
         "qf": 5,
         "sf": 1,
         "final": 1,
@@ -2231,7 +2231,7 @@
         "r16": 2,
         "qf": 1,
         "sf": 1,
-        "final": 1,
+        "final": 0,
         "winner": 0,
         "source": "market"
       },
@@ -2435,7 +2435,7 @@
         "r32": 100,
         "r16": 66,
         "qf": 24,
-        "sf": 8,
+        "sf": 9,
         "final": 2,
         "winner": 1,
         "source": "market"
@@ -2635,7 +2635,7 @@
         "qf": 46,
         "sf": 25,
         "final": 14,
-        "winner": 6,
+        "winner": 5,
         "source": "market"
       },
       "path": {
@@ -2759,12 +2759,12 @@
           },
           {
             "group": "I",
-            "likelyTeam": "France",
-            "flag": "🇫🇷",
-            "fifaRank": 3,
-            "difficulty": 5,
-            "label": "Danger",
-            "color": "#EF4444",
+            "likelyTeam": "Norway",
+            "flag": "🇳🇴",
+            "fifaRank": 31,
+            "difficulty": 3,
+            "label": "Moderate",
+            "color": "#F59E0B",
             "note": "Runner-up of Group I",
             "pct": null
           }
@@ -2833,7 +2833,7 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 52,
+        "r16": 51,
         "qf": 28,
         "sf": 13,
         "final": 6,
@@ -3165,7 +3165,7 @@
       ],
       "advanceProbabilities": {
         "r32": 78,
-        "r16": 20,
+        "r16": 18,
         "qf": 8,
         "sf": 1,
         "final": 1,
@@ -3338,7 +3338,7 @@
       "advanceProbabilities": {
         "r32": 100,
         "r16": 76,
-        "qf": 48,
+        "qf": 50,
         "sf": 20,
         "final": 8,
         "winner": 4,
@@ -3563,8 +3563,8 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 85,
-        "r16": 22,
+        "r32": 86,
+        "r16": 24,
         "qf": 6,
         "sf": 1,
         "final": 1,
@@ -3742,9 +3742,9 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 91,
-        "r16": 32,
-        "qf": 8,
+        "r32": 92,
+        "r16": 28,
+        "qf": 7,
         "sf": 2,
         "final": 2,
         "winner": 0,
@@ -4376,12 +4376,12 @@
           },
           {
             "group": "I",
-            "likelyTeam": "France",
-            "flag": "🇫🇷",
-            "fifaRank": 3,
-            "difficulty": 5,
-            "label": "Danger",
-            "color": "#EF4444",
+            "likelyTeam": "Norway",
+            "flag": "🇳🇴",
+            "fifaRank": 31,
+            "difficulty": 3,
+            "label": "Moderate",
+            "color": "#F59E0B",
             "note": "Runner-up of Group I",
             "pct": null
           }
@@ -4470,9 +4470,9 @@
       ],
       "advanceProbabilities": {
         "r32": 99,
-        "r16": 34,
+        "r16": 37,
         "qf": 14,
-        "sf": 3,
+        "sf": 4,
         "final": 2,
         "winner": 0,
         "source": "market"
@@ -4543,12 +4543,12 @@
         "r16": [
           {
             "group": "I",
-            "likelyTeam": "France",
-            "flag": "🇫🇷",
-            "fifaRank": 3,
-            "difficulty": 5,
-            "label": "Danger",
-            "color": "#EF4444",
+            "likelyTeam": "Norway",
+            "flag": "🇳🇴",
+            "fifaRank": 31,
+            "difficulty": 3,
+            "label": "Moderate",
+            "color": "#F59E0B",
             "note": "Runner-up of Group I",
             "pct": null
           }
@@ -4613,10 +4613,10 @@
       ],
       "advanceProbabilities": {
         "r32": 26,
-        "r16": 11,
+        "r16": 10,
         "qf": 5,
         "sf": 2,
-        "final": 2,
+        "final": 1,
         "winner": 0,
         "source": "market"
       },
@@ -4697,12 +4697,12 @@
           },
           {
             "group": "I",
-            "likelyTeam": "France",
-            "flag": "🇫🇷",
-            "fifaRank": 3,
-            "difficulty": 5,
-            "label": "Danger",
-            "color": "#EF4444",
+            "likelyTeam": "Norway",
+            "flag": "🇳🇴",
+            "fifaRank": 31,
+            "difficulty": 3,
+            "label": "Moderate",
+            "color": "#F59E0B",
             "note": "Runner-up of Group I",
             "pct": null
           }
@@ -4945,11 +4945,11 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 100,
+        "r32": 98,
         "r16": 49,
-        "qf": 27,
-        "sf": 12,
-        "final": 6,
+        "qf": 28,
+        "sf": 13,
+        "final": 5,
         "winner": 2,
         "source": "market"
       },
@@ -5030,12 +5030,12 @@
           },
           {
             "group": "I",
-            "likelyTeam": "France",
-            "flag": "🇫🇷",
-            "fifaRank": 3,
-            "difficulty": 5,
-            "label": "Danger",
-            "color": "#EF4444",
+            "likelyTeam": "Norway",
+            "flag": "🇳🇴",
+            "fifaRank": 31,
+            "difficulty": 3,
+            "label": "Moderate",
+            "color": "#F59E0B",
             "note": "Runner-up of Group I",
             "pct": null
           }
@@ -5127,8 +5127,8 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 86,
-        "r16": 22,
+        "r32": 92,
+        "r16": 19,
         "qf": 11,
         "sf": 2,
         "final": 2,
@@ -5212,12 +5212,12 @@
           },
           {
             "group": "I",
-            "likelyTeam": "France",
-            "flag": "🇫🇷",
-            "fifaRank": 3,
-            "difficulty": 5,
-            "label": "Danger",
-            "color": "#EF4444",
+            "likelyTeam": "Norway",
+            "flag": "🇳🇴",
+            "fifaRank": 31,
+            "difficulty": 3,
+            "label": "Moderate",
+            "color": "#F59E0B",
             "note": "Runner-up of Group I",
             "pct": null
           }
@@ -5370,12 +5370,12 @@
           },
           {
             "group": "I",
-            "likelyTeam": "France",
-            "flag": "🇫🇷",
-            "fifaRank": 3,
-            "difficulty": 5,
-            "label": "Danger",
-            "color": "#EF4444",
+            "likelyTeam": "Norway",
+            "flag": "🇳🇴",
+            "fifaRank": 31,
+            "difficulty": 3,
+            "label": "Moderate",
+            "color": "#F59E0B",
             "note": "Runner-up of Group I",
             "pct": null
           }
@@ -5454,7 +5454,7 @@
       ],
       "advanceProbabilities": {
         "r32": 91,
-        "r16": 61,
+        "r16": 62,
         "qf": 25,
         "sf": 12,
         "final": 4,
@@ -5992,10 +5992,10 @@
       ],
       "advanceProbabilities": {
         "r32": 8,
-        "r16": 5,
+        "r16": 4,
         "qf": 2,
         "sf": 1,
-        "final": 0,
+        "final": 1,
         "winner": 0,
         "source": "market"
       },
@@ -6157,7 +6157,7 @@
       "advanceProbabilities": {
         "r32": 100,
         "r16": 82,
-        "qf": 59,
+        "qf": 61,
         "sf": 46,
         "final": 28,
         "winner": 14,
@@ -6240,12 +6240,12 @@
           },
           {
             "group": "I",
-            "likelyTeam": "Norway",
-            "flag": "🇳🇴",
-            "fifaRank": 31,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
+            "likelyTeam": "France",
+            "flag": "🇫🇷",
+            "fifaRank": 3,
+            "difficulty": 5,
+            "label": "Danger",
+            "color": "#EF4444",
             "note": "Winner of Group I",
             "pct": null
           }
@@ -6321,7 +6321,7 @@
       "advanceProbabilities": {
         "r32": 69,
         "r16": 13,
-        "qf": 5,
+        "qf": 7,
         "sf": 3,
         "final": 1,
         "winner": 0,
@@ -6505,7 +6505,7 @@
       ],
       "advanceProbabilities": {
         "r32": 33,
-        "r16": 6,
+        "r16": 4,
         "qf": 2,
         "sf": 1,
         "final": 1,
@@ -6691,7 +6691,7 @@
       ],
       "advanceProbabilities": {
         "r32": 37,
-        "r16": 21,
+        "r16": 19,
         "qf": 8,
         "sf": 3,
         "final": 2,
@@ -6827,11 +6827,15 @@
           "matchday": 2,
           "opponent": "Iraq",
           "opponentFlag": "🇮🇶",
-          "result": null,
-          "score": "1-0",
+          "result": "W",
+          "score": "3-0",
           "date": "2026-06-22",
           "venue": "Lincoln Financial Field, Philadelphia",
-          "scorers": [],
+          "scorers": [
+            "Kylian Mbappé 14'",
+            "Kylian Mbappé 54'",
+            "Ousmane Dembélé 66'"
+          ],
           "cards": []
         },
         {
@@ -6848,10 +6852,10 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 88,
-        "qf": 63,
-        "sf": 54,
-        "final": 35,
+        "r16": 90,
+        "qf": 64,
+        "sf": 55,
+        "final": 38,
         "winner": 20,
         "source": "market"
       },
@@ -6861,437 +6865,7 @@
           "city": "New Jersey · Philadelphia · Boston",
           "venue": "Various venues",
           "date": "Jun 16–26",
-          "detail": "3pts after MD1"
-        },
-        "r32": {
-          "status": "upcoming",
-          "match": 86,
-          "date": "2026-07-02",
-          "city": "Miami",
-          "venue": "Hard Rock Stadium",
-          "opponentDesc": "Winner Group J"
-        },
-        "r16": {
-          "status": "future",
-          "match": 96,
-          "date": "2026-07-07",
-          "city": "Vancouver",
-          "venue": "BC Place",
-          "opponentDesc": "Winner Match 86"
-        },
-        "qf": {
-          "status": "future",
-          "match": 100,
-          "date": "2026-07-11",
-          "city": "Kansas City",
-          "venue": "Arrowhead Stadium",
-          "opponentDesc": "Winner Match 96"
-        },
-        "sf": {
-          "status": "future",
-          "match": 101,
-          "date": "2026-07-14",
-          "city": "Dallas",
-          "venue": "AT&T Stadium",
-          "opponentDesc": "Winner QF bracket"
-        },
-        "final": {
-          "status": "future",
-          "match": 104,
-          "date": "2026-07-19",
-          "city": "New Jersey",
-          "venue": "MetLife Stadium",
-          "opponentDesc": "Winner other SF"
-        }
-      },
-      "possibleOpponents": {
-        "r32": [
-          {
-            "group": "J",
-            "likelyTeam": "Argentina",
-            "flag": "🇦🇷",
-            "fifaRank": 2,
-            "difficulty": 5,
-            "label": "Danger",
-            "color": "#EF4444",
-            "note": "Winner of Group J",
-            "pct": null
-          }
-        ],
-        "r16": [
-          {
-            "group": "E",
-            "likelyTeam": "Ivory Coast",
-            "flag": "🇨🇮",
-            "fifaRank": 42,
-            "difficulty": 2,
-            "label": "Favorable",
-            "color": "#22C55E",
-            "note": "Runner-up of Group E",
-            "pct": null
-          }
-        ]
-      }
-    },
-    {
-      "id": "senegal",
-      "name": "Senegal",
-      "flag": "🇸🇳",
-      "group": "I",
-      "confederation": "CAF",
-      "fifaRank": 14,
-      "eliminated": false,
-      "currentStage": "group_stage",
-      "groupResults": [
-        {
-          "matchday": 1,
-          "opponent": "France",
-          "opponentFlag": "🇫🇷",
-          "result": "L",
-          "score": "1-3",
-          "date": "2026-06-16",
-          "venue": "MetLife Stadium, New Jersey",
-          "scorers": [
-            "Ibrahim Mbaye 90'+5'"
-          ],
-          "cards": []
-        },
-        {
-          "matchday": 2,
-          "opponent": "Norway",
-          "opponentFlag": "🇳🇴",
-          "result": null,
-          "score": "0-0",
-          "date": "2026-06-22",
-          "venue": "MetLife Stadium, New Jersey",
-          "scorers": [],
-          "cards": []
-        },
-        {
-          "matchday": 3,
-          "opponent": "Iraq",
-          "opponentFlag": "🇮🇶",
-          "result": null,
-          "score": null,
-          "date": "2026-06-26",
-          "venue": "BMO Field, Toronto",
-          "scorers": [],
-          "cards": []
-        }
-      ],
-      "advanceProbabilities": {
-        "r32": 68,
-        "r16": 30,
-        "qf": 14,
-        "sf": 4,
-        "final": 2,
-        "winner": 0,
-        "source": "market"
-      },
-      "path": {
-        "group_stage": {
-          "status": "active",
-          "city": "New Jersey · Toronto",
-          "venue": "Various venues",
-          "date": "Jun 16–26",
-          "detail": "0pts after MD1"
-        },
-        "r32": {
-          "status": "upcoming",
-          "match": 86,
-          "date": "2026-07-02",
-          "city": "Miami",
-          "venue": "Hard Rock Stadium",
-          "opponentDesc": "Winner Group J"
-        },
-        "r16": {
-          "status": "future",
-          "match": 96,
-          "date": "2026-07-07",
-          "city": "Vancouver",
-          "venue": "BC Place",
-          "opponentDesc": "Winner Match 86"
-        },
-        "qf": {
-          "status": "future",
-          "match": 100,
-          "date": "2026-07-11",
-          "city": "Kansas City",
-          "venue": "Arrowhead Stadium",
-          "opponentDesc": "Winner Match 96"
-        },
-        "sf": {
-          "status": "future",
-          "match": 101,
-          "date": "2026-07-14",
-          "city": "Dallas",
-          "venue": "AT&T Stadium",
-          "opponentDesc": "Winner QF bracket"
-        },
-        "final": {
-          "status": "future",
-          "match": 104,
-          "date": "2026-07-19",
-          "city": "New Jersey",
-          "venue": "MetLife Stadium",
-          "opponentDesc": "Winner other SF"
-        }
-      },
-      "possibleOpponents": {
-        "r32": [
-          {
-            "group": "J",
-            "likelyTeam": "Argentina",
-            "flag": "🇦🇷",
-            "fifaRank": 2,
-            "difficulty": 5,
-            "label": "Danger",
-            "color": "#EF4444",
-            "note": "Winner of Group J",
-            "pct": null
-          }
-        ],
-        "r16": [
-          {
-            "group": "E",
-            "likelyTeam": "Ivory Coast",
-            "flag": "🇨🇮",
-            "fifaRank": 42,
-            "difficulty": 2,
-            "label": "Favorable",
-            "color": "#22C55E",
-            "note": "Runner-up of Group E",
-            "pct": null
-          },
-          {
-            "group": "I",
-            "likelyTeam": "France",
-            "flag": "🇫🇷",
-            "fifaRank": 3,
-            "difficulty": 5,
-            "label": "Danger",
-            "color": "#EF4444",
-            "note": "Runner-up of Group I",
-            "pct": null
-          }
-        ]
-      }
-    },
-    {
-      "id": "iraq",
-      "name": "Iraq",
-      "flag": "🇮🇶",
-      "group": "I",
-      "confederation": "AFC",
-      "fifaRank": 58,
-      "eliminated": false,
-      "currentStage": "group_stage",
-      "groupResults": [
-        {
-          "matchday": 1,
-          "opponent": "Norway",
-          "opponentFlag": "🇳🇴",
-          "result": "L",
-          "score": "1-4",
-          "date": "2026-06-16",
-          "venue": "Gillette Stadium, Boston",
-          "scorers": [
-            "Aymen Hussein 39'"
-          ],
-          "cards": [
-            {
-              "player": "Zaid Tahseen",
-              "minute": "86'",
-              "type": "yellow"
-            }
-          ]
-        },
-        {
-          "matchday": 2,
-          "opponent": "France",
-          "opponentFlag": "🇫🇷",
-          "result": null,
-          "score": "0-1",
-          "date": "2026-06-22",
-          "venue": "Lincoln Financial Field, Philadelphia",
-          "scorers": [],
-          "cards": []
-        },
-        {
-          "matchday": 3,
-          "opponent": "Senegal",
-          "opponentFlag": "🇸🇳",
-          "result": null,
-          "score": null,
-          "date": "2026-06-26",
-          "venue": "BMO Field, Toronto",
-          "scorers": [],
-          "cards": []
-        }
-      ],
-      "advanceProbabilities": {
-        "r32": 4,
-        "r16": 2,
-        "qf": 1,
-        "sf": 0,
-        "final": 0,
-        "winner": 0,
-        "source": "market"
-      },
-      "path": {
-        "group_stage": {
-          "status": "active",
-          "city": "Boston · Philadelphia · Toronto",
-          "venue": "Various venues",
-          "date": "Jun 16–26",
-          "detail": "0pts after MD1"
-        },
-        "r32": {
-          "status": "upcoming",
-          "match": 86,
-          "date": "2026-07-02",
-          "city": "Miami",
-          "venue": "Hard Rock Stadium",
-          "opponentDesc": "Winner Group J"
-        },
-        "r16": {
-          "status": "future",
-          "match": 96,
-          "date": "2026-07-07",
-          "city": "Vancouver",
-          "venue": "BC Place",
-          "opponentDesc": "Winner Match 86"
-        },
-        "qf": {
-          "status": "future",
-          "match": 100,
-          "date": "2026-07-11",
-          "city": "Kansas City",
-          "venue": "Arrowhead Stadium",
-          "opponentDesc": "Winner Match 96"
-        },
-        "sf": {
-          "status": "future",
-          "match": 101,
-          "date": "2026-07-14",
-          "city": "Dallas",
-          "venue": "AT&T Stadium",
-          "opponentDesc": "Winner QF bracket"
-        },
-        "final": {
-          "status": "future",
-          "match": 104,
-          "date": "2026-07-19",
-          "city": "New Jersey",
-          "venue": "MetLife Stadium",
-          "opponentDesc": "Winner other SF"
-        }
-      },
-      "possibleOpponents": {
-        "r32": [
-          {
-            "group": "J",
-            "likelyTeam": "Argentina",
-            "flag": "🇦🇷",
-            "fifaRank": 2,
-            "difficulty": 5,
-            "label": "Danger",
-            "color": "#EF4444",
-            "note": "Winner of Group J",
-            "pct": null
-          }
-        ],
-        "r16": [
-          {
-            "group": "E",
-            "likelyTeam": "Ivory Coast",
-            "flag": "🇨🇮",
-            "fifaRank": 42,
-            "difficulty": 2,
-            "label": "Favorable",
-            "color": "#22C55E",
-            "note": "Runner-up of Group E",
-            "pct": null
-          },
-          {
-            "group": "I",
-            "likelyTeam": "France",
-            "flag": "🇫🇷",
-            "fifaRank": 3,
-            "difficulty": 5,
-            "label": "Danger",
-            "color": "#EF4444",
-            "note": "Runner-up of Group I",
-            "pct": null
-          }
-        ]
-      }
-    },
-    {
-      "id": "norway",
-      "name": "Norway",
-      "flag": "🇳🇴",
-      "group": "I",
-      "confederation": "UEFA",
-      "fifaRank": 31,
-      "eliminated": false,
-      "currentStage": "group_stage",
-      "groupResults": [
-        {
-          "matchday": 1,
-          "opponent": "Iraq",
-          "opponentFlag": "🇮🇶",
-          "result": "W",
-          "score": "4-1",
-          "date": "2026-06-16",
-          "venue": "Gillette Stadium, Boston",
-          "scorers": [
-            "Erling Haaland 29'",
-            "Erling Haaland 43'",
-            "Leo Østigard 76'",
-            "Aymen Hussein OG 90'+6'"
-          ],
-          "cards": []
-        },
-        {
-          "matchday": 2,
-          "opponent": "Senegal",
-          "opponentFlag": "🇸🇳",
-          "result": null,
-          "score": "0-0",
-          "date": "2026-06-22",
-          "venue": "MetLife Stadium, New Jersey",
-          "scorers": [],
-          "cards": []
-        },
-        {
-          "matchday": 3,
-          "opponent": "France",
-          "opponentFlag": "🇫🇷",
-          "result": null,
-          "score": null,
-          "date": "2026-06-26",
-          "venue": "Gillette Stadium, Boston",
-          "scorers": [],
-          "cards": []
-        }
-      ],
-      "advanceProbabilities": {
-        "r32": 98,
-        "r16": 61,
-        "qf": 34,
-        "sf": 18,
-        "final": 8,
-        "winner": 2,
-        "source": "market"
-      },
-      "path": {
-        "group_stage": {
-          "status": "active",
-          "city": "Boston · New Jersey",
-          "venue": "Various venues",
-          "date": "Jun 16–26",
-          "detail": "3pts after MD1"
+          "detail": "6pts after MD2"
         },
         "r32": {
           "status": "upcoming",
@@ -7408,6 +6982,451 @@
       }
     },
     {
+      "id": "senegal",
+      "name": "Senegal",
+      "flag": "🇸🇳",
+      "group": "I",
+      "confederation": "CAF",
+      "fifaRank": 14,
+      "eliminated": true,
+      "currentStage": "group_stage",
+      "groupResults": [
+        {
+          "matchday": 1,
+          "opponent": "France",
+          "opponentFlag": "🇫🇷",
+          "result": "L",
+          "score": "1-3",
+          "date": "2026-06-16",
+          "venue": "MetLife Stadium, New Jersey",
+          "scorers": [
+            "Ibrahim Mbaye 90'+5'"
+          ],
+          "cards": []
+        },
+        {
+          "matchday": 2,
+          "opponent": "Norway",
+          "opponentFlag": "🇳🇴",
+          "result": "L",
+          "score": "2-3",
+          "date": "2026-06-22",
+          "venue": "MetLife Stadium, New Jersey",
+          "scorers": [
+            "Ismaïla Sarr 53'",
+            "Ismaïla Sarr 90'+3'"
+          ],
+          "cards": []
+        },
+        {
+          "matchday": 3,
+          "opponent": "Iraq",
+          "opponentFlag": "🇮🇶",
+          "result": null,
+          "score": null,
+          "date": "2026-06-26",
+          "venue": "BMO Field, Toronto",
+          "scorers": [],
+          "cards": []
+        }
+      ],
+      "advanceProbabilities": {
+        "r32": 64,
+        "r16": 27,
+        "qf": 14,
+        "sf": 5,
+        "final": 2,
+        "winner": 0,
+        "source": "market"
+      },
+      "path": {
+        "group_stage": {
+          "status": "active",
+          "city": "New Jersey · Toronto",
+          "venue": "Various venues",
+          "date": "Jun 16–26",
+          "detail": "0pts after MD2"
+        },
+        "r32": {
+          "status": "upcoming",
+          "match": 86,
+          "date": "2026-07-02",
+          "city": "Miami",
+          "venue": "Hard Rock Stadium",
+          "opponentDesc": "Winner Group J"
+        },
+        "r16": {
+          "status": "future",
+          "match": 96,
+          "date": "2026-07-07",
+          "city": "Vancouver",
+          "venue": "BC Place",
+          "opponentDesc": "Winner Match 86"
+        },
+        "qf": {
+          "status": "future",
+          "match": 100,
+          "date": "2026-07-11",
+          "city": "Kansas City",
+          "venue": "Arrowhead Stadium",
+          "opponentDesc": "Winner Match 96"
+        },
+        "sf": {
+          "status": "future",
+          "match": 101,
+          "date": "2026-07-14",
+          "city": "Dallas",
+          "venue": "AT&T Stadium",
+          "opponentDesc": "Winner QF bracket"
+        },
+        "final": {
+          "status": "future",
+          "match": 104,
+          "date": "2026-07-19",
+          "city": "New Jersey",
+          "venue": "MetLife Stadium",
+          "opponentDesc": "Winner other SF"
+        }
+      },
+      "possibleOpponents": {
+        "r32": [
+          {
+            "group": "J",
+            "likelyTeam": "Argentina",
+            "flag": "🇦🇷",
+            "fifaRank": 2,
+            "difficulty": 5,
+            "label": "Danger",
+            "color": "#EF4444",
+            "note": "Winner of Group J",
+            "pct": null
+          }
+        ],
+        "r16": [
+          {
+            "group": "E",
+            "likelyTeam": "Ivory Coast",
+            "flag": "🇨🇮",
+            "fifaRank": 42,
+            "difficulty": 2,
+            "label": "Favorable",
+            "color": "#22C55E",
+            "note": "Runner-up of Group E",
+            "pct": null
+          },
+          {
+            "group": "I",
+            "likelyTeam": "Norway",
+            "flag": "🇳🇴",
+            "fifaRank": 31,
+            "difficulty": 3,
+            "label": "Moderate",
+            "color": "#F59E0B",
+            "note": "Runner-up of Group I",
+            "pct": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "iraq",
+      "name": "Iraq",
+      "flag": "🇮🇶",
+      "group": "I",
+      "confederation": "AFC",
+      "fifaRank": 58,
+      "eliminated": true,
+      "currentStage": "group_stage",
+      "groupResults": [
+        {
+          "matchday": 1,
+          "opponent": "Norway",
+          "opponentFlag": "🇳🇴",
+          "result": "L",
+          "score": "1-4",
+          "date": "2026-06-16",
+          "venue": "Gillette Stadium, Boston",
+          "scorers": [
+            "Aymen Hussein 39'"
+          ],
+          "cards": [
+            {
+              "player": "Zaid Tahseen",
+              "minute": "86'",
+              "type": "yellow"
+            }
+          ]
+        },
+        {
+          "matchday": 2,
+          "opponent": "France",
+          "opponentFlag": "🇫🇷",
+          "result": "L",
+          "score": "0-3",
+          "date": "2026-06-22",
+          "venue": "Lincoln Financial Field, Philadelphia",
+          "scorers": [
+            "Aymen Hussein 39'"
+          ],
+          "cards": [
+            {
+              "player": "Amir Al-Ammari",
+              "minute": "6'",
+              "type": "yellow"
+            }
+          ]
+        },
+        {
+          "matchday": 3,
+          "opponent": "Senegal",
+          "opponentFlag": "🇸🇳",
+          "result": null,
+          "score": null,
+          "date": "2026-06-26",
+          "venue": "BMO Field, Toronto",
+          "scorers": [],
+          "cards": []
+        }
+      ],
+      "advanceProbabilities": {
+        "r32": 3,
+        "r16": 2,
+        "qf": 1,
+        "sf": 0,
+        "final": 0,
+        "winner": 0,
+        "source": "market"
+      },
+      "path": {
+        "group_stage": {
+          "status": "active",
+          "city": "Boston · Philadelphia · Toronto",
+          "venue": "Various venues",
+          "date": "Jun 16–26",
+          "detail": "0pts after MD2"
+        },
+        "r32": {
+          "status": "upcoming",
+          "match": 86,
+          "date": "2026-07-02",
+          "city": "Miami",
+          "venue": "Hard Rock Stadium",
+          "opponentDesc": "Winner Group J"
+        },
+        "r16": {
+          "status": "future",
+          "match": 96,
+          "date": "2026-07-07",
+          "city": "Vancouver",
+          "venue": "BC Place",
+          "opponentDesc": "Winner Match 86"
+        },
+        "qf": {
+          "status": "future",
+          "match": 100,
+          "date": "2026-07-11",
+          "city": "Kansas City",
+          "venue": "Arrowhead Stadium",
+          "opponentDesc": "Winner Match 96"
+        },
+        "sf": {
+          "status": "future",
+          "match": 101,
+          "date": "2026-07-14",
+          "city": "Dallas",
+          "venue": "AT&T Stadium",
+          "opponentDesc": "Winner QF bracket"
+        },
+        "final": {
+          "status": "future",
+          "match": 104,
+          "date": "2026-07-19",
+          "city": "New Jersey",
+          "venue": "MetLife Stadium",
+          "opponentDesc": "Winner other SF"
+        }
+      },
+      "possibleOpponents": {
+        "r32": [
+          {
+            "group": "J",
+            "likelyTeam": "Argentina",
+            "flag": "🇦🇷",
+            "fifaRank": 2,
+            "difficulty": 5,
+            "label": "Danger",
+            "color": "#EF4444",
+            "note": "Winner of Group J",
+            "pct": null
+          }
+        ],
+        "r16": [
+          {
+            "group": "E",
+            "likelyTeam": "Ivory Coast",
+            "flag": "🇨🇮",
+            "fifaRank": 42,
+            "difficulty": 2,
+            "label": "Favorable",
+            "color": "#22C55E",
+            "note": "Runner-up of Group E",
+            "pct": null
+          },
+          {
+            "group": "I",
+            "likelyTeam": "Norway",
+            "flag": "🇳🇴",
+            "fifaRank": 31,
+            "difficulty": 3,
+            "label": "Moderate",
+            "color": "#F59E0B",
+            "note": "Runner-up of Group I",
+            "pct": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "norway",
+      "name": "Norway",
+      "flag": "🇳🇴",
+      "group": "I",
+      "confederation": "UEFA",
+      "fifaRank": 31,
+      "eliminated": false,
+      "currentStage": "group_stage",
+      "groupResults": [
+        {
+          "matchday": 1,
+          "opponent": "Iraq",
+          "opponentFlag": "🇮🇶",
+          "result": "W",
+          "score": "4-1",
+          "date": "2026-06-16",
+          "venue": "Gillette Stadium, Boston",
+          "scorers": [
+            "Erling Haaland 29'",
+            "Erling Haaland 43'",
+            "Leo Østigard 76'",
+            "Aymen Hussein OG 90'+6'"
+          ],
+          "cards": []
+        },
+        {
+          "matchday": 2,
+          "opponent": "Senegal",
+          "opponentFlag": "🇸🇳",
+          "result": "W",
+          "score": "3-2",
+          "date": "2026-06-22",
+          "venue": "MetLife Stadium, New Jersey",
+          "scorers": [
+            "Marcus Holmgren Pedersen 43'",
+            "Erling Haaland 48'",
+            "Erling Haaland 58'"
+          ],
+          "cards": []
+        },
+        {
+          "matchday": 3,
+          "opponent": "France",
+          "opponentFlag": "🇫🇷",
+          "result": null,
+          "score": null,
+          "date": "2026-06-26",
+          "venue": "Gillette Stadium, Boston",
+          "scorers": [],
+          "cards": []
+        }
+      ],
+      "advanceProbabilities": {
+        "r32": 100,
+        "r16": 67,
+        "qf": 41,
+        "sf": 18,
+        "final": 8,
+        "winner": 3,
+        "source": "market"
+      },
+      "path": {
+        "group_stage": {
+          "status": "active",
+          "city": "Boston · New Jersey",
+          "venue": "Various venues",
+          "date": "Jun 16–26",
+          "detail": "6pts after MD2"
+        },
+        "r32": {
+          "status": "upcoming",
+          "match": 86,
+          "date": "2026-07-02",
+          "city": "Miami",
+          "venue": "Hard Rock Stadium",
+          "opponentDesc": "Winner Group J"
+        },
+        "r16": {
+          "status": "future",
+          "match": 96,
+          "date": "2026-07-07",
+          "city": "Vancouver",
+          "venue": "BC Place",
+          "opponentDesc": "Winner Match 86"
+        },
+        "qf": {
+          "status": "future",
+          "match": 100,
+          "date": "2026-07-11",
+          "city": "Kansas City",
+          "venue": "Arrowhead Stadium",
+          "opponentDesc": "Winner Match 96"
+        },
+        "sf": {
+          "status": "future",
+          "match": 101,
+          "date": "2026-07-14",
+          "city": "Dallas",
+          "venue": "AT&T Stadium",
+          "opponentDesc": "Winner QF bracket"
+        },
+        "final": {
+          "status": "future",
+          "match": 104,
+          "date": "2026-07-19",
+          "city": "New Jersey",
+          "venue": "MetLife Stadium",
+          "opponentDesc": "Winner other SF"
+        }
+      },
+      "possibleOpponents": {
+        "r32": [
+          {
+            "group": "J",
+            "likelyTeam": "Argentina",
+            "flag": "🇦🇷",
+            "fifaRank": 2,
+            "difficulty": 5,
+            "label": "Danger",
+            "color": "#EF4444",
+            "note": "Winner of Group J",
+            "pct": null
+          }
+        ],
+        "r16": [
+          {
+            "group": "E",
+            "likelyTeam": "Ivory Coast",
+            "flag": "🇨🇮",
+            "fifaRank": 42,
+            "difficulty": 2,
+            "label": "Favorable",
+            "color": "#22C55E",
+            "note": "Runner-up of Group E",
+            "pct": null
+          }
+        ]
+      }
+    },
+    {
       "id": "argentina",
       "name": "Argentina",
       "flag": "🇦🇷",
@@ -7482,11 +7501,11 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 86,
-        "qf": 70,
-        "sf": 49,
+        "r16": 84,
+        "qf": 71,
+        "sf": 50,
         "final": 28,
-        "winner": 13,
+        "winner": 14,
         "source": "market"
       },
       "path": {
@@ -7629,15 +7648,24 @@
           "score": "0-3",
           "date": "2026-06-16",
           "venue": "Arrowhead Stadium, Kansas City",
-          "scorers": [],
-          "cards": []
+          "scorers": [
+            "Nadhir Benbouali 69'",
+            "Amine Gouiri 82'"
+          ],
+          "cards": [
+            {
+              "player": "Ramiz Zerrouki",
+              "minute": "44'",
+              "type": "yellow"
+            }
+          ]
         },
         {
           "matchday": 2,
           "opponent": "Jordan",
           "opponentFlag": "🇯🇴",
           "result": null,
-          "score": null,
+          "score": "2-1",
           "date": "2026-06-22",
           "venue": "Arrowhead Stadium, Kansas City",
           "scorers": [],
@@ -7656,9 +7684,9 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 64,
-        "r16": 19,
-        "qf": 7,
+        "r32": 72,
+        "r16": 35,
+        "qf": 6,
         "sf": 2,
         "final": 1,
         "winner": 0,
@@ -7741,12 +7769,12 @@
           },
           {
             "group": "I",
-            "likelyTeam": "Norway",
-            "flag": "🇳🇴",
-            "fifaRank": 31,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
+            "likelyTeam": "France",
+            "flag": "🇫🇷",
+            "fifaRank": 3,
+            "difficulty": 5,
+            "label": "Danger",
+            "color": "#EF4444",
             "note": "Winner of Group I",
             "pct": null
           }
@@ -7823,10 +7851,10 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 96,
+        "r32": 92,
         "r16": 32,
-        "qf": 14,
-        "sf": 6,
+        "qf": 13,
+        "sf": 4,
         "final": 1,
         "winner": 0,
         "source": "market"
@@ -7908,12 +7936,12 @@
           },
           {
             "group": "I",
-            "likelyTeam": "Norway",
-            "flag": "🇳🇴",
-            "fifaRank": 31,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
+            "likelyTeam": "France",
+            "flag": "🇫🇷",
+            "fifaRank": 3,
+            "difficulty": 5,
+            "label": "Danger",
+            "color": "#EF4444",
             "note": "Winner of Group I",
             "pct": null
           }
@@ -7927,7 +7955,7 @@
       "group": "J",
       "confederation": "AFC",
       "fifaRank": 66,
-      "eliminated": false,
+      "eliminated": true,
       "currentStage": "group_stage",
       "groupResults": [
         {
@@ -7941,14 +7969,20 @@
           "scorers": [
             "Ali Olwan 50'"
           ],
-          "cards": []
+          "cards": [
+            {
+              "player": "Husam Abu Dahab",
+              "minute": "64'",
+              "type": "yellow"
+            }
+          ]
         },
         {
           "matchday": 2,
           "opponent": "Algeria",
           "opponentFlag": "🇩🇿",
           "result": null,
-          "score": null,
+          "score": "1-2",
           "date": "2026-06-22",
           "venue": "Arrowhead Stadium, Kansas City",
           "scorers": [],
@@ -7967,10 +8001,10 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 12,
-        "r16": 1,
-        "qf": 1,
-        "sf": 1,
+        "r32": 0,
+        "r16": 0,
+        "qf": 0,
+        "sf": 0,
         "final": 0,
         "winner": 0,
         "source": "market"
@@ -8052,12 +8086,12 @@
           },
           {
             "group": "I",
-            "likelyTeam": "Norway",
-            "flag": "🇳🇴",
-            "fifaRank": 31,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
+            "likelyTeam": "France",
+            "flag": "🇫🇷",
+            "fifaRank": 3,
+            "difficulty": 5,
+            "label": "Danger",
+            "color": "#EF4444",
             "note": "Winner of Group I",
             "pct": null
           }
@@ -8128,7 +8162,7 @@
       ],
       "advanceProbabilities": {
         "r32": 94,
-        "r16": 70,
+        "r16": 69,
         "qf": 43,
         "sf": 25,
         "final": 14,
@@ -8266,8 +8300,8 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 61,
-        "r16": 16,
+        "r32": 63,
+        "r16": 15,
         "qf": 4,
         "sf": 2,
         "final": 1,
@@ -8569,11 +8603,11 @@
       ],
       "advanceProbabilities": {
         "r32": 98,
-        "r16": 62,
+        "r16": 59,
         "qf": 31,
         "sf": 14,
         "final": 5,
-        "winner": 2,
+        "winner": 1,
         "source": "market"
       },
       "path": {
@@ -8771,11 +8805,11 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 86,
-        "qf": 64,
-        "sf": 41,
+        "r16": 87,
+        "qf": 66,
+        "sf": 40,
         "final": 25,
-        "winner": 13,
+        "winner": 12,
         "source": "market"
       },
       "path": {
@@ -8904,8 +8938,8 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 77,
-        "r16": 36,
+        "r32": 78,
+        "r16": 43,
         "qf": 14,
         "sf": 5,
         "final": 2,
@@ -9077,10 +9111,10 @@
       ],
       "advanceProbabilities": {
         "r32": 78,
-        "r16": 18,
+        "r16": 21,
         "qf": 6,
-        "sf": 2,
-        "final": 2,
+        "sf": 4,
+        "final": 1,
         "winner": 0,
         "source": "market"
       },
@@ -9240,8 +9274,8 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 12,
-        "r16": 5,
+        "r32": 11,
+        "r16": 4,
         "qf": 1,
         "sf": 1,
         "final": 0,
@@ -10169,26 +10203,17 @@
         "awayTeam": "Iraq",
         "awayFlag": "🇮🇶",
         "awayId": "iraq",
-        "homeScore": 1,
+        "homeScore": 3,
         "awayScore": 0,
-        "status": "IN_PROGRESS",
+        "status": "FINISHED",
         "date": "2026-06-22",
-        "clock": "49'",
         "broadcasts": [
           "FOX",
           "Tele",
           "FOX One"
         ],
         "time": "2026-06-22T21:00Z",
-        "venue": "Lincoln Financial Field, Philadelphia, Pennsylvania",
-        "polymarket": {
-          "homeId": "france",
-          "awayId": "iraq",
-          "homeWinPct": 94,
-          "awayWinPct": 1,
-          "drawPct": 6,
-          "eventSlug": "fifwc-fra-irq-2026-06-22"
-        }
+        "venue": "Lincoln Financial Field, Philadelphia, Pennsylvania"
       },
       {
         "homeTeam": "Norway",
@@ -10197,26 +10222,17 @@
         "awayTeam": "Senegal",
         "awayFlag": "🇸🇳",
         "awayId": "senegal",
-        "homeScore": 0,
-        "awayScore": 0,
-        "status": "IN_PROGRESS",
+        "homeScore": 3,
+        "awayScore": 2,
+        "status": "FINISHED",
         "date": "2026-06-22",
-        "clock": "5'",
         "broadcasts": [
-          "FS1",
+          "FOX",
           "Tele",
           "FOX One"
         ],
         "time": "2026-06-23T00:00Z",
-        "venue": "MetLife Stadium, East Rutherford, New Jersey",
-        "polymarket": {
-          "homeId": "norway",
-          "awayId": "senegal",
-          "homeWinPct": 43,
-          "awayWinPct": 30,
-          "drawPct": 28,
-          "eventSlug": "fifwc-nor-sen-2026-06-22"
-        }
+        "venue": "MetLife Stadium, East Rutherford, New Jersey"
       },
       {
         "homeTeam": "Jordan",
@@ -10225,10 +10241,11 @@
         "awayTeam": "Algeria",
         "awayFlag": "🇩🇿",
         "awayId": "algeria",
-        "homeScore": 0,
-        "awayScore": 0,
-        "status": "SCHEDULED",
+        "homeScore": 1,
+        "awayScore": 2,
+        "status": "IN_PROGRESS",
         "date": "2026-06-22",
+        "clock": "90'+8'",
         "broadcasts": [
           "FS1",
           "Tele",
@@ -10239,9 +10256,9 @@
         "polymarket": {
           "homeId": "jordan",
           "awayId": "algeria",
-          "homeWinPct": 14,
-          "awayWinPct": 64,
-          "drawPct": 23,
+          "homeWinPct": 0,
+          "awayWinPct": 96,
+          "drawPct": 5,
           "eventSlug": "fifwc-jor-alg-2026-06-22"
         }
       }
@@ -10268,9 +10285,9 @@
         "polymarket": {
           "homeId": "portugal",
           "awayId": "uzbekistan",
-          "homeWinPct": 83,
+          "homeWinPct": 84,
           "awayWinPct": 5,
-          "drawPct": 13,
+          "drawPct": 12,
           "eventSlug": "fifwc-prt-uzb-2026-06-23"
         }
       },
@@ -10295,7 +10312,7 @@
         "polymarket": {
           "homeId": "england",
           "awayId": "ghana",
-          "homeWinPct": 81,
+          "homeWinPct": 82,
           "awayWinPct": 7,
           "drawPct": 14,
           "eventSlug": "fifwc-eng-gha-2026-06-23"
@@ -10323,7 +10340,7 @@
           "homeId": "panama",
           "awayId": "croatia",
           "homeWinPct": 13,
-          "awayWinPct": 65,
+          "awayWinPct": 66,
           "drawPct": 23,
           "eventSlug": "fifwc-pan-hrv-2026-06-23"
         }
@@ -10406,7 +10423,7 @@
           "homeId": "switzerland",
           "awayId": "canada",
           "homeWinPct": 41,
-          "awayWinPct": 30,
+          "awayWinPct": 28,
           "drawPct": 32,
           "eventSlug": "fifwc-che-can-2026-06-24"
         }
@@ -10487,7 +10504,7 @@
           "homeId": "czechia",
           "awayId": "mexico",
           "homeWinPct": 25,
-          "awayWinPct": 52,
+          "awayWinPct": 51,
           "drawPct": 24,
           "eventSlug": "fifwc-cze-mex-2026-06-24"
         }
@@ -10562,7 +10579,7 @@
           "homeId": "ecuador",
           "awayId": "germany",
           "homeWinPct": 26,
-          "awayWinPct": 51,
+          "awayWinPct": 52,
           "drawPct": 24,
           "eventSlug": "fifwc-ecu-ger-2026-06-25"
         }
@@ -10579,7 +10596,7 @@
         "status": "SCHEDULED",
         "date": "2026-06-25",
         "broadcasts": [
-          "FS1",
+          "FOX",
           "Universo",
           "FOX One"
         ],
@@ -10606,7 +10623,7 @@
         "status": "SCHEDULED",
         "date": "2026-06-25",
         "broadcasts": [
-          "FOX",
+          "FS1",
           "Tele",
           "FOX One"
         ],
@@ -10669,8 +10686,8 @@
         "polymarket": {
           "homeId": "turkey",
           "awayId": "usa",
-          "homeWinPct": 28,
-          "awayWinPct": 50,
+          "homeWinPct": 27,
+          "awayWinPct": 51,
           "drawPct": 23,
           "eventSlug": "fifwc-tur-usa-2026-06-25"
         }
@@ -10699,8 +10716,8 @@
           "homeId": "norway",
           "awayId": "france",
           "homeWinPct": 22,
-          "awayWinPct": 56,
-          "drawPct": 24,
+          "awayWinPct": 57,
+          "drawPct": 23,
           "eventSlug": "fifwc-nor-fra-2026-06-26"
         }
       },
@@ -10725,9 +10742,9 @@
         "polymarket": {
           "homeId": "senegal",
           "awayId": "iraq",
-          "homeWinPct": 76,
-          "awayWinPct": 9,
-          "drawPct": 17,
+          "homeWinPct": 79,
+          "awayWinPct": 8,
+          "drawPct": 16,
           "eventSlug": "fifwc-sen-irq-2026-06-26"
         }
       },
@@ -10970,9 +10987,9 @@
         "polymarket": {
           "homeId": "algeria",
           "awayId": "austria",
-          "homeWinPct": 28,
-          "awayWinPct": 37,
-          "drawPct": 36,
+          "homeWinPct": 26,
+          "awayWinPct": 35,
+          "drawPct": 40,
           "eventSlug": "fifwc-alg-aut-2026-06-27"
         }
       },
