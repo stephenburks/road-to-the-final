@@ -1,6 +1,6 @@
 {
-  "lastUpdated": "2026-06-23T23:56:50.534Z",
-  "snapshotDate": "2026-06-23",
+  "lastUpdated": "2026-06-24T03:55:55.796Z",
+  "snapshotDate": "2026-06-24",
   "isHistorical": false,
   "sourceSummary": {
     "dataSource": "ESPN",
@@ -236,8 +236,8 @@
         }
       ],
       "winProbabilities": {
-        "brazil": 66,
-        "morocco": 34,
+        "brazil": 65,
+        "morocco": 33,
         "scotland": 2,
         "haiti": 0
       }
@@ -764,9 +764,9 @@
         }
       ],
       "winProbabilities": {
-        "portugal": 56,
-        "colombia": 41,
-        "drcongo": 3,
+        "portugal": 53,
+        "colombia": 44,
+        "drcongo": 1,
         "uzbekistan": 0
       }
     },
@@ -801,39 +801,39 @@
           "flag": "🇬🇭"
         },
         {
-          "teamId": "panama",
-          "team": "Panama",
-          "played": 1,
-          "w": 0,
-          "d": 0,
-          "l": 1,
-          "gf": 0,
-          "ga": 1,
-          "pts": 0,
-          "gd": -1,
-          "pos": 3,
-          "flag": "🇵🇦"
-        },
-        {
           "teamId": "croatia",
           "team": "Croatia",
-          "played": 1,
-          "w": 0,
+          "played": 2,
+          "w": 1,
           "d": 0,
           "l": 1,
-          "gf": 2,
+          "gf": 3,
           "ga": 4,
+          "pts": 3,
+          "gd": -1,
+          "pos": 3,
+          "flag": "🇭🇷"
+        },
+        {
+          "teamId": "panama",
+          "team": "Panama",
+          "played": 2,
+          "w": 0,
+          "d": 0,
+          "l": 2,
+          "gf": 0,
+          "ga": 2,
           "pts": 0,
           "gd": -2,
           "pos": 4,
-          "flag": "🇭🇷"
+          "flag": "🇵🇦"
         }
       ],
       "winProbabilities": {
         "england": 87,
-        "ghana": 8,
-        "panama": 1,
-        "croatia": 5
+        "ghana": 5,
+        "croatia": 7,
+        "panama": 0
       }
     }
   },
@@ -1352,7 +1352,7 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 93,
+        "r32": 94,
         "r16": 42,
         "qf": 11,
         "sf": 3,
@@ -1566,8 +1566,8 @@
       ],
       "advanceProbabilities": {
         "r32": 25,
-        "r16": 9,
-        "qf": 2,
+        "r16": 7,
+        "qf": 3,
         "sf": 2,
         "final": 1,
         "winner": 0,
@@ -1802,7 +1802,7 @@
         "r32": 100,
         "r16": 57,
         "qf": 18,
-        "sf": 4,
+        "sf": 5,
         "final": 2,
         "winner": 0,
         "source": "market"
@@ -2434,7 +2434,7 @@
       "advanceProbabilities": {
         "r32": 100,
         "r16": 64,
-        "qf": 23,
+        "qf": 24,
         "sf": 8,
         "final": 3,
         "winner": 1,
@@ -2634,7 +2634,7 @@
         "r16": 63,
         "qf": 47,
         "sf": 23,
-        "final": 14,
+        "final": 17,
         "winner": 5,
         "source": "market"
       },
@@ -2735,12 +2735,12 @@
           },
           {
             "group": "L",
-            "likelyTeam": "Panama",
-            "flag": "🇵🇦",
-            "fifaRank": 76,
-            "difficulty": 1,
-            "label": "Favorable",
-            "color": "#22C55E",
+            "likelyTeam": "Croatia",
+            "flag": "🇭🇷",
+            "fifaRank": 10,
+            "difficulty": 5,
+            "label": "Danger",
+            "color": "#EF4444",
             "note": "3rd-place team from Group L",
             "pct": null
           }
@@ -2833,7 +2833,7 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 49,
+        "r16": 50,
         "qf": 28,
         "sf": 12,
         "final": 7,
@@ -3164,7 +3164,7 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 77,
+        "r32": 75,
         "r16": 19,
         "qf": 8,
         "sf": 1,
@@ -3337,9 +3337,9 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 75,
+        "r16": 77,
         "qf": 48,
-        "sf": 20,
+        "sf": 21,
         "final": 7,
         "winner": 3,
         "source": "market"
@@ -3564,7 +3564,7 @@
       ],
       "advanceProbabilities": {
         "r32": 87,
-        "r16": 25,
+        "r16": 26,
         "qf": 6,
         "sf": 1,
         "final": 1,
@@ -3742,9 +3742,9 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 93,
-        "r16": 31,
-        "qf": 9,
+        "r32": 91,
+        "r16": 36,
+        "qf": 8,
         "sf": 2,
         "final": 1,
         "winner": 0,
@@ -4470,7 +4470,7 @@
       ],
       "advanceProbabilities": {
         "r32": 98,
-        "r16": 34,
+        "r16": 37,
         "qf": 14,
         "sf": 4,
         "final": 2,
@@ -4614,7 +4614,7 @@
       "advanceProbabilities": {
         "r32": 27,
         "r16": 11,
-        "qf": 4,
+        "qf": 5,
         "sf": 2,
         "final": 1,
         "winner": 0,
@@ -4796,8 +4796,8 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 61,
-        "qf": 47,
+        "r16": 62,
+        "qf": 48,
         "sf": 23,
         "final": 14,
         "winner": 5,
@@ -4947,8 +4947,8 @@
       "advanceProbabilities": {
         "r32": 100,
         "r16": 45,
-        "qf": 30,
-        "sf": 14,
+        "qf": 28,
+        "sf": 12,
         "final": 5,
         "winner": 2,
         "source": "market"
@@ -5130,7 +5130,7 @@
         "r32": 91,
         "r16": 22,
         "qf": 10,
-        "sf": 3,
+        "sf": 2,
         "final": 2,
         "winner": 0,
         "source": "market"
@@ -5453,8 +5453,8 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 91,
-        "r16": 60,
+        "r32": 92,
+        "r16": 62,
         "qf": 27,
         "sf": 11,
         "final": 3,
@@ -5992,7 +5992,7 @@
       ],
       "advanceProbabilities": {
         "r32": 8,
-        "r16": 3,
+        "r16": 4,
         "qf": 1,
         "sf": 1,
         "final": 0,
@@ -6156,7 +6156,7 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 84,
+        "r16": 83,
         "qf": 62,
         "sf": 45,
         "final": 30,
@@ -6320,8 +6320,8 @@
       ],
       "advanceProbabilities": {
         "r32": 71,
-        "r16": 12,
-        "qf": 6,
+        "r16": 14,
+        "qf": 5,
         "sf": 1,
         "final": 1,
         "winner": 0,
@@ -6504,7 +6504,7 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 33,
+        "r32": 32,
         "r16": 5,
         "qf": 2,
         "sf": 1,
@@ -6692,7 +6692,7 @@
       "advanceProbabilities": {
         "r32": 37,
         "r16": 16,
-        "qf": 4,
+        "qf": 5,
         "sf": 2,
         "final": 2,
         "winner": 0,
@@ -6852,10 +6852,10 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 86,
+        "r16": 88,
         "qf": 63,
-        "sf": 52,
-        "final": 34,
+        "sf": 51,
+        "final": 37,
         "winner": 19,
         "source": "market"
       },
@@ -7031,10 +7031,10 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 68,
+        "r32": 69,
         "r16": 24,
-        "qf": 12,
-        "sf": 4,
+        "qf": 11,
+        "sf": 3,
         "final": 2,
         "winner": 0,
         "source": "market"
@@ -7190,7 +7190,7 @@
       ],
       "advanceProbabilities": {
         "r32": 3,
-        "r16": 1,
+        "r16": 2,
         "qf": 1,
         "sf": 0,
         "final": 0,
@@ -7341,7 +7341,7 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 71,
+        "r16": 68,
         "qf": 34,
         "sf": 20,
         "final": 9,
@@ -7501,11 +7501,11 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 85,
+        "r16": 87,
         "qf": 68,
-        "sf": 48,
+        "sf": 49,
         "final": 29,
-        "winner": 15,
+        "winner": 14,
         "source": "market"
       },
       "path": {
@@ -7693,7 +7693,7 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 81,
+        "r32": 80,
         "r16": 23,
         "qf": 7,
         "sf": 2,
@@ -7860,8 +7860,8 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 95,
-        "r16": 31,
+        "r32": 96,
+        "r16": 34,
         "qf": 13,
         "sf": 3,
         "final": 1,
@@ -8194,7 +8194,7 @@
         "r16": 77,
         "qf": 50,
         "sf": 32,
-        "final": 16,
+        "final": 17,
         "winner": 8,
         "source": "market"
       },
@@ -8376,7 +8376,7 @@
           "opponent": "Colombia",
           "opponentFlag": "🇨🇴",
           "result": null,
-          "score": null,
+          "score": "0-1",
           "date": "2026-06-23",
           "venue": "Estadio Azteca, Mexico City",
           "scorers": [],
@@ -8395,11 +8395,11 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 62,
-        "r16": 19,
+        "r32": 55,
+        "r16": 24,
         "qf": 3,
         "sf": 2,
-        "final": 1,
+        "final": 0,
         "winner": 0,
         "source": "market"
       },
@@ -8553,9 +8553,9 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 7,
-        "r16": 3,
-        "qf": 2,
+        "r32": 6,
+        "r16": 0,
+        "qf": 0,
         "sf": 0,
         "final": 0,
         "winner": 0,
@@ -8686,7 +8686,7 @@
           "opponent": "DR Congo",
           "opponentFlag": "🇨🇩",
           "result": null,
-          "score": null,
+          "score": "1-0",
           "date": "2026-06-23",
           "venue": "Estadio Azteca, Mexico City",
           "scorers": [],
@@ -8705,12 +8705,12 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 98,
+        "r32": 100,
         "r16": 60,
         "qf": 32,
-        "sf": 13,
-        "final": 5,
-        "winner": 1,
+        "sf": 14,
+        "final": 6,
+        "winner": 2,
         "source": "market"
       },
       "path": {
@@ -8860,7 +8860,7 @@
       "advanceProbabilities": {
         "r32": 100,
         "r16": 86,
-        "qf": 63,
+        "qf": 62,
         "sf": 40,
         "final": 22,
         "winner": 11,
@@ -8966,18 +8966,32 @@
             "Martin Baturina 36'",
             "Petar Musa 45'+5'"
           ],
-          "cards": []
+          "cards": [
+            {
+              "player": "Petar Sucic",
+              "minute": "90'+2'",
+              "type": "yellow"
+            }
+          ]
         },
         {
           "matchday": 2,
           "opponent": "Panama",
           "opponentFlag": "🇵🇦",
-          "result": null,
-          "score": "0-0",
+          "result": "W",
+          "score": "1-0",
           "date": "2026-06-23",
           "venue": "BMO Field, Toronto",
-          "scorers": [],
-          "cards": []
+          "scorers": [
+            "Ante Budimir 54'"
+          ],
+          "cards": [
+            {
+              "player": "Petar Sucic",
+              "minute": "90'+2'",
+              "type": "yellow"
+            }
+          ]
         },
         {
           "matchday": 3,
@@ -8992,9 +9006,9 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 78,
-        "r16": 38,
-        "qf": 11,
+        "r32": 89,
+        "r16": 39,
+        "qf": 12,
         "sf": 6,
         "final": 2,
         "winner": 0,
@@ -9006,7 +9020,7 @@
           "city": "Dallas · Toronto · Philadelphia",
           "venue": "Various venues",
           "date": "Jun 17–27",
-          "detail": "0pts after MD1"
+          "detail": "3pts after MD2"
         },
         "r32": {
           "status": "upcoming",
@@ -9172,11 +9186,11 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 99,
-        "r16": 31,
+        "r32": 100,
+        "r16": 35,
         "qf": 6,
         "sf": 3,
-        "final": 2,
+        "final": 1,
         "winner": 0,
         "source": "market"
       },
@@ -9287,7 +9301,7 @@
       "group": "L",
       "confederation": "CONCACAF",
       "fifaRank": 76,
-      "eliminated": false,
+      "eliminated": true,
       "currentStage": "group_stage",
       "groupResults": [
         {
@@ -9316,12 +9330,18 @@
           "matchday": 2,
           "opponent": "Croatia",
           "opponentFlag": "🇭🇷",
-          "result": null,
-          "score": "0-0",
+          "result": "L",
+          "score": "0-1",
           "date": "2026-06-23",
           "venue": "BMO Field, Toronto",
           "scorers": [],
-          "cards": []
+          "cards": [
+            {
+              "player": "Édgar Yoel Bárcenas",
+              "minute": "61'",
+              "type": "yellow"
+            }
+          ]
         },
         {
           "matchday": 3,
@@ -9336,10 +9356,10 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 16,
-        "r16": 4,
-        "qf": 1,
-        "sf": 1,
+        "r32": 0,
+        "r16": 0,
+        "qf": 0,
+        "sf": 0,
         "final": 0,
         "winner": 0,
         "source": "market"
@@ -9350,7 +9370,7 @@
           "city": "Toronto · New Jersey",
           "venue": "Various venues",
           "date": "Jun 17–27",
-          "detail": "0pts after MD1"
+          "detail": "0pts after MD2"
         },
         "r32": {
           "status": "upcoming",
@@ -10363,25 +10383,16 @@
         "awayFlag": "🇭🇷",
         "awayId": "croatia",
         "homeScore": 0,
-        "awayScore": 0,
-        "status": "IN_PROGRESS",
+        "awayScore": 1,
+        "status": "FINISHED",
         "date": "2026-06-23",
-        "clock": "HT",
         "broadcasts": [
           "FOX",
           "Tele",
           "FOX One"
         ],
         "time": "2026-06-23T23:00Z",
-        "venue": "BMO Field, Toronto",
-        "polymarket": {
-          "homeId": "panama",
-          "awayId": "croatia",
-          "homeWinPct": 16,
-          "awayWinPct": 51,
-          "drawPct": 35,
-          "eventSlug": "fifwc-pan-hrv-2026-06-23"
-        }
+        "venue": "BMO Field, Toronto"
       },
       {
         "homeTeam": "Colombia",
@@ -10390,10 +10401,11 @@
         "awayTeam": "DR Congo",
         "awayFlag": "🇨🇩",
         "awayId": "drcongo",
-        "homeScore": 0,
+        "homeScore": 1,
         "awayScore": 0,
-        "status": "SCHEDULED",
+        "status": "IN_PROGRESS",
         "date": "2026-06-23",
+        "clock": "90'+5'",
         "broadcasts": [
           "FS1",
           "Tele",
@@ -10404,9 +10416,9 @@
         "polymarket": {
           "homeId": "colombia",
           "awayId": "drcongo",
-          "homeWinPct": 63,
-          "awayWinPct": 14,
-          "drawPct": 24,
+          "homeWinPct": 92,
+          "awayWinPct": 0,
+          "drawPct": 7,
           "eventSlug": "fifwc-col-cdr-2026-06-23"
         }
       }
@@ -10487,9 +10499,9 @@
         "polymarket": {
           "homeId": "morocco",
           "awayId": "haiti",
-          "homeWinPct": 84,
-          "awayWinPct": 5,
-          "drawPct": 12,
+          "homeWinPct": 83,
+          "awayWinPct": 6,
+          "drawPct": 13,
           "eventSlug": "fifwc-mar-hai-2026-06-24"
         }
       },
@@ -10515,7 +10527,7 @@
           "homeId": "scotland",
           "awayId": "brazil",
           "homeWinPct": 11,
-          "awayWinPct": 72,
+          "awayWinPct": 73,
           "drawPct": 19,
           "eventSlug": "fifwc-sco-bra-2026-06-24"
         }
@@ -10645,7 +10657,7 @@
           "awayId": "sweden",
           "homeWinPct": 52,
           "awayWinPct": 22,
-          "drawPct": 28,
+          "drawPct": 27,
           "eventSlug": "fifwc-jpn-swe-2026-06-25"
         }
       },
@@ -10753,9 +10765,9 @@
         "polymarket": {
           "homeId": "norway",
           "awayId": "france",
-          "homeWinPct": 19,
-          "awayWinPct": 61,
-          "drawPct": 22,
+          "homeWinPct": 22,
+          "awayWinPct": 59,
+          "drawPct": 21,
           "eventSlug": "fifwc-nor-fra-2026-06-26"
         }
       },
@@ -10918,8 +10930,8 @@
           "homeId": "croatia",
           "awayId": "ghana",
           "homeWinPct": 56,
-          "awayWinPct": 18,
-          "drawPct": 28,
+          "awayWinPct": 17,
+          "drawPct": 30,
           "eventSlug": "fifwc-hrv-gha-2026-06-27"
         }
       },
@@ -10945,8 +10957,8 @@
           "homeId": "panama",
           "awayId": "england",
           "homeWinPct": 6,
-          "awayWinPct": 83,
-          "drawPct": 13,
+          "awayWinPct": 84,
+          "drawPct": 12,
           "eventSlug": "fifwc-pan-eng-2026-06-27"
         }
       },
