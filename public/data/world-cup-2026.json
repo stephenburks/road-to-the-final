@@ -1,6 +1,6 @@
 {
-  "lastUpdated": "2026-06-24T22:17:20.318Z",
-  "snapshotDate": "2026-06-24",
+  "lastUpdated": "2026-06-25T00:12:57.113Z",
+  "snapshotDate": "2026-06-25",
   "isHistorical": false,
   "sourceSummary": {
     "dataSource": "ESPN",
@@ -181,63 +181,63 @@
         {
           "teamId": "brazil",
           "team": "Brazil",
-          "played": 2,
-          "w": 1,
+          "played": 3,
+          "w": 2,
           "d": 1,
           "l": 0,
-          "gf": 4,
+          "gf": 7,
           "ga": 1,
-          "pts": 4,
-          "gd": 3,
+          "pts": 7,
+          "gd": 6,
           "pos": 1,
           "flag": "🇧🇷"
         },
         {
           "teamId": "morocco",
           "team": "Morocco",
-          "played": 2,
-          "w": 1,
+          "played": 3,
+          "w": 2,
           "d": 1,
           "l": 0,
-          "gf": 2,
-          "ga": 1,
-          "pts": 4,
-          "gd": 1,
+          "gf": 6,
+          "ga": 3,
+          "pts": 7,
+          "gd": 3,
           "pos": 2,
           "flag": "🇲🇦"
         },
         {
           "teamId": "scotland",
           "team": "Scotland",
-          "played": 2,
+          "played": 3,
           "w": 1,
           "d": 0,
-          "l": 1,
+          "l": 2,
           "gf": 1,
-          "ga": 1,
+          "ga": 4,
           "pts": 3,
-          "gd": 0,
+          "gd": -3,
           "pos": 3,
           "flag": "🏴󠁧󠁢󠁳󠁣󠁴󠁿"
         },
         {
           "teamId": "haiti",
           "team": "Haiti",
-          "played": 2,
+          "played": 3,
           "w": 0,
           "d": 0,
-          "l": 2,
-          "gf": 0,
-          "ga": 4,
+          "l": 3,
+          "gf": 2,
+          "ga": 8,
           "pts": 0,
-          "gd": -4,
+          "gd": -6,
           "pos": 4,
           "flag": "🇭🇹"
         }
       ],
       "winProbabilities": {
-        "brazil": 90,
-        "morocco": 11,
+        "brazil": 100,
+        "morocco": 0,
         "scotland": 0,
         "haiti": 0
       }
@@ -914,7 +914,7 @@
         "r16": 67,
         "qf": 27,
         "sf": 12,
-        "final": 5,
+        "final": 7,
         "winner": 1,
         "source": "market"
       },
@@ -1121,8 +1121,8 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 15,
-        "r16": 2,
+        "r32": 13,
+        "r16": 1,
         "qf": 1,
         "sf": 1,
         "final": 0,
@@ -1352,8 +1352,8 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 94,
-        "r16": 46,
+        "r32": 93,
+        "r16": 45,
         "qf": 11,
         "sf": 2,
         "final": 2,
@@ -1565,8 +1565,8 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 26,
-        "r16": 10,
+        "r32": 24,
+        "r16": 8,
         "qf": 2,
         "sf": 2,
         "final": 1,
@@ -1813,7 +1813,7 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 51,
+        "r16": 52,
         "qf": 15,
         "sf": 4,
         "final": 2,
@@ -2033,8 +2033,8 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 99,
-        "r16": 25,
+        "r32": 100,
+        "r16": 26,
         "qf": 6,
         "sf": 2,
         "final": 1,
@@ -2474,7 +2474,7 @@
       "advanceProbabilities": {
         "r32": 100,
         "r16": 66,
-        "qf": 24,
+        "qf": 23,
         "sf": 9,
         "final": 2,
         "winner": 1,
@@ -2610,7 +2610,7 @@
       "confederation": "CONMEBOL",
       "fifaRank": 4,
       "eliminated": false,
-      "currentStage": "group_stage",
+      "currentStage": "final",
       "groupResults": [
         {
           "matchday": 1,
@@ -2661,21 +2661,36 @@
           "matchday": 3,
           "opponent": "Scotland",
           "opponentFlag": "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
-          "result": null,
-          "score": "1-0",
+          "result": "W",
+          "score": "3-0",
           "date": "2026-06-24",
           "venue": "Hard Rock Stadium, Miami",
-          "scorers": [],
-          "cards": []
+          "scorers": [
+            "Vinícius Júnior 7'",
+            "Vinícius Júnior 45'+3'",
+            "Matheus Cunha 60'"
+          ],
+          "cards": [
+            {
+              "player": "Danilo",
+              "minute": "62'",
+              "type": "yellow"
+            },
+            {
+              "player": "Fabinho",
+              "minute": "82'",
+              "type": "yellow"
+            }
+          ]
         }
       ],
       "advanceProbabilities": {
         "r32": 100,
         "r16": 66,
-        "qf": 45,
+        "qf": 47,
         "sf": 23,
-        "final": 14,
-        "winner": 5,
+        "final": 16,
+        "winner": 6,
         "source": "market"
       },
       "path": {
@@ -2684,7 +2699,7 @@
           "city": "New Jersey · Philadelphia · Miami",
           "venue": "Various venues",
           "date": "Jun 13–24",
-          "detail": "4pts after MD2"
+          "detail": "7pts after MD3"
         },
         "r32": {
           "status": "upcoming",
@@ -2819,7 +2834,7 @@
       "confederation": "CAF",
       "fifaRank": 14,
       "eliminated": false,
-      "currentStage": "group_stage",
+      "currentStage": "final",
       "groupResults": [
         {
           "matchday": 1,
@@ -2863,21 +2878,32 @@
           "matchday": 3,
           "opponent": "Haiti",
           "opponentFlag": "🇭🇹",
-          "result": null,
-          "score": "0-1",
+          "result": "W",
+          "score": "4-2",
           "date": "2026-06-24",
           "venue": "Mercedes-Benz Stadium, Atlanta",
-          "scorers": [],
-          "cards": []
+          "scorers": [
+            "Achraf Hakimi 39'",
+            "Ismael Saibari 45'+1'",
+            "Soufiane Rahimi 78'",
+            "Gessime Yassine 89'"
+          ],
+          "cards": [
+            {
+              "player": "Issa Diop",
+              "minute": "23'",
+              "type": "yellow"
+            }
+          ]
         }
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 51,
-        "qf": 30,
+        "r16": 45,
+        "qf": 32,
         "sf": 12,
         "final": 7,
-        "winner": 2,
+        "winner": 1,
         "source": "market"
       },
       "path": {
@@ -2886,7 +2912,7 @@
           "city": "New Jersey · Boston · Atlanta",
           "venue": "Various venues",
           "date": "Jun 13–24",
-          "detail": "4pts after MD2"
+          "detail": "7pts after MD3"
         },
         "r32": {
           "status": "upcoming",
@@ -3006,7 +3032,10 @@
           "score": "0-3",
           "date": "2026-06-19",
           "venue": "Lincoln Financial Field, Philadelphia",
-          "scorers": [],
+          "scorers": [
+            "Yassine Bounou OG 10'",
+            "Wilson Isidor 43'"
+          ],
           "cards": [
             {
               "player": "Carlens Arcus",
@@ -3029,12 +3058,31 @@
           "matchday": 3,
           "opponent": "Morocco",
           "opponentFlag": "🇲🇦",
-          "result": null,
-          "score": "1-0",
+          "result": "L",
+          "score": "2-4",
           "date": "2026-06-24",
           "venue": "Mercedes-Benz Stadium, Atlanta",
-          "scorers": [],
-          "cards": []
+          "scorers": [
+            "Yassine Bounou OG 10'",
+            "Wilson Isidor 43'"
+          ],
+          "cards": [
+            {
+              "player": "Johny Placide",
+              "minute": "79'",
+              "type": "yellow"
+            },
+            {
+              "player": "Duckens Nazon",
+              "minute": "80'",
+              "type": "yellow"
+            },
+            {
+              "player": "Josué Casimir",
+              "minute": "90'+3'",
+              "type": "yellow"
+            }
+          ]
         }
       ],
       "advanceProbabilities": {
@@ -3052,7 +3100,7 @@
           "city": "Boston · Philadelphia · Atlanta",
           "venue": "Various venues",
           "date": "Jun 13–24",
-          "detail": "0pts after MD2"
+          "detail": "0pts after MD3"
         },
         "r32": {
           "status": "upcoming",
@@ -3142,7 +3190,7 @@
       "group": "C",
       "confederation": "UEFA",
       "fifaRank": 39,
-      "eliminated": false,
+      "eliminated": true,
       "currentStage": "group_stage",
       "groupResults": [
         {
@@ -3197,18 +3245,26 @@
           "matchday": 3,
           "opponent": "Brazil",
           "opponentFlag": "🇧🇷",
-          "result": null,
-          "score": "0-1",
+          "result": "L",
+          "score": "0-3",
           "date": "2026-06-24",
           "venue": "Hard Rock Stadium, Miami",
-          "scorers": [],
-          "cards": []
+          "scorers": [
+            "John McGinn 28'"
+          ],
+          "cards": [
+            {
+              "player": "Ryan Christie",
+              "minute": "89'",
+              "type": "yellow"
+            }
+          ]
         }
       ],
       "advanceProbabilities": {
-        "r32": 60,
-        "r16": 21,
-        "qf": 6,
+        "r32": 37,
+        "r16": 13,
+        "qf": 4,
         "sf": 1,
         "final": 1,
         "winner": 0,
@@ -3220,7 +3276,7 @@
           "city": "Boston · Miami",
           "venue": "Various venues",
           "date": "Jun 13–24",
-          "detail": "3pts after MD2"
+          "detail": "3pts after MD3"
         },
         "r32": {
           "status": "upcoming",
@@ -3605,8 +3661,8 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 87,
-        "r16": 25,
+        "r32": 86,
+        "r16": 21,
         "qf": 5,
         "sf": 1,
         "final": 1,
@@ -3784,7 +3840,7 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 91,
+        "r32": 92,
         "r16": 31,
         "qf": 8,
         "sf": 2,
@@ -4092,8 +4148,8 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 82,
-        "qf": 40,
+        "r16": 83,
+        "qf": 41,
         "sf": 23,
         "final": 16,
         "winner": 5,
@@ -4511,8 +4567,8 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 99,
-        "r16": 34,
+        "r32": 98,
+        "r16": 36,
         "qf": 14,
         "sf": 5,
         "final": 2,
@@ -4838,7 +4894,7 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 62,
+        "r16": 63,
         "qf": 46,
         "sf": 24,
         "final": 13,
@@ -4988,9 +5044,9 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 46,
+        "r16": 43,
         "qf": 26,
-        "sf": 11,
+        "sf": 12,
         "final": 5,
         "winner": 2,
         "source": "market"
@@ -5169,7 +5225,7 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 91,
+        "r32": 92,
         "r16": 23,
         "qf": 9,
         "sf": 3,
@@ -5496,7 +5552,7 @@
       ],
       "advanceProbabilities": {
         "r32": 94,
-        "r16": 60,
+        "r16": 56,
         "qf": 27,
         "sf": 11,
         "final": 3,
@@ -5661,8 +5717,8 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 43,
-        "qf": 17,
+        "r16": 42,
+        "qf": 15,
         "sf": 4,
         "final": 1,
         "winner": 0,
@@ -6034,7 +6090,7 @@
       ],
       "advanceProbabilities": {
         "r32": 6,
-        "r16": 2,
+        "r16": 1,
         "qf": 1,
         "sf": 1,
         "final": 0,
@@ -6362,7 +6418,7 @@
       ],
       "advanceProbabilities": {
         "r32": 69,
-        "r16": 10,
+        "r16": 11,
         "qf": 5,
         "sf": 1,
         "final": 1,
@@ -6733,7 +6789,7 @@
       ],
       "advanceProbabilities": {
         "r32": 37,
-        "r16": 20,
+        "r16": 22,
         "qf": 6,
         "sf": 3,
         "final": 2,
@@ -7073,8 +7129,8 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 67,
-        "r16": 25,
+        "r32": 71,
+        "r16": 28,
         "qf": 11,
         "sf": 4,
         "final": 2,
@@ -7232,8 +7288,8 @@
       ],
       "advanceProbabilities": {
         "r32": 2,
-        "r16": 1,
-        "qf": 1,
+        "r16": 0,
+        "qf": 0,
         "sf": 0,
         "final": 0,
         "winner": 0,
@@ -7383,9 +7439,9 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 67,
-        "qf": 34,
-        "sf": 17,
+        "r16": 64,
+        "qf": 32,
+        "sf": 16,
         "final": 9,
         "winner": 3,
         "source": "market"
@@ -7543,7 +7599,7 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 86,
+        "r16": 85,
         "qf": 67,
         "sf": 48,
         "final": 28,
@@ -7735,8 +7791,8 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 81,
-        "r16": 23,
+        "r32": 84,
+        "r16": 22,
         "qf": 7,
         "sf": 2,
         "final": 1,
@@ -7902,8 +7958,8 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 96,
-        "r16": 28,
+        "r32": 97,
+        "r16": 31,
         "qf": 13,
         "sf": 4,
         "final": 1,
@@ -8379,7 +8435,7 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 56,
+        "r32": 57,
         "r16": 13,
         "qf": 3,
         "sf": 2,
@@ -8703,8 +8759,8 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 58,
-        "qf": 31,
+        "r16": 59,
+        "qf": 30,
         "sf": 10,
         "final": 6,
         "winner": 2,
@@ -8924,8 +8980,8 @@
         "r32": 100,
         "r16": 85,
         "qf": 62,
-        "sf": 40,
-        "final": 23,
+        "sf": 39,
+        "final": 24,
         "winner": 11,
         "source": "market"
       },
@@ -9070,10 +9126,10 @@
       ],
       "advanceProbabilities": {
         "r32": 93,
-        "r16": 38,
+        "r16": 35,
         "qf": 16,
         "sf": 6,
-        "final": 3,
+        "final": 2,
         "winner": 0,
         "source": "market"
       },
@@ -9251,7 +9307,7 @@
       "advanceProbabilities": {
         "r32": 100,
         "r16": 30,
-        "qf": 11,
+        "qf": 14,
         "sf": 3,
         "final": 2,
         "winner": 0,
@@ -10523,26 +10579,17 @@
         "awayTeam": "Haiti",
         "awayFlag": "🇭🇹",
         "awayId": "haiti",
-        "homeScore": 0,
-        "awayScore": 1,
-        "status": "IN_PROGRESS",
+        "homeScore": 4,
+        "awayScore": 2,
+        "status": "FINISHED",
         "date": "2026-06-24",
-        "clock": "16'",
         "broadcasts": [
           "FS1",
           "Universo",
           "FOX One"
         ],
         "time": "2026-06-24T22:00Z",
-        "venue": "Mercedes-Benz Stadium, Atlanta, Georgia",
-        "polymarket": {
-          "homeId": "morocco",
-          "awayId": "haiti",
-          "homeWinPct": 56,
-          "awayWinPct": 19,
-          "drawPct": 26,
-          "eventSlug": "fifwc-mar-hai-2026-06-24"
-        }
+        "venue": "Mercedes-Benz Stadium, Atlanta, Georgia"
       },
       {
         "homeTeam": "Scotland",
@@ -10552,25 +10599,16 @@
         "awayFlag": "🇧🇷",
         "awayId": "brazil",
         "homeScore": 0,
-        "awayScore": 1,
-        "status": "IN_PROGRESS",
+        "awayScore": 3,
+        "status": "FINISHED",
         "date": "2026-06-24",
-        "clock": "16'",
         "broadcasts": [
           "FOX",
           "Tele",
           "FOX One"
         ],
         "time": "2026-06-24T22:00Z",
-        "venue": "Hard Rock Stadium, Miami Gardens, Florida",
-        "polymarket": {
-          "homeId": "scotland",
-          "awayId": "brazil",
-          "homeWinPct": 3,
-          "awayWinPct": 89,
-          "drawPct": 9,
-          "eventSlug": "fifwc-sco-bra-2026-06-24"
-        }
+        "venue": "Hard Rock Stadium, Miami Gardens, Florida"
       },
       {
         "homeTeam": "Czechia",
@@ -10593,9 +10631,9 @@
         "polymarket": {
           "homeId": "czechia",
           "awayId": "mexico",
-          "homeWinPct": 26,
-          "awayWinPct": 52,
-          "drawPct": 25,
+          "homeWinPct": 21,
+          "awayWinPct": 56,
+          "drawPct": 23,
           "eventSlug": "fifwc-cze-mex-2026-06-24"
         }
       },
@@ -10620,9 +10658,9 @@
         "polymarket": {
           "homeId": "southafrica",
           "awayId": "southkorea",
-          "homeWinPct": 16,
-          "awayWinPct": 61,
-          "drawPct": 24,
+          "homeWinPct": 17,
+          "awayWinPct": 59,
+          "drawPct": 26,
           "eventSlug": "fifwc-rsa-kr-2026-06-24"
         }
       }
@@ -10668,8 +10706,8 @@
         "polymarket": {
           "homeId": "ecuador",
           "awayId": "germany",
-          "homeWinPct": 24,
-          "awayWinPct": 54,
+          "homeWinPct": 23,
+          "awayWinPct": 56,
           "drawPct": 22,
           "eventSlug": "fifwc-ecu-ger-2026-06-25"
         }
@@ -11051,7 +11089,7 @@
           "homeId": "drcongo",
           "awayId": "uzbekistan",
           "homeWinPct": 55,
-          "awayWinPct": 23,
+          "awayWinPct": 22,
           "drawPct": 24,
           "eventSlug": "fifwc-cdr-uzb-2026-06-27"
         }
@@ -11079,7 +11117,7 @@
           "awayId": "austria",
           "homeWinPct": 25,
           "awayWinPct": 34,
-          "drawPct": 44,
+          "drawPct": 43,
           "eventSlug": "fifwc-alg-aut-2026-06-27"
         }
       },
