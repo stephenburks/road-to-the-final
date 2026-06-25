@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-25T00:12:57.113Z",
+  "lastUpdated": "2026-06-25T05:05:23.980Z",
   "snapshotDate": "2026-06-25",
   "isHistorical": false,
   "sourceSummary": {
@@ -49,65 +49,65 @@
         {
           "teamId": "mexico",
           "team": "Mexico",
-          "played": 2,
-          "w": 2,
+          "played": 3,
+          "w": 3,
           "d": 0,
           "l": 0,
-          "gf": 3,
+          "gf": 6,
           "ga": 0,
-          "pts": 6,
-          "gd": 3,
+          "pts": 9,
+          "gd": 6,
           "pos": 1,
           "flag": "🇲🇽"
         },
         {
-          "teamId": "southkorea",
-          "team": "South Korea",
-          "played": 2,
+          "teamId": "southafrica",
+          "team": "South Africa",
+          "played": 3,
           "w": 1,
-          "d": 0,
+          "d": 1,
           "l": 1,
           "gf": 2,
-          "ga": 2,
-          "pts": 3,
-          "gd": 0,
+          "ga": 3,
+          "pts": 4,
+          "gd": -1,
           "pos": 2,
+          "flag": "🇿🇦"
+        },
+        {
+          "teamId": "southkorea",
+          "team": "South Korea",
+          "played": 3,
+          "w": 1,
+          "d": 0,
+          "l": 2,
+          "gf": 2,
+          "ga": 3,
+          "pts": 3,
+          "gd": -1,
+          "pos": 3,
           "flag": "🇰🇷"
         },
         {
           "teamId": "czechia",
           "team": "Czechia",
-          "played": 2,
+          "played": 3,
           "w": 0,
           "d": 1,
-          "l": 1,
+          "l": 2,
           "gf": 2,
-          "ga": 3,
+          "ga": 6,
           "pts": 1,
-          "gd": -1,
-          "pos": 3,
-          "flag": "🇨🇿"
-        },
-        {
-          "teamId": "southafrica",
-          "team": "South Africa",
-          "played": 2,
-          "w": 0,
-          "d": 1,
-          "l": 1,
-          "gf": 1,
-          "ga": 3,
-          "pts": 1,
-          "gd": -2,
+          "gd": -4,
           "pos": 4,
-          "flag": "🇿🇦"
+          "flag": "🇨🇿"
         }
       ],
       "winProbabilities": {
         "mexico": 100,
+        "southafrica": 0,
         "southkorea": 0,
-        "czechia": 0,
-        "southafrica": 0
+        "czechia": 0
       }
     },
     "B": {
@@ -434,9 +434,9 @@
         }
       ],
       "winProbabilities": {
-        "netherlands": 76,
+        "netherlands": 78,
         "japan": 20,
-        "sweden": 4,
+        "sweden": 3,
         "tunisia": 0
       }
     },
@@ -846,7 +846,7 @@
       "confederation": "CONCACAF",
       "fifaRank": 15,
       "eliminated": false,
-      "currentStage": "group_stage",
+      "currentStage": "final",
       "groupResults": [
         {
           "matchday": 1,
@@ -901,19 +901,29 @@
           "matchday": 3,
           "opponent": "Czechia",
           "opponentFlag": "🇨🇿",
-          "result": null,
-          "score": null,
+          "result": "W",
+          "score": "3-0",
           "date": "2026-06-24",
           "venue": "Estadio Akron, Zapopan",
-          "scorers": [],
-          "cards": []
+          "scorers": [
+            "Mateo Chávez 55'",
+            "Julián Quiñones 61'",
+            "Álvaro Fidalgo 90'+4'"
+          ],
+          "cards": [
+            {
+              "player": "Edson Álvarez",
+              "minute": "64'",
+              "type": "yellow"
+            }
+          ]
         }
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 67,
-        "qf": 27,
-        "sf": 12,
+        "r16": 68,
+        "qf": 31,
+        "sf": 16,
         "final": 7,
         "winner": 1,
         "source": "market"
@@ -924,7 +934,7 @@
           "city": "Mexico City · Zapopan",
           "venue": "Various venues",
           "date": "Jun 11–24",
-          "detail": "6pts after MD2"
+          "detail": "9pts after MD3"
         },
         "r32": {
           "status": "upcoming",
@@ -1048,7 +1058,7 @@
       "confederation": "CAF",
       "fifaRank": 58,
       "eliminated": false,
-      "currentStage": "group_stage",
+      "currentStage": "final",
       "groupResults": [
         {
           "matchday": 1,
@@ -1112,19 +1122,27 @@
           "matchday": 3,
           "opponent": "South Korea",
           "opponentFlag": "🇰🇷",
-          "result": null,
-          "score": null,
+          "result": "W",
+          "score": "1-0",
           "date": "2026-06-24",
           "venue": "Estadio Akron, Zapopan",
-          "scorers": [],
-          "cards": []
+          "scorers": [
+            "Thapelo Maseko 63'"
+          ],
+          "cards": [
+            {
+              "player": "Aubrey Modiba",
+              "minute": "73'",
+              "type": "yellow"
+            }
+          ]
         }
       ],
       "advanceProbabilities": {
-        "r32": 13,
-        "r16": 1,
-        "qf": 1,
-        "sf": 1,
+        "r32": 100,
+        "r16": 30,
+        "qf": 2,
+        "sf": 0,
         "final": 0,
         "winner": 0,
         "source": "market"
@@ -1135,7 +1153,7 @@
           "city": "Mexico City · Atlanta · Zapopan",
           "venue": "Various venues",
           "date": "Jun 11–24",
-          "detail": "1pt after MD2"
+          "detail": "4pts after MD3"
         },
         "r32": {
           "status": "upcoming",
@@ -1238,17 +1256,6 @@
         ],
         "r16": [
           {
-            "group": "A",
-            "likelyTeam": "South Korea",
-            "flag": "🇰🇷",
-            "fifaRank": 22,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "Runner-up of Group A",
-            "pct": null
-          },
-          {
             "group": "H",
             "likelyTeam": "Uruguay",
             "flag": "🇺🇾",
@@ -1291,7 +1298,7 @@
       "group": "A",
       "confederation": "AFC",
       "fifaRank": 22,
-      "eliminated": false,
+      "eliminated": true,
       "currentStage": "group_stage",
       "groupResults": [
         {
@@ -1343,20 +1350,29 @@
           "matchday": 3,
           "opponent": "South Africa",
           "opponentFlag": "🇿🇦",
-          "result": null,
-          "score": null,
+          "result": "L",
+          "score": "0-1",
           "date": "2026-06-24",
           "venue": "Estadio Akron, Zapopan",
-          "scorers": [],
-          "cards": []
+          "scorers": [
+            "Hwang In-Beom 67'",
+            "Oh Hyeon-Gyu 80'"
+          ],
+          "cards": [
+            {
+              "player": "Cho Gue-Sung",
+              "minute": "79'",
+              "type": "yellow"
+            }
+          ]
         }
       ],
       "advanceProbabilities": {
-        "r32": 93,
-        "r16": 45,
-        "qf": 11,
+        "r32": 80,
+        "r16": 31,
+        "qf": 12,
         "sf": 2,
-        "final": 2,
+        "final": 1,
         "winner": 0,
         "source": "market"
       },
@@ -1366,220 +1382,7 @@
           "city": "Zapopan",
           "venue": "Various venues",
           "date": "Jun 11–24",
-          "detail": "3pts after MD2"
-        },
-        "r32": {
-          "status": "upcoming",
-          "match": 80,
-          "date": "2026-06-29",
-          "city": "Atlanta",
-          "venue": "Mercedes-Benz Stadium",
-          "opponentDesc": "Best 3rd from E/H/I/J/K"
-        },
-        "r16": {
-          "status": "future",
-          "match": 94,
-          "date": "2026-07-06",
-          "city": "Seattle",
-          "venue": "Lumen Field",
-          "opponentDesc": "Winner Match 80"
-        },
-        "qf": {
-          "status": "future",
-          "match": 98,
-          "date": "2026-07-10",
-          "city": "Los Angeles",
-          "venue": "SoFi Stadium",
-          "opponentDesc": "Winner Match 94"
-        },
-        "sf": {
-          "status": "future",
-          "match": 102,
-          "date": "2026-07-15",
-          "city": "Atlanta",
-          "venue": "Mercedes-Benz Stadium",
-          "opponentDesc": "Winner QF bracket"
-        },
-        "final": {
-          "status": "future",
-          "match": 104,
-          "date": "2026-07-19",
-          "city": "New Jersey",
-          "venue": "MetLife Stadium",
-          "opponentDesc": "Winner other SF"
-        }
-      },
-      "possibleOpponents": {
-        "r32": [
-          {
-            "group": "E",
-            "likelyTeam": "Ecuador",
-            "flag": "🇪🇨",
-            "fifaRank": 23,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group E",
-            "pct": null
-          },
-          {
-            "group": "H",
-            "likelyTeam": "Cape Verde",
-            "flag": "🇨🇻",
-            "fifaRank": 62,
-            "difficulty": 1,
-            "label": "Favorable",
-            "color": "#22C55E",
-            "note": "3rd-place team from Group H",
-            "pct": null
-          },
-          {
-            "group": "I",
-            "likelyTeam": "Senegal",
-            "flag": "🇸🇳",
-            "fifaRank": 14,
-            "difficulty": 4,
-            "label": "Tough",
-            "color": "#FB923C",
-            "note": "3rd-place team from Group I",
-            "pct": null
-          },
-          {
-            "group": "J",
-            "likelyTeam": "Algeria",
-            "flag": "🇩🇿",
-            "fifaRank": 35,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "3rd-place team from Group J",
-            "pct": null
-          },
-          {
-            "group": "K",
-            "likelyTeam": "DR Congo",
-            "flag": "🇨🇩",
-            "fifaRank": 56,
-            "difficulty": 1,
-            "label": "Favorable",
-            "color": "#22C55E",
-            "note": "3rd-place team from Group K",
-            "pct": null
-          }
-        ],
-        "r16": [
-          {
-            "group": "H",
-            "likelyTeam": "Uruguay",
-            "flag": "🇺🇾",
-            "fifaRank": 18,
-            "difficulty": 4,
-            "label": "Tough",
-            "color": "#FB923C",
-            "note": "Runner-up of Group H",
-            "pct": null
-          },
-          {
-            "group": "K",
-            "likelyTeam": "Colombia",
-            "flag": "🇨🇴",
-            "fifaRank": 13,
-            "difficulty": 4,
-            "label": "Tough",
-            "color": "#FB923C",
-            "note": "Winner of Group K",
-            "pct": null
-          },
-          {
-            "group": "L",
-            "likelyTeam": "Ghana",
-            "flag": "🇬🇭",
-            "fifaRank": 60,
-            "difficulty": 1,
-            "label": "Favorable",
-            "color": "#22C55E",
-            "note": "Runner-up of Group L",
-            "pct": null
-          }
-        ]
-      }
-    },
-    {
-      "id": "czechia",
-      "name": "Czechia",
-      "flag": "🇨🇿",
-      "group": "A",
-      "confederation": "UEFA",
-      "fifaRank": 37,
-      "eliminated": false,
-      "currentStage": "group_stage",
-      "groupResults": [
-        {
-          "matchday": 1,
-          "opponent": "South Korea",
-          "opponentFlag": "🇰🇷",
-          "result": "L",
-          "score": "1-2",
-          "date": "2026-06-11",
-          "venue": "Estadio Akron, Zapopan",
-          "scorers": [
-            "Ladislav Krejcí 59'"
-          ],
-          "cards": [
-            {
-              "player": "Ladislav Krejcí",
-              "minute": "75'",
-              "type": "yellow"
-            }
-          ]
-        },
-        {
-          "matchday": 2,
-          "opponent": "South Africa",
-          "opponentFlag": "🇿🇦",
-          "result": "D",
-          "score": "1-1",
-          "date": "2026-06-18",
-          "venue": "Mercedes-Benz Stadium, Atlanta",
-          "scorers": [
-            "Michal Sadílek 6'"
-          ],
-          "cards": [
-            {
-              "player": "Ladislav Krejcí",
-              "minute": "75'",
-              "type": "yellow"
-            }
-          ]
-        },
-        {
-          "matchday": 3,
-          "opponent": "Mexico",
-          "opponentFlag": "🇲🇽",
-          "result": null,
-          "score": null,
-          "date": "2026-06-24",
-          "venue": "Estadio Akron, Zapopan",
-          "scorers": [],
-          "cards": []
-        }
-      ],
-      "advanceProbabilities": {
-        "r32": 24,
-        "r16": 8,
-        "qf": 2,
-        "sf": 2,
-        "final": 1,
-        "winner": 0,
-        "source": "market"
-      },
-      "path": {
-        "group_stage": {
-          "status": "active",
-          "city": "Zapopan · Atlanta",
-          "venue": "Various venues",
-          "date": "Jun 11–24",
-          "detail": "1pt after MD2"
+          "detail": "3pts after MD3"
         },
         "r32": {
           "status": "upcoming",
@@ -1683,12 +1486,245 @@
         "r16": [
           {
             "group": "A",
-            "likelyTeam": "South Korea",
-            "flag": "🇰🇷",
-            "fifaRank": 22,
+            "likelyTeam": "South Africa",
+            "flag": "🇿🇦",
+            "fifaRank": 58,
+            "difficulty": 1,
+            "label": "Favorable",
+            "color": "#22C55E",
+            "note": "Runner-up of Group A",
+            "pct": null
+          },
+          {
+            "group": "H",
+            "likelyTeam": "Uruguay",
+            "flag": "🇺🇾",
+            "fifaRank": 18,
+            "difficulty": 4,
+            "label": "Tough",
+            "color": "#FB923C",
+            "note": "Runner-up of Group H",
+            "pct": null
+          },
+          {
+            "group": "K",
+            "likelyTeam": "Colombia",
+            "flag": "🇨🇴",
+            "fifaRank": 13,
+            "difficulty": 4,
+            "label": "Tough",
+            "color": "#FB923C",
+            "note": "Winner of Group K",
+            "pct": null
+          },
+          {
+            "group": "L",
+            "likelyTeam": "Ghana",
+            "flag": "🇬🇭",
+            "fifaRank": 60,
+            "difficulty": 1,
+            "label": "Favorable",
+            "color": "#22C55E",
+            "note": "Runner-up of Group L",
+            "pct": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "czechia",
+      "name": "Czechia",
+      "flag": "🇨🇿",
+      "group": "A",
+      "confederation": "UEFA",
+      "fifaRank": 37,
+      "eliminated": true,
+      "currentStage": "group_stage",
+      "groupResults": [
+        {
+          "matchday": 1,
+          "opponent": "South Korea",
+          "opponentFlag": "🇰🇷",
+          "result": "L",
+          "score": "1-2",
+          "date": "2026-06-11",
+          "venue": "Estadio Akron, Zapopan",
+          "scorers": [
+            "Ladislav Krejcí 59'"
+          ],
+          "cards": [
+            {
+              "player": "Ladislav Krejcí",
+              "minute": "75'",
+              "type": "yellow"
+            }
+          ]
+        },
+        {
+          "matchday": 2,
+          "opponent": "South Africa",
+          "opponentFlag": "🇿🇦",
+          "result": "D",
+          "score": "1-1",
+          "date": "2026-06-18",
+          "venue": "Mercedes-Benz Stadium, Atlanta",
+          "scorers": [
+            "Michal Sadílek 6'"
+          ],
+          "cards": [
+            {
+              "player": "Ladislav Krejcí",
+              "minute": "75'",
+              "type": "yellow"
+            }
+          ]
+        },
+        {
+          "matchday": 3,
+          "opponent": "Mexico",
+          "opponentFlag": "🇲🇽",
+          "result": "L",
+          "score": "0-3",
+          "date": "2026-06-24",
+          "venue": "Estadio Akron, Zapopan",
+          "scorers": [
+            "Ladislav Krejcí 59'",
+            "Michal Sadílek 6'"
+          ],
+          "cards": [
+            {
+              "player": "Ladislav Krejcí",
+              "minute": "75'",
+              "type": "yellow"
+            }
+          ]
+        }
+      ],
+      "advanceProbabilities": {
+        "r32": 0,
+        "r16": 0,
+        "qf": 0,
+        "sf": 0,
+        "final": 0,
+        "winner": 0,
+        "source": "market"
+      },
+      "path": {
+        "group_stage": {
+          "status": "active",
+          "city": "Zapopan · Atlanta",
+          "venue": "Various venues",
+          "date": "Jun 11–24",
+          "detail": "1pt after MD3"
+        },
+        "r32": {
+          "status": "upcoming",
+          "match": 80,
+          "date": "2026-06-29",
+          "city": "Atlanta",
+          "venue": "Mercedes-Benz Stadium",
+          "opponentDesc": "Best 3rd from E/H/I/J/K"
+        },
+        "r16": {
+          "status": "future",
+          "match": 94,
+          "date": "2026-07-06",
+          "city": "Seattle",
+          "venue": "Lumen Field",
+          "opponentDesc": "Winner Match 80"
+        },
+        "qf": {
+          "status": "future",
+          "match": 98,
+          "date": "2026-07-10",
+          "city": "Los Angeles",
+          "venue": "SoFi Stadium",
+          "opponentDesc": "Winner Match 94"
+        },
+        "sf": {
+          "status": "future",
+          "match": 102,
+          "date": "2026-07-15",
+          "city": "Atlanta",
+          "venue": "Mercedes-Benz Stadium",
+          "opponentDesc": "Winner QF bracket"
+        },
+        "final": {
+          "status": "future",
+          "match": 104,
+          "date": "2026-07-19",
+          "city": "New Jersey",
+          "venue": "MetLife Stadium",
+          "opponentDesc": "Winner other SF"
+        }
+      },
+      "possibleOpponents": {
+        "r32": [
+          {
+            "group": "E",
+            "likelyTeam": "Ecuador",
+            "flag": "🇪🇨",
+            "fifaRank": 23,
             "difficulty": 3,
             "label": "Moderate",
             "color": "#F59E0B",
+            "note": "3rd-place team from Group E",
+            "pct": null
+          },
+          {
+            "group": "H",
+            "likelyTeam": "Cape Verde",
+            "flag": "🇨🇻",
+            "fifaRank": 62,
+            "difficulty": 1,
+            "label": "Favorable",
+            "color": "#22C55E",
+            "note": "3rd-place team from Group H",
+            "pct": null
+          },
+          {
+            "group": "I",
+            "likelyTeam": "Senegal",
+            "flag": "🇸🇳",
+            "fifaRank": 14,
+            "difficulty": 4,
+            "label": "Tough",
+            "color": "#FB923C",
+            "note": "3rd-place team from Group I",
+            "pct": null
+          },
+          {
+            "group": "J",
+            "likelyTeam": "Algeria",
+            "flag": "🇩🇿",
+            "fifaRank": 35,
+            "difficulty": 3,
+            "label": "Moderate",
+            "color": "#F59E0B",
+            "note": "3rd-place team from Group J",
+            "pct": null
+          },
+          {
+            "group": "K",
+            "likelyTeam": "DR Congo",
+            "flag": "🇨🇩",
+            "fifaRank": 56,
+            "difficulty": 1,
+            "label": "Favorable",
+            "color": "#22C55E",
+            "note": "3rd-place team from Group K",
+            "pct": null
+          }
+        ],
+        "r16": [
+          {
+            "group": "A",
+            "likelyTeam": "South Africa",
+            "flag": "🇿🇦",
+            "fifaRank": 58,
+            "difficulty": 1,
+            "label": "Favorable",
+            "color": "#22C55E",
             "note": "Runner-up of Group A",
             "pct": null
           },
@@ -1813,8 +1849,8 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 52,
-        "qf": 15,
+        "r16": 74,
+        "qf": 17,
         "sf": 4,
         "final": 2,
         "winner": 0,
@@ -1873,12 +1909,12 @@
         "r32": [
           {
             "group": "A",
-            "likelyTeam": "Czechia",
-            "flag": "🇨🇿",
-            "fifaRank": 37,
-            "difficulty": 2,
-            "label": "Favorable",
-            "color": "#22C55E",
+            "likelyTeam": "South Korea",
+            "flag": "🇰🇷",
+            "fifaRank": 22,
+            "difficulty": 3,
+            "label": "Moderate",
+            "color": "#F59E0B",
             "note": "3rd-place team from Group A",
             "pct": null
           },
@@ -2035,9 +2071,9 @@
       "advanceProbabilities": {
         "r32": 100,
         "r16": 26,
-        "qf": 6,
+        "qf": 7,
         "sf": 2,
-        "final": 1,
+        "final": 2,
         "winner": 0,
         "source": "market"
       },
@@ -2094,12 +2130,12 @@
         "r32": [
           {
             "group": "A",
-            "likelyTeam": "Czechia",
-            "flag": "🇨🇿",
-            "fifaRank": 37,
-            "difficulty": 2,
-            "label": "Favorable",
-            "color": "#22C55E",
+            "likelyTeam": "South Korea",
+            "flag": "🇰🇷",
+            "fifaRank": 22,
+            "difficulty": 3,
+            "label": "Moderate",
+            "color": "#F59E0B",
             "note": "3rd-place team from Group A",
             "pct": null
           },
@@ -2319,12 +2355,12 @@
         "r32": [
           {
             "group": "A",
-            "likelyTeam": "Czechia",
-            "flag": "🇨🇿",
-            "fifaRank": 37,
-            "difficulty": 2,
-            "label": "Favorable",
-            "color": "#22C55E",
+            "likelyTeam": "South Korea",
+            "flag": "🇰🇷",
+            "fifaRank": 22,
+            "difficulty": 3,
+            "label": "Moderate",
+            "color": "#F59E0B",
             "note": "3rd-place team from Group A",
             "pct": null
           },
@@ -2473,10 +2509,10 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 66,
+        "r16": 67,
         "qf": 23,
-        "sf": 9,
-        "final": 2,
+        "sf": 8,
+        "final": 3,
         "winner": 1,
         "source": "market"
       },
@@ -2686,11 +2722,11 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 66,
+        "r16": 72,
         "qf": 47,
         "sf": 23,
-        "final": 16,
-        "winner": 6,
+        "final": 14,
+        "winner": 5,
         "source": "market"
       },
       "path": {
@@ -2899,8 +2935,8 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 45,
-        "qf": 32,
+        "r16": 41,
+        "qf": 31,
         "sf": 12,
         "final": 7,
         "winner": 1,
@@ -3262,11 +3298,11 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 37,
-        "r16": 13,
+        "r32": 25,
+        "r16": 9,
         "qf": 4,
-        "sf": 1,
-        "final": 1,
+        "sf": 2,
+        "final": 2,
         "winner": 0,
         "source": "market"
       },
@@ -3436,9 +3472,9 @@
       "advanceProbabilities": {
         "r32": 100,
         "r16": 77,
-        "qf": 49,
+        "qf": 51,
         "sf": 20,
-        "final": 7,
+        "final": 6,
         "winner": 3,
         "source": "market"
       },
@@ -3661,8 +3697,8 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 86,
-        "r16": 21,
+        "r32": 87,
+        "r16": 23,
         "qf": 5,
         "sf": 1,
         "final": 1,
@@ -3840,11 +3876,11 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 92,
+        "r32": 91,
         "r16": 31,
         "qf": 8,
         "sf": 2,
-        "final": 2,
+        "final": 1,
         "winner": 0,
         "source": "market"
       },
@@ -4148,10 +4184,10 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 83,
-        "qf": 41,
-        "sf": 23,
-        "final": 16,
+        "r16": 82,
+        "qf": 42,
+        "sf": 24,
+        "final": 14,
         "winner": 5,
         "source": "market"
       },
@@ -4568,7 +4604,7 @@
       ],
       "advanceProbabilities": {
         "r32": 98,
-        "r16": 36,
+        "r16": 34,
         "qf": 14,
         "sf": 5,
         "final": 2,
@@ -4710,10 +4746,10 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 24,
+        "r32": 19,
         "r16": 8,
-        "qf": 4,
-        "sf": 2,
+        "qf": 3,
+        "sf": 1,
         "final": 1,
         "winner": 0,
         "source": "market"
@@ -4894,7 +4930,7 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 63,
+        "r16": 62,
         "qf": 46,
         "sf": 24,
         "final": 13,
@@ -5044,9 +5080,9 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 43,
-        "qf": 26,
-        "sf": 12,
+        "r16": 40,
+        "qf": 22,
+        "sf": 13,
         "final": 5,
         "winner": 2,
         "source": "market"
@@ -5777,12 +5813,12 @@
         "r32": [
           {
             "group": "A",
-            "likelyTeam": "Czechia",
-            "flag": "🇨🇿",
-            "fifaRank": 37,
-            "difficulty": 2,
-            "label": "Favorable",
-            "color": "#22C55E",
+            "likelyTeam": "South Korea",
+            "flag": "🇰🇷",
+            "fifaRank": 22,
+            "difficulty": 3,
+            "label": "Moderate",
+            "color": "#F59E0B",
             "note": "3rd-place team from Group A",
             "pct": null
           },
@@ -5920,9 +5956,9 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 58,
-        "r16": 23,
-        "qf": 6,
+        "r32": 59,
+        "r16": 22,
+        "qf": 4,
         "sf": 1,
         "final": 0,
         "winner": 0,
@@ -6090,7 +6126,7 @@
       ],
       "advanceProbabilities": {
         "r32": 6,
-        "r16": 1,
+        "r16": 2,
         "qf": 1,
         "sf": 1,
         "final": 0,
@@ -6255,7 +6291,7 @@
       "advanceProbabilities": {
         "r32": 100,
         "r16": 84,
-        "qf": 60,
+        "qf": 61,
         "sf": 45,
         "final": 28,
         "winner": 14,
@@ -6491,12 +6527,12 @@
         "r16": [
           {
             "group": "A",
-            "likelyTeam": "South Korea",
-            "flag": "🇰🇷",
-            "fifaRank": 22,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
+            "likelyTeam": "South Africa",
+            "flag": "🇿🇦",
+            "fifaRank": 58,
+            "difficulty": 1,
+            "label": "Favorable",
+            "color": "#22C55E",
             "note": "Runner-up of Group A",
             "pct": null
           },
@@ -6676,12 +6712,12 @@
         "r16": [
           {
             "group": "A",
-            "likelyTeam": "South Korea",
-            "flag": "🇰🇷",
-            "fifaRank": 22,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
+            "likelyTeam": "South Africa",
+            "flag": "🇿🇦",
+            "fifaRank": 58,
+            "difficulty": 1,
+            "label": "Favorable",
+            "color": "#22C55E",
             "note": "Runner-up of Group A",
             "pct": null
           },
@@ -6789,10 +6825,10 @@
       ],
       "advanceProbabilities": {
         "r32": 37,
-        "r16": 22,
+        "r16": 19,
         "qf": 6,
-        "sf": 3,
-        "final": 2,
+        "sf": 2,
+        "final": 1,
         "winner": 0,
         "source": "market"
       },
@@ -6862,12 +6898,12 @@
         "r16": [
           {
             "group": "A",
-            "likelyTeam": "South Korea",
-            "flag": "🇰🇷",
-            "fifaRank": 22,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
+            "likelyTeam": "South Africa",
+            "flag": "🇿🇦",
+            "fifaRank": 58,
+            "difficulty": 1,
+            "label": "Favorable",
+            "color": "#22C55E",
             "note": "Runner-up of Group A",
             "pct": null
           },
@@ -6950,8 +6986,8 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 88,
-        "qf": 65,
+        "r16": 89,
+        "qf": 66,
         "sf": 47,
         "final": 33,
         "winner": 19,
@@ -7129,10 +7165,10 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 71,
+        "r32": 69,
         "r16": 28,
         "qf": 11,
-        "sf": 4,
+        "sf": 3,
         "final": 2,
         "winner": 0,
         "source": "market"
@@ -7439,7 +7475,7 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 64,
+        "r16": 63,
         "qf": 32,
         "sf": 16,
         "final": 9,
@@ -7599,10 +7635,10 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 85,
+        "r16": 86,
         "qf": 67,
-        "sf": 48,
-        "final": 28,
+        "sf": 49,
+        "final": 27,
         "winner": 15,
         "source": "market"
       },
@@ -7791,11 +7827,11 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 84,
-        "r16": 22,
+        "r32": 82,
+        "r16": 19,
         "qf": 7,
         "sf": 2,
-        "final": 1,
+        "final": 0,
         "winner": 0,
         "source": "market"
       },
@@ -7959,7 +7995,7 @@
       ],
       "advanceProbabilities": {
         "r32": 97,
-        "r16": 31,
+        "r16": 26,
         "qf": 13,
         "sf": 4,
         "final": 1,
@@ -8436,7 +8472,7 @@
       ],
       "advanceProbabilities": {
         "r32": 57,
-        "r16": 13,
+        "r16": 12,
         "qf": 3,
         "sf": 2,
         "final": 0,
@@ -8593,7 +8629,7 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 5,
+        "r32": 4,
         "r16": 3,
         "qf": 0,
         "sf": 0,
@@ -8759,10 +8795,10 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 59,
-        "qf": 30,
+        "r16": 60,
+        "qf": 29,
         "sf": 10,
-        "final": 6,
+        "final": 5,
         "winner": 2,
         "source": "market"
       },
@@ -8876,12 +8912,12 @@
         "r16": [
           {
             "group": "A",
-            "likelyTeam": "South Korea",
-            "flag": "🇰🇷",
-            "fifaRank": 22,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
+            "likelyTeam": "South Africa",
+            "flag": "🇿🇦",
+            "fifaRank": 58,
+            "difficulty": 1,
+            "label": "Favorable",
+            "color": "#22C55E",
             "note": "Runner-up of Group A",
             "pct": null
           },
@@ -9127,8 +9163,8 @@
       "advanceProbabilities": {
         "r32": 93,
         "r16": 35,
-        "qf": 16,
-        "sf": 6,
+        "qf": 14,
+        "sf": 7,
         "final": 2,
         "winner": 0,
         "source": "market"
@@ -9199,12 +9235,12 @@
         "r16": [
           {
             "group": "A",
-            "likelyTeam": "South Korea",
-            "flag": "🇰🇷",
-            "fifaRank": 22,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
+            "likelyTeam": "South Africa",
+            "flag": "🇿🇦",
+            "fifaRank": 58,
+            "difficulty": 1,
+            "label": "Favorable",
+            "color": "#22C55E",
             "note": "Runner-up of Group A",
             "pct": null
           },
@@ -9306,9 +9342,9 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 30,
-        "qf": 14,
-        "sf": 3,
+        "r16": 28,
+        "qf": 12,
+        "sf": 4,
         "final": 2,
         "winner": 0,
         "source": "market"
@@ -9379,12 +9415,12 @@
         "r16": [
           {
             "group": "A",
-            "likelyTeam": "South Korea",
-            "flag": "🇰🇷",
-            "fifaRank": 22,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
+            "likelyTeam": "South Africa",
+            "flag": "🇿🇦",
+            "fifaRank": 58,
+            "difficulty": 1,
+            "label": "Favorable",
+            "color": "#22C55E",
             "note": "Runner-up of Group A",
             "pct": null
           },
@@ -9549,12 +9585,12 @@
         "r16": [
           {
             "group": "A",
-            "likelyTeam": "South Korea",
-            "flag": "🇰🇷",
-            "fifaRank": 22,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
+            "likelyTeam": "South Africa",
+            "flag": "🇿🇦",
+            "fifaRank": 58,
+            "difficulty": 1,
+            "label": "Favorable",
+            "color": "#22C55E",
             "note": "Runner-up of Group A",
             "pct": null
           },
@@ -10618,8 +10654,8 @@
         "awayFlag": "🇲🇽",
         "awayId": "mexico",
         "homeScore": 0,
-        "awayScore": 0,
-        "status": "SCHEDULED",
+        "awayScore": 3,
+        "status": "FINISHED",
         "date": "2026-06-24",
         "broadcasts": [
           "FOX",
@@ -10627,15 +10663,7 @@
           "FOX One"
         ],
         "time": "2026-06-25T01:00Z",
-        "venue": "Estadio Banorte, Mexico City",
-        "polymarket": {
-          "homeId": "czechia",
-          "awayId": "mexico",
-          "homeWinPct": 21,
-          "awayWinPct": 56,
-          "drawPct": 23,
-          "eventSlug": "fifwc-cze-mex-2026-06-24"
-        }
+        "venue": "Estadio Banorte, Mexico City"
       },
       {
         "homeTeam": "South Africa",
@@ -10644,9 +10672,9 @@
         "awayTeam": "South Korea",
         "awayFlag": "🇰🇷",
         "awayId": "southkorea",
-        "homeScore": 0,
+        "homeScore": 1,
         "awayScore": 0,
-        "status": "SCHEDULED",
+        "status": "FINISHED",
         "date": "2026-06-24",
         "broadcasts": [
           "FS1",
@@ -10654,15 +10682,7 @@
           "FOX One"
         ],
         "time": "2026-06-25T01:00Z",
-        "venue": "Estadio BBVA, Guadalupe",
-        "polymarket": {
-          "homeId": "southafrica",
-          "awayId": "southkorea",
-          "homeWinPct": 17,
-          "awayWinPct": 59,
-          "drawPct": 26,
-          "eventSlug": "fifwc-rsa-kr-2026-06-24"
-        }
+        "venue": "Estadio BBVA, Guadalupe"
       }
     ],
     "2026-06-25": [
@@ -10706,9 +10726,9 @@
         "polymarket": {
           "homeId": "ecuador",
           "awayId": "germany",
-          "homeWinPct": 23,
-          "awayWinPct": 56,
-          "drawPct": 22,
+          "homeWinPct": 17,
+          "awayWinPct": 65,
+          "drawPct": 18,
           "eventSlug": "fifwc-ecu-ger-2026-06-25"
         }
       },
@@ -10733,9 +10753,9 @@
         "polymarket": {
           "homeId": "japan",
           "awayId": "sweden",
-          "homeWinPct": 52,
+          "homeWinPct": 53,
           "awayWinPct": 21,
-          "drawPct": 27,
+          "drawPct": 26,
           "eventSlug": "fifwc-jpn-swe-2026-06-25"
         }
       },
@@ -10760,9 +10780,9 @@
         "polymarket": {
           "homeId": "tunisia",
           "awayId": "netherlands",
-          "homeWinPct": 4,
-          "awayWinPct": 88,
-          "drawPct": 10,
+          "homeWinPct": 3,
+          "awayWinPct": 89,
+          "drawPct": 9,
           "eventSlug": "fifwc-tun-nld-2026-06-25"
         }
       },
@@ -10787,7 +10807,7 @@
         "polymarket": {
           "homeId": "paraguay",
           "awayId": "australia",
-          "homeWinPct": 34,
+          "homeWinPct": 35,
           "awayWinPct": 24,
           "drawPct": 43,
           "eventSlug": "fifwc-par-aus-2026-06-25"
@@ -10814,8 +10834,8 @@
         "polymarket": {
           "homeId": "turkey",
           "awayId": "usa",
-          "homeWinPct": 27,
-          "awayWinPct": 52,
+          "homeWinPct": 26,
+          "awayWinPct": 53,
           "drawPct": 23,
           "eventSlug": "fifwc-tur-usa-2026-06-25"
         }
@@ -10843,8 +10863,8 @@
         "polymarket": {
           "homeId": "norway",
           "awayId": "france",
-          "homeWinPct": 21,
-          "awayWinPct": 60,
+          "homeWinPct": 20,
+          "awayWinPct": 61,
           "drawPct": 21,
           "eventSlug": "fifwc-nor-fra-2026-06-26"
         }
@@ -10925,7 +10945,7 @@
           "homeId": "uruguay",
           "awayId": "spain",
           "homeWinPct": 13,
-          "awayWinPct": 65,
+          "awayWinPct": 66,
           "drawPct": 23,
           "eventSlug": "fifwc-ury-esp-2026-06-26"
         }
@@ -11034,7 +11054,7 @@
         "polymarket": {
           "homeId": "panama",
           "awayId": "england",
-          "homeWinPct": 6,
+          "homeWinPct": 5,
           "awayWinPct": 84,
           "drawPct": 12,
           "eventSlug": "fifwc-pan-eng-2026-06-27"
@@ -11088,7 +11108,7 @@
         "polymarket": {
           "homeId": "drcongo",
           "awayId": "uzbekistan",
-          "homeWinPct": 55,
+          "homeWinPct": 56,
           "awayWinPct": 22,
           "drawPct": 24,
           "eventSlug": "fifwc-cdr-uzb-2026-06-27"
@@ -11142,11 +11162,32 @@
         "polymarket": {
           "homeId": "jordan",
           "awayId": "argentina",
-          "homeWinPct": 6,
+          "homeWinPct": 5,
           "awayWinPct": 83,
           "drawPct": 12,
           "eventSlug": "fifwc-jor-arg-2026-06-27"
         }
+      }
+    ],
+    "2026-06-28": [
+      {
+        "homeTeam": "South Africa",
+        "homeFlag": "🇿🇦",
+        "homeId": "southafrica",
+        "awayTeam": "Canada",
+        "awayFlag": "🇨🇦",
+        "awayId": "canada",
+        "homeScore": 0,
+        "awayScore": 0,
+        "status": "SCHEDULED",
+        "date": "2026-06-28",
+        "broadcasts": [
+          "FOX",
+          "Tele",
+          "FOX One"
+        ],
+        "time": "2026-06-28T19:00Z",
+        "venue": "SoFi Stadium, Inglewood, California"
       }
     ]
   }
