@@ -1169,6 +1169,7 @@ function determineCurrentStage(teamId, group, rawStandings, espnMatches) {
 	if (!groupFinished) return 'group_stage';
 
 	const knockoutStages = ['r32', 'r16', 'qf', 'sf', 'final'];
+	let lastWonStage = null;
 	for (const stage of knockoutStages) {
 		const match = findKnockoutMatch(teamId, group, pos, stage, espnMatches);
 		if (!match) continue;
@@ -1183,18 +1184,22 @@ function determineCurrentStage(teamId, group, rawStandings, espnMatches) {
 				if (myGoals < oppGoals) {
 					return { stage, eliminated: true, eliminatedIn: stage };
 				}
+				lastWonStage = stage;
 			}
 			continue;
 		}
 
-		if (isTeamHome || isTeamAway) {
-			return { stage, eliminated: false };
-		}
-
+		// Unfinished knockout match exists → that's the team's current stage.
 		return { stage, eliminated: false };
 	}
 
-	return { stage: 'final', eliminated: false };
+	// No unfinished match found. Current stage = the one AFTER the last
+	// knockout the team won. If no knockouts found at all (bracket not yet
+	// drawn for this team), they're heading into R32. If they won the final,
+	// they stay at 'final' (champion).
+	const lastIdx = lastWonStage ? knockoutStages.indexOf(lastWonStage) : -1;
+	const nextIdx = Math.min(lastIdx + 1, knockoutStages.length - 1);
+	return { stage: knockoutStages[nextIdx], eliminated: false };
 }
 
 function findKnockoutMatch(teamId, group, pos, stage, espnMatches) {

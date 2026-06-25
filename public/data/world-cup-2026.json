@@ -846,7 +846,7 @@
 			"confederation": "CONCACAF",
 			"fifaRank": 15,
 			"eliminated": false,
-			"currentStage": "final",
+			"currentStage": "r32",
 			"groupResults": [
 				{
 					"matchday": 1,
@@ -1058,7 +1058,7 @@
 			"confederation": "CAF",
 			"fifaRank": 58,
 			"eliminated": false,
-			"currentStage": "final",
+			"currentStage": "r32",
 			"groupResults": [
 				{
 					"matchday": 1,
@@ -1772,7 +1772,7 @@
 			"confederation": "CONCACAF",
 			"fifaRank": 27,
 			"eliminated": false,
-			"currentStage": "final",
+			"currentStage": "r32",
 			"groupResults": [
 				{
 					"matchday": 1,
@@ -2443,7 +2443,7 @@
 			"confederation": "UEFA",
 			"fifaRank": 17,
 			"eliminated": false,
-			"currentStage": "final",
+			"currentStage": "r32",
 			"groupResults": [
 				{
 					"matchday": 1,
@@ -2646,7 +2646,7 @@
 			"confederation": "CONMEBOL",
 			"fifaRank": 4,
 			"eliminated": false,
-			"currentStage": "final",
+			"currentStage": "r32",
 			"groupResults": [
 				{
 					"matchday": 1,
@@ -2870,7 +2870,7 @@
 			"confederation": "CAF",
 			"fifaRank": 14,
 			"eliminated": false,
-			"currentStage": "final",
+			"currentStage": "r32",
 			"groupResults": [
 				{
 					"matchday": 1,
