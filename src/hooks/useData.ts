@@ -14,11 +14,20 @@ export function useData(selectedDate: string): UseDataReturn {
 	const liveQuery = useQuery<AppData, Error>({
 		queryKey: ['liveData'],
 		queryFn: async ({ signal }) => {
-			const res = await fetch(`${LIVE_DATA_URL}?_=${Date.now()}`, { signal })
+			const res = await fetch(`${LIVE_DATA_URL}?_=${Date.now()}`, {
+				signal,
+				cache: 'no-store',
+			})
 			if (!res.ok) throw new Error(`HTTP ${res.status} loading live data`)
 			return res.json() as Promise<AppData>
 		},
-		refetchInterval: 10 * 60 * 1000,
+		// Aggressive refresh: every 3 min in foreground, on tab focus, and on
+		// reconnect. Cuts the worst-case staleness window so users don't see
+		// outdated standings/scores after a GHA cron + Pages deploy cycle.
+		refetchInterval: 3 * 60 * 1000,
+		refetchOnWindowFocus: true,
+		refetchOnReconnect: true,
+		staleTime: 0,
 	})
 
 	const manifestQuery = useQuery<SnapshotManifest | null, Error>({
