@@ -23,11 +23,21 @@ export function localDateStr(date = new Date()): string {
 }
 
 /**
- * Format a date string as "Jun 13"
+ * Format a date string as "Jun 13". Handles both date-only ("YYYY-MM-DD")
+ * and ISO timestamps. Date-only strings are parsed as LOCAL midnight (not
+ * UTC) so that a Pacific user viewing "2026-06-25" sees "Jun 25" rather
+ * than "Jun 24" (UTC midnight = previous evening west of GMT).
  */
 export function formatDate(dateStr?: string): string {
   if (!dateStr) return ''
-  return new Date(dateStr).toLocaleDateString('en-US', {
+  let d: Date
+  if (/^\d{4}-\d{2}-\d{2}$/.test(dateStr)) {
+    const [y, m, day] = dateStr.split('-').map(Number)
+    d = new Date(y, m - 1, day)
+  } else {
+    d = new Date(dateStr)
+  }
+  return d.toLocaleDateString('en-US', {
     month: 'short',
     day: 'numeric',
   })

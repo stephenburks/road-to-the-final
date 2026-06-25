@@ -1122,7 +1122,7 @@ function canStillFinishTop3(teamId, group, rawStandings, espnMatches) {
 
 	if (remaining.length === 0) {
 		const row = rows.find(r => r.teamId === teamId);
-		return !!row && row.pos <= 2;
+		return !!row && row.pos <= 3;
 	}
 
 	const outcomes = [
