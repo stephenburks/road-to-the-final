@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-26T05:08:21.498Z",
+  "lastUpdated": "2026-06-26T09:25:45.676Z",
   "snapshotDate": "2026-06-26",
   "isHistorical": false,
   "sourceSummary": {
@@ -500,7 +500,7 @@
         }
       ],
       "winProbabilities": {
-        "egypt": 61,
+        "egypt": 60,
         "iran": 10,
         "belgium": 31,
         "newzealand": 0
@@ -568,7 +568,7 @@
       "winProbabilities": {
         "spain": 86,
         "uruguay": 10,
-        "capeverde": 4,
+        "capeverde": 3,
         "saudiarabia": 0
       }
     },
@@ -632,8 +632,8 @@
         }
       ],
       "winProbabilities": {
-        "france": 82,
-        "norway": 19,
+        "france": 81,
+        "norway": 20,
         "senegal": 0,
         "iraq": 0
       }
@@ -764,7 +764,7 @@
         }
       ],
       "winProbabilities": {
-        "colombia": 49,
+        "colombia": 48,
         "portugal": 52,
         "drcongo": 0,
         "uzbekistan": 0
@@ -832,7 +832,7 @@
       "winProbabilities": {
         "england": 88,
         "ghana": 5,
-        "croatia": 8,
+        "croatia": 7,
         "panama": 0
       }
     }
@@ -921,8 +921,8 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 62,
-        "qf": 30,
+        "r16": 65,
+        "qf": 28,
         "sf": 16,
         "final": 6,
         "winner": 1,
@@ -1141,7 +1141,7 @@
       "advanceProbabilities": {
         "r32": 100,
         "r16": 26,
-        "qf": 4,
+        "qf": 5,
         "sf": 2,
         "final": 1,
         "winner": 0,
@@ -1368,11 +1368,11 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 42,
-        "r16": 17,
+        "r32": 46,
+        "r16": 19,
         "qf": 7,
         "sf": 2,
-        "final": 0,
+        "final": 1,
         "winner": 0,
         "source": "market"
       },
@@ -1851,7 +1851,7 @@
         "r32": 100,
         "r16": 73,
         "qf": 19,
-        "sf": 4,
+        "sf": 5,
         "final": 2,
         "winner": 0,
         "source": "market"
@@ -2071,7 +2071,7 @@
       "advanceProbabilities": {
         "r32": 100,
         "r16": 23,
-        "qf": 10,
+        "qf": 8,
         "sf": 2,
         "final": 2,
         "winner": 0,
@@ -2722,7 +2722,7 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 72,
+        "r16": 71,
         "qf": 46,
         "sf": 27,
         "final": 14,
@@ -2936,7 +2936,7 @@
       "advanceProbabilities": {
         "r32": 100,
         "r16": 38,
-        "qf": 27,
+        "qf": 26,
         "sf": 12,
         "final": 6,
         "winner": 1,
@@ -3298,9 +3298,9 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 6,
-        "r16": 1,
-        "qf": 1,
+        "r32": 4,
+        "r16": 2,
+        "qf": 2,
         "sf": 1,
         "final": 0,
         "winner": 0,
@@ -3480,9 +3480,9 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 78,
-        "qf": 52,
-        "sf": 20,
+        "r16": 79,
+        "qf": 53,
+        "sf": 18,
         "final": 7,
         "winner": 3,
         "source": "market"
@@ -3715,8 +3715,8 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 99,
-        "r16": 25,
+        "r32": 100,
+        "r16": 23,
         "qf": 4,
         "sf": 2,
         "final": 2,
@@ -4039,7 +4039,11 @@
           "score": "0-1",
           "date": "2026-06-19",
           "venue": "Levi's Stadium, San Francisco",
-          "scorers": [],
+          "scorers": [
+            "Arda Güler 10'",
+            "Baris Alper Yilmaz 31'",
+            "Kaan Ayhan 90'+8'"
+          ],
           "cards": [
             {
               "player": "Eren Elmali",
@@ -4250,10 +4254,10 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 79,
+        "r16": 81,
         "qf": 38,
         "sf": 21,
-        "final": 13,
+        "final": 12,
         "winner": 4,
         "source": "market"
       },
@@ -4692,10 +4696,10 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 31,
+        "r16": 30,
         "qf": 11,
         "sf": 4,
-        "final": 2,
+        "final": 1,
         "winner": 0,
         "source": "market"
       },
@@ -4859,8 +4863,8 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 41,
-        "qf": 17,
+        "r16": 37,
+        "qf": 15,
         "sf": 5,
         "final": 1,
         "winner": 1,
@@ -5062,7 +5066,7 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 63,
+        "r16": 65,
         "qf": 50,
         "sf": 24,
         "final": 13,
@@ -5202,7 +5206,13 @@
             "Junya Ito 69'",
             "Ayase Ueda 83'"
           ],
-          "cards": []
+          "cards": [
+            {
+              "player": "Shogo Taniguchi",
+              "minute": "77'",
+              "type": "yellow"
+            }
+          ]
         },
         {
           "matchday": 3,
@@ -5228,7 +5238,7 @@
         "r32": 100,
         "r16": 31,
         "qf": 17,
-        "sf": 13,
+        "sf": 9,
         "final": 4,
         "winner": 1,
         "source": "market"
@@ -5757,7 +5767,7 @@
         "r32": 93,
         "r16": 57,
         "qf": 25,
-        "sf": 9,
+        "sf": 10,
         "final": 3,
         "winner": 1,
         "source": "market"
@@ -5919,11 +5929,11 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 99,
-        "r16": 41,
+        "r32": 100,
+        "r16": 47,
         "qf": 16,
         "sf": 4,
-        "final": 1,
+        "final": 2,
         "winner": 0,
         "source": "market"
       },
@@ -6123,10 +6133,10 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 57,
-        "r16": 20,
+        "r32": 55,
+        "r16": 18,
         "qf": 5,
-        "sf": 3,
+        "sf": 2,
         "final": 0,
         "winner": 0,
         "source": "market"
@@ -6292,9 +6302,9 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 5,
-        "r16": 2,
-        "qf": 0,
+        "r32": 6,
+        "r16": 1,
+        "qf": 1,
         "sf": 0,
         "final": 0,
         "winner": 0,
@@ -6457,7 +6467,7 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 83,
+        "r16": 84,
         "qf": 61,
         "sf": 45,
         "final": 27,
@@ -6620,7 +6630,7 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 70,
+        "r32": 68,
         "r16": 9,
         "qf": 5,
         "sf": 1,
@@ -6805,7 +6815,7 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 33,
+        "r32": 34,
         "r16": 2,
         "qf": 1,
         "sf": 1,
@@ -6991,11 +7001,11 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 34,
-        "r16": 18,
-        "qf": 7,
+        "r32": 33,
+        "r16": 17,
+        "qf": 8,
         "sf": 4,
-        "final": 1,
+        "final": 2,
         "winner": 0,
         "source": "market"
       },
@@ -7153,9 +7163,9 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 87,
+        "r16": 89,
         "qf": 65,
-        "sf": 49,
+        "sf": 48,
         "final": 32,
         "winner": 19,
         "source": "market"
@@ -7333,8 +7343,8 @@
       ],
       "advanceProbabilities": {
         "r32": 56,
-        "r16": 23,
-        "qf": 10,
+        "r16": 24,
+        "qf": 9,
         "sf": 3,
         "final": 1,
         "winner": 0,
@@ -7642,7 +7652,7 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 68,
+        "r16": 67,
         "qf": 34,
         "sf": 18,
         "final": 9,
@@ -7802,8 +7812,8 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 87,
-        "qf": 69,
+        "r16": 85,
+        "qf": 70,
         "sf": 48,
         "final": 27,
         "winner": 15,
@@ -7994,9 +8004,9 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 68,
-        "r16": 16,
-        "qf": 5,
+        "r32": 69,
+        "r16": 20,
+        "qf": 6,
         "sf": 1,
         "final": 0,
         "winner": 0,
@@ -8161,9 +8171,9 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 90,
+        "r32": 91,
         "r16": 24,
-        "qf": 12,
+        "qf": 9,
         "sf": 3,
         "final": 2,
         "winner": 0,
@@ -8494,8 +8504,8 @@
         "r32": 100,
         "r16": 78,
         "qf": 48,
-        "sf": 28,
-        "final": 16,
+        "sf": 29,
+        "final": 14,
         "winner": 8,
         "source": "market"
       },
@@ -8963,8 +8973,8 @@
       "advanceProbabilities": {
         "r32": 100,
         "r16": 63,
-        "qf": 31,
-        "sf": 11,
+        "qf": 32,
+        "sf": 12,
         "final": 5,
         "winner": 1,
         "source": "market"
@@ -9181,8 +9191,8 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 85,
-        "qf": 62,
+        "r16": 84,
+        "qf": 61,
         "sf": 37,
         "final": 21,
         "winner": 10,
@@ -9328,9 +9338,9 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 84,
+        "r32": 85,
         "r16": 33,
-        "qf": 13,
+        "qf": 14,
         "sf": 5,
         "final": 3,
         "winner": 0,
@@ -9509,10 +9519,10 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 30,
-        "qf": 11,
+        "r16": 27,
+        "qf": 10,
         "sf": 3,
-        "final": 2,
+        "final": 1,
         "winner": 0,
         "source": "market"
       },
@@ -10990,8 +11000,8 @@
         "polymarket": {
           "homeId": "norway",
           "awayId": "france",
-          "homeWinPct": 20,
-          "awayWinPct": 62,
+          "homeWinPct": 21,
+          "awayWinPct": 61,
           "drawPct": 20,
           "eventSlug": "fifwc-nor-fra-2026-06-26"
         }
@@ -11071,9 +11081,9 @@
         "polymarket": {
           "homeId": "uruguay",
           "awayId": "spain",
-          "homeWinPct": 12,
-          "awayWinPct": 66,
-          "drawPct": 23,
+          "homeWinPct": 14,
+          "awayWinPct": 61,
+          "drawPct": 26,
           "eventSlug": "fifwc-ury-esp-2026-06-26"
         }
       },
@@ -11098,7 +11108,7 @@
         "polymarket": {
           "homeId": "egypt",
           "awayId": "iran",
-          "homeWinPct": 40,
+          "homeWinPct": 39,
           "awayWinPct": 25,
           "drawPct": 38,
           "eventSlug": "fifwc-egy-irn-2026-06-26"
@@ -11126,7 +11136,7 @@
           "homeId": "newzealand",
           "awayId": "belgium",
           "homeWinPct": 6,
-          "awayWinPct": 84,
+          "awayWinPct": 83,
           "drawPct": 12,
           "eventSlug": "fifwc-nzl-bel-2026-06-26"
         }
@@ -11235,8 +11245,8 @@
         "polymarket": {
           "homeId": "drcongo",
           "awayId": "uzbekistan",
-          "homeWinPct": 56,
-          "awayWinPct": 21,
+          "homeWinPct": 55,
+          "awayWinPct": 22,
           "drawPct": 24,
           "eventSlug": "fifwc-cdr-uzb-2026-06-27"
         }
