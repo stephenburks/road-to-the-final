@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-26T00:08:35.064Z",
+  "lastUpdated": "2026-06-26T05:08:21.498Z",
   "snapshotDate": "2026-06-26",
   "isHistorical": false,
   "sourceSummary": {
@@ -247,27 +247,27 @@
         {
           "teamId": "usa",
           "team": "USA",
-          "played": 2,
+          "played": 3,
           "w": 2,
           "d": 0,
-          "l": 0,
-          "gf": 6,
-          "ga": 1,
+          "l": 1,
+          "gf": 8,
+          "ga": 4,
           "pts": 6,
-          "gd": 5,
+          "gd": 4,
           "pos": 1,
           "flag": "🇺🇸"
         },
         {
           "teamId": "australia",
           "team": "Australia",
-          "played": 2,
+          "played": 3,
           "w": 1,
-          "d": 0,
+          "d": 1,
           "l": 1,
           "gf": 2,
           "ga": 2,
-          "pts": 3,
+          "pts": 4,
           "gd": 0,
           "pos": 2,
           "flag": "🇦🇺"
@@ -275,13 +275,13 @@
         {
           "teamId": "paraguay",
           "team": "Paraguay",
-          "played": 2,
+          "played": 3,
           "w": 1,
-          "d": 0,
+          "d": 1,
           "l": 1,
           "gf": 2,
           "ga": 4,
-          "pts": 3,
+          "pts": 4,
           "gd": -2,
           "pos": 3,
           "flag": "🇵🇾"
@@ -289,14 +289,14 @@
         {
           "teamId": "turkey",
           "team": "Türkiye",
-          "played": 2,
-          "w": 0,
+          "played": 3,
+          "w": 1,
           "d": 0,
           "l": 2,
-          "gf": 0,
-          "ga": 3,
-          "pts": 0,
-          "gd": -3,
+          "gf": 3,
+          "ga": 5,
+          "pts": 3,
+          "gd": -2,
           "pos": 4,
           "flag": "🇹🇷"
         }
@@ -379,27 +379,27 @@
         {
           "teamId": "netherlands",
           "team": "Netherlands",
-          "played": 2,
-          "w": 1,
+          "played": 3,
+          "w": 2,
           "d": 1,
           "l": 0,
-          "gf": 7,
-          "ga": 3,
-          "pts": 4,
-          "gd": 4,
+          "gf": 10,
+          "ga": 4,
+          "pts": 7,
+          "gd": 6,
           "pos": 1,
           "flag": "🇳🇱"
         },
         {
           "teamId": "japan",
           "team": "Japan",
-          "played": 2,
+          "played": 3,
           "w": 1,
-          "d": 1,
+          "d": 2,
           "l": 0,
-          "gf": 6,
-          "ga": 2,
-          "pts": 4,
+          "gf": 7,
+          "ga": 3,
+          "pts": 5,
           "gd": 4,
           "pos": 2,
           "flag": "🇯🇵"
@@ -407,13 +407,13 @@
         {
           "teamId": "sweden",
           "team": "Sweden",
-          "played": 2,
+          "played": 3,
           "w": 1,
-          "d": 0,
+          "d": 1,
           "l": 1,
-          "gf": 6,
-          "ga": 6,
-          "pts": 3,
+          "gf": 7,
+          "ga": 7,
+          "pts": 4,
           "gd": 0,
           "pos": 3,
           "flag": "🇸🇪"
@@ -421,21 +421,21 @@
         {
           "teamId": "tunisia",
           "team": "Tunisia",
-          "played": 2,
+          "played": 3,
           "w": 0,
           "d": 0,
-          "l": 2,
-          "gf": 1,
-          "ga": 9,
+          "l": 3,
+          "gf": 2,
+          "ga": 12,
           "pts": 0,
-          "gd": -8,
+          "gd": -10,
           "pos": 4,
           "flag": "🇹🇳"
         }
       ],
       "winProbabilities": {
-        "netherlands": 98,
-        "japan": 2,
+        "netherlands": 100,
+        "japan": 0,
         "sweden": 0,
         "tunisia": 0
       }
@@ -500,7 +500,7 @@
         }
       ],
       "winProbabilities": {
-        "egypt": 60,
+        "egypt": 61,
         "iran": 10,
         "belgium": 31,
         "newzealand": 0
@@ -566,7 +566,7 @@
         }
       ],
       "winProbabilities": {
-        "spain": 87,
+        "spain": 86,
         "uruguay": 10,
         "capeverde": 4,
         "saudiarabia": 0
@@ -632,8 +632,8 @@
         }
       ],
       "winProbabilities": {
-        "france": 81,
-        "norway": 20,
+        "france": 82,
+        "norway": 19,
         "senegal": 0,
         "iraq": 0
       }
@@ -764,7 +764,7 @@
         }
       ],
       "winProbabilities": {
-        "colombia": 48,
+        "colombia": 49,
         "portugal": 52,
         "drcongo": 0,
         "uzbekistan": 0
@@ -921,8 +921,8 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 64,
-        "qf": 29,
+        "r16": 62,
+        "qf": 30,
         "sf": 16,
         "final": 6,
         "winner": 1,
@@ -1142,7 +1142,7 @@
         "r32": 100,
         "r16": 26,
         "qf": 4,
-        "sf": 1,
+        "sf": 2,
         "final": 1,
         "winner": 0,
         "source": "market"
@@ -1368,9 +1368,9 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 67,
-        "r16": 27,
-        "qf": 10,
+        "r32": 42,
+        "r16": 17,
+        "qf": 7,
         "sf": 2,
         "final": 0,
         "winner": 0,
@@ -1850,8 +1850,8 @@
       "advanceProbabilities": {
         "r32": 100,
         "r16": 73,
-        "qf": 20,
-        "sf": 5,
+        "qf": 19,
+        "sf": 4,
         "final": 2,
         "winner": 0,
         "source": "market"
@@ -2070,9 +2070,9 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 22,
-        "qf": 8,
-        "sf": 3,
+        "r16": 23,
+        "qf": 10,
+        "sf": 2,
         "final": 2,
         "winner": 0,
         "source": "market"
@@ -2509,9 +2509,9 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 67,
-        "qf": 26,
-        "sf": 10,
+        "r16": 65,
+        "qf": 25,
+        "sf": 9,
         "final": 3,
         "winner": 1,
         "source": "market"
@@ -2722,9 +2722,9 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 70,
-        "qf": 45,
-        "sf": 28,
+        "r16": 72,
+        "qf": 46,
+        "sf": 27,
         "final": 14,
         "winner": 6,
         "source": "market"
@@ -2935,11 +2935,11 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 43,
-        "qf": 32,
+        "r16": 38,
+        "qf": 27,
         "sf": 12,
         "final": 6,
-        "winner": 2,
+        "winner": 1,
         "source": "market"
       },
       "path": {
@@ -3298,9 +3298,9 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 5,
-        "r16": 4,
-        "qf": 2,
+        "r32": 6,
+        "r16": 1,
+        "qf": 1,
         "sf": 1,
         "final": 0,
         "winner": 0,
@@ -3403,7 +3403,7 @@
       "confederation": "CONCACAF",
       "fifaRank": 14,
       "eliminated": false,
-      "currentStage": "group_stage",
+      "currentStage": "r32",
       "groupResults": [
         {
           "matchday": 1,
@@ -3461,20 +3461,29 @@
           "matchday": 3,
           "opponent": "Türkiye",
           "opponentFlag": "🇹🇷",
-          "result": null,
-          "score": null,
+          "result": "L",
+          "score": "2-3",
           "date": "2026-06-25",
           "venue": "SoFi Stadium, Los Angeles",
-          "scorers": [],
-          "cards": []
+          "scorers": [
+            "Auston Trusty 3'",
+            "Sebastian Berhalter 49'"
+          ],
+          "cards": [
+            {
+              "player": "Sebastian Berhalter",
+              "minute": "19'",
+              "type": "yellow"
+            }
+          ]
         }
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 76,
-        "qf": 51,
+        "r16": 78,
+        "qf": 52,
         "sf": 20,
-        "final": 6,
+        "final": 7,
         "winner": 3,
         "source": "market"
       },
@@ -3484,7 +3493,7 @@
           "city": "Los Angeles · Seattle",
           "venue": "Various venues",
           "date": "Jun 12–25",
-          "detail": "6pts after MD2"
+          "detail": "6pts after MD3"
         },
         "r32": {
           "status": "upcoming",
@@ -3688,20 +3697,29 @@
           "matchday": 3,
           "opponent": "Australia",
           "opponentFlag": "🇦🇺",
-          "result": null,
-          "score": null,
+          "result": "D",
+          "score": "0-0",
           "date": "2026-06-25",
           "venue": "Levi's Stadium, San Francisco",
-          "scorers": [],
-          "cards": []
+          "scorers": [
+            "Maurício 73'",
+            "Matías Galarza 2'"
+          ],
+          "cards": [
+            {
+              "player": "Diego Gómez",
+              "minute": "77'",
+              "type": "yellow"
+            }
+          ]
         }
       ],
       "advanceProbabilities": {
-        "r32": 77,
-        "r16": 21,
+        "r32": 99,
+        "r16": 25,
         "qf": 4,
         "sf": 2,
-        "final": 1,
+        "final": 2,
         "winner": 0,
         "source": "market"
       },
@@ -3711,7 +3729,7 @@
           "city": "Los Angeles · San Francisco",
           "venue": "Various venues",
           "date": "Jun 12–25",
-          "detail": "3pts after MD2"
+          "detail": "4pts after MD3"
         },
         "r32": {
           "status": "upcoming",
@@ -3802,7 +3820,7 @@
       "confederation": "AFC",
       "fifaRank": 26,
       "eliminated": false,
-      "currentStage": "group_stage",
+      "currentStage": "r32",
       "groupResults": [
         {
           "matchday": 1,
@@ -3867,17 +3885,26 @@
           "matchday": 3,
           "opponent": "Paraguay",
           "opponentFlag": "🇵🇾",
-          "result": null,
-          "score": null,
+          "result": "D",
+          "score": "0-0",
           "date": "2026-06-25",
           "venue": "Levi's Stadium, San Francisco",
-          "scorers": [],
-          "cards": []
+          "scorers": [
+            "Nestory Irankunda 27'",
+            "Connor Metcalfe 75'"
+          ],
+          "cards": [
+            {
+              "player": "Jackson Irvine",
+              "minute": "46'",
+              "type": "yellow"
+            }
+          ]
         }
       ],
       "advanceProbabilities": {
-        "r32": 81,
-        "r16": 28,
+        "r32": 100,
+        "r16": 38,
         "qf": 8,
         "sf": 2,
         "final": 1,
@@ -3890,7 +3917,7 @@
           "city": "Vancouver · Seattle · San Francisco",
           "venue": "Various venues",
           "date": "Jun 13–25",
-          "detail": "3pts after MD2"
+          "detail": "4pts after MD3"
         },
         "r32": {
           "status": "upcoming",
@@ -3991,7 +4018,11 @@
           "score": "0-2",
           "date": "2026-06-13",
           "venue": "BC Place, Vancouver",
-          "scorers": [],
+          "scorers": [
+            "Arda Güler 10'",
+            "Baris Alper Yilmaz 31'",
+            "Kaan Ayhan 90'+8'"
+          ],
           "cards": [
             {
               "player": "Yunus Akgün",
@@ -4021,12 +4052,27 @@
           "matchday": 3,
           "opponent": "USA",
           "opponentFlag": "🇺🇸",
-          "result": null,
-          "score": null,
+          "result": "W",
+          "score": "3-2",
           "date": "2026-06-25",
           "venue": "SoFi Stadium, Los Angeles",
-          "scorers": [],
-          "cards": []
+          "scorers": [
+            "Arda Güler 10'",
+            "Baris Alper Yilmaz 31'",
+            "Kaan Ayhan 90'+8'"
+          ],
+          "cards": [
+            {
+              "player": "Yunus Akgün",
+              "minute": "86'",
+              "type": "yellow"
+            },
+            {
+              "player": "Eren Elmali",
+              "minute": "71'",
+              "type": "yellow"
+            }
+          ]
         }
       ],
       "advanceProbabilities": {
@@ -4044,7 +4090,7 @@
           "city": "Vancouver · San Francisco · Los Angeles",
           "venue": "Various venues",
           "date": "Jun 13–25",
-          "detail": "0pts after MD2"
+          "detail": "3pts after MD3"
         },
         "r32": {
           "status": "upcoming",
@@ -4207,7 +4253,7 @@
         "r16": 79,
         "qf": 38,
         "sf": 21,
-        "final": 14,
+        "final": 13,
         "winner": 4,
         "source": "market"
       },
@@ -4646,8 +4692,8 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 32,
-        "qf": 12,
+        "r16": 31,
+        "qf": 11,
         "sf": 4,
         "final": 2,
         "winner": 0,
@@ -4814,7 +4860,7 @@
       "advanceProbabilities": {
         "r32": 100,
         "r16": 41,
-        "qf": 16,
+        "qf": 17,
         "sf": 5,
         "final": 1,
         "winner": 1,
@@ -4917,7 +4963,7 @@
       "confederation": "UEFA",
       "fifaRank": 7,
       "eliminated": false,
-      "currentStage": "group_stage",
+      "currentStage": "r32",
       "groupResults": [
         {
           "matchday": 1,
@@ -4986,19 +5032,39 @@
           "matchday": 3,
           "opponent": "Tunisia",
           "opponentFlag": "🇹🇳",
-          "result": null,
-          "score": "2-0",
+          "result": "W",
+          "score": "3-1",
           "date": "2026-06-25",
           "venue": "Arrowhead Stadium, Kansas City",
-          "scorers": [],
-          "cards": []
+          "scorers": [
+            "Ellyes Skhiri OG 3'",
+            "Brian Brobbey 7'",
+            "Jan Paul van Hecke 62'"
+          ],
+          "cards": [
+            {
+              "player": "Crysencio Summerville",
+              "minute": "61'",
+              "type": "yellow"
+            },
+            {
+              "player": "Memphis Depay",
+              "minute": "83'",
+              "type": "yellow"
+            },
+            {
+              "player": "Micky van de Ven",
+              "minute": "90'+1'",
+              "type": "yellow"
+            }
+          ]
         }
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 61,
+        "r16": 63,
         "qf": 50,
-        "sf": 23,
+        "sf": 24,
         "final": 13,
         "winner": 6,
         "source": "market"
@@ -5009,7 +5075,7 @@
           "city": "Kansas City",
           "venue": "Various venues",
           "date": "Jun 14–25",
-          "detail": "4pts after MD2"
+          "detail": "7pts after MD3"
         },
         "r32": {
           "status": "upcoming",
@@ -5100,7 +5166,7 @@
       "confederation": "AFC",
       "fifaRank": 13,
       "eliminated": false,
-      "currentStage": "group_stage",
+      "currentStage": "r32",
       "groupResults": [
         {
           "matchday": 1,
@@ -5114,7 +5180,13 @@
             "Keito Nakamura 57''",
             "Daichi Kamada 89''"
           ],
-          "cards": []
+          "cards": [
+            {
+              "player": "Shogo Taniguchi",
+              "minute": "77'",
+              "type": "yellow"
+            }
+          ]
         },
         {
           "matchday": 2,
@@ -5136,21 +5208,29 @@
           "matchday": 3,
           "opponent": "Sweden",
           "opponentFlag": "🇸🇪",
-          "result": null,
-          "score": "0-0",
+          "result": "D",
+          "score": "1-1",
           "date": "2026-06-25",
           "venue": "AT&T Stadium, Dallas",
-          "scorers": [],
-          "cards": []
+          "scorers": [
+            "Daizen Maeda 56'"
+          ],
+          "cards": [
+            {
+              "player": "Shogo Taniguchi",
+              "minute": "77'",
+              "type": "yellow"
+            }
+          ]
         }
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 37,
-        "qf": 24,
+        "r16": 31,
+        "qf": 17,
         "sf": 13,
         "final": 4,
-        "winner": 2,
+        "winner": 1,
         "source": "market"
       },
       "path": {
@@ -5159,7 +5239,7 @@
           "city": "Kansas City · Dallas",
           "venue": "Various venues",
           "date": "Jun 14–25",
-          "detail": "4pts after MD2"
+          "detail": "5pts after MD3"
         },
         "r32": {
           "status": "upcoming",
@@ -5318,17 +5398,30 @@
           "matchday": 3,
           "opponent": "Japan",
           "opponentFlag": "🇯🇵",
-          "result": null,
-          "score": "0-0",
+          "result": "D",
+          "score": "1-1",
           "date": "2026-06-25",
           "venue": "AT&T Stadium, Dallas",
-          "scorers": [],
-          "cards": []
+          "scorers": [
+            "Anthony Elanga 62'"
+          ],
+          "cards": [
+            {
+              "player": "Isak Hien",
+              "minute": "32'",
+              "type": "yellow"
+            },
+            {
+              "player": "Viktor Gyökeres",
+              "minute": "85'",
+              "type": "yellow"
+            }
+          ]
         }
       ],
       "advanceProbabilities": {
-        "r32": 92,
-        "r16": 20,
+        "r32": 100,
+        "r16": 19,
         "qf": 9,
         "sf": 3,
         "final": 2,
@@ -5341,7 +5434,7 @@
           "city": "Kansas City · Dallas",
           "venue": "Various venues",
           "date": "Jun 14–25",
-          "detail": "3pts after MD2"
+          "detail": "4pts after MD3"
         },
         "r32": {
           "status": "upcoming",
@@ -5476,12 +5569,20 @@
           "matchday": 3,
           "opponent": "Netherlands",
           "opponentFlag": "🇳🇱",
-          "result": null,
-          "score": "0-2",
+          "result": "L",
+          "score": "1-3",
           "date": "2026-06-25",
           "venue": "Arrowhead Stadium, Kansas City",
-          "scorers": [],
-          "cards": []
+          "scorers": [
+            "Hazem Mastouri 54'"
+          ],
+          "cards": [
+            {
+              "player": "Rani Khedira",
+              "minute": "54'",
+              "type": "yellow"
+            }
+          ]
         }
       ],
       "advanceProbabilities": {
@@ -5499,7 +5600,7 @@
           "city": "Kansas City",
           "venue": "Various venues",
           "date": "Jun 14–25",
-          "detail": "0pts after MD2"
+          "detail": "0pts after MD3"
         },
         "r32": {
           "status": "upcoming",
@@ -5653,10 +5754,10 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 94,
-        "r16": 56,
+        "r32": 93,
+        "r16": 57,
         "qf": 25,
-        "sf": 11,
+        "sf": 9,
         "final": 3,
         "winner": 1,
         "source": "market"
@@ -6022,9 +6123,9 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 56,
-        "r16": 21,
-        "qf": 4,
+        "r32": 57,
+        "r16": 20,
+        "qf": 5,
         "sf": 3,
         "final": 0,
         "winner": 0,
@@ -6193,7 +6294,7 @@
       "advanceProbabilities": {
         "r32": 5,
         "r16": 2,
-        "qf": 1,
+        "qf": 0,
         "sf": 0,
         "final": 0,
         "winner": 0,
@@ -6356,8 +6457,8 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 82,
-        "qf": 60,
+        "r16": 83,
+        "qf": 61,
         "sf": 45,
         "final": 27,
         "winner": 14,
@@ -6519,7 +6620,7 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 69,
+        "r32": 70,
         "r16": 9,
         "qf": 5,
         "sf": 1,
@@ -6705,7 +6806,7 @@
       ],
       "advanceProbabilities": {
         "r32": 33,
-        "r16": 3,
+        "r16": 2,
         "qf": 1,
         "sf": 1,
         "final": 1,
@@ -6890,10 +6991,10 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 36,
-        "r16": 17,
-        "qf": 6,
-        "sf": 2,
+        "r32": 34,
+        "r16": 18,
+        "qf": 7,
+        "sf": 4,
         "final": 1,
         "winner": 0,
         "source": "market"
@@ -7052,10 +7153,10 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 88,
+        "r16": 87,
         "qf": 65,
-        "sf": 47,
-        "final": 33,
+        "sf": 49,
+        "final": 32,
         "winner": 19,
         "source": "market"
       },
@@ -7231,9 +7332,9 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 59,
-        "r16": 24,
-        "qf": 11,
+        "r32": 56,
+        "r16": 23,
+        "qf": 10,
         "sf": 3,
         "final": 1,
         "winner": 0,
@@ -7542,7 +7643,7 @@
       "advanceProbabilities": {
         "r32": 100,
         "r16": 68,
-        "qf": 35,
+        "qf": 34,
         "sf": 18,
         "final": 9,
         "winner": 3,
@@ -7701,11 +7802,11 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 86,
+        "r16": 87,
         "qf": 69,
         "sf": 48,
         "final": 27,
-        "winner": 14,
+        "winner": 15,
         "source": "market"
       },
       "path": {
@@ -7893,10 +7994,10 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 66,
-        "r16": 21,
+        "r32": 68,
+        "r16": 16,
         "qf": 5,
-        "sf": 2,
+        "sf": 1,
         "final": 0,
         "winner": 0,
         "source": "market"
@@ -8060,8 +8161,8 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 96,
-        "r16": 30,
+        "r32": 90,
+        "r16": 24,
         "qf": 12,
         "sf": 3,
         "final": 2,
@@ -8391,10 +8492,10 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 75,
+        "r16": 78,
         "qf": 48,
-        "sf": 31,
-        "final": 17,
+        "sf": 28,
+        "final": 16,
         "winner": 8,
         "source": "market"
       },
@@ -8537,8 +8638,8 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 57,
-        "r16": 12,
+        "r32": 56,
+        "r16": 11,
         "qf": 3,
         "sf": 2,
         "final": 2,
@@ -8695,8 +8796,8 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 3,
-        "r16": 2,
+        "r32": 1,
+        "r16": 1,
         "qf": 0,
         "sf": 0,
         "final": 0,
@@ -8862,10 +8963,10 @@
       "advanceProbabilities": {
         "r32": 100,
         "r16": 63,
-        "qf": 33,
+        "qf": 31,
         "sf": 11,
         "final": 5,
-        "winner": 2,
+        "winner": 1,
         "source": "market"
       },
       "path": {
@@ -9083,8 +9184,8 @@
         "r16": 85,
         "qf": 62,
         "sf": 37,
-        "final": 22,
-        "winner": 11,
+        "final": 21,
+        "winner": 10,
         "source": "market"
       },
       "path": {
@@ -9227,10 +9328,10 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 91,
-        "r16": 35,
-        "qf": 14,
-        "sf": 6,
+        "r32": 84,
+        "r16": 33,
+        "qf": 13,
+        "sf": 5,
         "final": 3,
         "winner": 0,
         "source": "market"
@@ -9408,8 +9509,8 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 36,
-        "qf": 13,
+        "r16": 30,
+        "qf": 11,
         "sf": 3,
         "final": 2,
         "winner": 0,
@@ -10797,26 +10898,17 @@
         "awayTeam": "Sweden",
         "awayFlag": "🇸🇪",
         "awayId": "sweden",
-        "homeScore": 0,
-        "awayScore": 0,
-        "status": "IN_PROGRESS",
+        "homeScore": 1,
+        "awayScore": 1,
+        "status": "FINISHED",
         "date": "2026-06-25",
-        "clock": "47'",
         "broadcasts": [
           "FOX",
           "Universo",
           "FOX One"
         ],
         "time": "2026-06-25T23:00Z",
-        "venue": "AT&T Stadium, Arlington, Texas",
-        "polymarket": {
-          "homeId": "japan",
-          "awayId": "sweden",
-          "homeWinPct": 38,
-          "awayWinPct": 21,
-          "drawPct": 41,
-          "eventSlug": "fifwc-jpn-swe-2026-06-25"
-        }
+        "venue": "AT&T Stadium, Arlington, Texas"
       },
       {
         "homeTeam": "Tunisia",
@@ -10825,26 +10917,17 @@
         "awayTeam": "Netherlands",
         "awayFlag": "🇳🇱",
         "awayId": "netherlands",
-        "homeScore": 0,
-        "awayScore": 2,
-        "status": "IN_PROGRESS",
+        "homeScore": 1,
+        "awayScore": 3,
+        "status": "FINISHED",
         "date": "2026-06-25",
-        "clock": "49'",
         "broadcasts": [
           "FS1",
           "Tele",
           "FOX One"
         ],
         "time": "2026-06-25T23:00Z",
-        "venue": "GEHA Field at Arrowhead Stadium, Kansas City, Missouri",
-        "polymarket": {
-          "homeId": "tunisia",
-          "awayId": "netherlands",
-          "homeWinPct": 0,
-          "awayWinPct": 99,
-          "drawPct": 1,
-          "eventSlug": "fifwc-tun-nld-2026-06-25"
-        }
+        "venue": "GEHA Field at Arrowhead Stadium, Kansas City, Missouri"
       },
       {
         "homeTeam": "Paraguay",
@@ -10855,7 +10938,7 @@
         "awayId": "australia",
         "homeScore": 0,
         "awayScore": 0,
-        "status": "SCHEDULED",
+        "status": "FINISHED",
         "date": "2026-06-25",
         "broadcasts": [
           "FS1",
@@ -10863,15 +10946,7 @@
           "FOX One"
         ],
         "time": "2026-06-26T02:00Z",
-        "venue": "Levi's Stadium, Santa Clara, California",
-        "polymarket": {
-          "homeId": "paraguay",
-          "awayId": "australia",
-          "homeWinPct": 37,
-          "awayWinPct": 22,
-          "drawPct": 43,
-          "eventSlug": "fifwc-par-aus-2026-06-25"
-        }
+        "venue": "Levi's Stadium, Santa Clara, California"
       },
       {
         "homeTeam": "Türkiye",
@@ -10880,9 +10955,9 @@
         "awayTeam": "USA",
         "awayFlag": "🇺🇸",
         "awayId": "usa",
-        "homeScore": 0,
-        "awayScore": 0,
-        "status": "SCHEDULED",
+        "homeScore": 3,
+        "awayScore": 2,
+        "status": "FINISHED",
         "date": "2026-06-25",
         "broadcasts": [
           "FOX",
@@ -10890,15 +10965,7 @@
           "FOX One"
         ],
         "time": "2026-06-26T02:00Z",
-        "venue": "SoFi Stadium, Inglewood, California",
-        "polymarket": {
-          "homeId": "turkey",
-          "awayId": "usa",
-          "homeWinPct": 25,
-          "awayWinPct": 55,
-          "drawPct": 22,
-          "eventSlug": "fifwc-tur-usa-2026-06-25"
-        }
+        "venue": "SoFi Stadium, Inglewood, California"
       }
     ],
     "2026-06-26": [
@@ -10923,9 +10990,9 @@
         "polymarket": {
           "homeId": "norway",
           "awayId": "france",
-          "homeWinPct": 19,
+          "homeWinPct": 20,
           "awayWinPct": 62,
-          "drawPct": 21,
+          "drawPct": 20,
           "eventSlug": "fifwc-nor-fra-2026-06-26"
         }
       },
@@ -10977,7 +11044,7 @@
         "polymarket": {
           "homeId": "capeverde",
           "awayId": "saudiarabia",
-          "homeWinPct": 36,
+          "homeWinPct": 37,
           "awayWinPct": 36,
           "drawPct": 28,
           "eventSlug": "fifwc-cvi-ksa-2026-06-26"
@@ -11005,7 +11072,7 @@
           "homeId": "uruguay",
           "awayId": "spain",
           "homeWinPct": 12,
-          "awayWinPct": 67,
+          "awayWinPct": 66,
           "drawPct": 23,
           "eventSlug": "fifwc-ury-esp-2026-06-26"
         }
@@ -11033,7 +11100,7 @@
           "awayId": "iran",
           "homeWinPct": 40,
           "awayWinPct": 25,
-          "drawPct": 37,
+          "drawPct": 38,
           "eventSlug": "fifwc-egy-irn-2026-06-26"
         }
       },
@@ -11115,8 +11182,8 @@
           "homeId": "panama",
           "awayId": "england",
           "homeWinPct": 5,
-          "awayWinPct": 84,
-          "drawPct": 12,
+          "awayWinPct": 85,
+          "drawPct": 11,
           "eventSlug": "fifwc-pan-eng-2026-06-27"
         }
       },
@@ -11195,9 +11262,9 @@
         "polymarket": {
           "homeId": "algeria",
           "awayId": "austria",
-          "homeWinPct": 25,
+          "homeWinPct": 24,
           "awayWinPct": 34,
-          "drawPct": 43,
+          "drawPct": 44,
           "eventSlug": "fifwc-alg-aut-2026-06-27"
         }
       },
@@ -11252,10 +11319,73 @@
           "homeId": "southafrica",
           "awayId": "canada",
           "homeWinPct": 17,
-          "awayWinPct": 57,
+          "awayWinPct": 56,
           "drawPct": 27,
           "eventSlug": "fifwc-rsa-can-2026-06-28"
         }
+      }
+    ],
+    "2026-06-29": [
+      {
+        "homeTeam": "Brazil",
+        "homeFlag": "🇧🇷",
+        "homeId": "brazil",
+        "awayTeam": "Japan",
+        "awayFlag": "🇯🇵",
+        "awayId": "japan",
+        "homeScore": 0,
+        "awayScore": 0,
+        "status": "SCHEDULED",
+        "date": "2026-06-29",
+        "broadcasts": [
+          "FOX",
+          "Tele",
+          "FOX One"
+        ],
+        "time": "2026-06-29T17:00Z",
+        "venue": "NRG Stadium, Houston, Texas"
+      }
+    ],
+    "2026-06-30": [
+      {
+        "homeTeam": "Netherlands",
+        "homeFlag": "🇳🇱",
+        "homeId": "netherlands",
+        "awayTeam": "Morocco",
+        "awayFlag": "🇲🇦",
+        "awayId": "morocco",
+        "homeScore": 0,
+        "awayScore": 0,
+        "status": "SCHEDULED",
+        "date": "2026-06-30",
+        "broadcasts": [
+          "FOX",
+          "Tele",
+          "FOX One"
+        ],
+        "time": "2026-06-30T01:00Z",
+        "venue": "Estadio BBVA, Guadalupe"
+      }
+    ],
+    "2026-07-02": [
+      {
+        "homeTeam": "USA",
+        "homeFlag": "🇺🇸",
+        "homeId": "usa",
+        "awayTeam": "Bosnia & Herz.",
+        "awayFlag": "🇧🇦",
+        "awayId": "bosnia",
+        "homeScore": 0,
+        "awayScore": 0,
+        "status": "SCHEDULED",
+        "date": "2026-07-02",
+        "broadcasts": [
+          "FOX",
+          "Tele",
+          "FOX One"
+        ],
+        "time": "2026-07-02T00:00Z",
+        "venue": "Levi's Stadium, Santa Clara, California"
       }
     ]
   }
