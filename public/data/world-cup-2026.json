@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-27T19:20:16.877Z",
+  "lastUpdated": "2026-06-27T21:03:28.389Z",
   "snapshotDate": "2026-06-27",
   "isHistorical": false,
   "sourceSummary": {
@@ -831,7 +831,7 @@
       ],
       "winProbabilities": {
         "england": 88,
-        "ghana": 6,
+        "ghana": 5,
         "croatia": 7,
         "panama": 0
       }
@@ -922,7 +922,7 @@
       "advanceProbabilities": {
         "r32": 100,
         "r16": 62,
-        "qf": 28,
+        "qf": 30,
         "sf": 14,
         "final": 6,
         "winner": 1,
@@ -1141,8 +1141,8 @@
       "advanceProbabilities": {
         "r32": 100,
         "r16": 28,
-        "qf": 4,
-        "sf": 2,
+        "qf": 5,
+        "sf": 1,
         "final": 1,
         "winner": 0,
         "source": "market"
@@ -2510,7 +2510,7 @@
       "advanceProbabilities": {
         "r32": 100,
         "r16": 70,
-        "qf": 28,
+        "qf": 27,
         "sf": 8,
         "final": 3,
         "winner": 1,
@@ -2722,9 +2722,9 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 71,
+        "r16": 69,
         "qf": 47,
-        "sf": 29,
+        "sf": 28,
         "final": 14,
         "winner": 6,
         "source": "market"
@@ -2936,7 +2936,7 @@
       "advanceProbabilities": {
         "r32": 100,
         "r16": 37,
-        "qf": 29,
+        "qf": 30,
         "sf": 12,
         "final": 6,
         "winner": 1,
@@ -3226,7 +3226,7 @@
       "group": "C",
       "confederation": "UEFA",
       "fifaRank": 39,
-      "eliminated": true,
+      "eliminated": false,
       "currentStage": "group_stage",
       "groupResults": [
         {
@@ -3298,7 +3298,7 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 0,
+        "r32": 1,
         "r16": 0,
         "qf": 0,
         "sf": 0,
@@ -3482,7 +3482,7 @@
         "r32": 100,
         "r16": 83,
         "qf": 46,
-        "sf": 17,
+        "sf": 18,
         "final": 6,
         "winner": 2,
         "source": "market"
@@ -3716,7 +3716,7 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 17,
+        "r16": 19,
         "qf": 3,
         "sf": 1,
         "final": 1,
@@ -3904,7 +3904,7 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 44,
+        "r16": 45,
         "qf": 7,
         "sf": 2,
         "final": 1,
@@ -4254,7 +4254,7 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 82,
+        "r16": 83,
         "qf": 32,
         "sf": 19,
         "final": 10,
@@ -4696,9 +4696,9 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 36,
+        "r16": 34,
         "qf": 10,
-        "sf": 3,
+        "sf": 4,
         "final": 2,
         "winner": 0,
         "source": "market"
@@ -4866,7 +4866,7 @@
         "r16": 40,
         "qf": 15,
         "sf": 7,
-        "final": 2,
+        "final": 3,
         "winner": 1,
         "source": "market"
       },
@@ -5066,10 +5066,10 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 64,
+        "r16": 63,
         "qf": 50,
-        "sf": 23,
-        "final": 13,
+        "sf": 22,
+        "final": 14,
         "winner": 5,
         "source": "market"
       },
@@ -5431,7 +5431,7 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 11,
+        "r16": 12,
         "qf": 6,
         "sf": 3,
         "final": 2,
@@ -5792,7 +5792,7 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 65,
+        "r16": 64,
         "qf": 34,
         "sf": 10,
         "final": 4,
@@ -6019,7 +6019,7 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 55,
+        "r16": 58,
         "qf": 8,
         "sf": 3,
         "final": 2,
@@ -6557,10 +6557,10 @@
       "advanceProbabilities": {
         "r32": 100,
         "r16": 83,
-        "qf": 62,
-        "sf": 46,
-        "final": 26,
-        "winner": 12,
+        "qf": 61,
+        "sf": 48,
+        "final": 25,
+        "winner": 11,
         "source": "market"
       },
       "path": {
@@ -6730,7 +6730,7 @@
       "advanceProbabilities": {
         "r32": 100,
         "r16": 8,
-        "qf": 3,
+        "qf": 2,
         "sf": 2,
         "final": 1,
         "winner": 0,
@@ -7328,9 +7328,9 @@
       "advanceProbabilities": {
         "r32": 100,
         "r16": 89,
-        "qf": 67,
+        "qf": 68,
         "sf": 52,
-        "final": 37,
+        "final": 35,
         "winner": 23,
         "source": "market"
       },
@@ -7542,7 +7542,7 @@
       "advanceProbabilities": {
         "r32": 100,
         "r16": 28,
-        "qf": 18,
+        "qf": 16,
         "sf": 4,
         "final": 2,
         "winner": 0,
@@ -7888,7 +7888,7 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 65,
+        "r16": 66,
         "qf": 32,
         "sf": 16,
         "final": 8,
@@ -8051,7 +8051,7 @@
         "r16": 94,
         "qf": 79,
         "sf": 51,
-        "final": 34,
+        "final": 35,
         "winner": 19,
         "source": "market"
       },
@@ -8242,7 +8242,7 @@
       "advanceProbabilities": {
         "r32": 72,
         "r16": 20,
-        "qf": 6,
+        "qf": 5,
         "sf": 2,
         "final": 1,
         "winner": 0,
@@ -8407,8 +8407,8 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 86,
-        "r16": 17,
+        "r32": 85,
+        "r16": 16,
         "qf": 7,
         "sf": 2,
         "final": 2,
@@ -8738,10 +8738,10 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 75,
+        "r16": 76,
         "qf": 47,
         "sf": 29,
-        "final": 17,
+        "final": 16,
         "winner": 8,
         "source": "market"
       },
@@ -8884,9 +8884,9 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 60,
-        "r16": 9,
-        "qf": 3,
+        "r32": 59,
+        "r16": 8,
+        "qf": 2,
         "sf": 1,
         "final": 1,
         "winner": 0,
@@ -9208,9 +9208,9 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 63,
+        "r16": 61,
         "qf": 28,
-        "sf": 14,
+        "sf": 10,
         "final": 5,
         "winner": 1,
         "source": "market"
@@ -9418,7 +9418,7 @@
           "opponent": "Panama",
           "opponentFlag": "🇵🇦",
           "result": null,
-          "score": null,
+          "score": "0-0",
           "date": "2026-06-27",
           "venue": "MetLife Stadium, New Jersey",
           "scorers": [],
@@ -9427,9 +9427,9 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 80,
-        "qf": 58,
-        "sf": 39,
+        "r16": 79,
+        "qf": 59,
+        "sf": 37,
         "final": 22,
         "winner": 10,
         "source": "market"
@@ -9566,7 +9566,7 @@
           "opponent": "Ghana",
           "opponentFlag": "🇬🇭",
           "result": null,
-          "score": null,
+          "score": "0-0",
           "date": "2026-06-27",
           "venue": "Lincoln Financial Field, Philadelphia",
           "scorers": [],
@@ -9574,10 +9574,10 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 87,
-        "r16": 32,
-        "qf": 14,
-        "sf": 7,
+        "r32": 85,
+        "r16": 34,
+        "qf": 13,
+        "sf": 6,
         "final": 3,
         "winner": 0,
         "source": "market"
@@ -9746,7 +9746,7 @@
           "opponent": "Croatia",
           "opponentFlag": "🇭🇷",
           "result": null,
-          "score": null,
+          "score": "0-0",
           "date": "2026-06-27",
           "venue": "Lincoln Financial Field, Philadelphia",
           "scorers": [],
@@ -9756,9 +9756,9 @@
       "advanceProbabilities": {
         "r32": 100,
         "r16": 22,
-        "qf": 9,
+        "qf": 8,
         "sf": 3,
-        "final": 2,
+        "final": 1,
         "winner": 0,
         "source": "market"
       },
@@ -9916,7 +9916,7 @@
           "opponent": "England",
           "opponentFlag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
           "result": null,
-          "score": null,
+          "score": "0-0",
           "date": "2026-06-27",
           "venue": "MetLife Stadium, New Jersey",
           "scorers": [],
@@ -11340,8 +11340,9 @@
         "awayId": "ghana",
         "homeScore": 0,
         "awayScore": 0,
-        "status": "SCHEDULED",
+        "status": "IN_PROGRESS",
         "date": "2026-06-27",
+        "clock": "2'",
         "broadcasts": [
           "FS1",
           "Universo",
@@ -11352,9 +11353,9 @@
         "polymarket": {
           "homeId": "croatia",
           "awayId": "ghana",
-          "homeWinPct": 55,
-          "awayWinPct": 16,
-          "drawPct": 31,
+          "homeWinPct": 54,
+          "awayWinPct": 17,
+          "drawPct": 30,
           "eventSlug": "fifwc-hrv-gha-2026-06-27"
         }
       },
@@ -11367,8 +11368,9 @@
         "awayId": "england",
         "homeScore": 0,
         "awayScore": 0,
-        "status": "SCHEDULED",
+        "status": "IN_PROGRESS",
         "date": "2026-06-27",
+        "clock": "3'",
         "broadcasts": [
           "FOX",
           "Tele",
@@ -11433,8 +11435,8 @@
         "polymarket": {
           "homeId": "drcongo",
           "awayId": "uzbekistan",
-          "homeWinPct": 56,
-          "awayWinPct": 19,
+          "homeWinPct": 57,
+          "awayWinPct": 18,
           "drawPct": 25,
           "eventSlug": "fifwc-cdr-uzb-2026-06-27"
         }
@@ -11462,7 +11464,7 @@
           "awayId": "austria",
           "homeWinPct": 27,
           "awayWinPct": 26,
-          "drawPct": 48,
+          "drawPct": 47,
           "eventSlug": "fifwc-alg-aut-2026-06-27"
         }
       },
@@ -11488,7 +11490,7 @@
           "homeId": "jordan",
           "awayId": "argentina",
           "homeWinPct": 4,
-          "awayWinPct": 86,
+          "awayWinPct": 87,
           "drawPct": 10,
           "eventSlug": "fifwc-jor-arg-2026-06-27"
         }
@@ -11699,7 +11701,7 @@
           "awayId": "egypt",
           "homeWinPct": 30,
           "awayWinPct": 39,
-          "drawPct": 34,
+          "drawPct": 33,
           "eventSlug": "fifwc-aus-egy-2026-07-03"
         }
       },
