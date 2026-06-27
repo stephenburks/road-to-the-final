@@ -24,16 +24,37 @@ const fs   = require('fs');
 const path = require('path');
 
 const {
-	TEAMS: ALL_TEAMS,
 	NAME_TO_ID,
 	ID_TO_PM_TLAS: ID_TO_PM_TLA,
 	nameToId,
 } = require('./lib/teams');
 const {
-	GROUP_SCHEDULE,
-	BRACKET_PATHS,
-	R32_MATCH_TO_POSITIONS,
+	STAGE_ORDER,
 } = require('./lib/tournament');
+const {
+	calcProbs,
+	calcProbsFallback,
+	diffRating,
+	diffLabel,
+	diffColor,
+} = require('./lib/probabilities');
+const {
+	computeStandings,
+	buildGroupStandings,
+	buildGroupResults,
+	injectScorers,
+	injectCards,
+} = require('./lib/standings');
+const {
+	buildPath,
+	buildOpponents,
+	buildR16Opponents,
+	validateBracketPaths,
+} = require('./lib/bracket');
+const {
+	canStillFinishTop3,
+	determineCurrentStage,
+} = require('./lib/elimination');
 
 // ─── Paths ───────────────────────────────────────────────────────────────────
 const ROOT       = path.join(__dirname, '..');
@@ -262,67 +283,6 @@ function normalizeESPNCalendarDates(espnMatches, espnScorers, espnCards) {
 }
 
 // ─── Compute group standings from ESPN match data ─────────────────────────────
-function computeStandings(espnMatches) {
-	const GROUP_LETTERS = 'ABCDEFGHIJKL'.split('');
-	const groups = {};
-
-	for (const g of GROUP_LETTERS) {
-		const sched = GROUP_SCHEDULE[g] || [];
-		const teamIds = [...new Set([...sched.map(f => f.h), ...sched.map(f => f.a)])];
-		groups[g] = {};
-		for (const tid of teamIds) {
-			groups[g][tid] = { played: 0, w: 0, d: 0, l: 0, gf: 0, ga: 0, pts: 0 };
-		}
-	}
-
-	for (const [key, match] of espnMatches.entries()) {
-		if (match.status !== 'FINISHED') continue;
-		const [homeId, awayId] = key.split(':');
-		const { homeScore, awayScore } = match;
-
-		let group = null;
-		for (const g of GROUP_LETTERS) {
-			const sched = GROUP_SCHEDULE[g] || [];
-			if (sched.find(f => (f.h === homeId && f.a === awayId) || (f.h === awayId && f.a === homeId))) {
-				group = g; break;
-			}
-		}
-		if (!group) continue;
-
-		const homeStats = groups[group][homeId];
-		if (homeStats) {
-			homeStats.played++;
-			homeStats.gf += homeScore;
-			homeStats.ga += awayScore;
-			if (homeScore > awayScore) { homeStats.w++; homeStats.pts += 3; }
-			else if (homeScore < awayScore) { homeStats.l++; }
-			else { homeStats.d++; homeStats.pts++; }
-		}
-
-		const awayStats = groups[group][awayId];
-		if (awayStats) {
-			awayStats.played++;
-			awayStats.gf += awayScore;
-			awayStats.ga += homeScore;
-			if (awayScore > homeScore) { awayStats.w++; awayStats.pts += 3; }
-			else if (awayScore < homeScore) { awayStats.l++; }
-			else { awayStats.d++; awayStats.pts++; }
-		}
-	}
-
-	const result = {};
-	for (const g of GROUP_LETTERS) {
-		const teamStats = Object.entries(groups[g]).map(([teamId, stats]) => ({
-			teamId,
-			team: ALL_TEAMS.find(t => t.id === teamId)?.name || teamId,
-			...stats,
-			gd: stats.gf - stats.ga,
-		}));
-		teamStats.sort((a, b) => b.pts - a.pts || (b.gd - a.gd) || (b.gf - a.gf));
-		result[g] = teamStats.map((s, i) => ({ ...s, pos: i + 1 }));
-	}
-	return result;
-}
 
 // Polymarket name → id resolution comes from the shared registry's NAME_TO_ID
 // (which already includes 'Bosnia-Herzegovina', 'Turkiye', etc. as aliases).
@@ -499,549 +459,6 @@ async function attachMatchupOdds(dailyMatches, existing) {
 }
 
 
-function buildGroupResults(teamId, group, matchIndex, existingGroupResults = []) {
-  const sched = GROUP_SCHEDULE[group] || [];
-  return sched
-    .filter(g => g.h === teamId || g.a === teamId)
-    .sort((a,b) => a.md - b.md)
-    .map(g => {
-      const isHome  = g.h === teamId;
-      const oppId   = isHome ? g.a : g.h;
-      const oppInfo = ALL_TEAMS.find(t => t.id === oppId) || {};
-
-      // Try both directions — API may assign home/away differently than schedule
-      let match = matchIndex.get(`${g.h}:${g.a}`);
-      let matchReversed = false;
-      if (!match) {
-        match = matchIndex.get(`${g.a}:${g.h}`);
-        matchReversed = true;
-      }
-
-      let result = null, score = null;
-      if (match?.status === 'FINISHED') {
-        const isMyTeamHome = isHome !== matchReversed;
-        const myG = isMyTeamHome ? match.homeScore : match.awayScore;
-        const opG = isMyTeamHome ? match.awayScore : match.homeScore;
-        result = myG > opG ? 'W' : myG < opG ? 'L' : 'D';
-        score  = `${myG}-${opG}`;
-      } else if (match?.status === 'IN_PROGRESS') {
-        const isMyTeamHome = isHome !== matchReversed;
-        const myG = isMyTeamHome ? match.homeScore : match.awayScore;
-        const opG = isMyTeamHome ? match.awayScore : match.homeScore;
-        score  = `${myG}-${opG}`;
-      }
-
-      const existingMatch = existingGroupResults.find(
-        e => e.matchday === g.md && e.opponent === oppInfo.name
-      )
-
-      return {
-        matchday: g.md, opponent: oppInfo.name || oppId, opponentFlag: oppInfo.flag || '🏳️',
-        result, score, date: g.d, venue: g.v,
-        scorers: existingMatch?.scorers?.length ? existingMatch.scorers : [],
-        cards: existingMatch?.cards?.length ? existingMatch.cards : [],
-      };
-    });
-}
-
-function buildPath(teamId, group, standings) {
-  const rows    = standings[group] || [];
-  const teamRow = rows.find(r => r.teamId === teamId);
-  const pos     = Math.min(teamRow?.pos ?? 1, 2); // use 1 or 2 for path lookup
-  const key     = `${group}-${pos}`;
-  const bp      = BRACKET_PATHS[key] || BRACKET_PATHS[`${group}-1`] || {};
-
-  const sched      = GROUP_SCHEDULE[group] || [];
-  // Only look at the team's OWN games for city derivation (not all group games)
-  const teamGames  = sched.filter(g => g.h === teamId || g.a === teamId);
-  const dates      = teamGames.map(g => g.d).sort();
-  const first      = dates[0] || '';
-  const last       = dates[dates.length - 1] || '';
-  const cities     = [...new Set(teamGames.map(g => g.v.split(',').pop().trim()))].slice(0, 3).join(' · ');
-  const pts     = teamRow ? `${teamRow.pts}pt${teamRow.pts !== 1 ? 's' : ''} after MD${teamRow.played}` : `Group ${group}`;
-
-  return {
-    group_stage: { status:'active', city: cities, venue:'Various venues', date:`Jun ${first.slice(8)}–${last.slice(8)}`, detail: pts },
-    r32:   bp.r32   ? { status:'upcoming', ...bp.r32   } : null,
-    r16:   bp.r16   ? { status:'future',   ...bp.r16   } : null,
-    qf:    bp.qf    ? { status:'future',   ...bp.qf    } : null,
-    sf:    bp.sf    ? { status:'future',   ...bp.sf    } : null,
-    final: bp.final ? { status:'future',   ...bp.final } : null,
-  };
-}
-
-function calcProbs(teamId, group, standings, polyData, existingProbs) {
-  // Use Polymarket data DIRECTLY for every stage where it exists.
-  // NO interpolation for stages with market data — pull from source of truth.
-  // Only use 'calculated' for stages where Polymarket truly has no price.
-  const market = {
-    r32:    polyData?.r32?.[teamId],
-    r16:    polyData?.r16?.[teamId],
-    qf:     polyData?.qf?.[teamId],
-    sf:     polyData?.sf?.[teamId],
-    final:  polyData?.final?.[teamId],
-    winner: polyData?.winner?.[teamId],
-  };
-
-  const stages = ['r32', 'r16', 'qf', 'sf', 'final', 'winner'];
-  const known = stages
-    .map((key, idx) => ({ key, idx, val: market[key] }))
-    .filter(s => typeof s.val === 'number');
-
-  const hasAnyMarket = known.length > 0;
-
-  if (!hasAnyMarket) {
-    // No Polymarket data at all: use ranking/standings-based fallback
-    return calcProbsFallback(teamId, group, standings);
-  }
-
-  // Idempotency guard: when a stage is missing from the current Polymarket
-  // fetch but was present (with source='market') in the previous JSON, prefer
-  // the previous value over interpolation. Protects against transient
-  // Polymarket gaps reducing market-quality data to interpolated estimates.
-  const prevSource = existingProbs?.source;
-  const prevWasMarket = prevSource === 'market';
-
-  // Build result: use market data where available, interpolate only the gaps
-  const result = {};
-  for (let i = 0; i < stages.length; i++) {
-    const stageKey = stages[i];
-    if (typeof market[stageKey] === 'number') {
-      result[stageKey] = market[stageKey];
-      continue;
-    }
-    // Stage missing from current Polymarket fetch — try previous market value first
-    if (prevWasMarket && typeof existingProbs?.[stageKey] === 'number') {
-      result[stageKey] = existingProbs[stageKey];
-      continue;
-    }
-    // Find nearest known stages before and after
-    const before = [...known].reverse().find(k => k.idx < i);
-    const after = known.find(k => k.idx > i);
-
-    if (before && after) {
-      // Geometric interpolation between two known stages
-      const steps = after.idx - before.idx;
-      const t = (i - before.idx) / steps;
-      result[stageKey] = Math.round(before.val * Math.pow(after.val / before.val, t));
-    } else if (before) {
-      // Extrapolate forward from last known stage
-      const stepsFrom = i - before.idx;
-      const perRound = 0.48; // conservative per-round advancement factor
-      result[stageKey] = Math.round(before.val * Math.pow(perRound, stepsFrom));
-    } else if (after) {
-      // Extrapolate backward from first known stage
-      const stepsTo = after.idx - i;
-      const perRound = 1 / 0.48;
-      result[stageKey] = Math.min(Math.round(after.val * Math.pow(perRound, stepsTo)), 99);
-    }
-  }
-
-  // Enforce monotonicity: each later stage must be <= earlier stage
-  // (Polymarket markets for different stages aren't perfectly consistent)
-  for (let i = 1; i < stages.length; i++) {
-    if (result[stages[i]] > result[stages[i - 1]]) {
-      result[stages[i]] = result[stages[i - 1]];
-    }
-  }
-
-  return { ...result, source: 'market' };
-}
-
-// Fallback when Polymarket has no data for a team (ranking + standings based)
-function calcProbsFallback(teamId, group, standings) {
-  const rows = standings[group] || [];
-  const row = rows.find(r => r.teamId === teamId);
-  const base = ALL_TEAMS.find(t => t.id === teamId)?.fifaRank ?? 50;
-
-  const hasStandings = rows.length > 0;
-  const pos = hasStandings ? (row?.pos ?? 4) : 4;
-  const rankScore = Math.max(1, 50 - base);
-
-  let seed;
-  if (hasStandings) {
-    const posMult = { 1: 1.0, 2: 0.65, 3: 0.3, 4: 0.05 }[pos] ?? 0.5;
-    seed = Math.round(rankScore * posMult);
-  } else {
-    const tiers = [
-      { max: 10, pct: 25 }, { max: 20, pct: 18 }, { max: 30, pct: 12 },
-      { max: 40, pct: 8  }, { max: 50, pct: 5  }, { max: Infinity, pct: 2 },
-    ];
-    const tier = tiers.find(t => base <= t.max);
-    seed = tier ? Math.round(tier.pct * (rankScore / 50)) : 2;
-  }
-
-  const seedWinner = Math.min(seed, 30);
-  const r32 = Math.min(Math.round(seedWinner * 2.8 + (pos <= 2 ? 20 : 5)), 99);
-  const r16 = Math.round(r32 * 0.55);
-  const qf   = Math.round(r16 * 0.52);
-  const sf   = Math.round(qf  * 0.50);
-  const final = Math.round(sf  * 0.50);
-  // Derive winner from the chain so all stages remain monotonically decreasing
-  const winner = Math.round(final * 0.50);
-
-  return { r32, r16, qf, sf, final, winner, source: 'calculated' };
-}
-
-function diffRating(rank) {
-  if (!rank)   return 3;
-  if (rank<=10) return 5;
-  if (rank<=20) return 4;
-  if (rank<=35) return 3;
-  if (rank<=55) return 2;
-  return 1;
-}
-function diffLabel(r) { return ['','Favorable','Favorable','Moderate','Tough','Danger'][r]||'Moderate'; }
-function diffColor(r) { return ['','#22C55E','#22C55E','#F59E0B','#FB923C','#EF4444'][r]||'#F59E0B'; }
-
-function buildOpponents(teamId, group, r32Desc, r16Desc, standings) {
-	const desc = r32Desc ?? ''
-
-	const directMatch = desc.match(/Winner\s+Group\s+([A-L])|Runner-up\s+Group\s+([A-L])/i)
-	if (directMatch) {
-		const oppGroup = (directMatch[1] ?? directMatch[2]).toUpperCase()
-		const isWinner = !!directMatch[1]
-		const gRows = standings[oppGroup] || []
-		const target = isWinner ? gRows[0] : gRows[1]
-		const info = ALL_TEAMS.find(t => t.id === target?.teamId)
-		const rating = diffRating(info?.fifaRank)
-		const r32Opps = [{
-			group:       oppGroup,
-			likelyTeam:  info?.name || 'TBD',
-			flag:        info?.flag || '🏳️',
-			fifaRank:    info?.fifaRank || 50,
-			difficulty:  rating,
-			label:       diffLabel(rating),
-			color:       diffColor(rating),
-			note:        isWinner ? `Winner of Group ${oppGroup}` : `Runner-up of Group ${oppGroup}`,
-			pct:         null,
-		}]
-		return { r32: r32Opps, r16: buildR16Opponents(teamId, r16Desc, standings) }
-	}
-
-	const poolMatch = desc.match(/Best\s+3rd\s+from\s+(.+)/i)
-	if (poolMatch) {
-		const groups = poolMatch[1].split('/').map(g => g.trim())
-		const r32Opps = groups.map(g => {
-			const gRows   = standings[g] || []
-			const third   = gRows[2]
-			const info    = ALL_TEAMS.find(t => t.id === third?.teamId)
-			const rating  = diffRating(info?.fifaRank)
-			return {
-				group:       g,
-				likelyTeam:  info?.name || 'TBD',
-				flag:        info?.flag || '🏳️',
-				fifaRank:    info?.fifaRank || 50,
-				difficulty:  rating,
-				label:       diffLabel(rating),
-				color:       diffColor(rating),
-				note:        `3rd-place team from Group ${g}`,
-				pct:         null,
-			}
-		})
-		return { r32: r32Opps, r16: buildR16Opponents(teamId, r16Desc, standings) }
-	}
-
-	return { r32: [], r16: buildR16Opponents(teamId, r16Desc, standings) }
-}
-
-// Builds the list of possible R16 opponents from the R16 opponentDesc.
-// Handles "Winner Match X" and "Winner Group X (Match Y)" patterns.
-function buildR16Opponents(teamId, r16Desc, standings) {
-	const desc = r16Desc ?? ''
-
-	// Extract match number from "Winner Match 82" or "Winner Group G (Match 82)"
-	const matchRef = desc.match(/\(Match\s+(\d+)\)|Winner\s+Match\s+(\d+)/i)
-	if (matchRef) {
-		const matchNum = parseInt(matchRef[1] ?? matchRef[2], 10)
-		const posKeys = R32_MATCH_TO_POSITIONS[matchNum] || []
-		return posKeys
-			.filter(key => {
-				// Exclude the current team's own bracket slot to avoid self-referential results
-				const [grp, pos] = key.split('-')
-				const gRows = standings[grp] || []
-				const target = pos === '1' ? gRows[0] : gRows[1]
-				return target?.teamId !== teamId
-			})
-			.map(key => {
-				const [grp, pos] = key.split('-')
-				const gRows = standings[grp] || []
-				const target = pos === '1' ? gRows[0] : gRows[1]
-				const info = ALL_TEAMS.find(t => t.id === target?.teamId)
-				const rating = diffRating(info?.fifaRank)
-				return {
-					group:      grp,
-					likelyTeam: info?.name || 'TBD',
-					flag:       info?.flag || '🏳️',
-					fifaRank:   info?.fifaRank || 50,
-					difficulty: rating,
-					label:      diffLabel(rating),
-					color:      diffColor(rating),
-					note:       `${pos === '1' ? 'Winner' : 'Runner-up'} of Group ${grp}`,
-					pct:        null,
-				}
-			})
-	}
-
-	// "Winner Group X" without a match number — direct group lookup
-	const groupRef = desc.match(/Winner\s+Group\s+([A-L])|Runner-up\s+Group\s+([A-L])/i)
-	if (groupRef) {
-		const oppGroup = (groupRef[1] ?? groupRef[2]).toUpperCase()
-		const isWinner = !!groupRef[1]
-		const gRows = standings[oppGroup] || []
-		const target = isWinner ? gRows[0] : gRows[1]
-		const info = ALL_TEAMS.find(t => t.id === target?.teamId)
-		const rating = diffRating(info?.fifaRank)
-		return [{
-			group:      oppGroup,
-			likelyTeam: info?.name || 'TBD',
-			flag:       info?.flag || '🏳️',
-			fifaRank:   info?.fifaRank || 50,
-			difficulty: rating,
-			label:      diffLabel(rating),
-			color:      diffColor(rating),
-			note:       isWinner ? `Winner of Group ${oppGroup}` : `Runner-up of Group ${oppGroup}`,
-			pct:        null,
-		}]
-	}
-
-	return []
-}
-
-const STAGE_ORDER = ['group_stage', 'r32', 'r16', 'qf', 'sf', 'final'];
-
-/**
- * Brute-force check: across all possible outcomes of remaining group matches,
- * does at least one scenario have this team finishing in the top 3?
- *
- * 2026 World Cup has 48 teams in 12 groups of 4. Top 2 + 8 best 3rd-place
- * teams advance to R32, so a team is only mathematically locked out of R32
- * if they're guaranteed to finish 4th. Polymarket=0% is the primary signal
- * for the more nuanced "can finish 3rd but won't make wildcard" cases.
- */
-function canStillFinishTop3(teamId, group, rawStandings, espnMatches) {
-	const rows = rawStandings?.[group] ?? [];
-	if (rows.length === 0) return true;
-	const teamIds = new Set(rows.map(r => r.teamId).filter(Boolean));
-
-	const remaining = [];
-	for (const [key, match] of espnMatches.entries()) {
-		if (match.status === 'FINISHED') continue;
-		const [h, a] = key.split(':');
-		if (teamIds.has(h) && teamIds.has(a)) remaining.push([h, a]);
-	}
-
-	if (remaining.length === 0) {
-		const row = rows.find(r => r.teamId === teamId);
-		return !!row && row.pos <= 3;
-	}
-
-	const outcomes = [
-		{ hPts: 3, aPts: 0, hGd: 1, aGd: -1 },
-		{ hPts: 0, aPts: 3, hGd: -1, aGd: 1 },
-		{ hPts: 1, aPts: 1, hGd: 0, aGd: 0 },
-	];
-
-	function dfs(i, sim) {
-		if (i === remaining.length) {
-			const sorted = [...sim].sort((a, b) => (b.pts - a.pts) || (b.gd - a.gd) || ((b.gf || 0) - (a.gf || 0)));
-			const pos = sorted.findIndex(r => r.teamId === teamId) + 1;
-			return pos > 0 && pos <= 3;
-		}
-		const [h, a] = remaining[i];
-		for (const o of outcomes) {
-			const next = sim.map(r => ({ ...r }));
-			const hRow = next.find(r => r.teamId === h);
-			const aRow = next.find(r => r.teamId === a);
-			if (hRow) { hRow.pts += o.hPts; hRow.gd += o.hGd; }
-			if (aRow) { aRow.pts += o.aPts; aRow.gd += o.aGd; }
-			if (dfs(i + 1, next)) return true;
-		}
-		return false;
-	}
-
-	return dfs(0, rows.map(r => ({ ...r })));
-}
-
-function determineCurrentStage(teamId, group, rawStandings, espnMatches) {
-	const groupRows = rawStandings?.[group];
-	if (!groupRows?.length) return 'group_stage';
-
-	const teamRow = groupRows.find(r => r.teamId === teamId);
-	if (!teamRow) return 'group_stage';
-
-	const played = teamRow.played ?? 0;
-	if (played < 3) return 'group_stage';
-
-	const pos = teamRow.pos ?? 4;
-	if (pos > 2) return 'group_stage';
-
-	const groupFinished = groupRows.every(r => (r.played ?? 0) >= 3);
-	if (!groupFinished) return 'group_stage';
-
-	const knockoutStages = ['r32', 'r16', 'qf', 'sf', 'final'];
-	let lastWonStage = null;
-	for (const stage of knockoutStages) {
-		const match = findKnockoutMatch(teamId, group, pos, stage, espnMatches);
-		if (!match) continue;
-
-		const isTeamHome = match.homeId === teamId;
-		const isTeamAway = match.awayId === teamId;
-
-		if (match.status === 'FINISHED') {
-			if (isTeamHome || isTeamAway) {
-				const myGoals = isTeamHome ? match.homeScore : match.awayScore;
-				const oppGoals = isTeamHome ? match.awayScore : match.homeScore;
-				if (myGoals < oppGoals) {
-					return { stage, eliminated: true, eliminatedIn: stage };
-				}
-				lastWonStage = stage;
-			}
-			continue;
-		}
-
-		// Unfinished knockout match exists → that's the team's current stage.
-		return { stage, eliminated: false };
-	}
-
-	// No unfinished match found. Current stage = the one AFTER the last
-	// knockout the team won. If no knockouts found at all (bracket not yet
-	// drawn for this team), they're heading into R32. If they won the final,
-	// they stay at 'final' (champion).
-	const lastIdx = lastWonStage ? knockoutStages.indexOf(lastWonStage) : -1;
-	const nextIdx = Math.min(lastIdx + 1, knockoutStages.length - 1);
-	return { stage: knockoutStages[nextIdx], eliminated: false };
-}
-
-function findKnockoutMatch(teamId, group, pos, stage, espnMatches) {
-	const pathKey = `${group}-${pos}`;
-	const bp = BRACKET_PATHS[pathKey];
-	if (!bp?.[stage]?.date) return null;
-
-	const matchDate = bp[stage].date;
-
-	for (const [key, match] of espnMatches.entries()) {
-		if (match.date !== matchDate) continue;
-		const [hId, aId] = key.split(':');
-		if (hId === teamId || aId === teamId) {
-			return match;
-		}
-	}
-	return null;
-}
-
-function buildGroupStandings(group, rawStandings) {
-  if (rawStandings[group]) {
-    return rawStandings[group].map(row => {
-      const info = ALL_TEAMS.find(t => t.id === row.teamId) || {};
-      return { ...row, flag: info.flag || '🏳️', team: info.name || row.team };
-    });
-  }
-  // Fallback: pre-tournament order from schedule
-  const sched = GROUP_SCHEDULE[group] || [];
-  const ids   = [...new Set([...sched.map(g=>g.h), ...sched.map(g=>g.a)])];
-  return ids.map((id, i) => {
-    const info = ALL_TEAMS.find(t => t.id === id) || { name: id, flag: '🏳️' };
-    return { pos:i+1, teamId:id, team:info.name, flag:info.flag, played:0, w:0, d:0, l:0, gf:0, ga:0, gd:0, pts:0 };
-  });
-}
-
-// ─── Bracket path validation ──────────────────────────────────────────────────
-function validateBracketPaths() {
-	const groups = 'ABCDEFGHIJKL'.split('');
-	const positions = [1, 2];
-	const requiredKeys = ['r32', 'r16', 'qf', 'sf', 'final'];
-	const requiredFields = ['match', 'date', 'city', 'venue', 'opponentDesc'];
-	const datePattern = /^\d{4}-\d{2}-\d{2}$/;
-
-	const missing = [];
-	const badDates = [];
-	let hasCritical = false;
-
-	for (const g of groups) {
-		for (const p of positions) {
-			const key = `${g}-${p}`;
-			const entry = BRACKET_PATHS[key];
-
-			if (!entry) {
-				missing.push(key);
-				hasCritical = true;
-				continue;
-			}
-
-			for (const stage of requiredKeys) {
-				const stageEntry = entry[stage];
-				if (!stageEntry) {
-					missing.push(`${key}.${stage}`);
-					hasCritical = true;
-					continue;
-				}
-				for (const field of requiredFields) {
-					if (stageEntry[field] === undefined || stageEntry[field] === null) {
-						missing.push(`${key}.${stage}.${field}`);
-						hasCritical = true;
-					}
-				}
-				if (stageEntry.date && !datePattern.test(stageEntry.date)) {
-					badDates.push(`${key}.${stage}.date = "${stageEntry.date}"`);
-				}
-			}
-		}
-	}
-
-	if (badDates.length) {
-		log(`⚠  Bracket date format issues: ${badDates.join(', ')}`);
-	}
-	if (missing.length) {
-		log(`⚠  Bracket missing entries: ${missing.join(', ')}`);
-	}
-	if (hasCritical) {
-		throw new Error('Critical bracket path data missing — cannot proceed');
-	}
-}
-
-// Inject ESPN scorer data into group results
-function injectScorers(groupResults, espnScorers) {
-  if (!espnScorers?.length) return groupResults;
-  const labels = espnScorers.map(s => s.label);
-  let assigned = false;
-  return groupResults.map(gr => {
-    if (gr.scorers?.length > 0) return gr;
-    if (!gr.result) return gr;
-    // Match by date first, fall back to first unresolved match
-    const matchScorers = espnScorers.filter(s => s.date === gr.date);
-    if (matchScorers.length > 0) {
-      assigned = true;
-      return { ...gr, scorers: matchScorers.map(s => s.label) };
-    }
-    // Fallback: first finished match without scorers gets all scorers
-    if (!assigned) {
-      assigned = true;
-      return { ...gr, scorers: labels };
-    }
-    return gr;
-  });
-}
-
-function injectCards(groupResults, espnCards) {
-  if (!espnCards?.length) return groupResults;
-  const entries = espnCards.map(c => ({ player: c.player, minute: c.minute, type: c.type }));
-  let assigned = false;
-  return groupResults.map(gr => {
-    if (gr.cards?.length > 0) return gr;
-    if (!gr.result) return gr;
-    const matchCards = espnCards.filter(c => c.date === gr.date);
-    if (matchCards.length > 0) {
-      assigned = true;
-      return { ...gr, cards: matchCards.map(c => ({ player: c.player, minute: c.minute, type: c.type })) };
-    }
-    if (!assigned) {
-      assigned = true;
-      return { ...gr, cards: entries };
-    }
-    return gr;
-  });
-}
 
 function isSingleGroupDegraded(groupData) {
   // A group is degraded if it has no win probabilities at all.
@@ -1386,4 +803,16 @@ if (require.main === module) {
   main().catch(err => { console.error('Fatal:', err); process.exit(1); });
 }
 
-module.exports = { calcProbs, calcProbsFallback, diffRating, diffLabel, diffColor, buildOpponents, buildR16Opponents, R32_MATCH_TO_POSITIONS };
+// Re-exports preserved for backwards-compatibility with scripts/update-data.test.js.
+// New tests should import directly from scripts/lib/probabilities, scripts/lib/bracket, etc.
+const { R32_MATCH_TO_POSITIONS } = require('./lib/tournament');
+module.exports = {
+	calcProbs,
+	calcProbsFallback,
+	diffRating,
+	diffLabel,
+	diffColor,
+	buildOpponents,
+	buildR16Opponents,
+	R32_MATCH_TO_POSITIONS,
+};
