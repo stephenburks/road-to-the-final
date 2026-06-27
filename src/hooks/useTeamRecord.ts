@@ -1,5 +1,6 @@
 import { useQuery } from '@tanstack/react-query'
 import { ESPN_SLUG_MAP } from '../data/tournamentSchedule'
+import { ID_TO_FLAG, TLA_TO_ID } from '../components/ui/teamLookup'
 import { ESPN_TEAM_URL, ESPN_SCOREBOARD_URL } from '../constants'
 
 interface TeamRecord {
@@ -33,55 +34,13 @@ export interface TeamRecordData {
 	links: TeamLink[]
 }
 
-const ESPN_FLAG_MAP: Record<string, string> = {
-	USA: '🇺🇸',
-	MEX: '🇲🇽',
-	CAN: '🇨🇦',
-	BRA: '🇧🇷',
-	ARG: '🇦🇷',
-	COL: '🇨🇴',
-	ECU: '🇪🇨',
-	URU: '🇺🇾',
-	PAR: '🇵🇾',
-	ESP: '🇪🇸',
-	FRA: '🇫🇷',
-	GER: '🇩🇪',
-	ENG: '🏴󠁧󠁢󠁥󠁮󠁧󠁿',
-	NED: '🇳🇱',
-	POR: '🇵🇹',
-	BEL: '🇧🇪',
-	SUI: '🇨🇭',
-	CRO: '🇭🇷',
-	AUT: '🇦🇹',
-	SWE: '🇸🇪',
-	NOR: '🇳🇴',
-	SCO: '🏴󠁧󠁢󠁳󠁣󠁴󠁿',
-	CZE: '🇨🇿',
-	BIH: '🇧🇦',
-	TUR: '🇹🇷',
-	MAR: '🇲🇦',
-	SEN: '🇸🇳',
-	EGY: '🇪🇬',
-	CIV: '🇨🇮',
-	GHA: '🇬🇭',
-	RSA: '🇿🇦',
-	ALG: '🇩🇿',
-	TUN: '🇹🇳',
-	RDC: '🇨🇩',
-	CPV: '🇨🇻',
-	KSA: '🇸🇦',
-	JPN: '🇯🇵',
-	KOR: '🇰🇷',
-	AUS: '🇦🇺',
-	IRN: '🇮🇷',
-	IRQ: '🇮🇶',
-	QAT: '🇶🇦',
-	JOR: '🇯🇴',
-	UZB: '🇺🇿',
-	NZL: '🇳🇿',
-	HAI: '🇭🇹',
-	PAN: '🇵🇦',
-	CUW: '🇨🇼',
+// Flag lookup by ESPN's TLA (`abbreviation` field). Note ESPN uses 'RDC'
+// instead of FIFA's 'COD' for DR Congo, so we override that single case.
+function flagFromEspnTla(tla?: string): string {
+	if (!tla) return '🏳️'
+	const upper = tla.toUpperCase()
+	const id = upper === 'RDC' ? 'drcongo' : TLA_TO_ID[upper]
+	return id ? (ID_TO_FLAG[id] ?? '🏳️') : '🏳️'
 }
 
 const EMPTY: TeamRecordData = { record: null, standingSummary: null, nextEvent: null, links: [] }
@@ -152,7 +111,7 @@ async function fetchTeamRecordWithLiveFallback(
 
 		nextEvent = {
 			opponent: opp?.team?.displayName ?? 'TBD',
-			opponentFlag: opp?.team?.abbreviation ? (ESPN_FLAG_MAP[opp.team.abbreviation] ?? '🏳️') : '🏳️',
+			opponentFlag: flagFromEspnTla(opp?.team?.abbreviation),
 			date: evt.date ?? '',
 			venue: comp?.venue?.fullName ?? '',
 			broadcasts,
@@ -203,9 +162,7 @@ async function fetchTeamRecordWithLiveFallback(
 					}
 					nextEvent = {
 						opponent: opp?.team?.displayName ?? 'TBD',
-						opponentFlag: opp?.team?.abbreviation
-							? (ESPN_FLAG_MAP[opp.team.abbreviation] ?? '🏳️')
-							: '🏳️',
+						opponentFlag: flagFromEspnTla(opp?.team?.abbreviation),
 						date: event.date ?? '',
 						venue: comp?.venue?.fullName ?? '',
 						broadcasts,

@@ -19,14 +19,10 @@ const STAGE_SLUGS: Record<string, string> = {
 
 const GROUP_LETTERS = 'abcdefghijkl'.split('')
 
-const PM_ALIAS: Record<string, string> = {
-	'Bosnia-Herzegovina': 'bosnia',
-	'Turkiye': 'turkey',
-}
-
+// All Polymarket alt-spelling aliases ('Bosnia-Herzegovina', 'Turkiye', etc.)
+// live on the canonical team registry as aliases — NAME_TO_ID resolves them.
 function pmNameToId(name: string | undefined): string | null {
 	if (!name) return null
-	if (PM_ALIAS[name]) return PM_ALIAS[name]
 	return NAME_TO_ID[name] || null
 }
 

@@ -23,213 +23,24 @@
 const fs   = require('fs');
 const path = require('path');
 
+const {
+	TEAMS: ALL_TEAMS,
+	NAME_TO_ID,
+	ID_TO_PM_TLAS: ID_TO_PM_TLA,
+	nameToId,
+} = require('./lib/teams');
+const {
+	GROUP_SCHEDULE,
+	BRACKET_PATHS,
+	R32_MATCH_TO_POSITIONS,
+} = require('./lib/tournament');
+
 // ─── Paths ───────────────────────────────────────────────────────────────────
 const ROOT       = path.join(__dirname, '..');
 const LIVE_PATH  = path.join(ROOT, 'public', 'data', 'world-cup-2026.json');
 const SNAP_DIR   = path.join(ROOT, 'public', 'data', 'snapshots');
 const MF_PATH    = path.join(SNAP_DIR, 'manifest.json');
 
-// ─── All 48 teams (static info) ──────────────────────────────────────────────
-const ALL_TEAMS = [
-  { id:'mexico',      name:'Mexico',         flag:'🇲🇽', group:'A', confederation:'CONCACAF', fifaRank:15 },
-  { id:'southafrica', name:'South Africa',   flag:'🇿🇦', group:'A', confederation:'CAF',      fifaRank:58 },
-  { id:'southkorea',  name:'South Korea',    flag:'🇰🇷', group:'A', confederation:'AFC',      fifaRank:22 },
-  { id:'czechia',     name:'Czechia',        flag:'🇨🇿', group:'A', confederation:'UEFA',     fifaRank:37 },
-  { id:'canada',      name:'Canada',         flag:'🇨🇦', group:'B', confederation:'CONCACAF', fifaRank:27 },
-  { id:'bosnia',      name:'Bosnia & Herz.', flag:'🇧🇦', group:'B', confederation:'UEFA',     fifaRank:71 },
-  { id:'qatar',       name:'Qatar',          flag:'🇶🇦', group:'B', confederation:'AFC',      fifaRank:51 },
-  { id:'switzerland', name:'Switzerland',    flag:'🇨🇭', group:'B', confederation:'UEFA',     fifaRank:17 },
-  { id:'brazil',      name:'Brazil',         flag:'🇧🇷', group:'C', confederation:'CONMEBOL', fifaRank:4  },
-  { id:'morocco',     name:'Morocco',        flag:'🇲🇦', group:'C', confederation:'CAF',      fifaRank:14 },
-  { id:'haiti',       name:'Haiti',          flag:'🇭🇹', group:'C', confederation:'CONCACAF', fifaRank:83 },
-  { id:'scotland',    name:'Scotland',       flag:'🏴󠁧󠁢󠁳󠁣󠁴󠁿', group:'C', confederation:'UEFA',     fifaRank:39 },
-  { id:'usa',         name:'USA',            flag:'🇺🇸', group:'D', confederation:'CONCACAF', fifaRank:14 },
-  { id:'paraguay',    name:'Paraguay',       flag:'🇵🇾', group:'D', confederation:'CONMEBOL', fifaRank:39 },
-  { id:'australia',   name:'Australia',      flag:'🇦🇺', group:'D', confederation:'AFC',      fifaRank:26 },
-  { id:'turkey',      name:'Türkiye',        flag:'🇹🇷', group:'D', confederation:'UEFA',     fifaRank:25 },
-  { id:'germany',     name:'Germany',        flag:'🇩🇪', group:'E', confederation:'UEFA',     fifaRank:9  },
-  { id:'curacao',     name:'Curaçao',        flag:'🇨🇼', group:'E', confederation:'CONCACAF', fifaRank:82 },
-  { id:'ivorycoast',  name:'Ivory Coast',    flag:'🇨🇮', group:'E', confederation:'CAF',      fifaRank:42 },
-  { id:'ecuador',     name:'Ecuador',        flag:'🇪🇨', group:'E', confederation:'CONMEBOL', fifaRank:23 },
-  { id:'netherlands', name:'Netherlands',    flag:'🇳🇱', group:'F', confederation:'UEFA',     fifaRank:7  },
-  { id:'japan',       name:'Japan',          flag:'🇯🇵', group:'F', confederation:'AFC',      fifaRank:13 },
-  { id:'sweden',      name:'Sweden',         flag:'🇸🇪', group:'F', confederation:'UEFA',     fifaRank:29 },
-  { id:'tunisia',     name:'Tunisia',        flag:'🇹🇳', group:'F', confederation:'CAF',      fifaRank:36 },
-  { id:'belgium',     name:'Belgium',        flag:'🇧🇪', group:'G', confederation:'UEFA',     fifaRank:9  },
-  { id:'egypt',       name:'Egypt',          flag:'🇪🇬', group:'G', confederation:'CAF',      fifaRank:34 },
-  { id:'iran',        name:'Iran',           flag:'🇮🇷', group:'G', confederation:'AFC',      fifaRank:21 },
-  { id:'newzealand',  name:'New Zealand',    flag:'🇳🇿', group:'G', confederation:'OFC',      fifaRank:86 },
-  { id:'spain',       name:'Spain',          flag:'🇪🇸', group:'H', confederation:'UEFA',     fifaRank:1  },
-  { id:'capeverde',   name:'Cape Verde',     flag:'🇨🇻', group:'H', confederation:'CAF',      fifaRank:62 },
-  { id:'saudiarabia', name:'Saudi Arabia',   flag:'🇸🇦', group:'H', confederation:'AFC',      fifaRank:55 },
-  { id:'uruguay',     name:'Uruguay',        flag:'🇺🇾', group:'H', confederation:'CONMEBOL', fifaRank:18 },
-  { id:'france',      name:'France',         flag:'🇫🇷', group:'I', confederation:'UEFA',     fifaRank:3  },
-  { id:'senegal',     name:'Senegal',        flag:'🇸🇳', group:'I', confederation:'CAF',      fifaRank:14 },
-  { id:'iraq',        name:'Iraq',           flag:'🇮🇶', group:'I', confederation:'AFC',      fifaRank:58 },
-  { id:'norway',      name:'Norway',         flag:'🇳🇴', group:'I', confederation:'UEFA',     fifaRank:31 },
-  { id:'argentina',   name:'Argentina',      flag:'🇦🇷', group:'J', confederation:'CONMEBOL', fifaRank:2  },
-  { id:'algeria',     name:'Algeria',        flag:'🇩🇿', group:'J', confederation:'CAF',      fifaRank:35 },
-  { id:'austria',     name:'Austria',        flag:'🇦🇹', group:'J', confederation:'UEFA',     fifaRank:24 },
-  { id:'jordan',      name:'Jordan',         flag:'🇯🇴', group:'J', confederation:'AFC',      fifaRank:66 },
-  { id:'portugal',    name:'Portugal',       flag:'🇵🇹', group:'K', confederation:'UEFA',     fifaRank:6  },
-  { id:'drcongo',     name:'DR Congo',       flag:'🇨🇩', group:'K', confederation:'CAF',      fifaRank:56 },
-  { id:'uzbekistan',  name:'Uzbekistan',     flag:'🇺🇿', group:'K', confederation:'AFC',      fifaRank:50 },
-  { id:'colombia',    name:'Colombia',       flag:'🇨🇴', group:'K', confederation:'CONMEBOL', fifaRank:13 },
-  { id:'england',     name:'England',        flag:'🏴󠁧󠁢󠁥󠁮󠁧󠁿', group:'L', confederation:'UEFA',     fifaRank:5  },
-  { id:'croatia',     name:'Croatia',        flag:'🇭🇷', group:'L', confederation:'UEFA',     fifaRank:10 },
-  { id:'ghana',       name:'Ghana',          flag:'🇬🇭', group:'L', confederation:'CAF',      fifaRank:60 },
-  { id:'panama',      name:'Panama',         flag:'🇵🇦', group:'L', confederation:'CONCACAF', fifaRank:76 },
-];
-
-// ─── Shared knockout fixtures (eliminates duplication) ────────────────────────
-const SF_DALLAS  = { match:101, date:'2026-07-14', city:'Dallas',       venue:'AT&T Stadium',          opponentDesc:'Winner QF bracket' }
-const SF_ATLANTA = { match:102, date:'2026-07-15', city:'Atlanta',      venue:'Mercedes-Benz Stadium', opponentDesc:'Winner QF bracket' }
-const FINAL_FIX  = { match:104, date:'2026-07-19', city:'New Jersey',  venue:'MetLife Stadium',        opponentDesc:'Winner other SF' }
-
-const SF = { dallas: SF_DALLAS, atlanta: SF_ATLANTA }
-
-function makePath(r32, r16, qf, sfKey) {
-  return { r32, r16, qf, sf: SF[sfKey], final: FINAL_FIX }
-}
-
-// ─── Bracket path routing table ───────────────────────────────────────────────
-// Maps group-finish-position to the team's full knockout path.
-// Key: "GROUP-POSITION" (e.g. "D-1" = Group D winner)
-// sf/final shared via makePath(); only r32/r16/qf are unique per path.
-const BRACKET_PATHS = {
-  'A-1': makePath({match:79, date:'2026-06-28',city:'Mexico City',  venue:'Estadio Azteca',          opponentDesc:'Best 3rd from C/E/F/H/I'},
-                  {match:93, date:'2026-07-05',city:'Guadalajara',  venue:'Estadio Guadalajara',     opponentDesc:'Winner Match 79'},
-                  {match:97, date:'2026-07-09',city:'Guadalajara',  venue:'Estadio Guadalajara',     opponentDesc:'Winner Match 93'},
-                  'dallas'),
-  'A-2': makePath({match:80, date:'2026-06-29',city:'Atlanta',      venue:'Mercedes-Benz Stadium',   opponentDesc:'Best 3rd from E/H/I/J/K'},
-                  {match:94, date:'2026-07-06',city:'Seattle',      venue:'Lumen Field',             opponentDesc:'Winner Match 80'},
-                  {match:98, date:'2026-07-10',city:'Los Angeles',  venue:'SoFi Stadium',            opponentDesc:'Winner Match 94'},
-                  'atlanta'),
-  'B-1': makePath({match:85, date:'2026-07-02',city:'Boston',       venue:'Gillette Stadium',        opponentDesc:'Best 3rd from E/F/G/I/J'},
-                  {match:96, date:'2026-07-07',city:'Vancouver',    venue:'BC Place',                opponentDesc:'Winner Match 85'},
-                  {match:100,date:'2026-07-11',city:'Kansas City',  venue:'Arrowhead Stadium',       opponentDesc:'Winner Match 96'},
-                  'dallas'),
-  'B-2': makePath({match:82, date:'2026-07-01',city:'Seattle',      venue:'Lumen Field',             opponentDesc:'Best 3rd from A/E/H/I/J'},
-                  {match:94, date:'2026-07-06',city:'Seattle',      venue:'Lumen Field',             opponentDesc:'Winner Match 82'},
-                  {match:98, date:'2026-07-10',city:'Los Angeles',  venue:'SoFi Stadium',            opponentDesc:'Winner Match 94'},
-                  'atlanta'),
-  'C-1': makePath({match:87, date:'2026-07-03',city:'Kansas City',  venue:'Arrowhead Stadium',       opponentDesc:'Best 3rd from D/E/I/J/L'},
-                  {match:96, date:'2026-07-07',city:'Vancouver',    venue:'BC Place',                opponentDesc:'Winner Match 86'},
-                  {match:100,date:'2026-07-11',city:'Kansas City',  venue:'Arrowhead Stadium',       opponentDesc:'Winner Match 96'},
-                  'dallas'),
-  'C-2': makePath({match:88, date:'2026-07-03',city:'Dallas',       venue:'AT&T Stadium',            opponentDesc:'Runner-up Group D'},
-                  {match:95, date:'2026-07-07',city:'Atlanta',      venue:'Mercedes-Benz Stadium',   opponentDesc:'Winner Match 87'},
-                  {match:99, date:'2026-07-11',city:'Miami',        venue:'Hard Rock Stadium',       opponentDesc:'Winner Match 95'},
-                  'atlanta'),
-  'D-1': makePath({match:81, date:'2026-07-01',city:'San Francisco',venue:"Levi's Stadium",          opponentDesc:'Best 3rd from B/E/F/I/J'},
-                  {match:94, date:'2026-07-06',city:'Seattle',      venue:'Lumen Field',             opponentDesc:'Winner Group G (Match 82)'},
-                  {match:98, date:'2026-07-10',city:'Los Angeles',  venue:'SoFi Stadium',            opponentDesc:'Winner Match 94'},
-                  'atlanta'),
-  'D-2': makePath({match:88, date:'2026-07-03',city:'Dallas',       venue:'AT&T Stadium',            opponentDesc:'Winner Group C'},
-                  {match:95, date:'2026-07-07',city:'Atlanta',      venue:'Mercedes-Benz Stadium',   opponentDesc:'Winner Match 87'},
-                  {match:99, date:'2026-07-11',city:'Miami',        venue:'Hard Rock Stadium',       opponentDesc:'Winner Match 95'},
-                  'atlanta'),
-  'E-1': makePath({match:81, date:'2026-07-01',city:'San Francisco',venue:"Levi's Stadium",          opponentDesc:'Best 3rd from B/E/F/I/J'},
-                  {match:94, date:'2026-07-06',city:'Seattle',      venue:'Lumen Field',             opponentDesc:'Winner Match 82'},
-                  {match:98, date:'2026-07-10',city:'Los Angeles',  venue:'SoFi Stadium',            opponentDesc:'Winner Match 94'},
-                  'atlanta'),
-  'E-2': makePath({match:86, date:'2026-07-02',city:'Miami',        venue:'Hard Rock Stadium',       opponentDesc:'Winner Group J'},
-                  {match:96, date:'2026-07-07',city:'Vancouver',    venue:'BC Place',                opponentDesc:'Winner Match 86'},
-                  {match:100,date:'2026-07-11',city:'Kansas City',  venue:'Arrowhead Stadium',       opponentDesc:'Winner Match 96'},
-                  'dallas'),
-  'F-1': makePath({match:88, date:'2026-07-03',city:'Dallas',       venue:'AT&T Stadium',            opponentDesc:'Runner-up Group D'},
-                  {match:95, date:'2026-07-07',city:'Atlanta',      venue:'Mercedes-Benz Stadium',   opponentDesc:'Winner Match 87'},
-                  {match:99, date:'2026-07-11',city:'Miami',        venue:'Hard Rock Stadium',       opponentDesc:'Winner Match 95'},
-                  'atlanta'),
-  'F-2': makePath({match:87, date:'2026-07-03',city:'Kansas City',  venue:'Arrowhead Stadium',       opponentDesc:'Winner Group K'},
-                  {match:96, date:'2026-07-07',city:'Vancouver',    venue:'BC Place',                opponentDesc:'Winner Match 86'},
-                  {match:100,date:'2026-07-11',city:'Kansas City',  venue:'Arrowhead Stadium',       opponentDesc:'Winner Match 96'},
-                  'dallas'),
-  'G-1': makePath({match:82, date:'2026-07-01',city:'Seattle',      venue:'Lumen Field',             opponentDesc:'Best 3rd from A/E/H/I/J'},
-                  {match:94, date:'2026-07-06',city:'Seattle',      venue:'Lumen Field',             opponentDesc:'Winner Group D (Match 81)'},
-                  {match:98, date:'2026-07-10',city:'Los Angeles',  venue:'SoFi Stadium',            opponentDesc:'Winner Match 94'},
-                  'atlanta'),
-  'G-2': makePath({match:88, date:'2026-07-03',city:'Dallas',       venue:'AT&T Stadium',            opponentDesc:'Runner-up Group D'},
-                  {match:95, date:'2026-07-07',city:'Atlanta',      venue:'Mercedes-Benz Stadium',   opponentDesc:'Winner Match 87'},
-                  {match:99, date:'2026-07-11',city:'Miami',        venue:'Hard Rock Stadium',       opponentDesc:'Winner Match 95'},
-                  'atlanta'),
-  'H-1': makePath({match:84, date:'2026-07-02',city:'Los Angeles',  venue:'SoFi Stadium',            opponentDesc:'Runner-up Group J'},
-                  {match:96, date:'2026-07-07',city:'Vancouver',    venue:'BC Place',                opponentDesc:'Winner Match 85'},
-                  {match:100,date:'2026-07-11',city:'Kansas City',  venue:'Arrowhead Stadium',       opponentDesc:'Winner Match 96'},
-                  'dallas'),
-  'H-2': makePath({match:80, date:'2026-06-29',city:'Atlanta',      venue:'Mercedes-Benz Stadium',   opponentDesc:'Winner Group L'},
-                  {match:94, date:'2026-07-06',city:'Seattle',      venue:'Lumen Field',             opponentDesc:'Winner Match 80'},
-                  {match:98, date:'2026-07-10',city:'Los Angeles',  venue:'SoFi Stadium',            opponentDesc:'Winner Match 94'},
-                  'atlanta'),
-  'I-1': makePath({match:85, date:'2026-07-02',city:'Boston',       venue:'Gillette Stadium',        opponentDesc:'Best 3rd from E/F/G/I/J'},
-                  {match:96, date:'2026-07-07',city:'Vancouver',    venue:'BC Place',                opponentDesc:'Winner Match 85'},
-                  {match:100,date:'2026-07-11',city:'Kansas City',  venue:'Arrowhead Stadium',       opponentDesc:'Winner Match 96'},
-                  'dallas'),
-  'I-2': makePath({match:86, date:'2026-07-02',city:'Miami',        venue:'Hard Rock Stadium',       opponentDesc:'Winner Group J'},
-                  {match:96, date:'2026-07-07',city:'Vancouver',    venue:'BC Place',                opponentDesc:'Winner Match 86'},
-                  {match:100,date:'2026-07-11',city:'Kansas City',  venue:'Arrowhead Stadium',       opponentDesc:'Winner Match 96'},
-                  'dallas'),
-  'J-1': makePath({match:79, date:'2026-06-28',city:'Mexico City',  venue:'Estadio Azteca',          opponentDesc:'Best 3rd from C/E/F/H/I'},
-                  {match:93, date:'2026-07-05',city:'Guadalajara',  venue:'Estadio Guadalajara',     opponentDesc:'Winner Match 79'},
-                  {match:97, date:'2026-07-09',city:'Guadalajara',  venue:'Estadio Guadalajara',     opponentDesc:'Winner Match 93'},
-                  'dallas'),
-  'J-2': makePath({match:84, date:'2026-07-02',city:'Los Angeles',  venue:'SoFi Stadium',            opponentDesc:'Winner Group H'},
-                  {match:96, date:'2026-07-07',city:'Vancouver',    venue:'BC Place',                opponentDesc:'Winner Match 85'},
-                  {match:100,date:'2026-07-11',city:'Kansas City',  venue:'Arrowhead Stadium',       opponentDesc:'Winner Match 96'},
-                  'dallas'),
-  'K-1': makePath({match:80, date:'2026-06-29',city:'Atlanta',      venue:'Mercedes-Benz Stadium',   opponentDesc:'Best 3rd from E/H/I/J/K'},
-                  {match:94, date:'2026-07-06',city:'Seattle',      venue:'Lumen Field',             opponentDesc:'Winner Match 80'},
-                  {match:98, date:'2026-07-10',city:'Los Angeles',  venue:'SoFi Stadium',            opponentDesc:'Winner Match 94'},
-                  'atlanta'),
-  'K-2': makePath({match:83, date:'2026-06-29',city:'Toronto',      venue:'BMO Field',               opponentDesc:'Runner-up Group L'},
-                  {match:95, date:'2026-07-07',city:'Atlanta',      venue:'Mercedes-Benz Stadium',   opponentDesc:'Winner Match 83'},
-                  {match:99, date:'2026-07-11',city:'Miami',        venue:'Hard Rock Stadium',       opponentDesc:'Winner Match 95'},
-                  'atlanta'),
-  'L-1': makePath({match:83, date:'2026-06-29',city:'Toronto',      venue:'BMO Field',               opponentDesc:'Runner-up Group K'},
-                  {match:95, date:'2026-07-07',city:'Atlanta',      venue:'Mercedes-Benz Stadium',   opponentDesc:'Winner Match 83'},
-                  {match:99, date:'2026-07-11',city:'Miami',        venue:'Hard Rock Stadium',       opponentDesc:'Winner Match 95'},
-                  'atlanta'),
-  'L-2': makePath({match:80, date:'2026-06-29',city:'Atlanta',      venue:'Mercedes-Benz Stadium',   opponentDesc:'Winner Group K'},
-                  {match:94, date:'2026-07-06',city:'Seattle',      venue:'Lumen Field',             opponentDesc:'Winner Match 80'},
-                  {match:98, date:'2026-07-10',city:'Los Angeles',  venue:'SoFi Stadium',            opponentDesc:'Winner Match 94'},
-                  'atlanta'),
-};
-
-// Reverse lookup: r32 match number → bracket position keys (e.g. 82 → ['B-2', 'G-1'])
-// Used by buildOpponents() to resolve "Winner Match X" R16 opponent descriptions.
-const R32_MATCH_TO_POSITIONS = {};
-for (const [key, path] of Object.entries(BRACKET_PATHS)) {
-  const m = path.r32?.match;
-  if (m) {
-    (R32_MATCH_TO_POSITIONS[m] = R32_MATCH_TO_POSITIONS[m] || []).push(key);
-  }
-}
-
-// Team name → ID mapping (consolidated — all display name variants from ESPN + FD fallbacks)
-const NAME_TO_ID = {
-	'United States':'usa','USA':'usa','Mexico':'mexico','Canada':'canada',
-	'Brazil':'brazil','Argentina':'argentina','Colombia':'colombia','Ecuador':'ecuador',
-	'Uruguay':'uruguay','Paraguay':'paraguay',
-	'Spain':'spain','France':'france','Germany':'germany','England':'england',
-	'Netherlands':'netherlands','Portugal':'portugal','Belgium':'belgium',
-	'Switzerland':'switzerland','Croatia':'croatia','Austria':'austria',
-	'Sweden':'sweden','Norway':'norway','Scotland':'scotland',
-	'Czech Republic':'czechia','Czechia':'czechia',
-	'Bosnia and Herzegovina':'bosnia','Bosnia-Herzegovina':'bosnia',
-	'Turkey':'turkey','Türkiye':'turkey',
-	'Morocco':'morocco','Senegal':'senegal','Egypt':'egypt','Ivory Coast':'ivorycoast',
-	"Côte d'Ivoire":'ivorycoast','Ghana':'ghana','South Africa':'southafrica',
-	'Algeria':'algeria','Tunisia':'tunisia','DR Congo':'drcongo','Congo DR':'drcongo',
-	'Cape Verde':'capeverde','Saudi Arabia':'saudiarabia',
-	'Japan':'japan','South Korea':'southkorea','Australia':'australia',
-	'Iran':'iran','Iraq':'iraq','Qatar':'qatar','Jordan':'jordan',
-	'Uzbekistan':'uzbekistan','New Zealand':'newzealand',
-	'Haiti':'haiti','Panama':'panama','Curaçao':'curacao','Curacao':'curacao',
-};
-
-function nameToId(name) {
-	return NAME_TO_ID[name] || null;
-}
 
 function log(msg) { console.log(`[${new Date().toISOString()}] ${msg}`); }
 
@@ -513,34 +324,9 @@ function computeStandings(espnMatches) {
 	return result;
 }
 
-// ─── Polymarket team name → ID (names as they appear in groupItemTitle) ─────────
-const PM_NAME_TO_ID = {
-  'Bosnia-Herzegovina':'bosnia', 'Turkiye':'turkey',
-};
-
-function pmNameToId(name) {
-	// First try dedicated Polymarket mapping, then fall back to general nameToId
-	if (PM_NAME_TO_ID[name]) return PM_NAME_TO_ID[name];
-	return nameToId(name);
-}
-
-// ─── Team id → Polymarket-compatible TLA(s) for matchup slug lookup ──────────────
-// Polymarket uses ISO 3166-1 alpha-3 codes for matchup slugs, not FIFA TLAs.
-// Most teams differ: NED → NLD, POR → PRT, SUI → CHE, CRO → HRV, URU → URY,
-// CPV → CVI, COD → CDR. South Korea's market uses both 'kor' and 'kr'
-// inconsistently, so we list multiple to try.
-const ID_TO_PM_TLA = {
-	mexico:['mex'], southafrica:['rsa'], southkorea:['kor', 'kr'], czechia:['cze'], canada:['can'],
-	bosnia:['bih'], qatar:['qat'], switzerland:['che'], brazil:['bra'], morocco:['mar'],
-	haiti:['hai'], scotland:['sco'], usa:['usa'], paraguay:['par'], australia:['aus'],
-	turkey:['tur'], germany:['ger'], curacao:['cuw'], ivorycoast:['civ'], ecuador:['ecu'],
-	netherlands:['nld'], japan:['jpn'], sweden:['swe'], tunisia:['tun'], belgium:['bel'],
-	egypt:['egy'], iran:['irn'], newzealand:['nzl'], spain:['esp'], capeverde:['cvi'],
-	saudiarabia:['ksa'], uruguay:['ury'], france:['fra'], senegal:['sen'], iraq:['irq'],
-	norway:['nor'], argentina:['arg'], algeria:['alg'], austria:['aut'], jordan:['jor'],
-	portugal:['prt'], drcongo:['cdr'], uzbekistan:['uzb'], colombia:['col'], england:['eng'],
-	croatia:['hrv'], ghana:['gha'], panama:['pan'],
-};
+// Polymarket name → id resolution comes from the shared registry's NAME_TO_ID
+// (which already includes 'Bosnia-Herzegovina', 'Turkiye', etc. as aliases).
+const pmNameToId = nameToId;
 
 // ─── Polymarket: fetch ALL stage probabilities (18 events total) ─────────────────
 // Returns { group, r32, r16, qf, sf, final, winner } — each { teamId: pct }
@@ -712,81 +498,6 @@ async function attachMatchupOdds(dailyMatches, existing) {
 	log(`Polymarket matchup odds: ${hits} fresh + ${carried} carried-forward / ${pending.length} active matches`);
 }
 
-// ─── Build group results for a team from match data ──────────────────────────
-const GROUP_SCHEDULE = {
-   A:[{md:1,h:'mexico',     a:'southafrica',d:'2026-06-11',v:'Estadio Azteca, Mexico City'},
-      {md:1,h:'southkorea', a:'czechia',    d:'2026-06-11',v:'Estadio Akron, Zapopan'},
-     {md:2,h:'czechia',    a:'southafrica',d:'2026-06-18',v:'Mercedes-Benz Stadium, Atlanta'},
-     {md:2,h:'mexico',     a:'southkorea', d:'2026-06-18',v:'Estadio Akron, Zapopan'},
-     {md:3,h:'czechia',    a:'mexico',     d:'2026-06-24',v:'Estadio Akron, Zapopan'},
-     {md:3,h:'southafrica',a:'southkorea', d:'2026-06-24',v:'Estadio Akron, Zapopan'}],
-  B:[{md:1,h:'canada',     a:'bosnia',     d:'2026-06-12',v:'BMO Field, Toronto'},
-     {md:1,h:'qatar',      a:'switzerland',d:'2026-06-13',v:"Levi's Stadium, San Francisco"},
-     {md:2,h:'switzerland',a:'bosnia',     d:'2026-06-18',v:"Levi's Stadium, San Francisco"},
-     {md:2,h:'canada',     a:'qatar',      d:'2026-06-18',v:'BC Place, Vancouver'},
-     {md:3,h:'switzerland',a:'canada',     d:'2026-06-24',v:'BC Place, Vancouver'},
-     {md:3,h:'bosnia',     a:'qatar',      d:'2026-06-24',v:'Lumen Field, Seattle'}],
-  C:[{md:1,h:'brazil',     a:'morocco',    d:'2026-06-13',v:'MetLife Stadium, New Jersey'},
-     {md:1,h:'haiti',      a:'scotland',   d:'2026-06-13',v:'Gillette Stadium, Boston'},
-     {md:2,h:'scotland',   a:'morocco',    d:'2026-06-19',v:'Gillette Stadium, Boston'},
-     {md:2,h:'brazil',     a:'haiti',      d:'2026-06-19',v:'Lincoln Financial Field, Philadelphia'},
-     {md:3,h:'scotland',   a:'brazil',     d:'2026-06-24',v:'Hard Rock Stadium, Miami'},
-     {md:3,h:'morocco',    a:'haiti',      d:'2026-06-24',v:'Mercedes-Benz Stadium, Atlanta'}],
-  D:[{md:1,h:'usa',        a:'paraguay',   d:'2026-06-12',v:'SoFi Stadium, Los Angeles'},
-     {md:1,h:'australia',  a:'turkey',     d:'2026-06-13',v:'BC Place, Vancouver'},
-     {md:2,h:'usa',        a:'australia',  d:'2026-06-19',v:'Lumen Field, Seattle'},
-     {md:2,h:'turkey',     a:'paraguay',   d:'2026-06-19',v:"Levi's Stadium, San Francisco"},
-     {md:3,h:'turkey',     a:'usa',        d:'2026-06-25',v:'SoFi Stadium, Los Angeles'},
-     {md:3,h:'paraguay',   a:'australia',  d:'2026-06-25',v:"Levi's Stadium, San Francisco"}],
-  E:[{md:1,h:'germany',    a:'curacao',    d:'2026-06-14',v:'NRG Stadium, Houston'},
-     {md:1,h:'ivorycoast', a:'ecuador',    d:'2026-06-14',v:'Lincoln Financial Field, Philadelphia'},
-     {md:2,h:'germany',    a:'ivorycoast', d:'2026-06-20',v:'Mercedes-Benz Stadium, Atlanta'},
-     {md:2,h:'ecuador',    a:'curacao',    d:'2026-06-20',v:'MetLife Stadium, New Jersey'},
-     {md:3,h:'ecuador',    a:'germany',    d:'2026-06-25',v:'MetLife Stadium, New Jersey'},
-     {md:3,h:'curacao',    a:'ivorycoast', d:'2026-06-25',v:'Lincoln Financial Field, Philadelphia'}],
-  F:[{md:1,h:'netherlands',a:'japan',      d:'2026-06-14',v:'Arrowhead Stadium, Kansas City'},
-     {md:1,h:'sweden',     a:'tunisia',    d:'2026-06-14',v:'Arrowhead Stadium, Kansas City'},
-     {md:2,h:'netherlands',a:'sweden',     d:'2026-06-20',v:'Arrowhead Stadium, Kansas City'},
-     {md:2,h:'tunisia',    a:'japan',      d:'2026-06-20',v:'Arrowhead Stadium, Kansas City'},
-     {md:3,h:'japan',      a:'sweden',     d:'2026-06-25',v:'AT&T Stadium, Dallas'},
-     {md:3,h:'tunisia',    a:'netherlands',d:'2026-06-25',v:'Arrowhead Stadium, Kansas City'}],
-  G:[{md:1,h:'belgium',    a:'egypt',      d:'2026-06-15',v:'Lumen Field, Seattle'},
-     {md:1,h:'iran',       a:'newzealand', d:'2026-06-15',v:'SoFi Stadium, Los Angeles'},
-     {md:2,h:'belgium',    a:'iran',       d:'2026-06-21',v:'SoFi Stadium, Los Angeles'},
-     {md:2,h:'newzealand', a:'egypt',      d:'2026-06-21',v:'BC Place, Vancouver'},
-     {md:3,h:'egypt',      a:'iran',       d:'2026-06-26',v:'Lumen Field, Seattle'},
-     {md:3,h:'newzealand', a:'belgium',    d:'2026-06-26',v:'BC Place, Vancouver'}],
-  H:[{md:1,h:'spain',      a:'capeverde',  d:'2026-06-15',v:'Mercedes-Benz Stadium, Atlanta'},
-     {md:1,h:'saudiarabia',a:'uruguay',    d:'2026-06-15',v:'Hard Rock Stadium, Miami'},
-     {md:2,h:'spain',      a:'saudiarabia',d:'2026-06-21',v:'Mercedes-Benz Stadium, Atlanta'},
-     {md:2,h:'uruguay',    a:'capeverde',  d:'2026-06-21',v:'Hard Rock Stadium, Miami'},
-     {md:3,h:'capeverde',  a:'saudiarabia',d:'2026-06-26',v:'NRG Stadium, Houston'},
-     {md:3,h:'uruguay',    a:'spain',      d:'2026-06-26',v:'Estadio Guadalajara, Guadalajara'}],
-  I:[{md:1,h:'france',     a:'senegal',    d:'2026-06-16',v:'MetLife Stadium, New Jersey'},
-     {md:1,h:'iraq',       a:'norway',     d:'2026-06-16',v:'Gillette Stadium, Boston'},
-     {md:2,h:'france',     a:'iraq',       d:'2026-06-22',v:'Lincoln Financial Field, Philadelphia'},
-     {md:2,h:'norway',     a:'senegal',    d:'2026-06-22',v:'MetLife Stadium, New Jersey'},
-     {md:3,h:'norway',     a:'france',     d:'2026-06-26',v:'Gillette Stadium, Boston'},
-     {md:3,h:'senegal',    a:'iraq',       d:'2026-06-26',v:'BMO Field, Toronto'}],
-  J:[{md:1,h:'argentina',  a:'algeria',    d:'2026-06-16',v:'Arrowhead Stadium, Kansas City'},
-     {md:1,h:'austria',    a:'jordan',     d:'2026-06-16',v:"Levi's Stadium, San Francisco"},
-     {md:2,h:'argentina',  a:'austria',    d:'2026-06-22',v:'SoFi Stadium, Los Angeles'},
-     {md:2,h:'jordan',     a:'algeria',    d:'2026-06-22',v:'Arrowhead Stadium, Kansas City'},
-     {md:3,h:'algeria',    a:'austria',    d:'2026-06-27',v:'Arrowhead Stadium, Kansas City'},
-     {md:3,h:'jordan',     a:'argentina',  d:'2026-06-27',v:'AT&T Stadium, Dallas'}],
-  K:[{md:1,h:'portugal',   a:'drcongo',    d:'2026-06-17',v:'NRG Stadium, Houston'},
-     {md:1,h:'uzbekistan', a:'colombia',   d:'2026-06-17',v:'Estadio Azteca, Mexico City'},
-     {md:2,h:'portugal',   a:'uzbekistan', d:'2026-06-23',v:'NRG Stadium, Houston'},
-     {md:2,h:'colombia',   a:'drcongo',    d:'2026-06-23',v:'Estadio Azteca, Mexico City'},
-     {md:3,h:'colombia',   a:'portugal',   d:'2026-06-27',v:'Hard Rock Stadium, Miami'},
-     {md:3,h:'drcongo',    a:'uzbekistan', d:'2026-06-27',v:'Mercedes-Benz Stadium, Atlanta'}],
-  L:[{md:1,h:'england',    a:'croatia',    d:'2026-06-17',v:'AT&T Stadium, Dallas'},
-     {md:1,h:'ghana',      a:'panama',     d:'2026-06-17',v:'BMO Field, Toronto'},
-     {md:2,h:'england',    a:'ghana',      d:'2026-06-23',v:'Lincoln Financial Field, Philadelphia'},
-     {md:2,h:'panama',     a:'croatia',    d:'2026-06-23',v:'BMO Field, Toronto'},
-     {md:3,h:'panama',     a:'england',    d:'2026-06-27',v:'MetLife Stadium, New Jersey'},
-     {md:3,h:'croatia',    a:'ghana',      d:'2026-06-27',v:'Lincoln Financial Field, Philadelphia'}],
-};
 
 function buildGroupResults(teamId, group, matchIndex, existingGroupResults = []) {
   const sched = GROUP_SCHEDULE[group] || [];

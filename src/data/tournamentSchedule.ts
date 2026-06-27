@@ -1,152 +1,49 @@
-/**
- * Static tournament schedule data used for the "Games to Watch" feature.
- * Mirrors GROUP_SCHEDULE and BRACKET_PATHS from scripts/update-data.js.
- */
+// Re-exports the canonical tournament schedule + bracket from
+// scripts/lib/tournament.js as the single source of truth.
 
-/** All group-stage matches: group letter → array of { matchday, homeId, awayId, date, venue } */
-export const GROUP_SCHEDULE: Record<string, { md: number; h: string; a: string; d: string; v: string }[]> = {
-	A:[{md:1,h:'mexico',     a:'southafrica',d:'2026-06-11',v:'Estadio Azteca, Mexico City'},
-	   {md:1,h:'southkorea', a:'czechia',    d:'2026-06-11',v:'Estadio Akron, Zapopan'},
-	   {md:2,h:'czechia',    a:'southafrica',d:'2026-06-18',v:'Mercedes-Benz Stadium, Atlanta'},
-	   {md:2,h:'mexico',     a:'southkorea', d:'2026-06-18',v:'Estadio Akron, Zapopan'},
-	   {md:3,h:'czechia',    a:'mexico',     d:'2026-06-24',v:'Estadio Akron, Zapopan'},
-	   {md:3,h:'southafrica',a:'southkorea', d:'2026-06-24',v:'Estadio Akron, Zapopan'}],
-	B:[{md:1,h:'canada',     a:'bosnia',     d:'2026-06-12',v:'BMO Field, Toronto'},
-	   {md:1,h:'qatar',      a:'switzerland',d:'2026-06-13',v:"Levi's Stadium, San Francisco"},
-	   {md:2,h:'switzerland',a:'bosnia',     d:'2026-06-18',v:"Levi's Stadium, San Francisco"},
-	   {md:2,h:'canada',     a:'qatar',      d:'2026-06-18',v:'BC Place, Vancouver'},
-	   {md:3,h:'switzerland',a:'canada',     d:'2026-06-24',v:'BC Place, Vancouver'},
-	   {md:3,h:'bosnia',     a:'qatar',      d:'2026-06-24',v:'Lumen Field, Seattle'}],
-	C:[{md:1,h:'brazil',     a:'morocco',    d:'2026-06-13',v:'MetLife Stadium, New Jersey'},
-	   {md:1,h:'haiti',      a:'scotland',   d:'2026-06-13',v:'Gillette Stadium, Boston'},
-	   {md:2,h:'scotland',   a:'morocco',    d:'2026-06-19',v:'Gillette Stadium, Boston'},
-	   {md:2,h:'brazil',     a:'haiti',      d:'2026-06-19',v:'Lincoln Financial Field, Philadelphia'},
-	   {md:3,h:'scotland',   a:'brazil',     d:'2026-06-24',v:'Hard Rock Stadium, Miami'},
-	   {md:3,h:'morocco',    a:'haiti',      d:'2026-06-24',v:'Mercedes-Benz Stadium, Atlanta'}],
-	D:[{md:1,h:'usa',        a:'paraguay',   d:'2026-06-12',v:'SoFi Stadium, Los Angeles'},
-	   {md:1,h:'australia',  a:'turkey',     d:'2026-06-13',v:'BC Place, Vancouver'},
-	   {md:2,h:'usa',        a:'australia',  d:'2026-06-19',v:'Lumen Field, Seattle'},
-	   {md:2,h:'turkey',     a:'paraguay',   d:'2026-06-19',v:"Levi's Stadium, San Francisco"},
-	   {md:3,h:'turkey',     a:'usa',        d:'2026-06-25',v:'SoFi Stadium, Los Angeles'},
-	   {md:3,h:'paraguay',   a:'australia',  d:'2026-06-25',v:"Levi's Stadium, San Francisco"}],
-	E:[{md:1,h:'germany',    a:'curacao',    d:'2026-06-14',v:'NRG Stadium, Houston'},
-	   {md:1,h:'ivorycoast', a:'ecuador',    d:'2026-06-14',v:'Lincoln Financial Field, Philadelphia'},
-	   {md:2,h:'germany',    a:'ivorycoast', d:'2026-06-20',v:'Mercedes-Benz Stadium, Atlanta'},
-	   {md:2,h:'ecuador',    a:'curacao',    d:'2026-06-20',v:'MetLife Stadium, New Jersey'},
-	   {md:3,h:'ecuador',    a:'germany',    d:'2026-06-25',v:'MetLife Stadium, New Jersey'},
-	   {md:3,h:'curacao',    a:'ivorycoast', d:'2026-06-25',v:'Lincoln Financial Field, Philadelphia'}],
-	F:[{md:1,h:'netherlands',a:'japan',      d:'2026-06-14',v:'Arrowhead Stadium, Kansas City'},
-	   {md:1,h:'sweden',     a:'tunisia',    d:'2026-06-14',v:'Arrowhead Stadium, Kansas City'},
-	   {md:2,h:'netherlands',a:'sweden',     d:'2026-06-20',v:'Arrowhead Stadium, Kansas City'},
-	   {md:2,h:'tunisia',    a:'japan',      d:'2026-06-20',v:'Arrowhead Stadium, Kansas City'},
-	   {md:3,h:'japan',      a:'sweden',     d:'2026-06-25',v:'AT&T Stadium, Dallas'},
-	   {md:3,h:'tunisia',    a:'netherlands',d:'2026-06-25',v:'Arrowhead Stadium, Kansas City'}],
-	G:[{md:1,h:'belgium',    a:'egypt',      d:'2026-06-15',v:'Lumen Field, Seattle'},
-	   {md:1,h:'iran',       a:'newzealand', d:'2026-06-15',v:'SoFi Stadium, Los Angeles'},
-	   {md:2,h:'belgium',    a:'iran',       d:'2026-06-21',v:'SoFi Stadium, Los Angeles'},
-	   {md:2,h:'newzealand', a:'egypt',      d:'2026-06-21',v:'BC Place, Vancouver'},
-	   {md:3,h:'egypt',      a:'iran',       d:'2026-06-26',v:'Lumen Field, Seattle'},
-	   {md:3,h:'newzealand', a:'belgium',    d:'2026-06-26',v:'BC Place, Vancouver'}],
-	H:[{md:1,h:'spain',      a:'capeverde',  d:'2026-06-15',v:'Mercedes-Benz Stadium, Atlanta'},
-	   {md:1,h:'saudiarabia',a:'uruguay',    d:'2026-06-15',v:'Hard Rock Stadium, Miami'},
-	   {md:2,h:'spain',      a:'saudiarabia',d:'2026-06-21',v:'Mercedes-Benz Stadium, Atlanta'},
-	   {md:2,h:'uruguay',    a:'capeverde',  d:'2026-06-21',v:'Hard Rock Stadium, Miami'},
-	   {md:3,h:'capeverde',  a:'saudiarabia',d:'2026-06-26',v:'NRG Stadium, Houston'},
-	   {md:3,h:'uruguay',    a:'spain',      d:'2026-06-26',v:'Estadio Guadalajara, Guadalajara'}],
-	I:[{md:1,h:'france',     a:'senegal',    d:'2026-06-16',v:'MetLife Stadium, New Jersey'},
-	   {md:1,h:'iraq',       a:'norway',     d:'2026-06-16',v:'Gillette Stadium, Boston'},
-	   {md:2,h:'france',     a:'iraq',       d:'2026-06-22',v:'Lincoln Financial Field, Philadelphia'},
-	   {md:2,h:'norway',     a:'senegal',    d:'2026-06-22',v:'MetLife Stadium, New Jersey'},
-	   {md:3,h:'norway',     a:'france',     d:'2026-06-26',v:'Gillette Stadium, Boston'},
-	   {md:3,h:'senegal',    a:'iraq',       d:'2026-06-26',v:'BMO Field, Toronto'}],
-	J:[{md:1,h:'argentina',  a:'algeria',    d:'2026-06-16',v:'Arrowhead Stadium, Kansas City'},
-	   {md:1,h:'austria',    a:'jordan',     d:'2026-06-16',v:"Levi's Stadium, San Francisco"},
-	   {md:2,h:'argentina',  a:'austria',    d:'2026-06-22',v:'SoFi Stadium, Los Angeles'},
-	   {md:2,h:'jordan',     a:'algeria',    d:'2026-06-22',v:'Arrowhead Stadium, Kansas City'},
-	   {md:3,h:'algeria',    a:'austria',    d:'2026-06-27',v:'Arrowhead Stadium, Kansas City'},
-	   {md:3,h:'jordan',     a:'argentina',  d:'2026-06-27',v:'AT&T Stadium, Dallas'}],
-	K:[{md:1,h:'portugal',   a:'drcongo',    d:'2026-06-17',v:'NRG Stadium, Houston'},
-	   {md:1,h:'uzbekistan', a:'colombia',   d:'2026-06-17',v:'Estadio Azteca, Mexico City'},
-	   {md:2,h:'portugal',   a:'uzbekistan', d:'2026-06-23',v:'NRG Stadium, Houston'},
-	   {md:2,h:'colombia',   a:'drcongo',    d:'2026-06-23',v:'Estadio Azteca, Mexico City'},
-	   {md:3,h:'colombia',   a:'portugal',   d:'2026-06-27',v:'Hard Rock Stadium, Miami'},
-	   {md:3,h:'drcongo',    a:'uzbekistan', d:'2026-06-27',v:'Mercedes-Benz Stadium, Atlanta'}],
-	L:[{md:1,h:'england',    a:'croatia',    d:'2026-06-17',v:'AT&T Stadium, Dallas'},
-	   {md:1,h:'ghana',      a:'panama',     d:'2026-06-17',v:'BMO Field, Toronto'},
-	   {md:2,h:'england',    a:'ghana',      d:'2026-06-23',v:'Lincoln Financial Field, Philadelphia'},
-	   {md:2,h:'panama',     a:'croatia',    d:'2026-06-23',v:'BMO Field, Toronto'},
-	   {md:3,h:'panama',     a:'england',    d:'2026-06-27',v:'MetLife Stadium, New Jersey'},
-	   {md:3,h:'croatia',    a:'ghana',      d:'2026-06-27',v:'Lincoln Financial Field, Philadelphia'}],
+import {
+	GROUP_SCHEDULE as GROUP_SCHEDULE_JS,
+	BRACKET_PATHS as BRACKET_PATHS_JS,
+	MATCH_DATES as MATCH_DATES_JS,
+	R32_MATCH_TO_POSITIONS as R32_MATCH_TO_POSITIONS_JS,
+	STAGE_ORDER as STAGE_ORDER_JS,
+	KNOCKOUT_STAGES as KNOCKOUT_STAGES_JS,
+	GROUP_LETTERS as GROUP_LETTERS_JS,
+} from '../../scripts/lib/tournament.js'
+
+import { ESPN_SLUG_MAP } from '../components/ui/teamLookup'
+
+export interface GroupFixture {
+	md: number
+	h: string
+	a: string
+	d: string
+	v: string
 }
 
-/**
- * Maps knockout match numbers to their scheduled dates.
- * Derived from BRACKET_PATHS in scripts/update-data.js.
- */
-export const MATCH_DATES: Record<number, string> = {
-	79: '2026-06-28', 80: '2026-06-29',
-	81: '2026-07-01', 82: '2026-07-01',
-	84: '2026-07-02', 85: '2026-07-02', 86: '2026-07-02',
-	87: '2026-07-03', 88: '2026-07-03',
-	93: '2026-07-05', 94: '2026-07-06',
-	95: '2026-07-07', 96: '2026-07-07',
-	97: '2026-07-09', 98: '2026-07-10',
-	99: '2026-07-11', 100: '2026-07-11',
-	101: '2026-07-14', 102: '2026-07-15',
-	104: '2026-07-19',
+export interface BracketStage {
+	match: number
+	date: string
+	city: string
+	venue: string
+	opponentDesc: string
 }
 
-/**
- * Maps our internal team IDs to ESPN API slugs for the team endpoint.
- * ESPN uses ISO 3-letter codes (or similar short abbreviations) as slugs.
- */
-export const ESPN_SLUG_MAP: Record<string, string> = {
-	mexico: 'mex',
-	southafrica: 'rsa',
-	southkorea: 'kors',
-	czechia: 'cze',
-	canada: 'can',
-	bosnia: 'bih',
-	qatar: 'qat',
-	switzerland: 'sui',
-	brazil: 'bra',
-	morocco: 'mar',
-	haiti: 'hai',
-	scotland: 'sco',
-	usa: 'usa',
-	paraguay: 'par',
-	australia: 'aus',
-	turkey: 'tur',
-	germany: 'ger',
-	curacao: '11678',
-	ivorycoast: 'civ',
-	ecuador: 'ecu',
-	netherlands: 'ned',
-	japan: 'jpn',
-	sweden: 'swe',
-	tunisia: 'tun',
-	belgium: 'bel',
-	egypt: 'egy',
-	iran: 'irn',
-	newzealand: 'nzl',
-	spain: 'esp',
-	capeverde: 'cpv',
-	saudiarabia: 'ksa',
-	uruguay: 'uru',
-	france: 'fra',
-	senegal: 'sen',
-	iraq: 'irq',
-	norway: 'nor',
-	argentina: 'arg',
-	algeria: 'alg',
-	austria: 'aut',
-	jordan: 'jor',
-	portugal: 'por',
-	drcongo: 'rdc',
-	uzbekistan: 'uzb',
-	colombia: 'col',
-	england: 'eng',
-	croatia: 'cro',
-	ghana: 'gha',
-	panama: 'pan',
+export interface BracketPath {
+	r32: BracketStage
+	r16: BracketStage
+	qf: BracketStage
+	sf: BracketStage
+	final: BracketStage
 }
+
+export const GROUP_SCHEDULE = GROUP_SCHEDULE_JS as Record<string, GroupFixture[]>
+export const BRACKET_PATHS = BRACKET_PATHS_JS as Record<string, BracketPath>
+export const MATCH_DATES = MATCH_DATES_JS as Record<number, string>
+export const R32_MATCH_TO_POSITIONS = R32_MATCH_TO_POSITIONS_JS as Record<number, string[]>
+export const STAGE_ORDER = STAGE_ORDER_JS as readonly string[]
+export const KNOCKOUT_STAGES = KNOCKOUT_STAGES_JS as readonly string[]
+export const GROUP_LETTERS = GROUP_LETTERS_JS as readonly string[]
+
+// Re-exported so consumers don't need a second import path.
+export { ESPN_SLUG_MAP }
