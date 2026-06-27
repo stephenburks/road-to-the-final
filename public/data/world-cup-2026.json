@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-27T21:03:28.389Z",
+  "lastUpdated": "2026-06-27T23:02:18.851Z",
   "snapshotDate": "2026-06-27",
   "isHistorical": false,
   "sourceSummary": {
@@ -764,8 +764,8 @@
         }
       ],
       "winProbabilities": {
-        "colombia": 52,
-        "portugal": 49,
+        "colombia": 49,
+        "portugal": 52,
         "drcongo": 0,
         "uzbekistan": 0
       }
@@ -775,64 +775,64 @@
         {
           "teamId": "england",
           "team": "England",
-          "played": 2,
-          "w": 1,
+          "played": 3,
+          "w": 2,
           "d": 1,
           "l": 0,
-          "gf": 4,
+          "gf": 6,
           "ga": 2,
-          "pts": 4,
-          "gd": 2,
+          "pts": 7,
+          "gd": 4,
           "pos": 1,
           "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿"
         },
         {
-          "teamId": "ghana",
-          "team": "Ghana",
-          "played": 2,
-          "w": 1,
-          "d": 1,
-          "l": 0,
-          "gf": 1,
-          "ga": 0,
-          "pts": 4,
-          "gd": 1,
-          "pos": 2,
-          "flag": "🇬🇭"
-        },
-        {
           "teamId": "croatia",
           "team": "Croatia",
-          "played": 2,
-          "w": 1,
+          "played": 3,
+          "w": 2,
           "d": 0,
           "l": 1,
-          "gf": 3,
-          "ga": 4,
-          "pts": 3,
-          "gd": -1,
-          "pos": 3,
+          "gf": 5,
+          "ga": 5,
+          "pts": 6,
+          "gd": 0,
+          "pos": 2,
           "flag": "🇭🇷"
+        },
+        {
+          "teamId": "ghana",
+          "team": "Ghana",
+          "played": 3,
+          "w": 1,
+          "d": 1,
+          "l": 1,
+          "gf": 2,
+          "ga": 2,
+          "pts": 4,
+          "gd": 0,
+          "pos": 3,
+          "flag": "🇬🇭"
         },
         {
           "teamId": "panama",
           "team": "Panama",
-          "played": 2,
+          "played": 3,
           "w": 0,
           "d": 0,
-          "l": 2,
+          "l": 3,
           "gf": 0,
-          "ga": 2,
+          "ga": 4,
           "pts": 0,
-          "gd": -2,
+          "gd": -4,
           "pos": 4,
           "flag": "🇵🇦"
         }
       ],
       "winProbabilities": {
-        "england": 88,
-        "ghana": 5,
-        "croatia": 7,
+        "england": 100,
+        "croatia": 0,
+        "ghana": 0,
         "panama": 0
       }
     }
@@ -924,7 +924,7 @@
         "r16": 62,
         "qf": 30,
         "sf": 14,
-        "final": 6,
+        "final": 7,
         "winner": 1,
         "source": "market"
       },
@@ -1279,12 +1279,12 @@
           },
           {
             "group": "L",
-            "likelyTeam": "Ghana",
-            "flag": "🇬🇭",
-            "fifaRank": 60,
-            "difficulty": 1,
-            "label": "Favorable",
-            "color": "#22C55E",
+            "likelyTeam": "Croatia",
+            "flag": "🇭🇷",
+            "fifaRank": 10,
+            "difficulty": 5,
+            "label": "Danger",
+            "color": "#EF4444",
             "note": "Runner-up of Group L",
             "pct": null
           }
@@ -1368,8 +1368,8 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 17,
-        "r16": 6,
+        "r32": 11,
+        "r16": 4,
         "qf": 3,
         "sf": 1,
         "final": 1,
@@ -1519,12 +1519,12 @@
           },
           {
             "group": "L",
-            "likelyTeam": "Ghana",
-            "flag": "🇬🇭",
-            "fifaRank": 60,
-            "difficulty": 1,
-            "label": "Favorable",
-            "color": "#22C55E",
+            "likelyTeam": "Croatia",
+            "flag": "🇭🇷",
+            "fifaRank": 10,
+            "difficulty": 5,
+            "label": "Danger",
+            "color": "#EF4444",
             "note": "Runner-up of Group L",
             "pct": null
           }
@@ -1752,12 +1752,12 @@
           },
           {
             "group": "L",
-            "likelyTeam": "Ghana",
-            "flag": "🇬🇭",
-            "fifaRank": 60,
-            "difficulty": 1,
-            "label": "Favorable",
-            "color": "#22C55E",
+            "likelyTeam": "Croatia",
+            "flag": "🇭🇷",
+            "fifaRank": 10,
+            "difficulty": 5,
+            "label": "Danger",
+            "color": "#EF4444",
             "note": "Runner-up of Group L",
             "pct": null
           }
@@ -2511,7 +2511,7 @@
         "r32": 100,
         "r16": 70,
         "qf": 27,
-        "sf": 8,
+        "sf": 7,
         "final": 3,
         "winner": 1,
         "source": "market"
@@ -2722,8 +2722,8 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 69,
-        "qf": 47,
+        "r16": 68,
+        "qf": 49,
         "sf": 28,
         "final": 14,
         "winner": 6,
@@ -2826,12 +2826,12 @@
           },
           {
             "group": "L",
-            "likelyTeam": "Croatia",
-            "flag": "🇭🇷",
-            "fifaRank": 10,
-            "difficulty": 5,
-            "label": "Danger",
-            "color": "#EF4444",
+            "likelyTeam": "Ghana",
+            "flag": "🇬🇭",
+            "fifaRank": 60,
+            "difficulty": 1,
+            "label": "Favorable",
+            "color": "#22C55E",
             "note": "3rd-place team from Group L",
             "pct": null
           }
@@ -2936,7 +2936,7 @@
       "advanceProbabilities": {
         "r32": 100,
         "r16": 37,
-        "qf": 30,
+        "qf": 29,
         "sf": 12,
         "final": 6,
         "winner": 1,
@@ -3226,7 +3226,7 @@
       "group": "C",
       "confederation": "UEFA",
       "fifaRank": 39,
-      "eliminated": false,
+      "eliminated": true,
       "currentStage": "group_stage",
       "groupResults": [
         {
@@ -3298,7 +3298,7 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 1,
+        "r32": 0,
         "r16": 0,
         "qf": 0,
         "sf": 0,
@@ -3482,7 +3482,7 @@
         "r32": 100,
         "r16": 83,
         "qf": 46,
-        "sf": 18,
+        "sf": 17,
         "final": 6,
         "winner": 2,
         "source": "market"
@@ -3716,7 +3716,7 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 19,
+        "r16": 17,
         "qf": 3,
         "sf": 1,
         "final": 1,
@@ -4255,7 +4255,7 @@
       "advanceProbabilities": {
         "r32": 100,
         "r16": 83,
-        "qf": 32,
+        "qf": 33,
         "sf": 19,
         "final": 10,
         "winner": 4,
@@ -4696,7 +4696,7 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 34,
+        "r16": 35,
         "qf": 10,
         "sf": 4,
         "final": 2,
@@ -4863,7 +4863,7 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 40,
+        "r16": 39,
         "qf": 15,
         "sf": 7,
         "final": 3,
@@ -5066,9 +5066,9 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 63,
+        "r16": 64,
         "qf": 50,
-        "sf": 22,
+        "sf": 23,
         "final": 14,
         "winner": 5,
         "source": "market"
@@ -5236,9 +5236,9 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 30,
+        "r16": 31,
         "qf": 17,
-        "sf": 10,
+        "sf": 9,
         "final": 4,
         "winner": 1,
         "source": "market"
@@ -5431,7 +5431,7 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 12,
+        "r16": 11,
         "qf": 6,
         "sf": 3,
         "final": 2,
@@ -5792,9 +5792,9 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 64,
-        "qf": 34,
-        "sf": 10,
+        "r16": 63,
+        "qf": 36,
+        "sf": 11,
         "final": 4,
         "winner": 1,
         "source": "market"
@@ -6020,7 +6020,7 @@
       "advanceProbabilities": {
         "r32": 100,
         "r16": 58,
-        "qf": 8,
+        "qf": 9,
         "sf": 3,
         "final": 2,
         "winner": 0,
@@ -6201,11 +6201,11 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 75,
-        "r16": 17,
+        "r32": 70,
+        "r16": 18,
         "qf": 6,
-        "sf": 1,
-        "final": 1,
+        "sf": 0,
+        "final": 0,
         "winner": 0,
         "source": "market"
       },
@@ -6556,9 +6556,9 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 83,
-        "qf": 61,
-        "sf": 48,
+        "r16": 81,
+        "qf": 62,
+        "sf": 47,
         "final": 25,
         "winner": 11,
         "source": "market"
@@ -6729,7 +6729,7 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 8,
+        "r16": 7,
         "qf": 2,
         "sf": 2,
         "final": 1,
@@ -6824,12 +6824,12 @@
           },
           {
             "group": "L",
-            "likelyTeam": "Ghana",
-            "flag": "🇬🇭",
-            "fifaRank": 60,
-            "difficulty": 1,
-            "label": "Favorable",
-            "color": "#22C55E",
+            "likelyTeam": "Croatia",
+            "flag": "🇭🇷",
+            "fifaRank": 10,
+            "difficulty": 5,
+            "label": "Danger",
+            "color": "#EF4444",
             "note": "Runner-up of Group L",
             "pct": null
           }
@@ -7027,12 +7027,12 @@
           },
           {
             "group": "L",
-            "likelyTeam": "Ghana",
-            "flag": "🇬🇭",
-            "fifaRank": 60,
-            "difficulty": 1,
-            "label": "Favorable",
-            "color": "#22C55E",
+            "likelyTeam": "Croatia",
+            "flag": "🇭🇷",
+            "fifaRank": 10,
+            "difficulty": 5,
+            "label": "Danger",
+            "color": "#EF4444",
             "note": "Runner-up of Group L",
             "pct": null
           }
@@ -7238,12 +7238,12 @@
           },
           {
             "group": "L",
-            "likelyTeam": "Ghana",
-            "flag": "🇬🇭",
-            "fifaRank": 60,
-            "difficulty": 1,
-            "label": "Favorable",
-            "color": "#22C55E",
+            "likelyTeam": "Croatia",
+            "flag": "🇭🇷",
+            "fifaRank": 10,
+            "difficulty": 5,
+            "label": "Danger",
+            "color": "#EF4444",
             "note": "Runner-up of Group L",
             "pct": null
           }
@@ -7327,11 +7327,11 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 89,
+        "r16": 88,
         "qf": 68,
         "sf": 52,
-        "final": 35,
-        "winner": 23,
+        "final": 36,
+        "winner": 24,
         "source": "market"
       },
       "path": {
@@ -7542,7 +7542,7 @@
       "advanceProbabilities": {
         "r32": 100,
         "r16": 28,
-        "qf": 16,
+        "qf": 15,
         "sf": 4,
         "final": 2,
         "winner": 0,
@@ -7890,7 +7890,7 @@
         "r32": 100,
         "r16": 66,
         "qf": 32,
-        "sf": 16,
+        "sf": 15,
         "final": 8,
         "winner": 2,
         "source": "market"
@@ -8049,10 +8049,10 @@
       "advanceProbabilities": {
         "r32": 100,
         "r16": 94,
-        "qf": 79,
-        "sf": 51,
+        "qf": 80,
+        "sf": 53,
         "final": 35,
-        "winner": 19,
+        "winner": 18,
         "source": "market"
       },
       "path": {
@@ -8240,7 +8240,7 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 72,
+        "r32": 73,
         "r16": 20,
         "qf": 5,
         "sf": 2,
@@ -8409,8 +8409,8 @@
       "advanceProbabilities": {
         "r32": 85,
         "r16": 16,
-        "qf": 7,
-        "sf": 2,
+        "qf": 6,
+        "sf": 3,
         "final": 2,
         "winner": 0,
         "source": "market"
@@ -8739,9 +8739,9 @@
       "advanceProbabilities": {
         "r32": 100,
         "r16": 76,
-        "qf": 47,
-        "sf": 29,
-        "final": 16,
+        "qf": 49,
+        "sf": 30,
+        "final": 18,
         "winner": 8,
         "source": "market"
       },
@@ -8798,12 +8798,12 @@
         "r32": [
           {
             "group": "L",
-            "likelyTeam": "Ghana",
-            "flag": "🇬🇭",
-            "fifaRank": 60,
-            "difficulty": 1,
-            "label": "Favorable",
-            "color": "#22C55E",
+            "likelyTeam": "Croatia",
+            "flag": "🇭🇷",
+            "fifaRank": 10,
+            "difficulty": 5,
+            "label": "Danger",
+            "color": "#EF4444",
             "note": "Runner-up of Group L",
             "pct": null
           }
@@ -8885,7 +8885,7 @@
       ],
       "advanceProbabilities": {
         "r32": 59,
-        "r16": 8,
+        "r16": 7,
         "qf": 2,
         "sf": 1,
         "final": 1,
@@ -8945,12 +8945,12 @@
         "r32": [
           {
             "group": "L",
-            "likelyTeam": "Ghana",
-            "flag": "🇬🇭",
-            "fifaRank": 60,
-            "difficulty": 1,
-            "label": "Favorable",
-            "color": "#22C55E",
+            "likelyTeam": "Croatia",
+            "flag": "🇭🇷",
+            "fifaRank": 10,
+            "difficulty": 5,
+            "label": "Danger",
+            "color": "#EF4444",
             "note": "Runner-up of Group L",
             "pct": null
           }
@@ -9103,12 +9103,12 @@
         "r32": [
           {
             "group": "L",
-            "likelyTeam": "Ghana",
-            "flag": "🇬🇭",
-            "fifaRank": 60,
-            "difficulty": 1,
-            "label": "Favorable",
-            "color": "#22C55E",
+            "likelyTeam": "Croatia",
+            "flag": "🇭🇷",
+            "fifaRank": 10,
+            "difficulty": 5,
+            "label": "Danger",
+            "color": "#EF4444",
             "note": "Runner-up of Group L",
             "pct": null
           }
@@ -9210,7 +9210,7 @@
         "r32": 100,
         "r16": 61,
         "qf": 28,
-        "sf": 10,
+        "sf": 9,
         "final": 5,
         "winner": 1,
         "source": "market"
@@ -9347,12 +9347,12 @@
           },
           {
             "group": "L",
-            "likelyTeam": "Ghana",
-            "flag": "🇬🇭",
-            "fifaRank": 60,
-            "difficulty": 1,
-            "label": "Favorable",
-            "color": "#22C55E",
+            "likelyTeam": "Croatia",
+            "flag": "🇭🇷",
+            "fifaRank": 10,
+            "difficulty": 5,
+            "label": "Danger",
+            "color": "#EF4444",
             "note": "Runner-up of Group L",
             "pct": null
           }
@@ -9367,7 +9367,7 @@
       "confederation": "UEFA",
       "fifaRank": 5,
       "eliminated": false,
-      "currentStage": "group_stage",
+      "currentStage": "r32",
       "groupResults": [
         {
           "matchday": 1,
@@ -9417,20 +9417,29 @@
           "matchday": 3,
           "opponent": "Panama",
           "opponentFlag": "🇵🇦",
-          "result": null,
-          "score": "0-0",
+          "result": "W",
+          "score": "2-0",
           "date": "2026-06-27",
           "venue": "MetLife Stadium, New Jersey",
-          "scorers": [],
-          "cards": []
+          "scorers": [
+            "Jude Bellingham 62'",
+            "Harry Kane 67'"
+          ],
+          "cards": [
+            {
+              "player": "Jarell Quansah",
+              "minute": "60'",
+              "type": "yellow"
+            }
+          ]
         }
       ],
       "advanceProbabilities": {
         "r32": 100,
         "r16": 79,
-        "qf": 59,
-        "sf": 37,
-        "final": 22,
+        "qf": 60,
+        "sf": 39,
+        "final": 24,
         "winner": 10,
         "source": "market"
       },
@@ -9440,7 +9449,7 @@
           "city": "Dallas · Philadelphia · New Jersey",
           "venue": "Various venues",
           "date": "Jun 17–27",
-          "detail": "4pts after MD2"
+          "detail": "7pts after MD3"
         },
         "r32": {
           "status": "upcoming",
@@ -9520,7 +9529,7 @@
       "confederation": "UEFA",
       "fifaRank": 10,
       "eliminated": false,
-      "currentStage": "group_stage",
+      "currentStage": "r32",
       "groupResults": [
         {
           "matchday": 1,
@@ -9565,21 +9574,30 @@
           "matchday": 3,
           "opponent": "Ghana",
           "opponentFlag": "🇬🇭",
-          "result": null,
-          "score": "0-0",
+          "result": "W",
+          "score": "2-1",
           "date": "2026-06-27",
           "venue": "Lincoln Financial Field, Philadelphia",
-          "scorers": [],
-          "cards": []
+          "scorers": [
+            "Petar Sucic 31'",
+            "Nikola Vlasic 83'"
+          ],
+          "cards": [
+            {
+              "player": "Ivan Perisic",
+              "minute": "68'",
+              "type": "yellow"
+            }
+          ]
         }
       ],
       "advanceProbabilities": {
-        "r32": 85,
-        "r16": 34,
-        "qf": 13,
-        "sf": 6,
+        "r32": 100,
+        "r16": 39,
+        "qf": 14,
+        "sf": 7,
         "final": 3,
-        "winner": 0,
+        "winner": 1,
         "source": "market"
       },
       "path": {
@@ -9588,7 +9606,184 @@
           "city": "Dallas · Toronto · Philadelphia",
           "venue": "Various venues",
           "date": "Jun 17–27",
-          "detail": "3pts after MD2"
+          "detail": "6pts after MD3"
+        },
+        "r32": {
+          "status": "upcoming",
+          "match": 80,
+          "date": "2026-06-29",
+          "city": "Atlanta",
+          "venue": "Mercedes-Benz Stadium",
+          "opponentDesc": "Winner Group K"
+        },
+        "r16": {
+          "status": "future",
+          "match": 94,
+          "date": "2026-07-06",
+          "city": "Seattle",
+          "venue": "Lumen Field",
+          "opponentDesc": "Winner Match 80"
+        },
+        "qf": {
+          "status": "future",
+          "match": 98,
+          "date": "2026-07-10",
+          "city": "Los Angeles",
+          "venue": "SoFi Stadium",
+          "opponentDesc": "Winner Match 94"
+        },
+        "sf": {
+          "status": "future",
+          "match": 102,
+          "date": "2026-07-15",
+          "city": "Atlanta",
+          "venue": "Mercedes-Benz Stadium",
+          "opponentDesc": "Winner QF bracket"
+        },
+        "final": {
+          "status": "future",
+          "match": 104,
+          "date": "2026-07-19",
+          "city": "New Jersey",
+          "venue": "MetLife Stadium",
+          "opponentDesc": "Winner other SF"
+        }
+      },
+      "possibleOpponents": {
+        "r32": [
+          {
+            "group": "K",
+            "likelyTeam": "Colombia",
+            "flag": "🇨🇴",
+            "fifaRank": 13,
+            "difficulty": 4,
+            "label": "Tough",
+            "color": "#FB923C",
+            "note": "Winner of Group K",
+            "pct": null
+          }
+        ],
+        "r16": [
+          {
+            "group": "A",
+            "likelyTeam": "South Africa",
+            "flag": "🇿🇦",
+            "fifaRank": 58,
+            "difficulty": 1,
+            "label": "Favorable",
+            "color": "#22C55E",
+            "note": "Runner-up of Group A",
+            "pct": null
+          },
+          {
+            "group": "H",
+            "likelyTeam": "Cape Verde",
+            "flag": "🇨🇻",
+            "fifaRank": 62,
+            "difficulty": 1,
+            "label": "Favorable",
+            "color": "#22C55E",
+            "note": "Runner-up of Group H",
+            "pct": null
+          },
+          {
+            "group": "K",
+            "likelyTeam": "Colombia",
+            "flag": "🇨🇴",
+            "fifaRank": 13,
+            "difficulty": 4,
+            "label": "Tough",
+            "color": "#FB923C",
+            "note": "Winner of Group K",
+            "pct": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "ghana",
+      "name": "Ghana",
+      "flag": "🇬🇭",
+      "group": "L",
+      "confederation": "CAF",
+      "fifaRank": 60,
+      "eliminated": false,
+      "currentStage": "group_stage",
+      "groupResults": [
+        {
+          "matchday": 1,
+          "opponent": "Panama",
+          "opponentFlag": "🇵🇦",
+          "result": "W",
+          "score": "1-0",
+          "date": "2026-06-17",
+          "venue": "BMO Field, Toronto",
+          "scorers": [
+            "Caleb Yirenkyi 90'+5'"
+          ],
+          "cards": [
+            {
+              "player": "Caleb Yirenkyi",
+              "minute": "16'",
+              "type": "yellow"
+            }
+          ]
+        },
+        {
+          "matchday": 2,
+          "opponent": "England",
+          "opponentFlag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+          "result": "D",
+          "score": "0-0",
+          "date": "2026-06-23",
+          "venue": "Lincoln Financial Field, Philadelphia",
+          "scorers": [
+            "Caleb Yirenkyi 90'+5'"
+          ],
+          "cards": [
+            {
+              "player": "Iñaki Williams",
+              "minute": "60'",
+              "type": "yellow"
+            }
+          ]
+        },
+        {
+          "matchday": 3,
+          "opponent": "Croatia",
+          "opponentFlag": "🇭🇷",
+          "result": "L",
+          "score": "1-2",
+          "date": "2026-06-27",
+          "venue": "Lincoln Financial Field, Philadelphia",
+          "scorers": [
+            "Derrick Luckassen 73'"
+          ],
+          "cards": [
+            {
+              "player": "Kojo Peprah Oppong",
+              "minute": "90'+4'",
+              "type": "yellow"
+            }
+          ]
+        }
+      ],
+      "advanceProbabilities": {
+        "r32": 100,
+        "r16": 21,
+        "qf": 11,
+        "sf": 3,
+        "final": 1,
+        "winner": 0,
+        "source": "market"
+      },
+      "path": {
+        "group_stage": {
+          "status": "active",
+          "city": "Toronto · Philadelphia",
+          "venue": "Various venues",
+          "date": "Jun 17–27",
+          "detail": "4pts after MD3"
         },
         "r32": {
           "status": "upcoming",
@@ -9681,182 +9876,13 @@
           },
           {
             "group": "L",
-            "likelyTeam": "Ghana",
-            "flag": "🇬🇭",
-            "fifaRank": 60,
-            "difficulty": 1,
-            "label": "Favorable",
-            "color": "#22C55E",
+            "likelyTeam": "Croatia",
+            "flag": "🇭🇷",
+            "fifaRank": 10,
+            "difficulty": 5,
+            "label": "Danger",
+            "color": "#EF4444",
             "note": "Runner-up of Group L",
-            "pct": null
-          }
-        ]
-      }
-    },
-    {
-      "id": "ghana",
-      "name": "Ghana",
-      "flag": "🇬🇭",
-      "group": "L",
-      "confederation": "CAF",
-      "fifaRank": 60,
-      "eliminated": false,
-      "currentStage": "group_stage",
-      "groupResults": [
-        {
-          "matchday": 1,
-          "opponent": "Panama",
-          "opponentFlag": "🇵🇦",
-          "result": "W",
-          "score": "1-0",
-          "date": "2026-06-17",
-          "venue": "BMO Field, Toronto",
-          "scorers": [
-            "Caleb Yirenkyi 90'+5'"
-          ],
-          "cards": [
-            {
-              "player": "Caleb Yirenkyi",
-              "minute": "16'",
-              "type": "yellow"
-            }
-          ]
-        },
-        {
-          "matchday": 2,
-          "opponent": "England",
-          "opponentFlag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
-          "result": "D",
-          "score": "0-0",
-          "date": "2026-06-23",
-          "venue": "Lincoln Financial Field, Philadelphia",
-          "scorers": [
-            "Caleb Yirenkyi 90'+5'"
-          ],
-          "cards": [
-            {
-              "player": "Iñaki Williams",
-              "minute": "60'",
-              "type": "yellow"
-            }
-          ]
-        },
-        {
-          "matchday": 3,
-          "opponent": "Croatia",
-          "opponentFlag": "🇭🇷",
-          "result": null,
-          "score": "0-0",
-          "date": "2026-06-27",
-          "venue": "Lincoln Financial Field, Philadelphia",
-          "scorers": [],
-          "cards": []
-        }
-      ],
-      "advanceProbabilities": {
-        "r32": 100,
-        "r16": 22,
-        "qf": 8,
-        "sf": 3,
-        "final": 1,
-        "winner": 0,
-        "source": "market"
-      },
-      "path": {
-        "group_stage": {
-          "status": "active",
-          "city": "Toronto · Philadelphia",
-          "venue": "Various venues",
-          "date": "Jun 17–27",
-          "detail": "4pts after MD2"
-        },
-        "r32": {
-          "status": "upcoming",
-          "match": 80,
-          "date": "2026-06-29",
-          "city": "Atlanta",
-          "venue": "Mercedes-Benz Stadium",
-          "opponentDesc": "Winner Group K"
-        },
-        "r16": {
-          "status": "future",
-          "match": 94,
-          "date": "2026-07-06",
-          "city": "Seattle",
-          "venue": "Lumen Field",
-          "opponentDesc": "Winner Match 80"
-        },
-        "qf": {
-          "status": "future",
-          "match": 98,
-          "date": "2026-07-10",
-          "city": "Los Angeles",
-          "venue": "SoFi Stadium",
-          "opponentDesc": "Winner Match 94"
-        },
-        "sf": {
-          "status": "future",
-          "match": 102,
-          "date": "2026-07-15",
-          "city": "Atlanta",
-          "venue": "Mercedes-Benz Stadium",
-          "opponentDesc": "Winner QF bracket"
-        },
-        "final": {
-          "status": "future",
-          "match": 104,
-          "date": "2026-07-19",
-          "city": "New Jersey",
-          "venue": "MetLife Stadium",
-          "opponentDesc": "Winner other SF"
-        }
-      },
-      "possibleOpponents": {
-        "r32": [
-          {
-            "group": "K",
-            "likelyTeam": "Colombia",
-            "flag": "🇨🇴",
-            "fifaRank": 13,
-            "difficulty": 4,
-            "label": "Tough",
-            "color": "#FB923C",
-            "note": "Winner of Group K",
-            "pct": null
-          }
-        ],
-        "r16": [
-          {
-            "group": "A",
-            "likelyTeam": "South Africa",
-            "flag": "🇿🇦",
-            "fifaRank": 58,
-            "difficulty": 1,
-            "label": "Favorable",
-            "color": "#22C55E",
-            "note": "Runner-up of Group A",
-            "pct": null
-          },
-          {
-            "group": "H",
-            "likelyTeam": "Cape Verde",
-            "flag": "🇨🇻",
-            "fifaRank": 62,
-            "difficulty": 1,
-            "label": "Favorable",
-            "color": "#22C55E",
-            "note": "Runner-up of Group H",
-            "pct": null
-          },
-          {
-            "group": "K",
-            "likelyTeam": "Colombia",
-            "flag": "🇨🇴",
-            "fifaRank": 13,
-            "difficulty": 4,
-            "label": "Tough",
-            "color": "#FB923C",
-            "note": "Winner of Group K",
             "pct": null
           }
         ]
@@ -9915,12 +9941,23 @@
           "matchday": 3,
           "opponent": "England",
           "opponentFlag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
-          "result": null,
-          "score": "0-0",
+          "result": "L",
+          "score": "0-2",
           "date": "2026-06-27",
           "venue": "MetLife Stadium, New Jersey",
           "scorers": [],
-          "cards": []
+          "cards": [
+            {
+              "player": "José Fajardo",
+              "minute": "53'",
+              "type": "yellow"
+            },
+            {
+              "player": "Andrés Andrade",
+              "minute": "84'",
+              "type": "yellow"
+            }
+          ]
         }
       ],
       "advanceProbabilities": {
@@ -9938,7 +9975,7 @@
           "city": "Toronto · New Jersey",
           "venue": "Various venues",
           "date": "Jun 17–27",
-          "detail": "0pts after MD2"
+          "detail": "0pts after MD3"
         },
         "r32": {
           "status": "upcoming",
@@ -10031,12 +10068,12 @@
           },
           {
             "group": "L",
-            "likelyTeam": "Ghana",
-            "flag": "🇬🇭",
-            "fifaRank": 60,
-            "difficulty": 1,
-            "label": "Favorable",
-            "color": "#22C55E",
+            "likelyTeam": "Croatia",
+            "flag": "🇭🇷",
+            "fifaRank": 10,
+            "difficulty": 5,
+            "label": "Danger",
+            "color": "#EF4444",
             "note": "Runner-up of Group L",
             "pct": null
           }
@@ -11338,26 +11375,17 @@
         "awayTeam": "Ghana",
         "awayFlag": "🇬🇭",
         "awayId": "ghana",
-        "homeScore": 0,
-        "awayScore": 0,
-        "status": "IN_PROGRESS",
+        "homeScore": 2,
+        "awayScore": 1,
+        "status": "FINISHED",
         "date": "2026-06-27",
-        "clock": "2'",
         "broadcasts": [
           "FS1",
           "Universo",
           "FOX One"
         ],
         "time": "2026-06-27T21:00Z",
-        "venue": "Lincoln Financial Field, Philadelphia, Pennsylvania",
-        "polymarket": {
-          "homeId": "croatia",
-          "awayId": "ghana",
-          "homeWinPct": 54,
-          "awayWinPct": 17,
-          "drawPct": 30,
-          "eventSlug": "fifwc-hrv-gha-2026-06-27"
-        }
+        "venue": "Lincoln Financial Field, Philadelphia, Pennsylvania"
       },
       {
         "homeTeam": "Panama",
@@ -11367,25 +11395,16 @@
         "awayFlag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "awayId": "england",
         "homeScore": 0,
-        "awayScore": 0,
-        "status": "IN_PROGRESS",
+        "awayScore": 2,
+        "status": "FINISHED",
         "date": "2026-06-27",
-        "clock": "3'",
         "broadcasts": [
           "FOX",
           "Tele",
           "FOX One"
         ],
         "time": "2026-06-27T21:00Z",
-        "venue": "MetLife Stadium, East Rutherford, New Jersey",
-        "polymarket": {
-          "homeId": "panama",
-          "awayId": "england",
-          "homeWinPct": 5,
-          "awayWinPct": 86,
-          "drawPct": 11,
-          "eventSlug": "fifwc-pan-eng-2026-06-27"
-        }
+        "venue": "MetLife Stadium, East Rutherford, New Jersey"
       },
       {
         "homeTeam": "Colombia",
@@ -11408,9 +11427,9 @@
         "polymarket": {
           "homeId": "colombia",
           "awayId": "portugal",
-          "homeWinPct": 28,
-          "awayWinPct": 48,
-          "drawPct": 25,
+          "homeWinPct": 25,
+          "awayWinPct": 53,
+          "drawPct": 24,
           "eventSlug": "fifwc-col-prt-2026-06-27"
         }
       },
@@ -11435,7 +11454,7 @@
         "polymarket": {
           "homeId": "drcongo",
           "awayId": "uzbekistan",
-          "homeWinPct": 57,
+          "homeWinPct": 59,
           "awayWinPct": 18,
           "drawPct": 25,
           "eventSlug": "fifwc-cdr-uzb-2026-06-27"
@@ -11462,7 +11481,7 @@
         "polymarket": {
           "homeId": "algeria",
           "awayId": "austria",
-          "homeWinPct": 27,
+          "homeWinPct": 28,
           "awayWinPct": 26,
           "drawPct": 47,
           "eventSlug": "fifwc-alg-aut-2026-06-27"
@@ -11489,7 +11508,7 @@
         "polymarket": {
           "homeId": "jordan",
           "awayId": "argentina",
-          "homeWinPct": 4,
+          "homeWinPct": 5,
           "awayWinPct": 87,
           "drawPct": 10,
           "eventSlug": "fifwc-jor-arg-2026-06-27"
@@ -11623,7 +11642,7 @@
           "homeId": "ivorycoast",
           "awayId": "norway",
           "homeWinPct": 27,
-          "awayWinPct": 46,
+          "awayWinPct": 47,
           "drawPct": 28,
           "eventSlug": "fifwc-civ-nor-2026-06-30"
         }
@@ -11726,9 +11745,9 @@
         "polymarket": {
           "homeId": "argentina",
           "awayId": "capeverde",
-          "homeWinPct": 85,
+          "homeWinPct": 86,
           "awayWinPct": 4,
-          "drawPct": 12,
+          "drawPct": 11,
           "eventSlug": "fifwc-arg-cvi-2026-07-03"
         }
       }
