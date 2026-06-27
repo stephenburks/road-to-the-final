@@ -32,6 +32,7 @@ export const DEFAULT_TEAM = 'usa'
 const BASE = import.meta.env.BASE_URL
 
 export const LIVE_DATA_URL  = `${BASE}data/world-cup-2026.json`
+export const VERSION_URL    = `${BASE}data/version.json`
 export const MANIFEST_URL   = `${BASE}data/snapshots/manifest.json`
 export const SNAPSHOT_URL   = (date: string) => `${BASE}data/snapshots/${date}.json`
 

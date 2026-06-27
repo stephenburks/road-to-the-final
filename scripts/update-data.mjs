@@ -20,6 +20,7 @@
 
 import fs from 'fs'
 import path from 'path'
+import crypto from 'crypto'
 import { fileURLToPath, pathToFileURL } from 'url'
 
 import {
@@ -63,9 +64,10 @@ import { validateAppData } from './lib/validate.js'
 const __filename = fileURLToPath(import.meta.url)
 const __dirname  = path.dirname(__filename)
 const ROOT       = path.join(__dirname, '..')
-const LIVE_PATH  = path.join(ROOT, 'public', 'data', 'world-cup-2026.json')
-const SNAP_DIR   = path.join(ROOT, 'public', 'data', 'snapshots')
-const MF_PATH    = path.join(SNAP_DIR, 'manifest.json')
+const LIVE_PATH     = path.join(ROOT, 'public', 'data', 'world-cup-2026.json')
+const VERSION_PATH  = path.join(ROOT, 'public', 'data', 'version.json')
+const SNAP_DIR      = path.join(ROOT, 'public', 'data', 'snapshots')
+const MF_PATH       = path.join(SNAP_DIR, 'manifest.json')
 
 
 function log(msg) { console.log(`[${new Date().toISOString()}] ${msg}`); }
@@ -752,8 +754,17 @@ async function main() {
   log('✅ Schema validation passed');
 
   // Write live file
-  fs.writeFileSync(LIVE_PATH, JSON.stringify(output, null, 2));
+  const liveJson = JSON.stringify(output, null, 2);
+  fs.writeFileSync(LIVE_PATH, liveJson);
   log(`✅ Live data → ${LIVE_PATH}`);
+
+  // ── Version sidecar ─────────────────────────────────────────────────────
+  // A tiny file the client can poll cheaply (~80 bytes vs ~100KB) to decide
+  // whether to refetch the heavy JSON. Lets the CDN cache the main file
+  // normally and removes the cache-busting query string from useData.
+  const contentHash = crypto.createHash('sha256').update(liveJson).digest('hex').slice(0, 16);
+  fs.writeFileSync(VERSION_PATH, JSON.stringify({ lastUpdated: now, hash: contentHash }, null, 2));
+  log(`✅ Version sidecar → ${VERSION_PATH} (hash=${contentHash})`);
 
   // ── Immutable end-of-Pacific-day snapshots ────────────────────────────────
   // Snapshot files are written once per past PT date (yesterday or earlier)

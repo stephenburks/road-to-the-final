@@ -30,6 +30,23 @@ const mockManifest = {
 	generated: '2026-06-15T00:00:00Z',
 }
 
+const mockVersion = { lastUpdated: '2026-06-15T00:00:00Z', hash: 'abc123' }
+
+// URL-routed fetch mock: predictable regardless of which query fires first.
+// Each test overrides individual routes via `routes`.
+function mockFetch(routes: Record<string, unknown | (() => Promise<unknown>) | Error>) {
+	return vi.fn().mockImplementation((url: string | URL) => {
+		const u = String(url)
+		for (const [pattern, value] of Object.entries(routes)) {
+			if (!u.includes(pattern)) continue
+			if (value instanceof Error) return Promise.reject(value)
+			const data = typeof value === 'function' ? (value as () => Promise<unknown>)() : Promise.resolve(value)
+			return Promise.resolve({ ok: true, status: 200, json: () => data })
+		}
+		return Promise.resolve({ ok: true, status: 200, json: () => Promise.resolve({}) })
+	})
+}
+
 function createWrapper() {
 	const client = new QueryClient({ defaultOptions: { queries: { retry: false } } })
 	return function Wrapper({ children }: { children: React.ReactNode }) {
@@ -51,9 +68,11 @@ describe('useData', () => {
 	})
 
 	it('fetches live data and manifest on mount', async () => {
-		vi.stubGlobal('fetch', vi.fn()
-			.mockResolvedValueOnce({ ok: true, status: 200, json: () => Promise.resolve(mockLive) })
-			.mockResolvedValueOnce({ ok: true, status: 200, json: () => Promise.resolve(mockManifest) }))
+		vi.stubGlobal('fetch', mockFetch({
+			'version.json': mockVersion,
+			'world-cup-2026.json': mockLive,
+			'manifest.json': mockManifest,
+		}))
 
 		const { result } = renderHook(() => useData('live'), { wrapper: createWrapper() })
 
@@ -66,10 +85,12 @@ describe('useData', () => {
 	})
 
 	it('sets loadingSnap to true when a snapshot date is selected', async () => {
-		vi.stubGlobal('fetch', vi.fn()
-			.mockResolvedValueOnce({ ok: true, status: 200, json: () => Promise.resolve(mockLive) })
-			.mockResolvedValueOnce({ ok: true, status: 200, json: () => Promise.resolve(mockManifest) })
-			.mockResolvedValueOnce({ ok: true, status: 200, json: () => Promise.resolve(mockSnap) }))
+		vi.stubGlobal('fetch', mockFetch({
+			'version.json': mockVersion,
+			'world-cup-2026.json': mockLive,
+			'manifest.json': mockManifest,
+			'snapshots/2026-06-01': mockSnap,
+		}))
 
 		const { result, rerender } = renderHook(
 			({ date }) => useData(date),
@@ -88,10 +109,12 @@ describe('useData', () => {
 	})
 
 	it('transitions loadingSnap to false after snapshot resolves', async () => {
-		vi.stubGlobal('fetch', vi.fn()
-			.mockResolvedValueOnce({ ok: true, status: 200, json: () => Promise.resolve(mockLive) })
-			.mockResolvedValueOnce({ ok: true, status: 200, json: () => Promise.resolve(mockManifest) })
-			.mockResolvedValueOnce({ ok: true, status: 200, json: () => Promise.resolve(mockSnap) }))
+		vi.stubGlobal('fetch', mockFetch({
+			'version.json': mockVersion,
+			'world-cup-2026.json': mockLive,
+			'manifest.json': mockManifest,
+			'snapshots/2026-06-01': mockSnap,
+		}))
 
 		const { result, rerender } = renderHook(
 			({ date }) => useData(date),
@@ -112,9 +135,11 @@ describe('useData', () => {
 	})
 
 	it('handles manifest fetch failure silently (returns null, no error)', async () => {
-		vi.stubGlobal('fetch', vi.fn()
-			.mockResolvedValueOnce({ ok: true, status: 200, json: () => Promise.resolve(mockLive) })
-			.mockRejectedValueOnce(new Error('Network error')))
+		vi.stubGlobal('fetch', mockFetch({
+			'version.json': mockVersion,
+			'world-cup-2026.json': mockLive,
+			'manifest.json': new Error('Network error'),
+		}))
 
 		const { result } = renderHook(() => useData('live'), { wrapper: createWrapper() })
 
@@ -127,9 +152,11 @@ describe('useData', () => {
 	})
 
 	it('handles live data fetch failure (sets error state)', async () => {
-		vi.stubGlobal('fetch', vi.fn()
-			.mockImplementationOnce(() => Promise.reject(new Error('Network failure')))
-			.mockImplementationOnce(() => Promise.resolve({ ok: true, status: 200, json: () => Promise.resolve(mockManifest) })))
+		vi.stubGlobal('fetch', mockFetch({
+			'version.json': mockVersion,
+			'world-cup-2026.json': new Error('Network failure'),
+			'manifest.json': mockManifest,
+		}))
 
 		const { result } = renderHook(() => useData('live'), { wrapper: createWrapper() })
 
@@ -141,9 +168,11 @@ describe('useData', () => {
 	})
 
 	it('snapData is null when selectedDate is live', async () => {
-		vi.stubGlobal('fetch', vi.fn()
-			.mockResolvedValueOnce({ ok: true, status: 200, json: () => Promise.resolve(mockLive) })
-			.mockResolvedValueOnce({ ok: true, status: 200, json: () => Promise.resolve(mockManifest) }))
+		vi.stubGlobal('fetch', mockFetch({
+			'version.json': mockVersion,
+			'world-cup-2026.json': mockLive,
+			'manifest.json': mockManifest,
+		}))
 
 		const { result } = renderHook(() => useData('live'), { wrapper: createWrapper() })
 
@@ -155,9 +184,15 @@ describe('useData', () => {
 	})
 
 	it('deduplicates in-flight snapshot requests (same date, rapid re-renders)', async () => {
-		vi.stubGlobal('fetch', vi.fn()
-			.mockResolvedValueOnce({ ok: true, status: 200, json: () => Promise.resolve(mockLive) })
-			.mockResolvedValueOnce({ ok: true, status: 200, json: () => Promise.resolve(mockManifest) }))
+		let resolveSnap: (value: unknown) => void
+		const snapPromise = new Promise<unknown>(resolve => { resolveSnap = resolve })
+
+		vi.stubGlobal('fetch', mockFetch({
+			'version.json': mockVersion,
+			'world-cup-2026.json': mockLive,
+			'manifest.json': mockManifest,
+			'snapshots/2026-06-15': () => snapPromise,
+		}))
 
 		const { result, rerender } = renderHook(
 			({ date }) => useData(date),
@@ -167,11 +202,6 @@ describe('useData', () => {
 		await waitFor(() => {
 			expect(result.current.liveData).toBeTruthy()
 		})
-
-		let resolveSnap: (value: unknown) => void
-		const snapPromise = new Promise<unknown>(resolve => { resolveSnap = resolve })
-		vi.stubGlobal('fetch', vi.fn()
-			.mockResolvedValueOnce({ ok: true, status: 200, json: () => snapPromise }))
 
 		rerender({ date: '2026-06-15' })
 		rerender({ date: '2026-06-15' })
