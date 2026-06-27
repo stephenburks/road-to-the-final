@@ -2,8 +2,7 @@ import { STAGE_LABELS, STAGE_ORDER, POLYMARKET_STAGE_URLS, polymarketGroupUrl } 
 import type { Stage, Team, AppData, AdvanceProbabilities } from '../types'
 import { daysUntil, formatDate, stageIndex } from '../utils'
 import { useTeamRecord, type NextEvent } from '../hooks/useTeamRecord'
-import { useLiveScores } from '../hooks/useLiveScores'
-import { useLiveTournamentProbs } from '../hooks/useLiveTournamentProbs'
+import { useLiveOverlayContext } from '../hooks/liveOverlayContext'
 import { useChangeIndicator } from '../hooks/useChangeIndicator'
 import FlagIcon from './ui/FlagIcon'
 import TeamFlagLink from './ui/TeamFlagLink'
@@ -193,8 +192,7 @@ export default function Hero({
 	const ap = team.advanceProbabilities ?? {}
 
 	// Live overlay for advancement probabilities while a match is in progress.
-	const livePatches = useLiveScores(data?.dailyMatches ?? {}, data?.teams ?? [], isHistorical)
-	const liveProbs = useLiveTournamentProbs(data?.dailyMatches ?? {}, livePatches, isHistorical)
+	const { probs: liveProbs } = useLiveOverlayContext()
 
 	const liveStageVal = (key: keyof AdvanceProbabilities): number | undefined => {
 		if (!liveProbs) return undefined

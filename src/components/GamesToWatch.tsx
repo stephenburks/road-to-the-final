@@ -1,8 +1,8 @@
 import { useMemo } from 'react'
 import type { Team, AppData, DailyMatch, MatchupOdds } from '../types'
 import { GROUP_SCHEDULE, MATCH_DATES } from '../data/tournamentSchedule'
-import { useLiveScores, type LiveMatchPatch } from '../hooks/useLiveScores'
-import { useLiveOdds } from '../hooks/useLiveOdds'
+import { useLiveOverlayContext } from '../hooks/liveOverlayContext'
+import type { LiveMatchPatch } from '../hooks/useLiveScores'
 import MatchCard from './groups/MatchCard'
 import styles from './GamesToWatch.module.css'
 
@@ -132,8 +132,7 @@ interface GamesToWatchProps {
 }
 
 export default function GamesToWatch({ team, data, onTeamPeek }: GamesToWatchProps) {
-	const livePatches = useLiveScores(data.dailyMatches ?? {}, data.teams, data.isHistorical)
-	const liveOdds = useLiveOdds(data.dailyMatches ?? {}, livePatches, data.isHistorical)
+	const { patches: livePatches, odds: liveOdds } = useLiveOverlayContext()
 
 	const watchMatches = useMemo<WatchMatch[]>(() => {
 		const today = dateStr(0)

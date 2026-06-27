@@ -1,8 +1,8 @@
 import { useMemo } from 'react'
 import type { AppData, DailyMatch, MatchupOdds } from '../types'
 import type { View } from '../hooks/useAppState'
-import { useLiveScores, type LiveMatchPatch } from '../hooks/useLiveScores'
-import { useLiveOdds } from '../hooks/useLiveOdds'
+import { useLiveOverlayContext } from '../hooks/liveOverlayContext'
+import type { LiveMatchPatch } from '../hooks/useLiveScores'
 import { localDateStr } from '../utils'
 import MatchCard from './groups/MatchCard'
 import NewsSection from './NewsSection'
@@ -80,8 +80,7 @@ function enrich(
 
 export default function HomePage({ data, selectedTeamId, onTeamChange, onTeamPeek, onViewChange }: HomePageProps) {
 	const dailyMatches = useMemo(() => data.dailyMatches ?? {}, [data.dailyMatches])
-	const livePatches = useLiveScores(dailyMatches, data.teams, data.isHistorical)
-	const liveOdds = useLiveOdds(dailyMatches, livePatches, data.isHistorical)
+	const { patches: livePatches, odds: liveOdds } = useLiveOverlayContext()
 
 	// In historical mode, use the snapshot date as the anchor so "Today" shows
 	// the snapshot day's matches rather than the actual current date.

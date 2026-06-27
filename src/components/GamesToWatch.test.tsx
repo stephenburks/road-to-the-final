@@ -1,13 +1,8 @@
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest'
-import { render, screen } from '@testing-library/react'
-import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
+import { screen } from '@testing-library/react'
 import GamesToWatch from './GamesToWatch'
 import type { Team, AppData } from '../types'
-
-function renderWithQuery(ui: React.ReactElement) {
-	const client = new QueryClient({ defaultOptions: { queries: { retry: false } } })
-	return render(<QueryClientProvider client={client}>{ui}</QueryClientProvider>)
-}
+import { renderWithQuery } from '../test-utils'
 
 function mockTeam(overrides: Partial<Team> = {}): Team {
 	return {

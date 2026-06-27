@@ -1,7 +1,6 @@
 import type { Team, AppData } from '../types'
 import { getFeederGroup } from '../utils'
-import { useLiveScores } from '../hooks/useLiveScores'
-import { useLiveOdds } from '../hooks/useLiveOdds'
+import { useLiveOverlayContext } from '../hooks/liveOverlayContext'
 import SectionLabel from './ui/SectionLabel'
 import { GroupTable } from './ui/GroupTable'
 import FeederGroupPanel from './ui/FeederGroupPanel'
@@ -12,8 +11,7 @@ export default function GroupStage({ team, data, eliminatedTeamIds = new Set(), 
 	const myGroup = data?.groups?.[team.group]
 	const feeder = getFeederGroup(team, 'r16', data)
 
-	const livePatches = useLiveScores(data.dailyMatches ?? {}, data.teams, data.isHistorical)
-	const liveOdds = useLiveOdds(data.dailyMatches ?? {}, livePatches, data.isHistorical)
+	const { patches: livePatches, odds: liveOdds } = useLiveOverlayContext()
 
 	const resolveLiveData = (opponentName: string) => {
 		if (!livePatches) return undefined

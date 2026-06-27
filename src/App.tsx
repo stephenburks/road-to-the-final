@@ -4,6 +4,8 @@ import { resolveActiveStage } from './utils'
 import { useData } from './hooks/useData'
 import { useAppState } from './hooks/useAppState'
 import { useRoster } from './hooks/useRoster'
+import { useLiveOverlay } from './hooks/useLiveOverlay'
+import { LiveOverlayProvider } from './hooks/LiveOverlayProvider'
 import Header           from './components/Header'
 import Nav              from './components/Nav'
 import StageTabs        from './components/StageTabs'
@@ -56,7 +58,9 @@ export default function App() {
 
   const { players: rosterPlayers, loading: rosterLoading, error: rosterError } = useRoster(selectedTeamId, isHistorical)
 
-  const data       = selectedDate === 'live' ? liveData : snapData
+  const staticData = selectedDate === 'live' ? liveData : snapData
+  const overlay    = useLiveOverlay(staticData, isHistorical)
+  const data       = overlay.data
 
   const teamsMap = useMemo(() => {
     if (!data?.teams && !liveData?.teams) return new Map()
@@ -125,7 +129,7 @@ export default function App() {
   // Home and Standings views don't need a resolved team
   if (view === 'home' || view === 'standings') {
     return (
-      <>
+      <LiveOverlayProvider value={overlay}>
         <Header
           data={liveData}
           selectedTeamId={selectedTeamId}
@@ -164,7 +168,7 @@ export default function App() {
 
         <Disclaimer />
         <Footer />
-      </>
+      </LiveOverlayProvider>
     )
   }
 
@@ -175,7 +179,7 @@ export default function App() {
   const showElim   = team.eliminated
 
   return (
-    <>
+    <LiveOverlayProvider value={overlay}>
       <Header
         data={liveData}
         selectedTeamId={selectedTeamId}
@@ -220,6 +224,6 @@ export default function App() {
 
       <Disclaimer />
       <Footer />
-    </>
+    </LiveOverlayProvider>
   )
 }
