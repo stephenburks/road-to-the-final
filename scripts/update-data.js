@@ -24,12 +24,15 @@ const fs   = require('fs');
 const path = require('path');
 
 const {
+	TEAMS: ALL_TEAMS,
 	NAME_TO_ID,
 	ID_TO_PM_TLAS: ID_TO_PM_TLA,
 	nameToId,
 } = require('./lib/teams');
 const {
 	STAGE_ORDER,
+	GROUP_SCHEDULE,
+	GROUP_LETTERS,
 } = require('./lib/tournament');
 const {
 	calcProbs,
@@ -55,6 +58,7 @@ const {
 	canStillFinishTop3,
 	determineCurrentStage,
 } = require('./lib/elimination');
+const { validateAppData } = require('./lib/validate');
 
 // ─── Paths ───────────────────────────────────────────────────────────────────
 const ROOT       = path.join(__dirname, '..');
@@ -504,7 +508,6 @@ async function main() {
 
   // Build group data — per-group carry-forward for healthy groups
   const groupsData = {};
-  const GROUP_LETTERS = 'ABCDEFGHIJKL'.split('');
   const existingGroups = existing?.groups || {};
 
   for (const g of GROUP_LETTERS) {
@@ -741,6 +744,11 @@ async function main() {
     teams,
     dailyMatches,
   };
+
+  // Hard-fail BEFORE writing if the output drifted from the expected schema.
+  // Cheap insurance against shipping a JSON shape the client can't parse.
+  validateAppData(output);
+  log('✅ Schema validation passed');
 
   // Write live file
   fs.writeFileSync(LIVE_PATH, JSON.stringify(output, null, 2));
