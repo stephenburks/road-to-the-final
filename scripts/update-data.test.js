@@ -1,6 +1,4 @@
-import { createRequire } from 'module'
-const require = createRequire(import.meta.url)
-const {
+import {
 	calcProbs,
 	calcProbsFallback,
 	diffRating,
@@ -9,7 +7,7 @@ const {
 	buildOpponents,
 	buildR16Opponents,
 	R32_MATCH_TO_POSITIONS,
-} = require('./update-data.js')
+} from './update-data.mjs'
 
 // ── diffRating ─────────────────────────────────────────────────────────────
 

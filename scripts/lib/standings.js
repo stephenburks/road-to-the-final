@@ -1,14 +1,12 @@
-'use strict';
-
-const { ID_TO_FLAG, ID_TO_NAME, getTeamById } = require('./teams');
-const { GROUP_SCHEDULE, GROUP_LETTERS } = require('./tournament');
+import { ID_TO_FLAG, ID_TO_NAME, getTeamById } from './teams.js'
+import { GROUP_SCHEDULE, GROUP_LETTERS } from './tournament.js'
 
 /**
  * Compute live group standings from finished ESPN matches.
  * Returns { A: StandingRow[], B: ..., ... } sorted by pts → gd → gf,
  * with `pos` assigned in finishing order.
  */
-function computeStandings(espnMatches) {
+export function computeStandings(espnMatches) {
 	const groups = {};
 
 	for (const g of GROUP_LETTERS) {
@@ -73,7 +71,7 @@ function computeStandings(espnMatches) {
  * Enrich raw standings with name + flag for the UI. Falls back to schedule
  * order pre-tournament (when rawStandings has no row for a group).
  */
-function buildGroupStandings(group, rawStandings) {
+export function buildGroupStandings(group, rawStandings) {
 	if (rawStandings[group]) {
 		return rawStandings[group].map(row => ({
 			...row,
@@ -97,7 +95,7 @@ function buildGroupStandings(group, rawStandings) {
  * from any existing row when the new fetch returns no detail data
  * (transient ESPN gaps shouldn't wipe previously-recorded scorers).
  */
-function buildGroupResults(teamId, group, matchIndex, existingGroupResults = []) {
+export function buildGroupResults(teamId, group, matchIndex, existingGroupResults = []) {
 	const sched = GROUP_SCHEDULE[group] || [];
 	return sched
 		.filter(g => g.h === teamId || g.a === teamId)
@@ -150,7 +148,7 @@ function buildGroupResults(teamId, group, matchIndex, existingGroupResults = [])
  * first; fall back to the first finished match without scorers when the
  * ESPN payload has no date metadata.
  */
-function injectScorers(groupResults, espnScorers) {
+export function injectScorers(groupResults, espnScorers) {
 	if (!espnScorers?.length) return groupResults;
 	const labels = espnScorers.map(s => s.label);
 	let assigned = false;
@@ -170,7 +168,7 @@ function injectScorers(groupResults, espnScorers) {
 	});
 }
 
-function injectCards(groupResults, espnCards) {
+export function injectCards(groupResults, espnCards) {
 	if (!espnCards?.length) return groupResults;
 	const entries = espnCards.map(c => ({ player: c.player, minute: c.minute, type: c.type }));
 	let assigned = false;
@@ -190,10 +188,3 @@ function injectCards(groupResults, espnCards) {
 	});
 }
 
-module.exports = {
-	computeStandings,
-	buildGroupStandings,
-	buildGroupResults,
-	injectScorers,
-	injectCards,
-};

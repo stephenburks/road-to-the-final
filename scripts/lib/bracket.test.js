@@ -1,6 +1,4 @@
-import { createRequire } from 'module'
-const require = createRequire(import.meta.url)
-const { buildPath, validateBracketPaths } = require('./bracket.js')
+import { buildPath, validateBracketPaths } from './bracket.js'
 
 // ── buildPath ─────────────────────────────────────────────────────────────
 

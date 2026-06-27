@@ -1,8 +1,6 @@
-'use strict';
-
-const { getTeamById } = require('./teams');
-const { GROUP_SCHEDULE, BRACKET_PATHS, R32_MATCH_TO_POSITIONS, GROUP_LETTERS } = require('./tournament');
-const { diffRating, diffLabel, diffColor } = require('./probabilities');
+import { getTeamById } from './teams.js'
+import { GROUP_SCHEDULE, BRACKET_PATHS, R32_MATCH_TO_POSITIONS, GROUP_LETTERS } from './tournament.js'
+import { diffRating, diffLabel, diffColor } from './probabilities.js'
 
 /**
  * Build a team's full knockout path from group through final. Includes the
@@ -10,7 +8,7 @@ const { diffRating, diffLabel, diffColor } = require('./probabilities');
  * Falls back to the GROUP-1 path when standings put the team out of the top
  * two — the consumer should ignore the path entirely for eliminated teams.
  */
-function buildPath(teamId, group, standings) {
+export function buildPath(teamId, group, standings) {
 	const rows = standings[group] || [];
 	const teamRow = rows.find(r => r.teamId === teamId);
 	const pos = Math.min(teamRow?.pos ?? 1, 2);
@@ -57,7 +55,7 @@ function makeOpponent({ group, info, note }) {
  * "Best 3rd from A/B/C", etc.) into concrete possible-opponent records. Used
  * by the Opponent Watchlist UI.
  */
-function buildOpponents(teamId, group, r32Desc, r16Desc, standings) {
+export function buildOpponents(teamId, group, r32Desc, r16Desc, standings) {
 	const desc = r32Desc ?? '';
 
 	const directMatch = desc.match(/Winner\s+Group\s+([A-L])|Runner-up\s+Group\s+([A-L])/i);
@@ -87,7 +85,7 @@ function buildOpponents(teamId, group, r32Desc, r16Desc, standings) {
 	return { r32: [], r16: buildR16Opponents(teamId, r16Desc, standings) };
 }
 
-function buildR16Opponents(teamId, r16Desc, standings) {
+export function buildR16Opponents(teamId, r16Desc, standings) {
 	const desc = r16Desc ?? '';
 
 	const matchRef = desc.match(/\(Match\s+(\d+)\)|Winner\s+Match\s+(\d+)/i);
@@ -129,7 +127,7 @@ function buildR16Opponents(teamId, r16Desc, standings) {
  * all required fields. Throws if a critical entry is missing — wired into
  * update-data.js startup so structural drift breaks the build immediately.
  */
-function validateBracketPaths({ log = console.log } = {}) {
+export function validateBracketPaths({ log = console.log } = {}) {
 	const positions = [1, 2];
 	const requiredKeys = ['r32', 'r16', 'qf', 'sf', 'final'];
 	const requiredFields = ['match', 'date', 'city', 'venue', 'opponentDesc'];
@@ -166,9 +164,3 @@ function validateBracketPaths({ log = console.log } = {}) {
 	if (hasCritical) throw new Error('Critical bracket path data missing — cannot proceed');
 }
 
-module.exports = {
-	buildPath,
-	buildOpponents,
-	buildR16Opponents,
-	validateBracketPaths,
-};

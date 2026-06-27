@@ -29,7 +29,7 @@ jobs:
           node-version: '22'
 
       - name: Run data update
-        run: node scripts/update-data.js
+        run: node scripts/update-data.mjs
 
       - name: Commit if changed
         run: |

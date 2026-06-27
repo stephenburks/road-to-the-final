@@ -18,53 +18,54 @@
  * Requires Node 18+ (built-in fetch). No npm dependencies needed for the script.
  */
 
-'use strict';
+import fs from 'fs'
+import path from 'path'
+import { fileURLToPath, pathToFileURL } from 'url'
 
-const fs   = require('fs');
-const path = require('path');
-
-const {
-	TEAMS: ALL_TEAMS,
+import {
+	TEAMS as ALL_TEAMS,
 	NAME_TO_ID,
-	ID_TO_PM_TLAS: ID_TO_PM_TLA,
+	ID_TO_PM_TLAS as ID_TO_PM_TLA,
 	nameToId,
-} = require('./lib/teams');
-const {
+} from './lib/teams.js'
+import {
 	STAGE_ORDER,
 	GROUP_SCHEDULE,
 	GROUP_LETTERS,
-} = require('./lib/tournament');
-const {
+} from './lib/tournament.js'
+import {
 	calcProbs,
 	calcProbsFallback,
 	diffRating,
 	diffLabel,
 	diffColor,
-} = require('./lib/probabilities');
-const {
+} from './lib/probabilities.js'
+import {
 	computeStandings,
 	buildGroupStandings,
 	buildGroupResults,
 	injectScorers,
 	injectCards,
-} = require('./lib/standings');
-const {
+} from './lib/standings.js'
+import {
 	buildPath,
 	buildOpponents,
 	buildR16Opponents,
 	validateBracketPaths,
-} = require('./lib/bracket');
-const {
+} from './lib/bracket.js'
+import {
 	canStillFinishTop3,
 	determineCurrentStage,
-} = require('./lib/elimination');
-const { validateAppData } = require('./lib/validate');
+} from './lib/elimination.js'
+import { validateAppData } from './lib/validate.js'
 
 // ─── Paths ───────────────────────────────────────────────────────────────────
-const ROOT       = path.join(__dirname, '..');
-const LIVE_PATH  = path.join(ROOT, 'public', 'data', 'world-cup-2026.json');
-const SNAP_DIR   = path.join(ROOT, 'public', 'data', 'snapshots');
-const MF_PATH    = path.join(SNAP_DIR, 'manifest.json');
+const __filename = fileURLToPath(import.meta.url)
+const __dirname  = path.dirname(__filename)
+const ROOT       = path.join(__dirname, '..')
+const LIVE_PATH  = path.join(ROOT, 'public', 'data', 'world-cup-2026.json')
+const SNAP_DIR   = path.join(ROOT, 'public', 'data', 'snapshots')
+const MF_PATH    = path.join(SNAP_DIR, 'manifest.json')
 
 
 function log(msg) { console.log(`[${new Date().toISOString()}] ${msg}`); }
@@ -807,14 +808,14 @@ async function main() {
   log('=== Done ===');
 }
 
-if (require.main === module) {
-  main().catch(err => { console.error('Fatal:', err); process.exit(1); });
+// Run as a script when invoked directly (skip when imported by tests).
+if (import.meta.url === pathToFileURL(process.argv[1]).href) {
+	main().catch(err => { console.error('Fatal:', err); process.exit(1) })
 }
 
-// Re-exports preserved for backwards-compatibility with scripts/update-data.test.js.
-// New tests should import directly from scripts/lib/probabilities, scripts/lib/bracket, etc.
-const { R32_MATCH_TO_POSITIONS } = require('./lib/tournament');
-module.exports = {
+// Test back-compat: re-export the formerly inline pure functions so the
+// existing scripts/update-data.test.js still imports them from here.
+export {
 	calcProbs,
 	calcProbsFallback,
 	diffRating,
@@ -822,5 +823,5 @@ module.exports = {
 	diffColor,
 	buildOpponents,
 	buildR16Opponents,
-	R32_MATCH_TO_POSITIONS,
-};
+}
+export { R32_MATCH_TO_POSITIONS } from './lib/tournament.js'

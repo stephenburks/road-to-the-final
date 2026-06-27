@@ -1,6 +1,4 @@
-import { createRequire } from 'module'
-const require = createRequire(import.meta.url)
-const { canStillFinishTop3, determineCurrentStage, findKnockoutMatch } = require('./elimination.js')
+import { canStillFinishTop3, determineCurrentStage, findKnockoutMatch } from './elimination.js'
 
 // Helper: build a rawStandings entry quickly.
 function row(teamId, pts, gd = 0, gf = 0, played = 3, pos = 1) {

@@ -1,5 +1,3 @@
-'use strict';
-
 /**
  * Schema validator for the world-cup-2026.json document.
  *
@@ -19,9 +17,9 @@
  * those degrade gracefully and aren't worth gating the build on.
  */
 
-const { GROUP_LETTERS, STAGE_ORDER, KNOCKOUT_STAGES } = require('./tournament');
+import { GROUP_LETTERS, STAGE_ORDER, KNOCKOUT_STAGES } from './tournament.js'
 
-class ValidationError extends Error {
+export class ValidationError extends Error {
 	constructor(messages) {
 		super(`AppData schema validation failed:\n  - ${messages.join('\n  - ')}`);
 		this.name = 'ValidationError';
@@ -39,7 +37,7 @@ function isStr(v) { return typeof v === 'string' && v.length > 0; }
 function isNum(v) { return typeof v === 'number' && Number.isFinite(v); }
 function isPct(v) { return isNum(v) && v >= 0 && v <= 100; }
 
-function validateAppData(data) {
+export function validateAppData(data) {
 	const errors = [];
 
 	if (!isObj(data)) {
@@ -168,4 +166,3 @@ function validateAppData(data) {
 	return data;
 }
 
-module.exports = { validateAppData, ValidationError };

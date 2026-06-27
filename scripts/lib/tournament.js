@@ -1,17 +1,15 @@
-'use strict';
-
 /**
  * Canonical World Cup 2026 tournament structure: group-stage schedule and
- * knockout bracket paths. Imported by both scripts/update-data.js and the
+ * knockout bracket paths. Imported by both scripts/update-data.mjs and the
  * client app (via src/data/tournament.ts) — never duplicate this data.
  */
 
-const STAGE_ORDER = ['group_stage', 'r32', 'r16', 'qf', 'sf', 'final'];
-const KNOCKOUT_STAGES = ['r32', 'r16', 'qf', 'sf', 'final'];
+export const STAGE_ORDER = ['group_stage', 'r32', 'r16', 'qf', 'sf', 'final']
+export const KNOCKOUT_STAGES = ['r32', 'r16', 'qf', 'sf', 'final']
 
 // ─── Group-stage schedule ────────────────────────────────────────────────────
 // { md: matchday, h: homeId, a: awayId, d: local date YYYY-MM-DD, v: venue }
-const GROUP_SCHEDULE = {
+export const GROUP_SCHEDULE = {
 	A: [
 		{ md: 1, h: 'mexico',      a: 'southafrica', d: '2026-06-11', v: 'Estadio Azteca, Mexico City' },
 		{ md: 1, h: 'southkorea',  a: 'czechia',     d: '2026-06-11', v: 'Estadio Akron, Zapopan' },
@@ -111,17 +109,17 @@ const GROUP_SCHEDULE = {
 };
 
 // ─── Knockout bracket paths ──────────────────────────────────────────────────
-const SF_DALLAS  = { match: 101, date: '2026-07-14', city: 'Dallas',     venue: 'AT&T Stadium',          opponentDesc: 'Winner QF bracket' };
-const SF_ATLANTA = { match: 102, date: '2026-07-15', city: 'Atlanta',    venue: 'Mercedes-Benz Stadium', opponentDesc: 'Winner QF bracket' };
-const FINAL_FIX  = { match: 104, date: '2026-07-19', city: 'New Jersey', venue: 'MetLife Stadium',       opponentDesc: 'Winner other SF' };
+const SF_DALLAS  = { match: 101, date: '2026-07-14', city: 'Dallas',     venue: 'AT&T Stadium',          opponentDesc: 'Winner QF bracket' }
+const SF_ATLANTA = { match: 102, date: '2026-07-15', city: 'Atlanta',    venue: 'Mercedes-Benz Stadium', opponentDesc: 'Winner QF bracket' }
+const FINAL_FIX  = { match: 104, date: '2026-07-19', city: 'New Jersey', venue: 'MetLife Stadium',       opponentDesc: 'Winner other SF' }
 
-const SF = { dallas: SF_DALLAS, atlanta: SF_ATLANTA };
+const SF = { dallas: SF_DALLAS, atlanta: SF_ATLANTA }
 
 function makePath(r32, r16, qf, sfKey) {
-	return { r32, r16, qf, sf: SF[sfKey], final: FINAL_FIX };
+	return { r32, r16, qf, sf: SF[sfKey], final: FINAL_FIX }
 }
 
-const BRACKET_PATHS = {
+export const BRACKET_PATHS = {
 	'A-1': makePath({ match: 79, date: '2026-06-28', city: 'Mexico City',   venue: 'Estadio Azteca',          opponentDesc: 'Best 3rd from C/E/F/H/I' },
 	                { match: 93, date: '2026-07-05', city: 'Guadalajara',   venue: 'Estadio Guadalajara',     opponentDesc: 'Winner Match 79' },
 	                { match: 97, date: '2026-07-09', city: 'Guadalajara',   venue: 'Estadio Guadalajara',     opponentDesc: 'Winner Match 93' },
@@ -222,35 +220,25 @@ const BRACKET_PATHS = {
 
 // Reverse lookup: r32 match number → bracket-position keys (e.g. 82 → ['B-2','G-1']).
 // Used by buildOpponents() to resolve "Winner Match X" R16 opponent descriptions.
-const R32_MATCH_TO_POSITIONS = (() => {
-	const out = {};
+export const R32_MATCH_TO_POSITIONS = (() => {
+	const out = {}
 	for (const [key, path] of Object.entries(BRACKET_PATHS)) {
-		const m = path.r32?.match;
-		if (m) (out[m] = out[m] || []).push(key);
+		const m = path.r32?.match
+		if (m) (out[m] = out[m] || []).push(key)
 	}
-	return out;
-})();
+	return out
+})()
 
 // Flat map: match number → scheduled date (derived from BRACKET_PATHS).
-const MATCH_DATES = (() => {
-	const out = {};
+export const MATCH_DATES = (() => {
+	const out = {}
 	for (const path of Object.values(BRACKET_PATHS)) {
 		for (const stage of KNOCKOUT_STAGES) {
-			const entry = path[stage];
-			if (entry?.match && entry.date) out[entry.match] = entry.date;
+			const entry = path[stage]
+			if (entry?.match && entry.date) out[entry.match] = entry.date
 		}
 	}
-	return out;
-})();
+	return out
+})()
 
-const GROUP_LETTERS = 'ABCDEFGHIJKL'.split('');
-
-module.exports = {
-	STAGE_ORDER,
-	KNOCKOUT_STAGES,
-	GROUP_LETTERS,
-	GROUP_SCHEDULE,
-	BRACKET_PATHS,
-	R32_MATCH_TO_POSITIONS,
-	MATCH_DATES,
-};
+export const GROUP_LETTERS = 'ABCDEFGHIJKL'.split('')

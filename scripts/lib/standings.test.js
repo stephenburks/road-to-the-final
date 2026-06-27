@@ -1,12 +1,10 @@
-import { createRequire } from 'module'
-const require = createRequire(import.meta.url)
-const {
+import {
 	computeStandings,
 	buildGroupStandings,
 	buildGroupResults,
 	injectScorers,
 	injectCards,
-} = require('./standings.js')
+} from './standings.js'
 
 // ── computeStandings ──────────────────────────────────────────────────────
 

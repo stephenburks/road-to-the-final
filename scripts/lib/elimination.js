@@ -1,6 +1,4 @@
-'use strict';
-
-const { BRACKET_PATHS, KNOCKOUT_STAGES } = require('./tournament');
+import { BRACKET_PATHS, KNOCKOUT_STAGES } from './tournament.js'
 
 /**
  * Brute-force search: across every combination of outcomes for remaining
@@ -11,7 +9,7 @@ const { BRACKET_PATHS, KNOCKOUT_STAGES } = require('./tournament');
  * scenario lands them at or above 3rd. The "can finish 3rd but won't beat
  * the wildcard 8" case is handled separately via Polymarket=0%.
  */
-function canStillFinishTop3(teamId, group, rawStandings, espnMatches) {
+export function canStillFinishTop3(teamId, group, rawStandings, espnMatches) {
 	const rows = rawStandings?.[group] ?? [];
 	if (rows.length === 0) return true;
 	const teamIds = new Set(rows.map(r => r.teamId).filter(Boolean));
@@ -64,7 +62,7 @@ function canStillFinishTop3(teamId, group, rawStandings, espnMatches) {
  * match was found (which then triggered Clinched on every prior stage —
  * `6a96202`). The current logic clamps to lastWonStage + 1.
  */
-function determineCurrentStage(teamId, group, rawStandings, espnMatches) {
+export function determineCurrentStage(teamId, group, rawStandings, espnMatches) {
 	const groupRows = rawStandings?.[group];
 	if (!groupRows?.length) return 'group_stage';
 
@@ -110,7 +108,7 @@ function determineCurrentStage(teamId, group, rawStandings, espnMatches) {
 	return { stage: KNOCKOUT_STAGES[nextIdx], eliminated: false };
 }
 
-function findKnockoutMatch(teamId, group, pos, stage, espnMatches) {
+export function findKnockoutMatch(teamId, group, pos, stage, espnMatches) {
 	const bp = BRACKET_PATHS[`${group}-${pos}`];
 	if (!bp?.[stage]?.date) return null;
 	const matchDate = bp[stage].date;
@@ -123,8 +121,3 @@ function findKnockoutMatch(teamId, group, pos, stage, espnMatches) {
 	return null;
 }
 
-module.exports = {
-	canStillFinishTop3,
-	determineCurrentStage,
-	findKnockoutMatch,
-};

@@ -1,11 +1,11 @@
-import { createRequire } from 'module'
-const require = createRequire(import.meta.url)
-const fs = require('fs')
-const path = require('path')
-const { validateAppData, ValidationError } = require('./validate.js')
+import fs from 'fs'
+import path from 'path'
+import { fileURLToPath } from 'url'
+import { validateAppData, ValidationError } from './validate.js'
 
 // Load the real current world-cup-2026.json as a "happy-path" fixture so the
 // validator gets exercised against actual production data on every test run.
+const __dirname = path.dirname(fileURLToPath(import.meta.url))
 const liveDataPath = path.join(__dirname, '..', '..', 'public', 'data', 'world-cup-2026.json')
 const liveData = fs.existsSync(liveDataPath) ? JSON.parse(fs.readFileSync(liveDataPath, 'utf8')) : null
 

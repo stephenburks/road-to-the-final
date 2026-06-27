@@ -1,9 +1,7 @@
-'use strict';
-
 /**
  * Canonical registry for all 48 World Cup 2026 teams.
  *
- * Single source of truth — both scripts/update-data.js (CJS, Node) and the
+ * Single source of truth — both scripts/update-data.mjs (ESM, Node) and the
  * client app (TS, Vite) import from here. Never duplicate this data elsewhere;
  * add new aliases or fields here and update the derived maps below.
  *
@@ -20,7 +18,7 @@
  *   polymarketTlas  ordered list of Polymarket matchup-slug TLAs to try
  *   aliases         alternate display names used by ESPN/Polymarket
  */
-const TEAMS = [
+export const TEAMS = [
 	{ id: 'mexico',      name: 'Mexico',         flag: '🇲🇽', iso: 'mx',     tla: 'MEX', group: 'A', confederation: 'CONCACAF', fifaRank: 15, espnSlug: 'mex',   polymarketTlas: ['mex'],         aliases: [] },
 	{ id: 'southafrica', name: 'South Africa',   flag: '🇿🇦', iso: 'za',     tla: 'RSA', group: 'A', confederation: 'CAF',      fifaRank: 58, espnSlug: 'rsa',   polymarketTlas: ['rsa'],         aliases: [] },
 	{ id: 'southkorea',  name: 'South Korea',    flag: '🇰🇷', iso: 'kr',     tla: 'KOR', group: 'A', confederation: 'AFC',      fifaRank: 22, espnSlug: 'kors',  polymarketTlas: ['kor', 'kr'],   aliases: [] },
@@ -72,61 +70,43 @@ const TEAMS = [
 ];
 
 // ─── Derived lookups ─────────────────────────────────────────────────────────
-const BY_ID = Object.fromEntries(TEAMS.map(t => [t.id, t]));
+export const BY_ID = Object.fromEntries(TEAMS.map(t => [t.id, t]))
 
-const ID_TO_ISO   = Object.fromEntries(TEAMS.map(t => [t.id, t.iso]));
-const ID_TO_TLA   = Object.fromEntries(TEAMS.map(t => [t.id, t.tla]));
-const ID_TO_FLAG  = Object.fromEntries(TEAMS.map(t => [t.id, t.flag]));
-const ID_TO_NAME  = Object.fromEntries(TEAMS.map(t => [t.id, t.name]));
-const ID_TO_GROUP = Object.fromEntries(TEAMS.map(t => [t.id, t.group]));
-const ID_TO_RANK  = Object.fromEntries(TEAMS.map(t => [t.id, t.fifaRank]));
-const TLA_TO_ID   = Object.fromEntries(TEAMS.map(t => [t.tla, t.id]));
+export const ID_TO_ISO   = Object.fromEntries(TEAMS.map(t => [t.id, t.iso]))
+export const ID_TO_TLA   = Object.fromEntries(TEAMS.map(t => [t.id, t.tla]))
+export const ID_TO_FLAG  = Object.fromEntries(TEAMS.map(t => [t.id, t.flag]))
+export const ID_TO_NAME  = Object.fromEntries(TEAMS.map(t => [t.id, t.name]))
+export const ID_TO_GROUP = Object.fromEntries(TEAMS.map(t => [t.id, t.group]))
+export const ID_TO_RANK  = Object.fromEntries(TEAMS.map(t => [t.id, t.fifaRank]))
+export const TLA_TO_ID   = Object.fromEntries(TEAMS.map(t => [t.tla, t.id]))
 
-const ESPN_SLUG_MAP  = Object.fromEntries(TEAMS.map(t => [t.id, t.espnSlug]));
-const ID_TO_PM_TLAS  = Object.fromEntries(TEAMS.map(t => [t.id, t.polymarketTlas.slice()]));
+export const ESPN_SLUG_MAP = Object.fromEntries(TEAMS.map(t => [t.id, t.espnSlug]))
+export const ID_TO_PM_TLAS = Object.fromEntries(TEAMS.map(t => [t.id, t.polymarketTlas.slice()]))
 
 /**
  * Name (and every alias) → id. Used by ESPN/Polymarket payload parsers to
  * resolve display strings to our internal team ids. Keep aliases listed on
  * the team record above; never add a fallback alias map elsewhere.
  */
-const NAME_TO_ID = (() => {
-	const map = {};
+export const NAME_TO_ID = (() => {
+	const map = {}
 	for (const t of TEAMS) {
-		map[t.name] = t.id;
-		for (const a of t.aliases) map[a] = t.id;
+		map[t.name] = t.id
+		for (const a of t.aliases) map[a] = t.id
 	}
-	return map;
-})();
+	return map
+})()
 
-function nameToId(name) {
-	if (!name) return null;
-	return NAME_TO_ID[name] || null;
+export function nameToId(name) {
+	if (!name) return null
+	return NAME_TO_ID[name] || null
 }
 
-function getTeamById(id) {
-	return BY_ID[id] || null;
+export function getTeamById(id) {
+	return BY_ID[id] || null
 }
 
-function getTeamByTLA(tla) {
-	if (!tla) return null;
-	return BY_ID[TLA_TO_ID[tla.toUpperCase()]] || null;
+export function getTeamByTLA(tla) {
+	if (!tla) return null
+	return BY_ID[TLA_TO_ID[tla.toUpperCase()]] || null
 }
-
-module.exports = {
-	TEAMS,
-	BY_ID,
-	NAME_TO_ID,
-	ID_TO_ISO,
-	ID_TO_TLA,
-	ID_TO_FLAG,
-	ID_TO_NAME,
-	ID_TO_GROUP,
-	ID_TO_RANK,
-	TLA_TO_ID,
-	ESPN_SLUG_MAP,
-	ID_TO_PM_TLAS,
-	nameToId,
-	getTeamById,
-	getTeamByTLA,
-};
