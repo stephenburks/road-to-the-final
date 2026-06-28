@@ -12006,5 +12006,302 @@
         "venue": "GEHA Field at Arrowhead Stadium, Kansas City, Missouri"
       }
     ]
+  },
+  "actualBracket": {
+    "r32": [
+      {
+        "date": "2026-06-28",
+        "homeId": "southafrica",
+        "awayId": "canada",
+        "homeTeam": "South Africa",
+        "awayTeam": "Canada",
+        "homeFlag": "🇿🇦",
+        "awayFlag": "🇨🇦",
+        "homeScore": 0,
+        "awayScore": 1,
+        "status": "FINISHED",
+        "venue": "SoFi Stadium, Inglewood, California",
+        "broadcasts": [
+          "FOX",
+          "Tele",
+          "FOX One"
+        ],
+        "winnerId": "canada"
+      },
+      {
+        "date": "2026-06-29",
+        "homeId": "brazil",
+        "awayId": "japan",
+        "homeTeam": "Brazil",
+        "awayTeam": "Japan",
+        "homeFlag": "🇧🇷",
+        "awayFlag": "🇯🇵",
+        "homeScore": 0,
+        "awayScore": 0,
+        "status": "SCHEDULED",
+        "venue": "NRG Stadium, Houston, Texas",
+        "broadcasts": [
+          "FOX",
+          "Tele",
+          "FOX One"
+        ]
+      },
+      {
+        "date": "2026-06-29",
+        "homeId": "germany",
+        "awayId": "paraguay",
+        "homeTeam": "Germany",
+        "awayTeam": "Paraguay",
+        "homeFlag": "🇩🇪",
+        "awayFlag": "🇵🇾",
+        "homeScore": 0,
+        "awayScore": 0,
+        "status": "SCHEDULED",
+        "venue": "Gillette Stadium, Foxborough, Massachusetts",
+        "broadcasts": [
+          "FOX",
+          "Tele",
+          "FOX One"
+        ]
+      },
+      {
+        "date": "2026-06-30",
+        "homeId": "france",
+        "awayId": "sweden",
+        "homeTeam": "France",
+        "awayTeam": "Sweden",
+        "homeFlag": "🇫🇷",
+        "awayFlag": "🇸🇪",
+        "homeScore": 0,
+        "awayScore": 0,
+        "status": "SCHEDULED",
+        "venue": "MetLife Stadium, East Rutherford, New Jersey",
+        "broadcasts": [
+          "FOX",
+          "Tele",
+          "FOX One"
+        ]
+      },
+      {
+        "date": "2026-06-30",
+        "homeId": "ivorycoast",
+        "awayId": "norway",
+        "homeTeam": "Ivory Coast",
+        "awayTeam": "Norway",
+        "homeFlag": "🇨🇮",
+        "awayFlag": "🇳🇴",
+        "homeScore": 0,
+        "awayScore": 0,
+        "status": "SCHEDULED",
+        "venue": "AT&T Stadium, Arlington, Texas",
+        "broadcasts": [
+          "FOX",
+          "Tele",
+          "FOX One"
+        ]
+      },
+      {
+        "date": "2026-06-30",
+        "homeId": "netherlands",
+        "awayId": "morocco",
+        "homeTeam": "Netherlands",
+        "awayTeam": "Morocco",
+        "homeFlag": "🇳🇱",
+        "awayFlag": "🇲🇦",
+        "homeScore": 0,
+        "awayScore": 0,
+        "status": "SCHEDULED",
+        "venue": "Estadio BBVA, Guadalupe",
+        "broadcasts": [
+          "FOX",
+          "Tele",
+          "FOX One"
+        ]
+      },
+      {
+        "date": "2026-07-01",
+        "homeId": "belgium",
+        "awayId": "senegal",
+        "homeTeam": "Belgium",
+        "awayTeam": "Senegal",
+        "homeFlag": "🇧🇪",
+        "awayFlag": "🇸🇳",
+        "homeScore": 0,
+        "awayScore": 0,
+        "status": "SCHEDULED",
+        "venue": "Lumen Field, Seattle, Washington",
+        "broadcasts": [
+          "FS1",
+          "Tele",
+          "FOX One"
+        ]
+      },
+      {
+        "date": "2026-07-01",
+        "homeId": "england",
+        "awayId": "drcongo",
+        "homeTeam": "England",
+        "awayTeam": "DR Congo",
+        "homeFlag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+        "awayFlag": "🇨🇩",
+        "homeScore": 0,
+        "awayScore": 0,
+        "status": "SCHEDULED",
+        "venue": "Mercedes-Benz Stadium, Atlanta, Georgia",
+        "broadcasts": [
+          "FOX",
+          "Tele",
+          "FOX One"
+        ]
+      },
+      {
+        "date": "2026-07-01",
+        "homeId": "mexico",
+        "awayId": "ecuador",
+        "homeTeam": "Mexico",
+        "awayTeam": "Ecuador",
+        "homeFlag": "🇲🇽",
+        "awayFlag": "🇪🇨",
+        "homeScore": 0,
+        "awayScore": 0,
+        "status": "SCHEDULED",
+        "venue": "Estadio Banorte, Mexico City",
+        "broadcasts": [
+          "FOX",
+          "Tele",
+          "FOX One"
+        ]
+      },
+      {
+        "date": "2026-07-02",
+        "homeId": "portugal",
+        "awayId": "croatia",
+        "homeTeam": "Portugal",
+        "awayTeam": "Croatia",
+        "homeFlag": "🇵🇹",
+        "awayFlag": "🇭🇷",
+        "homeScore": 0,
+        "awayScore": 0,
+        "status": "SCHEDULED",
+        "venue": "BMO Field, Toronto",
+        "broadcasts": [
+          "FOX",
+          "Tele",
+          "FOX One"
+        ]
+      },
+      {
+        "date": "2026-07-02",
+        "homeId": "spain",
+        "awayId": "austria",
+        "homeTeam": "Spain",
+        "awayTeam": "Austria",
+        "homeFlag": "🇪🇸",
+        "awayFlag": "🇦🇹",
+        "homeScore": 0,
+        "awayScore": 0,
+        "status": "SCHEDULED",
+        "venue": "SoFi Stadium, Inglewood, California",
+        "broadcasts": [
+          "FOX",
+          "Tele",
+          "FOX One"
+        ]
+      },
+      {
+        "date": "2026-07-02",
+        "homeId": "usa",
+        "awayId": "bosnia",
+        "homeTeam": "USA",
+        "awayTeam": "Bosnia & Herz.",
+        "homeFlag": "🇺🇸",
+        "awayFlag": "🇧🇦",
+        "homeScore": 0,
+        "awayScore": 0,
+        "status": "SCHEDULED",
+        "venue": "Levi's Stadium, Santa Clara, California",
+        "broadcasts": [
+          "FOX",
+          "Tele",
+          "FOX One"
+        ]
+      },
+      {
+        "date": "2026-07-03",
+        "homeId": "argentina",
+        "awayId": "capeverde",
+        "homeTeam": "Argentina",
+        "awayTeam": "Cape Verde",
+        "homeFlag": "🇦🇷",
+        "awayFlag": "🇨🇻",
+        "homeScore": 0,
+        "awayScore": 0,
+        "status": "SCHEDULED",
+        "venue": "Hard Rock Stadium, Miami Gardens, Florida",
+        "broadcasts": [
+          "FOX",
+          "Tele",
+          "FOX One"
+        ]
+      },
+      {
+        "date": "2026-07-03",
+        "homeId": "australia",
+        "awayId": "egypt",
+        "homeTeam": "Australia",
+        "awayTeam": "Egypt",
+        "homeFlag": "🇦🇺",
+        "awayFlag": "🇪🇬",
+        "homeScore": 0,
+        "awayScore": 0,
+        "status": "SCHEDULED",
+        "venue": "AT&T Stadium, Arlington, Texas",
+        "broadcasts": [
+          "FOX",
+          "Tele",
+          "FOX One"
+        ]
+      },
+      {
+        "date": "2026-07-03",
+        "homeId": "switzerland",
+        "awayId": "algeria",
+        "homeTeam": "Switzerland",
+        "awayTeam": "Algeria",
+        "homeFlag": "🇨🇭",
+        "awayFlag": "🇩🇿",
+        "homeScore": 0,
+        "awayScore": 0,
+        "status": "SCHEDULED",
+        "venue": "BC Place, Vancouver",
+        "broadcasts": [
+          "FS1",
+          "Tele",
+          "FOX One"
+        ]
+      },
+      {
+        "date": "2026-07-04",
+        "homeId": "colombia",
+        "awayId": "ghana",
+        "homeTeam": "Colombia",
+        "awayTeam": "Ghana",
+        "homeFlag": "🇨🇴",
+        "awayFlag": "🇬🇭",
+        "homeScore": 0,
+        "awayScore": 0,
+        "status": "SCHEDULED",
+        "venue": "GEHA Field at Arrowhead Stadium, Kansas City, Missouri",
+        "broadcasts": [
+          "FOX",
+          "Tele",
+          "FOX One"
+        ]
+      }
+    ],
+    "r16": [],
+    "qf": [],
+    "sf": [],
+    "final": []
   }
 }
