@@ -1,6 +1,6 @@
 {
-  "lastUpdated": "2026-06-27T23:02:18.851Z",
-  "snapshotDate": "2026-06-27",
+  "lastUpdated": "2026-06-28T03:46:18.377Z",
+  "snapshotDate": "2026-06-28",
   "isHistorical": false,
   "sourceSummary": {
     "dataSource": "ESPN",
@@ -709,13 +709,13 @@
         {
           "teamId": "colombia",
           "team": "Colombia",
-          "played": 2,
+          "played": 3,
           "w": 2,
-          "d": 0,
+          "d": 1,
           "l": 0,
           "gf": 4,
           "ga": 1,
-          "pts": 6,
+          "pts": 7,
           "gd": 3,
           "pos": 1,
           "flag": "🇨🇴"
@@ -723,13 +723,13 @@
         {
           "teamId": "portugal",
           "team": "Portugal",
-          "played": 2,
+          "played": 3,
           "w": 1,
-          "d": 1,
+          "d": 2,
           "l": 0,
           "gf": 6,
           "ga": 1,
-          "pts": 4,
+          "pts": 5,
           "gd": 5,
           "pos": 2,
           "flag": "🇵🇹"
@@ -737,35 +737,35 @@
         {
           "teamId": "drcongo",
           "team": "DR Congo",
-          "played": 2,
-          "w": 0,
+          "played": 3,
+          "w": 1,
           "d": 1,
           "l": 1,
-          "gf": 1,
-          "ga": 2,
-          "pts": 1,
-          "gd": -1,
+          "gf": 4,
+          "ga": 3,
+          "pts": 4,
+          "gd": 1,
           "pos": 3,
           "flag": "🇨🇩"
         },
         {
           "teamId": "uzbekistan",
           "team": "Uzbekistan",
-          "played": 2,
+          "played": 3,
           "w": 0,
           "d": 0,
-          "l": 2,
-          "gf": 1,
-          "ga": 8,
+          "l": 3,
+          "gf": 2,
+          "ga": 11,
           "pts": 0,
-          "gd": -7,
+          "gd": -9,
           "pos": 4,
           "flag": "🇺🇿"
         }
       ],
       "winProbabilities": {
-        "colombia": 49,
-        "portugal": 52,
+        "colombia": 100,
+        "portugal": 0,
         "drcongo": 0,
         "uzbekistan": 0
       }
@@ -921,9 +921,9 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 62,
-        "qf": 30,
-        "sf": 14,
+        "r16": 61,
+        "qf": 32,
+        "sf": 16,
         "final": 7,
         "winner": 1,
         "source": "market"
@@ -1140,7 +1140,7 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 28,
+        "r16": 27,
         "qf": 5,
         "sf": 1,
         "final": 1,
@@ -1298,7 +1298,7 @@
       "group": "A",
       "confederation": "AFC",
       "fifaRank": 22,
-      "eliminated": false,
+      "eliminated": true,
       "currentStage": "group_stage",
       "groupResults": [
         {
@@ -1368,11 +1368,11 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 11,
-        "r16": 4,
-        "qf": 3,
-        "sf": 1,
-        "final": 1,
+        "r32": 0,
+        "r16": 0,
+        "qf": 0,
+        "sf": 0,
+        "final": 0,
         "winner": 0,
         "source": "market"
       },
@@ -2071,7 +2071,7 @@
       "advanceProbabilities": {
         "r32": 100,
         "r16": 18,
-        "qf": 8,
+        "qf": 7,
         "sf": 2,
         "final": 1,
         "winner": 0,
@@ -2510,7 +2510,7 @@
       "advanceProbabilities": {
         "r32": 100,
         "r16": 70,
-        "qf": 27,
+        "qf": 29,
         "sf": 7,
         "final": 3,
         "winner": 1,
@@ -2722,10 +2722,10 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 68,
-        "qf": 49,
+        "r16": 73,
+        "qf": 51,
         "sf": 28,
-        "final": 14,
+        "final": 16,
         "winner": 6,
         "source": "market"
       },
@@ -2935,9 +2935,9 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 37,
+        "r16": 38,
         "qf": 29,
-        "sf": 12,
+        "sf": 10,
         "final": 6,
         "winner": 1,
         "source": "market"
@@ -3481,7 +3481,7 @@
       "advanceProbabilities": {
         "r32": 100,
         "r16": 83,
-        "qf": 46,
+        "qf": 45,
         "sf": 17,
         "final": 6,
         "winner": 2,
@@ -3717,7 +3717,7 @@
       "advanceProbabilities": {
         "r32": 100,
         "r16": 17,
-        "qf": 3,
+        "qf": 4,
         "sf": 1,
         "final": 1,
         "winner": 0,
@@ -3904,8 +3904,8 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 45,
-        "qf": 7,
+        "r16": 42,
+        "qf": 9,
         "sf": 2,
         "final": 1,
         "winner": 0,
@@ -4254,8 +4254,8 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 83,
-        "qf": 33,
+        "r16": 84,
+        "qf": 31,
         "sf": 19,
         "final": 10,
         "winner": 4,
@@ -4696,9 +4696,9 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 35,
-        "qf": 10,
-        "sf": 4,
+        "r16": 34,
+        "qf": 11,
+        "sf": 3,
         "final": 2,
         "winner": 0,
         "source": "market"
@@ -4863,7 +4863,7 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 39,
+        "r16": 40,
         "qf": 15,
         "sf": 7,
         "final": 3,
@@ -5066,11 +5066,11 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 64,
-        "qf": 50,
+        "r16": 63,
+        "qf": 51,
         "sf": 23,
         "final": 14,
-        "winner": 5,
+        "winner": 4,
         "source": "market"
       },
       "path": {
@@ -5236,9 +5236,9 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 31,
+        "r16": 30,
         "qf": 17,
-        "sf": 9,
+        "sf": 8,
         "final": 4,
         "winner": 1,
         "source": "market"
@@ -5431,10 +5431,10 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 11,
+        "r16": 12,
         "qf": 6,
-        "sf": 3,
-        "final": 2,
+        "sf": 2,
+        "final": 1,
         "winner": 0,
         "source": "market"
       },
@@ -5792,7 +5792,7 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 63,
+        "r16": 62,
         "qf": 36,
         "sf": 11,
         "final": 4,
@@ -6019,9 +6019,9 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 58,
-        "qf": 9,
-        "sf": 3,
+        "r16": 59,
+        "qf": 11,
+        "sf": 4,
         "final": 2,
         "winner": 0,
         "source": "market"
@@ -6201,9 +6201,9 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 70,
-        "r16": 18,
-        "qf": 6,
+        "r32": 11,
+        "r16": 8,
+        "qf": 4,
         "sf": 0,
         "final": 0,
         "winner": 0,
@@ -6556,10 +6556,10 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 81,
-        "qf": 62,
-        "sf": 47,
-        "final": 25,
+        "r16": 82,
+        "qf": 60,
+        "sf": 48,
+        "final": 23,
         "winner": 11,
         "source": "market"
       },
@@ -7329,8 +7329,8 @@
         "r32": 100,
         "r16": 88,
         "qf": 68,
-        "sf": 52,
-        "final": 36,
+        "sf": 51,
+        "final": 37,
         "winner": 24,
         "source": "market"
       },
@@ -7541,9 +7541,9 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 28,
-        "qf": 15,
-        "sf": 4,
+        "r16": 37,
+        "qf": 20,
+        "sf": 3,
         "final": 2,
         "winner": 0,
         "source": "market"
@@ -7888,7 +7888,7 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 66,
+        "r16": 65,
         "qf": 32,
         "sf": 15,
         "final": 8,
@@ -8039,7 +8039,7 @@
           "opponent": "Jordan",
           "opponentFlag": "🇯🇴",
           "result": null,
-          "score": null,
+          "score": "3-1",
           "date": "2026-06-27",
           "venue": "AT&T Stadium, Dallas",
           "scorers": [],
@@ -8048,11 +8048,11 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 94,
-        "qf": 80,
-        "sf": 53,
-        "final": 35,
-        "winner": 18,
+        "r16": 96,
+        "qf": 82,
+        "sf": 61,
+        "final": 38,
+        "winner": 21,
         "source": "market"
       },
       "path": {
@@ -8232,7 +8232,7 @@
           "opponent": "Austria",
           "opponentFlag": "🇦🇹",
           "result": null,
-          "score": null,
+          "score": "2-2",
           "date": "2026-06-27",
           "venue": "Arrowhead Stadium, Kansas City",
           "scorers": [],
@@ -8240,8 +8240,8 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 73,
-        "r16": 20,
+        "r32": 94,
+        "r16": 22,
         "qf": 5,
         "sf": 2,
         "final": 1,
@@ -8399,7 +8399,7 @@
           "opponent": "Algeria",
           "opponentFlag": "🇩🇿",
           "result": null,
-          "score": null,
+          "score": "2-2",
           "date": "2026-06-27",
           "venue": "Arrowhead Stadium, Kansas City",
           "scorers": [],
@@ -8407,10 +8407,10 @@
         }
       ],
       "advanceProbabilities": {
-        "r32": 85,
+        "r32": 91,
         "r16": 16,
-        "qf": 6,
-        "sf": 3,
+        "qf": 5,
+        "sf": 2,
         "final": 2,
         "winner": 0,
         "source": "market"
@@ -8557,7 +8557,7 @@
           "opponent": "Argentina",
           "opponentFlag": "🇦🇷",
           "result": null,
-          "score": null,
+          "score": "1-3",
           "date": "2026-06-27",
           "venue": "AT&T Stadium, Dallas",
           "scorers": [],
@@ -8670,7 +8670,7 @@
       "confederation": "UEFA",
       "fifaRank": 6,
       "eliminated": false,
-      "currentStage": "group_stage",
+      "currentStage": "r32",
       "groupResults": [
         {
           "matchday": 1,
@@ -8728,21 +8728,49 @@
           "matchday": 3,
           "opponent": "Colombia",
           "opponentFlag": "🇨🇴",
-          "result": null,
-          "score": null,
+          "result": "D",
+          "score": "0-0",
           "date": "2026-06-27",
           "venue": "Hard Rock Stadium, Miami",
-          "scorers": [],
-          "cards": []
+          "scorers": [
+            "João Neves 6'",
+            "Cristiano Ronaldo 6'",
+            "Nuno Mendes 17'",
+            "Cristiano Ronaldo 39'",
+            "Abduvohid Nematov OG 60'",
+            "Rafael Leão 87'"
+          ],
+          "cards": [
+            {
+              "player": "Bernardo Silva",
+              "minute": "13'",
+              "type": "yellow"
+            },
+            {
+              "player": "Nélson Semedo",
+              "minute": "88'",
+              "type": "yellow"
+            },
+            {
+              "player": "Tomás Araújo",
+              "minute": "90'+2'",
+              "type": "yellow"
+            },
+            {
+              "player": "Renato Veiga",
+              "minute": "68'",
+              "type": "yellow"
+            }
+          ]
         }
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 76,
-        "qf": 49,
-        "sf": 30,
-        "final": 18,
-        "winner": 8,
+        "r16": 68,
+        "qf": 27,
+        "sf": 23,
+        "final": 14,
+        "winner": 6,
         "source": "market"
       },
       "path": {
@@ -8751,7 +8779,7 @@
           "city": "Houston · Miami",
           "venue": "Various venues",
           "date": "Jun 17–27",
-          "detail": "4pts after MD2"
+          "detail": "5pts after MD3"
         },
         "r32": {
           "status": "upcoming",
@@ -8875,19 +8903,39 @@
           "matchday": 3,
           "opponent": "Uzbekistan",
           "opponentFlag": "🇺🇿",
-          "result": null,
-          "score": null,
+          "result": "W",
+          "score": "3-1",
           "date": "2026-06-27",
           "venue": "Mercedes-Benz Stadium, Atlanta",
-          "scorers": [],
-          "cards": []
+          "scorers": [
+            "Yoane Wissa 68' (P)",
+            "Fiston Mayele 78'",
+            "Yoane Wissa 90'+1'"
+          ],
+          "cards": [
+            {
+              "player": "Noah Sadiki",
+              "minute": "21'",
+              "type": "yellow"
+            },
+            {
+              "player": "Nathanaël Mbuku",
+              "minute": "45'+5'",
+              "type": "yellow"
+            },
+            {
+              "player": "Samuel Moutoussamy",
+              "minute": "62'",
+              "type": "yellow"
+            }
+          ]
         }
       ],
       "advanceProbabilities": {
-        "r32": 59,
-        "r16": 7,
-        "qf": 2,
-        "sf": 1,
+        "r32": 100,
+        "r16": 13,
+        "qf": 4,
+        "sf": 2,
         "final": 1,
         "winner": 0,
         "source": "market"
@@ -8898,7 +8946,7 @@
           "city": "Houston · Mexico City · Atlanta",
           "venue": "Various venues",
           "date": "Jun 17–27",
-          "detail": "1pt after MD2"
+          "detail": "4pts after MD3"
         },
         "r32": {
           "status": "upcoming",
@@ -9033,12 +9081,25 @@
           "matchday": 3,
           "opponent": "DR Congo",
           "opponentFlag": "🇨🇩",
-          "result": null,
-          "score": null,
+          "result": "L",
+          "score": "1-3",
           "date": "2026-06-27",
           "venue": "Mercedes-Benz Stadium, Atlanta",
-          "scorers": [],
-          "cards": []
+          "scorers": [
+            "Eldor Shomurodov 10'"
+          ],
+          "cards": [
+            {
+              "player": "Abdukodir Khusanov",
+              "minute": "43'",
+              "type": "yellow"
+            },
+            {
+              "player": "Sherzod Nasrullaev",
+              "minute": "48'",
+              "type": "yellow"
+            }
+          ]
         }
       ],
       "advanceProbabilities": {
@@ -9056,7 +9117,7 @@
           "city": "Mexico City · Houston · Atlanta",
           "venue": "Various venues",
           "date": "Jun 17–27",
-          "detail": "0pts after MD2"
+          "detail": "0pts after MD3"
         },
         "r32": {
           "status": "upcoming",
@@ -9147,7 +9208,7 @@
       "confederation": "CONMEBOL",
       "fifaRank": 13,
       "eliminated": false,
-      "currentStage": "group_stage",
+      "currentStage": "r32",
       "groupResults": [
         {
           "matchday": 1,
@@ -9198,21 +9259,32 @@
           "matchday": 3,
           "opponent": "Portugal",
           "opponentFlag": "🇵🇹",
-          "result": null,
-          "score": null,
+          "result": "D",
+          "score": "0-0",
           "date": "2026-06-27",
           "venue": "Hard Rock Stadium, Miami",
-          "scorers": [],
-          "cards": []
+          "scorers": [
+            "Daniel Muñoz 40'",
+            "Luis Díaz 65'",
+            "Jáminton Campaz 90'+9'",
+            "Daniel Muñoz 76'"
+          ],
+          "cards": [
+            {
+              "player": "Gustavo Puerta",
+              "minute": "86'",
+              "type": "yellow"
+            }
+          ]
         }
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 61,
-        "qf": 28,
-        "sf": 9,
-        "final": 5,
-        "winner": 1,
+        "r16": 72,
+        "qf": 54,
+        "sf": 21,
+        "final": 6,
+        "winner": 2,
         "source": "market"
       },
       "path": {
@@ -9221,7 +9293,7 @@
           "city": "Mexico City · Miami",
           "venue": "Various venues",
           "date": "Jun 17–27",
-          "detail": "6pts after MD2"
+          "detail": "7pts after MD3"
         },
         "r32": {
           "status": "upcoming",
@@ -9436,10 +9508,10 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 79,
-        "qf": 60,
-        "sf": 39,
-        "final": 24,
+        "r16": 89,
+        "qf": 63,
+        "sf": 37,
+        "final": 22,
         "winner": 10,
         "source": "market"
       },
@@ -9593,11 +9665,11 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 39,
-        "qf": 14,
-        "sf": 7,
+        "r16": 30,
+        "qf": 10,
+        "sf": 5,
         "final": 3,
-        "winner": 1,
+        "winner": 0,
         "source": "market"
       },
       "path": {
@@ -9770,10 +9842,10 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 21,
-        "qf": 11,
+        "r16": 24,
+        "qf": 6,
         "sf": 3,
-        "final": 1,
+        "final": 2,
         "winner": 0,
         "source": "market"
       },
@@ -11415,7 +11487,7 @@
         "awayId": "portugal",
         "homeScore": 0,
         "awayScore": 0,
-        "status": "SCHEDULED",
+        "status": "FINISHED",
         "date": "2026-06-27",
         "broadcasts": [
           "FOX",
@@ -11423,15 +11495,7 @@
           "FOX One"
         ],
         "time": "2026-06-27T23:30Z",
-        "venue": "Hard Rock Stadium, Miami Gardens, Florida",
-        "polymarket": {
-          "homeId": "colombia",
-          "awayId": "portugal",
-          "homeWinPct": 25,
-          "awayWinPct": 53,
-          "drawPct": 24,
-          "eventSlug": "fifwc-col-prt-2026-06-27"
-        }
+        "venue": "Hard Rock Stadium, Miami Gardens, Florida"
       },
       {
         "homeTeam": "DR Congo",
@@ -11440,9 +11504,9 @@
         "awayTeam": "Uzbekistan",
         "awayFlag": "🇺🇿",
         "awayId": "uzbekistan",
-        "homeScore": 0,
-        "awayScore": 0,
-        "status": "SCHEDULED",
+        "homeScore": 3,
+        "awayScore": 1,
+        "status": "FINISHED",
         "date": "2026-06-27",
         "broadcasts": [
           "FS1",
@@ -11450,15 +11514,7 @@
           "FOX One"
         ],
         "time": "2026-06-27T23:30Z",
-        "venue": "Mercedes-Benz Stadium, Atlanta, Georgia",
-        "polymarket": {
-          "homeId": "drcongo",
-          "awayId": "uzbekistan",
-          "homeWinPct": 59,
-          "awayWinPct": 18,
-          "drawPct": 25,
-          "eventSlug": "fifwc-cdr-uzb-2026-06-27"
-        }
+        "venue": "Mercedes-Benz Stadium, Atlanta, Georgia"
       },
       {
         "homeTeam": "Algeria",
@@ -11467,10 +11523,11 @@
         "awayTeam": "Austria",
         "awayFlag": "🇦🇹",
         "awayId": "austria",
-        "homeScore": 0,
-        "awayScore": 0,
-        "status": "SCHEDULED",
+        "homeScore": 2,
+        "awayScore": 2,
+        "status": "IN_PROGRESS",
         "date": "2026-06-27",
+        "clock": "84'",
         "broadcasts": [
           "FS1",
           "Universo",
@@ -11481,9 +11538,9 @@
         "polymarket": {
           "homeId": "algeria",
           "awayId": "austria",
-          "homeWinPct": 28,
-          "awayWinPct": 26,
-          "drawPct": 47,
+          "homeWinPct": 11,
+          "awayWinPct": 12,
+          "drawPct": 78,
           "eventSlug": "fifwc-alg-aut-2026-06-27"
         }
       },
@@ -11494,10 +11551,11 @@
         "awayTeam": "Argentina",
         "awayFlag": "🇦🇷",
         "awayId": "argentina",
-        "homeScore": 0,
-        "awayScore": 0,
-        "status": "SCHEDULED",
+        "homeScore": 1,
+        "awayScore": 3,
+        "status": "IN_PROGRESS",
         "date": "2026-06-27",
+        "clock": "84'",
         "broadcasts": [
           "FOX",
           "Tele",
@@ -11508,9 +11566,9 @@
         "polymarket": {
           "homeId": "jordan",
           "awayId": "argentina",
-          "homeWinPct": 5,
-          "awayWinPct": 87,
-          "drawPct": 10,
+          "homeWinPct": 0,
+          "awayWinPct": 99,
+          "drawPct": 1,
           "eventSlug": "fifwc-jor-arg-2026-06-27"
         }
       }
@@ -11537,9 +11595,9 @@
         "polymarket": {
           "homeId": "southafrica",
           "awayId": "canada",
-          "homeWinPct": 17,
-          "awayWinPct": 56,
-          "drawPct": 28,
+          "homeWinPct": 16,
+          "awayWinPct": 57,
+          "drawPct": 27,
           "eventSlug": "fifwc-rsa-can-2026-06-28"
         }
       }
@@ -11568,7 +11626,7 @@
           "awayId": "japan",
           "homeWinPct": 57,
           "awayWinPct": 19,
-          "drawPct": 25,
+          "drawPct": 24,
           "eventSlug": "fifwc-bra-jpn-2026-06-29"
         }
       },
@@ -11595,7 +11653,7 @@
           "awayId": "paraguay",
           "homeWinPct": 72,
           "awayWinPct": 10,
-          "drawPct": 20,
+          "drawPct": 19,
           "eventSlug": "fifwc-ger-par-2026-06-29"
         }
       }
@@ -11641,8 +11699,8 @@
         "polymarket": {
           "homeId": "ivorycoast",
           "awayId": "norway",
-          "homeWinPct": 27,
-          "awayWinPct": 47,
+          "homeWinPct": 26,
+          "awayWinPct": 48,
           "drawPct": 28,
           "eventSlug": "fifwc-civ-nor-2026-06-30"
         }
@@ -11668,11 +11726,70 @@
         "polymarket": {
           "homeId": "france",
           "awayId": "sweden",
-          "homeWinPct": 76,
+          "homeWinPct": 77,
           "awayWinPct": 9,
           "drawPct": 17,
           "eventSlug": "fifwc-fra-swe-2026-06-30"
         }
+      }
+    ],
+    "2026-07-01": [
+      {
+        "homeTeam": "Mexico",
+        "homeFlag": "🇲🇽",
+        "homeId": "mexico",
+        "awayTeam": "Ecuador",
+        "awayFlag": "🇪🇨",
+        "awayId": "ecuador",
+        "homeScore": 0,
+        "awayScore": 0,
+        "status": "SCHEDULED",
+        "date": "2026-07-01",
+        "broadcasts": [
+          "FOX",
+          "Tele",
+          "FOX One"
+        ],
+        "time": "2026-07-01T01:00Z",
+        "venue": "Estadio Banorte, Mexico City"
+      },
+      {
+        "homeTeam": "England",
+        "homeFlag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+        "homeId": "england",
+        "awayTeam": "DR Congo",
+        "awayFlag": "🇨🇩",
+        "awayId": "drcongo",
+        "homeScore": 0,
+        "awayScore": 0,
+        "status": "SCHEDULED",
+        "date": "2026-07-01",
+        "broadcasts": [
+          "FOX",
+          "Tele",
+          "FOX One"
+        ],
+        "time": "2026-07-01T16:00Z",
+        "venue": "Mercedes-Benz Stadium, Atlanta, Georgia"
+      },
+      {
+        "homeTeam": "Belgium",
+        "homeFlag": "🇧🇪",
+        "homeId": "belgium",
+        "awayTeam": "Senegal",
+        "awayFlag": "🇸🇳",
+        "awayId": "senegal",
+        "homeScore": 0,
+        "awayScore": 0,
+        "status": "SCHEDULED",
+        "date": "2026-07-01",
+        "broadcasts": [
+          "FS1",
+          "Tele",
+          "FOX One"
+        ],
+        "time": "2026-07-01T20:00Z",
+        "venue": "Lumen Field, Seattle, Washington"
       }
     ],
     "2026-07-02": [
@@ -11694,6 +11811,25 @@
         ],
         "time": "2026-07-02T00:00Z",
         "venue": "Levi's Stadium, Santa Clara, California"
+      },
+      {
+        "homeTeam": "Portugal",
+        "homeFlag": "🇵🇹",
+        "homeId": "portugal",
+        "awayTeam": "Croatia",
+        "awayFlag": "🇭🇷",
+        "awayId": "croatia",
+        "homeScore": 0,
+        "awayScore": 0,
+        "status": "SCHEDULED",
+        "date": "2026-07-02",
+        "broadcasts": [
+          "FOX",
+          "Tele",
+          "FOX One"
+        ],
+        "time": "2026-07-02T23:00Z",
+        "venue": "BMO Field, Toronto"
       }
     ],
     "2026-07-03": [
@@ -11718,7 +11854,7 @@
         "polymarket": {
           "homeId": "australia",
           "awayId": "egypt",
-          "homeWinPct": 30,
+          "homeWinPct": 28,
           "awayWinPct": 39,
           "drawPct": 33,
           "eventSlug": "fifwc-aus-egy-2026-07-03"
@@ -11745,11 +11881,32 @@
         "polymarket": {
           "homeId": "argentina",
           "awayId": "capeverde",
-          "homeWinPct": 86,
+          "homeWinPct": 87,
           "awayWinPct": 4,
           "drawPct": 11,
           "eventSlug": "fifwc-arg-cvi-2026-07-03"
         }
+      }
+    ],
+    "2026-07-04": [
+      {
+        "homeTeam": "Colombia",
+        "homeFlag": "🇨🇴",
+        "homeId": "colombia",
+        "awayTeam": "Ghana",
+        "awayFlag": "🇬🇭",
+        "awayId": "ghana",
+        "homeScore": 0,
+        "awayScore": 0,
+        "status": "SCHEDULED",
+        "date": "2026-07-04",
+        "broadcasts": [
+          "FOX",
+          "Tele",
+          "FOX One"
+        ],
+        "time": "2026-07-04T01:30Z",
+        "venue": "GEHA Field at Arrowhead Stadium, Kansas City, Missouri"
       }
     ]
   }
