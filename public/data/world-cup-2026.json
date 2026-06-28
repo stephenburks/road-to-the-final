@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-28T14:48:27.091Z",
+  "lastUpdated": "2026-06-28T16:09:55.456Z",
   "snapshotDate": "2026-06-28",
   "isHistorical": false,
   "sourceSummary": {
@@ -1141,7 +1141,7 @@
       "advanceProbabilities": {
         "r32": 100,
         "r16": 25,
-        "qf": 3,
+        "qf": 6,
         "sf": 1,
         "final": 0,
         "winner": 0,
@@ -1849,8 +1849,8 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 76,
-        "qf": 18,
+        "r16": 75,
+        "qf": 19,
         "sf": 3,
         "final": 2,
         "winner": 0,
@@ -2510,7 +2510,7 @@
       "advanceProbabilities": {
         "r32": 100,
         "r16": 70,
-        "qf": 31,
+        "qf": 30,
         "sf": 8,
         "final": 3,
         "winner": 1,
@@ -2726,7 +2726,7 @@
         "qf": 51,
         "sf": 31,
         "final": 16,
-        "winner": 5,
+        "winner": 6,
         "source": "market"
       },
       "path": {
@@ -2936,9 +2936,9 @@
       "advanceProbabilities": {
         "r32": 100,
         "r16": 38,
-        "qf": 28,
+        "qf": 29,
         "sf": 10,
-        "final": 6,
+        "final": 5,
         "winner": 1,
         "source": "market"
       },
@@ -3481,7 +3481,7 @@
       "advanceProbabilities": {
         "r32": 100,
         "r16": 84,
-        "qf": 48,
+        "qf": 49,
         "sf": 18,
         "final": 5,
         "winner": 2,
@@ -3906,7 +3906,7 @@
         "r32": 100,
         "r16": 44,
         "qf": 8,
-        "sf": 3,
+        "sf": 2,
         "final": 2,
         "winner": 0,
         "source": "market"
@@ -4255,7 +4255,7 @@
       "advanceProbabilities": {
         "r32": 100,
         "r16": 85,
-        "qf": 29,
+        "qf": 30,
         "sf": 17,
         "final": 9,
         "winner": 4,
@@ -4698,7 +4698,7 @@
         "r32": 100,
         "r16": 34,
         "qf": 11,
-        "sf": 3,
+        "sf": 4,
         "final": 2,
         "winner": 0,
         "source": "market"
@@ -4863,8 +4863,8 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 39,
-        "qf": 12,
+        "r16": 40,
+        "qf": 11,
         "sf": 5,
         "final": 2,
         "winner": 1,
@@ -5237,7 +5237,7 @@
       "advanceProbabilities": {
         "r32": 100,
         "r16": 30,
-        "qf": 15,
+        "qf": 14,
         "sf": 8,
         "final": 4,
         "winner": 1,
@@ -6020,8 +6020,8 @@
       "advanceProbabilities": {
         "r32": 100,
         "r16": 57,
-        "qf": 11,
-        "sf": 4,
+        "qf": 10,
+        "sf": 3,
         "final": 2,
         "winner": 0,
         "source": "market"
@@ -6557,9 +6557,9 @@
       "advanceProbabilities": {
         "r32": 100,
         "r16": 85,
-        "qf": 60,
+        "qf": 59,
         "sf": 45,
-        "final": 24,
+        "final": 23,
         "winner": 11,
         "source": "market"
       },
@@ -6731,7 +6731,7 @@
         "r32": 100,
         "r16": 7,
         "qf": 3,
-        "sf": 2,
+        "sf": 1,
         "final": 1,
         "winner": 0,
         "source": "market"
@@ -7327,7 +7327,7 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 89,
+        "r16": 90,
         "qf": 67,
         "sf": 52,
         "final": 37,
@@ -7889,7 +7889,7 @@
       "advanceProbabilities": {
         "r32": 100,
         "r16": 66,
-        "qf": 32,
+        "qf": 30,
         "sf": 16,
         "final": 8,
         "winner": 2,
@@ -8064,8 +8064,8 @@
       "advanceProbabilities": {
         "r32": 100,
         "r16": 94,
-        "qf": 83,
-        "sf": 61,
+        "qf": 84,
+        "sf": 60,
         "final": 36,
         "winner": 21,
         "source": "market"
@@ -8267,7 +8267,7 @@
       "advanceProbabilities": {
         "r32": 100,
         "r16": 31,
-        "qf": 10,
+        "qf": 11,
         "sf": 2,
         "final": 1,
         "winner": 0,
@@ -8445,7 +8445,7 @@
         "r32": 100,
         "r16": 15,
         "qf": 5,
-        "sf": 2,
+        "sf": 3,
         "final": 2,
         "winner": 0,
         "source": "market"
@@ -8819,7 +8819,7 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 65,
+        "r16": 66,
         "qf": 27,
         "sf": 23,
         "final": 12,
@@ -9333,10 +9333,10 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 75,
-        "qf": 51,
-        "sf": 18,
-        "final": 6,
+        "r16": 77,
+        "qf": 50,
+        "sf": 17,
+        "final": 7,
         "winner": 3,
         "source": "market"
       },
@@ -9562,9 +9562,9 @@
       "advanceProbabilities": {
         "r32": 100,
         "r16": 89,
-        "qf": 62,
+        "qf": 63,
         "sf": 37,
-        "final": 23,
+        "final": 22,
         "winner": 10,
         "source": "market"
       },
@@ -9895,8 +9895,8 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 24,
-        "qf": 12,
+        "r16": 23,
+        "qf": 11,
         "sf": 3,
         "final": 1,
         "winner": 0,
@@ -11631,7 +11631,7 @@
           "homeId": "southafrica",
           "awayId": "canada",
           "homeWinPct": 16,
-          "awayWinPct": 59,
+          "awayWinPct": 57,
           "drawPct": 26,
           "eventSlug": "fifwc-rsa-can-2026-06-28"
         }
@@ -11688,7 +11688,7 @@
           "awayId": "paraguay",
           "homeWinPct": 74,
           "awayWinPct": 9,
-          "drawPct": 19,
+          "drawPct": 18,
           "eventSlug": "fifwc-ger-par-2026-06-29"
         }
       }
@@ -11761,7 +11761,7 @@
         "polymarket": {
           "homeId": "france",
           "awayId": "sweden",
-          "homeWinPct": 77,
+          "homeWinPct": 78,
           "awayWinPct": 8,
           "drawPct": 16,
           "eventSlug": "fifwc-fra-swe-2026-06-30"
@@ -11911,7 +11911,7 @@
         "polymarket": {
           "homeId": "portugal",
           "awayId": "croatia",
-          "homeWinPct": 54,
+          "homeWinPct": 55,
           "awayWinPct": 20,
           "drawPct": 28,
           "eventSlug": "fifwc-prt-hrv-2026-07-02"
