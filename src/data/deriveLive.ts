@@ -59,9 +59,13 @@ export function deriveLiveAppData(
 	staticData: AppData,
 	patches: Map<string, LiveMatchPatch> | null
 ): AppData {
+	// Historical snapshots are immutable artifacts — show them as captured.
 	if (staticData.isHistorical) return staticData
-	if (!patches || patches.size === 0) return staticData
 
+	// In live mode, always re-derive even when there are no live patches.
+	// The baked standings/stage/elim values can lag (or be wrong, as in the
+	// 2026-06-28 SA-R32 case) so the lib-driven recomputation from
+	// dailyMatches is the authoritative client-side view.
 	const matchIndex = buildMatchIndex(staticData, patches)
 	const rawStandings = computeStandings(matchIndex) as Record<string, StandingRow[]>
 

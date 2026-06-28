@@ -155,6 +155,31 @@ export interface DailyMatches {
 	[date: string]: DailyMatch[]
 }
 
+export interface BracketMatch {
+	date: string
+	homeId: string
+	awayId: string
+	homeTeam: string
+	awayTeam: string
+	homeFlag: string
+	awayFlag: string
+	homeScore: number
+	awayScore: number
+	status: 'FINISHED' | 'IN_PROGRESS' | 'SCHEDULED'
+	winnerId?: string
+	clock?: string
+	venue?: string
+	broadcasts?: string[]
+}
+
+export interface ActualBracket {
+	r32: BracketMatch[]
+	r16: BracketMatch[]
+	qf:  BracketMatch[]
+	sf:  BracketMatch[]
+	final: BracketMatch[]
+}
+
 export interface AppData {
 	lastUpdated: string
 	snapshotDate: string
@@ -167,6 +192,7 @@ export interface AppData {
 	groups: Record<string, GroupData>
 	teams: Team[]
 	dailyMatches?: DailyMatches
+	actualBracket?: ActualBracket
 }
 
 export interface SnapshotManifest {

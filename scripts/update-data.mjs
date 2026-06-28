@@ -50,6 +50,7 @@ import {
 	determineCurrentStage,
 } from './lib/elimination.js'
 import { validateAppData } from './lib/validate.js'
+import { buildActualBracket } from './lib/actualBracket.js'
 import { log } from './lib/fetchUtil.js'
 import { fetchESPNEventDetails, normalizeESPNCalendarDates } from './lib/espn.js'
 import { fetchPolymarketAll, attachMatchupOdds } from './lib/polymarket.js'
@@ -366,6 +367,7 @@ async function main() {
     groups: groupsData,
     teams,
     dailyMatches,
+    actualBracket: buildActualBracket(dailyMatches),
   };
 
   // Hard-fail BEFORE writing if the output drifted from the expected schema.

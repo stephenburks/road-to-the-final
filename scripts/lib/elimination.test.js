@@ -132,4 +132,112 @@ describe('determineCurrentStage', () => {
 		const result = determineCurrentStage('usa', 'D', st, matches)
 		expect(result).toEqual({ stage: 'r32', eliminated: true, eliminatedIn: 'r32' })
 	})
+
+	// Regression: the 2026-06-28 South Africa bug. RSA (A-2) was paired with
+	// Canada (B-2) instead of the predicted "Best 3rd from E/H/I/J/K", and
+	// the match landed on 06-28 not the predicted 06-29. The old schedule-
+	// driven findKnockoutMatch missed it entirely and reported RSA as still
+	// heading into R32 unbeaten.
+	it('detects R32 loss even when the match date differs from BRACKET_PATHS', () => {
+		const st = standings('A', [
+			row('mexico',      9, 6, 7),
+			row('southafrica', 4, -1, 2),
+			row('southkorea',  3, -1, 2),
+			row('czechia',     1, -4, 0),
+		])
+		const matches = new Map([
+			// Actual real-world matchup: RSA vs CAN on 06-28 (not the predicted
+			// 06-29 vs "Best 3rd from E/H/I/J/K")
+			['southafrica:canada', { homeId: 'southafrica', awayId: 'canada', date: '2026-06-28', status: 'FINISHED', homeScore: 0, awayScore: 1 }],
+		])
+		const result = determineCurrentStage('southafrica', 'A', st, matches)
+		expect(result).toEqual({ stage: 'r32', eliminated: true, eliminatedIn: 'r32' })
+	})
+
+	it('advances R32 winner to r16', () => {
+		const st = standings('B', [
+			row('switzerland', 7, 4, 4),
+			row('canada',      4, 5, 6),
+			row('bosnia',      4, -1, 2),
+			row('qatar',       1, -8, 0),
+		])
+		const matches = new Map([
+			['southafrica:canada', { homeId: 'southafrica', awayId: 'canada', date: '2026-06-28', status: 'FINISHED', homeScore: 0, awayScore: 1 }],
+		])
+		const result = determineCurrentStage('canada', 'B', st, matches)
+		expect(result).toEqual({ stage: 'r16', eliminated: false })
+	})
+
+	it('returns the current stage for a SCHEDULED knockout match', () => {
+		const st = standings('D', [
+			row('usa', 6, 4, 4),
+			row('australia', 4, 0, 3),
+			row('paraguay', 4, -2, 2),
+			row('turkey', 3, -2, 4),
+		])
+		const matches = new Map([
+			['usa:bosnia', { homeId: 'usa', awayId: 'bosnia', date: '2026-07-02', status: 'SCHEDULED', homeScore: 0, awayScore: 0 }],
+		])
+		expect(determineCurrentStage('usa', 'D', st, matches)).toEqual({ stage: 'r32', eliminated: false })
+	})
+
+	it('returns r16 in-progress when team won R32 and has a scheduled R16 match', () => {
+		const st = standings('B', [
+			row('switzerland', 7, 4, 4),
+			row('canada',      4, 5, 6),
+			row('bosnia',      4, -1, 2),
+			row('qatar',       1, -8, 0),
+		])
+		const matches = new Map([
+			['southafrica:canada', { homeId: 'southafrica', awayId: 'canada', date: '2026-06-28', status: 'FINISHED', homeScore: 0, awayScore: 1 }],
+			['canada:france',      { homeId: 'canada',      awayId: 'france', date: '2026-07-06', status: 'SCHEDULED', homeScore: 0, awayScore: 0 }],
+		])
+		expect(determineCurrentStage('canada', 'B', st, matches)).toEqual({ stage: 'r16', eliminated: false })
+	})
+
+	it('keeps 3rd-place at group_stage when no R32 match was scheduled (missed wildcard 8)', () => {
+		const st = standings('A', [
+			row('mexico',      9, 6, 7),
+			row('southafrica', 4, -1, 2),
+			row('southkorea',  3, -1, 2),
+			row('czechia',     1, -4, 0),
+		])
+		// No knockout match for southkorea — they didn't make the wildcard 8.
+		expect(determineCurrentStage('southkorea', 'A', st, new Map())).toBe('group_stage')
+	})
+
+	it('advances 3rd-place wildcard to r32 when an R32 match exists', () => {
+		const st = standings('D', [
+			row('usa',       6, 4, 4),
+			row('australia', 4, 0, 3),
+			row('paraguay',  4, -2, 2),
+			row('turkey',    3, -2, 4),
+		])
+		// Paraguay is 3rd but advances as wildcard with a scheduled R32 match.
+		const matches = new Map([
+			['paraguay:germany', { homeId: 'paraguay', awayId: 'germany', date: '2026-06-29', status: 'SCHEDULED', homeScore: 0, awayScore: 0 }],
+		])
+		expect(determineCurrentStage('paraguay', 'D', st, matches)).toEqual({ stage: 'r32', eliminated: false })
+	})
+})
+
+// ── stageForKnockoutDate ────────────────────────────────────────────────────
+
+import { stageForKnockoutDate } from './elimination.js'
+
+describe('stageForKnockoutDate', () => {
+	it('returns null for group-stage dates', () => {
+		expect(stageForKnockoutDate('2026-06-15')).toBeNull()
+		expect(stageForKnockoutDate('2026-06-27')).toBeNull()
+	})
+	it('classifies 2026-06-28 as r32 (R32 start)', () => {
+		expect(stageForKnockoutDate('2026-06-28')).toBe('r32')
+	})
+	it('classifies the boundary dates correctly', () => {
+		expect(stageForKnockoutDate('2026-07-02')).toBe('r32')
+		expect(stageForKnockoutDate('2026-07-05')).toBe('r16')
+		expect(stageForKnockoutDate('2026-07-09')).toBe('qf')
+		expect(stageForKnockoutDate('2026-07-14')).toBe('sf')
+		expect(stageForKnockoutDate('2026-07-19')).toBe('final')
+	})
 })

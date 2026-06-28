@@ -71,10 +71,13 @@ function match(homeId: string, awayId: string, homeScore: number, awayScore: num
 }
 
 describe('deriveLiveAppData', () => {
-	it('returns the same reference when no patches are present', () => {
+	it('returns a derived AppData even with no patches (re-derives from baked dailyMatches)', () => {
 		const data = baseData()
-		expect(deriveLiveAppData(data, null)).toBe(data)
-		expect(deriveLiveAppData(data, new Map())).toBe(data)
+		const live = deriveLiveAppData(data, null)
+		// Same shape, recomputed from the same input — should be equivalent but not
+		// the same reference. Standings/teams content matches.
+		expect(live.groups.D.standings.length).toBe(data.groups.D.standings.length)
+		expect(live.teams.length).toBe(data.teams.length)
 	})
 
 	it('returns the same reference in historical mode', () => {
@@ -119,6 +122,43 @@ describe('deriveLiveAppData', () => {
 		])
 		const live = deriveLiveAppData(data, patches)
 		expect(live.teams.find(t => t.id === 'usa')?.currentStage).toBe('group_stage')
+	})
+
+	it('marks a team eliminated when their R32 match is FINISHED and they lost (regression: South Africa 2026-06-28)', () => {
+		const data = baseData()
+		data.teams = [
+			team({ id: 'usa', group: 'D', currentStage: 'r32', eliminated: false }),
+			team({ id: 'paraguay', group: 'D', currentStage: 'r32', eliminated: false }),
+			team({ id: 'australia', group: 'D', currentStage: 'group_stage', eliminated: true }),
+			team({ id: 'turkey', group: 'D', currentStage: 'group_stage', eliminated: true }),
+		]
+		// All 6 group D matches must be in dailyMatches so computeStandings
+		// produces played=3 (and pos=2 for paraguay) — otherwise determineCurrentStage
+		// would short-circuit to 'group_stage'.
+		data.dailyMatches = {
+			'2026-06-12': [match('usa', 'paraguay', 4, 1, 'FINISHED', '2026-06-12')],
+			'2026-06-13': [match('australia', 'turkey', 2, 1, 'FINISHED', '2026-06-13')],
+			'2026-06-19': [
+				match('usa', 'australia', 2, 0, 'FINISHED', '2026-06-19'),
+				match('turkey', 'paraguay', 0, 1, 'FINISHED', '2026-06-19'),
+			],
+			'2026-06-25': [
+				match('turkey', 'usa', 3, 2, 'FINISHED', '2026-06-25'),
+				match('paraguay', 'australia', 1, 1, 'FINISHED', '2026-06-25'),
+			],
+			// Knockout: paraguay loses to germany in R32
+			'2026-06-29': [match('paraguay', 'germany', 0, 2, 'FINISHED', '2026-06-29')],
+		}
+
+		const live = deriveLiveAppData(data, null)
+		const par = live.teams.find(t => t.id === 'paraguay')
+		expect(par?.eliminated).toBe(true)
+		expect(par?.currentStage).toBe('r32')
+		// USA finished 1st, no R32 match in fixture → currentStage stays 'r32',
+		// eliminated stays false.
+		const usa = live.teams.find(t => t.id === 'usa')
+		expect(usa?.eliminated).toBe(false)
+		expect(usa?.currentStage).toBe('r32')
 	})
 
 	it('honors Polymarket=0% as a hard elimination signal even with live patches', () => {

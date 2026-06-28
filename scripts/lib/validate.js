@@ -162,6 +162,33 @@ export function validateAppData(data) {
 		}
 	}
 
+	// actualBracket: optional, but if present every stage key must be an
+	// array of BracketMatch entries with valid shape. Each match's date
+	// must classify into the same stage as its bracket key.
+	if (data.actualBracket !== undefined) {
+		if (!isObj(data.actualBracket)) {
+			errors.push('actualBracket must be an object when present');
+		} else {
+			for (const stage of KNOCKOUT_STAGES) {
+				const arr = data.actualBracket[stage];
+				if (arr === undefined) continue;
+				if (!Array.isArray(arr)) { errors.push(`actualBracket.${stage} must be an array`); continue; }
+				arr.forEach((m, i) => {
+					const prefix = `actualBracket.${stage}[${i}]`;
+					if (!isStr(m.date) || !ISO_DATE.test(m.date)) errors.push(`${prefix}.date missing or not ISO`);
+					if (!isStr(m.homeId)) errors.push(`${prefix}.homeId missing`);
+					if (!isStr(m.awayId)) errors.push(`${prefix}.awayId missing`);
+					if (!VALID_STATUS.has(m.status)) errors.push(`${prefix}.status invalid (${m.status})`);
+					if (typeof m.homeScore !== 'number') errors.push(`${prefix}.homeScore not a number`);
+					if (typeof m.awayScore !== 'number') errors.push(`${prefix}.awayScore not a number`);
+					if (m.status === 'FINISHED' && m.homeScore !== m.awayScore && !isStr(m.winnerId)) {
+						errors.push(`${prefix}.winnerId missing on FINISHED non-draw`);
+					}
+				});
+			}
+		}
+	}
+
 	if (errors.length) throw new ValidationError(errors);
 	return data;
 }
