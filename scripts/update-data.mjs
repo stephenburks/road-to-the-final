@@ -51,6 +51,7 @@ import {
 } from './lib/elimination.js'
 import { validateAppData } from './lib/validate.js'
 import { buildActualBracket } from './lib/actualBracket.js'
+import { deriveLivePath, derivePossibleOpponents } from './lib/livePath.js'
 import { log } from './lib/fetchUtil.js'
 import { fetchESPNEventDetails, normalizeESPNCalendarDates } from './lib/espn.js'
 import { fetchPolymarketAll, attachMatchupOdds } from './lib/polymarket.js'
@@ -320,6 +321,19 @@ async function main() {
 
   await attachMatchupOdds(dailyMatches, existing);
 
+  // ── Overlay path + possibleOpponents from actualBracket ─────────────────
+  // Once the tournament has produced real knockout matchups (which often
+  // diverge from the static BRACKET_PATHS prediction), the per-team path
+  // venue/date/opponent must come from observed ESPN data — not from the
+  // static guess. See scripts/lib/livePath.js for full rationale.
+  const actualBracket = buildActualBracket(dailyMatches);
+  for (const t of teams) {
+    if (!t) continue;
+    t.path = deriveLivePath(t, actualBracket, t.path);
+    t.possibleOpponents = derivePossibleOpponents(t, actualBracket);
+  }
+  log(`Overlaid path + possibleOpponents from actualBracket (r32:${actualBracket.r32.length} r16:${actualBracket.r16.length} qf:${actualBracket.qf.length} sf:${actualBracket.sf.length} final:${actualBracket.final.length})`);
+
   // Assemble output
   const today = todayStr();
   const now   = new Date().toISOString();
@@ -367,7 +381,7 @@ async function main() {
     groups: groupsData,
     teams,
     dailyMatches,
-    actualBracket: buildActualBracket(dailyMatches),
+    actualBracket,
   };
 
   // Hard-fail BEFORE writing if the output drifted from the expected schema.

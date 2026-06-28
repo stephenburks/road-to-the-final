@@ -7,10 +7,11 @@
 // frozen. By recomputing client-side from the same dailyMatches the script
 // would see, the table reorders the moment a goal happens.
 
-import type { AppData, Team, StandingRow, Stage } from '../types'
+import type { AppData, Team, StandingRow, Stage, TeamPath } from '../types'
 import type { LiveMatchPatch } from '../hooks/useLiveScores'
 import { computeStandings, buildGroupStandings } from '../../scripts/lib/standings.js'
 import { canStillFinishTop3, determineCurrentStage } from '../../scripts/lib/elimination.js'
+import { deriveLivePath, derivePossibleOpponents } from '../../scripts/lib/livePath.js'
 
 interface MergedMatch {
 	homeId: string
@@ -80,7 +81,9 @@ export function deriveLiveAppData(
 		}
 	}
 
-	// Recompute per-team currentStage + eliminated from the same live data.
+	// Recompute per-team currentStage + eliminated from the same live data,
+	// then override path + possibleOpponents using actualBracket as truth.
+	const actualBracket = staticData.actualBracket
 	const teams: Team[] = staticData.teams.map(t => {
 		const stageResult = determineCurrentStage(t.id, t.group, rawStandings, matchIndex) as
 			| Stage
@@ -99,8 +102,21 @@ export function deriveLiveAppData(
 		if ((t.advanceProbabilities?.r32 ?? 1) === 0) {
 			eliminated = true
 		}
-		if (stage === t.currentStage && eliminated === t.eliminated) return t
-		return { ...t, currentStage: stage, eliminated }
+
+		// Reshape into a "virtual team" with updated stage/elim before
+		// path/opponents derivation — so deriveLivePath sees the corrected
+		// values when deciding TBD vs null for future stages.
+		const updated = { ...t, currentStage: stage, eliminated }
+
+		// Override path + possibleOpponents from actualBracket where available.
+		// Falls back to static for stages not yet drawn (with TBD placeholders
+		// rather than stale wrong predictions).
+		if (actualBracket) {
+			updated.path = deriveLivePath(updated, actualBracket, t.path) as TeamPath
+			updated.possibleOpponents = derivePossibleOpponents(updated, actualBracket) as Team['possibleOpponents']
+		}
+
+		return updated
 	})
 
 	return { ...staticData, groups, teams }
