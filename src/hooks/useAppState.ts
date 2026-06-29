@@ -2,7 +2,7 @@ import { useState, useEffect, useCallback, useMemo } from 'react'
 import { DEFAULT_TEAM } from '../constants'
 import { readURLParams, writeURLParams, lsGet, lsSet } from '../utils'
 
-export type View = 'home' | 'standings' | 'team'
+export type View = 'home' | 'standings' | 'team' | 'bracket'
 
 export interface UseAppStateReturn {
 	selectedTeamId: string        // currently viewing (URL-driven, transient)
@@ -33,7 +33,12 @@ export function useAppState(): UseAppStateReturn {
 	const [selectedStage, setSelectedStage]     = useState<string>(urlParams.stage ?? 'auto')
 
 	const initialView: View = useMemo(() => {
-		if (urlParams.view === 'standings' || urlParams.view === 'home' || urlParams.view === 'team') {
+		if (
+			urlParams.view === 'standings' ||
+			urlParams.view === 'home' ||
+			urlParams.view === 'team' ||
+			urlParams.view === 'bracket'
+		) {
 			return urlParams.view
 		}
 		return urlParams.team ? 'team' : 'home'

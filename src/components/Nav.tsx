@@ -10,7 +10,7 @@ interface NavProps {
 
 const SECTION_LINKS = [
 	{ id: 'hero',       label: 'Team' },
-	{ id: 'road',       label: 'Bracket' },
+	{ id: 'road',       label: 'Path' },
 	{ id: 'groups',     label: 'Groups' },
 	{ id: 'opponents',  label: 'Opponents' },
 	{ id: 'schedule',   label: 'Schedule' },
@@ -74,6 +74,13 @@ export default function Nav({ view, onViewChange, isHistorical }: NavProps) {
 					aria-current={view === 'standings' ? 'page' : undefined}
 				>
 					Standings
+				</button>
+				<button
+					className={`${styles.link} ${view === 'bracket' ? styles.active : ''}`}
+					onClick={() => onViewChange('bracket')}
+					aria-current={view === 'bracket' ? 'page' : undefined}
+				>
+					Bracket
 				</button>
 
 				{SECTION_LINKS.map(({ id, label }) => (

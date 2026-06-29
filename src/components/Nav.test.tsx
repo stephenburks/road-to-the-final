@@ -39,14 +39,19 @@ describe('Nav', () => {
 		expect(screen.getByRole('button', { name: 'Standings' })).toBeInTheDocument()
 	})
 
-	it('renders Team, Bracket, Groups, Opponents, Schedule, Squad section buttons', () => {
+	it('renders Team, Path, Groups, Opponents, Schedule, Squad section buttons', () => {
 		renderNav()
 		expect(screen.getByRole('button', { name: 'Team' })).toBeInTheDocument()
-		expect(screen.getByRole('button', { name: 'Bracket' })).toBeInTheDocument()
+		expect(screen.getByRole('button', { name: 'Path' })).toBeInTheDocument()
 		expect(screen.getByRole('button', { name: 'Groups' })).toBeInTheDocument()
 		expect(screen.getByRole('button', { name: 'Opponents' })).toBeInTheDocument()
 		expect(screen.getByRole('button', { name: 'Schedule' })).toBeInTheDocument()
 		expect(screen.getByRole('button', { name: 'Squad' })).toBeInTheDocument()
+	})
+
+	it('renders a top-level Bracket button', () => {
+		renderNav()
+		expect(screen.getByRole('button', { name: 'Bracket' })).toBeInTheDocument()
 	})
 
 	// ── aria-current on Today ─────────────────────────────────────────────

@@ -103,6 +103,8 @@ export function writeURLParams(team: string, date: string, stage: string, view: 
   const p = new URLSearchParams()
   if (view === 'standings') {
     p.set('view', 'standings')
+  } else if (view === 'bracket') {
+    p.set('view', 'bracket')
   } else if (view === 'team') {
     if (team && team !== defaultTeam) p.set('team', team)
     // team view is implied by team param — no explicit view param needed

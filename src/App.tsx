@@ -23,6 +23,7 @@ import EliminatedView   from './components/ui/EliminatedView'
 import ErrorBoundary    from './components/ui/ErrorBoundary'
 import HomePage         from './components/HomePage'
 import StandingsPage    from './components/StandingsPage'
+import TournamentBracket from './components/TournamentBracket'
 import BrowsingBanner   from './components/ui/BrowsingBanner'
 import styles           from './App.module.css'
 
@@ -117,6 +118,8 @@ export default function App() {
       document.title = 'Road to the Final • World Cup 2026'
     } else if (view === 'standings') {
       document.title = 'Standings • Road to the Final • World Cup 2026'
+    } else if (view === 'bracket') {
+      document.title = 'Bracket • Road to the Final • World Cup 2026'
     }
   }, [view])
 
@@ -126,8 +129,8 @@ export default function App() {
 
   const snapLabel  = isHistorical ? (manifest?.labels?.[selectedDate] ?? selectedDate) : null
 
-  // Home and Standings views don't need a resolved team
-  if (view === 'home' || view === 'standings') {
+  // Home, Standings, and Bracket views don't need a resolved team
+  if (view === 'home' || view === 'standings' || view === 'bracket') {
     return (
       <LiveOverlayProvider value={overlay}>
         <Header
@@ -162,6 +165,15 @@ export default function App() {
                 clinchedTeamIds={clinchedTeamIds}
                 onTeamPeek={handleTeamPeek}
               />
+            )}
+            {view === 'bracket' && (
+              <ErrorBoundary name="tournament bracket">
+                <TournamentBracket
+                  data={data}
+                  selectedTeamId={selectedTeamId}
+                  onTeamPeek={handleTeamPeek}
+                />
+              </ErrorBoundary>
             )}
           </main>
         )}
