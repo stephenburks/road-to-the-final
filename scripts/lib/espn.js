@@ -3,6 +3,7 @@ import { GROUP_SCHEDULE } from './tournament.js'
 import { tryFetch, log } from './fetchUtil.js'
 
 const ESPN_SCOREBOARD_BASE = 'https://site.web.api.espn.com/apis/site/v2/sports/soccer/fifa.world/scoreboard'
+const ESPN_BRACKET_PAGE    = 'https://www.espn.com/soccer/bracket/_/tournamentId/fifa.world'
 
 // Map ESPN's season.slug to our stage key.
 const SLUG_TO_STAGE = {
@@ -186,6 +187,134 @@ export async function fetchESPNEventDetails(dateFrom, dateTo) {
 	}
 	log(`ESPN matches: ${matches.size} extracted, ${activeTeams.size} active teams (${bracketEvents.length} knockout events incl. placeholders)`)
 	return { matches, scorers, cards, activeTeams, bracketEvents }
+}
+
+/**
+ * Fetch ESPN's bracket page and extract the authoritative bracket structure.
+ *
+ * Why this exists: the scoreboard endpoint we use for match data does NOT
+ * expose FIFA's bracket position, and its R16+ placeholder event names
+ * use a different (less reliable) numbering than the bracket page. ESPN's
+ * bracket page encodes the canonical structure via `bracketLocation`
+ * (1-16 for R32, etc.) and references feeder rounds by that same number.
+ * Without this mapping the feeder graph collapses to wrong pairings
+ * (e.g. the 2026-06-29 bug where BEL/SEN got paired with FRA/SWE instead
+ * of the correct USA/BIH).
+ *
+ * Returns {
+ *   r32Positions: Map<eventId, bracketLocation>,   // 16 entries when complete
+ *   bracketEvents: Array<{                          // R16/QF/SF/Final
+ *     eventId, matchupId, bracketLocation, roundId, matchNumber, stage,
+ *     homeFeederLocation?, awayFeederLocation?,    // feeder bracketLocation in PREV stage
+ *     homeFeederRoundId?, awayFeederRoundId?,      // round of the feeder
+ *     homeId?, awayId?,                            // resolved when ESPN updates
+ *   }>
+ * }
+ *
+ * On fetch error returns empty results — caller falls back to scoreboard-
+ * derived placeholder parsing.
+ */
+const ROUND_ID_TO_STAGE = { 1: 'r32', 2: 'r16', 3: 'qf', 4: 'sf', 5: 'final' }
+
+export async function fetchESPNBracketStructure() {
+	const empty = { r32Positions: new Map(), bracketEvents: [] }
+	try {
+		const res = await fetch(ESPN_BRACKET_PAGE, {
+			headers: { 'User-Agent': 'Mozilla/5.0 road-to-the-final' },
+		})
+		if (!res.ok) {
+			log(`⚠  Bracket page fetch failed: HTTP ${res.status}`)
+			return empty
+		}
+		const html = await res.text()
+		return parseBracketPage(html)
+	} catch (e) {
+		log(`⚠  Bracket page fetch error: ${e.message}`)
+		return empty
+	}
+}
+
+function parseBracketPage(html) {
+	const r32Positions = new Map()
+	const bracketEvents = []
+
+	// Find every matchup metadata block; record its starting offset to slice
+	// each record cleanly without greedy regex bleed.
+	const meta = []
+	const metaRe = /"matchNumber":"(Match \d+)","bracketLocation":(\d+),"matchupId":"(\d+)","roundId":(\d+)\}/g
+	let m
+	while ((m = metaRe.exec(html)) !== null) {
+		meta.push({
+			matchNumber: m[1],
+			bracketLocation: parseInt(m[2], 10),
+			matchupId: m[3],
+			roundId: parseInt(m[4], 10),
+			start: m.index,
+			end: m.index + m[0].length,
+		})
+	}
+
+	for (let i = 0; i < meta.length; i++) {
+		const rec = meta[i]
+		const nextStart = i + 1 < meta.length ? meta[i + 1].start : rec.end + 5000
+		const chunk = html.slice(rec.end, nextStart)
+		// Event ID appears as: "date":"...","id":"760XXX","link":"/soccer/match
+		const eventIdMatch = chunk.match(/"id":"(\d+)","link":"\/soccer\/match/)
+		const eventId = eventIdMatch?.[1]
+		// Competitor sides
+		const c1 = chunk.match(/"competitorOne":\{[^{}]*?"location":"([^"]+)"/)
+		const c2 = chunk.match(/"competitorTwo":\{[^{}]*?"location":"([^"]+)"/)
+
+		const stage = ROUND_ID_TO_STAGE[rec.roundId]
+		if (!stage) continue
+
+		if (rec.roundId === 1) {
+			// R32: record bracketLocation → eventId
+			if (eventId && !r32Positions.has(eventId)) r32Positions.set(eventId, rec.bracketLocation)
+		} else {
+			// R16+: capture feeder bracketLocations from competitor labels
+			const homeFeeder = parsePageFeederLocation(c1?.[1])
+			const awayFeeder = parsePageFeederLocation(c2?.[1])
+			bracketEvents.push({
+				eventId,
+				matchupId: rec.matchupId,
+				bracketLocation: rec.bracketLocation,
+				matchNumber: rec.matchNumber,
+				roundId: rec.roundId,
+				stage,
+				homeFeederLocation: homeFeeder?.location,
+				homeFeederRoundId: homeFeeder?.roundId,
+				awayFeederLocation: awayFeeder?.location,
+				awayFeederRoundId: awayFeeder?.roundId,
+			})
+		}
+	}
+
+	log(`ESPN bracket page: ${r32Positions.size} R32 positions + ${bracketEvents.length} R16+ records`)
+	return { r32Positions, bracketEvents }
+}
+
+// Bracket-page competitor location strings:
+//   "Round of 32 7 Winner" → { location: 7, roundId: 1 }
+//   "Round of 16 5 Winner" → { location: 5, roundId: 2 }
+//   "Quarterfinals 2 Winner" → { location: 2, roundId: 3 }
+function parsePageFeederLocation(label) {
+	if (!label) return null
+	let m = label.match(/^Round of 32\s+(\d+)\s+Winner$/i)
+	if (m) return { location: parseInt(m[1], 10), roundId: 1 }
+	m = label.match(/^Round of 16\s+(\d+)\s+Winner$/i)
+	if (m) return { location: parseInt(m[1], 10), roundId: 2 }
+	m = label.match(/^Quarterfinals?\s+(\d+)\s+Winner$/i)
+	if (m) return { location: parseInt(m[1], 10), roundId: 3 }
+	m = label.match(/^Semifinals?\s+(\d+)\s+Winner$/i)
+	if (m) return { location: parseInt(m[1], 10), roundId: 4 }
+	return null
+}
+
+// Back-compat alias: callers that only need the position map can use this.
+export async function fetchESPNBracketPositions() {
+	const { r32Positions } = await fetchESPNBracketStructure()
+	return r32Positions
 }
 
 /**

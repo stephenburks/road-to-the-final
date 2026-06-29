@@ -54,7 +54,7 @@ import { buildActualBracket } from './lib/actualBracket.js'
 import { deriveLivePath, derivePossibleOpponents } from './lib/livePath.js'
 import { computeTotalGoals } from './lib/teamStats.js'
 import { log } from './lib/fetchUtil.js'
-import { fetchESPNEventDetails, normalizeESPNCalendarDates } from './lib/espn.js'
+import { fetchESPNEventDetails, normalizeESPNCalendarDates, fetchESPNBracketStructure } from './lib/espn.js'
 import { fetchPolymarketAll, attachMatchupOdds } from './lib/polymarket.js'
 
 // ─── Paths ───────────────────────────────────────────────────────────────────
@@ -115,6 +115,11 @@ async function main() {
   const TOURNAMENT_END_ESPN   = '2026-07-19'; // full tournament through the Final
   const { matches: espnMatches, scorers: espnScorers, cards: espnCards, activeTeams: espnActiveTeams, bracketEvents: espnBracketEvents }
     = await fetchESPNEventDetails(TOURNAMENT_START_ESPN, TOURNAMENT_END_ESPN);
+
+  // Authoritative bracket structure from ESPN's bracket page — used to
+  // correctly map R32 events to FIFA bracket position and to resolve R16+
+  // feeder pairings (which the scoreboard endpoint can't be trusted for).
+  const espnBracketStructure = await fetchESPNBracketStructure();
 
   // Normalize all ESPN UTC dates to local venue dates
   normalizeESPNCalendarDates(espnMatches, espnScorers, espnCards);
@@ -327,7 +332,7 @@ async function main() {
   // diverge from the static BRACKET_PATHS prediction), the per-team path
   // venue/date/opponent must come from observed ESPN data — not from the
   // static guess. See scripts/lib/livePath.js for full rationale.
-  const actualBracket = buildActualBracket(dailyMatches, espnBracketEvents);
+  const actualBracket = buildActualBracket(dailyMatches, espnBracketEvents, espnBracketStructure);
   for (const t of teams) {
     if (!t) continue;
     t.path = deriveLivePath(t, actualBracket, t.path);

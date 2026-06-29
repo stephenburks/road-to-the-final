@@ -175,7 +175,11 @@ export function validateAppData(data) {
 				if (!Array.isArray(arr)) { errors.push(`actualBracket.${stage} must be an array`); continue; }
 				arr.forEach((m, i) => {
 					const prefix = `actualBracket.${stage}[${i}]`;
-					if (!isStr(m.date) || !ISO_DATE.test(m.date)) errors.push(`${prefix}.date missing or not ISO`);
+					// Date is optional on placeholder entries (ESPN hasn't scheduled
+					// the match yet) but must be ISO when present.
+					if (m.date != null && (!isStr(m.date) || !ISO_DATE.test(m.date))) {
+						errors.push(`${prefix}.date is not ISO when present`);
+					}
 					// Each side must have EITHER a teamId OR a feederEventId
 					// (placeholder reference) — never neither.
 					if (!isStr(m.homeId) && !isStr(m.homeFeederEventId)) {
