@@ -1,6 +1,6 @@
 {
-  "lastUpdated": "2026-06-28T22:01:49.087Z",
-  "snapshotDate": "2026-06-28",
+  "lastUpdated": "2026-06-29T00:08:53.751Z",
+  "snapshotDate": "2026-06-29",
   "isHistorical": false,
   "sourceSummary": {
     "dataSource": "ESPN",
@@ -9,7 +9,7 @@
   },
   "tournament": {
     "name": "FIFA World Cup 2026",
-    "currentStage": "r32",
+    "currentStage": "r16",
     "stages": {
       "group_stage": {
         "status": "done",
@@ -17,12 +17,12 @@
         "date": "Jun 11–27"
       },
       "r32": {
-        "status": "active",
+        "status": "done",
         "label": "Round of 32",
         "date": "Jun 28–Jul 2"
       },
       "r16": {
-        "status": "upcoming",
+        "status": "active",
         "label": "Round of 16",
         "date": "Jul 4–7"
       },
@@ -1003,7 +1003,7 @@
       "group": "A",
       "confederation": "CAF",
       "fifaRank": 58,
-      "eliminated": false,
+      "eliminated": true,
       "currentStage": "r32",
       "groupResults": [
         {
@@ -1108,42 +1108,10 @@
           "city": "Inglewood, California",
           "opponentDesc": "Canada"
         },
-        "r16": {
-          "status": "future",
-          "date": "2026-07-06",
-          "venue": "TBD",
-          "city": "TBD",
-          "opponentDesc": "Opponent TBD",
-          "conditional": true,
-          "conditionNote": "Venue + opponent confirmed once bracket is drawn"
-        },
-        "qf": {
-          "status": "future",
-          "date": "2026-07-10",
-          "venue": "TBD",
-          "city": "TBD",
-          "opponentDesc": "Opponent TBD",
-          "conditional": true,
-          "conditionNote": "Venue + opponent confirmed once bracket is drawn"
-        },
-        "sf": {
-          "status": "future",
-          "date": "2026-07-15",
-          "venue": "TBD",
-          "city": "TBD",
-          "opponentDesc": "Opponent TBD",
-          "conditional": true,
-          "conditionNote": "Venue + opponent confirmed once bracket is drawn"
-        },
-        "final": {
-          "status": "future",
-          "date": "2026-07-19",
-          "venue": "TBD",
-          "city": "TBD",
-          "opponentDesc": "Opponent TBD",
-          "conditional": true,
-          "conditionNote": "Venue + opponent confirmed once bracket is drawn"
-        }
+        "r16": null,
+        "qf": null,
+        "sf": null,
+        "final": null
       },
       "possibleOpponents": {
         "r32": [
@@ -1370,7 +1338,7 @@
       "confederation": "CONCACAF",
       "fifaRank": 27,
       "eliminated": false,
-      "currentStage": "r32",
+      "currentStage": "r16",
       "groupResults": [
         {
           "matchday": 1,
@@ -1448,7 +1416,7 @@
       "advanceProbabilities": {
         "r32": 100,
         "r16": 100,
-        "qf": 23,
+        "qf": 24,
         "sf": 3,
         "final": 1,
         "winner": 0,
@@ -1530,7 +1498,7 @@
       "confederation": "UEFA",
       "fifaRank": 71,
       "eliminated": false,
-      "currentStage": "group_stage",
+      "currentStage": "r32",
       "groupResults": [
         {
           "matchday": 1,
@@ -1617,7 +1585,7 @@
         "r16": 18,
         "qf": 6,
         "sf": 1,
-        "final": 1,
+        "final": 0,
         "winner": 0,
         "source": "market"
       },
@@ -1630,7 +1598,7 @@
           "detail": "4pts after MD3"
         },
         "r32": {
-          "status": "future",
+          "status": "upcoming",
           "date": "2026-07-02",
           "venue": "Levi's Stadium",
           "city": "Santa Clara, California",
@@ -1874,7 +1842,7 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 68,
+        "r16": 70,
         "qf": 31,
         "sf": 8,
         "final": 3,
@@ -2035,7 +2003,7 @@
         "r32": 100,
         "r16": 74,
         "qf": 50,
-        "sf": 30,
+        "sf": 28,
         "final": 16,
         "winner": 6,
         "source": "market"
@@ -2566,8 +2534,8 @@
       "advanceProbabilities": {
         "r32": 100,
         "r16": 82,
-        "qf": 49,
-        "sf": 19,
+        "qf": 47,
+        "sf": 17,
         "final": 5,
         "winner": 2,
         "source": "market"
@@ -2648,7 +2616,7 @@
       "confederation": "CONMEBOL",
       "fifaRank": 39,
       "eliminated": false,
-      "currentStage": "group_stage",
+      "currentStage": "r32",
       "groupResults": [
         {
           "matchday": 1,
@@ -2736,7 +2704,7 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 14,
+        "r16": 15,
         "qf": 3,
         "sf": 1,
         "final": 1,
@@ -2752,7 +2720,7 @@
           "detail": "4pts after MD3"
         },
         "r32": {
-          "status": "future",
+          "status": "upcoming",
           "date": "2026-06-29",
           "venue": "Gillette Stadium",
           "city": "Foxborough, Massachusetts",
@@ -3162,9 +3130,9 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 85,
+        "r16": 86,
         "qf": 28,
-        "sf": 17,
+        "sf": 18,
         "final": 9,
         "winner": 4,
         "source": "market"
@@ -3471,7 +3439,7 @@
         "r32": 100,
         "r16": 35,
         "qf": 10,
-        "sf": 4,
+        "sf": 3,
         "final": 2,
         "winner": 0,
         "source": "market"
@@ -3552,7 +3520,7 @@
       "confederation": "CONMEBOL",
       "fifaRank": 23,
       "eliminated": false,
-      "currentStage": "group_stage",
+      "currentStage": "r32",
       "groupResults": [
         {
           "matchday": 1,
@@ -3627,7 +3595,7 @@
       "advanceProbabilities": {
         "r32": 100,
         "r16": 39,
-        "qf": 11,
+        "qf": 12,
         "sf": 3,
         "final": 2,
         "winner": 1,
@@ -3642,7 +3610,7 @@
           "detail": "4pts after MD3"
         },
         "r32": {
-          "status": "future",
+          "status": "upcoming",
           "date": "2026-07-01",
           "venue": "Estadio Banorte",
           "city": "Mexico City",
@@ -3810,7 +3778,7 @@
         "r32": 100,
         "r16": 63,
         "qf": 51,
-        "sf": 22,
+        "sf": 21,
         "final": 12,
         "winner": 5,
         "source": "market"
@@ -3957,9 +3925,9 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 28,
+        "r16": 27,
         "qf": 14,
-        "sf": 8,
+        "sf": 7,
         "final": 4,
         "winner": 1,
         "source": "market"
@@ -4040,7 +4008,7 @@
       "confederation": "UEFA",
       "fifaRank": 29,
       "eliminated": false,
-      "currentStage": "group_stage",
+      "currentStage": "r32",
       "groupResults": [
         {
           "matchday": 1,
@@ -4147,7 +4115,7 @@
           "detail": "4pts after MD3"
         },
         "r32": {
-          "status": "future",
+          "status": "upcoming",
           "date": "2026-06-30",
           "venue": "MetLife Stadium",
           "city": "East Rutherford, New Jersey",
@@ -4401,9 +4369,9 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 62,
+        "r16": 61,
         "qf": 32,
-        "sf": 10,
+        "sf": 11,
         "final": 4,
         "winner": 1,
         "source": "market"
@@ -4564,7 +4532,7 @@
       "advanceProbabilities": {
         "r32": 100,
         "r16": 56,
-        "qf": 10,
+        "qf": 11,
         "sf": 4,
         "final": 2,
         "winner": 0,
@@ -5092,7 +5060,7 @@
       "advanceProbabilities": {
         "r32": 100,
         "r16": 7,
-        "qf": 3,
+        "qf": 2,
         "sf": 1,
         "final": 1,
         "winner": 0,
@@ -5474,9 +5442,9 @@
       "advanceProbabilities": {
         "r32": 100,
         "r16": 89,
-        "qf": 68,
+        "qf": 67,
         "sf": 52,
-        "final": 39,
+        "final": 37,
         "winner": 23,
         "source": "market"
       },
@@ -5556,7 +5524,7 @@
       "confederation": "CAF",
       "fifaRank": 14,
       "eliminated": false,
-      "currentStage": "group_stage",
+      "currentStage": "r32",
       "groupResults": [
         {
           "matchday": 1,
@@ -5649,7 +5617,7 @@
           "detail": "3pts after MD3"
         },
         "r32": {
-          "status": "future",
+          "status": "upcoming",
           "date": "2026-07-01",
           "venue": "Lumen Field",
           "city": "Seattle, Washington",
@@ -5890,8 +5858,8 @@
       "advanceProbabilities": {
         "r32": 100,
         "r16": 65,
-        "qf": 31,
-        "sf": 16,
+        "qf": 30,
+        "sf": 15,
         "final": 8,
         "winner": 2,
         "source": "market"
@@ -6057,7 +6025,7 @@
         "r16": 94,
         "qf": 82,
         "sf": 60,
-        "final": 38,
+        "final": 36,
         "winner": 21,
         "source": "market"
       },
@@ -6137,7 +6105,7 @@
       "confederation": "CAF",
       "fifaRank": 35,
       "eliminated": false,
-      "currentStage": "group_stage",
+      "currentStage": "r32",
       "groupResults": [
         {
           "matchday": 1,
@@ -6219,7 +6187,7 @@
           "detail": "4pts after MD3"
         },
         "r32": {
-          "status": "future",
+          "status": "upcoming",
           "date": "2026-07-03",
           "venue": "BC Place",
           "city": "Vancouver",
@@ -6361,7 +6329,7 @@
         "r32": 100,
         "r16": 14,
         "qf": 4,
-        "sf": 3,
+        "sf": 2,
         "final": 1,
         "winner": 0,
         "source": "market"
@@ -6645,8 +6613,8 @@
       "advanceProbabilities": {
         "r32": 100,
         "r16": 69,
-        "qf": 28,
-        "sf": 23,
+        "qf": 29,
+        "sf": 21,
         "final": 12,
         "winner": 6,
         "source": "market"
@@ -6727,7 +6695,7 @@
       "confederation": "CAF",
       "fifaRank": 56,
       "eliminated": false,
-      "currentStage": "group_stage",
+      "currentStage": "r32",
       "groupResults": [
         {
           "matchday": 1,
@@ -6817,7 +6785,7 @@
           "detail": "4pts after MD3"
         },
         "r32": {
-          "status": "future",
+          "status": "upcoming",
           "date": "2026-07-01",
           "venue": "Mercedes-Benz Stadium",
           "city": "Atlanta, Georgia",
@@ -7059,7 +7027,7 @@
         "r32": 100,
         "r16": 78,
         "qf": 50,
-        "sf": 16,
+        "sf": 17,
         "final": 9,
         "winner": 3,
         "source": "market"
@@ -7439,7 +7407,7 @@
       "confederation": "CAF",
       "fifaRank": 60,
       "eliminated": false,
-      "currentStage": "group_stage",
+      "currentStage": "r32",
       "groupResults": [
         {
           "matchday": 1,
@@ -7501,7 +7469,7 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 23,
+        "r16": 24,
         "qf": 11,
         "sf": 3,
         "final": 1,
@@ -7517,7 +7485,7 @@
           "detail": "4pts after MD3"
         },
         "r32": {
-          "status": "future",
+          "status": "upcoming",
           "date": "2026-07-04",
           "venue": "GEHA Field at Arrowhead Stadium",
           "city": "Kansas City, Missouri",
@@ -9123,7 +9091,7 @@
           "homeId": "brazil",
           "awayId": "japan",
           "homeWinPct": 57,
-          "awayWinPct": 19,
+          "awayWinPct": 18,
           "drawPct": 26,
           "eventSlug": "fifwc-bra-jpn-2026-06-29"
         }
@@ -9348,7 +9316,7 @@
           "homeId": "spain",
           "awayId": "austria",
           "homeWinPct": 76,
-          "awayWinPct": 7,
+          "awayWinPct": 8,
           "drawPct": 18,
           "eventSlug": "fifwc-esp-aut-2026-07-02"
         }
@@ -9376,7 +9344,7 @@
           "awayId": "croatia",
           "homeWinPct": 54,
           "awayWinPct": 20,
-          "drawPct": 28,
+          "drawPct": 27,
           "eventSlug": "fifwc-prt-hrv-2026-07-02"
         }
       }
