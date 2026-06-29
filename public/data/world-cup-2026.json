@@ -938,7 +938,7 @@
         },
         "r32": {
           "status": "upcoming",
-          "date": "2026-07-01",
+          "date": "2026-06-30",
           "venue": "Estadio Banorte",
           "city": "Mexico City",
           "opponentDesc": "Ecuador",
@@ -1638,7 +1638,7 @@
         },
         "r32": {
           "status": "upcoming",
-          "date": "2026-07-02",
+          "date": "2026-07-01",
           "venue": "Levi's Stadium",
           "city": "Santa Clara, California",
           "opponentDesc": "USA",
@@ -1922,7 +1922,7 @@
         },
         "r32": {
           "status": "upcoming",
-          "date": "2026-07-03",
+          "date": "2026-07-02",
           "venue": "BC Place",
           "city": "Vancouver",
           "opponentDesc": "Algeria",
@@ -2275,7 +2275,7 @@
         },
         "r32": {
           "status": "upcoming",
-          "date": "2026-06-30",
+          "date": "2026-06-29",
           "venue": "Estadio BBVA",
           "city": "Guadalupe",
           "opponentDesc": "Netherlands",
@@ -2684,7 +2684,7 @@
         },
         "r32": {
           "status": "upcoming",
-          "date": "2026-07-02",
+          "date": "2026-07-01",
           "venue": "Levi's Stadium",
           "city": "Santa Clara, California",
           "opponentDesc": "Bosnia & Herz.",
@@ -3842,7 +3842,7 @@
         },
         "r32": {
           "status": "upcoming",
-          "date": "2026-07-01",
+          "date": "2026-06-30",
           "venue": "Estadio Banorte",
           "city": "Mexico City",
           "opponentDesc": "Mexico",
@@ -4047,7 +4047,7 @@
         },
         "r32": {
           "status": "upcoming",
-          "date": "2026-06-30",
+          "date": "2026-06-29",
           "venue": "Estadio BBVA",
           "city": "Guadalupe",
           "opponentDesc": "Morocco",
@@ -6701,7 +6701,7 @@
         },
         "r32": {
           "status": "upcoming",
-          "date": "2026-07-03",
+          "date": "2026-07-02",
           "venue": "BC Place",
           "city": "Vancouver",
           "opponentDesc": "Switzerland",
@@ -7649,7 +7649,7 @@
         },
         "r32": {
           "status": "upcoming",
-          "date": "2026-07-04",
+          "date": "2026-07-03",
           "venue": "GEHA Field at Arrowhead Stadium",
           "city": "Kansas City, Missouri",
           "opponentDesc": "Ghana",
@@ -8162,7 +8162,7 @@
         },
         "r32": {
           "status": "upcoming",
-          "date": "2026-07-04",
+          "date": "2026-07-03",
           "venue": "GEHA Field at Arrowhead Stadium",
           "city": "Kansas City, Missouri",
           "opponentDesc": "Colombia",
@@ -9822,9 +9822,7 @@
           "drawPct": 18,
           "eventSlug": "fifwc-ger-par-2026-06-29"
         }
-      }
-    ],
-    "2026-06-30": [
+      },
       {
         "homeTeam": "Netherlands",
         "homeFlag": "🇳🇱",
@@ -9835,7 +9833,7 @@
         "homeScore": 0,
         "awayScore": 0,
         "status": "SCHEDULED",
-        "date": "2026-06-30",
+        "date": "2026-06-29",
         "broadcasts": [
           "FOX",
           "Tele",
@@ -9843,7 +9841,9 @@
         ],
         "time": "2026-06-30T01:00Z",
         "venue": "Estadio BBVA, Guadalupe"
-      },
+      }
+    ],
+    "2026-06-30": [
       {
         "homeTeam": "Ivory Coast",
         "homeFlag": "🇨🇮",
@@ -9897,9 +9897,7 @@
           "drawPct": 16,
           "eventSlug": "fifwc-fra-swe-2026-06-30"
         }
-      }
-    ],
-    "2026-07-01": [
+      },
       {
         "homeTeam": "Mexico",
         "homeFlag": "🇲🇽",
@@ -9910,7 +9908,7 @@
         "homeScore": 0,
         "awayScore": 0,
         "status": "SCHEDULED",
-        "date": "2026-07-01",
+        "date": "2026-06-30",
         "broadcasts": [
           "FOX",
           "Tele",
@@ -9918,7 +9916,9 @@
         ],
         "time": "2026-07-01T01:00Z",
         "venue": "Estadio Banorte, Mexico City"
-      },
+      }
+    ],
+    "2026-07-01": [
       {
         "homeTeam": "England",
         "homeFlag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
@@ -9972,9 +9972,7 @@
           "drawPct": 31,
           "eventSlug": "fifwc-bel-sen-2026-07-01"
         }
-      }
-    ],
-    "2026-07-02": [
+      },
       {
         "homeTeam": "USA",
         "homeFlag": "🇺🇸",
@@ -9985,7 +9983,7 @@
         "homeScore": 0,
         "awayScore": 0,
         "status": "SCHEDULED",
-        "date": "2026-07-02",
+        "date": "2026-07-01",
         "broadcasts": [
           "FOX",
           "Tele",
@@ -9993,7 +9991,9 @@
         ],
         "time": "2026-07-02T00:00Z",
         "venue": "Levi's Stadium, Santa Clara, California"
-      },
+      }
+    ],
+    "2026-07-02": [
       {
         "homeTeam": "Spain",
         "homeFlag": "🇪🇸",
@@ -10047,9 +10047,7 @@
           "drawPct": 27,
           "eventSlug": "fifwc-prt-hrv-2026-07-02"
         }
-      }
-    ],
-    "2026-07-03": [
+      },
       {
         "homeTeam": "Switzerland",
         "homeFlag": "🇨🇭",
@@ -10060,7 +10058,7 @@
         "homeScore": 0,
         "awayScore": 0,
         "status": "SCHEDULED",
-        "date": "2026-07-03",
+        "date": "2026-07-02",
         "broadcasts": [
           "FS1",
           "Tele",
@@ -10068,7 +10066,9 @@
         ],
         "time": "2026-07-03T03:00Z",
         "venue": "BC Place, Vancouver"
-      },
+      }
+    ],
+    "2026-07-03": [
       {
         "homeTeam": "Australia",
         "homeFlag": "🇦🇺",
@@ -10122,9 +10122,7 @@
           "drawPct": 11,
           "eventSlug": "fifwc-arg-cvi-2026-07-03"
         }
-      }
-    ],
-    "2026-07-04": [
+      },
       {
         "homeTeam": "Colombia",
         "homeFlag": "🇨🇴",
@@ -10135,7 +10133,7 @@
         "homeScore": 0,
         "awayScore": 0,
         "status": "SCHEDULED",
-        "date": "2026-07-04",
+        "date": "2026-07-03",
         "broadcasts": [
           "FOX",
           "Tele",
@@ -10144,7 +10142,8 @@
         "time": "2026-07-04T01:30Z",
         "venue": "GEHA Field at Arrowhead Stadium, Kansas City, Missouri"
       }
-    ]
+    ],
+    "2026-07-04": []
   },
   "actualBracket": {
     "r32": [
@@ -10185,7 +10184,7 @@
       {
         "eventId": "760488",
         "bracketLocation": 4,
-        "date": "2026-06-30",
+        "date": "2026-06-29",
         "venue": "Estadio BBVA, Guadalupe",
         "status": "SCHEDULED",
         "homeScore": 0,
@@ -10218,7 +10217,7 @@
       {
         "eventId": "760494",
         "bracketLocation": 7,
-        "date": "2026-07-02",
+        "date": "2026-07-01",
         "venue": "Levi's Stadium, Santa Clara, California",
         "status": "SCHEDULED",
         "homeScore": 0,
@@ -10262,7 +10261,7 @@
       {
         "eventId": "760491",
         "bracketLocation": 11,
-        "date": "2026-07-01",
+        "date": "2026-06-30",
         "venue": "Estadio Banorte, Mexico City",
         "status": "SCHEDULED",
         "homeScore": 0,
@@ -10306,7 +10305,7 @@
       {
         "eventId": "760498",
         "bracketLocation": 15,
-        "date": "2026-07-03",
+        "date": "2026-07-02",
         "venue": "BC Place, Vancouver",
         "status": "SCHEDULED",
         "homeScore": 0,
@@ -10317,7 +10316,7 @@
       {
         "eventId": "760501",
         "bracketLocation": 16,
-        "date": "2026-07-04",
+        "date": "2026-07-03",
         "venue": "GEHA Field at Arrowhead Stadium, Kansas City, Missouri",
         "status": "SCHEDULED",
         "homeScore": 0,
