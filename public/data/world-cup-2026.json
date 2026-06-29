@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-29T14:51:02.574Z",
+  "lastUpdated": "2026-06-29T17:36:18.242Z",
   "snapshotDate": "2026-06-29",
   "isHistorical": false,
   "sourceSummary": {
@@ -924,7 +924,7 @@
         "r16": 62,
         "qf": 27,
         "sf": 14,
-        "final": 5,
+        "final": 6,
         "winner": 1,
         "source": "market"
       },
@@ -1623,8 +1623,8 @@
         "r32": 100,
         "r16": 18,
         "qf": 5,
-        "sf": 2,
-        "final": 0,
+        "sf": 1,
+        "final": 1,
         "winner": 0,
         "source": "market"
       },
@@ -2087,11 +2087,11 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 74,
-        "qf": 50,
-        "sf": 28,
+        "r16": 53,
+        "qf": 38,
+        "sf": 25,
         "final": 14,
-        "winner": 6,
+        "winner": 4,
         "source": "market"
       },
       "path": {
@@ -2103,7 +2103,7 @@
           "detail": "7pts after MD3"
         },
         "r32": {
-          "status": "upcoming",
+          "status": "active",
           "date": "2026-06-29",
           "venue": "NRG Stadium",
           "city": "Houston, Texas",
@@ -2260,8 +2260,8 @@
         "r32": 100,
         "r16": 40,
         "qf": 29,
-        "sf": 9,
-        "final": 4,
+        "sf": 7,
+        "final": 5,
         "winner": 1,
         "source": "market"
       },
@@ -2657,7 +2657,7 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 83,
+        "r16": 82,
         "qf": 47,
         "sf": 17,
         "final": 5,
@@ -2853,8 +2853,8 @@
         "r32": 100,
         "r16": 14,
         "qf": 2,
-        "sf": 1,
-        "final": 1,
+        "sf": 2,
+        "final": 2,
         "winner": 0,
         "source": "market"
       },
@@ -3041,7 +3041,7 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 43,
+        "r16": 44,
         "qf": 8,
         "sf": 2,
         "final": 2,
@@ -3655,9 +3655,9 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 36,
+        "r16": 35,
         "qf": 12,
-        "sf": 3,
+        "sf": 4,
         "final": 2,
         "winner": 0,
         "source": "market"
@@ -3837,7 +3837,7 @@
         "r32": 100,
         "r16": 38,
         "qf": 12,
-        "sf": 5,
+        "sf": 4,
         "final": 2,
         "winner": 1,
         "source": "market"
@@ -4040,10 +4040,10 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 62,
-        "qf": 49,
+        "r16": 61,
+        "qf": 45,
         "sf": 22,
-        "final": 13,
+        "final": 12,
         "winner": 5,
         "source": "market"
       },
@@ -4202,11 +4202,11 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 27,
-        "qf": 14,
-        "sf": 6,
-        "final": 2,
-        "winner": 1,
+        "r16": 47,
+        "qf": 22,
+        "sf": 18,
+        "final": 4,
+        "winner": 2,
         "source": "market"
       },
       "path": {
@@ -4218,7 +4218,7 @@
           "detail": "5pts after MD3"
         },
         "r32": {
-          "status": "upcoming",
+          "status": "active",
           "date": "2026-06-29",
           "venue": "NRG Stadium",
           "city": "Houston, Texas",
@@ -4400,8 +4400,8 @@
       "advanceProbabilities": {
         "r32": 100,
         "r16": 11,
-        "qf": 3,
-        "sf": 2,
+        "qf": 2,
+        "sf": 1,
         "final": 1,
         "winner": 0,
         "source": "market"
@@ -4878,7 +4878,7 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 57,
+        "r16": 56,
         "qf": 12,
         "sf": 4,
         "final": 1,
@@ -5279,7 +5279,7 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 86,
+        "r16": 87,
         "qf": 60,
         "sf": 43,
         "final": 23,
@@ -5456,8 +5456,8 @@
         "r32": 100,
         "r16": 8,
         "qf": 3,
-        "sf": 1,
-        "final": 1,
+        "sf": 2,
+        "final": 0,
         "winner": 0,
         "source": "market"
       },
@@ -5863,9 +5863,9 @@
         "r32": 100,
         "r16": 90,
         "qf": 66,
-        "sf": 51,
+        "sf": 52,
         "final": 37,
-        "winner": 23,
+        "winner": 24,
         "source": "market"
       },
       "path": {
@@ -6046,7 +6046,7 @@
         "r32": 100,
         "r16": 41,
         "qf": 17,
-        "sf": 5,
+        "sf": 7,
         "final": 2,
         "winner": 0,
         "source": "market"
@@ -6325,8 +6325,8 @@
       "advanceProbabilities": {
         "r32": 100,
         "r16": 65,
-        "qf": 28,
-        "sf": 14,
+        "qf": 31,
+        "sf": 16,
         "final": 8,
         "winner": 2,
         "source": "market"
@@ -6516,7 +6516,7 @@
         "qf": 82,
         "sf": 61,
         "final": 37,
-        "winner": 21,
+        "winner": 20,
         "source": "market"
       },
       "path": {
@@ -7172,11 +7172,11 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 70,
+        "r16": 69,
         "qf": 30,
         "sf": 21,
         "final": 13,
-        "winner": 6,
+        "winner": 7,
         "source": "market"
       },
       "path": {
@@ -7634,7 +7634,7 @@
         "r32": 100,
         "r16": 79,
         "qf": 51,
-        "sf": 19,
+        "sf": 20,
         "final": 9,
         "winner": 2,
         "source": "market"
@@ -7807,11 +7807,11 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 89,
-        "qf": 63,
-        "sf": 38,
+        "r16": 88,
+        "qf": 64,
+        "sf": 41,
         "final": 22,
-        "winner": 10,
+        "winner": 11,
         "source": "market"
       },
       "path": {
@@ -7977,10 +7977,10 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 32,
+        "r16": 33,
         "qf": 9,
         "sf": 5,
-        "final": 3,
+        "final": 2,
         "winner": 0,
         "source": "market"
       },
@@ -8146,7 +8146,7 @@
       "advanceProbabilities": {
         "r32": 100,
         "r16": 20,
-        "qf": 10,
+        "qf": 9,
         "sf": 3,
         "final": 1,
         "winner": 0,
@@ -9777,9 +9777,10 @@
         "awayFlag": "🇯🇵",
         "awayId": "japan",
         "homeScore": 0,
-        "awayScore": 0,
-        "status": "SCHEDULED",
+        "awayScore": 1,
+        "status": "IN_PROGRESS",
         "date": "2026-06-29",
+        "clock": "36'",
         "broadcasts": [
           "FOX",
           "Tele",
@@ -9790,9 +9791,9 @@
         "polymarket": {
           "homeId": "brazil",
           "awayId": "japan",
-          "homeWinPct": 56,
-          "awayWinPct": 19,
-          "drawPct": 26,
+          "homeWinPct": 28,
+          "awayWinPct": 41,
+          "drawPct": 32,
           "eventSlug": "fifwc-bra-jpn-2026-06-29"
         }
       },
@@ -9873,8 +9874,8 @@
         "polymarket": {
           "homeId": "ivorycoast",
           "awayId": "norway",
-          "homeWinPct": 26,
-          "awayWinPct": 47,
+          "homeWinPct": 27,
+          "awayWinPct": 46,
           "drawPct": 28,
           "eventSlug": "fifwc-civ-nor-2026-06-30"
         }
@@ -9984,7 +9985,7 @@
           "homeId": "belgium",
           "awayId": "senegal",
           "homeWinPct": 44,
-          "awayWinPct": 27,
+          "awayWinPct": 28,
           "drawPct": 30,
           "eventSlug": "fifwc-bel-sen-2026-07-01"
         }
@@ -10201,9 +10202,9 @@
         "eventId": "760487",
         "date": "2026-06-29",
         "venue": "NRG Stadium, Houston, Texas",
-        "status": "SCHEDULED",
+        "status": "IN_PROGRESS",
         "homeScore": 0,
-        "awayScore": 0,
+        "awayScore": 1,
         "homeId": "brazil",
         "awayId": "japan"
       },
