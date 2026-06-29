@@ -5,6 +5,58 @@ import { tryFetch, log } from './fetchUtil.js'
 const ESPN_SCOREBOARD_BASE = 'https://site.web.api.espn.com/apis/site/v2/sports/soccer/fifa.world/scoreboard'
 const ESPN_BRACKET_PAGE    = 'https://www.espn.com/soccer/bracket/_/tournamentId/fifa.world'
 
+// Venue → IANA timezone. Used to convert ESPN's UTC event dates to the
+// actual local kickoff date — without this a 5pm PT kickoff (00:00Z next
+// day) shows up under the wrong calendar date in the UI.
+const VENUE_TZ_KEYWORDS = [
+	['California',     'America/Los_Angeles'],
+	['Washington',     'America/Los_Angeles'],  // state name; ESPN venue includes it
+	['Vancouver',      'America/Vancouver'],
+	['Oregon',         'America/Los_Angeles'],
+	['Texas',          'America/Chicago'],
+	['Missouri',       'America/Chicago'],
+	['Mexico City',    'America/Mexico_City'],
+	['Guadalupe',      'America/Mexico_City'],  // Estadio BBVA, Monterrey area
+	['Monterrey',      'America/Mexico_City'],
+	['Guadalajara',    'America/Mexico_City'],
+	['New Jersey',     'America/New_York'],
+	['New York',       'America/New_York'],
+	['Massachusetts',  'America/New_York'],
+	['Georgia',        'America/New_York'],
+	['Florida',        'America/New_York'],
+	['Pennsylvania',   'America/New_York'],
+	['Toronto',        'America/Toronto'],
+]
+
+function venueTimezone(venue) {
+	if (!venue) return null
+	for (const [key, tz] of VENUE_TZ_KEYWORDS) {
+		if (venue.includes(key)) return tz
+	}
+	return null
+}
+
+/**
+ * Resolve an ESPN UTC event timestamp to the local kickoff date at the
+ * venue. ESPN returns `date` in UTC; for late-evening kickoffs in PT this
+ * rolls over to the next calendar day (e.g. 5pm PT = 00:00Z next day),
+ * which the UI then displays on the wrong day. Mapping to the venue's
+ * timezone fixes this.
+ *
+ * Falls back to the UTC date string when the venue is unknown.
+ */
+export function localDateForEvent(eventDateUTC, venue) {
+	if (!eventDateUTC) return null
+	const tz = venueTimezone(venue)
+	if (!tz) return eventDateUTC.split('T')[0]
+	try {
+		// toLocaleDateString with 'en-CA' returns YYYY-MM-DD.
+		return new Date(eventDateUTC).toLocaleDateString('en-CA', { timeZone: tz })
+	} catch {
+		return eventDateUTC.split('T')[0]
+	}
+}
+
 // Map ESPN's season.slug to our stage key.
 const SLUG_TO_STAGE = {
 	'round-of-32':      'r32',
@@ -75,7 +127,6 @@ export async function fetchESPNEventDetails(dateFrom, dateTo) {
 
 		for (const event of data.events) {
 			const eventId   = String(event.id)
-			const eventDate = event.date?.split('T')[0]
 			const eventTime = event.date || ''
 			const stageKey  = SLUG_TO_STAGE[event.season?.slug] || null
 			const competition = event.competitions?.[0]
@@ -83,6 +134,15 @@ export async function fetchESPNEventDetails(dateFrom, dateTo) {
 			const homeComp = competitors.find(c => c.homeAway === 'home')
 			const awayComp = competitors.find(c => c.homeAway === 'away')
 			const matchStr = `${homeComp?.team?.displayName || '?'} vs ${awayComp?.team?.displayName || '?'}`
+
+			// Resolve venue first so we can convert UTC kickoff → local date.
+			// ESPN's `address.city` already includes the state (e.g. "Santa
+			// Clara, California"), so the composite has the state name that
+			// VENUE_TZ_KEYWORDS matches against.
+			const venueName = competition?.venue?.fullName || ''
+			const venueCity = competition?.venue?.address?.city || ''
+			const venue = venueName && venueCity ? `${venueName}, ${venueCity}` : (venueName || venueCity || '')
+			const eventDate = localDateForEvent(eventTime, venue) || event.date?.split('T')[0]
 
 			const homeName = homeComp?.team?.displayName
 			const awayName = awayComp?.team?.displayName
@@ -104,10 +164,6 @@ export async function fetchESPNEventDetails(dateFrom, dateTo) {
 				.map(b => b.media?.shortName)
 				.filter(Boolean)
 				.filter((v, i, a) => a.indexOf(v) === i)
-
-			const venueName = competition?.venue?.fullName || ''
-			const venueCity = competition?.venue?.address?.city || ''
-			const venue = venueName && venueCity ? `${venueName}, ${venueCity}` : (venueName || venueCity || '')
 
 			const hScore = parseInt(homeComp?.score, 10) || 0
 			const aScore = parseInt(awayComp?.score, 10) || 0
