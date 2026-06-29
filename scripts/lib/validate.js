@@ -180,13 +180,17 @@ export function validateAppData(data) {
 					if (m.date != null && (!isStr(m.date) || !ISO_DATE.test(m.date))) {
 						errors.push(`${prefix}.date is not ISO when present`);
 					}
-					// Each side must have EITHER a teamId OR a feederEventId
-					// (placeholder reference) — never neither.
-					if (!isStr(m.homeId) && !isStr(m.homeFeederEventId)) {
-						errors.push(`${prefix} home side missing both homeId and homeFeederEventId`);
-					}
-					if (!isStr(m.awayId) && !isStr(m.awayFeederEventId)) {
-						errors.push(`${prefix} away side missing both awayId and awayFeederEventId`);
+					// QF/SF/Final slots may have neither a team nor a feeder eventId
+					// when the previous round hasn't been published (the previous
+					// round's R16+ entries themselves carry no scoreboard event ID
+					// until ESPN schedules them). These deep placeholders are fine.
+					if (stage === 'r32' || stage === 'r16') {
+						if (!isStr(m.homeId) && !isStr(m.homeFeederEventId)) {
+							errors.push(`${prefix} home side missing both homeId and homeFeederEventId`);
+						}
+						if (!isStr(m.awayId) && !isStr(m.awayFeederEventId)) {
+							errors.push(`${prefix} away side missing both awayId and awayFeederEventId`);
+						}
 					}
 					if (!VALID_STATUS.has(m.status)) errors.push(`${prefix}.status invalid (${m.status})`);
 					if (typeof m.homeScore !== 'number') errors.push(`${prefix}.homeScore not a number`);

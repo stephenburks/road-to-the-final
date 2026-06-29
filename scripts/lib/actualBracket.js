@@ -2,7 +2,27 @@ import { KNOCKOUT_STAGES } from './tournament.js'
 import { stageForKnockoutDate } from './elimination.js'
 
 const STAGE_COUNT = { r32: 16, r16: 8, qf: 4, sf: 2, final: 1 }
-const ROUND_ID_TO_STAGE = { 1: 'r32', 2: 'r16', 3: 'qf', 4: 'sf', 5: 'final' }
+
+// Authoritative FIFA R16 pairings (matches the public ESPN bracket image).
+// Indices are FIFA visual position 1-16 (the order R32 matches appear in
+// the official bracket diagram, top to bottom). Each tuple is one R16 match.
+const R16_FEEDER_PAIRS = [
+	[1, 3],   // GER/PAR + RSA/CAN
+	[2, 5],   // FRA/SWE + POR/CRO
+	[4, 6],   // NED/MAR + ESP/AUT
+	[7, 8],   // USA/BIH + BEL/SEN
+	[9, 10],  // BRA/JPN + CIV/NOR
+	[11, 12], // MEX/ECU + ENG/DRC
+	[13, 15], // ARG/CPV + SUI/ALG
+	[14, 16], // AUS/EGY + COL/GHA
+]
+
+// Standard knockout bracket convention: each next-round match takes winners
+// of two adjacent matches from the previous round. Hardcoded to match
+// FIFA's tournament structure.
+const QF_FEEDER_PAIRS = [[1, 2], [3, 4], [5, 6], [7, 8]]
+const SF_FEEDER_PAIRS = [[1, 2], [3, 4]]
+const FINAL_FEEDER_PAIRS = [[1, 2]]
 
 /**
  * Reconstruct the actual knockout bracket from ESPN data.
@@ -36,43 +56,36 @@ export function buildActualBracket(dailyMatches, scoreboardBracketEvents = null,
  * scoreboard data (live scores/status).
  */
 function buildFromStructure(scoreboardBracketEvents, structure) {
-	const { r32Positions, bracketEvents: pageEvents } = structure
+	const { r32Positions } = structure
 
-	// Scoreboard view of which event IDs are actually R32. Used to detect &
-	// reconcile bracket-page anomalies (ESPN's page occasionally mislabels
-	// an R16 placeholder as an R32 — observed at loc 16 / GER/PAR).
+	// Scoreboard view of which event IDs are actually R32.
 	const scoreboardR32EventIds = new Set(
 		scoreboardBracketEvents.filter(e => e.stage === 'r32' && e.eventId).map(e => e.eventId)
 	)
 
-	// bracketLocation → eventId (inverse of r32Positions for R32 lookups)
-	const r32LocationToEventId = new Map()
-	for (const [eventId, loc] of r32Positions) {
-		if (scoreboardR32EventIds.has(eventId)) r32LocationToEventId.set(loc, eventId)
+	// Build FIFA visual position (1-16) → R32 event ID map.
+	//
+	// ESPN's bracketLocation field is offset by 1 from FIFA's visual position:
+	// the page metadata leaves position 1 (GER/PAR in the 2026 bracket) out
+	// of the bracketLocation sequence and adds it as an orphan with a stale
+	// "bracketLocation 16" reference. Every other R32 event has
+	// bracketLocation = visualPosition - 1. Reconcile by assigning the
+	// orphan to visualPosition 1 and shifting the rest up.
+	const fifaPositionToEventId = new Map()
+	for (const [eventId, bracketLoc] of r32Positions) {
+		if (scoreboardR32EventIds.has(eventId)) {
+			fifaPositionToEventId.set(bracketLoc + 1, eventId)
+		}
 	}
-
-	// Reconcile: any scoreboard R32 event not in the page positions gets
-	// assigned to the next unfilled location (1..16). Without this, real
-	// R32 matchups like GER vs PAR would render as TBD because the page
-	// failed to place them.
-	const assignedEventIds = new Set(r32LocationToEventId.values())
-	const orphans = [...scoreboardR32EventIds].filter(id => !assignedEventIds.has(id))
-	for (let loc = 1; loc <= STAGE_COUNT.r32 && orphans.length > 0; loc++) {
-		if (!r32LocationToEventId.has(loc)) {
-			r32LocationToEventId.set(loc, orphans.shift())
+	const assigned = new Set(fifaPositionToEventId.values())
+	const orphans = [...scoreboardR32EventIds].filter(id => !assigned.has(id))
+	for (let pos = 1; pos <= STAGE_COUNT.r32 && orphans.length > 0; pos++) {
+		if (!fifaPositionToEventId.has(pos)) {
+			fifaPositionToEventId.set(pos, orphans.shift())
 		}
 	}
 
-	// Build lookup tables for R16+ bracketLocation → eventId from page records.
-	const stageLocationToEventId = { r32: r32LocationToEventId }
-	for (const stage of ['r16', 'qf', 'sf', 'final']) {
-		stageLocationToEventId[stage] = new Map()
-		for (const e of pageEvents.filter(p => p.stage === stage && p.eventId)) {
-			stageLocationToEventId[stage].set(e.bracketLocation, e.eventId)
-		}
-	}
-
-	// Build scoreboard lookup by eventId for live data.
+	// Scoreboard event lookup for live scores/status.
 	const scoreboardByEventId = new Map()
 	for (const e of scoreboardBracketEvents) {
 		if (e.eventId) scoreboardByEventId.set(e.eventId, e)
@@ -81,25 +94,65 @@ function buildFromStructure(scoreboardBracketEvents, structure) {
 	const out = {}
 	for (const stage of KNOCKOUT_STAGES) out[stage] = []
 
-	// R32: emit one entry per bracketLocation (1-16), pulling team + score
-	// data from scoreboard when the event has resolved.
-	for (let loc = 1; loc <= STAGE_COUNT.r32; loc++) {
-		const eventId = r32LocationToEventId.get(loc)
+	// R32 — emit one entry per FIFA visual position, ordered 1..16.
+	for (let pos = 1; pos <= STAGE_COUNT.r32; pos++) {
+		const eventId = fifaPositionToEventId.get(pos)
 		const sb = eventId ? scoreboardByEventId.get(eventId) : null
-		out.r32.push(buildR32Entry(loc, eventId, sb))
+		out.r32.push(buildR32Entry(pos, eventId, sb))
 	}
 
-	// R16+: walk each page event, resolve feeder references to event IDs
-	// (via bracketLocation), and merge in scoreboard scoring data.
+	// R16/QF/SF/Final — derive from hardcoded FIFA pairings of previous-stage
+	// visual positions. Each pair becomes one bracket entry with feeder
+	// references pointing back to the previous stage's events.
+	const prevEventIds = { r32: fifaPositionToEventId }
+	const stageFeederPairs = { r16: R16_FEEDER_PAIRS, qf: QF_FEEDER_PAIRS, sf: SF_FEEDER_PAIRS, final: FINAL_FEEDER_PAIRS }
+	const prevStageFor = { r16: 'r32', qf: 'r16', sf: 'qf', final: 'sf' }
+
 	for (const stage of ['r16', 'qf', 'sf', 'final']) {
-		for (const pageEvent of pageEvents.filter(p => p.stage === stage)) {
-			const sb = pageEvent.eventId ? scoreboardByEventId.get(pageEvent.eventId) : null
-			out[stage].push(buildR16PlusEntry(pageEvent, sb, stageLocationToEventId))
-		}
-		out[stage].sort((a, b) => a.bracketLocation - b.bracketLocation)
+		const pairs = stageFeederPairs[stage]
+		const prevStage = prevStageFor[stage]
+		const prevMap = prevEventIds[prevStage]
+		const stageMap = new Map()
+
+		pairs.forEach(([a, b], i) => {
+			const slot = i + 1
+			const homeFeederEventId = prevMap.get(a)
+			const awayFeederEventId = prevMap.get(b)
+			// Match a scoreboard event for this slot by finding the event whose
+			// resolved competitors include the feeder winners. Falls back to null
+			// when the next-round event hasn't been scheduled / scraped yet.
+			const sb = findScoreboardForFeeders(scoreboardBracketEvents, stage, homeFeederEventId, awayFeederEventId, out[prevStage])
+			const entry = buildR16PlusEntry(slot, sb, homeFeederEventId, awayFeederEventId)
+			out[stage].push(entry)
+			if (sb?.eventId) stageMap.set(slot, sb.eventId)
+		})
+
+		prevEventIds[stage] = stageMap
 	}
 
 	return out
+}
+
+function findScoreboardForFeeders(scoreboardBracketEvents, stage, homeFeederEventId, awayFeederEventId, prevStageEntries) {
+	// Only match scoreboard events when BOTH feeders have known winners AND
+	// the scoreboard event contains both of those teams. ESPN's scoreboard
+	// R16+ placeholder pairings don't always match the bracket image's
+	// pairings, so partial matches lead to wrong slot assignments
+	// (e.g. Canada-only matches against any R16 placeholder containing
+	// Canada, regardless of whether the OTHER side belongs to that pair).
+	const winnerFor = (feederEventId) => {
+		const e = prevStageEntries.find(p => p.eventId === feederEventId)
+		return e?.winnerId
+	}
+	const homeWinner = winnerFor(homeFeederEventId)
+	const awayWinner = winnerFor(awayFeederEventId)
+	if (!homeWinner || !awayWinner) return null
+
+	return scoreboardBracketEvents.find(e => {
+		if (e.stage !== stage) return false
+		const teamIds = [e.home?.teamId, e.away?.teamId].filter(Boolean)
+		return teamIds.includes(homeWinner) && teamIds.includes(awayWinner)
+	}) || null
 }
 
 function buildR32Entry(loc, eventId, sb) {
@@ -120,11 +173,10 @@ function buildR32Entry(loc, eventId, sb) {
 	return entry
 }
 
-function buildR16PlusEntry(pageEvent, sb, stageLocationToEventId) {
+function buildR16PlusEntry(bracketLocation, sb, homeFeederEventId, awayFeederEventId) {
 	const entry = {
-		eventId: pageEvent.eventId,
-		bracketLocation: pageEvent.bracketLocation,
-		matchNumber: pageEvent.matchNumber,
+		eventId: sb?.eventId ?? null,
+		bracketLocation,
 		date: sb?.date ?? null,
 		venue: sb?.venue ?? null,
 		status: sb?.status ?? 'SCHEDULED',
@@ -132,23 +184,11 @@ function buildR16PlusEntry(pageEvent, sb, stageLocationToEventId) {
 		awayScore: sb?.awayScore ?? 0,
 	}
 
-	// Resolve feeder references for each side. Home/away can be either a
-	// concrete team (resolved scoreboard data) or a feeder pointer.
-	if (sb?.home?.teamId) {
-		entry.homeId = sb.home.teamId
-	} else if (pageEvent.homeFeederLocation && pageEvent.homeFeederRoundId) {
-		const feederStage = ROUND_ID_TO_STAGE[pageEvent.homeFeederRoundId]
-		const feederEventId = stageLocationToEventId[feederStage]?.get(pageEvent.homeFeederLocation)
-		if (feederEventId) entry.homeFeederEventId = feederEventId
-	}
+	if (sb?.home?.teamId) entry.homeId = sb.home.teamId
+	else if (homeFeederEventId) entry.homeFeederEventId = homeFeederEventId
 
-	if (sb?.away?.teamId) {
-		entry.awayId = sb.away.teamId
-	} else if (pageEvent.awayFeederLocation && pageEvent.awayFeederRoundId) {
-		const feederStage = ROUND_ID_TO_STAGE[pageEvent.awayFeederRoundId]
-		const feederEventId = stageLocationToEventId[feederStage]?.get(pageEvent.awayFeederLocation)
-		if (feederEventId) entry.awayFeederEventId = feederEventId
-	}
+	if (sb?.away?.teamId) entry.awayId = sb.away.teamId
+	else if (awayFeederEventId) entry.awayFeederEventId = awayFeederEventId
 
 	if (entry.status === 'FINISHED' && entry.homeId && entry.awayId && entry.homeScore !== entry.awayScore) {
 		entry.winnerId = entry.homeScore > entry.awayScore ? entry.homeId : entry.awayId
