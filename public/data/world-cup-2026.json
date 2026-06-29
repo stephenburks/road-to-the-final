@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-29T17:36:18.242Z",
+  "lastUpdated": "2026-06-29T19:57:10.092Z",
   "snapshotDate": "2026-06-29",
   "isHistorical": false,
   "sourceSummary": {
@@ -949,7 +949,7 @@
           "date": "2026-07-05",
           "venue": "TBD",
           "city": "TBD",
-          "opponentDesc": "Germany or Paraguay",
+          "opponentDesc": "Brazil",
           "conditional": true,
           "conditionNote": "Predicted from bracket pairing — venue confirmed once previous match settles"
         },
@@ -996,24 +996,14 @@
         ],
         "r16": [
           {
-            "likelyTeam": "Germany",
-            "flag": "🇩🇪",
-            "fifaRank": 9,
+            "likelyTeam": "Brazil",
+            "flag": "🇧🇷",
+            "fifaRank": 4,
             "difficulty": 5,
             "label": "Danger",
             "color": "#EF4444",
-            "note": "Predicted (if they win their match)",
-            "pct": 50
-          },
-          {
-            "likelyTeam": "Paraguay",
-            "flag": "🇵🇾",
-            "fifaRank": 39,
-            "difficulty": 2,
-            "label": "Favorable",
-            "color": "#22C55E",
-            "note": "Predicted (if they win their match)",
-            "pct": 50
+            "note": "Confirmed opponent",
+            "pct": 100
           }
         ]
       },
@@ -2011,7 +2001,7 @@
       "confederation": "CONMEBOL",
       "fifaRank": 4,
       "eliminated": false,
-      "currentStage": "r32",
+      "currentStage": "r16",
       "groupResults": [
         {
           "matchday": 1,
@@ -2087,11 +2077,11 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 53,
-        "qf": 38,
-        "sf": 25,
-        "final": 14,
-        "winner": 4,
+        "r16": 100,
+        "qf": 63,
+        "sf": 34,
+        "final": 17,
+        "winner": 7,
         "source": "market"
       },
       "path": {
@@ -2103,7 +2093,7 @@
           "detail": "7pts after MD3"
         },
         "r32": {
-          "status": "active",
+          "status": "done",
           "date": "2026-06-29",
           "venue": "NRG Stadium",
           "city": "Houston, Texas",
@@ -2111,13 +2101,13 @@
           "conditional": false
         },
         "r16": {
-          "status": "future",
-          "date": "2026-07-07",
-          "venue": "TBD",
-          "city": "TBD",
-          "opponentDesc": "Ivory Coast or Norway",
+          "status": "upcoming",
+          "date": "2026-07-05",
+          "venue": "MetLife Stadium",
+          "city": "East Rutherford, New Jersey",
+          "opponentDesc": "Mexico or Ecuador",
           "conditional": true,
-          "conditionNote": "Predicted from bracket pairing — venue confirmed once previous match settles"
+          "conditionNote": "Venue confirmed once feeder match settles"
         },
         "qf": {
           "status": "future",
@@ -2162,19 +2152,19 @@
         ],
         "r16": [
           {
-            "likelyTeam": "Ivory Coast",
-            "flag": "🇨🇮",
-            "fifaRank": 42,
-            "difficulty": 2,
-            "label": "Favorable",
-            "color": "#22C55E",
+            "likelyTeam": "Mexico",
+            "flag": "🇲🇽",
+            "fifaRank": 15,
+            "difficulty": 4,
+            "label": "Tough",
+            "color": "#FB923C",
             "note": "Predicted (if they win their match)",
             "pct": 50
           },
           {
-            "likelyTeam": "Norway",
-            "flag": "🇳🇴",
-            "fifaRank": 31,
+            "likelyTeam": "Ecuador",
+            "flag": "🇪🇨",
+            "fifaRank": 23,
             "difficulty": 3,
             "label": "Moderate",
             "color": "#F59E0B",
@@ -2183,7 +2173,7 @@
           }
         ]
       },
-      "totalGoals": 7
+      "totalGoals": 9
     },
     {
       "id": "morocco",
@@ -2259,9 +2249,9 @@
       "advanceProbabilities": {
         "r32": 100,
         "r16": 40,
-        "qf": 29,
-        "sf": 7,
-        "final": 5,
+        "qf": 30,
+        "sf": 9,
+        "final": 4,
         "winner": 1,
         "source": "market"
       },
@@ -2854,7 +2844,7 @@
         "r16": 14,
         "qf": 2,
         "sf": 2,
-        "final": 2,
+        "final": 1,
         "winner": 0,
         "source": "market"
       },
@@ -2879,9 +2869,9 @@
           "date": "2026-07-07",
           "venue": "TBD",
           "city": "TBD",
-          "opponentDesc": "Mexico or Ecuador",
+          "opponentDesc": "Opponent TBD",
           "conditional": true,
-          "conditionNote": "Predicted from bracket pairing — venue confirmed once previous match settles"
+          "conditionNote": "Venue + opponent confirmed once bracket is drawn"
         },
         "qf": {
           "status": "future",
@@ -2924,28 +2914,7 @@
             "pct": 100
           }
         ],
-        "r16": [
-          {
-            "likelyTeam": "Mexico",
-            "flag": "🇲🇽",
-            "fifaRank": 15,
-            "difficulty": 4,
-            "label": "Tough",
-            "color": "#FB923C",
-            "note": "Predicted (if they win their match)",
-            "pct": 50
-          },
-          {
-            "likelyTeam": "Ecuador",
-            "flag": "🇪🇨",
-            "fifaRank": 23,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "Predicted (if they win their match)",
-            "pct": 50
-          }
-        ]
+        "r16": []
       },
       "totalGoals": 2
     },
@@ -3325,9 +3294,9 @@
       "advanceProbabilities": {
         "r32": 100,
         "r16": 86,
-        "qf": 29,
-        "sf": 18,
-        "final": 9,
+        "qf": 30,
+        "sf": 19,
+        "final": 10,
         "winner": 4,
         "source": "market"
       },
@@ -3352,9 +3321,9 @@
           "date": "2026-07-06",
           "venue": "TBD",
           "city": "TBD",
-          "opponentDesc": "Mexico or Ecuador",
+          "opponentDesc": "Opponent TBD",
           "conditional": true,
-          "conditionNote": "Predicted from bracket pairing — venue confirmed once previous match settles"
+          "conditionNote": "Venue + opponent confirmed once bracket is drawn"
         },
         "qf": {
           "status": "future",
@@ -3397,28 +3366,7 @@
             "pct": 100
           }
         ],
-        "r16": [
-          {
-            "likelyTeam": "Mexico",
-            "flag": "🇲🇽",
-            "fifaRank": 15,
-            "difficulty": 4,
-            "label": "Tough",
-            "color": "#FB923C",
-            "note": "Predicted (if they win their match)",
-            "pct": 50
-          },
-          {
-            "likelyTeam": "Ecuador",
-            "flag": "🇪🇨",
-            "fifaRank": 23,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "Predicted (if they win their match)",
-            "pct": 50
-          }
-        ]
+        "r16": []
       },
       "totalGoals": 10
     },
@@ -3656,7 +3604,7 @@
       "advanceProbabilities": {
         "r32": 100,
         "r16": 35,
-        "qf": 12,
+        "qf": 9,
         "sf": 4,
         "final": 2,
         "winner": 0,
@@ -3683,7 +3631,7 @@
           "date": "2026-07-07",
           "venue": "TBD",
           "city": "TBD",
-          "opponentDesc": "Brazil or Japan",
+          "opponentDesc": "Brazil",
           "conditional": true,
           "conditionNote": "Predicted from bracket pairing — venue confirmed once previous match settles"
         },
@@ -3736,18 +3684,8 @@
             "difficulty": 5,
             "label": "Danger",
             "color": "#EF4444",
-            "note": "Predicted (if they win their match)",
-            "pct": 50
-          },
-          {
-            "likelyTeam": "Japan",
-            "flag": "🇯🇵",
-            "fifaRank": 13,
-            "difficulty": 4,
-            "label": "Tough",
-            "color": "#FB923C",
-            "note": "Predicted (if they win their match)",
-            "pct": 50
+            "note": "Predicted (winner of paired match)",
+            "pct": 100
           }
         ]
       },
@@ -3835,10 +3773,10 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 38,
+        "r16": 37,
         "qf": 12,
-        "sf": 4,
-        "final": 2,
+        "sf": 3,
+        "final": 1,
         "winner": 1,
         "source": "market"
       },
@@ -3863,7 +3801,7 @@
           "date": "2026-07-07",
           "venue": "TBD",
           "city": "TBD",
-          "opponentDesc": "Germany or Paraguay",
+          "opponentDesc": "Brazil",
           "conditional": true,
           "conditionNote": "Predicted from bracket pairing — venue confirmed once previous match settles"
         },
@@ -3910,24 +3848,14 @@
         ],
         "r16": [
           {
-            "likelyTeam": "Germany",
-            "flag": "🇩🇪",
-            "fifaRank": 9,
+            "likelyTeam": "Brazil",
+            "flag": "🇧🇷",
+            "fifaRank": 4,
             "difficulty": 5,
             "label": "Danger",
             "color": "#EF4444",
-            "note": "Predicted (if they win their match)",
-            "pct": 50
-          },
-          {
-            "likelyTeam": "Paraguay",
-            "flag": "🇵🇾",
-            "fifaRank": 39,
-            "difficulty": 2,
-            "label": "Favorable",
-            "color": "#22C55E",
-            "note": "Predicted (if they win their match)",
-            "pct": 50
+            "note": "Confirmed opponent",
+            "pct": 100
           }
         ]
       },
@@ -4040,8 +3968,8 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 61,
-        "qf": 45,
+        "r16": 60,
+        "qf": 47,
         "sf": 22,
         "final": 12,
         "winner": 5,
@@ -4135,7 +4063,7 @@
       "group": "F",
       "confederation": "AFC",
       "fifaRank": 13,
-      "eliminated": false,
+      "eliminated": true,
       "currentStage": "r32",
       "groupResults": [
         {
@@ -4202,11 +4130,11 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 47,
-        "qf": 22,
-        "sf": 18,
-        "final": 4,
-        "winner": 2,
+        "r16": 0,
+        "qf": 0,
+        "sf": 0,
+        "final": 0,
+        "winner": 0,
         "source": "market"
       },
       "path": {
@@ -4218,87 +4146,23 @@
           "detail": "5pts after MD3"
         },
         "r32": {
-          "status": "active",
+          "status": "done",
           "date": "2026-06-29",
           "venue": "NRG Stadium",
           "city": "Houston, Texas",
           "opponentDesc": "Brazil",
           "conditional": false
         },
-        "r16": {
-          "status": "future",
-          "date": "2026-07-07",
-          "venue": "TBD",
-          "city": "TBD",
-          "opponentDesc": "Ivory Coast or Norway",
-          "conditional": true,
-          "conditionNote": "Predicted from bracket pairing — venue confirmed once previous match settles"
-        },
-        "qf": {
-          "status": "future",
-          "date": "2026-07-11",
-          "venue": "TBD",
-          "city": "TBD",
-          "opponentDesc": "Opponent TBD",
-          "conditional": true,
-          "conditionNote": "Venue + opponent confirmed once bracket is drawn"
-        },
-        "sf": {
-          "status": "future",
-          "date": "2026-07-14",
-          "venue": "TBD",
-          "city": "TBD",
-          "opponentDesc": "Opponent TBD",
-          "conditional": true,
-          "conditionNote": "Venue + opponent confirmed once bracket is drawn"
-        },
-        "final": {
-          "status": "future",
-          "date": "2026-07-19",
-          "venue": "TBD",
-          "city": "TBD",
-          "opponentDesc": "Opponent TBD",
-          "conditional": true,
-          "conditionNote": "Venue + opponent confirmed once bracket is drawn"
-        }
+        "r16": null,
+        "qf": null,
+        "sf": null,
+        "final": null
       },
       "possibleOpponents": {
-        "r32": [
-          {
-            "likelyTeam": "Brazil",
-            "flag": "🇧🇷",
-            "fifaRank": 4,
-            "difficulty": 5,
-            "label": "Danger",
-            "color": "#EF4444",
-            "note": "Confirmed opponent",
-            "pct": 100
-          }
-        ],
-        "r16": [
-          {
-            "likelyTeam": "Ivory Coast",
-            "flag": "🇨🇮",
-            "fifaRank": 42,
-            "difficulty": 2,
-            "label": "Favorable",
-            "color": "#22C55E",
-            "note": "Predicted (if they win their match)",
-            "pct": 50
-          },
-          {
-            "likelyTeam": "Norway",
-            "flag": "🇳🇴",
-            "fifaRank": 31,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "Predicted (if they win their match)",
-            "pct": 50
-          }
-        ]
+        "r32": [],
+        "r16": []
       },
-      "totalGoals": 7
+      "totalGoals": 8
     },
     {
       "id": "sweden",
@@ -4402,7 +4266,7 @@
         "r16": 11,
         "qf": 2,
         "sf": 1,
-        "final": 1,
+        "final": 0,
         "winner": 0,
         "source": "market"
       },
@@ -4693,7 +4557,7 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 61,
+        "r16": 60,
         "qf": 32,
         "sf": 11,
         "final": 4,
@@ -5282,7 +5146,7 @@
         "r16": 87,
         "qf": 60,
         "sf": 43,
-        "final": 23,
+        "final": 22,
         "winner": 11,
         "source": "market"
       },
@@ -5455,8 +5319,8 @@
       "advanceProbabilities": {
         "r32": 100,
         "r16": 8,
-        "qf": 3,
-        "sf": 2,
+        "qf": 2,
+        "sf": 1,
         "final": 0,
         "winner": 0,
         "source": "market"
@@ -5862,10 +5726,10 @@
       "advanceProbabilities": {
         "r32": 100,
         "r16": 90,
-        "qf": 66,
+        "qf": 67,
         "sf": 52,
         "final": 37,
-        "winner": 24,
+        "winner": 23,
         "source": "market"
       },
       "path": {
@@ -6324,9 +6188,9 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 65,
-        "qf": 31,
-        "sf": 16,
+        "r16": 64,
+        "qf": 29,
+        "sf": 15,
         "final": 8,
         "winner": 2,
         "source": "market"
@@ -6352,7 +6216,7 @@
           "date": "2026-07-07",
           "venue": "TBD",
           "city": "TBD",
-          "opponentDesc": "Brazil or Japan",
+          "opponentDesc": "Brazil",
           "conditional": true,
           "conditionNote": "Predicted from bracket pairing — venue confirmed once previous match settles"
         },
@@ -6405,18 +6269,8 @@
             "difficulty": 5,
             "label": "Danger",
             "color": "#EF4444",
-            "note": "Predicted (if they win their match)",
-            "pct": 50
-          },
-          {
-            "likelyTeam": "Japan",
-            "flag": "🇯🇵",
-            "fifaRank": 13,
-            "difficulty": 4,
-            "label": "Tough",
-            "color": "#FB923C",
-            "note": "Predicted (if they win their match)",
-            "pct": 50
+            "note": "Predicted (winner of paired match)",
+            "pct": 100
           }
         ]
       },
@@ -6514,8 +6368,8 @@
         "r32": 100,
         "r16": 93,
         "qf": 82,
-        "sf": 61,
-        "final": 37,
+        "sf": 62,
+        "final": 38,
         "winner": 20,
         "source": "market"
       },
@@ -7172,11 +7026,11 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 69,
+        "r16": 68,
         "qf": 30,
-        "sf": 21,
+        "sf": 22,
         "final": 13,
-        "winner": 7,
+        "winner": 6,
         "source": "market"
       },
       "path": {
@@ -7352,7 +7206,7 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 12,
+        "r16": 13,
         "qf": 3,
         "sf": 1,
         "final": 0,
@@ -7632,9 +7486,9 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 79,
+        "r16": 80,
         "qf": 51,
-        "sf": 20,
+        "sf": 21,
         "final": 9,
         "winner": 2,
         "source": "market"
@@ -7807,11 +7661,11 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 88,
-        "qf": 64,
-        "sf": 41,
+        "r16": 89,
+        "qf": 63,
+        "sf": 38,
         "final": 22,
-        "winner": 11,
+        "winner": 10,
         "source": "market"
       },
       "path": {
@@ -7977,7 +7831,7 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 33,
+        "r16": 32,
         "qf": 9,
         "sf": 5,
         "final": 2,
@@ -9776,26 +9630,17 @@
         "awayTeam": "Japan",
         "awayFlag": "🇯🇵",
         "awayId": "japan",
-        "homeScore": 0,
+        "homeScore": 2,
         "awayScore": 1,
-        "status": "IN_PROGRESS",
+        "status": "FINISHED",
         "date": "2026-06-29",
-        "clock": "36'",
         "broadcasts": [
           "FOX",
           "Tele",
           "FOX One"
         ],
         "time": "2026-06-29T17:00Z",
-        "venue": "NRG Stadium, Houston, Texas",
-        "polymarket": {
-          "homeId": "brazil",
-          "awayId": "japan",
-          "homeWinPct": 28,
-          "awayWinPct": 41,
-          "drawPct": 32,
-          "eventSlug": "fifwc-bra-jpn-2026-06-29"
-        }
+        "venue": "NRG Stadium, Houston, Texas"
       },
       {
         "homeTeam": "Germany",
@@ -9818,8 +9663,8 @@
         "polymarket": {
           "homeId": "germany",
           "awayId": "paraguay",
-          "homeWinPct": 73,
-          "awayWinPct": 10,
+          "homeWinPct": 74,
+          "awayWinPct": 9,
           "drawPct": 19,
           "eventSlug": "fifwc-ger-par-2026-06-29"
         }
@@ -9845,7 +9690,7 @@
         "polymarket": {
           "homeId": "netherlands",
           "awayId": "morocco",
-          "homeWinPct": 42,
+          "homeWinPct": 41,
           "awayWinPct": 28,
           "drawPct": 32,
           "eventSlug": "fifwc-nld-mar-2026-06-29"
@@ -9928,7 +9773,7 @@
         "polymarket": {
           "homeId": "mexico",
           "awayId": "ecuador",
-          "homeWinPct": 44,
+          "homeWinPct": 45,
           "awayWinPct": 24,
           "drawPct": 34,
           "eventSlug": "fifwc-mex-ecu-2026-06-30"
@@ -10202,11 +10047,12 @@
         "eventId": "760487",
         "date": "2026-06-29",
         "venue": "NRG Stadium, Houston, Texas",
-        "status": "IN_PROGRESS",
-        "homeScore": 0,
+        "status": "FINISHED",
+        "homeScore": 2,
         "awayScore": 1,
         "homeId": "brazil",
-        "awayId": "japan"
+        "awayId": "japan",
+        "winnerId": "brazil"
       },
       {
         "eventId": "760488",
@@ -10377,7 +10223,7 @@
         "status": "SCHEDULED",
         "homeScore": 0,
         "awayScore": 0,
-        "homeFeederEventId": "760489",
+        "homeId": "brazil",
         "awayFeederEventId": "760491"
       },
       {
