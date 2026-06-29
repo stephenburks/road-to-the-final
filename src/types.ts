@@ -115,6 +115,10 @@ export interface Team {
 		r32: PossibleOpponentData
 		r16: PossibleOpponentData
 	}
+	/** Total goals scored across group stage + all knockouts, derived from
+	 *  groupResults + actualBracket. Optional because older snapshots predate
+	 *  the field. */
+	totalGoals?: number
 }
 
 export interface Scenario {

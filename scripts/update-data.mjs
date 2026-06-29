@@ -52,6 +52,7 @@ import {
 import { validateAppData } from './lib/validate.js'
 import { buildActualBracket } from './lib/actualBracket.js'
 import { deriveLivePath, derivePossibleOpponents } from './lib/livePath.js'
+import { computeTotalGoals } from './lib/teamStats.js'
 import { log } from './lib/fetchUtil.js'
 import { fetchESPNEventDetails, normalizeESPNCalendarDates } from './lib/espn.js'
 import { fetchPolymarketAll, attachMatchupOdds } from './lib/polymarket.js'
@@ -331,6 +332,7 @@ async function main() {
     if (!t) continue;
     t.path = deriveLivePath(t, actualBracket, t.path);
     t.possibleOpponents = derivePossibleOpponents(t, actualBracket);
+    t.totalGoals = computeTotalGoals(t, actualBracket);
   }
   log(`Overlaid path + possibleOpponents from actualBracket (r32:${actualBracket.r32.length} r16:${actualBracket.r16.length} qf:${actualBracket.qf.length} sf:${actualBracket.sf.length} final:${actualBracket.final.length})`);
 

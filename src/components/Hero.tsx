@@ -147,6 +147,13 @@ function isGroupWinClinched(
 	return standings.every(s => (s.played ?? 0) >= 3)
 }
 
+/** All four teams in the group have played their 3 matches. */
+function isGroupSettled(team: Team, data: AppData | undefined): boolean {
+	const standings = data?.groups?.[team.group]?.standings ?? []
+	if (standings.length === 0) return false
+	return standings.every(s => (s.played ?? 0) >= 3)
+}
+
 /**
  * When ESPN's team API has no nextEvent (typically when the next match is
  * more than a week out), construct one from our static schedule data so the
@@ -377,7 +384,10 @@ export default function Hero({
 		</div>
 	) : null
 
-	const goalsFor = record?.stats?.pointsFor
+	// Prefer the derived total (computed from team's match history) over ESPN's
+	// record.stats.pointsFor, which has been observed to lag and reset between
+	// rounds. Falls back to ESPN if the derived value is missing (older snapshots).
+	const goalsFor = team.totalGoals ?? record?.stats?.pointsFor
 
 	const probNote =
 		!team.eliminated && !isHistorical
@@ -408,26 +418,50 @@ export default function Hero({
 					<div className={styles.statSub}>ESPN</div>
 				</div>
 
-				{/* ── Group Win ── */}
+				{/* ── Group Win / Group Position ── */}
 				{(() => {
 					const effectivePct = liveGroupVal ?? groupWinProb?.probability
 					const clinched = isGroupWinClinched(team, data, effectivePct)
-					const groupUrl = !clinched && groupWinProb && !isHistorical
+					const groupSettled = isGroupSettled(team, data)
+					// Once the group is settled and the team didn't win, the
+					// 'Win Group X%' probability is meaningless — show their
+					// finishing position instead.
+					const showFinish = groupSettled && !clinched && groupPosition != null && groupPosition > 1
+					const finishLabel =
+						groupPosition === 2 ? '2nd Place' :
+						groupPosition === 3 ? '3rd Place' :
+						groupPosition === 4 ? '4th Place' :
+						`${ordinal(groupPosition ?? 0)} Place`
+					const finishSub = !team.eliminated
+						? (groupPosition === 3 ? 'Advanced (wildcard)' : 'Advanced')
+						: 'Eliminated'
+					const groupUrl = !clinched && !showFinish && groupWinProb && !isHistorical
 						? polymarketGroupUrl(groupWinProb.groupLetter)
 						: undefined
 					const groupLabel = groupWinProb ? `Win Group ${groupWinProb.groupLetter}` : 'Win Group'
+					const finalLabel = showFinish ? `Group ${team.group} Finish` : groupLabel
 					const groupAria = clinched
 						? `Group ${groupWinProb?.groupLetter ?? team.group} clinched`
-						: groupWinProb
-							? `Win Group ${groupWinProb.groupLetter}: ${effectivePct ?? 0}%`
-							: 'Win group probability not available'
+						: showFinish
+							? `Finished ${finishLabel} in Group ${team.group} \u2014 ${finishSub}`
+							: groupWinProb
+								? `Win Group ${groupWinProb.groupLetter}: ${effectivePct ?? 0}%`
+								: 'Win group probability not available'
 					const groupContent = clinched ? (
 						<>
 							<div className={`${styles.statValue} ${styles.statValueGroup} ${styles.statValueClinched}`}>
 								<span className={styles.clinchedCheck} aria-hidden="true">✓</span> Clinched
 							</div>
-							<div className={styles.statLabel}>{groupLabel}</div>
+							<div className={styles.statLabel}>{finalLabel}</div>
 							<div className={styles.statSub}>Confirmed</div>
+						</>
+					) : showFinish ? (
+						<>
+							<div className={`${styles.statValue} ${styles.statValueGroup}`}>
+								{finishLabel}
+							</div>
+							<div className={styles.statLabel}>{finalLabel}</div>
+							<div className={styles.statSub}>{finishSub}</div>
 						</>
 					) : (
 						<>
@@ -435,7 +469,7 @@ export default function Hero({
 								{effectivePct ?? '\u2014'}%
 								<GroupChangeArrow value={effectivePct} />
 							</div>
-							<div className={styles.statLabel}>{groupLabel}</div>
+							<div className={styles.statLabel}>{finalLabel}</div>
 							<div className={styles.statSub}>Polymarket</div>
 						</>
 					)

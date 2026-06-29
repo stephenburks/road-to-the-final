@@ -12,6 +12,7 @@ import type { LiveMatchPatch } from '../hooks/useLiveScores'
 import { computeStandings, buildGroupStandings } from '../../scripts/lib/standings.js'
 import { canStillFinishTop3, determineCurrentStage } from '../../scripts/lib/elimination.js'
 import { deriveLivePath, derivePossibleOpponents } from '../../scripts/lib/livePath.js'
+import { computeTotalGoals } from '../../scripts/lib/teamStats.js'
 
 interface MergedMatch {
 	homeId: string
@@ -115,6 +116,10 @@ export function deriveLiveAppData(
 			updated.path = deriveLivePath(updated, actualBracket, t.path) as TeamPath
 			updated.possibleOpponents = derivePossibleOpponents(updated, actualBracket) as Team['possibleOpponents']
 		}
+
+		// Total tournament goals — derived from team's own match history, so
+		// it updates the instant a live overlay flips a score.
+		updated.totalGoals = computeTotalGoals(updated, actualBracket)
 
 		return updated
 	})

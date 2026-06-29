@@ -140,4 +140,67 @@ describe('derivePossibleOpponents', () => {
 		expect(opps.r16).toHaveLength(1)
 		expect(opps.r16[0].likelyTeam).toBe('France')
 	})
+
+	it('predicts R16 candidates from consecutive r32 pairing when R16 not yet drawn', () => {
+		const team = { id: 'canada', currentStage: 'r32', eliminated: false }
+		// Canada is in r32[0]; the partner match is r32[1] (Brazil vs Japan).
+		const ab = {
+			r32: [
+				bracketMatch('southafrica', 'canada', '2026-06-28', 'FINISHED', 0, 1),
+				bracketMatch('brazil', 'japan', '2026-06-29', 'SCHEDULED'),
+				bracketMatch('germany', 'paraguay', '2026-06-29', 'SCHEDULED'),
+				bracketMatch('france', 'sweden', '2026-06-30', 'SCHEDULED'),
+			],
+			r16: [], qf: [], sf: [], final: [],
+		}
+		const opps = derivePossibleOpponents(team, ab)
+		expect(opps.r16).toHaveLength(2)
+		expect(opps.r16.map(o => o.likelyTeam).sort()).toEqual(['Brazil', 'Japan'])
+		expect(opps.r16.every(o => o.pct === 50)).toBe(true)
+	})
+
+	it('returns a single confirmed predicted opponent when the partner match is finished', () => {
+		const team = { id: 'canada', currentStage: 'r32', eliminated: false }
+		const ab = {
+			r32: [
+				bracketMatch('southafrica', 'canada', '2026-06-28', 'FINISHED', 0, 1),
+				bracketMatch('brazil', 'japan', '2026-06-29', 'FINISHED', 2, 0),
+			],
+			r16: [], qf: [], sf: [], final: [],
+		}
+		const opps = derivePossibleOpponents(team, ab)
+		expect(opps.r16).toHaveLength(1)
+		expect(opps.r16[0].likelyTeam).toBe('Brazil')
+		expect(opps.r16[0].pct).toBe(100)
+	})
+
+	it('returns no opponents for an eliminated team', () => {
+		const team = { id: 'southafrica', currentStage: 'r32', eliminated: true }
+		const ab = {
+			r32: [
+				bracketMatch('southafrica', 'canada', '2026-06-28', 'FINISHED', 0, 1),
+				bracketMatch('brazil', 'japan', '2026-06-29', 'SCHEDULED'),
+			],
+			r16: [], qf: [], sf: [], final: [],
+		}
+		const opps = derivePossibleOpponents(team, ab)
+		expect(opps.r16).toEqual([])
+	})
+})
+
+describe('deriveLivePath predicted opponentDesc', () => {
+	it('shows predicted R16 opponent description when R32 is known but R16 is not', () => {
+		const team = { id: 'canada', currentStage: 'r32', eliminated: false }
+		const ab = {
+			r32: [
+				bracketMatch('southafrica', 'canada', '2026-06-28', 'FINISHED', 0, 1),
+				bracketMatch('brazil', 'japan', '2026-06-29', 'SCHEDULED'),
+			],
+			r16: [], qf: [], sf: [], final: [],
+		}
+		const path = deriveLivePath(team, ab, staticPath())
+		expect(path.r16?.opponentDesc).toBe('Brazil or Japan')
+		expect(path.r16?.venue).toBe('TBD')
+		expect(path.r16?.conditional).toBe(true)
+	})
 })

@@ -74,17 +74,29 @@ export function deriveLivePath(team, actualBracket, staticPath) {
 
 		if (stageIdx >= teamStageIdx) {
 			// Reachable future stage but bracket not yet drawn — refuse to
-			// display the stale static venue/opponent prediction. Show TBD so
-			// the UI conveys "we don't know yet" rather than misinforming.
+			// display the stale static venue/opponent prediction. Show TBD
+			// for venue, but if we can predict opponents from the previous
+			// stage's actualBracket pairing, surface those in opponentDesc
+			// so the team page isn't purely empty.
 			const sp = staticPath?.[stage]
+			const predictedOpps = stage === 'r16'
+				? predictNextStageOpponents(team.id, 'r32', actualBracket)
+				: []
+			const predictedDesc = predictedOpps.length === 1
+				? predictedOpps[0].likelyTeam
+				: predictedOpps.length === 2
+					? `${predictedOpps[0].likelyTeam} or ${predictedOpps[1].likelyTeam}`
+					: 'Opponent TBD'
 			out[stage] = sp ? {
 				status: 'future',
 				date: sp.date || '',
 				venue: 'TBD',
 				city: 'TBD',
-				opponentDesc: 'Opponent TBD',
+				opponentDesc: predictedDesc,
 				conditional: true,
-				conditionNote: 'Venue + opponent confirmed once bracket is drawn',
+				conditionNote: predictedOpps.length > 0
+					? 'Predicted from bracket pairing — venue confirmed once previous match settles'
+					: 'Venue + opponent confirmed once bracket is drawn',
 			} : null
 			continue
 		}
@@ -114,21 +126,65 @@ function makeOpponentRecord(id, note, pct) {
 }
 
 /**
+ * For a team in a current knockout stage, predict the possible opponents
+ * for the NEXT stage by pairing consecutive matches in the current stage's
+ * date-sorted bracket.
+ *
+ * The 2026 FIFA bracket pairs R32 winners into R16 in a known order, but
+ * we don't yet capture FIFA match numbers from ESPN. As a heuristic, we
+ * assume r32[0] feeds the same R16 slot as r32[1], r32[2] feeds with
+ * r32[3], etc. — i.e. partner index = i XOR 1. This matches FIFA's
+ * typical bracket layout where consecutive R32 slots share an R16 match.
+ *
+ * When ESPN actually publishes the next stage (actualBracket[nextStage]
+ * gets populated), the caller uses that real matchup instead.
+ *
+ * Returns 1 record (with pct=100) if the partner match is FINISHED, else
+ * 2 records (pct=50 each) for the two teams who could still advance.
+ */
+function predictNextStageOpponents(teamId, currentStage, actualBracket) {
+	const matches = actualBracket?.[currentStage] ?? []
+	const myIdx = matches.findIndex(m => m.homeId === teamId || m.awayId === teamId)
+	if (myIdx < 0) return []
+
+	const partnerIdx = myIdx ^ 1
+	const partner = matches[partnerIdx]
+	if (!partner) return []
+
+	if (partner.status === 'FINISHED' && partner.winnerId) {
+		return [makeOpponentRecord(partner.winnerId, 'Predicted (winner of paired match)', 100)]
+	}
+
+	// Both teams in the partner match are 50/50 candidates.
+	return [
+		makeOpponentRecord(partner.homeId, 'Predicted (if they win their match)', 50),
+		makeOpponentRecord(partner.awayId, 'Predicted (if they win their match)', 50),
+	]
+}
+
+/**
  * Possible-opponent lists for r32 + r16 derived from actualBracket.
  *
  * When a stage has a real match for the team, return a single-entry list
  * (the confirmed opponent at pct=100). When the match isn't drawn yet,
- * return [] — the UI will render this as "to be determined."
- *
- * Note: future R16 prediction (before R16 matchups are published) is hard
- * because the static bracket diverged from reality on R32. We intentionally
- * don't fabricate a guess — better to show TBD than the wrong team.
+ * use the bracket-pairing heuristic on the previous stage (when available)
+ * to predict the candidates. Returns [] only when neither real nor
+ * predicted opponents can be derived (e.g. team eliminated, or no R32 yet).
  */
 export function derivePossibleOpponents(team, actualBracket) {
+	// Eliminated teams don't have future opponents to predict.
+	if (team.eliminated) return { r32: [], r16: [] }
+
 	const r32Match = findBracketMatch(team.id, 'r32', actualBracket)
 	const r16Match = findBracketMatch(team.id, 'r16', actualBracket)
-	return {
-		r32: r32Match ? [makeOpponentRecord(getOpponentId(team.id, r32Match), 'Confirmed opponent', 100)] : [],
-		r16: r16Match ? [makeOpponentRecord(getOpponentId(team.id, r16Match), 'Confirmed opponent', 100)] : [],
-	}
+
+	const r32List = r32Match
+		? [makeOpponentRecord(getOpponentId(team.id, r32Match), 'Confirmed opponent', 100)]
+		: []
+
+	const r16List = r16Match
+		? [makeOpponentRecord(getOpponentId(team.id, r16Match), 'Confirmed opponent', 100)]
+		: predictNextStageOpponents(team.id, 'r32', actualBracket)
+
+	return { r32: r32List, r16: r16List }
 }
