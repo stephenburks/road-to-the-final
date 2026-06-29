@@ -176,12 +176,18 @@ export function validateAppData(data) {
 				arr.forEach((m, i) => {
 					const prefix = `actualBracket.${stage}[${i}]`;
 					if (!isStr(m.date) || !ISO_DATE.test(m.date)) errors.push(`${prefix}.date missing or not ISO`);
-					if (!isStr(m.homeId)) errors.push(`${prefix}.homeId missing`);
-					if (!isStr(m.awayId)) errors.push(`${prefix}.awayId missing`);
+					// Each side must have EITHER a teamId OR a feederEventId
+					// (placeholder reference) — never neither.
+					if (!isStr(m.homeId) && !isStr(m.homeFeederEventId)) {
+						errors.push(`${prefix} home side missing both homeId and homeFeederEventId`);
+					}
+					if (!isStr(m.awayId) && !isStr(m.awayFeederEventId)) {
+						errors.push(`${prefix} away side missing both awayId and awayFeederEventId`);
+					}
 					if (!VALID_STATUS.has(m.status)) errors.push(`${prefix}.status invalid (${m.status})`);
 					if (typeof m.homeScore !== 'number') errors.push(`${prefix}.homeScore not a number`);
 					if (typeof m.awayScore !== 'number') errors.push(`${prefix}.awayScore not a number`);
-					if (m.status === 'FINISHED' && m.homeScore !== m.awayScore && !isStr(m.winnerId)) {
+					if (m.status === 'FINISHED' && m.homeId && m.awayId && m.homeScore !== m.awayScore && !isStr(m.winnerId)) {
 						errors.push(`${prefix}.winnerId missing on FINISHED non-draw`);
 					}
 				});

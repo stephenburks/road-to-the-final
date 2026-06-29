@@ -48,21 +48,21 @@ function buildSlotsForStage(stage, actualBracket) {
 	const expected = EXPECTED_COUNT[stage]
 	const actual = actualBracket?.[stage] ?? []
 
-	// Stage fully populated — render real matches as-is.
-	if (actual.length === expected) {
+	// Real matches with both teams resolved → use as-is.
+	if (actual.length === expected && actual.every(m => m.homeId && m.awayId)) {
 		return actual.map(actualToSlot)
 	}
 
-	// Stage partially populated (e.g. R32 mid-tournament with only some matches
-	// in ESPN's payload) — show what we have, pad the remainder with TBDs so
-	// the bracket structure is preserved.
-	if (stage === 'r32' && actual.length > 0) {
-		const slots = actual.map(actualToSlot)
+	// Stage has SOME data — either fully populated with placeholders or
+	// partially populated. Each entry in `actual` represents a real bracket
+	// slot from ESPN, so we use it (resolving feeder refs where present).
+	if (actual.length > 0) {
+		const slots = actual.map(m => buildSlotFromActual(m, actualBracket, stage))
 		while (slots.length < expected) slots.push(tbdSlot())
 		return slots
 	}
 
-	// Stage not (fully) populated — predict from previous stage.
+	// Stage has no ESPN data → predict from previous stage if possible.
 	const prevStage = STAGE_BEFORE[stage]
 	if (!prevStage) {
 		// R32 with no actual data — show as TBD shadow slots.
@@ -76,8 +76,6 @@ function buildSlotsForStage(stage, actualBracket) {
 		const s2 = prevSlots[i + 1]
 		const home = deriveSideFromFeeder(s1)
 		const away = deriveSideFromFeeder(s2)
-		// If both sides have nothing to predict from, the slot is genuinely
-		// TBD — no signal beyond "this slot exists in the bracket structure."
 		const isTbd = isSideTbd(home) && isSideTbd(away)
 		slots.push(isTbd ? tbdSlot() : {
 			status: 'PREDICTED',
@@ -87,6 +85,43 @@ function buildSlotsForStage(stage, actualBracket) {
 		})
 	}
 	return slots
+}
+
+/**
+ * Build a single slot from an actualBracket entry. If a side has a feeder
+ * reference (placeholder), resolve it to candidate teams from the feeder's
+ * R32/R16 match.
+ */
+function buildSlotFromActual(m, actualBracket, stage) {
+	const prevStage = STAGE_BEFORE[stage]
+	const prevMatches = prevStage ? (actualBracket?.[prevStage] ?? []) : []
+
+	const resolveSide = (teamId, feederEventId) => {
+		if (teamId) return { teamId }
+		if (feederEventId && prevMatches.length > 0) {
+			const feeder = prevMatches.find(p => p.eventId === feederEventId)
+			if (feeder?.winnerId) return { teamId: feeder.winnerId }
+			if (feeder?.homeId && feeder?.awayId) {
+				return { candidates: [feeder.homeId, feeder.awayId] }
+			}
+		}
+		return { tbd: true }
+	}
+
+	const home = resolveSide(m.homeId, m.homeFeederEventId)
+	const away = resolveSide(m.awayId, m.awayFeederEventId)
+
+	return {
+		status: m.status,
+		source: m.homeId && m.awayId ? 'actual' : 'predicted',
+		home,
+		away,
+		homeScore: m.homeScore,
+		awayScore: m.awayScore,
+		winnerId: m.winnerId,
+		date: m.date,
+		venue: m.venue,
+	}
 }
 
 function isSideTbd(side) {

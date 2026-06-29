@@ -24,6 +24,24 @@ function getOpponentId(teamId, match) {
 	return match.homeId === teamId ? match.awayId : match.homeId
 }
 
+/**
+ * For a team in a known knockout match, return the feeder event ID of the
+ * other side (when that side is still a placeholder). Used to predict the
+ * opponent: the team that will win the feeder match.
+ */
+function getOpponentFeederEventId(teamId, match) {
+	if (!match) return null
+	if (match.homeId === teamId) return match.awayFeederEventId ?? null
+	if (match.awayId === teamId) return match.homeFeederEventId ?? null
+	return null
+}
+
+function findMatchByEventId(eventId, stage, actualBracket) {
+	if (!eventId) return null
+	const matches = actualBracket?.[stage] ?? []
+	return matches.find(m => m.eventId === eventId) || null
+}
+
 function splitVenue(venueStr) {
 	if (!venueStr) return { venue: '', city: '' }
 	const parts = venueStr.split(',').map(s => s.trim())
@@ -54,14 +72,31 @@ export function deriveLivePath(team, actualBracket, staticPath) {
 
 		if (match) {
 			const oppId = getOpponentId(team.id, match)
-			const oppName = ID_TO_NAME[oppId] || oppId
 			const { venue, city } = splitVenue(match.venue)
+			let opponentDesc
+			if (oppId) {
+				opponentDesc = ID_TO_NAME[oppId] || oppId
+			} else {
+				// Opponent side is still a feeder placeholder — derive a
+				// predicted description from the feeder match's two teams.
+				const opponentFeederId = getOpponentFeederEventId(team.id, match)
+				const feeder = opponentFeederId ? findMatchByEventId(opponentFeederId, prevStageOf(stage), actualBracket) : null
+				if (feeder?.winnerId) {
+					opponentDesc = ID_TO_NAME[feeder.winnerId] || feeder.winnerId
+				} else if (feeder?.homeId && feeder?.awayId) {
+					opponentDesc = `${ID_TO_NAME[feeder.homeId] ?? feeder.homeId} or ${ID_TO_NAME[feeder.awayId] ?? feeder.awayId}`
+				} else {
+					opponentDesc = 'Opponent TBD'
+				}
+			}
 			out[stage] = {
 				status: stageStatusForMatch(match, team.currentStage, stage),
 				date: match.date,
-				venue: venue || staticPath?.[stage]?.venue || '',
-				city:  city  || staticPath?.[stage]?.city  || '',
-				opponentDesc: oppName,
+				venue: venue || (oppId ? (staticPath?.[stage]?.venue || '') : 'TBD'),
+				city:  city  || (oppId ? (staticPath?.[stage]?.city  || '') : 'TBD'),
+				opponentDesc,
+				conditional: !oppId,
+				conditionNote: !oppId ? 'Venue confirmed once feeder match settles' : undefined,
 			}
 			continue
 		}
@@ -126,41 +161,91 @@ function makeOpponentRecord(id, note, pct) {
 }
 
 /**
- * For a team in a current knockout stage, predict the possible opponents
- * for the NEXT stage by pairing consecutive matches in the current stage's
- * date-sorted bracket.
+ * Predict opponents for a team's NEXT stage using ESPN's actual bracket
+ * structure (feeder event IDs encoded into actualBracket[nextStage]).
  *
- * The 2026 FIFA bracket pairs R32 winners into R16 in a known order, but
- * we don't yet capture FIFA match numbers from ESPN. As a heuristic, we
- * assume r32[0] feeds the same R16 slot as r32[1], r32[2] feeds with
- * r32[3], etc. — i.e. partner index = i XOR 1. This matches FIFA's
- * typical bracket layout where consecutive R32 slots share an R16 match.
+ * Look-up flow:
+ *   1. Find the team's NEXT-stage match (e.g. R16 match where home or away
+ *      is the team — possible if team won R32 and ESPN resolved it).
+ *   2. If found AND the OTHER side is a real team → confirmed opponent.
+ *   3. If found AND the OTHER side is a feeder placeholder (R32 not yet
+ *      finished) → look up the feeder R32 match, return both teams as
+ *      candidates (or just the winner if it finished).
+ *   4. If team's next-stage match isn't drawn at all (no R16 placeholder
+ *      lists them yet) → return [] (TBD).
  *
- * When ESPN actually publishes the next stage (actualBracket[nextStage]
- * gets populated), the caller uses that real matchup instead.
- *
- * Returns 1 record (with pct=100) if the partner match is FINISHED, else
- * 2 records (pct=50 each) for the two teams who could still advance.
+ * Replaces the old by-date consecutive-pair heuristic which produced the
+ * wrong pairings (e.g. BEL/SEN ↔ ENG/DRC instead of the real ESPN-published
+ * BEL/SEN ↔ FRA/SWE pairing).
  */
 function predictNextStageOpponents(teamId, currentStage, actualBracket) {
-	const matches = actualBracket?.[currentStage] ?? []
-	const myIdx = matches.findIndex(m => m.homeId === teamId || m.awayId === teamId)
-	if (myIdx < 0) return []
+	const nextStage = NEXT_STAGE[currentStage]
+	if (!nextStage) return []
 
-	const partnerIdx = myIdx ^ 1
-	const partner = matches[partnerIdx]
-	if (!partner) return []
+	// 1. Find the team's next-stage slot via teamId or feeder reference back
+	//    to their currentStage match.
+	const currentStageMatch = findBracketMatch(teamId, currentStage, actualBracket)
+	const nextStageMatches = actualBracket?.[nextStage] ?? []
 
-	if (partner.status === 'FINISHED' && partner.winnerId) {
-		return [makeOpponentRecord(partner.winnerId, 'Predicted (winner of paired match)', 100)]
+	const directNextMatch = nextStageMatches.find(m => m.homeId === teamId || m.awayId === teamId)
+	const feederNextMatch = currentStageMatch?.eventId
+		? nextStageMatches.find(m =>
+			m.homeFeederEventId === currentStageMatch.eventId ||
+			m.awayFeederEventId === currentStageMatch.eventId
+		)
+		: null
+
+	const slot = directNextMatch ?? feederNextMatch
+	if (!slot) return []
+
+	// 2. Determine the OTHER side of the next-stage slot.
+	let otherTeamId, otherFeederEventId
+	if (slot.homeId === teamId || slot.homeFeederEventId === currentStageMatch?.eventId) {
+		otherTeamId = slot.awayId
+		otherFeederEventId = slot.awayFeederEventId
+	} else {
+		otherTeamId = slot.homeId
+		otherFeederEventId = slot.homeFeederEventId
 	}
 
-	// Both teams in the partner match are 50/50 candidates.
-	return [
-		makeOpponentRecord(partner.homeId, 'Predicted (if they win their match)', 50),
-		makeOpponentRecord(partner.awayId, 'Predicted (if they win their match)', 50),
-	]
+	// 3a. Other side is a confirmed team → single confirmed opponent.
+	if (otherTeamId) {
+		return [makeOpponentRecord(otherTeamId, 'Confirmed opponent', 100)]
+	}
+
+	// 3b. Other side is a feeder placeholder → look up the feeder match.
+	if (otherFeederEventId) {
+		const feeder = findMatchByEventId(otherFeederEventId, currentStage, actualBracket)
+		if (!feeder) return []
+		if (feeder.status === 'FINISHED' && feeder.winnerId) {
+			return [makeOpponentRecord(feeder.winnerId, 'Predicted (winner of paired match)', 100)]
+		}
+		if (feeder.homeId && feeder.awayId) {
+			return [
+				makeOpponentRecord(feeder.homeId, 'Predicted (if they win their match)', 50),
+				makeOpponentRecord(feeder.awayId, 'Predicted (if they win their match)', 50),
+			]
+		}
+	}
+
+	return []
 }
+
+const NEXT_STAGE = {
+	r32: 'r16',
+	r16: 'qf',
+	qf:  'sf',
+	sf:  'final',
+}
+
+const PREV_STAGE = {
+	r16:   'r32',
+	qf:    'r16',
+	sf:    'qf',
+	final: 'sf',
+}
+
+function prevStageOf(stage) { return PREV_STAGE[stage] }
 
 /**
  * Possible-opponent lists for r32 + r16 derived from actualBracket.
@@ -178,13 +263,33 @@ export function derivePossibleOpponents(team, actualBracket) {
 	const r32Match = findBracketMatch(team.id, 'r32', actualBracket)
 	const r16Match = findBracketMatch(team.id, 'r16', actualBracket)
 
-	const r32List = r32Match
+	const r32List = r32Match && r32Match.homeId && r32Match.awayId
 		? [makeOpponentRecord(getOpponentId(team.id, r32Match), 'Confirmed opponent', 100)]
 		: []
 
-	const r16List = r16Match
-		? [makeOpponentRecord(getOpponentId(team.id, r16Match), 'Confirmed opponent', 100)]
-		: predictNextStageOpponents(team.id, 'r32', actualBracket)
+	let r16List
+	if (r16Match && r16Match.homeId && r16Match.awayId) {
+		r16List = [makeOpponentRecord(getOpponentId(team.id, r16Match), 'Confirmed opponent', 100)]
+	} else {
+		// Fall back to feeder-aware prediction (handles partial R16 placeholders
+		// like 'Canada vs R32 #3 Winner' — predicts NED/MAR as candidates).
+		r16List = predictNextStageOpponents(team.id, 'r32', actualBracket)
+		// If the partial slot resolved a confirmed opponent via feeder, also try direct.
+		if (r16List.length === 0 && r16Match) {
+			const opponentFeederId = getOpponentFeederEventId(team.id, r16Match)
+			if (opponentFeederId) {
+				const feeder = findMatchByEventId(opponentFeederId, 'r32', actualBracket)
+				if (feeder?.status === 'FINISHED' && feeder.winnerId) {
+					r16List = [makeOpponentRecord(feeder.winnerId, 'Predicted (winner of paired match)', 100)]
+				} else if (feeder?.homeId && feeder?.awayId) {
+					r16List = [
+						makeOpponentRecord(feeder.homeId, 'Predicted (if they win their match)', 50),
+						makeOpponentRecord(feeder.awayId, 'Predicted (if they win their match)', 50),
+					]
+				}
+			}
+		}
+	}
 
 	return { r32: r32List, r16: r16List }
 }

@@ -113,7 +113,7 @@ async function main() {
 
   const TOURNAMENT_START_ESPN = '2026-06-11';
   const TOURNAMENT_END_ESPN   = '2026-07-19'; // full tournament through the Final
-  const { matches: espnMatches, scorers: espnScorers, cards: espnCards, activeTeams: espnActiveTeams }
+  const { matches: espnMatches, scorers: espnScorers, cards: espnCards, activeTeams: espnActiveTeams, bracketEvents: espnBracketEvents }
     = await fetchESPNEventDetails(TOURNAMENT_START_ESPN, TOURNAMENT_END_ESPN);
 
   // Normalize all ESPN UTC dates to local venue dates
@@ -327,7 +327,7 @@ async function main() {
   // diverge from the static BRACKET_PATHS prediction), the per-team path
   // venue/date/opponent must come from observed ESPN data — not from the
   // static guess. See scripts/lib/livePath.js for full rationale.
-  const actualBracket = buildActualBracket(dailyMatches);
+  const actualBracket = buildActualBracket(dailyMatches, espnBracketEvents);
   for (const t of teams) {
     if (!t) continue;
     t.path = deriveLivePath(t, actualBracket, t.path);

@@ -141,36 +141,57 @@ describe('derivePossibleOpponents', () => {
 		expect(opps.r16[0].likelyTeam).toBe('France')
 	})
 
-	it('predicts R16 candidates from consecutive r32 pairing when R16 not yet drawn', () => {
+	// New API: R16 predictions require ESPN-published placeholder data in
+	// actualBracket.r16. The bracketMatch helper produces R32 entries with
+	// eventIds; the r16 entries reference those via feederEventIds.
+	function r16Placeholder(eventId, date, homeFeederEventId, awayFeederEventId, homeId, awayId) {
+		const entry = { eventId, date, status: 'SCHEDULED', homeScore: 0, awayScore: 0 }
+		if (homeId) entry.homeId = homeId; else entry.homeFeederEventId = homeFeederEventId
+		if (awayId) entry.awayId = awayId; else entry.awayFeederEventId = awayFeederEventId
+		return entry
+	}
+	function bracketMatchWithId(eventId, homeId, awayId, date, status, homeScore = 0, awayScore = 0) {
+		const m = bracketMatch(homeId, awayId, date, status, homeScore, awayScore)
+		m.eventId = eventId
+		return m
+	}
+
+	it('predicts R16 candidates from ESPN feeder map when R16 placeholders are present', () => {
 		const team = { id: 'canada', currentStage: 'r32', eliminated: false }
-		// Canada is in r32[0]; the partner match is r32[1] (Brazil vs Japan).
 		const ab = {
+			// FIFA bracket: Canada (R32 evt 486) pairs in R16 with the winner
+			// of NED/MAR (R32 evt 488), per ESPN's R16 placeholder.
 			r32: [
-				bracketMatch('southafrica', 'canada', '2026-06-28', 'FINISHED', 0, 1),
-				bracketMatch('brazil', 'japan', '2026-06-29', 'SCHEDULED'),
-				bracketMatch('germany', 'paraguay', '2026-06-29', 'SCHEDULED'),
-				bracketMatch('france', 'sweden', '2026-06-30', 'SCHEDULED'),
+				bracketMatchWithId('486', 'southafrica', 'canada', '2026-06-28', 'FINISHED', 0, 1),
+				bracketMatchWithId('488', 'netherlands', 'morocco', '2026-06-30', 'SCHEDULED'),
 			],
-			r16: [], qf: [], sf: [], final: [],
+			r16: [
+				// R16 placeholder: Canada (resolved from evt 486) vs winner of evt 488.
+				r16Placeholder('502', '2026-07-04', '486', '488', 'canada', null),
+			],
+			qf: [], sf: [], final: [],
 		}
 		const opps = derivePossibleOpponents(team, ab)
 		expect(opps.r16).toHaveLength(2)
-		expect(opps.r16.map(o => o.likelyTeam).sort()).toEqual(['Brazil', 'Japan'])
+		expect(opps.r16.map(o => o.likelyTeam).sort()).toEqual(['Morocco', 'Netherlands'])
 		expect(opps.r16.every(o => o.pct === 50)).toBe(true)
 	})
 
-	it('returns a single confirmed predicted opponent when the partner match is finished', () => {
+	it('returns single confirmed opponent when the feeder R32 has finished', () => {
 		const team = { id: 'canada', currentStage: 'r32', eliminated: false }
 		const ab = {
 			r32: [
-				bracketMatch('southafrica', 'canada', '2026-06-28', 'FINISHED', 0, 1),
-				bracketMatch('brazil', 'japan', '2026-06-29', 'FINISHED', 2, 0),
+				bracketMatchWithId('486', 'southafrica', 'canada', '2026-06-28', 'FINISHED', 0, 1),
+				bracketMatchWithId('488', 'netherlands', 'morocco', '2026-06-30', 'FINISHED', 2, 0),
 			],
-			r16: [], qf: [], sf: [], final: [],
+			r16: [
+				r16Placeholder('502', '2026-07-04', '486', '488', 'canada', null),
+			],
+			qf: [], sf: [], final: [],
 		}
 		const opps = derivePossibleOpponents(team, ab)
 		expect(opps.r16).toHaveLength(1)
-		expect(opps.r16[0].likelyTeam).toBe('Brazil')
+		expect(opps.r16[0].likelyTeam).toBe('Netherlands')
 		expect(opps.r16[0].pct).toBe(100)
 	})
 
@@ -178,8 +199,23 @@ describe('derivePossibleOpponents', () => {
 		const team = { id: 'southafrica', currentStage: 'r32', eliminated: true }
 		const ab = {
 			r32: [
-				bracketMatch('southafrica', 'canada', '2026-06-28', 'FINISHED', 0, 1),
-				bracketMatch('brazil', 'japan', '2026-06-29', 'SCHEDULED'),
+				bracketMatchWithId('486', 'southafrica', 'canada', '2026-06-28', 'FINISHED', 0, 1),
+			],
+			r16: [
+				r16Placeholder('502', '2026-07-04', '486', '488', 'canada', null),
+			],
+			qf: [], sf: [], final: [],
+		}
+		const opps = derivePossibleOpponents(team, ab)
+		expect(opps.r16).toEqual([])
+	})
+
+	it('returns empty r16 when no feeder data is available (no prediction without ESPN bracket)', () => {
+		const team = { id: 'canada', currentStage: 'r32', eliminated: false }
+		const ab = {
+			// R32 only, no R16 placeholders → no way to predict pairings.
+			r32: [
+				bracketMatchWithId('486', 'southafrica', 'canada', '2026-06-28', 'FINISHED', 0, 1),
 			],
 			r16: [], qf: [], sf: [], final: [],
 		}
@@ -189,17 +225,26 @@ describe('derivePossibleOpponents', () => {
 })
 
 describe('deriveLivePath predicted opponentDesc', () => {
-	it('shows predicted R16 opponent description when R32 is known but R16 is not', () => {
+	function r16Placeholder(eventId, date, homeFeederEventId, awayFeederEventId, homeId, awayId) {
+		const entry = { eventId, date, status: 'SCHEDULED', homeScore: 0, awayScore: 0 }
+		if (homeId) entry.homeId = homeId; else entry.homeFeederEventId = homeFeederEventId
+		if (awayId) entry.awayId = awayId; else entry.awayFeederEventId = awayFeederEventId
+		return entry
+	}
+
+	it('shows predicted R16 opponent description from feeder map', () => {
 		const team = { id: 'canada', currentStage: 'r32', eliminated: false }
+		const r32 = [
+			{ ...bracketMatch('southafrica', 'canada', '2026-06-28', 'FINISHED', 0, 1), eventId: '486' },
+			{ ...bracketMatch('netherlands', 'morocco', '2026-06-30', 'SCHEDULED'),     eventId: '488' },
+		]
 		const ab = {
-			r32: [
-				bracketMatch('southafrica', 'canada', '2026-06-28', 'FINISHED', 0, 1),
-				bracketMatch('brazil', 'japan', '2026-06-29', 'SCHEDULED'),
-			],
-			r16: [], qf: [], sf: [], final: [],
+			r32,
+			r16: [r16Placeholder('502', '2026-07-04', '486', '488', 'canada', null)],
+			qf: [], sf: [], final: [],
 		}
 		const path = deriveLivePath(team, ab, staticPath())
-		expect(path.r16?.opponentDesc).toBe('Brazil or Japan')
+		expect(path.r16?.opponentDesc).toBe('Netherlands or Morocco')
 		expect(path.r16?.venue).toBe('TBD')
 		expect(path.r16?.conditional).toBe(true)
 	})
