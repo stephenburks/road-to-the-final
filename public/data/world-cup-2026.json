@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-30T21:40:36.025Z",
+  "lastUpdated": "2026-06-30T23:12:33.018Z",
   "snapshotDate": "2026-06-30",
   "isHistorical": false,
   "sourceSummary": {
@@ -924,7 +924,7 @@
         "r16": 64,
         "qf": 28,
         "sf": 14,
-        "final": 6,
+        "final": 7,
         "winner": 2,
         "source": "market"
       },
@@ -1411,8 +1411,8 @@
       "advanceProbabilities": {
         "r32": 100,
         "r16": 100,
-        "qf": 29,
-        "sf": 6,
+        "qf": 28,
+        "sf": 5,
         "final": 2,
         "winner": 0,
         "source": "market"
@@ -1592,7 +1592,7 @@
         "r16": 19,
         "qf": 5,
         "sf": 1,
-        "final": 1,
+        "final": 0,
         "winner": 0,
         "source": "market"
       },
@@ -1875,8 +1875,8 @@
         "r32": 100,
         "r16": 67,
         "qf": 30,
-        "sf": 9,
-        "final": 4,
+        "sf": 8,
+        "final": 3,
         "winner": 1,
         "source": "market"
       },
@@ -2056,7 +2056,7 @@
       "advanceProbabilities": {
         "r32": 100,
         "r16": 100,
-        "qf": 63,
+        "qf": 64,
         "sf": 35,
         "final": 18,
         "winner": 7,
@@ -2216,10 +2216,10 @@
       "advanceProbabilities": {
         "r32": 100,
         "r16": 100,
-        "qf": 71,
-        "sf": 24,
+        "qf": 72,
+        "sf": 23,
         "final": 9,
-        "winner": 4,
+        "winner": 3,
         "source": "market"
       },
       "path": {
@@ -2616,7 +2616,7 @@
         "r16": 83,
         "qf": 47,
         "sf": 17,
-        "final": 6,
+        "final": 5,
         "winner": 3,
         "source": "market"
       },
@@ -2719,7 +2719,7 @@
       "confederation": "CONMEBOL",
       "fifaRank": 39,
       "eliminated": false,
-      "currentStage": "r16",
+      "currentStage": "r32",
       "groupResults": [
         {
           "matchday": 1,
@@ -2808,9 +2808,9 @@
       "advanceProbabilities": {
         "r32": 100,
         "r16": 100,
-        "qf": 15,
-        "sf": 7,
-        "final": 2,
+        "qf": 11,
+        "sf": 5,
+        "final": 0,
         "winner": 0,
         "source": "market"
       },
@@ -2831,13 +2831,12 @@
           "conditional": false
         },
         "r16": {
-          "status": "upcoming",
+          "status": "future",
           "date": "2026-07-04",
           "venue": "Lincoln Financial Field",
           "city": "Philadelphia, Pennsylvania",
-          "opponentDesc": "Norway",
-          "conditional": true,
-          "conditionNote": "Venue confirmed once feeder match settles"
+          "opponentDesc": "France",
+          "conditional": false
         },
         "qf": {
           "status": "future",
@@ -2882,13 +2881,13 @@
         ],
         "r16": [
           {
-            "likelyTeam": "Norway",
-            "flag": "🇳🇴",
-            "fifaRank": 31,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "Predicted (winner of paired match)",
+            "likelyTeam": "France",
+            "flag": "🇫🇷",
+            "fifaRank": 3,
+            "difficulty": 5,
+            "label": "Danger",
+            "color": "#EF4444",
+            "note": "Confirmed opponent",
             "pct": 100
           }
         ]
@@ -3696,11 +3695,11 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 38,
-        "qf": 11,
+        "r16": 37,
+        "qf": 13,
         "sf": 4,
-        "final": 2,
-        "winner": 1,
+        "final": 1,
+        "winner": 0,
         "source": "market"
       },
       "path": {
@@ -4072,7 +4071,7 @@
       "group": "F",
       "confederation": "UEFA",
       "fifaRank": 29,
-      "eliminated": false,
+      "eliminated": true,
       "currentStage": "r32",
       "groupResults": [
         {
@@ -4164,9 +4163,9 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 14,
-        "qf": 6,
-        "sf": 3,
+        "r16": 0,
+        "qf": 0,
+        "sf": 0,
         "final": 0,
         "winner": 0,
         "source": "market"
@@ -4180,85 +4179,21 @@
           "detail": "4pts after MD3"
         },
         "r32": {
-          "status": "active",
+          "status": "done",
           "date": "2026-06-30",
           "venue": "MetLife Stadium",
           "city": "East Rutherford, New Jersey",
           "opponentDesc": "France",
           "conditional": false
         },
-        "r16": {
-          "status": "future",
-          "date": "2026-07-07",
-          "venue": "TBD",
-          "city": "TBD",
-          "opponentDesc": "Belgium or Senegal",
-          "conditional": true,
-          "conditionNote": "Predicted from bracket pairing — venue confirmed once previous match settles"
-        },
-        "qf": {
-          "status": "future",
-          "date": "2026-07-11",
-          "venue": "TBD",
-          "city": "TBD",
-          "opponentDesc": "Opponent TBD",
-          "conditional": true,
-          "conditionNote": "Venue + opponent confirmed once bracket is drawn"
-        },
-        "sf": {
-          "status": "future",
-          "date": "2026-07-14",
-          "venue": "TBD",
-          "city": "TBD",
-          "opponentDesc": "Opponent TBD",
-          "conditional": true,
-          "conditionNote": "Venue + opponent confirmed once bracket is drawn"
-        },
-        "final": {
-          "status": "future",
-          "date": "2026-07-19",
-          "venue": "TBD",
-          "city": "TBD",
-          "opponentDesc": "Opponent TBD",
-          "conditional": true,
-          "conditionNote": "Venue + opponent confirmed once bracket is drawn"
-        }
+        "r16": null,
+        "qf": null,
+        "sf": null,
+        "final": null
       },
       "possibleOpponents": {
-        "r32": [
-          {
-            "likelyTeam": "France",
-            "flag": "🇫🇷",
-            "fifaRank": 3,
-            "difficulty": 5,
-            "label": "Danger",
-            "color": "#EF4444",
-            "note": "Confirmed opponent",
-            "pct": 100
-          }
-        ],
-        "r16": [
-          {
-            "likelyTeam": "Belgium",
-            "flag": "🇧🇪",
-            "fifaRank": 9,
-            "difficulty": 5,
-            "label": "Danger",
-            "color": "#EF4444",
-            "note": "Predicted (if they win their match)",
-            "pct": 50
-          },
-          {
-            "likelyTeam": "Senegal",
-            "flag": "🇸🇳",
-            "fifaRank": 14,
-            "difficulty": 4,
-            "label": "Tough",
-            "color": "#FB923C",
-            "note": "Predicted (if they win their match)",
-            "pct": 50
-          }
-        ]
+        "r32": [],
+        "r16": []
       },
       "totalGoals": 7
     },
@@ -4460,7 +4395,7 @@
         "r32": 100,
         "r16": 59,
         "qf": 32,
-        "sf": 11,
+        "sf": 12,
         "final": 4,
         "winner": 1,
         "source": "market"
@@ -4486,7 +4421,7 @@
           "date": "2026-07-06",
           "venue": "TBD",
           "city": "TBD",
-          "opponentDesc": "France or Sweden",
+          "opponentDesc": "France",
           "conditional": true,
           "conditionNote": "Predicted from bracket pairing — venue confirmed once previous match settles"
         },
@@ -4539,18 +4474,8 @@
             "difficulty": 5,
             "label": "Danger",
             "color": "#EF4444",
-            "note": "Predicted (if they win their match)",
-            "pct": 50
-          },
-          {
-            "likelyTeam": "Sweden",
-            "flag": "🇸🇪",
-            "fifaRank": 29,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "Predicted (if they win their match)",
-            "pct": 50
+            "note": "Predicted (winner of paired match)",
+            "pct": 100
           }
         ]
       },
@@ -4644,7 +4569,7 @@
       "advanceProbabilities": {
         "r32": 100,
         "r16": 56,
-        "qf": 12,
+        "qf": 11,
         "sf": 4,
         "final": 2,
         "winner": 0,
@@ -5045,7 +4970,7 @@
       "advanceProbabilities": {
         "r32": 100,
         "r16": 86,
-        "qf": 59,
+        "qf": 58,
         "sf": 43,
         "final": 21,
         "winner": 11,
@@ -5219,7 +5144,7 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 8,
+        "r16": 9,
         "qf": 3,
         "sf": 1,
         "final": 0,
@@ -5626,11 +5551,11 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 88,
-        "qf": 82,
-        "sf": 64,
-        "final": 43,
-        "winner": 27,
+        "r16": 100,
+        "qf": 91,
+        "sf": 74,
+        "final": 55,
+        "winner": 33,
         "source": "market"
       },
       "path": {
@@ -5642,7 +5567,7 @@
           "detail": "9pts after MD3"
         },
         "r32": {
-          "status": "active",
+          "status": "done",
           "date": "2026-06-30",
           "venue": "MetLife Stadium",
           "city": "East Rutherford, New Jersey",
@@ -5651,12 +5576,11 @@
         },
         "r16": {
           "status": "future",
-          "date": "2026-07-07",
-          "venue": "TBD",
-          "city": "TBD",
-          "opponentDesc": "Belgium or Senegal",
-          "conditional": true,
-          "conditionNote": "Predicted from bracket pairing — venue confirmed once previous match settles"
+          "date": "2026-07-04",
+          "venue": "Lincoln Financial Field",
+          "city": "Philadelphia, Pennsylvania",
+          "opponentDesc": "Paraguay",
+          "conditional": false
         },
         "qf": {
           "status": "future",
@@ -5701,28 +5625,18 @@
         ],
         "r16": [
           {
-            "likelyTeam": "Belgium",
-            "flag": "🇧🇪",
-            "fifaRank": 9,
-            "difficulty": 5,
-            "label": "Danger",
-            "color": "#EF4444",
-            "note": "Predicted (if they win their match)",
-            "pct": 50
-          },
-          {
-            "likelyTeam": "Senegal",
-            "flag": "🇸🇳",
-            "fifaRank": 14,
-            "difficulty": 4,
-            "label": "Tough",
-            "color": "#FB923C",
-            "note": "Predicted (if they win their match)",
-            "pct": 50
+            "likelyTeam": "Paraguay",
+            "flag": "🇵🇾",
+            "fifaRank": 39,
+            "difficulty": 2,
+            "label": "Favorable",
+            "color": "#22C55E",
+            "note": "Confirmed opponent",
+            "pct": 100
           }
         ]
       },
-      "totalGoals": 10
+      "totalGoals": 13
     },
     {
       "id": "senegal",
@@ -5811,7 +5725,7 @@
         "r32": 100,
         "r16": 42,
         "qf": 17,
-        "sf": 6,
+        "sf": 5,
         "final": 2,
         "winner": 1,
         "source": "market"
@@ -5837,7 +5751,7 @@
           "date": "2026-07-07",
           "venue": "TBD",
           "city": "TBD",
-          "opponentDesc": "France or Sweden",
+          "opponentDesc": "France",
           "conditional": true,
           "conditionNote": "Predicted from bracket pairing — venue confirmed once previous match settles"
         },
@@ -5890,18 +5804,8 @@
             "difficulty": 5,
             "label": "Danger",
             "color": "#EF4444",
-            "note": "Predicted (if they win their match)",
-            "pct": 50
-          },
-          {
-            "likelyTeam": "Sweden",
-            "flag": "🇸🇪",
-            "fifaRank": 29,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "Predicted (if they win their match)",
-            "pct": 50
+            "note": "Predicted (winner of paired match)",
+            "pct": 100
           }
         ]
       },
@@ -6269,8 +6173,8 @@
         "r16": 92,
         "qf": 82,
         "sf": 65,
-        "final": 40,
-        "winner": 20,
+        "final": 41,
+        "winner": 19,
         "source": "market"
       },
       "path": {
@@ -6439,8 +6343,8 @@
       "advanceProbabilities": {
         "r32": 100,
         "r16": 34,
-        "qf": 11,
-        "sf": 3,
+        "qf": 10,
+        "sf": 2,
         "final": 1,
         "winner": 0,
         "source": "market"
@@ -6928,9 +6832,9 @@
         "r32": 100,
         "r16": 68,
         "qf": 30,
-        "sf": 21,
+        "sf": 20,
         "final": 14,
-        "winner": 6,
+        "winner": 5,
         "source": "market"
       },
       "path": {
@@ -7108,8 +7012,8 @@
         "r32": 100,
         "r16": 12,
         "qf": 3,
-        "sf": 2,
-        "final": 1,
+        "sf": 1,
+        "final": 0,
         "winner": 0,
         "source": "market"
       },
@@ -7561,8 +7465,8 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 87,
-        "qf": 61,
+        "r16": 88,
+        "qf": 60,
         "sf": 38,
         "final": 20,
         "winner": 10,
@@ -7731,8 +7635,8 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 32,
-        "qf": 10,
+        "r16": 31,
+        "qf": 9,
         "sf": 5,
         "final": 1,
         "winner": 0,
@@ -7900,7 +7804,7 @@
       "advanceProbabilities": {
         "r32": 100,
         "r16": 21,
-        "qf": 10,
+        "qf": 9,
         "sf": 3,
         "final": 1,
         "winner": 0,
@@ -9608,26 +9512,17 @@
         "awayTeam": "Sweden",
         "awayFlag": "🇸🇪",
         "awayId": "sweden",
-        "homeScore": 0,
+        "homeScore": 3,
         "awayScore": 0,
-        "status": "IN_PROGRESS",
+        "status": "FINISHED",
         "date": "2026-06-30",
-        "clock": "40'",
         "broadcasts": [
           "FOX",
           "Tele",
           "FOX One"
         ],
         "time": "2026-06-30T21:00Z",
-        "venue": "MetLife Stadium, East Rutherford, New Jersey",
-        "polymarket": {
-          "homeId": "france",
-          "awayId": "sweden",
-          "homeWinPct": 73,
-          "awayWinPct": 7,
-          "drawPct": 21,
-          "eventSlug": "fifwc-fra-swe-2026-06-30"
-        }
+        "venue": "MetLife Stadium, East Rutherford, New Jersey"
       },
       {
         "homeTeam": "Mexico",
@@ -9933,6 +9828,25 @@
           "drawPct": 28,
           "eventSlug": "fifwc-can-mar-2026-07-04"
         }
+      },
+      {
+        "homeTeam": "Paraguay",
+        "homeFlag": "🇵🇾",
+        "homeId": "paraguay",
+        "awayTeam": "France",
+        "awayFlag": "🇫🇷",
+        "awayId": "france",
+        "homeScore": 0,
+        "awayScore": 0,
+        "status": "SCHEDULED",
+        "date": "2026-07-04",
+        "broadcasts": [
+          "FOX",
+          "Tele",
+          "FOX One"
+        ],
+        "time": "2026-07-04T21:00Z",
+        "venue": "Lincoln Financial Field, Philadelphia, Pennsylvania"
       }
     ],
     "2026-07-05": [
@@ -10026,11 +9940,12 @@
         "eventId": "760492",
         "date": "2026-06-30",
         "venue": "MetLife Stadium, East Rutherford, New Jersey",
-        "status": "IN_PROGRESS",
-        "homeScore": 0,
+        "status": "FINISHED",
+        "homeScore": 3,
         "awayScore": 0,
         "homeId": "france",
-        "awayId": "sweden"
+        "awayId": "sweden",
+        "winnerId": "france"
       },
       {
         "eventId": "760493",
@@ -10142,7 +10057,7 @@
         "homeScore": 0,
         "awayScore": 0,
         "homeId": "paraguay",
-        "awayFeederEventId": "760490"
+        "awayId": "france"
       },
       {
         "eventId": "760504",
