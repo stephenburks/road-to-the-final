@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-30T00:10:59.995Z",
+  "lastUpdated": "2026-06-30T05:02:58.830Z",
   "snapshotDate": "2026-06-30",
   "isHistorical": false,
   "sourceSummary": {
@@ -921,10 +921,10 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 64,
-        "qf": 27,
+        "r16": 62,
+        "qf": 28,
         "sf": 14,
-        "final": 7,
+        "final": 6,
         "winner": 1,
         "source": "market"
       },
@@ -949,7 +949,7 @@
           "date": "2026-07-05",
           "venue": "TBD",
           "city": "TBD",
-          "opponentDesc": "England or DR Congo",
+          "opponentDesc": "Brazil",
           "conditional": true,
           "conditionNote": "Predicted from bracket pairing — venue confirmed once previous match settles"
         },
@@ -996,24 +996,14 @@
         ],
         "r16": [
           {
-            "likelyTeam": "England",
-            "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
-            "fifaRank": 5,
+            "likelyTeam": "Brazil",
+            "flag": "🇧🇷",
+            "fifaRank": 4,
             "difficulty": 5,
             "label": "Danger",
             "color": "#EF4444",
-            "note": "Predicted (if they win their match)",
-            "pct": 50
-          },
-          {
-            "likelyTeam": "DR Congo",
-            "flag": "🇨🇩",
-            "fifaRank": 56,
-            "difficulty": 1,
-            "label": "Favorable",
-            "color": "#22C55E",
-            "note": "Predicted (if they win their match)",
-            "pct": 50
+            "note": "Confirmed opponent",
+            "pct": 100
           }
         ]
       },
@@ -1354,7 +1344,7 @@
       "confederation": "CONCACAF",
       "fifaRank": 27,
       "eliminated": false,
-      "currentStage": "r16",
+      "currentStage": "r32",
       "groupResults": [
         {
           "matchday": 1,
@@ -1432,9 +1422,9 @@
       "advanceProbabilities": {
         "r32": 100,
         "r16": 100,
-        "qf": 26,
-        "sf": 5,
-        "final": 1,
+        "qf": 30,
+        "sf": 6,
+        "final": 2,
         "winner": 0,
         "source": "market"
       },
@@ -1456,12 +1446,11 @@
         },
         "r16": {
           "status": "future",
-          "date": "2026-07-06",
-          "venue": "TBD",
-          "city": "TBD",
-          "opponentDesc": "Germany or Paraguay",
-          "conditional": true,
-          "conditionNote": "Predicted from bracket pairing — venue confirmed once previous match settles"
+          "date": "2026-07-04",
+          "venue": "NRG Stadium",
+          "city": "Houston, Texas",
+          "opponentDesc": "Morocco",
+          "conditional": false
         },
         "qf": {
           "status": "future",
@@ -1506,24 +1495,14 @@
         ],
         "r16": [
           {
-            "likelyTeam": "Germany",
-            "flag": "🇩🇪",
-            "fifaRank": 9,
-            "difficulty": 5,
-            "label": "Danger",
-            "color": "#EF4444",
-            "note": "Predicted (if they win their match)",
-            "pct": 50
-          },
-          {
-            "likelyTeam": "Paraguay",
-            "flag": "🇵🇾",
-            "fifaRank": 39,
-            "difficulty": 2,
-            "label": "Favorable",
-            "color": "#22C55E",
-            "note": "Predicted (if they win their match)",
-            "pct": 50
+            "likelyTeam": "Morocco",
+            "flag": "🇲🇦",
+            "fifaRank": 14,
+            "difficulty": 4,
+            "label": "Tough",
+            "color": "#FB923C",
+            "note": "Confirmed opponent",
+            "pct": 100
           }
         ]
       },
@@ -1622,9 +1601,9 @@
       "advanceProbabilities": {
         "r32": 100,
         "r16": 18,
-        "qf": 5,
+        "qf": 4,
         "sf": 1,
-        "final": 0,
+        "final": 1,
         "winner": 0,
         "source": "market"
       },
@@ -1649,7 +1628,7 @@
           "date": "2026-07-06",
           "venue": "TBD",
           "city": "TBD",
-          "opponentDesc": "Belgium or Senegal",
+          "opponentDesc": "England or DR Congo",
           "conditional": true,
           "conditionNote": "Predicted from bracket pairing — venue confirmed once previous match settles"
         },
@@ -1696,9 +1675,9 @@
         ],
         "r16": [
           {
-            "likelyTeam": "Belgium",
-            "flag": "🇧🇪",
-            "fifaRank": 9,
+            "likelyTeam": "England",
+            "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+            "fifaRank": 5,
             "difficulty": 5,
             "label": "Danger",
             "color": "#EF4444",
@@ -1706,12 +1685,12 @@
             "pct": 50
           },
           {
-            "likelyTeam": "Senegal",
-            "flag": "🇸🇳",
-            "fifaRank": 14,
-            "difficulty": 4,
-            "label": "Tough",
-            "color": "#FB923C",
+            "likelyTeam": "DR Congo",
+            "flag": "🇨🇩",
+            "fifaRank": 56,
+            "difficulty": 1,
+            "label": "Favorable",
+            "color": "#22C55E",
             "note": "Predicted (if they win their match)",
             "pct": 50
           }
@@ -1905,10 +1884,10 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 69,
+        "r16": 68,
         "qf": 31,
         "sf": 9,
-        "final": 4,
+        "final": 3,
         "winner": 1,
         "source": "market"
       },
@@ -2088,8 +2067,8 @@
       "advanceProbabilities": {
         "r32": 100,
         "r16": 100,
-        "qf": 63,
-        "sf": 35,
+        "qf": 67,
+        "sf": 34,
         "final": 18,
         "winner": 7,
         "source": "market"
@@ -2111,13 +2090,13 @@
           "conditional": false
         },
         "r16": {
-          "status": "future",
-          "date": "2026-07-07",
-          "venue": "TBD",
-          "city": "TBD",
-          "opponentDesc": "Ivory Coast or Norway",
+          "status": "upcoming",
+          "date": "2026-07-05",
+          "venue": "MetLife Stadium",
+          "city": "East Rutherford, New Jersey",
+          "opponentDesc": "Mexico or Ecuador",
           "conditional": true,
-          "conditionNote": "Predicted from bracket pairing — venue confirmed once previous match settles"
+          "conditionNote": "Venue confirmed once feeder match settles"
         },
         "qf": {
           "status": "future",
@@ -2162,19 +2141,19 @@
         ],
         "r16": [
           {
-            "likelyTeam": "Ivory Coast",
-            "flag": "🇨🇮",
-            "fifaRank": 42,
-            "difficulty": 2,
-            "label": "Favorable",
-            "color": "#22C55E",
+            "likelyTeam": "Mexico",
+            "flag": "🇲🇽",
+            "fifaRank": 15,
+            "difficulty": 4,
+            "label": "Tough",
+            "color": "#FB923C",
             "note": "Predicted (if they win their match)",
             "pct": 50
           },
           {
-            "likelyTeam": "Norway",
-            "flag": "🇳🇴",
-            "fifaRank": 31,
+            "likelyTeam": "Ecuador",
+            "flag": "🇪🇨",
+            "fifaRank": 23,
             "difficulty": 3,
             "label": "Moderate",
             "color": "#F59E0B",
@@ -2258,11 +2237,11 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 43,
-        "qf": 30,
-        "sf": 10,
-        "final": 4,
-        "winner": 1,
+        "r16": 100,
+        "qf": 71,
+        "sf": 23,
+        "final": 10,
+        "winner": 4,
         "source": "market"
       },
       "path": {
@@ -2274,7 +2253,7 @@
           "detail": "7pts after MD3"
         },
         "r32": {
-          "status": "upcoming",
+          "status": "done",
           "date": "2026-06-29",
           "venue": "Estadio BBVA",
           "city": "Guadalupe",
@@ -2283,12 +2262,11 @@
         },
         "r16": {
           "status": "future",
-          "date": "2026-07-07",
-          "venue": "TBD",
-          "city": "TBD",
-          "opponentDesc": "Spain or Austria",
-          "conditional": true,
-          "conditionNote": "Predicted from bracket pairing — venue confirmed once previous match settles"
+          "date": "2026-07-04",
+          "venue": "NRG Stadium",
+          "city": "Houston, Texas",
+          "opponentDesc": "Canada",
+          "conditional": false
         },
         "qf": {
           "status": "future",
@@ -2333,28 +2311,18 @@
         ],
         "r16": [
           {
-            "likelyTeam": "Spain",
-            "flag": "🇪🇸",
-            "fifaRank": 1,
-            "difficulty": 5,
-            "label": "Danger",
-            "color": "#EF4444",
-            "note": "Predicted (if they win their match)",
-            "pct": 50
-          },
-          {
-            "likelyTeam": "Austria",
-            "flag": "🇦🇹",
-            "fifaRank": 24,
+            "likelyTeam": "Canada",
+            "flag": "🇨🇦",
+            "fifaRank": 27,
             "difficulty": 3,
             "label": "Moderate",
             "color": "#F59E0B",
-            "note": "Predicted (if they win their match)",
-            "pct": 50
+            "note": "Confirmed opponent",
+            "pct": 100
           }
         ]
       },
-      "totalGoals": 6
+      "totalGoals": 7
     },
     {
       "id": "haiti",
@@ -2670,8 +2638,8 @@
         "r16": 83,
         "qf": 47,
         "sf": 17,
-        "final": 6,
-        "winner": 2,
+        "final": 5,
+        "winner": 3,
         "source": "market"
       },
       "path": {
@@ -2695,7 +2663,7 @@
           "date": "2026-07-06",
           "venue": "TBD",
           "city": "TBD",
-          "opponentDesc": "Belgium or Senegal",
+          "opponentDesc": "England or DR Congo",
           "conditional": true,
           "conditionNote": "Predicted from bracket pairing — venue confirmed once previous match settles"
         },
@@ -2742,9 +2710,9 @@
         ],
         "r16": [
           {
-            "likelyTeam": "Belgium",
-            "flag": "🇧🇪",
-            "fifaRank": 9,
+            "likelyTeam": "England",
+            "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+            "fifaRank": 5,
             "difficulty": 5,
             "label": "Danger",
             "color": "#EF4444",
@@ -2752,12 +2720,12 @@
             "pct": 50
           },
           {
-            "likelyTeam": "Senegal",
-            "flag": "🇸🇳",
-            "fifaRank": 14,
-            "difficulty": 4,
-            "label": "Tough",
-            "color": "#FB923C",
+            "likelyTeam": "DR Congo",
+            "flag": "🇨🇩",
+            "fifaRank": 56,
+            "difficulty": 1,
+            "label": "Favorable",
+            "color": "#22C55E",
             "note": "Predicted (if they win their match)",
             "pct": 50
           }
@@ -2862,9 +2830,9 @@
       "advanceProbabilities": {
         "r32": 100,
         "r16": 100,
-        "qf": 13,
-        "sf": 4,
-        "final": 1,
+        "qf": 14,
+        "sf": 6,
+        "final": 2,
         "winner": 0,
         "source": "market"
       },
@@ -2885,13 +2853,13 @@
           "conditional": false
         },
         "r16": {
-          "status": "future",
-          "date": "2026-07-07",
-          "venue": "TBD",
-          "city": "TBD",
-          "opponentDesc": "Canada",
+          "status": "upcoming",
+          "date": "2026-07-04",
+          "venue": "Lincoln Financial Field",
+          "city": "Philadelphia, Pennsylvania",
+          "opponentDesc": "Ivory Coast or Norway",
           "conditional": true,
-          "conditionNote": "Predicted from bracket pairing — venue confirmed once previous match settles"
+          "conditionNote": "Venue confirmed once feeder match settles"
         },
         "qf": {
           "status": "future",
@@ -2936,14 +2904,24 @@
         ],
         "r16": [
           {
-            "likelyTeam": "Canada",
-            "flag": "🇨🇦",
-            "fifaRank": 27,
+            "likelyTeam": "Ivory Coast",
+            "flag": "🇨🇮",
+            "fifaRank": 42,
+            "difficulty": 2,
+            "label": "Favorable",
+            "color": "#22C55E",
+            "note": "Predicted (if they win their match)",
+            "pct": 50
+          },
+          {
+            "likelyTeam": "Norway",
+            "flag": "🇳🇴",
+            "fifaRank": 31,
             "difficulty": 3,
             "label": "Moderate",
             "color": "#F59E0B",
-            "note": "Predicted (winner of paired match)",
-            "pct": 100
+            "note": "Predicted (if they win their match)",
+            "pct": 50
           }
         ]
       },
@@ -3042,9 +3020,9 @@
       "advanceProbabilities": {
         "r32": 100,
         "r16": 44,
-        "qf": 8,
+        "qf": 7,
         "sf": 2,
-        "final": 2,
+        "final": 1,
         "winner": 0,
         "source": "market"
       },
@@ -3352,9 +3330,9 @@
           "date": "2026-07-06",
           "venue": "TBD",
           "city": "TBD",
-          "opponentDesc": "Canada",
+          "opponentDesc": "Opponent TBD",
           "conditional": true,
-          "conditionNote": "Predicted from bracket pairing — venue confirmed once previous match settles"
+          "conditionNote": "Venue + opponent confirmed once bracket is drawn"
         },
         "qf": {
           "status": "future",
@@ -3397,18 +3375,7 @@
             "pct": 100
           }
         ],
-        "r16": [
-          {
-            "likelyTeam": "Canada",
-            "flag": "🇨🇦",
-            "fifaRank": 27,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "Predicted (winner of paired match)",
-            "pct": 100
-          }
-        ]
+        "r16": []
       },
       "totalGoals": 11
     },
@@ -3645,10 +3612,10 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 35,
-        "qf": 12,
-        "sf": 4,
-        "final": 2,
+        "r16": 37,
+        "qf": 11,
+        "sf": 5,
+        "final": 1,
         "winner": 0,
         "source": "market"
       },
@@ -3673,7 +3640,7 @@
           "date": "2026-07-07",
           "venue": "TBD",
           "city": "TBD",
-          "opponentDesc": "Brazil",
+          "opponentDesc": "Paraguay",
           "conditional": true,
           "conditionNote": "Predicted from bracket pairing — venue confirmed once previous match settles"
         },
@@ -3720,13 +3687,13 @@
         ],
         "r16": [
           {
-            "likelyTeam": "Brazil",
-            "flag": "🇧🇷",
-            "fifaRank": 4,
-            "difficulty": 5,
-            "label": "Danger",
-            "color": "#EF4444",
-            "note": "Predicted (winner of paired match)",
+            "likelyTeam": "Paraguay",
+            "flag": "🇵🇾",
+            "fifaRank": 39,
+            "difficulty": 2,
+            "label": "Favorable",
+            "color": "#22C55E",
+            "note": "Confirmed opponent",
             "pct": 100
           }
         ]
@@ -3815,10 +3782,10 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 38,
-        "qf": 10,
-        "sf": 4,
-        "final": 1,
+        "r16": 37,
+        "qf": 14,
+        "sf": 5,
+        "final": 2,
         "winner": 1,
         "source": "market"
       },
@@ -3843,7 +3810,7 @@
           "date": "2026-07-07",
           "venue": "TBD",
           "city": "TBD",
-          "opponentDesc": "England or DR Congo",
+          "opponentDesc": "Brazil",
           "conditional": true,
           "conditionNote": "Predicted from bracket pairing — venue confirmed once previous match settles"
         },
@@ -3890,24 +3857,14 @@
         ],
         "r16": [
           {
-            "likelyTeam": "England",
-            "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
-            "fifaRank": 5,
+            "likelyTeam": "Brazil",
+            "flag": "🇧🇷",
+            "fifaRank": 4,
             "difficulty": 5,
             "label": "Danger",
             "color": "#EF4444",
-            "note": "Predicted (if they win their match)",
-            "pct": 50
-          },
-          {
-            "likelyTeam": "DR Congo",
-            "flag": "🇨🇩",
-            "fifaRank": 56,
-            "difficulty": 1,
-            "label": "Favorable",
-            "color": "#22C55E",
-            "note": "Predicted (if they win their match)",
-            "pct": 50
+            "note": "Confirmed opponent",
+            "pct": 100
           }
         ]
       },
@@ -3921,7 +3878,7 @@
       "confederation": "UEFA",
       "fifaRank": 7,
       "eliminated": false,
-      "currentStage": "r32",
+      "currentStage": "r16",
       "groupResults": [
         {
           "matchday": 1,
@@ -4020,11 +3977,11 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 59,
-        "qf": 46,
-        "sf": 21,
-        "final": 11,
-        "winner": 5,
+        "r16": 0,
+        "qf": 0,
+        "sf": 0,
+        "final": 0,
+        "winner": 0,
         "source": "market"
       },
       "path": {
@@ -4036,7 +3993,7 @@
           "detail": "7pts after MD3"
         },
         "r32": {
-          "status": "upcoming",
+          "status": "done",
           "date": "2026-06-29",
           "venue": "Estadio BBVA",
           "city": "Guadalupe",
@@ -4048,9 +4005,9 @@
           "date": "2026-07-07",
           "venue": "TBD",
           "city": "TBD",
-          "opponentDesc": "Spain or Austria",
+          "opponentDesc": "Opponent TBD",
           "conditional": true,
-          "conditionNote": "Predicted from bracket pairing — venue confirmed once previous match settles"
+          "conditionNote": "Venue + opponent confirmed once bracket is drawn"
         },
         "qf": {
           "status": "future",
@@ -4093,30 +4050,9 @@
             "pct": 100
           }
         ],
-        "r16": [
-          {
-            "likelyTeam": "Spain",
-            "flag": "🇪🇸",
-            "fifaRank": 1,
-            "difficulty": 5,
-            "label": "Danger",
-            "color": "#EF4444",
-            "note": "Predicted (if they win their match)",
-            "pct": 50
-          },
-          {
-            "likelyTeam": "Austria",
-            "flag": "🇦🇹",
-            "fifaRank": 24,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "Predicted (if they win their match)",
-            "pct": 50
-          }
-        ]
+        "r16": []
       },
-      "totalGoals": 10
+      "totalGoals": 11
     },
     {
       "id": "japan",
@@ -4328,7 +4264,7 @@
         "r16": 11,
         "qf": 6,
         "sf": 3,
-        "final": 1,
+        "final": 0,
         "winner": 0,
         "source": "market"
       },
@@ -4353,7 +4289,7 @@
           "date": "2026-07-07",
           "venue": "TBD",
           "city": "TBD",
-          "opponentDesc": "Portugal or Croatia",
+          "opponentDesc": "Belgium or Senegal",
           "conditional": true,
           "conditionNote": "Predicted from bracket pairing — venue confirmed once previous match settles"
         },
@@ -4400,9 +4336,9 @@
         ],
         "r16": [
           {
-            "likelyTeam": "Portugal",
-            "flag": "🇵🇹",
-            "fifaRank": 6,
+            "likelyTeam": "Belgium",
+            "flag": "🇧🇪",
+            "fifaRank": 9,
             "difficulty": 5,
             "label": "Danger",
             "color": "#EF4444",
@@ -4410,12 +4346,12 @@
             "pct": 50
           },
           {
-            "likelyTeam": "Croatia",
-            "flag": "🇭🇷",
-            "fifaRank": 10,
-            "difficulty": 5,
-            "label": "Danger",
-            "color": "#EF4444",
+            "likelyTeam": "Senegal",
+            "flag": "🇸🇳",
+            "fifaRank": 14,
+            "difficulty": 4,
+            "label": "Tough",
+            "color": "#FB923C",
             "note": "Predicted (if they win their match)",
             "pct": 50
           }
@@ -4619,10 +4555,10 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 60,
+        "r16": 59,
         "qf": 32,
         "sf": 11,
-        "final": 4,
+        "final": 3,
         "winner": 1,
         "source": "market"
       },
@@ -4647,7 +4583,7 @@
           "date": "2026-07-06",
           "venue": "TBD",
           "city": "TBD",
-          "opponentDesc": "USA or Bosnia & Herz.",
+          "opponentDesc": "France or Sweden",
           "conditional": true,
           "conditionNote": "Predicted from bracket pairing — venue confirmed once previous match settles"
         },
@@ -4694,22 +4630,22 @@
         ],
         "r16": [
           {
-            "likelyTeam": "USA",
-            "flag": "🇺🇸",
-            "fifaRank": 14,
-            "difficulty": 4,
-            "label": "Tough",
-            "color": "#FB923C",
+            "likelyTeam": "France",
+            "flag": "🇫🇷",
+            "fifaRank": 3,
+            "difficulty": 5,
+            "label": "Danger",
+            "color": "#EF4444",
             "note": "Predicted (if they win their match)",
             "pct": 50
           },
           {
-            "likelyTeam": "Bosnia & Herz.",
-            "flag": "🇧🇦",
-            "fifaRank": 71,
-            "difficulty": 1,
-            "label": "Favorable",
-            "color": "#22C55E",
+            "likelyTeam": "Sweden",
+            "flag": "🇸🇪",
+            "fifaRank": 29,
+            "difficulty": 3,
+            "label": "Moderate",
+            "color": "#F59E0B",
             "note": "Predicted (if they win their match)",
             "pct": 50
           }
@@ -4805,7 +4741,7 @@
       "advanceProbabilities": {
         "r32": 100,
         "r16": 56,
-        "qf": 13,
+        "qf": 12,
         "sf": 4,
         "final": 1,
         "winner": 0,
@@ -5205,10 +5141,10 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 87,
+        "r16": 86,
         "qf": 60,
-        "sf": 43,
-        "final": 23,
+        "sf": 44,
+        "final": 22,
         "winner": 11,
         "source": "market"
       },
@@ -5233,7 +5169,7 @@
           "date": "2026-07-07",
           "venue": "TBD",
           "city": "TBD",
-          "opponentDesc": "Netherlands or Morocco",
+          "opponentDesc": "Portugal or Croatia",
           "conditional": true,
           "conditionNote": "Predicted from bracket pairing — venue confirmed once previous match settles"
         },
@@ -5280,9 +5216,9 @@
         ],
         "r16": [
           {
-            "likelyTeam": "Netherlands",
-            "flag": "🇳🇱",
-            "fifaRank": 7,
+            "likelyTeam": "Portugal",
+            "flag": "🇵🇹",
+            "fifaRank": 6,
             "difficulty": 5,
             "label": "Danger",
             "color": "#EF4444",
@@ -5290,12 +5226,12 @@
             "pct": 50
           },
           {
-            "likelyTeam": "Morocco",
-            "flag": "🇲🇦",
-            "fifaRank": 14,
-            "difficulty": 4,
-            "label": "Tough",
-            "color": "#FB923C",
+            "likelyTeam": "Croatia",
+            "flag": "🇭🇷",
+            "fifaRank": 10,
+            "difficulty": 5,
+            "label": "Danger",
+            "color": "#EF4444",
             "note": "Predicted (if they win their match)",
             "pct": 50
           }
@@ -5381,9 +5317,9 @@
       "advanceProbabilities": {
         "r32": 100,
         "r16": 8,
-        "qf": 3,
+        "qf": 2,
         "sf": 1,
-        "final": 0,
+        "final": 1,
         "winner": 0,
         "source": "market"
       },
@@ -5787,11 +5723,11 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 89,
+        "r16": 90,
         "qf": 81,
-        "sf": 62,
-        "final": 42,
-        "winner": 26,
+        "sf": 66,
+        "final": 40,
+        "winner": 28,
         "source": "market"
       },
       "path": {
@@ -5815,7 +5751,7 @@
           "date": "2026-07-07",
           "venue": "TBD",
           "city": "TBD",
-          "opponentDesc": "Portugal or Croatia",
+          "opponentDesc": "Belgium or Senegal",
           "conditional": true,
           "conditionNote": "Predicted from bracket pairing — venue confirmed once previous match settles"
         },
@@ -5862,9 +5798,9 @@
         ],
         "r16": [
           {
-            "likelyTeam": "Portugal",
-            "flag": "🇵🇹",
-            "fifaRank": 6,
+            "likelyTeam": "Belgium",
+            "flag": "🇧🇪",
+            "fifaRank": 9,
             "difficulty": 5,
             "label": "Danger",
             "color": "#EF4444",
@@ -5872,12 +5808,12 @@
             "pct": 50
           },
           {
-            "likelyTeam": "Croatia",
-            "flag": "🇭🇷",
-            "fifaRank": 10,
-            "difficulty": 5,
-            "label": "Danger",
-            "color": "#EF4444",
+            "likelyTeam": "Senegal",
+            "flag": "🇸🇳",
+            "fifaRank": 14,
+            "difficulty": 4,
+            "label": "Tough",
+            "color": "#FB923C",
             "note": "Predicted (if they win their match)",
             "pct": 50
           }
@@ -5970,9 +5906,9 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 41,
+        "r16": 42,
         "qf": 17,
-        "sf": 8,
+        "sf": 10,
         "final": 1,
         "winner": 0,
         "source": "market"
@@ -5998,7 +5934,7 @@
           "date": "2026-07-07",
           "venue": "TBD",
           "city": "TBD",
-          "opponentDesc": "USA or Bosnia & Herz.",
+          "opponentDesc": "France or Sweden",
           "conditional": true,
           "conditionNote": "Predicted from bracket pairing — venue confirmed once previous match settles"
         },
@@ -6045,22 +5981,22 @@
         ],
         "r16": [
           {
-            "likelyTeam": "USA",
-            "flag": "🇺🇸",
-            "fifaRank": 14,
-            "difficulty": 4,
-            "label": "Tough",
-            "color": "#FB923C",
+            "likelyTeam": "France",
+            "flag": "🇫🇷",
+            "fifaRank": 3,
+            "difficulty": 5,
+            "label": "Danger",
+            "color": "#EF4444",
             "note": "Predicted (if they win their match)",
             "pct": 50
           },
           {
-            "likelyTeam": "Bosnia & Herz.",
-            "flag": "🇧🇦",
-            "fifaRank": 71,
-            "difficulty": 1,
-            "label": "Favorable",
-            "color": "#22C55E",
+            "likelyTeam": "Sweden",
+            "flag": "🇸🇪",
+            "fifaRank": 29,
+            "difficulty": 3,
+            "label": "Moderate",
+            "color": "#F59E0B",
             "note": "Predicted (if they win their match)",
             "pct": 50
           }
@@ -6253,7 +6189,7 @@
         "r16": 64,
         "qf": 28,
         "sf": 16,
-        "final": 8,
+        "final": 6,
         "winner": 2,
         "source": "market"
       },
@@ -6278,7 +6214,7 @@
           "date": "2026-07-07",
           "venue": "TBD",
           "city": "TBD",
-          "opponentDesc": "Brazil",
+          "opponentDesc": "Paraguay",
           "conditional": true,
           "conditionNote": "Predicted from bracket pairing — venue confirmed once previous match settles"
         },
@@ -6325,13 +6261,13 @@
         ],
         "r16": [
           {
-            "likelyTeam": "Brazil",
-            "flag": "🇧🇷",
-            "fifaRank": 4,
-            "difficulty": 5,
-            "label": "Danger",
-            "color": "#EF4444",
-            "note": "Predicted (winner of paired match)",
+            "likelyTeam": "Paraguay",
+            "flag": "🇵🇾",
+            "fifaRank": 39,
+            "difficulty": 2,
+            "label": "Favorable",
+            "color": "#22C55E",
+            "note": "Confirmed opponent",
             "pct": 100
           }
         ]
@@ -6428,7 +6364,7 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 94,
+        "r16": 93,
         "qf": 82,
         "sf": 62,
         "final": 40,
@@ -6600,10 +6536,10 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 34,
+        "r16": 35,
         "qf": 12,
-        "sf": 2,
-        "final": 2,
+        "sf": 3,
+        "final": 1,
         "winner": 0,
         "source": "market"
       },
@@ -6780,7 +6716,7 @@
       "advanceProbabilities": {
         "r32": 100,
         "r16": 13,
-        "qf": 4,
+        "qf": 5,
         "sf": 3,
         "final": 1,
         "winner": 0,
@@ -6807,7 +6743,7 @@
           "date": "2026-07-07",
           "venue": "TBD",
           "city": "TBD",
-          "opponentDesc": "Netherlands or Morocco",
+          "opponentDesc": "Portugal or Croatia",
           "conditional": true,
           "conditionNote": "Predicted from bracket pairing — venue confirmed once previous match settles"
         },
@@ -6854,9 +6790,9 @@
         ],
         "r16": [
           {
-            "likelyTeam": "Netherlands",
-            "flag": "🇳🇱",
-            "fifaRank": 7,
+            "likelyTeam": "Portugal",
+            "flag": "🇵🇹",
+            "fifaRank": 6,
             "difficulty": 5,
             "label": "Danger",
             "color": "#EF4444",
@@ -6864,12 +6800,12 @@
             "pct": 50
           },
           {
-            "likelyTeam": "Morocco",
-            "flag": "🇲🇦",
-            "fifaRank": 14,
-            "difficulty": 4,
-            "label": "Tough",
-            "color": "#FB923C",
+            "likelyTeam": "Croatia",
+            "flag": "🇭🇷",
+            "fifaRank": 10,
+            "difficulty": 5,
+            "label": "Danger",
+            "color": "#EF4444",
             "note": "Predicted (if they win their match)",
             "pct": 50
           }
@@ -7089,8 +7025,8 @@
       "advanceProbabilities": {
         "r32": 100,
         "r16": 70,
-        "qf": 29,
-        "sf": 22,
+        "qf": 30,
+        "sf": 23,
         "final": 13,
         "winner": 6,
         "source": "market"
@@ -7116,7 +7052,7 @@
           "date": "2026-07-07",
           "venue": "TBD",
           "city": "TBD",
-          "opponentDesc": "France or Sweden",
+          "opponentDesc": "Spain or Austria",
           "conditional": true,
           "conditionNote": "Predicted from bracket pairing — venue confirmed once previous match settles"
         },
@@ -7163,9 +7099,9 @@
         ],
         "r16": [
           {
-            "likelyTeam": "France",
-            "flag": "🇫🇷",
-            "fifaRank": 3,
+            "likelyTeam": "Spain",
+            "flag": "🇪🇸",
+            "fifaRank": 1,
             "difficulty": 5,
             "label": "Danger",
             "color": "#EF4444",
@@ -7173,9 +7109,9 @@
             "pct": 50
           },
           {
-            "likelyTeam": "Sweden",
-            "flag": "🇸🇪",
-            "fifaRank": 29,
+            "likelyTeam": "Austria",
+            "flag": "🇦🇹",
+            "fifaRank": 24,
             "difficulty": 3,
             "label": "Moderate",
             "color": "#F59E0B",
@@ -7268,10 +7204,10 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 14,
-        "qf": 5,
+        "r16": 13,
+        "qf": 3,
         "sf": 1,
-        "final": 0,
+        "final": 1,
         "winner": 0,
         "source": "market"
       },
@@ -7296,7 +7232,7 @@
           "date": "2026-07-07",
           "venue": "TBD",
           "city": "TBD",
-          "opponentDesc": "Mexico or Ecuador",
+          "opponentDesc": "USA or Bosnia & Herz.",
           "conditional": true,
           "conditionNote": "Predicted from bracket pairing — venue confirmed once previous match settles"
         },
@@ -7343,9 +7279,9 @@
         ],
         "r16": [
           {
-            "likelyTeam": "Mexico",
-            "flag": "🇲🇽",
-            "fifaRank": 15,
+            "likelyTeam": "USA",
+            "flag": "🇺🇸",
+            "fifaRank": 14,
             "difficulty": 4,
             "label": "Tough",
             "color": "#FB923C",
@@ -7353,12 +7289,12 @@
             "pct": 50
           },
           {
-            "likelyTeam": "Ecuador",
-            "flag": "🇪🇨",
-            "fifaRank": 23,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
+            "likelyTeam": "Bosnia & Herz.",
+            "flag": "🇧🇦",
+            "fifaRank": 71,
+            "difficulty": 1,
+            "label": "Favorable",
+            "color": "#22C55E",
             "note": "Predicted (if they win their match)",
             "pct": 50
           }
@@ -7549,7 +7485,7 @@
       "advanceProbabilities": {
         "r32": 100,
         "r16": 80,
-        "qf": 51,
+        "qf": 50,
         "sf": 21,
         "final": 10,
         "winner": 3,
@@ -7723,9 +7659,9 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 86,
-        "qf": 61,
-        "sf": 37,
+        "r16": 88,
+        "qf": 60,
+        "sf": 38,
         "final": 22,
         "winner": 10,
         "source": "market"
@@ -7751,7 +7687,7 @@
           "date": "2026-07-07",
           "venue": "TBD",
           "city": "TBD",
-          "opponentDesc": "Mexico or Ecuador",
+          "opponentDesc": "USA or Bosnia & Herz.",
           "conditional": true,
           "conditionNote": "Predicted from bracket pairing — venue confirmed once previous match settles"
         },
@@ -7798,9 +7734,9 @@
         ],
         "r16": [
           {
-            "likelyTeam": "Mexico",
-            "flag": "🇲🇽",
-            "fifaRank": 15,
+            "likelyTeam": "USA",
+            "flag": "🇺🇸",
+            "fifaRank": 14,
             "difficulty": 4,
             "label": "Tough",
             "color": "#FB923C",
@@ -7808,12 +7744,12 @@
             "pct": 50
           },
           {
-            "likelyTeam": "Ecuador",
-            "flag": "🇪🇨",
-            "fifaRank": 23,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
+            "likelyTeam": "Bosnia & Herz.",
+            "flag": "🇧🇦",
+            "fifaRank": 71,
+            "difficulty": 1,
+            "label": "Favorable",
+            "color": "#22C55E",
             "note": "Predicted (if they win their match)",
             "pct": 50
           }
@@ -7894,8 +7830,8 @@
       "advanceProbabilities": {
         "r32": 100,
         "r16": 30,
-        "qf": 9,
-        "sf": 4,
+        "qf": 10,
+        "sf": 6,
         "final": 2,
         "winner": 0,
         "source": "market"
@@ -7921,7 +7857,7 @@
           "date": "2026-07-06",
           "venue": "TBD",
           "city": "TBD",
-          "opponentDesc": "France or Sweden",
+          "opponentDesc": "Spain or Austria",
           "conditional": true,
           "conditionNote": "Predicted from bracket pairing — venue confirmed once previous match settles"
         },
@@ -7968,9 +7904,9 @@
         ],
         "r16": [
           {
-            "likelyTeam": "France",
-            "flag": "🇫🇷",
-            "fifaRank": 3,
+            "likelyTeam": "Spain",
+            "flag": "🇪🇸",
+            "fifaRank": 1,
             "difficulty": 5,
             "label": "Danger",
             "color": "#EF4444",
@@ -7978,9 +7914,9 @@
             "pct": 50
           },
           {
-            "likelyTeam": "Sweden",
-            "flag": "🇸🇪",
-            "fifaRank": 29,
+            "likelyTeam": "Austria",
+            "flag": "🇦🇹",
+            "fifaRank": 24,
             "difficulty": 3,
             "label": "Moderate",
             "color": "#F59E0B",
@@ -9730,9 +9666,9 @@
         "awayTeam": "Morocco",
         "awayFlag": "🇲🇦",
         "awayId": "morocco",
-        "homeScore": 0,
-        "awayScore": 0,
-        "status": "SCHEDULED",
+        "homeScore": 1,
+        "awayScore": 1,
+        "status": "FINISHED",
         "date": "2026-06-29",
         "broadcasts": [
           "FOX",
@@ -9740,15 +9676,7 @@
           "FOX One"
         ],
         "time": "2026-06-30T01:00Z",
-        "venue": "Estadio BBVA, Guadalupe",
-        "polymarket": {
-          "homeId": "netherlands",
-          "awayId": "morocco",
-          "homeWinPct": 41,
-          "awayWinPct": 28,
-          "drawPct": 32,
-          "eventSlug": "fifwc-nld-mar-2026-06-29"
-        }
+        "venue": "Estadio BBVA, Guadalupe"
       }
     ],
     "2026-06-30": [
@@ -9827,7 +9755,7 @@
         "polymarket": {
           "homeId": "mexico",
           "awayId": "ecuador",
-          "homeWinPct": 45,
+          "homeWinPct": 44,
           "awayWinPct": 24,
           "drawPct": 34,
           "eventSlug": "fifwc-mex-ecu-2026-06-30"
@@ -9939,7 +9867,7 @@
         "polymarket": {
           "homeId": "spain",
           "awayId": "austria",
-          "homeWinPct": 76,
+          "homeWinPct": 75,
           "awayWinPct": 8,
           "drawPct": 18,
           "eventSlug": "fifwc-esp-aut-2026-07-02"
@@ -10077,40 +10005,38 @@
           "homeId": "colombia",
           "awayId": "ghana",
           "homeWinPct": 64,
-          "awayWinPct": 13,
+          "awayWinPct": 12,
           "drawPct": 25,
           "eventSlug": "fifwc-col-gha-2026-07-03"
         }
+      }
+    ],
+    "2026-07-04": [
+      {
+        "homeTeam": "Canada",
+        "homeFlag": "🇨🇦",
+        "homeId": "canada",
+        "awayTeam": "Morocco",
+        "awayFlag": "🇲🇦",
+        "awayId": "morocco",
+        "homeScore": 0,
+        "awayScore": 0,
+        "status": "SCHEDULED",
+        "date": "2026-07-04",
+        "broadcasts": [
+          "FOX",
+          "Tele",
+          "FOX One"
+        ],
+        "time": "2026-07-04T17:00Z",
+        "venue": "NRG Stadium, Houston, Texas"
       }
     ]
   },
   "actualBracket": {
     "r32": [
       {
-        "eventId": "760489",
-        "bracketLocation": 1,
-        "date": "2026-06-29",
-        "venue": "Gillette Stadium, Foxborough, Massachusetts",
-        "status": "FINISHED",
-        "homeScore": 1,
-        "awayScore": 1,
-        "homeId": "germany",
-        "awayId": "paraguay"
-      },
-      {
-        "eventId": "760492",
-        "bracketLocation": 2,
-        "date": "2026-06-30",
-        "venue": "MetLife Stadium, East Rutherford, New Jersey",
-        "status": "SCHEDULED",
-        "homeScore": 0,
-        "awayScore": 0,
-        "homeId": "france",
-        "awayId": "sweden"
-      },
-      {
         "eventId": "760486",
-        "bracketLocation": 3,
         "date": "2026-06-28",
         "venue": "SoFi Stadium, Inglewood, California",
         "status": "FINISHED",
@@ -10121,63 +10047,7 @@
         "winnerId": "canada"
       },
       {
-        "eventId": "760488",
-        "bracketLocation": 4,
-        "date": "2026-06-29",
-        "venue": "Estadio BBVA, Guadalupe",
-        "status": "SCHEDULED",
-        "homeScore": 0,
-        "awayScore": 0,
-        "homeId": "netherlands",
-        "awayId": "morocco"
-      },
-      {
-        "eventId": "760496",
-        "bracketLocation": 5,
-        "date": "2026-07-02",
-        "venue": "BMO Field, Toronto",
-        "status": "SCHEDULED",
-        "homeScore": 0,
-        "awayScore": 0,
-        "homeId": "portugal",
-        "awayId": "croatia"
-      },
-      {
-        "eventId": "760497",
-        "bracketLocation": 6,
-        "date": "2026-07-02",
-        "venue": "SoFi Stadium, Inglewood, California",
-        "status": "SCHEDULED",
-        "homeScore": 0,
-        "awayScore": 0,
-        "homeId": "spain",
-        "awayId": "austria"
-      },
-      {
-        "eventId": "760494",
-        "bracketLocation": 7,
-        "date": "2026-07-01",
-        "venue": "Levi's Stadium, Santa Clara, California",
-        "status": "SCHEDULED",
-        "homeScore": 0,
-        "awayScore": 0,
-        "homeId": "usa",
-        "awayId": "bosnia"
-      },
-      {
-        "eventId": "760493",
-        "bracketLocation": 8,
-        "date": "2026-07-01",
-        "venue": "Lumen Field, Seattle, Washington",
-        "status": "SCHEDULED",
-        "homeScore": 0,
-        "awayScore": 0,
-        "homeId": "belgium",
-        "awayId": "senegal"
-      },
-      {
         "eventId": "760487",
-        "bracketLocation": 9,
         "date": "2026-06-29",
         "venue": "NRG Stadium, Houston, Texas",
         "status": "FINISHED",
@@ -10188,8 +10058,27 @@
         "winnerId": "brazil"
       },
       {
+        "eventId": "760488",
+        "date": "2026-06-29",
+        "venue": "Estadio BBVA, Guadalupe",
+        "status": "FINISHED",
+        "homeScore": 1,
+        "awayScore": 1,
+        "homeId": "netherlands",
+        "awayId": "morocco"
+      },
+      {
+        "eventId": "760489",
+        "date": "2026-06-29",
+        "venue": "Gillette Stadium, Foxborough, Massachusetts",
+        "status": "FINISHED",
+        "homeScore": 1,
+        "awayScore": 1,
+        "homeId": "germany",
+        "awayId": "paraguay"
+      },
+      {
         "eventId": "760490",
-        "bracketLocation": 10,
         "date": "2026-06-30",
         "venue": "AT&T Stadium, Arlington, Texas",
         "status": "SCHEDULED",
@@ -10200,7 +10089,6 @@
       },
       {
         "eventId": "760491",
-        "bracketLocation": 11,
         "date": "2026-06-30",
         "venue": "Estadio Banorte, Mexico City",
         "status": "SCHEDULED",
@@ -10210,8 +10098,37 @@
         "awayId": "ecuador"
       },
       {
+        "eventId": "760492",
+        "date": "2026-06-30",
+        "venue": "MetLife Stadium, East Rutherford, New Jersey",
+        "status": "SCHEDULED",
+        "homeScore": 0,
+        "awayScore": 0,
+        "homeId": "france",
+        "awayId": "sweden"
+      },
+      {
+        "eventId": "760493",
+        "date": "2026-07-01",
+        "venue": "Lumen Field, Seattle, Washington",
+        "status": "SCHEDULED",
+        "homeScore": 0,
+        "awayScore": 0,
+        "homeId": "belgium",
+        "awayId": "senegal"
+      },
+      {
+        "eventId": "760494",
+        "date": "2026-07-01",
+        "venue": "Levi's Stadium, Santa Clara, California",
+        "status": "SCHEDULED",
+        "homeScore": 0,
+        "awayScore": 0,
+        "homeId": "usa",
+        "awayId": "bosnia"
+      },
+      {
         "eventId": "760495",
-        "bracketLocation": 12,
         "date": "2026-07-01",
         "venue": "Mercedes-Benz Stadium, Atlanta, Georgia",
         "status": "SCHEDULED",
@@ -10221,30 +10138,27 @@
         "awayId": "drcongo"
       },
       {
-        "eventId": "760500",
-        "bracketLocation": 13,
-        "date": "2026-07-03",
-        "venue": "Hard Rock Stadium, Miami Gardens, Florida",
+        "eventId": "760496",
+        "date": "2026-07-02",
+        "venue": "BMO Field, Toronto",
         "status": "SCHEDULED",
         "homeScore": 0,
         "awayScore": 0,
-        "homeId": "argentina",
-        "awayId": "capeverde"
+        "homeId": "portugal",
+        "awayId": "croatia"
       },
       {
-        "eventId": "760499",
-        "bracketLocation": 14,
-        "date": "2026-07-03",
-        "venue": "AT&T Stadium, Arlington, Texas",
+        "eventId": "760497",
+        "date": "2026-07-02",
+        "venue": "SoFi Stadium, Inglewood, California",
         "status": "SCHEDULED",
         "homeScore": 0,
         "awayScore": 0,
-        "homeId": "australia",
-        "awayId": "egypt"
+        "homeId": "spain",
+        "awayId": "austria"
       },
       {
         "eventId": "760498",
-        "bracketLocation": 15,
         "date": "2026-07-02",
         "venue": "BC Place, Vancouver",
         "status": "SCHEDULED",
@@ -10254,8 +10168,27 @@
         "awayId": "algeria"
       },
       {
+        "eventId": "760499",
+        "date": "2026-07-03",
+        "venue": "AT&T Stadium, Arlington, Texas",
+        "status": "SCHEDULED",
+        "homeScore": 0,
+        "awayScore": 0,
+        "homeId": "australia",
+        "awayId": "egypt"
+      },
+      {
+        "eventId": "760500",
+        "date": "2026-07-03",
+        "venue": "Hard Rock Stadium, Miami Gardens, Florida",
+        "status": "SCHEDULED",
+        "homeScore": 0,
+        "awayScore": 0,
+        "homeId": "argentina",
+        "awayId": "capeverde"
+      },
+      {
         "eventId": "760501",
-        "bracketLocation": 16,
         "date": "2026-07-03",
         "venue": "GEHA Field at Arrowhead Stadium, Kansas City, Missouri",
         "status": "SCHEDULED",
@@ -10267,87 +10200,79 @@
     ],
     "r16": [
       {
-        "eventId": null,
-        "bracketLocation": 1,
-        "date": null,
-        "venue": null,
+        "eventId": "760502",
+        "date": "2026-07-04",
+        "venue": "NRG Stadium, Houston, Texas",
         "status": "SCHEDULED",
         "homeScore": 0,
         "awayScore": 0,
-        "homeFeederEventId": "760489",
-        "awayFeederEventId": "760486"
+        "homeId": "canada",
+        "awayId": "morocco"
       },
       {
-        "eventId": null,
-        "bracketLocation": 2,
-        "date": null,
-        "venue": null,
+        "eventId": "760503",
+        "date": "2026-07-04",
+        "venue": "Lincoln Financial Field, Philadelphia, Pennsylvania",
+        "status": "SCHEDULED",
+        "homeScore": 0,
+        "awayScore": 0,
+        "homeId": "paraguay",
+        "awayFeederEventId": "760490"
+      },
+      {
+        "eventId": "760504",
+        "date": "2026-07-05",
+        "venue": "MetLife Stadium, East Rutherford, New Jersey",
+        "status": "SCHEDULED",
+        "homeScore": 0,
+        "awayScore": 0,
+        "homeId": "brazil",
+        "awayFeederEventId": "760491"
+      },
+      {
+        "eventId": "760505",
+        "date": "2026-07-05",
+        "venue": "Estadio Banorte, Mexico City",
         "status": "SCHEDULED",
         "homeScore": 0,
         "awayScore": 0,
         "homeFeederEventId": "760492",
-        "awayFeederEventId": "760496"
+        "awayFeederEventId": "760493"
       },
       {
-        "eventId": null,
-        "bracketLocation": 3,
-        "date": null,
-        "venue": null,
+        "eventId": "760506",
+        "date": "2026-07-06",
+        "venue": "AT&T Stadium, Arlington, Texas",
         "status": "SCHEDULED",
         "homeScore": 0,
         "awayScore": 0,
-        "homeFeederEventId": "760488",
+        "homeFeederEventId": "760496",
         "awayFeederEventId": "760497"
       },
       {
-        "eventId": null,
-        "bracketLocation": 4,
-        "date": null,
-        "venue": null,
+        "eventId": "760507",
+        "date": "2026-07-06",
+        "venue": "Lumen Field, Seattle, Washington",
         "status": "SCHEDULED",
         "homeScore": 0,
         "awayScore": 0,
         "homeFeederEventId": "760494",
-        "awayFeederEventId": "760493"
-      },
-      {
-        "eventId": null,
-        "bracketLocation": 5,
-        "date": null,
-        "venue": null,
-        "status": "SCHEDULED",
-        "homeScore": 0,
-        "awayScore": 0,
-        "homeFeederEventId": "760487",
-        "awayFeederEventId": "760490"
-      },
-      {
-        "eventId": null,
-        "bracketLocation": 6,
-        "date": null,
-        "venue": null,
-        "status": "SCHEDULED",
-        "homeScore": 0,
-        "awayScore": 0,
-        "homeFeederEventId": "760491",
         "awayFeederEventId": "760495"
       },
       {
-        "eventId": null,
-        "bracketLocation": 7,
-        "date": null,
-        "venue": null,
+        "eventId": "760508",
+        "date": "2026-07-07",
+        "venue": "BC Place, Vancouver",
         "status": "SCHEDULED",
         "homeScore": 0,
         "awayScore": 0,
-        "homeFeederEventId": "760500",
-        "awayFeederEventId": "760498"
+        "homeFeederEventId": "760498",
+        "awayFeederEventId": "760500"
       },
       {
-        "eventId": null,
-        "bracketLocation": 8,
-        "date": null,
-        "venue": null,
+        "eventId": "760509",
+        "date": "2026-07-07",
+        "venue": "Mercedes-Benz Stadium, Atlanta, Georgia",
         "status": "SCHEDULED",
         "homeScore": 0,
         "awayScore": 0,
@@ -10357,57 +10282,59 @@
     ],
     "qf": [
       {
-        "eventId": null,
-        "bracketLocation": 1,
-        "date": null,
-        "venue": null,
+        "eventId": "760510",
+        "date": "2026-07-09",
+        "venue": "Gillette Stadium, Foxborough, Massachusetts",
         "status": "SCHEDULED",
         "homeScore": 0,
-        "awayScore": 0
+        "awayScore": 0,
+        "homeFeederEventId": "760502",
+        "awayFeederEventId": "760503"
       },
       {
-        "eventId": null,
-        "bracketLocation": 2,
-        "date": null,
-        "venue": null,
+        "eventId": "760511",
+        "date": "2026-07-10",
+        "venue": "SoFi Stadium, Inglewood, California",
         "status": "SCHEDULED",
         "homeScore": 0,
-        "awayScore": 0
+        "awayScore": 0,
+        "homeFeederEventId": "760506",
+        "awayFeederEventId": "760507"
       },
       {
-        "eventId": null,
-        "bracketLocation": 3,
-        "date": null,
-        "venue": null,
+        "eventId": "760512",
+        "date": "2026-07-11",
+        "venue": "Hard Rock Stadium, Miami Gardens, Florida",
         "status": "SCHEDULED",
         "homeScore": 0,
-        "awayScore": 0
+        "awayScore": 0,
+        "homeFeederEventId": "760504",
+        "awayFeederEventId": "760505"
       },
       {
-        "eventId": null,
-        "bracketLocation": 4,
-        "date": null,
-        "venue": null,
+        "eventId": "760513",
+        "date": "2026-07-11",
+        "venue": "GEHA Field at Arrowhead Stadium, Kansas City, Missouri",
         "status": "SCHEDULED",
         "homeScore": 0,
-        "awayScore": 0
+        "awayScore": 0,
+        "homeFeederEventId": "760508",
+        "awayFeederEventId": "760509"
       }
     ],
     "sf": [
       {
-        "eventId": null,
-        "bracketLocation": 1,
-        "date": null,
-        "venue": null,
+        "eventId": "760514",
+        "date": "2026-07-14",
+        "venue": "AT&T Stadium, Arlington, Texas",
         "status": "SCHEDULED",
         "homeScore": 0,
         "awayScore": 0
       },
       {
-        "eventId": null,
-        "bracketLocation": 2,
-        "date": null,
-        "venue": null,
+        "eventId": "760515",
+        "date": "2026-07-15",
+        "venue": "Mercedes-Benz Stadium, Atlanta, Georgia",
         "status": "SCHEDULED",
         "homeScore": 0,
         "awayScore": 0
@@ -10415,10 +10342,9 @@
     ],
     "final": [
       {
-        "eventId": null,
-        "bracketLocation": 1,
-        "date": null,
-        "venue": null,
+        "eventId": "760517",
+        "date": "2026-07-19",
+        "venue": "MetLife Stadium, East Rutherford, New Jersey",
         "status": "SCHEDULED",
         "homeScore": 0,
         "awayScore": 0
