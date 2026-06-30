@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-30T09:34:31.107Z",
+  "lastUpdated": "2026-06-30T12:08:44.696Z",
   "snapshotDate": "2026-06-30",
   "isHistorical": false,
   "sourceSummary": {
@@ -1422,7 +1422,7 @@
       "advanceProbabilities": {
         "r32": 100,
         "r16": 100,
-        "qf": 30,
+        "qf": 31,
         "sf": 6,
         "final": 1,
         "winner": 0,
@@ -1887,7 +1887,7 @@
         "r16": 68,
         "qf": 31,
         "sf": 9,
-        "final": 3,
+        "final": 4,
         "winner": 1,
         "source": "market"
       },
@@ -2069,7 +2069,7 @@
         "r16": 100,
         "qf": 66,
         "sf": 35,
-        "final": 17,
+        "final": 18,
         "winner": 7,
         "source": "market"
       },
@@ -2638,7 +2638,7 @@
         "r16": 84,
         "qf": 47,
         "sf": 17,
-        "final": 5,
+        "final": 6,
         "winner": 3,
         "source": "market"
       },
@@ -2831,7 +2831,7 @@
         "r32": 100,
         "r16": 100,
         "qf": 13,
-        "sf": 6,
+        "sf": 4,
         "final": 2,
         "winner": 0,
         "source": "market"
@@ -3020,7 +3020,7 @@
       "advanceProbabilities": {
         "r32": 100,
         "r16": 44,
-        "qf": 5,
+        "qf": 7,
         "sf": 2,
         "final": 1,
         "winner": 0,
@@ -3613,7 +3613,7 @@
       "advanceProbabilities": {
         "r32": 100,
         "r16": 37,
-        "qf": 10,
+        "qf": 12,
         "sf": 4,
         "final": 1,
         "winner": 0,
@@ -3785,7 +3785,7 @@
         "r16": 38,
         "qf": 10,
         "sf": 4,
-        "final": 1,
+        "final": 2,
         "winner": 1,
         "source": "market"
       },
@@ -4261,10 +4261,10 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 11,
+        "r16": 12,
         "qf": 5,
         "sf": 3,
-        "final": 0,
+        "final": 1,
         "winner": 0,
         "source": "market"
       },
@@ -4558,7 +4558,7 @@
         "r16": 59,
         "qf": 32,
         "sf": 11,
-        "final": 3,
+        "final": 4,
         "winner": 1,
         "source": "market"
       },
@@ -4741,8 +4741,8 @@
       "advanceProbabilities": {
         "r32": 100,
         "r16": 56,
-        "qf": 12,
-        "sf": 3,
+        "qf": 11,
+        "sf": 4,
         "final": 2,
         "winner": 0,
         "source": "market"
@@ -5141,8 +5141,8 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 86,
-        "qf": 60,
+        "r16": 85,
+        "qf": 59,
         "sf": 44,
         "final": 22,
         "winner": 11,
@@ -5316,7 +5316,7 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 9,
+        "r16": 8,
         "qf": 3,
         "sf": 1,
         "final": 0,
@@ -5908,7 +5908,7 @@
         "r32": 100,
         "r16": 42,
         "qf": 17,
-        "sf": 7,
+        "sf": 8,
         "final": 2,
         "winner": 0,
         "source": "market"
@@ -6186,10 +6186,10 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 64,
+        "r16": 65,
         "qf": 27,
         "sf": 16,
-        "final": 6,
+        "final": 7,
         "winner": 2,
         "source": "market"
       },
@@ -6366,7 +6366,7 @@
         "r32": 100,
         "r16": 92,
         "qf": 82,
-        "sf": 64,
+        "sf": 63,
         "final": 41,
         "winner": 19,
         "source": "market"
@@ -6717,7 +6717,7 @@
         "r32": 100,
         "r16": 14,
         "qf": 5,
-        "sf": 2,
+        "sf": 3,
         "final": 1,
         "winner": 0,
         "source": "market"
@@ -7024,10 +7024,10 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 70,
+        "r16": 71,
         "qf": 30,
-        "sf": 22,
-        "final": 13,
+        "sf": 23,
+        "final": 14,
         "winner": 6,
         "source": "market"
       },
@@ -7659,9 +7659,9 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 89,
+        "r16": 88,
         "qf": 61,
-        "sf": 39,
+        "sf": 38,
         "final": 22,
         "winner": 10,
         "source": "market"
@@ -7831,8 +7831,8 @@
         "r32": 100,
         "r16": 30,
         "qf": 10,
-        "sf": 5,
-        "final": 1,
+        "sf": 6,
+        "final": 2,
         "winner": 0,
         "source": "market"
       },
@@ -7998,9 +7998,9 @@
       "advanceProbabilities": {
         "r32": 100,
         "r16": 21,
-        "qf": 9,
+        "qf": 8,
         "sf": 3,
-        "final": 0,
+        "final": 1,
         "winner": 0,
         "source": "market"
       },
@@ -10029,7 +10029,15 @@
           "FOX One"
         ],
         "time": "2026-07-04T17:00Z",
-        "venue": "NRG Stadium, Houston, Texas"
+        "venue": "NRG Stadium, Houston, Texas",
+        "polymarket": {
+          "homeId": "canada",
+          "awayId": "morocco",
+          "homeWinPct": 18,
+          "awayWinPct": 56,
+          "drawPct": 27,
+          "eventSlug": "fifwc-can-mar-2026-07-04"
+        }
       }
     ]
   },
