@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-01T15:09:28.881Z",
+  "lastUpdated": "2026-07-01T15:24:02.017Z",
   "snapshotDate": "2026-07-01",
   "isHistorical": false,
   "sourceSummary": {
@@ -927,9 +927,9 @@
       "advanceProbabilities": {
         "r32": 100,
         "r16": 100,
-        "qf": 44,
-        "sf": 22,
-        "final": 9,
+        "qf": 43,
+        "sf": 21,
+        "final": 10,
         "winner": 3,
         "source": "market"
       },
@@ -1212,7 +1212,10 @@
           "score": "0-1",
           "date": "2026-06-24",
           "venue": "Estadio Akron, Zapopan",
-          "scorers": [],
+          "scorers": [
+            "Hwang In-Beom 67'",
+            "Oh Hyeon-Gyu 80'"
+          ],
           "cards": [
             {
               "player": "Cho Gue-Sung",
@@ -1436,7 +1439,7 @@
         "r32": 100,
         "r16": 100,
         "qf": 30,
-        "sf": 4,
+        "sf": 6,
         "final": 2,
         "winner": 0,
         "source": "market"
@@ -2253,7 +2256,7 @@
         "r32": 100,
         "r16": 100,
         "qf": 72,
-        "sf": 18,
+        "sf": 19,
         "final": 8,
         "winner": 2,
         "source": "market"
@@ -2535,7 +2538,9 @@
           "score": "0-3",
           "date": "2026-06-24",
           "venue": "Hard Rock Stadium, Miami",
-          "scorers": [],
+          "scorers": [
+            "John McGinn 28'"
+          ],
           "cards": [
             {
               "player": "Ryan Christie",
@@ -3039,7 +3044,10 @@
           "score": "0-0",
           "date": "2026-06-25",
           "venue": "Levi's Stadium, San Francisco",
-          "scorers": [],
+          "scorers": [
+            "Nestory Irankunda 27'",
+            "Connor Metcalfe 75'"
+          ],
           "cards": [
             {
               "player": "Jackson Irvine",
@@ -3548,7 +3556,9 @@
           "score": "0-2",
           "date": "2026-06-25",
           "venue": "Lincoln Financial Field, Philadelphia",
-          "scorers": [],
+          "scorers": [
+            "Livano Comenencia 21'"
+          ],
           "cards": [
             {
               "player": "Juninho Bacuna",
@@ -3925,7 +3935,23 @@
             "Brian Brobbey 7'",
             "Jan Paul van Hecke 62'"
           ],
-          "cards": []
+          "cards": [
+            {
+              "player": "Crysencio Summerville",
+              "minute": "61'",
+              "type": "yellow"
+            },
+            {
+              "player": "Memphis Depay",
+              "minute": "83'",
+              "type": "yellow"
+            },
+            {
+              "player": "Micky van de Ven",
+              "minute": "90'+1'",
+              "type": "yellow"
+            }
+          ]
         }
       ],
       "advanceProbabilities": {
@@ -4369,7 +4395,13 @@
           "scorers": [
             "Hazem Mastouri 54'"
           ],
-          "cards": []
+          "cards": [
+            {
+              "player": "Rani Khedira",
+              "minute": "54'",
+              "type": "yellow"
+            }
+          ]
         }
       ],
       "advanceProbabilities": {
@@ -4507,8 +4539,8 @@
         "r32": 100,
         "r16": 59,
         "qf": 31,
-        "sf": 10,
-        "final": 3,
+        "sf": 11,
+        "final": 4,
         "winner": 1,
         "source": "market"
       },
@@ -5433,7 +5465,9 @@
           "score": "0-0",
           "date": "2026-06-26",
           "venue": "NRG Stadium, Houston",
-          "scorers": [],
+          "scorers": [
+            "Abdulelah Al-Amri 41'"
+          ],
           "cards": [
             {
               "player": "Saud Abdulhamid",
@@ -6046,7 +6080,9 @@
           "score": "0-5",
           "date": "2026-06-26",
           "venue": "BMO Field, Toronto",
-          "scorers": [],
+          "scorers": [
+            "Aymen Hussein 39'"
+          ],
           "cards": [
             {
               "player": "Rebin Sulaka",
@@ -6358,7 +6394,7 @@
       "advanceProbabilities": {
         "r32": 100,
         "r16": 92,
-        "qf": 82,
+        "qf": 83,
         "sf": 65,
         "final": 41,
         "winner": 19,
@@ -7202,7 +7238,7 @@
       "advanceProbabilities": {
         "r32": 100,
         "r16": 12,
-        "qf": 3,
+        "qf": 4,
         "sf": 1,
         "final": 0,
         "winner": 0,
@@ -7655,10 +7691,10 @@
       "advanceProbabilities": {
         "r32": 100,
         "r16": 89,
-        "qf": 56,
+        "qf": 55,
         "sf": 35,
         "final": 22,
-        "winner": 9,
+        "winner": 10,
         "source": "market"
       },
       "path": {
@@ -10023,7 +10059,7 @@
           "awayId": "france",
           "homeWinPct": 5,
           "awayWinPct": 83,
-          "drawPct": 14,
+          "drawPct": 13,
           "eventSlug": "fifwc-par-fra-2026-07-04"
         }
       }
