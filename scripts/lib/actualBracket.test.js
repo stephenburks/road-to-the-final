@@ -85,3 +85,82 @@ describe('buildActualBracket', () => {
 		expect(out.r32[0]).toMatchObject({ winnerId: 'paraguay', homeShootout: 3, awayShootout: 4 })
 	})
 })
+
+describe('buildActualBracket — carry-forward when bracket structure is unavailable', () => {
+	// A minimal known-good bracket: one resolved R16 match feeding a placeholder QF.
+	const existing = {
+		r32: [],
+		r16: [
+			{ eventId: '700', bracketLocation: 1, date: '2026-07-04', venue: 'A',
+			  status: 'FINISHED', homeId: 'usa', awayId: 'germany', homeScore: 2, awayScore: 1, winnerId: 'usa' },
+		],
+		qf: [
+			{ eventId: null, bracketLocation: 1, date: null, venue: null,
+			  status: 'SCHEDULED', homeFeederEventId: '700', awayFeederEventId: '701', homeScore: 0, awayScore: 0 },
+		],
+		sf: [],
+		final: [],
+	}
+
+	it('carries the existing bracket forward instead of degrading to placeholders', () => {
+		const out = buildActualBracket({}, [], null, existing)
+		expect(out.r16[0]).toMatchObject({ homeId: 'usa', awayId: 'germany', winnerId: 'usa' })
+		// The QF feeder graph survives rather than collapsing to a bare slot.
+		expect(out.qf[0].homeFeederEventId).toBe('700')
+		expect(out.qf[0].awayFeederEventId).toBe('701')
+	})
+
+	it('refreshes scores/status from the current scoreboard while carrying forward', () => {
+		const scoreboard = [
+			{ eventId: '700', stage: 'r16', date: '2026-07-04', venue: 'A',
+			  status: 'FINISHED', homeScore: 3, awayScore: 1,
+			  home: { teamId: 'usa' }, away: { teamId: 'germany' } },
+		]
+		const out = buildActualBracket({}, scoreboard, null, existing)
+		expect(out.r16[0]).toMatchObject({ homeScore: 3, awayScore: 1, winnerId: 'usa' })
+	})
+
+	it('resolves a placeholder side that has since become a concrete team', () => {
+		const scoreboard = [
+			{ eventId: '702', stage: 'qf', date: '2026-07-09', venue: 'B',
+			  status: 'SCHEDULED', homeScore: 0, awayScore: 0,
+			  home: { teamId: 'usa' }, away: { tbd: true } },
+		]
+		const withEvent = {
+			...existing,
+			qf: [{ ...existing.qf[0], eventId: '702' }],
+		}
+		const out = buildActualBracket({}, scoreboard, null, withEvent)
+		expect(out.qf[0].homeId).toBe('usa')
+		expect(out.qf[0].homeFeederEventId).toBeUndefined()
+		// Away side stays a feeder reference until it too resolves.
+		expect(out.qf[0].awayFeederEventId).toBe('701')
+	})
+
+	it('falls back to a fresh build when there is no existing structure to carry', () => {
+		const daily = { '2026-06-28': [match('southafrica', 'canada', '2026-06-28', 'FINISHED', 0, 1)] }
+		const out = buildActualBracket(daily, [], null, { r32: [], r16: [], qf: [], sf: [], final: [] })
+		expect(out.r32).toHaveLength(1)
+		expect(out.r32[0]).toMatchObject({ homeId: 'southafrica', awayId: 'canada', winnerId: 'canada' })
+	})
+
+	it('does NOT carry forward a scoreboard-only bracket (no bracketLocation fingerprint)', () => {
+		// A bracket built by buildFromScoreboardOnly has R16 entries but no
+		// bracketLocation — its pairings may be wrong, so it must not be trusted
+		// as last-known-good. With empty structure + a scoreboard event present,
+		// the code should rebuild from the scoreboard, not carry the stale one.
+		const scoreboardOnlyExisting = {
+			r32: [{ eventId: '760489', homeId: 'germany', awayId: 'paraguay', status: 'FINISHED', homeScore: 1, awayScore: 1, winnerId: 'paraguay' }],
+			r16: [{ eventId: '900', homeFeederEventId: '999-wrong', awayFeederEventId: '998-wrong', status: 'SCHEDULED', homeScore: 0, awayScore: 0 }],
+			qf: [], sf: [], final: [],
+		}
+		const scoreboard = [{
+			eventId: '760489', stage: 'r32', date: '2026-06-29', venue: 'X',
+			status: 'FINISHED', homeScore: 1, awayScore: 1, homeShootout: 3, awayShootout: 4,
+			home: { teamId: 'germany' }, away: { teamId: 'paraguay' },
+		}]
+		const out = buildActualBracket({}, scoreboard, null, scoreboardOnlyExisting)
+		// Rebuilt from scoreboard: the wrong R16 feeder refs are gone.
+		expect(out.r16.find(e => e.homeFeederEventId === '999-wrong')).toBeUndefined()
+	})
+})
