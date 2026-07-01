@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-01T17:55:15.987Z",
+  "lastUpdated": "2026-07-01T19:54:31.028Z",
   "snapshotDate": "2026-07-01",
   "isHistorical": false,
   "sourceSummary": {
@@ -927,9 +927,9 @@
       "advanceProbabilities": {
         "r32": 100,
         "r16": 100,
-        "qf": 43,
-        "sf": 27,
-        "final": 16,
+        "qf": 42,
+        "sf": 18,
+        "final": 11,
         "winner": 3,
         "source": "market"
       },
@@ -954,7 +954,7 @@
           "date": "2026-07-05",
           "venue": "TBD",
           "city": "TBD",
-          "opponentDesc": "England or DR Congo",
+          "opponentDesc": "England",
           "conditional": true,
           "conditionNote": "Predicted from bracket pairing — venue confirmed once previous match settles"
         },
@@ -1007,18 +1007,8 @@
             "difficulty": 5,
             "label": "Danger",
             "color": "#EF4444",
-            "note": "Predicted (if they win their match)",
-            "pct": 50
-          },
-          {
-            "likelyTeam": "DR Congo",
-            "flag": "🇨🇩",
-            "fifaRank": 56,
-            "difficulty": 1,
-            "label": "Favorable",
-            "color": "#22C55E",
-            "note": "Predicted (if they win their match)",
-            "pct": 50
+            "note": "Predicted (winner of paired match)",
+            "pct": 100
           }
         ]
       },
@@ -1439,7 +1429,7 @@
         "r32": 100,
         "r16": 100,
         "qf": 30,
-        "sf": 6,
+        "sf": 5,
         "final": 2,
         "winner": 0,
         "source": "market"
@@ -1618,7 +1608,7 @@
       "advanceProbabilities": {
         "r32": 100,
         "r16": 17,
-        "qf": 4,
+        "qf": 6,
         "sf": 1,
         "final": 0,
         "winner": 0,
@@ -1904,7 +1894,7 @@
         "r32": 100,
         "r16": 66,
         "qf": 31,
-        "sf": 8,
+        "sf": 9,
         "final": 3,
         "winner": 1,
         "source": "market"
@@ -2086,7 +2076,7 @@
         "r32": 100,
         "r16": 100,
         "qf": 65,
-        "sf": 37,
+        "sf": 35,
         "final": 18,
         "winner": 7,
         "source": "market"
@@ -2258,7 +2248,7 @@
         "qf": 72,
         "sf": 19,
         "final": 8,
-        "winner": 3,
+        "winner": 2,
         "source": "market"
       },
       "path": {
@@ -3060,7 +3050,7 @@
       "advanceProbabilities": {
         "r32": 100,
         "r16": 44,
-        "qf": 6,
+        "qf": 5,
         "sf": 2,
         "final": 1,
         "winner": 0,
@@ -4537,10 +4527,10 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 60,
-        "qf": 31,
+        "r16": 66,
+        "qf": 33,
         "sf": 11,
-        "final": 5,
+        "final": 4,
         "winner": 1,
         "source": "market"
       },
@@ -4725,7 +4715,7 @@
         "r16": 56,
         "qf": 12,
         "sf": 4,
-        "final": 2,
+        "final": 1,
         "winner": 0,
         "source": "market"
       },
@@ -5140,7 +5130,7 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 86,
+        "r16": 87,
         "qf": 57,
         "sf": 43,
         "final": 20,
@@ -5741,8 +5731,8 @@
         "r16": 100,
         "qf": 91,
         "sf": 75,
-        "final": 54,
-        "winner": 33,
+        "final": 55,
+        "winner": 36,
         "source": "market"
       },
       "path": {
@@ -5926,10 +5916,10 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 42,
+        "r16": 35,
         "qf": 18,
         "sf": 7,
-        "final": 1,
+        "final": 2,
         "winner": 0,
         "source": "market"
       },
@@ -6217,9 +6207,9 @@
       "advanceProbabilities": {
         "r32": 100,
         "r16": 100,
-        "qf": 37,
+        "qf": 36,
         "sf": 20,
-        "final": 7,
+        "final": 8,
         "winner": 2,
         "source": "market"
       },
@@ -6394,10 +6384,10 @@
       "advanceProbabilities": {
         "r32": 100,
         "r16": 92,
-        "qf": 82,
+        "qf": 83,
         "sf": 66,
-        "final": 45,
-        "winner": 19,
+        "final": 43,
+        "winner": 18,
         "source": "market"
       },
       "path": {
@@ -6570,7 +6560,7 @@
         "r32": 100,
         "r16": 35,
         "qf": 11,
-        "sf": 3,
+        "sf": 2,
         "final": 1,
         "winner": 0,
         "source": "market"
@@ -7068,7 +7058,7 @@
         "qf": 33,
         "sf": 23,
         "final": 10,
-        "winner": 6,
+        "winner": 5,
         "source": "market"
       },
       "path": {
@@ -7159,7 +7149,7 @@
       "group": "K",
       "confederation": "CAF",
       "fifaRank": 56,
-      "eliminated": false,
+      "eliminated": true,
       "currentStage": "r32",
       "groupResults": [
         {
@@ -7237,10 +7227,10 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 3,
-        "qf": 3,
-        "sf": 1,
-        "final": 1,
+        "r16": 0,
+        "qf": 0,
+        "sf": 0,
+        "final": 0,
         "winner": 0,
         "source": "market"
       },
@@ -7253,77 +7243,23 @@
           "detail": "4pts after MD3"
         },
         "r32": {
-          "status": "active",
+          "status": "done",
           "date": "2026-07-01",
           "venue": "Mercedes-Benz Stadium",
           "city": "Atlanta, Georgia",
           "opponentDesc": "England",
           "conditional": false
         },
-        "r16": {
-          "status": "future",
-          "date": "2026-07-07",
-          "venue": "TBD",
-          "city": "TBD",
-          "opponentDesc": "Mexico",
-          "conditional": true,
-          "conditionNote": "Predicted from bracket pairing — venue confirmed once previous match settles"
-        },
-        "qf": {
-          "status": "future",
-          "date": "2026-07-11",
-          "venue": "TBD",
-          "city": "TBD",
-          "opponentDesc": "Opponent TBD",
-          "conditional": true,
-          "conditionNote": "Venue + opponent confirmed once bracket is drawn"
-        },
-        "sf": {
-          "status": "future",
-          "date": "2026-07-15",
-          "venue": "TBD",
-          "city": "TBD",
-          "opponentDesc": "Opponent TBD",
-          "conditional": true,
-          "conditionNote": "Venue + opponent confirmed once bracket is drawn"
-        },
-        "final": {
-          "status": "future",
-          "date": "2026-07-19",
-          "venue": "TBD",
-          "city": "TBD",
-          "opponentDesc": "Opponent TBD",
-          "conditional": true,
-          "conditionNote": "Venue + opponent confirmed once bracket is drawn"
-        }
+        "r16": null,
+        "qf": null,
+        "sf": null,
+        "final": null
       },
       "possibleOpponents": {
-        "r32": [
-          {
-            "likelyTeam": "England",
-            "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
-            "fifaRank": 5,
-            "difficulty": 5,
-            "label": "Danger",
-            "color": "#EF4444",
-            "note": "Confirmed opponent",
-            "pct": 100
-          }
-        ],
-        "r16": [
-          {
-            "likelyTeam": "Mexico",
-            "flag": "🇲🇽",
-            "fifaRank": 15,
-            "difficulty": 4,
-            "label": "Tough",
-            "color": "#FB923C",
-            "note": "Predicted (winner of paired match)",
-            "pct": 100
-          }
-        ]
+        "r32": [],
+        "r16": []
       },
-      "totalGoals": 4
+      "totalGoals": 5
     },
     {
       "id": "uzbekistan",
@@ -7614,7 +7550,7 @@
       "confederation": "UEFA",
       "fifaRank": 5,
       "eliminated": false,
-      "currentStage": "r32",
+      "currentStage": "r16",
       "groupResults": [
         {
           "matchday": 1,
@@ -7690,11 +7626,11 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 97,
-        "qf": 54,
-        "sf": 34,
-        "final": 16,
-        "winner": 10,
+        "r16": 100,
+        "qf": 59,
+        "sf": 35,
+        "final": 23,
+        "winner": 9,
         "source": "market"
       },
       "path": {
@@ -7706,7 +7642,7 @@
           "detail": "7pts after MD3"
         },
         "r32": {
-          "status": "active",
+          "status": "done",
           "date": "2026-07-01",
           "venue": "Mercedes-Benz Stadium",
           "city": "Atlanta, Georgia",
@@ -7776,7 +7712,7 @@
           }
         ]
       },
-      "totalGoals": 6
+      "totalGoals": 8
     },
     {
       "id": "croatia",
@@ -9769,24 +9705,15 @@
         "awayId": "drcongo",
         "homeScore": 2,
         "awayScore": 1,
-        "status": "IN_PROGRESS",
+        "status": "FINISHED",
         "date": "2026-07-01",
-        "clock": "90'+2'",
         "broadcasts": [
           "FOX",
           "Tele",
           "FOX One"
         ],
         "time": "2026-07-01T16:00Z",
-        "venue": "Mercedes-Benz Stadium, Atlanta, Georgia",
-        "polymarket": {
-          "homeId": "england",
-          "awayId": "drcongo",
-          "homeWinPct": 34,
-          "awayWinPct": 7,
-          "drawPct": 61,
-          "eventSlug": "fifwc-eng-cdr-2026-07-01"
-        }
+        "venue": "Mercedes-Benz Stadium, Atlanta, Georgia"
       },
       {
         "homeTeam": "Belgium",
@@ -9809,9 +9736,9 @@
         "polymarket": {
           "homeId": "belgium",
           "awayId": "senegal",
-          "homeWinPct": 46,
-          "awayWinPct": 26,
-          "drawPct": 30,
+          "homeWinPct": 51,
+          "awayWinPct": 23,
+          "drawPct": 28,
           "eventSlug": "fifwc-bel-sen-2026-07-01"
         }
       },
@@ -9836,7 +9763,7 @@
         "polymarket": {
           "homeId": "usa",
           "awayId": "bosnia",
-          "homeWinPct": 71,
+          "homeWinPct": 72,
           "awayWinPct": 11,
           "drawPct": 20,
           "eventSlug": "fifwc-usa-bih-2026-07-01"
@@ -9976,7 +9903,7 @@
           "homeId": "argentina",
           "awayId": "capeverde",
           "homeWinPct": 85,
-          "awayWinPct": 5,
+          "awayWinPct": 4,
           "drawPct": 12,
           "eventSlug": "fifwc-arg-cvi-2026-07-03"
         }
@@ -10003,7 +9930,7 @@
           "homeId": "colombia",
           "awayId": "ghana",
           "homeWinPct": 65,
-          "awayWinPct": 12,
+          "awayWinPct": 13,
           "drawPct": 25,
           "eventSlug": "fifwc-col-gha-2026-07-03"
         }
@@ -10031,8 +9958,8 @@
         "polymarket": {
           "homeId": "canada",
           "awayId": "morocco",
-          "homeWinPct": 19,
-          "awayWinPct": 54,
+          "homeWinPct": 20,
+          "awayWinPct": 53,
           "drawPct": 28,
           "eventSlug": "fifwc-can-mar-2026-07-04"
         }
@@ -10092,6 +10019,25 @@
           "drawPct": 27,
           "eventSlug": "fifwc-bra-nor-2026-07-05"
         }
+      },
+      {
+        "homeTeam": "Mexico",
+        "homeFlag": "🇲🇽",
+        "homeId": "mexico",
+        "awayTeam": "England",
+        "awayFlag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+        "awayId": "england",
+        "homeScore": 0,
+        "awayScore": 0,
+        "status": "SCHEDULED",
+        "date": "2026-07-05",
+        "broadcasts": [
+          "FOX",
+          "Tele",
+          "FOX One"
+        ],
+        "time": "2026-07-06T00:00Z",
+        "venue": "Estadio Banorte, Mexico City"
       }
     ]
   },
@@ -10234,11 +10180,12 @@
         "bracketLocation": 12,
         "date": "2026-07-01",
         "venue": "Mercedes-Benz Stadium, Atlanta, Georgia",
-        "status": "IN_PROGRESS",
+        "status": "FINISHED",
         "homeScore": 2,
         "awayScore": 1,
         "homeId": "england",
-        "awayId": "drcongo"
+        "awayId": "drcongo",
+        "winnerId": "england"
       },
       {
         "eventId": "760500",
