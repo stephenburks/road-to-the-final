@@ -136,6 +136,14 @@
 	color: var(--text, #f1f5f9);
 }
 
+.sidePens {
+	margin-left: 2px;
+	font-size: 0.78em;
+	font-weight: 600;
+	font-variant-numeric: tabular-nums;
+	color: var(--text-muted, #94a3b8);
+}
+
 .sideWinner {
 	font-weight: 600;
 	color: var(--text, #f1f5f9);
