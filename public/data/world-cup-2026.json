@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-01T21:27:49.582Z",
+  "lastUpdated": "2026-07-01T23:15:15.198Z",
   "snapshotDate": "2026-07-01",
   "isHistorical": false,
   "sourceSummary": {
@@ -927,9 +927,9 @@
       "advanceProbabilities": {
         "r32": 100,
         "r16": 100,
-        "qf": 43,
-        "sf": 19,
-        "final": 11,
+        "qf": 44,
+        "sf": 20,
+        "final": 10,
         "winner": 3,
         "source": "market"
       },
@@ -1429,7 +1429,7 @@
         "r32": 100,
         "r16": 100,
         "qf": 30,
-        "sf": 6,
+        "sf": 5,
         "final": 2,
         "winner": 0,
         "source": "market"
@@ -1607,10 +1607,10 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 17,
-        "qf": 6,
+        "r16": 16,
+        "qf": 7,
         "sf": 1,
-        "final": 0,
+        "final": 1,
         "winner": 0,
         "source": "market"
       },
@@ -1635,7 +1635,7 @@
           "date": "2026-07-06",
           "venue": "TBD",
           "city": "TBD",
-          "opponentDesc": "Belgium or Senegal",
+          "opponentDesc": "Belgium",
           "conditional": true,
           "conditionNote": "Predicted from bracket pairing — venue confirmed once previous match settles"
         },
@@ -1688,18 +1688,8 @@
             "difficulty": 5,
             "label": "Danger",
             "color": "#EF4444",
-            "note": "Predicted (if they win their match)",
-            "pct": 50
-          },
-          {
-            "likelyTeam": "Senegal",
-            "flag": "🇸🇳",
-            "fifaRank": 14,
-            "difficulty": 4,
-            "label": "Tough",
-            "color": "#FB923C",
-            "note": "Predicted (if they win their match)",
-            "pct": 50
+            "note": "Predicted (winner of paired match)",
+            "pct": 100
           }
         ]
       },
@@ -1894,7 +1884,7 @@
         "r32": 100,
         "r16": 66,
         "qf": 31,
-        "sf": 9,
+        "sf": 8,
         "final": 3,
         "winner": 1,
         "source": "market"
@@ -2076,9 +2066,9 @@
         "r32": 100,
         "r16": 100,
         "qf": 65,
-        "sf": 35,
+        "sf": 34,
         "final": 18,
-        "winner": 7,
+        "winner": 6,
         "source": "market"
       },
       "path": {
@@ -2654,9 +2644,9 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 84,
-        "qf": 49,
-        "sf": 19,
+        "r16": 85,
+        "qf": 50,
+        "sf": 17,
         "final": 7,
         "winner": 3,
         "source": "market"
@@ -2682,7 +2672,7 @@
           "date": "2026-07-06",
           "venue": "TBD",
           "city": "TBD",
-          "opponentDesc": "Belgium or Senegal",
+          "opponentDesc": "Belgium",
           "conditional": true,
           "conditionNote": "Predicted from bracket pairing — venue confirmed once previous match settles"
         },
@@ -2735,18 +2725,8 @@
             "difficulty": 5,
             "label": "Danger",
             "color": "#EF4444",
-            "note": "Predicted (if they win their match)",
-            "pct": 50
-          },
-          {
-            "likelyTeam": "Senegal",
-            "flag": "🇸🇳",
-            "fifaRank": 14,
-            "difficulty": 4,
-            "label": "Tough",
-            "color": "#FB923C",
-            "note": "Predicted (if they win their match)",
-            "pct": 50
+            "note": "Predicted (winner of paired match)",
+            "pct": 100
           }
         ]
       },
@@ -2854,7 +2834,7 @@
       "advanceProbabilities": {
         "r32": 100,
         "r16": 100,
-        "qf": 9,
+        "qf": 8,
         "sf": 4,
         "final": 1,
         "winner": 0,
@@ -3050,7 +3030,7 @@
       "advanceProbabilities": {
         "r32": 100,
         "r16": 44,
-        "qf": 6,
+        "qf": 5,
         "sf": 2,
         "final": 1,
         "winner": 0,
@@ -4431,7 +4411,7 @@
       "confederation": "UEFA",
       "fifaRank": 9,
       "eliminated": false,
-      "currentStage": "r32",
+      "currentStage": "r16",
       "groupResults": [
         {
           "matchday": 1,
@@ -4527,11 +4507,11 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 10,
-        "qf": 3,
-        "sf": 3,
-        "final": 1,
-        "winner": 0,
+        "r16": 100,
+        "qf": 47,
+        "sf": 17,
+        "final": 3,
+        "winner": 1,
         "source": "market"
       },
       "path": {
@@ -4543,7 +4523,7 @@
           "detail": "5pts after MD3"
         },
         "r32": {
-          "status": "active",
+          "status": "done",
           "date": "2026-07-01",
           "venue": "Lumen Field",
           "city": "Seattle, Washington",
@@ -4623,7 +4603,7 @@
           }
         ]
       },
-      "totalGoals": 6
+      "totalGoals": 9
     },
     {
       "id": "egypt",
@@ -4714,7 +4694,7 @@
         "r32": 100,
         "r16": 56,
         "qf": 12,
-        "sf": 4,
+        "sf": 3,
         "final": 1,
         "winner": 0,
         "source": "market"
@@ -5131,8 +5111,8 @@
       "advanceProbabilities": {
         "r32": 100,
         "r16": 87,
-        "qf": 58,
-        "sf": 44,
+        "qf": 59,
+        "sf": 43,
         "final": 21,
         "winner": 10,
         "source": "market"
@@ -5296,7 +5276,7 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 9,
+        "r16": 8,
         "qf": 3,
         "sf": 1,
         "final": 0,
@@ -5732,7 +5712,7 @@
         "qf": 92,
         "sf": 75,
         "final": 55,
-        "winner": 35,
+        "winner": 36,
         "source": "market"
       },
       "path": {
@@ -5833,7 +5813,7 @@
       "group": "I",
       "confederation": "CAF",
       "fifaRank": 14,
-      "eliminated": false,
+      "eliminated": true,
       "currentStage": "r32",
       "groupResults": [
         {
@@ -5916,11 +5896,11 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 91,
-        "qf": 41,
-        "sf": 15,
-        "final": 4,
-        "winner": 1,
+        "r16": 0,
+        "qf": 0,
+        "sf": 0,
+        "final": 0,
+        "winner": 0,
         "source": "market"
       },
       "path": {
@@ -5932,87 +5912,23 @@
           "detail": "3pts after MD3"
         },
         "r32": {
-          "status": "active",
+          "status": "done",
           "date": "2026-07-01",
           "venue": "Lumen Field",
           "city": "Seattle, Washington",
           "opponentDesc": "Belgium",
           "conditional": false
         },
-        "r16": {
-          "status": "future",
-          "date": "2026-07-07",
-          "venue": "TBD",
-          "city": "TBD",
-          "opponentDesc": "USA or Bosnia & Herz.",
-          "conditional": true,
-          "conditionNote": "Predicted from bracket pairing — venue confirmed once previous match settles"
-        },
-        "qf": {
-          "status": "future",
-          "date": "2026-07-11",
-          "venue": "TBD",
-          "city": "TBD",
-          "opponentDesc": "Opponent TBD",
-          "conditional": true,
-          "conditionNote": "Venue + opponent confirmed once bracket is drawn"
-        },
-        "sf": {
-          "status": "future",
-          "date": "2026-07-14",
-          "venue": "TBD",
-          "city": "TBD",
-          "opponentDesc": "Opponent TBD",
-          "conditional": true,
-          "conditionNote": "Venue + opponent confirmed once bracket is drawn"
-        },
-        "final": {
-          "status": "future",
-          "date": "2026-07-19",
-          "venue": "TBD",
-          "city": "TBD",
-          "opponentDesc": "Opponent TBD",
-          "conditional": true,
-          "conditionNote": "Venue + opponent confirmed once bracket is drawn"
-        }
+        "r16": null,
+        "qf": null,
+        "sf": null,
+        "final": null
       },
       "possibleOpponents": {
-        "r32": [
-          {
-            "likelyTeam": "Belgium",
-            "flag": "🇧🇪",
-            "fifaRank": 9,
-            "difficulty": 5,
-            "label": "Danger",
-            "color": "#EF4444",
-            "note": "Confirmed opponent",
-            "pct": 100
-          }
-        ],
-        "r16": [
-          {
-            "likelyTeam": "USA",
-            "flag": "🇺🇸",
-            "fifaRank": 14,
-            "difficulty": 4,
-            "label": "Tough",
-            "color": "#FB923C",
-            "note": "Predicted (if they win their match)",
-            "pct": 50
-          },
-          {
-            "likelyTeam": "Bosnia & Herz.",
-            "flag": "🇧🇦",
-            "fifaRank": 71,
-            "difficulty": 1,
-            "label": "Favorable",
-            "color": "#22C55E",
-            "note": "Predicted (if they win their match)",
-            "pct": 50
-          }
-        ]
+        "r32": [],
+        "r16": []
       },
-      "totalGoals": 8
+      "totalGoals": 10
     },
     {
       "id": "iraq",
@@ -6209,7 +6125,7 @@
         "r16": 100,
         "qf": 36,
         "sf": 19,
-        "final": 8,
+        "final": 7,
         "winner": 2,
         "source": "market"
       },
@@ -6385,8 +6301,8 @@
         "r32": 100,
         "r16": 92,
         "qf": 83,
-        "sf": 66,
-        "final": 42,
+        "sf": 64,
+        "final": 41,
         "winner": 18,
         "source": "market"
       },
@@ -6560,7 +6476,7 @@
         "r32": 100,
         "r16": 35,
         "qf": 11,
-        "sf": 3,
+        "sf": 2,
         "final": 1,
         "winner": 0,
         "source": "market"
@@ -7055,7 +6971,7 @@
       "advanceProbabilities": {
         "r32": 100,
         "r16": 70,
-        "qf": 33,
+        "qf": 32,
         "sf": 23,
         "final": 10,
         "winner": 6,
@@ -7446,7 +7362,7 @@
         "r32": 100,
         "r16": 80,
         "qf": 53,
-        "sf": 22,
+        "sf": 23,
         "final": 10,
         "winner": 3,
         "source": "market"
@@ -7627,7 +7543,7 @@
       "advanceProbabilities": {
         "r32": 100,
         "r16": 100,
-        "qf": 57,
+        "qf": 56,
         "sf": 34,
         "final": 23,
         "winner": 8,
@@ -9722,26 +9638,17 @@
         "awayTeam": "Senegal",
         "awayFlag": "🇸🇳",
         "awayId": "senegal",
-        "homeScore": 0,
+        "homeScore": 3,
         "awayScore": 2,
-        "status": "IN_PROGRESS",
+        "status": "FINISHED",
         "date": "2026-07-01",
-        "clock": "65'",
         "broadcasts": [
           "FS1",
           "Tele",
           "FOX One"
         ],
         "time": "2026-07-01T20:00Z",
-        "venue": "Lumen Field, Seattle, Washington",
-        "polymarket": {
-          "homeId": "belgium",
-          "awayId": "senegal",
-          "homeWinPct": 3,
-          "awayWinPct": 88,
-          "drawPct": 11,
-          "eventSlug": "fifwc-bel-sen-2026-07-01"
-        }
+        "venue": "Lumen Field, Seattle, Washington"
       },
       {
         "homeTeam": "USA",
@@ -9765,7 +9672,7 @@
           "homeId": "usa",
           "awayId": "bosnia",
           "homeWinPct": 72,
-          "awayWinPct": 11,
+          "awayWinPct": 10,
           "drawPct": 19,
           "eventSlug": "fifwc-usa-bih-2026-07-01"
         }
@@ -9848,7 +9755,7 @@
           "homeId": "switzerland",
           "awayId": "algeria",
           "homeWinPct": 47,
-          "awayWinPct": 23,
+          "awayWinPct": 24,
           "drawPct": 30,
           "eventSlug": "fifwc-che-alg-2026-07-02"
         }
@@ -10134,11 +10041,12 @@
         "bracketLocation": 8,
         "date": "2026-07-01",
         "venue": "Lumen Field, Seattle, Washington",
-        "status": "IN_PROGRESS",
-        "homeScore": 0,
+        "status": "FINISHED",
+        "homeScore": 3,
         "awayScore": 2,
         "homeId": "belgium",
-        "awayId": "senegal"
+        "awayId": "senegal",
+        "winnerId": "belgium"
       },
       {
         "eventId": "760487",
