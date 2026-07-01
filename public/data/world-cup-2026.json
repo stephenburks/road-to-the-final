@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-01T19:54:31.028Z",
+  "lastUpdated": "2026-07-01T21:27:49.582Z",
   "snapshotDate": "2026-07-01",
   "isHistorical": false,
   "sourceSummary": {
@@ -927,8 +927,8 @@
       "advanceProbabilities": {
         "r32": 100,
         "r16": 100,
-        "qf": 42,
-        "sf": 18,
+        "qf": 43,
+        "sf": 19,
         "final": 11,
         "winner": 3,
         "source": "market"
@@ -1429,7 +1429,7 @@
         "r32": 100,
         "r16": 100,
         "qf": 30,
-        "sf": 5,
+        "sf": 6,
         "final": 2,
         "winner": 0,
         "source": "market"
@@ -2246,7 +2246,7 @@
         "r32": 100,
         "r16": 100,
         "qf": 72,
-        "sf": 19,
+        "sf": 20,
         "final": 8,
         "winner": 2,
         "source": "market"
@@ -2655,9 +2655,9 @@
       "advanceProbabilities": {
         "r32": 100,
         "r16": 84,
-        "qf": 48,
-        "sf": 16,
-        "final": 6,
+        "qf": 49,
+        "sf": 19,
+        "final": 7,
         "winner": 3,
         "source": "market"
       },
@@ -3050,7 +3050,7 @@
       "advanceProbabilities": {
         "r32": 100,
         "r16": 44,
-        "qf": 5,
+        "qf": 6,
         "sf": 2,
         "final": 1,
         "winner": 0,
@@ -4527,11 +4527,11 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 66,
-        "qf": 33,
-        "sf": 11,
-        "final": 4,
-        "winner": 1,
+        "r16": 10,
+        "qf": 3,
+        "sf": 3,
+        "final": 1,
+        "winner": 0,
         "source": "market"
       },
       "path": {
@@ -4543,7 +4543,7 @@
           "detail": "5pts after MD3"
         },
         "r32": {
-          "status": "upcoming",
+          "status": "active",
           "date": "2026-07-01",
           "venue": "Lumen Field",
           "city": "Seattle, Washington",
@@ -5131,9 +5131,9 @@
       "advanceProbabilities": {
         "r32": 100,
         "r16": 87,
-        "qf": 57,
-        "sf": 43,
-        "final": 20,
+        "qf": 58,
+        "sf": 44,
+        "final": 21,
         "winner": 10,
         "source": "market"
       },
@@ -5729,10 +5729,10 @@
       "advanceProbabilities": {
         "r32": 100,
         "r16": 100,
-        "qf": 91,
+        "qf": 92,
         "sf": 75,
         "final": 55,
-        "winner": 36,
+        "winner": 35,
         "source": "market"
       },
       "path": {
@@ -5916,11 +5916,11 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 35,
-        "qf": 18,
-        "sf": 7,
-        "final": 2,
-        "winner": 0,
+        "r16": 91,
+        "qf": 41,
+        "sf": 15,
+        "final": 4,
+        "winner": 1,
         "source": "market"
       },
       "path": {
@@ -5932,7 +5932,7 @@
           "detail": "3pts after MD3"
         },
         "r32": {
-          "status": "upcoming",
+          "status": "active",
           "date": "2026-07-01",
           "venue": "Lumen Field",
           "city": "Seattle, Washington",
@@ -6208,7 +6208,7 @@
         "r32": 100,
         "r16": 100,
         "qf": 36,
-        "sf": 20,
+        "sf": 19,
         "final": 8,
         "winner": 2,
         "source": "market"
@@ -6386,7 +6386,7 @@
         "r16": 92,
         "qf": 83,
         "sf": 66,
-        "final": 43,
+        "final": 42,
         "winner": 18,
         "source": "market"
       },
@@ -6560,7 +6560,7 @@
         "r32": 100,
         "r16": 35,
         "qf": 11,
-        "sf": 2,
+        "sf": 3,
         "final": 1,
         "winner": 0,
         "source": "market"
@@ -6741,7 +6741,7 @@
       "advanceProbabilities": {
         "r32": 100,
         "r16": 14,
-        "qf": 5,
+        "qf": 4,
         "sf": 2,
         "final": 0,
         "winner": 0,
@@ -7058,7 +7058,7 @@
         "qf": 33,
         "sf": 23,
         "final": 10,
-        "winner": 5,
+        "winner": 6,
         "source": "market"
       },
       "path": {
@@ -7627,10 +7627,10 @@
       "advanceProbabilities": {
         "r32": 100,
         "r16": 100,
-        "qf": 59,
-        "sf": 35,
+        "qf": 57,
+        "sf": 34,
         "final": 23,
-        "winner": 9,
+        "winner": 8,
         "source": "market"
       },
       "path": {
@@ -9723,9 +9723,10 @@
         "awayFlag": "🇸🇳",
         "awayId": "senegal",
         "homeScore": 0,
-        "awayScore": 0,
-        "status": "SCHEDULED",
+        "awayScore": 2,
+        "status": "IN_PROGRESS",
         "date": "2026-07-01",
+        "clock": "65'",
         "broadcasts": [
           "FS1",
           "Tele",
@@ -9736,9 +9737,9 @@
         "polymarket": {
           "homeId": "belgium",
           "awayId": "senegal",
-          "homeWinPct": 51,
-          "awayWinPct": 23,
-          "drawPct": 28,
+          "homeWinPct": 3,
+          "awayWinPct": 88,
+          "drawPct": 11,
           "eventSlug": "fifwc-bel-sen-2026-07-01"
         }
       },
@@ -9765,7 +9766,7 @@
           "awayId": "bosnia",
           "homeWinPct": 72,
           "awayWinPct": 11,
-          "drawPct": 20,
+          "drawPct": 19,
           "eventSlug": "fifwc-usa-bih-2026-07-01"
         }
       }
@@ -9846,7 +9847,7 @@
         "polymarket": {
           "homeId": "switzerland",
           "awayId": "algeria",
-          "homeWinPct": 48,
+          "homeWinPct": 47,
           "awayWinPct": 23,
           "drawPct": 30,
           "eventSlug": "fifwc-che-alg-2026-07-02"
@@ -9958,8 +9959,8 @@
         "polymarket": {
           "homeId": "canada",
           "awayId": "morocco",
-          "homeWinPct": 20,
-          "awayWinPct": 53,
+          "homeWinPct": 19,
+          "awayWinPct": 54,
           "drawPct": 28,
           "eventSlug": "fifwc-can-mar-2026-07-04"
         }
@@ -9986,7 +9987,7 @@
           "homeId": "paraguay",
           "awayId": "france",
           "homeWinPct": 5,
-          "awayWinPct": 84,
+          "awayWinPct": 83,
           "drawPct": 13,
           "eventSlug": "fifwc-par-fra-2026-07-04"
         }
@@ -10133,9 +10134,9 @@
         "bracketLocation": 8,
         "date": "2026-07-01",
         "venue": "Lumen Field, Seattle, Washington",
-        "status": "SCHEDULED",
+        "status": "IN_PROGRESS",
         "homeScore": 0,
-        "awayScore": 0,
+        "awayScore": 2,
         "homeId": "belgium",
         "awayId": "senegal"
       },
