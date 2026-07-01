@@ -315,6 +315,8 @@ async function main() {
       awayId: awayId,
       homeScore: match.homeScore,
       awayScore: match.awayScore,
+      homeShootout: match.homeShootout ?? undefined,
+      awayShootout: match.awayShootout ?? undefined,
       status: match.status,
       date: match.date,
       clock: match.clock || undefined,
