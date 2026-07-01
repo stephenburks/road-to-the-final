@@ -1,6 +1,6 @@
 {
-  "lastUpdated": "2026-06-30T23:12:33.018Z",
-  "snapshotDate": "2026-06-30",
+  "lastUpdated": "2026-07-01T03:50:46.057Z",
+  "snapshotDate": "2026-07-01",
   "isHistorical": false,
   "sourceSummary": {
     "dataSource": "ESPN",
@@ -921,11 +921,11 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 64,
-        "qf": 28,
-        "sf": 14,
-        "final": 7,
-        "winner": 2,
+        "r16": 98,
+        "qf": 42,
+        "sf": 21,
+        "final": 11,
+        "winner": 3,
         "source": "market"
       },
       "path": {
@@ -937,7 +937,7 @@
           "detail": "9pts after MD3"
         },
         "r32": {
-          "status": "upcoming",
+          "status": "active",
           "date": "2026-06-30",
           "venue": "Estadio Banorte",
           "city": "Mexico City",
@@ -1411,7 +1411,7 @@
       "advanceProbabilities": {
         "r32": 100,
         "r16": 100,
-        "qf": 28,
+        "qf": 29,
         "sf": 5,
         "final": 2,
         "winner": 0,
@@ -1589,10 +1589,10 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 19,
-        "qf": 5,
+        "r16": 17,
+        "qf": 4,
         "sf": 1,
-        "final": 0,
+        "final": 1,
         "winner": 0,
         "source": "market"
       },
@@ -1873,9 +1873,9 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 67,
-        "qf": 30,
-        "sf": 8,
+        "r16": 65,
+        "qf": 31,
+        "sf": 9,
         "final": 3,
         "winner": 1,
         "source": "market"
@@ -2057,7 +2057,7 @@
         "r32": 100,
         "r16": 100,
         "qf": 64,
-        "sf": 35,
+        "sf": 36,
         "final": 18,
         "winner": 7,
         "source": "market"
@@ -2217,7 +2217,7 @@
         "r32": 100,
         "r16": 100,
         "qf": 72,
-        "sf": 23,
+        "sf": 21,
         "final": 9,
         "winner": 3,
         "source": "market"
@@ -2613,10 +2613,10 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 83,
+        "r16": 85,
         "qf": 47,
         "sf": 17,
-        "final": 5,
+        "final": 6,
         "winner": 3,
         "source": "market"
       },
@@ -2808,9 +2808,9 @@
       "advanceProbabilities": {
         "r32": 100,
         "r16": 100,
-        "qf": 11,
+        "qf": 10,
         "sf": 5,
-        "final": 0,
+        "final": 1,
         "winner": 0,
         "source": "market"
       },
@@ -3695,10 +3695,10 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 37,
-        "qf": 13,
-        "sf": 4,
-        "final": 1,
+        "r16": 3,
+        "qf": 2,
+        "sf": 0,
+        "final": 0,
         "winner": 0,
         "source": "market"
       },
@@ -3711,7 +3711,7 @@
           "detail": "4pts after MD3"
         },
         "r32": {
-          "status": "upcoming",
+          "status": "active",
           "date": "2026-06-30",
           "venue": "Estadio Banorte",
           "city": "Mexico City",
@@ -4395,7 +4395,7 @@
         "r32": 100,
         "r16": 59,
         "qf": 32,
-        "sf": 12,
+        "sf": 11,
         "final": 4,
         "winner": 1,
         "source": "market"
@@ -4969,11 +4969,11 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 86,
+        "r16": 87,
         "qf": 58,
         "sf": 43,
         "final": 21,
-        "winner": 11,
+        "winner": 10,
         "source": "market"
       },
       "path": {
@@ -5144,7 +5144,7 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 9,
+        "r16": 8,
         "qf": 3,
         "sf": 1,
         "final": 0,
@@ -5553,7 +5553,7 @@
         "r32": 100,
         "r16": 100,
         "qf": 91,
-        "sf": 74,
+        "sf": 75,
         "final": 55,
         "winner": 33,
         "source": "market"
@@ -5724,8 +5724,8 @@
       "advanceProbabilities": {
         "r32": 100,
         "r16": 42,
-        "qf": 17,
-        "sf": 5,
+        "qf": 18,
+        "sf": 6,
         "final": 2,
         "winner": 1,
         "source": "market"
@@ -6172,7 +6172,7 @@
         "r32": 100,
         "r16": 92,
         "qf": 82,
-        "sf": 65,
+        "sf": 66,
         "final": 41,
         "winner": 19,
         "source": "market"
@@ -6345,7 +6345,7 @@
         "r16": 34,
         "qf": 10,
         "sf": 2,
-        "final": 1,
+        "final": 2,
         "winner": 0,
         "source": "market"
       },
@@ -6521,7 +6521,7 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 14,
+        "r16": 15,
         "qf": 5,
         "sf": 3,
         "final": 1,
@@ -6830,10 +6830,10 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 68,
+        "r16": 70,
         "qf": 30,
-        "sf": 20,
-        "final": 14,
+        "sf": 21,
+        "final": 13,
         "winner": 5,
         "source": "market"
       },
@@ -7011,9 +7011,9 @@
       "advanceProbabilities": {
         "r32": 100,
         "r16": 12,
-        "qf": 3,
-        "sf": 1,
-        "final": 0,
+        "qf": 2,
+        "sf": 2,
+        "final": 1,
         "winner": 0,
         "source": "market"
       },
@@ -7291,9 +7291,9 @@
       "advanceProbabilities": {
         "r32": 100,
         "r16": 80,
-        "qf": 50,
-        "sf": 22,
-        "final": 10,
+        "qf": 51,
+        "sf": 20,
+        "final": 11,
         "winner": 3,
         "source": "market"
       },
@@ -7466,10 +7466,10 @@
       "advanceProbabilities": {
         "r32": 100,
         "r16": 88,
-        "qf": 60,
-        "sf": 38,
-        "final": 20,
-        "winner": 10,
+        "qf": 56,
+        "sf": 36,
+        "final": 21,
+        "winner": 9,
         "source": "market"
       },
       "path": {
@@ -7635,7 +7635,7 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 31,
+        "r16": 30,
         "qf": 9,
         "sf": 5,
         "final": 1,
@@ -7805,7 +7805,7 @@
         "r32": 100,
         "r16": 21,
         "qf": 9,
-        "sf": 3,
+        "sf": 2,
         "final": 1,
         "winner": 0,
         "source": "market"
@@ -9531,23 +9531,24 @@
         "awayTeam": "Ecuador",
         "awayFlag": "🇪🇨",
         "awayId": "ecuador",
-        "homeScore": 0,
+        "homeScore": 2,
         "awayScore": 0,
-        "status": "SCHEDULED",
+        "status": "IN_PROGRESS",
         "date": "2026-06-30",
+        "clock": "88'",
         "broadcasts": [
           "FOX",
           "Tele",
           "FOX One"
         ],
-        "time": "2026-07-01T01:00Z",
+        "time": "2026-07-01T02:00Z",
         "venue": "Estadio Banorte, Mexico City",
         "polymarket": {
           "homeId": "mexico",
           "awayId": "ecuador",
-          "homeWinPct": 44,
-          "awayWinPct": 23,
-          "drawPct": 34,
+          "homeWinPct": 99,
+          "awayWinPct": 0,
+          "drawPct": 1,
           "eventSlug": "fifwc-mex-ecu-2026-06-30"
         }
       }
@@ -9575,8 +9576,8 @@
           "homeId": "england",
           "awayId": "drcongo",
           "homeWinPct": 77,
-          "awayWinPct": 7,
-          "drawPct": 18,
+          "awayWinPct": 6,
+          "drawPct": 19,
           "eventSlug": "fifwc-eng-cdr-2026-07-01"
         }
       },
@@ -9602,7 +9603,7 @@
           "homeId": "belgium",
           "awayId": "senegal",
           "homeWinPct": 46,
-          "awayWinPct": 26,
+          "awayWinPct": 25,
           "drawPct": 30,
           "eventSlug": "fifwc-bel-sen-2026-07-01"
         }
@@ -9628,7 +9629,7 @@
         "polymarket": {
           "homeId": "usa",
           "awayId": "bosnia",
-          "homeWinPct": 72,
+          "homeWinPct": 71,
           "awayWinPct": 11,
           "drawPct": 19,
           "eventSlug": "fifwc-usa-bih-2026-07-01"
@@ -9711,7 +9712,7 @@
         "polymarket": {
           "homeId": "switzerland",
           "awayId": "algeria",
-          "homeWinPct": 47,
+          "homeWinPct": 48,
           "awayWinPct": 24,
           "drawPct": 30,
           "eventSlug": "fifwc-che-alg-2026-07-02"
@@ -9767,8 +9768,8 @@
         "polymarket": {
           "homeId": "argentina",
           "awayId": "capeverde",
-          "homeWinPct": 84,
-          "awayWinPct": 4,
+          "homeWinPct": 85,
+          "awayWinPct": 5,
           "drawPct": 12,
           "eventSlug": "fifwc-arg-cvi-2026-07-03"
         }
@@ -9824,7 +9825,7 @@
           "homeId": "canada",
           "awayId": "morocco",
           "homeWinPct": 20,
-          "awayWinPct": 53,
+          "awayWinPct": 54,
           "drawPct": 28,
           "eventSlug": "fifwc-can-mar-2026-07-04"
         }
@@ -9930,8 +9931,8 @@
         "eventId": "760491",
         "date": "2026-06-30",
         "venue": "Estadio Banorte, Mexico City",
-        "status": "SCHEDULED",
-        "homeScore": 0,
+        "status": "IN_PROGRESS",
+        "homeScore": 2,
         "awayScore": 0,
         "homeId": "mexico",
         "awayId": "ecuador"
