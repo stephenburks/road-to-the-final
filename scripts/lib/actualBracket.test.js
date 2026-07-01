@@ -66,4 +66,22 @@ describe('buildActualBracket', () => {
 		const out = buildActualBracket(daily)
 		expect(out.r32[0].winnerId).toBeUndefined()
 	})
+
+	it('resolves winnerId from the penalty shootout on a knockout draw', () => {
+		const daily = {
+			'2026-06-29': [{ ...match('germany', 'paraguay', '2026-06-29', 'FINISHED', 1, 1), homeShootout: 3, awayShootout: 4 }],
+		}
+		const out = buildActualBracket(daily)
+		expect(out.r32[0]).toMatchObject({ winnerId: 'paraguay', homeShootout: 3, awayShootout: 4 })
+	})
+
+	it('resolves a shootout winner via the scoreboard-only path', () => {
+		const scoreboard = [{
+			eventId: '760489', stage: 'r32', date: '2026-06-29', venue: 'Gillette',
+			status: 'FINISHED', homeScore: 1, awayScore: 1, homeShootout: 3, awayShootout: 4,
+			home: { teamId: 'germany' }, away: { teamId: 'paraguay' },
+		}]
+		const out = buildActualBracket({}, scoreboard)
+		expect(out.r32[0]).toMatchObject({ winnerId: 'paraguay', homeShootout: 3, awayShootout: 4 })
+	})
 })

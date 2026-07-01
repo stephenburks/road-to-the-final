@@ -45,6 +45,13 @@ function venueTimezone(venue) {
  *
  * Falls back to the UTC date string when the venue is unknown.
  */
+// ESPN's shootoutScore is a string ("4") on PK-decided matches and absent
+// otherwise. Return a number when present, else null.
+function parseShootout(raw) {
+	const n = parseInt(raw, 10)
+	return Number.isNaN(n) ? null : n
+}
+
 export function localDateForEvent(eventDateUTC, venue) {
 	if (!eventDateUTC) return null
 	const tz = venueTimezone(venue)
@@ -168,12 +175,19 @@ export async function fetchESPNEventDetails(dateFrom, dateTo) {
 			const hScore = parseInt(homeComp?.score, 10) || 0
 			const aScore = parseInt(awayComp?.score, 10) || 0
 
+			// Penalty-shootout result (knockout draws). ESPN reports the kicks
+			// in `shootoutScore`; without it a PK-decided draw looks unresolved
+			// and never advances a winner into the next round.
+			const hShootout = parseShootout(homeComp?.shootoutScore)
+			const aShootout = parseShootout(awayComp?.shootoutScore)
+
 			if (homeId && awayId) {
 				const key = `${homeId}:${awayId}`
 				if (!matches.has(key)) {
 					matches.set(key, {
 						eventId,
 						homeId, awayId, homeScore: hScore, awayScore: aScore,
+						homeShootout: hShootout, awayShootout: aShootout,
 						status: matchStatus, date: eventDate, clock: matchClock,
 						broadcasts, time: eventTime, venue,
 					})
@@ -190,6 +204,7 @@ export async function fetchESPNEventDetails(dateFrom, dateTo) {
 					home: homeId ? { teamId: homeId } : (homePlaceholder ?? { tbd: true }),
 					away: awayId ? { teamId: awayId } : (awayPlaceholder ?? { tbd: true }),
 					homeScore: hScore, awayScore: aScore,
+					homeShootout: hShootout, awayShootout: aShootout,
 				})
 			}
 

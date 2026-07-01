@@ -155,6 +155,35 @@ function findScoreboardForFeeders(scoreboardBracketEvents, stage, homeFeederEven
 	}) || null
 }
 
+/**
+ * Resolve the advancing team. Regulation/ET is decided on score; a level
+ * score (a knockout draw) is decided by the penalty shootout. Returns
+ * undefined when undecided — missing teams, or a draw with no shootout data
+ * yet (e.g. ESPN hasn't posted the kicks).
+ */
+function decideWinnerId(homeId, awayId, homeScore, awayScore, homeShootout, awayShootout) {
+	if (!homeId || !awayId) return undefined
+	if (homeScore > awayScore) return homeId
+	if (awayScore > homeScore) return awayId
+	if (typeof homeShootout === 'number' && typeof awayShootout === 'number' && homeShootout !== awayShootout) {
+		return homeShootout > awayShootout ? homeId : awayId
+	}
+	return undefined
+}
+
+/** Copy penalty-shootout kicks onto an entry when present. */
+function applyShootout(entry, src) {
+	if (typeof src?.homeShootout === 'number') entry.homeShootout = src.homeShootout
+	if (typeof src?.awayShootout === 'number') entry.awayShootout = src.awayShootout
+}
+
+/** Set winnerId from the entry's current score + shootout, when FINISHED. */
+function applyWinner(entry) {
+	if (entry.status !== 'FINISHED') return
+	const w = decideWinnerId(entry.homeId, entry.awayId, entry.homeScore, entry.awayScore, entry.homeShootout, entry.awayShootout)
+	if (w) entry.winnerId = w
+}
+
 function buildR32Entry(loc, eventId, sb) {
 	const entry = {
 		eventId,
@@ -167,9 +196,8 @@ function buildR32Entry(loc, eventId, sb) {
 	}
 	if (sb?.home?.teamId) entry.homeId = sb.home.teamId
 	if (sb?.away?.teamId) entry.awayId = sb.away.teamId
-	if (entry.status === 'FINISHED' && entry.homeId && entry.awayId && entry.homeScore !== entry.awayScore) {
-		entry.winnerId = entry.homeScore > entry.awayScore ? entry.homeId : entry.awayId
-	}
+	applyShootout(entry, sb)
+	applyWinner(entry)
 	return entry
 }
 
@@ -190,9 +218,8 @@ function buildR16PlusEntry(bracketLocation, sb, homeFeederEventId, awayFeederEve
 	if (sb?.away?.teamId) entry.awayId = sb.away.teamId
 	else if (awayFeederEventId) entry.awayFeederEventId = awayFeederEventId
 
-	if (entry.status === 'FINISHED' && entry.homeId && entry.awayId && entry.homeScore !== entry.awayScore) {
-		entry.winnerId = entry.homeScore > entry.awayScore ? entry.homeId : entry.awayId
-	}
+	applyShootout(entry, sb)
+	applyWinner(entry)
 
 	return entry
 }
@@ -223,9 +250,8 @@ function buildFromScoreboardOnly(bracketEvents) {
 		}
 		applySideFromScoreboard(entry, 'home', e.home, fifaNumberToR32EventId, bracketEvents)
 		applySideFromScoreboard(entry, 'away', e.away, fifaNumberToR32EventId, bracketEvents)
-		if (e.status === 'FINISHED' && entry.homeId && entry.awayId && entry.homeScore !== entry.awayScore) {
-			entry.winnerId = entry.homeScore > entry.awayScore ? entry.homeId : entry.awayId
-		}
+		applyShootout(entry, e)
+		applyWinner(entry)
 		out[e.stage].push(entry)
 	}
 
@@ -265,9 +291,8 @@ function buildFromDailyMatches(dailyMatches) {
 				homeScore: m.homeScore, awayScore: m.awayScore,
 				status: m.status, clock: m.clock, venue: m.venue, broadcasts: m.broadcasts,
 			}
-			if (m.status === 'FINISHED' && m.homeScore !== m.awayScore) {
-				entry.winnerId = m.homeScore > m.awayScore ? m.homeId : m.awayId
-			}
+			applyShootout(entry, m)
+			applyWinner(entry)
 			out[stage].push(entry)
 		}
 	}
