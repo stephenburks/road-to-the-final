@@ -334,7 +334,7 @@ async function main() {
   // diverge from the static BRACKET_PATHS prediction), the per-team path
   // venue/date/opponent must come from observed ESPN data — not from the
   // static guess. See scripts/lib/livePath.js for full rationale.
-  const actualBracket = buildActualBracket(dailyMatches, espnBracketEvents, espnBracketStructure);
+  const actualBracket = buildActualBracket(dailyMatches, espnBracketEvents, espnBracketStructure, existing?.actualBracket);
   for (const t of teams) {
     if (!t) continue;
     t.path = deriveLivePath(t, actualBracket, t.path);

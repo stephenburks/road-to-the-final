@@ -41,14 +41,79 @@ const FINAL_FEEDER_PAIRS = [[1, 2]]
  *      homeFeederEventId?, awayFeederEventId?,
  *      homeScore, awayScore, status, winnerId?, venue?, ... }]
  */
-export function buildActualBracket(dailyMatches, scoreboardBracketEvents = null, bracketStructure = null) {
+export function buildActualBracket(dailyMatches, scoreboardBracketEvents = null, bracketStructure = null, existing = null) {
 	if (bracketStructure && bracketStructure.r32Positions?.size > 0) {
 		return buildFromStructure(scoreboardBracketEvents ?? [], bracketStructure)
+	}
+	// Structure unavailable this run (ESPN bracket page failed or returned an
+	// unparseable shape). A degraded rebuild would drop the authoritative R16+
+	// feeder graph and emit bare placeholders. Prefer carrying forward the
+	// last-known-good bracket, refreshed with the current scoreboard scores.
+	if (existing && hasResolvedStructure(existing)) {
+		return refreshBracketScores(existing, scoreboardBracketEvents ?? [])
 	}
 	if (scoreboardBracketEvents && scoreboardBracketEvents.length > 0) {
 		return buildFromScoreboardOnly(scoreboardBracketEvents)
 	}
 	return buildFromDailyMatches(dailyMatches)
+}
+
+/**
+ * True when `bracket` is worth carrying forward across a failed structure
+ * fetch: it must have R16+ entries AND have come from the authoritative
+ * structure path. buildFromStructure stamps every entry with a numeric
+ * `bracketLocation`; buildFromScoreboardOnly never does. Requiring that
+ * fingerprint is what prevents us from perpetuating scoreboard-only pairings,
+ * which are exactly the wrong-pairing bug the bracket page exists to fix.
+ */
+function hasResolvedStructure(bracket) {
+	if (!bracket) return false
+	const stages = ['r32', 'r16', 'qf', 'sf', 'final']
+	const structureDerived = stages.some(
+		(stage) => Array.isArray(bracket[stage]) && bracket[stage].some((e) => typeof e.bracketLocation === 'number'),
+	)
+	if (!structureDerived) return false
+	return ['r16', 'qf', 'sf', 'final'].some(
+		(stage) => Array.isArray(bracket[stage]) && bracket[stage].length > 0,
+	)
+}
+
+/**
+ * Carry forward a known-good bracket while overlaying the current scoreboard's
+ * live fields (date/venue/status/scores) and resolving any sides that have
+ * since become concrete teams. Entries with no matching scoreboard event are
+ * preserved verbatim — the point is to never lose the feeder graph on a single
+ * flaky fetch.
+ */
+function refreshBracketScores(existing, scoreboardBracketEvents) {
+	const byEventId = new Map()
+	for (const e of scoreboardBracketEvents) {
+		if (e.eventId) byEventId.set(String(e.eventId), e)
+	}
+
+	const out = {}
+	for (const stage of KNOCKOUT_STAGES) {
+		const arr = Array.isArray(existing[stage]) ? existing[stage] : []
+		out[stage] = arr.map((entry) => refreshEntry(entry, byEventId.get(String(entry.eventId))))
+	}
+	return out
+}
+
+function refreshEntry(entry, sb) {
+	const next = { ...entry }
+	if (sb) {
+		if (sb.date != null) next.date = sb.date
+		if (sb.venue != null) next.venue = sb.venue
+		if (sb.status != null) next.status = sb.status
+		if (typeof sb.homeScore === 'number') next.homeScore = sb.homeScore
+		if (typeof sb.awayScore === 'number') next.awayScore = sb.awayScore
+		applyShootout(next, sb)
+		// A side that has since resolved to a real team replaces its feeder ref.
+		if (sb.home?.teamId) { next.homeId = sb.home.teamId; delete next.homeFeederEventId }
+		if (sb.away?.teamId) { next.awayId = sb.away.teamId; delete next.awayFeederEventId }
+	}
+	applyWinner(next)
+	return next
 }
 
 /**
