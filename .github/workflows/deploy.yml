@@ -3,6 +3,14 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches: [main]
+  # The hourly data workflow commits with the default GITHUB_TOKEN, and GitHub
+  # deliberately does NOT fire `push` workflows for GITHUB_TOKEN pushes (recursion
+  # guard). Without this, bot data commits never redeploy and the live site — which
+  # serves data baked into the build — goes stale until a human pushes. Deploying
+  # after each successful data run closes that gap.
+  workflow_run:
+    workflows: ['Update World Cup Data']
+    types: [completed]
   workflow_dispatch:
 
 permissions:
@@ -17,6 +25,9 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+    # For workflow_run triggers, only deploy when the data run actually succeeded.
+    # push / workflow_dispatch events have no workflow_run context, so they pass.
+    if: ${{ github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success' }}
     steps:
       - uses: actions/checkout@v4
 
