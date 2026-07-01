@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-01T15:24:02.017Z",
+  "lastUpdated": "2026-07-01T15:41:31.739Z",
   "snapshotDate": "2026-07-01",
   "isHistorical": false,
   "sourceSummary": {
@@ -929,7 +929,7 @@
         "r16": 100,
         "qf": 43,
         "sf": 21,
-        "final": 10,
+        "final": 9,
         "winner": 3,
         "source": "market"
       },
@@ -1439,7 +1439,7 @@
         "r32": 100,
         "r16": 100,
         "qf": 30,
-        "sf": 6,
+        "sf": 5,
         "final": 2,
         "winner": 0,
         "source": "market"
@@ -1617,7 +1617,7 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 18,
+        "r16": 17,
         "qf": 4,
         "sf": 1,
         "final": 0,
@@ -1904,7 +1904,7 @@
         "r32": 100,
         "r16": 66,
         "qf": 31,
-        "sf": 8,
+        "sf": 7,
         "final": 3,
         "winner": 1,
         "source": "market"
@@ -2086,7 +2086,7 @@
         "r32": 100,
         "r16": 100,
         "qf": 65,
-        "sf": 37,
+        "sf": 36,
         "final": 18,
         "winner": 7,
         "source": "market"
@@ -2664,7 +2664,7 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 83,
+        "r16": 84,
         "qf": 48,
         "sf": 16,
         "final": 5,
@@ -4724,7 +4724,7 @@
         "r32": 100,
         "r16": 56,
         "qf": 12,
-        "sf": 3,
+        "sf": 5,
         "final": 2,
         "winner": 0,
         "source": "market"
@@ -5928,7 +5928,7 @@
         "r32": 100,
         "r16": 42,
         "qf": 18,
-        "sf": 6,
+        "sf": 7,
         "final": 2,
         "winner": 1,
         "source": "market"
@@ -6751,7 +6751,7 @@
       "advanceProbabilities": {
         "r32": 100,
         "r16": 14,
-        "qf": 5,
+        "qf": 4,
         "sf": 2,
         "final": 0,
         "winner": 0,
@@ -7237,8 +7237,8 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 12,
-        "qf": 4,
+        "r16": 13,
+        "qf": 3,
         "sf": 1,
         "final": 0,
         "winner": 0,
@@ -10058,7 +10058,7 @@
           "homeId": "paraguay",
           "awayId": "france",
           "homeWinPct": 5,
-          "awayWinPct": 83,
+          "awayWinPct": 84,
           "drawPct": 13,
           "eventSlug": "fifwc-par-fra-2026-07-04"
         }
