@@ -1,6 +1,6 @@
 import { NAME_TO_ID } from './teams.js'
 import { GROUP_SCHEDULE } from './tournament.js'
-import { tryFetch, log } from './fetchUtil.js'
+import { tryFetch, tryFetchText, FETCH_ERROR, log } from './fetchUtil.js'
 
 const ESPN_SCOREBOARD_BASE = 'https://site.web.api.espn.com/apis/site/v2/sports/soccer/fifa.world/scoreboard'
 const ESPN_BRACKET_PAGE    = 'https://www.espn.com/soccer/bracket/_/tournamentId/fifa.world'
@@ -289,20 +289,14 @@ const ROUND_ID_TO_STAGE = { 1: 'r32', 2: 'r16', 3: 'qf', 4: 'sf', 5: 'final' }
 
 export async function fetchESPNBracketStructure() {
 	const empty = { r32Positions: new Map(), bracketEvents: [] }
-	try {
-		const res = await fetch(ESPN_BRACKET_PAGE, {
-			headers: { 'User-Agent': 'Mozilla/5.0 road-to-the-final' },
-		})
-		if (!res.ok) {
-			log(`⚠  Bracket page fetch failed: HTTP ${res.status}`)
-			return empty
-		}
-		const html = await res.text()
-		return parseBracketPage(html)
-	} catch (e) {
-		log(`⚠  Bracket page fetch error: ${e.message}`)
+	const html = await tryFetchText(ESPN_BRACKET_PAGE, {
+		headers: { 'User-Agent': 'Mozilla/5.0 road-to-the-final' },
+	})
+	if (html === FETCH_ERROR) {
+		log('⚠  Bracket page unavailable — caller carries forward last-known-good structure')
 		return empty
 	}
+	return parseBracketPage(html)
 }
 
 function parseBracketPage(html) {
