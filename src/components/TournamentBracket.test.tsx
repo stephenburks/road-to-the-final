@@ -56,6 +56,19 @@ describe('TournamentBracket', () => {
 		expect(screen.getByText('Final')).toBeInTheDocument()
 	})
 
+	it('shows the penalty-shootout score for a draw decided on penalties', () => {
+		const ab = emptyBracket()
+		ab.r32 = [{
+			date: '2026-06-29', homeId: 'germany', awayId: 'paraguay',
+			homeTeam: 'Germany', awayTeam: 'Paraguay', homeFlag: '🇩🇪', awayFlag: '🇵🇾',
+			homeScore: 1, awayScore: 1, homeShootout: 3, awayShootout: 4,
+			status: 'FINISHED', winnerId: 'paraguay',
+		}]
+		renderWithQuery(<TournamentBracket data={baseData(ab)} selectedTeamId="germany" />)
+		expect(screen.getByText('(3)')).toBeInTheDocument()
+		expect(screen.getByText('(4)')).toBeInTheDocument()
+	})
+
 	it('renders a real R32 match with both team names', () => {
 		const ab = emptyBracket()
 		ab.r32 = [{

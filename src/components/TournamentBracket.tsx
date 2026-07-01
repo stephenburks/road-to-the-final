@@ -18,6 +18,8 @@ interface Slot {
 	away: Side
 	homeScore?: number
 	awayScore?: number
+	homeShootout?: number
+	awayShootout?: number
 	winnerId?: string
 	date?: string
 	venue?: string
@@ -52,6 +54,7 @@ function slotInvolvesTeam(slot: Slot, teamId: string): boolean {
 function SideCell({
 	side,
 	score,
+	shootout,
 	isWinner,
 	isLoser,
 	isSelected,
@@ -59,6 +62,7 @@ function SideCell({
 }: {
 	side: Side
 	score?: number
+	shootout?: number
 	isWinner?: boolean
 	isLoser?: boolean
 	isSelected?: boolean
@@ -94,6 +98,9 @@ function SideCell({
 			<FlagIcon code={id} flag={flag} name={name} size={20} />
 			<span className={styles.sideName}>{name}</span>
 			{typeof score === 'number' && <span className={styles.sideScore}>{score}</span>}
+			{typeof shootout === 'number' && (
+				<span className={styles.sidePens} title="Penalty shootout">{`(${shootout})`}</span>
+			)}
 		</>
 	)
 	return onTeamPeek ? (
@@ -132,6 +139,7 @@ function SlotCard({ slot, selectedTeamId, onTeamPeek }: { slot: Slot; selectedTe
 			<SideCell
 				side={slot.home}
 				score={isFinished || isLive ? slot.homeScore : undefined}
+				shootout={isFinished ? slot.homeShootout : undefined}
 				isWinner={!!homeWinner}
 				isLoser={isFinished && !!slot.winnerId && !homeWinner}
 				isSelected={isSelected}
@@ -140,6 +148,7 @@ function SlotCard({ slot, selectedTeamId, onTeamPeek }: { slot: Slot; selectedTe
 			<SideCell
 				side={slot.away}
 				score={isFinished || isLive ? slot.awayScore : undefined}
+				shootout={isFinished ? slot.awayShootout : undefined}
 				isWinner={!!awayWinner}
 				isLoser={isFinished && !!slot.winnerId && !awayWinner}
 				isSelected={isSelected}

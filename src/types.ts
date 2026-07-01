@@ -146,6 +146,8 @@ export interface DailyMatch {
 	awayId: string
 	homeScore: number
 	awayScore: number
+	homeShootout?: number
+	awayShootout?: number
 	status: 'FINISHED' | 'IN_PROGRESS' | 'SCHEDULED'
 	date: string
 	clock?: string
@@ -169,6 +171,8 @@ export interface BracketMatch {
 	awayFlag: string
 	homeScore: number
 	awayScore: number
+	homeShootout?: number
+	awayShootout?: number
 	status: 'FINISHED' | 'IN_PROGRESS' | 'SCHEDULED'
 	winnerId?: string
 	clock?: string
