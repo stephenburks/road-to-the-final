@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-02T10:39:22.742Z",
+  "lastUpdated": "2026-07-02T12:57:41.486Z",
   "snapshotDate": "2026-07-02",
   "isHistorical": false,
   "sourceSummary": {
@@ -928,7 +928,7 @@
         "r32": 100,
         "r16": 100,
         "qf": 46,
-        "sf": 23,
+        "sf": 22,
         "final": 11,
         "winner": 3,
         "source": "market"
@@ -1827,8 +1827,8 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 66,
-        "qf": 31,
+        "r16": 67,
+        "qf": 30,
         "sf": 8,
         "final": 3,
         "winner": 1,
@@ -2011,7 +2011,7 @@
         "r32": 100,
         "r16": 100,
         "qf": 66,
-        "sf": 35,
+        "sf": 36,
         "final": 18,
         "winner": 6,
         "source": "market"
@@ -2591,7 +2591,7 @@
         "r32": 100,
         "r16": 100,
         "qf": 51,
-        "sf": 19,
+        "sf": 18,
         "final": 7,
         "winner": 3,
         "source": "market"
@@ -4454,7 +4454,7 @@
         "r16": 100,
         "qf": 49,
         "sf": 14,
-        "final": 5,
+        "final": 4,
         "winner": 2,
         "source": "market"
       },
@@ -4627,7 +4627,7 @@
         "r32": 100,
         "r16": 57,
         "qf": 12,
-        "sf": 4,
+        "sf": 3,
         "final": 2,
         "winner": 0,
         "source": "market"
@@ -5043,7 +5043,7 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 87,
+        "r16": 88,
         "qf": 57,
         "sf": 43,
         "final": 22,
@@ -5210,7 +5210,7 @@
       "advanceProbabilities": {
         "r32": 100,
         "r16": 9,
-        "qf": 2,
+        "qf": 3,
         "sf": 1,
         "final": 0,
         "winner": 0,
@@ -6589,10 +6589,10 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 13,
-        "qf": 4,
+        "r16": 12,
+        "qf": 3,
         "sf": 1,
-        "final": 1,
+        "final": 0,
         "winner": 0,
         "source": "market"
       },
@@ -6904,8 +6904,8 @@
       "advanceProbabilities": {
         "r32": 100,
         "r16": 70,
-        "qf": 33,
-        "sf": 24,
+        "qf": 32,
+        "sf": 23,
         "final": 11,
         "winner": 6,
         "source": "market"
@@ -7296,7 +7296,7 @@
         "r16": 80,
         "qf": 53,
         "sf": 22,
-        "final": 9,
+        "final": 10,
         "winner": 2,
         "source": "market"
       },
@@ -7476,7 +7476,7 @@
       "advanceProbabilities": {
         "r32": 100,
         "r16": 100,
-        "qf": 55,
+        "qf": 53,
         "sf": 34,
         "final": 21,
         "winner": 8,
@@ -7639,7 +7639,7 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 30,
+        "r16": 31,
         "qf": 9,
         "sf": 4,
         "final": 2,
@@ -7799,7 +7799,7 @@
       "advanceProbabilities": {
         "r32": 100,
         "r16": 21,
-        "qf": 8,
+        "qf": 9,
         "sf": 2,
         "final": 1,
         "winner": 0,
@@ -9624,9 +9624,9 @@
         "polymarket": {
           "homeId": "spain",
           "awayId": "austria",
-          "homeWinPct": 75,
+          "homeWinPct": 76,
           "awayWinPct": 8,
-          "drawPct": 18,
+          "drawPct": 17,
           "eventSlug": "fifwc-esp-aut-2026-07-02"
         }
       },
@@ -9762,7 +9762,7 @@
           "homeId": "colombia",
           "awayId": "ghana",
           "homeWinPct": 65,
-          "awayWinPct": 13,
+          "awayWinPct": 12,
           "drawPct": 25,
           "eventSlug": "fifwc-col-gha-2026-07-03"
         }
@@ -9847,7 +9847,7 @@
           "homeId": "brazil",
           "awayId": "norway",
           "homeWinPct": 52,
-          "awayWinPct": 22,
+          "awayWinPct": 23,
           "drawPct": 27,
           "eventSlug": "fifwc-bra-nor-2026-07-05"
         }
@@ -9873,9 +9873,9 @@
         "polymarket": {
           "homeId": "mexico",
           "awayId": "england",
-          "homeWinPct": 32,
+          "homeWinPct": 31,
           "awayWinPct": 40,
-          "drawPct": 31,
+          "drawPct": 30,
           "eventSlug": "fifwc-mex-eng-2026-07-05"
         }
       }
@@ -9902,7 +9902,7 @@
         "polymarket": {
           "homeId": "usa",
           "awayId": "belgium",
-          "homeWinPct": 39,
+          "homeWinPct": 38,
           "awayWinPct": 35,
           "drawPct": 28,
           "eventSlug": "fifwc-usa-bel-2026-07-06"
