@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-02T17:47:02.390Z",
+  "lastUpdated": "2026-07-02T19:23:33.642Z",
   "snapshotDate": "2026-07-02",
   "isHistorical": false,
   "sourceSummary": {
@@ -928,7 +928,7 @@
         "r32": 100,
         "r16": 100,
         "qf": 46,
-        "sf": 21,
+        "sf": 22,
         "final": 10,
         "winner": 4,
         "source": "market"
@@ -1429,7 +1429,7 @@
         "r16": 100,
         "qf": 28,
         "sf": 4,
-        "final": 1,
+        "final": 2,
         "winner": 0,
         "source": "market"
       },
@@ -2181,7 +2181,7 @@
         "r32": 100,
         "r16": 100,
         "qf": 72,
-        "sf": 20,
+        "sf": 19,
         "final": 8,
         "winner": 3,
         "source": "market"
@@ -2592,7 +2592,7 @@
         "r16": 100,
         "qf": 52,
         "sf": 18,
-        "final": 7,
+        "final": 6,
         "winner": 3,
         "source": "market"
       },
@@ -2974,7 +2974,7 @@
       "advanceProbabilities": {
         "r32": 100,
         "r16": 44,
-        "qf": 5,
+        "qf": 6,
         "sf": 2,
         "final": 1,
         "winner": 0,
@@ -4452,7 +4452,7 @@
       "advanceProbabilities": {
         "r32": 100,
         "r16": 100,
-        "qf": 48,
+        "qf": 49,
         "sf": 14,
         "final": 5,
         "winner": 2,
@@ -4625,8 +4625,8 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 57,
-        "qf": 13,
+        "r16": 56,
+        "qf": 12,
         "sf": 5,
         "final": 2,
         "winner": 0,
@@ -5043,10 +5043,10 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 89,
-        "qf": 58,
-        "sf": 43,
-        "final": 22,
+        "r16": 87,
+        "qf": 57,
+        "sf": 41,
+        "final": 21,
         "winner": 11,
         "source": "market"
       },
@@ -5059,7 +5059,7 @@
           "detail": "7pts after MD3"
         },
         "r32": {
-          "status": "upcoming",
+          "status": "active",
           "date": "2026-07-02",
           "venue": "SoFi Stadium",
           "city": "Inglewood, California",
@@ -5644,7 +5644,7 @@
         "r16": 100,
         "qf": 93,
         "sf": 76,
-        "final": 55,
+        "final": 56,
         "winner": 35,
         "source": "market"
       },
@@ -6589,7 +6589,7 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 12,
+        "r16": 15,
         "qf": 4,
         "sf": 1,
         "final": 0,
@@ -6605,7 +6605,7 @@
           "detail": "4pts after MD3"
         },
         "r32": {
-          "status": "upcoming",
+          "status": "active",
           "date": "2026-07-02",
           "venue": "SoFi Stadium",
           "city": "Inglewood, California",
@@ -7476,9 +7476,9 @@
       "advanceProbabilities": {
         "r32": 100,
         "r16": 100,
-        "qf": 55,
+        "qf": 54,
         "sf": 33,
-        "final": 22,
+        "final": 21,
         "winner": 8,
         "source": "market"
       },
@@ -7799,7 +7799,7 @@
       "advanceProbabilities": {
         "r32": 100,
         "r16": 22,
-        "qf": 8,
+        "qf": 9,
         "sf": 3,
         "final": 1,
         "winner": 0,
@@ -9612,8 +9612,9 @@
         "awayId": "austria",
         "homeScore": 0,
         "awayScore": 0,
-        "status": "SCHEDULED",
+        "status": "IN_PROGRESS",
         "date": "2026-07-02",
+        "clock": "22'",
         "broadcasts": [
           "FOX",
           "Tele",
@@ -9624,9 +9625,9 @@
         "polymarket": {
           "homeId": "spain",
           "awayId": "austria",
-          "homeWinPct": 76,
-          "awayWinPct": 7,
-          "drawPct": 17,
+          "homeWinPct": 70,
+          "awayWinPct": 9,
+          "drawPct": 20,
           "eventSlug": "fifwc-esp-aut-2026-07-02"
         }
       },
@@ -9678,8 +9679,8 @@
         "polymarket": {
           "homeId": "switzerland",
           "awayId": "algeria",
-          "homeWinPct": 50,
-          "awayWinPct": 20,
+          "homeWinPct": 49,
+          "awayWinPct": 21,
           "drawPct": 29,
           "eventSlug": "fifwc-che-alg-2026-07-02"
         }
@@ -9761,9 +9762,9 @@
         "polymarket": {
           "homeId": "colombia",
           "awayId": "ghana",
-          "homeWinPct": 65,
+          "homeWinPct": 66,
           "awayWinPct": 12,
-          "drawPct": 25,
+          "drawPct": 24,
           "eventSlug": "fifwc-col-gha-2026-07-03"
         }
       }
@@ -9902,7 +9903,7 @@
         "polymarket": {
           "homeId": "usa",
           "awayId": "belgium",
-          "homeWinPct": 37,
+          "homeWinPct": 36,
           "awayWinPct": 35,
           "drawPct": 30,
           "eventSlug": "fifwc-usa-bel-2026-07-06"
@@ -9980,7 +9981,7 @@
         "bracketLocation": 6,
         "date": "2026-07-02",
         "venue": "SoFi Stadium, Inglewood, California",
-        "status": "SCHEDULED",
+        "status": "IN_PROGRESS",
         "homeScore": 0,
         "awayScore": 0,
         "homeId": "spain",
