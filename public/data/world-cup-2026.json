@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-02T19:23:33.642Z",
+  "lastUpdated": "2026-07-02T21:06:18.777Z",
   "snapshotDate": "2026-07-02",
   "isHistorical": false,
   "sourceSummary": {
@@ -930,7 +930,7 @@
         "qf": 46,
         "sf": 22,
         "final": 10,
-        "winner": 4,
+        "winner": 3,
         "source": "market"
       },
       "path": {
@@ -1429,7 +1429,7 @@
         "r16": 100,
         "qf": 28,
         "sf": 4,
-        "final": 2,
+        "final": 1,
         "winner": 0,
         "source": "market"
       },
@@ -2011,7 +2011,7 @@
         "r32": 100,
         "r16": 100,
         "qf": 66,
-        "sf": 35,
+        "sf": 36,
         "final": 19,
         "winner": 6,
         "source": "market"
@@ -2207,7 +2207,7 @@
           "date": "2026-07-07",
           "venue": "TBD",
           "city": "TBD",
-          "opponentDesc": "Spain or Austria",
+          "opponentDesc": "Spain",
           "conditional": true,
           "conditionNote": "Predicted from bracket pairing — venue confirmed once previous match settles"
         },
@@ -2260,18 +2260,8 @@
             "difficulty": 5,
             "label": "Danger",
             "color": "#EF4444",
-            "note": "Predicted (if they win their match)",
-            "pct": 50
-          },
-          {
-            "likelyTeam": "Austria",
-            "flag": "🇦🇹",
-            "fifaRank": 24,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "Predicted (if they win their match)",
-            "pct": 50
+            "note": "Predicted (winner of paired match)",
+            "pct": 100
           }
         ]
       },
@@ -2590,9 +2580,9 @@
       "advanceProbabilities": {
         "r32": 100,
         "r16": 100,
-        "qf": 52,
+        "qf": 51,
         "sf": 18,
-        "final": 6,
+        "final": 7,
         "winner": 3,
         "source": "market"
       },
@@ -3898,7 +3888,7 @@
           "date": "2026-07-07",
           "venue": "TBD",
           "city": "TBD",
-          "opponentDesc": "Spain or Austria",
+          "opponentDesc": "Spain",
           "conditional": true,
           "conditionNote": "Predicted from bracket pairing — venue confirmed once previous match settles"
         },
@@ -3951,18 +3941,8 @@
             "difficulty": 5,
             "label": "Danger",
             "color": "#EF4444",
-            "note": "Predicted (if they win their match)",
-            "pct": 50
-          },
-          {
-            "likelyTeam": "Austria",
-            "flag": "🇦🇹",
-            "fifaRank": 24,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "Predicted (if they win their match)",
-            "pct": 50
+            "note": "Predicted (winner of paired match)",
+            "pct": 100
           }
         ]
       },
@@ -4455,7 +4435,7 @@
         "qf": 49,
         "sf": 14,
         "final": 5,
-        "winner": 2,
+        "winner": 1,
         "source": "market"
       },
       "path": {
@@ -4969,7 +4949,7 @@
       "confederation": "UEFA",
       "fifaRank": 1,
       "eliminated": false,
-      "currentStage": "r32",
+      "currentStage": "r16",
       "groupResults": [
         {
           "matchday": 1,
@@ -5043,11 +5023,11 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 87,
-        "qf": 57,
-        "sf": 41,
-        "final": 21,
-        "winner": 11,
+        "r16": 100,
+        "qf": 65,
+        "sf": 49,
+        "final": 23,
+        "winner": 12,
         "source": "market"
       },
       "path": {
@@ -5059,7 +5039,7 @@
           "detail": "7pts after MD3"
         },
         "r32": {
-          "status": "active",
+          "status": "done",
           "date": "2026-07-02",
           "venue": "SoFi Stadium",
           "city": "Inglewood, California",
@@ -5129,7 +5109,7 @@
           }
         ]
       },
-      "totalGoals": 5
+      "totalGoals": 8
     },
     {
       "id": "capeverde",
@@ -5644,8 +5624,8 @@
         "r16": 100,
         "qf": 93,
         "sf": 76,
-        "final": 56,
-        "winner": 35,
+        "final": 55,
+        "winner": 34,
         "source": "market"
       },
       "path": {
@@ -6407,7 +6387,7 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 34,
+        "r16": 35,
         "qf": 11,
         "sf": 2,
         "final": 2,
@@ -6512,7 +6492,7 @@
       "group": "J",
       "confederation": "UEFA",
       "fifaRank": 24,
-      "eliminated": false,
+      "eliminated": true,
       "currentStage": "r32",
       "groupResults": [
         {
@@ -6589,9 +6569,9 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 15,
-        "qf": 4,
-        "sf": 1,
+        "r16": 0,
+        "qf": 0,
+        "sf": 0,
         "final": 0,
         "winner": 0,
         "source": "market"
@@ -6605,75 +6585,21 @@
           "detail": "4pts after MD3"
         },
         "r32": {
-          "status": "active",
+          "status": "done",
           "date": "2026-07-02",
           "venue": "SoFi Stadium",
           "city": "Inglewood, California",
           "opponentDesc": "Spain",
           "conditional": false
         },
-        "r16": {
-          "status": "future",
-          "date": "2026-07-07",
-          "venue": "TBD",
-          "city": "TBD",
-          "opponentDesc": "Morocco",
-          "conditional": true,
-          "conditionNote": "Predicted from bracket pairing — venue confirmed once previous match settles"
-        },
-        "qf": {
-          "status": "future",
-          "date": "2026-07-11",
-          "venue": "TBD",
-          "city": "TBD",
-          "opponentDesc": "Opponent TBD",
-          "conditional": true,
-          "conditionNote": "Venue + opponent confirmed once bracket is drawn"
-        },
-        "sf": {
-          "status": "future",
-          "date": "2026-07-14",
-          "venue": "TBD",
-          "city": "TBD",
-          "opponentDesc": "Opponent TBD",
-          "conditional": true,
-          "conditionNote": "Venue + opponent confirmed once bracket is drawn"
-        },
-        "final": {
-          "status": "future",
-          "date": "2026-07-19",
-          "venue": "TBD",
-          "city": "TBD",
-          "opponentDesc": "Opponent TBD",
-          "conditional": true,
-          "conditionNote": "Venue + opponent confirmed once bracket is drawn"
-        }
+        "r16": null,
+        "qf": null,
+        "sf": null,
+        "final": null
       },
       "possibleOpponents": {
-        "r32": [
-          {
-            "likelyTeam": "Spain",
-            "flag": "🇪🇸",
-            "fifaRank": 1,
-            "difficulty": 5,
-            "label": "Danger",
-            "color": "#EF4444",
-            "note": "Confirmed opponent",
-            "pct": 100
-          }
-        ],
-        "r16": [
-          {
-            "likelyTeam": "Morocco",
-            "flag": "🇲🇦",
-            "fifaRank": 14,
-            "difficulty": 4,
-            "label": "Tough",
-            "color": "#FB923C",
-            "note": "Predicted (winner of paired match)",
-            "pct": 100
-          }
-        ]
+        "r32": [],
+        "r16": []
       },
       "totalGoals": 6
     },
@@ -6904,9 +6830,9 @@
       "advanceProbabilities": {
         "r32": 100,
         "r16": 71,
-        "qf": 34,
+        "qf": 31,
         "sf": 22,
-        "final": 11,
+        "final": 12,
         "winner": 6,
         "source": "market"
       },
@@ -7641,7 +7567,7 @@
         "r32": 100,
         "r16": 30,
         "qf": 9,
-        "sf": 4,
+        "sf": 6,
         "final": 2,
         "winner": 0,
         "source": "market"
@@ -9610,26 +9536,17 @@
         "awayTeam": "Austria",
         "awayFlag": "🇦🇹",
         "awayId": "austria",
-        "homeScore": 0,
+        "homeScore": 3,
         "awayScore": 0,
-        "status": "IN_PROGRESS",
+        "status": "FINISHED",
         "date": "2026-07-02",
-        "clock": "22'",
         "broadcasts": [
           "FOX",
           "Tele",
           "FOX One"
         ],
         "time": "2026-07-02T19:00Z",
-        "venue": "SoFi Stadium, Inglewood, California",
-        "polymarket": {
-          "homeId": "spain",
-          "awayId": "austria",
-          "homeWinPct": 70,
-          "awayWinPct": 9,
-          "drawPct": 20,
-          "eventSlug": "fifwc-esp-aut-2026-07-02"
-        }
+        "venue": "SoFi Stadium, Inglewood, California"
       },
       {
         "homeTeam": "Portugal",
@@ -9654,7 +9571,7 @@
           "awayId": "croatia",
           "homeWinPct": 58,
           "awayWinPct": 17,
-          "drawPct": 25,
+          "drawPct": 26,
           "eventSlug": "fifwc-prt-hrv-2026-07-02"
         }
       },
@@ -9680,8 +9597,8 @@
           "homeId": "switzerland",
           "awayId": "algeria",
           "homeWinPct": 49,
-          "awayWinPct": 21,
-          "drawPct": 29,
+          "awayWinPct": 22,
+          "drawPct": 30,
           "eventSlug": "fifwc-che-alg-2026-07-02"
         }
       }
@@ -9762,9 +9679,9 @@
         "polymarket": {
           "homeId": "colombia",
           "awayId": "ghana",
-          "homeWinPct": 66,
-          "awayWinPct": 12,
-          "drawPct": 24,
+          "homeWinPct": 68,
+          "awayWinPct": 11,
+          "drawPct": 23,
           "eventSlug": "fifwc-col-gha-2026-07-03"
         }
       }
@@ -9847,7 +9764,7 @@
         "polymarket": {
           "homeId": "brazil",
           "awayId": "norway",
-          "homeWinPct": 52,
+          "homeWinPct": 53,
           "awayWinPct": 22,
           "drawPct": 27,
           "eventSlug": "fifwc-bra-nor-2026-07-05"
@@ -9874,7 +9791,7 @@
         "polymarket": {
           "homeId": "mexico",
           "awayId": "england",
-          "homeWinPct": 31,
+          "homeWinPct": 32,
           "awayWinPct": 40,
           "drawPct": 31,
           "eventSlug": "fifwc-mex-eng-2026-07-05"
@@ -9981,11 +9898,12 @@
         "bracketLocation": 6,
         "date": "2026-07-02",
         "venue": "SoFi Stadium, Inglewood, California",
-        "status": "IN_PROGRESS",
-        "homeScore": 0,
+        "status": "FINISHED",
+        "homeScore": 3,
         "awayScore": 0,
         "homeId": "spain",
-        "awayId": "austria"
+        "awayId": "austria",
+        "winnerId": "spain"
       },
       {
         "eventId": "760494",
