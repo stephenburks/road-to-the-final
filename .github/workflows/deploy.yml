@@ -3,14 +3,10 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches: [main]
-  # The hourly data workflow commits with the default GITHUB_TOKEN, and GitHub
-  # deliberately does NOT fire `push` workflows for GITHUB_TOKEN pushes (recursion
-  # guard). Without this, bot data commits never redeploy and the live site — which
-  # serves data baked into the build — goes stale until a human pushes. Deploying
-  # after each successful data run closes that gap.
-  workflow_run:
-    workflows: ['Update World Cup Data']
-    types: [completed]
+  # The hourly data workflow commits with the default GITHUB_TOKEN, which does
+  # NOT fire `push` workflows (recursion guard), so it dispatches this workflow
+  # explicitly (workflow_dispatch is an allowed exception) — but only when the
+  # data actually changed, so we don't rebuild + redeploy on every no-op run.
   workflow_dispatch:
 
 permissions:
@@ -20,14 +16,15 @@ permissions:
 
 concurrency:
   group: pages
-  cancel-in-progress: false
+  # Deploys are now infrequent (only on real data changes), so if a newer one
+  # starts, supersede the older in-flight run rather than queueing behind it —
+  # we always want the latest content live, and this avoids pile-ups behind a
+  # deployment that GitHub Pages is slow to release.
+  cancel-in-progress: true
 
 jobs:
   build:
     runs-on: ubuntu-latest
-    # For workflow_run triggers, only deploy when the data run actually succeeded.
-    # push / workflow_dispatch events have no workflow_run context, so they pass.
-    if: ${{ github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success' }}
     steps:
       - uses: actions/checkout@v4
 
