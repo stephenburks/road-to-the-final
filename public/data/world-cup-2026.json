@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-03T17:25:10.122Z",
+  "lastUpdated": "2026-07-03T19:21:17.476Z",
   "snapshotDate": "2026-07-03",
   "isHistorical": false,
   "sourceSummary": {
@@ -1828,7 +1828,7 @@
       "advanceProbabilities": {
         "r32": 100,
         "r16": 100,
-        "qf": 43,
+        "qf": 44,
         "sf": 12,
         "final": 5,
         "winner": 1,
@@ -2010,7 +2010,7 @@
       "advanceProbabilities": {
         "r32": 100,
         "r16": 100,
-        "qf": 66,
+        "qf": 67,
         "sf": 35,
         "final": 18,
         "winner": 7,
@@ -2181,7 +2181,7 @@
         "r32": 100,
         "r16": 100,
         "qf": 73,
-        "sf": 18,
+        "sf": 19,
         "final": 8,
         "winner": 3,
         "source": "market"
@@ -2769,7 +2769,7 @@
         "r32": 100,
         "r16": 100,
         "qf": 8,
-        "sf": 4,
+        "sf": 3,
         "final": 1,
         "winner": 0,
         "source": "market"
@@ -2963,9 +2963,9 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 41,
+        "r16": 42,
         "qf": 5,
-        "sf": 2,
+        "sf": 1,
         "final": 0,
         "winner": 0,
         "source": "market"
@@ -2979,7 +2979,7 @@
           "detail": "4pts after MD3"
         },
         "r32": {
-          "status": "upcoming",
+          "status": "active",
           "date": "2026-07-03",
           "venue": "AT&T Stadium",
           "city": "Arlington, Texas",
@@ -4605,7 +4605,7 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 60,
+        "r16": 57,
         "qf": 12,
         "sf": 5,
         "final": 2,
@@ -4621,7 +4621,7 @@
           "detail": "5pts after MD3"
         },
         "r32": {
-          "status": "upcoming",
+          "status": "active",
           "date": "2026-07-03",
           "venue": "AT&T Stadium",
           "city": "Arlington, Texas",
@@ -5025,7 +5025,7 @@
         "r32": 100,
         "r16": 100,
         "qf": 66,
-        "sf": 49,
+        "sf": 50,
         "final": 23,
         "winner": 13,
         "source": "market"
@@ -5189,7 +5189,7 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 8,
+        "r16": 7,
         "qf": 3,
         "sf": 1,
         "final": 0,
@@ -6016,7 +6016,7 @@
       "advanceProbabilities": {
         "r32": 100,
         "r16": 100,
-        "qf": 35,
+        "qf": 34,
         "sf": 17,
         "final": 6,
         "winner": 2,
@@ -6194,7 +6194,7 @@
         "r32": 100,
         "r16": 94,
         "qf": 83,
-        "sf": 65,
+        "sf": 66,
         "final": 40,
         "winner": 19,
         "source": "market"
@@ -6738,7 +6738,7 @@
         "r16": 100,
         "qf": 35,
         "sf": 23,
-        "final": 13,
+        "final": 14,
         "winner": 6,
         "source": "market"
       },
@@ -7127,7 +7127,7 @@
         "r32": 100,
         "r16": 81,
         "qf": 52,
-        "sf": 22,
+        "sf": 23,
         "final": 10,
         "winner": 2,
         "source": "market"
@@ -7308,9 +7308,9 @@
       "advanceProbabilities": {
         "r32": 100,
         "r16": 100,
-        "qf": 55,
+        "qf": 54,
         "sf": 32,
-        "final": 20,
+        "final": 19,
         "winner": 7,
         "source": "market"
       },
@@ -7577,8 +7577,8 @@
       "advanceProbabilities": {
         "r32": 100,
         "r16": 20,
-        "qf": 6,
-        "sf": 2,
+        "qf": 7,
+        "sf": 3,
         "final": 0,
         "winner": 0,
         "source": "market"
@@ -9447,10 +9447,11 @@
         "awayTeam": "Egypt",
         "awayFlag": "🇪🇬",
         "awayId": "egypt",
-        "homeScore": 0,
-        "awayScore": 0,
-        "status": "SCHEDULED",
+        "homeScore": 1,
+        "awayScore": 1,
+        "status": "IN_PROGRESS",
         "date": "2026-07-03",
+        "clock": "59'",
         "broadcasts": [
           "FOX",
           "Tele",
@@ -9461,9 +9462,9 @@
         "polymarket": {
           "homeId": "australia",
           "awayId": "egypt",
-          "homeWinPct": 27,
-          "awayWinPct": 41,
-          "drawPct": 34,
+          "homeWinPct": 8,
+          "awayWinPct": 67,
+          "drawPct": 27,
           "eventSlug": "fifwc-aus-egy-2026-07-03"
         }
       },
@@ -9545,7 +9546,7 @@
           "homeId": "canada",
           "awayId": "morocco",
           "homeWinPct": 19,
-          "awayWinPct": 55,
+          "awayWinPct": 54,
           "drawPct": 28,
           "eventSlug": "fifwc-can-mar-2026-07-04"
         }
@@ -9857,9 +9858,9 @@
         "bracketLocation": 14,
         "date": "2026-07-03",
         "venue": "AT&T Stadium, Arlington, Texas",
-        "status": "SCHEDULED",
-        "homeScore": 0,
-        "awayScore": 0,
+        "status": "IN_PROGRESS",
+        "homeScore": 1,
+        "awayScore": 1,
         "homeId": "australia",
         "awayId": "egypt"
       },
