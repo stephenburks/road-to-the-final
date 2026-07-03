@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-03T19:21:17.476Z",
+  "lastUpdated": "2026-07-03T21:05:38.664Z",
   "snapshotDate": "2026-07-03",
   "isHistorical": false,
   "sourceSummary": {
@@ -2581,9 +2581,9 @@
         "r32": 100,
         "r16": 100,
         "qf": 51,
-        "sf": 19,
+        "sf": 18,
         "final": 6,
-        "winner": 3,
+        "winner": 2,
         "source": "market"
       },
       "path": {
@@ -2769,8 +2769,8 @@
         "r32": 100,
         "r16": 100,
         "qf": 8,
-        "sf": 3,
-        "final": 1,
+        "sf": 4,
+        "final": 0,
         "winner": 0,
         "source": "market"
       },
@@ -2863,7 +2863,7 @@
       "confederation": "AFC",
       "fifaRank": 26,
       "eliminated": false,
-      "currentStage": "r32",
+      "currentStage": "r16",
       "groupResults": [
         {
           "matchday": 1,
@@ -2963,9 +2963,9 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 42,
-        "qf": 5,
-        "sf": 1,
+        "r16": 0,
+        "qf": 0,
+        "sf": 0,
         "final": 0,
         "winner": 0,
         "source": "market"
@@ -2979,7 +2979,7 @@
           "detail": "4pts after MD3"
         },
         "r32": {
-          "status": "active",
+          "status": "done",
           "date": "2026-07-03",
           "venue": "AT&T Stadium",
           "city": "Arlington, Texas",
@@ -3059,7 +3059,7 @@
           }
         ]
       },
-      "totalGoals": 2
+      "totalGoals": 3
     },
     {
       "id": "turkey",
@@ -4526,7 +4526,7 @@
       "confederation": "CAF",
       "fifaRank": 34,
       "eliminated": false,
-      "currentStage": "r32",
+      "currentStage": "r16",
       "groupResults": [
         {
           "matchday": 1,
@@ -4605,9 +4605,9 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 57,
-        "qf": 12,
-        "sf": 5,
+        "r16": 100,
+        "qf": 14,
+        "sf": 7,
         "final": 2,
         "winner": 0,
         "source": "market"
@@ -4621,7 +4621,7 @@
           "detail": "5pts after MD3"
         },
         "r32": {
-          "status": "active",
+          "status": "done",
           "date": "2026-07-03",
           "venue": "AT&T Stadium",
           "city": "Arlington, Texas",
@@ -4701,7 +4701,7 @@
           }
         ]
       },
-      "totalGoals": 5
+      "totalGoals": 6
     },
     {
       "id": "iran",
@@ -5025,7 +5025,7 @@
         "r32": 100,
         "r16": 100,
         "qf": 66,
-        "sf": 50,
+        "sf": 51,
         "final": 23,
         "winner": 13,
         "source": "market"
@@ -6017,7 +6017,7 @@
         "r32": 100,
         "r16": 100,
         "qf": 34,
-        "sf": 17,
+        "sf": 16,
         "final": 6,
         "winner": 2,
         "source": "market"
@@ -6195,7 +6195,7 @@
         "r16": 94,
         "qf": 83,
         "sf": 66,
-        "final": 40,
+        "final": 41,
         "winner": 19,
         "source": "market"
       },
@@ -6737,7 +6737,7 @@
         "r32": 100,
         "r16": 100,
         "qf": 35,
-        "sf": 23,
+        "sf": 24,
         "final": 14,
         "winner": 6,
         "source": "market"
@@ -7127,7 +7127,7 @@
         "r32": 100,
         "r16": 81,
         "qf": 52,
-        "sf": 23,
+        "sf": 25,
         "final": 10,
         "winner": 2,
         "source": "market"
@@ -7153,7 +7153,7 @@
           "date": "2026-07-06",
           "venue": "TBD",
           "city": "TBD",
-          "opponentDesc": "Australia or Egypt",
+          "opponentDesc": "Egypt",
           "conditional": true,
           "conditionNote": "Predicted from bracket pairing — venue confirmed once previous match settles"
         },
@@ -7200,24 +7200,14 @@
         ],
         "r16": [
           {
-            "likelyTeam": "Australia",
-            "flag": "🇦🇺",
-            "fifaRank": 26,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "Predicted (if they win their match)",
-            "pct": 50
-          },
-          {
             "likelyTeam": "Egypt",
             "flag": "🇪🇬",
             "fifaRank": 34,
             "difficulty": 3,
             "label": "Moderate",
             "color": "#F59E0B",
-            "note": "Predicted (if they win their match)",
-            "pct": 50
+            "note": "Predicted (winner of paired match)",
+            "pct": 100
           }
         ]
       },
@@ -7309,8 +7299,8 @@
         "r32": 100,
         "r16": 100,
         "qf": 54,
-        "sf": 32,
-        "final": 19,
+        "sf": 34,
+        "final": 18,
         "winner": 7,
         "source": "market"
       },
@@ -7604,7 +7594,7 @@
           "date": "2026-07-06",
           "venue": "TBD",
           "city": "TBD",
-          "opponentDesc": "Australia or Egypt",
+          "opponentDesc": "Egypt",
           "conditional": true,
           "conditionNote": "Predicted from bracket pairing — venue confirmed once previous match settles"
         },
@@ -7651,24 +7641,14 @@
         ],
         "r16": [
           {
-            "likelyTeam": "Australia",
-            "flag": "🇦🇺",
-            "fifaRank": 26,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "Predicted (if they win their match)",
-            "pct": 50
-          },
-          {
             "likelyTeam": "Egypt",
             "flag": "🇪🇬",
             "fifaRank": 34,
             "difficulty": 3,
             "label": "Moderate",
             "color": "#F59E0B",
-            "note": "Predicted (if they win their match)",
-            "pct": 50
+            "note": "Predicted (winner of paired match)",
+            "pct": 100
           }
         ]
       },
@@ -9449,24 +9429,17 @@
         "awayId": "egypt",
         "homeScore": 1,
         "awayScore": 1,
-        "status": "IN_PROGRESS",
+        "homeShootout": 2,
+        "awayShootout": 4,
+        "status": "FINISHED",
         "date": "2026-07-03",
-        "clock": "59'",
         "broadcasts": [
           "FOX",
           "Tele",
           "FOX One"
         ],
         "time": "2026-07-03T18:00Z",
-        "venue": "AT&T Stadium, Arlington, Texas",
-        "polymarket": {
-          "homeId": "australia",
-          "awayId": "egypt",
-          "homeWinPct": 8,
-          "awayWinPct": 67,
-          "drawPct": 27,
-          "eventSlug": "fifwc-aus-egy-2026-07-03"
-        }
+        "venue": "AT&T Stadium, Arlington, Texas"
       },
       {
         "homeTeam": "Argentina",
@@ -9490,7 +9463,7 @@
           "homeId": "argentina",
           "awayId": "capeverde",
           "homeWinPct": 86,
-          "awayWinPct": 4,
+          "awayWinPct": 3,
           "drawPct": 11,
           "eventSlug": "fifwc-arg-cvi-2026-07-03"
         }
@@ -9545,8 +9518,8 @@
         "polymarket": {
           "homeId": "canada",
           "awayId": "morocco",
-          "homeWinPct": 19,
-          "awayWinPct": 54,
+          "homeWinPct": 20,
+          "awayWinPct": 51,
           "drawPct": 28,
           "eventSlug": "fifwc-can-mar-2026-07-04"
         }
@@ -9858,11 +9831,14 @@
         "bracketLocation": 14,
         "date": "2026-07-03",
         "venue": "AT&T Stadium, Arlington, Texas",
-        "status": "IN_PROGRESS",
+        "status": "FINISHED",
         "homeScore": 1,
         "awayScore": 1,
         "homeId": "australia",
-        "awayId": "egypt"
+        "awayId": "egypt",
+        "homeShootout": 2,
+        "awayShootout": 4,
+        "winnerId": "egypt"
       },
       {
         "eventId": "760498",
