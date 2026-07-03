@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-03T02:55:01.842Z",
+  "lastUpdated": "2026-07-03T06:32:41.540Z",
   "snapshotDate": "2026-07-03",
   "isHistorical": false,
   "sourceSummary": {
@@ -930,7 +930,7 @@
         "qf": 47,
         "sf": 22,
         "final": 11,
-        "winner": 4,
+        "winner": 3,
         "source": "market"
       },
       "path": {
@@ -1761,7 +1761,7 @@
       "confederation": "UEFA",
       "fifaRank": 17,
       "eliminated": false,
-      "currentStage": "r32",
+      "currentStage": "r16",
       "groupResults": [
         {
           "matchday": 1,
@@ -1827,10 +1827,10 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 68,
-        "qf": 27,
-        "sf": 9,
-        "final": 3,
+        "r16": 100,
+        "qf": 42,
+        "sf": 12,
+        "final": 5,
         "winner": 1,
         "source": "market"
       },
@@ -1843,7 +1843,7 @@
           "detail": "7pts after MD3"
         },
         "r32": {
-          "status": "upcoming",
+          "status": "done",
           "date": "2026-07-02",
           "venue": "BC Place",
           "city": "Vancouver",
@@ -1923,7 +1923,7 @@
           }
         ]
       },
-      "totalGoals": 7
+      "totalGoals": 9
     },
     {
       "id": "brazil",
@@ -2011,7 +2011,7 @@
         "r32": 100,
         "r16": 100,
         "qf": 66,
-        "sf": 34,
+        "sf": 35,
         "final": 19,
         "winner": 6,
         "source": "market"
@@ -2180,8 +2180,8 @@
       "advanceProbabilities": {
         "r32": 100,
         "r16": 100,
-        "qf": 73,
-        "sf": 20,
+        "qf": 72,
+        "sf": 19,
         "final": 8,
         "winner": 2,
         "source": "market"
@@ -2581,8 +2581,8 @@
         "r32": 100,
         "r16": 100,
         "qf": 51,
-        "sf": 19,
-        "final": 7,
+        "sf": 20,
+        "final": 6,
         "winner": 3,
         "source": "market"
       },
@@ -2770,7 +2770,7 @@
         "r16": 100,
         "qf": 8,
         "sf": 4,
-        "final": 2,
+        "final": 1,
         "winner": 0,
         "source": "market"
       },
@@ -2963,8 +2963,8 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 44,
-        "qf": 5,
+        "r16": 43,
+        "qf": 6,
         "sf": 2,
         "final": 1,
         "winner": 0,
@@ -4432,7 +4432,7 @@
       "advanceProbabilities": {
         "r32": 100,
         "r16": 100,
-        "qf": 49,
+        "qf": 48,
         "sf": 13,
         "final": 5,
         "winner": 1,
@@ -4605,7 +4605,7 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 56,
+        "r16": 58,
         "qf": 12,
         "sf": 5,
         "final": 2,
@@ -5189,8 +5189,8 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 8,
-        "qf": 3,
+        "r16": 7,
+        "qf": 2,
         "sf": 1,
         "final": 0,
         "winner": 0,
@@ -5217,7 +5217,7 @@
           "date": "2026-07-06",
           "venue": "TBD",
           "city": "TBD",
-          "opponentDesc": "Switzerland or Algeria",
+          "opponentDesc": "Switzerland",
           "conditional": true,
           "conditionNote": "Predicted from bracket pairing — venue confirmed once previous match settles"
         },
@@ -5270,18 +5270,8 @@
             "difficulty": 4,
             "label": "Tough",
             "color": "#FB923C",
-            "note": "Predicted (if they win their match)",
-            "pct": 50
-          },
-          {
-            "likelyTeam": "Algeria",
-            "flag": "🇩🇿",
-            "fifaRank": 35,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "Predicted (if they win their match)",
-            "pct": 50
+            "note": "Predicted (winner of paired match)",
+            "pct": 100
           }
         ]
       },
@@ -5623,8 +5613,8 @@
         "r32": 100,
         "r16": 100,
         "qf": 93,
-        "sf": 75,
-        "final": 54,
+        "sf": 76,
+        "final": 55,
         "winner": 34,
         "source": "market"
       },
@@ -6028,7 +6018,7 @@
         "r16": 100,
         "qf": 35,
         "sf": 18,
-        "final": 5,
+        "final": 6,
         "winner": 2,
         "source": "market"
       },
@@ -6204,9 +6194,9 @@
         "r32": 100,
         "r16": 93,
         "qf": 83,
-        "sf": 65,
-        "final": 40,
-        "winner": 20,
+        "sf": 67,
+        "final": 41,
+        "winner": 19,
         "source": "market"
       },
       "path": {
@@ -6230,7 +6220,7 @@
           "date": "2026-07-05",
           "venue": "TBD",
           "city": "TBD",
-          "opponentDesc": "Switzerland or Algeria",
+          "opponentDesc": "Switzerland",
           "conditional": true,
           "conditionNote": "Predicted from bracket pairing — venue confirmed once previous match settles"
         },
@@ -6283,18 +6273,8 @@
             "difficulty": 4,
             "label": "Tough",
             "color": "#FB923C",
-            "note": "Predicted (if they win their match)",
-            "pct": 50
-          },
-          {
-            "likelyTeam": "Algeria",
-            "flag": "🇩🇿",
-            "fifaRank": 35,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "Predicted (if they win their match)",
-            "pct": 50
+            "note": "Predicted (winner of paired match)",
+            "pct": 100
           }
         ]
       },
@@ -6307,7 +6287,7 @@
       "group": "J",
       "confederation": "CAF",
       "fifaRank": 35,
-      "eliminated": false,
+      "eliminated": true,
       "currentStage": "r32",
       "groupResults": [
         {
@@ -6377,10 +6357,10 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 34,
-        "qf": 11,
-        "sf": 2,
-        "final": 1,
+        "r16": 0,
+        "qf": 0,
+        "sf": 0,
+        "final": 0,
         "winner": 0,
         "source": "market"
       },
@@ -6393,85 +6373,21 @@
           "detail": "4pts after MD3"
         },
         "r32": {
-          "status": "upcoming",
+          "status": "done",
           "date": "2026-07-02",
           "venue": "BC Place",
           "city": "Vancouver",
           "opponentDesc": "Switzerland",
           "conditional": false
         },
-        "r16": {
-          "status": "future",
-          "date": "2026-07-07",
-          "venue": "TBD",
-          "city": "TBD",
-          "opponentDesc": "Argentina or Cape Verde",
-          "conditional": true,
-          "conditionNote": "Predicted from bracket pairing — venue confirmed once previous match settles"
-        },
-        "qf": {
-          "status": "future",
-          "date": "2026-07-11",
-          "venue": "TBD",
-          "city": "TBD",
-          "opponentDesc": "Opponent TBD",
-          "conditional": true,
-          "conditionNote": "Venue + opponent confirmed once bracket is drawn"
-        },
-        "sf": {
-          "status": "future",
-          "date": "2026-07-14",
-          "venue": "TBD",
-          "city": "TBD",
-          "opponentDesc": "Opponent TBD",
-          "conditional": true,
-          "conditionNote": "Venue + opponent confirmed once bracket is drawn"
-        },
-        "final": {
-          "status": "future",
-          "date": "2026-07-19",
-          "venue": "TBD",
-          "city": "TBD",
-          "opponentDesc": "Opponent TBD",
-          "conditional": true,
-          "conditionNote": "Venue + opponent confirmed once bracket is drawn"
-        }
+        "r16": null,
+        "qf": null,
+        "sf": null,
+        "final": null
       },
       "possibleOpponents": {
-        "r32": [
-          {
-            "likelyTeam": "Switzerland",
-            "flag": "🇨🇭",
-            "fifaRank": 17,
-            "difficulty": 4,
-            "label": "Tough",
-            "color": "#FB923C",
-            "note": "Confirmed opponent",
-            "pct": 100
-          }
-        ],
-        "r16": [
-          {
-            "likelyTeam": "Argentina",
-            "flag": "🇦🇷",
-            "fifaRank": 2,
-            "difficulty": 5,
-            "label": "Danger",
-            "color": "#EF4444",
-            "note": "Predicted (if they win their match)",
-            "pct": 50
-          },
-          {
-            "likelyTeam": "Cape Verde",
-            "flag": "🇨🇻",
-            "fifaRank": 62,
-            "difficulty": 1,
-            "label": "Favorable",
-            "color": "#22C55E",
-            "note": "Predicted (if they win their match)",
-            "pct": 50
-          }
-        ]
+        "r32": [],
+        "r16": []
       },
       "totalGoals": 5
     },
@@ -7209,8 +7125,8 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 79,
-        "qf": 52,
+        "r16": 80,
+        "qf": 54,
         "sf": 22,
         "final": 10,
         "winner": 2,
@@ -7393,9 +7309,9 @@
         "r32": 100,
         "r16": 100,
         "qf": 54,
-        "sf": 34,
+        "sf": 33,
         "final": 21,
-        "winner": 8,
+        "winner": 7,
         "source": "market"
       },
       "path": {
@@ -7661,8 +7577,8 @@
       "advanceProbabilities": {
         "r32": 100,
         "r16": 21,
-        "qf": 9,
-        "sf": 3,
+        "qf": 8,
+        "sf": 2,
         "final": 1,
         "winner": 0,
         "source": "market"
@@ -9510,9 +9426,9 @@
         "awayTeam": "Algeria",
         "awayFlag": "🇩🇿",
         "awayId": "algeria",
-        "homeScore": 0,
+        "homeScore": 2,
         "awayScore": 0,
-        "status": "SCHEDULED",
+        "status": "FINISHED",
         "date": "2026-07-02",
         "broadcasts": [
           "FS1",
@@ -9520,15 +9436,7 @@
           "FOX One"
         ],
         "time": "2026-07-03T03:00Z",
-        "venue": "BC Place, Vancouver",
-        "polymarket": {
-          "homeId": "switzerland",
-          "awayId": "algeria",
-          "homeWinPct": 49,
-          "awayWinPct": 21,
-          "drawPct": 31,
-          "eventSlug": "fifwc-che-alg-2026-07-02"
-        }
+        "venue": "BC Place, Vancouver"
       }
     ],
     "2026-07-03": [
@@ -9553,8 +9461,8 @@
         "polymarket": {
           "homeId": "australia",
           "awayId": "egypt",
-          "homeWinPct": 28,
-          "awayWinPct": 39,
+          "homeWinPct": 27,
+          "awayWinPct": 41,
           "drawPct": 34,
           "eventSlug": "fifwc-aus-egy-2026-07-03"
         }
@@ -9607,9 +9515,9 @@
         "polymarket": {
           "homeId": "colombia",
           "awayId": "ghana",
-          "homeWinPct": 68,
-          "awayWinPct": 11,
-          "drawPct": 23,
+          "homeWinPct": 69,
+          "awayWinPct": 10,
+          "drawPct": 22,
           "eventSlug": "fifwc-col-gha-2026-07-03"
         }
       }
@@ -9767,7 +9675,7 @@
         "polymarket": {
           "homeId": "usa",
           "awayId": "belgium",
-          "homeWinPct": 37,
+          "homeWinPct": 36,
           "awayWinPct": 35,
           "drawPct": 30,
           "eventSlug": "fifwc-usa-bel-2026-07-06"
@@ -9952,11 +9860,12 @@
         "bracketLocation": 15,
         "date": "2026-07-02",
         "venue": "BC Place, Vancouver",
-        "status": "SCHEDULED",
-        "homeScore": 0,
+        "status": "FINISHED",
+        "homeScore": 2,
         "awayScore": 0,
         "homeId": "switzerland",
-        "awayId": "algeria"
+        "awayId": "algeria",
+        "winnerId": "switzerland"
       },
       {
         "eventId": "760501",
