@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-03T15:59:51.662Z",
+  "lastUpdated": "2026-07-03T17:25:10.122Z",
   "snapshotDate": "2026-07-03",
   "isHistorical": false,
   "sourceSummary": {
@@ -2011,7 +2011,7 @@
         "r32": 100,
         "r16": 100,
         "qf": 66,
-        "sf": 36,
+        "sf": 35,
         "final": 18,
         "winner": 7,
         "source": "market"
@@ -2966,7 +2966,7 @@
         "r16": 41,
         "qf": 5,
         "sf": 2,
-        "final": 1,
+        "final": 0,
         "winner": 0,
         "source": "market"
       },
@@ -4432,8 +4432,8 @@
       "advanceProbabilities": {
         "r32": 100,
         "r16": 100,
-        "qf": 48,
-        "sf": 15,
+        "qf": 49,
+        "sf": 14,
         "final": 4,
         "winner": 1,
         "source": "market"
@@ -5189,7 +5189,7 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 7,
+        "r16": 8,
         "qf": 3,
         "sf": 1,
         "final": 0,
@@ -6017,7 +6017,7 @@
         "r32": 100,
         "r16": 100,
         "qf": 35,
-        "sf": 18,
+        "sf": 17,
         "final": 6,
         "winner": 2,
         "source": "market"
@@ -7308,7 +7308,7 @@
       "advanceProbabilities": {
         "r32": 100,
         "r16": 100,
-        "qf": 54,
+        "qf": 55,
         "sf": 32,
         "final": 20,
         "winner": 7,
@@ -9544,7 +9544,7 @@
         "polymarket": {
           "homeId": "canada",
           "awayId": "morocco",
-          "homeWinPct": 18,
+          "homeWinPct": 19,
           "awayWinPct": 55,
           "drawPct": 28,
           "eventSlug": "fifwc-can-mar-2026-07-04"
@@ -9683,8 +9683,8 @@
         "polymarket": {
           "homeId": "usa",
           "awayId": "belgium",
-          "homeWinPct": 36,
-          "awayWinPct": 36,
+          "homeWinPct": 35,
+          "awayWinPct": 37,
           "drawPct": 30,
           "eventSlug": "fifwc-usa-bel-2026-07-06"
         }
