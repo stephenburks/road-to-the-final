@@ -11,6 +11,7 @@ on:
 permissions:
   contents: write
   issues: write
+  actions: write   # needed to dispatch the deploy workflow when data changes
 
 concurrency:
   group: data-update
@@ -32,17 +33,30 @@ jobs:
         run: node scripts/update-data.mjs
 
       - name: Commit if changed
+        id: commit
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add public/data/
           if git diff --cached --quiet; then
             echo "No data changes — nothing to commit"
+            echo "changed=false" >> "$GITHUB_OUTPUT"
             exit 0
           fi
           git commit -m "chore: update world cup data"
           git pull --rebase origin main
           git push origin HEAD:main
+          echo "changed=true" >> "$GITHUB_OUTPUT"
+
+      # Bot commits push with GITHUB_TOKEN, which does NOT fire `push` workflows
+      # (recursion guard) — but workflow_dispatch IS an allowed exception. So we
+      # explicitly dispatch the deploy, and only when data actually changed, to
+      # avoid rebuilding the site (and hammering the Pages deploy queue) hourly.
+      - name: Deploy site when data changed
+        if: steps.commit.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run deploy.yml --ref main
 
       - name: Notify on failure
         if: failure()
