@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-03T09:58:29.678Z",
+  "lastUpdated": "2026-07-03T12:14:39.314Z",
   "snapshotDate": "2026-07-03",
   "isHistorical": false,
   "sourceSummary": {
@@ -2581,7 +2581,7 @@
         "r32": 100,
         "r16": 100,
         "qf": 51,
-        "sf": 20,
+        "sf": 19,
         "final": 6,
         "winner": 3,
         "source": "market"
@@ -2963,10 +2963,10 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 43,
-        "qf": 6,
+        "r16": 42,
+        "qf": 5,
         "sf": 2,
-        "final": 1,
+        "final": 0,
         "winner": 0,
         "source": "market"
       },
@@ -4434,7 +4434,7 @@
         "r16": 100,
         "qf": 48,
         "sf": 12,
-        "final": 5,
+        "final": 4,
         "winner": 1,
         "source": "market"
       },
@@ -4608,7 +4608,7 @@
         "r16": 59,
         "qf": 12,
         "sf": 5,
-        "final": 2,
+        "final": 1,
         "winner": 0,
         "source": "market"
       },
@@ -5024,7 +5024,7 @@
       "advanceProbabilities": {
         "r32": 100,
         "r16": 100,
-        "qf": 65,
+        "qf": 66,
         "sf": 49,
         "final": 23,
         "winner": 12,
@@ -5189,8 +5189,8 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 6,
-        "qf": 2,
+        "r16": 7,
+        "qf": 3,
         "sf": 1,
         "final": 0,
         "winner": 0,
@@ -7310,7 +7310,7 @@
         "r16": 100,
         "qf": 54,
         "sf": 32,
-        "final": 21,
+        "final": 20,
         "winner": 7,
         "source": "market"
       },
@@ -7576,8 +7576,8 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 21,
-        "qf": 8,
+        "r16": 20,
+        "qf": 7,
         "sf": 2,
         "final": 1,
         "winner": 0,
@@ -9488,7 +9488,7 @@
         "polymarket": {
           "homeId": "argentina",
           "awayId": "capeverde",
-          "homeWinPct": 87,
+          "homeWinPct": 86,
           "awayWinPct": 4,
           "drawPct": 11,
           "eventSlug": "fifwc-arg-cvi-2026-07-03"
@@ -9652,7 +9652,15 @@
           "FOX One"
         ],
         "time": "2026-07-06T19:00Z",
-        "venue": "AT&T Stadium, Arlington, Texas"
+        "venue": "AT&T Stadium, Arlington, Texas",
+        "polymarket": {
+          "homeId": "portugal",
+          "awayId": "spain",
+          "homeWinPct": 23,
+          "awayWinPct": 52,
+          "drawPct": 27,
+          "eventSlug": "fifwc-prt-esp-2026-07-06"
+        }
       },
       {
         "homeTeam": "USA",
