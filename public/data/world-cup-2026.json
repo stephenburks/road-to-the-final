@@ -1,6 +1,6 @@
 {
-  "lastUpdated": "2026-07-02T23:06:07.646Z",
-  "snapshotDate": "2026-07-02",
+  "lastUpdated": "2026-07-03T02:55:01.842Z",
+  "snapshotDate": "2026-07-03",
   "isHistorical": false,
   "sourceSummary": {
     "dataSource": "ESPN",
@@ -928,9 +928,9 @@
         "r32": 100,
         "r16": 100,
         "qf": 47,
-        "sf": 20,
-        "final": 10,
-        "winner": 3,
+        "sf": 22,
+        "final": 11,
+        "winner": 4,
         "source": "market"
       },
       "path": {
@@ -1827,8 +1827,8 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 67,
-        "qf": 30,
+        "r16": 68,
+        "qf": 27,
         "sf": 9,
         "final": 3,
         "winner": 1,
@@ -2011,9 +2011,9 @@
         "r32": 100,
         "r16": 100,
         "qf": 66,
-        "sf": 35,
+        "sf": 34,
         "final": 19,
-        "winner": 7,
+        "winner": 6,
         "source": "market"
       },
       "path": {
@@ -2180,8 +2180,8 @@
       "advanceProbabilities": {
         "r32": 100,
         "r16": 100,
-        "qf": 72,
-        "sf": 19,
+        "qf": 73,
+        "sf": 20,
         "final": 8,
         "winner": 2,
         "source": "market"
@@ -2964,7 +2964,7 @@
       "advanceProbabilities": {
         "r32": 100,
         "r16": 44,
-        "qf": 6,
+        "qf": 5,
         "sf": 2,
         "final": 1,
         "winner": 0,
@@ -5024,10 +5024,10 @@
       "advanceProbabilities": {
         "r32": 100,
         "r16": 100,
-        "qf": 64,
-        "sf": 48,
-        "final": 22,
-        "winner": 13,
+        "qf": 65,
+        "sf": 49,
+        "final": 23,
+        "winner": 12,
         "source": "market"
       },
       "path": {
@@ -5192,7 +5192,7 @@
         "r16": 8,
         "qf": 3,
         "sf": 1,
-        "final": 1,
+        "final": 0,
         "winner": 0,
         "source": "market"
       },
@@ -5624,7 +5624,7 @@
         "r16": 100,
         "qf": 93,
         "sf": 75,
-        "final": 56,
+        "final": 54,
         "winner": 34,
         "source": "market"
       },
@@ -5649,7 +5649,7 @@
           "date": "2026-07-07",
           "venue": "TBD",
           "city": "TBD",
-          "opponentDesc": "Portugal or Croatia",
+          "opponentDesc": "Portugal",
           "conditional": true,
           "conditionNote": "Predicted from bracket pairing — venue confirmed once previous match settles"
         },
@@ -5702,18 +5702,8 @@
             "difficulty": 5,
             "label": "Danger",
             "color": "#EF4444",
-            "note": "Predicted (if they win their match)",
-            "pct": 50
-          },
-          {
-            "likelyTeam": "Croatia",
-            "flag": "🇭🇷",
-            "fifaRank": 10,
-            "difficulty": 5,
-            "label": "Danger",
-            "color": "#EF4444",
-            "note": "Predicted (if they win their match)",
-            "pct": 50
+            "note": "Predicted (winner of paired match)",
+            "pct": 100
           }
         ]
       },
@@ -6212,9 +6202,9 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 92,
+        "r16": 93,
         "qf": 83,
-        "sf": 64,
+        "sf": 65,
         "final": 40,
         "winner": 20,
         "source": "market"
@@ -6390,7 +6380,7 @@
         "r16": 34,
         "qf": 11,
         "sf": 2,
-        "final": 2,
+        "final": 1,
         "winner": 0,
         "source": "market"
       },
@@ -6733,7 +6723,7 @@
       "confederation": "UEFA",
       "fifaRank": 6,
       "eliminated": false,
-      "currentStage": "r32",
+      "currentStage": "r16",
       "groupResults": [
         {
           "matchday": 1,
@@ -6829,11 +6819,11 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 73,
-        "qf": 30,
-        "sf": 23,
-        "final": 12,
-        "winner": 7,
+        "r16": 100,
+        "qf": 36,
+        "sf": 21,
+        "final": 13,
+        "winner": 6,
         "source": "market"
       },
       "path": {
@@ -6845,7 +6835,7 @@
           "detail": "5pts after MD3"
         },
         "r32": {
-          "status": "active",
+          "status": "done",
           "date": "2026-07-02",
           "venue": "BMO Field",
           "city": "Toronto",
@@ -6915,7 +6905,7 @@
           }
         ]
       },
-      "totalGoals": 6
+      "totalGoals": 8
     },
     {
       "id": "drcongo",
@@ -7403,7 +7393,7 @@
         "r32": 100,
         "r16": 100,
         "qf": 54,
-        "sf": 33,
+        "sf": 34,
         "final": 21,
         "winner": 8,
         "source": "market"
@@ -7495,7 +7485,7 @@
       "group": "L",
       "confederation": "UEFA",
       "fifaRank": 10,
-      "eliminated": false,
+      "eliminated": true,
       "currentStage": "r32",
       "groupResults": [
         {
@@ -7565,10 +7555,10 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 28,
-        "qf": 7,
-        "sf": 6,
-        "final": 2,
+        "r16": 0,
+        "qf": 0,
+        "sf": 0,
+        "final": 0,
         "winner": 0,
         "source": "market"
       },
@@ -7581,77 +7571,23 @@
           "detail": "6pts after MD3"
         },
         "r32": {
-          "status": "active",
+          "status": "done",
           "date": "2026-07-02",
           "venue": "BMO Field",
           "city": "Toronto",
           "opponentDesc": "Portugal",
           "conditional": false
         },
-        "r16": {
-          "status": "future",
-          "date": "2026-07-06",
-          "venue": "TBD",
-          "city": "TBD",
-          "opponentDesc": "France",
-          "conditional": true,
-          "conditionNote": "Predicted from bracket pairing — venue confirmed once previous match settles"
-        },
-        "qf": {
-          "status": "future",
-          "date": "2026-07-10",
-          "venue": "TBD",
-          "city": "TBD",
-          "opponentDesc": "Opponent TBD",
-          "conditional": true,
-          "conditionNote": "Venue + opponent confirmed once bracket is drawn"
-        },
-        "sf": {
-          "status": "future",
-          "date": "2026-07-15",
-          "venue": "TBD",
-          "city": "TBD",
-          "opponentDesc": "Opponent TBD",
-          "conditional": true,
-          "conditionNote": "Venue + opponent confirmed once bracket is drawn"
-        },
-        "final": {
-          "status": "future",
-          "date": "2026-07-19",
-          "venue": "TBD",
-          "city": "TBD",
-          "opponentDesc": "Opponent TBD",
-          "conditional": true,
-          "conditionNote": "Venue + opponent confirmed once bracket is drawn"
-        }
+        "r16": null,
+        "qf": null,
+        "sf": null,
+        "final": null
       },
       "possibleOpponents": {
-        "r32": [
-          {
-            "likelyTeam": "Portugal",
-            "flag": "🇵🇹",
-            "fifaRank": 6,
-            "difficulty": 5,
-            "label": "Danger",
-            "color": "#EF4444",
-            "note": "Confirmed opponent",
-            "pct": 100
-          }
-        ],
-        "r16": [
-          {
-            "likelyTeam": "France",
-            "flag": "🇫🇷",
-            "fifaRank": 3,
-            "difficulty": 5,
-            "label": "Danger",
-            "color": "#EF4444",
-            "note": "Predicted (winner of paired match)",
-            "pct": 100
-          }
-        ]
+        "r32": [],
+        "r16": []
       },
-      "totalGoals": 5
+      "totalGoals": 6
     },
     {
       "id": "ghana",
@@ -9555,26 +9491,17 @@
         "awayTeam": "Croatia",
         "awayFlag": "🇭🇷",
         "awayId": "croatia",
-        "homeScore": 0,
-        "awayScore": 0,
-        "status": "IN_PROGRESS",
+        "homeScore": 2,
+        "awayScore": 1,
+        "status": "FINISHED",
         "date": "2026-07-02",
-        "clock": "6'",
         "broadcasts": [
           "FOX",
           "Tele",
           "FOX One"
         ],
         "time": "2026-07-02T23:00Z",
-        "venue": "BMO Field, Toronto",
-        "polymarket": {
-          "homeId": "portugal",
-          "awayId": "croatia",
-          "homeWinPct": 56,
-          "awayWinPct": 17,
-          "drawPct": 27,
-          "eventSlug": "fifwc-prt-hrv-2026-07-02"
-        }
+        "venue": "BMO Field, Toronto"
       },
       {
         "homeTeam": "Switzerland",
@@ -9598,8 +9525,8 @@
           "homeId": "switzerland",
           "awayId": "algeria",
           "homeWinPct": 49,
-          "awayWinPct": 22,
-          "drawPct": 30,
+          "awayWinPct": 21,
+          "drawPct": 31,
           "eventSlug": "fifwc-che-alg-2026-07-02"
         }
       }
@@ -9655,7 +9582,7 @@
           "awayId": "capeverde",
           "homeWinPct": 86,
           "awayWinPct": 4,
-          "drawPct": 12,
+          "drawPct": 11,
           "eventSlug": "fifwc-arg-cvi-2026-07-03"
         }
       },
@@ -9792,14 +9719,33 @@
         "polymarket": {
           "homeId": "mexico",
           "awayId": "england",
-          "homeWinPct": 32,
-          "awayWinPct": 39,
+          "homeWinPct": 31,
+          "awayWinPct": 40,
           "drawPct": 31,
           "eventSlug": "fifwc-mex-eng-2026-07-05"
         }
       }
     ],
     "2026-07-06": [
+      {
+        "homeTeam": "Portugal",
+        "homeFlag": "🇵🇹",
+        "homeId": "portugal",
+        "awayTeam": "Spain",
+        "awayFlag": "🇪🇸",
+        "awayId": "spain",
+        "homeScore": 0,
+        "awayScore": 0,
+        "status": "SCHEDULED",
+        "date": "2026-07-06",
+        "broadcasts": [
+          "FOX",
+          "Tele",
+          "FOX One"
+        ],
+        "time": "2026-07-06T19:00Z",
+        "venue": "AT&T Stadium, Arlington, Texas"
+      },
       {
         "homeTeam": "USA",
         "homeFlag": "🇺🇸",
@@ -9821,7 +9767,7 @@
         "polymarket": {
           "homeId": "usa",
           "awayId": "belgium",
-          "homeWinPct": 36,
+          "homeWinPct": 37,
           "awayWinPct": 35,
           "drawPct": 30,
           "eventSlug": "fifwc-usa-bel-2026-07-06"
@@ -9888,11 +9834,12 @@
         "bracketLocation": 5,
         "date": "2026-07-02",
         "venue": "BMO Field, Toronto",
-        "status": "IN_PROGRESS",
-        "homeScore": 0,
-        "awayScore": 0,
+        "status": "FINISHED",
+        "homeScore": 2,
+        "awayScore": 1,
         "homeId": "portugal",
-        "awayId": "croatia"
+        "awayId": "croatia",
+        "winnerId": "portugal"
       },
       {
         "eventId": "760497",
