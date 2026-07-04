@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-04T11:26:11.130Z",
+  "lastUpdated": "2026-07-04T13:24:12.413Z",
   "snapshotDate": "2026-07-04",
   "isHistorical": false,
   "sourceSummary": {
@@ -2758,7 +2758,7 @@
       "advanceProbabilities": {
         "r32": 100,
         "r16": 100,
-        "qf": 8,
+        "qf": 7,
         "sf": 3,
         "final": 1,
         "winner": 0,
@@ -4413,7 +4413,7 @@
         "r32": 100,
         "r16": 100,
         "qf": 50,
-        "sf": 15,
+        "sf": 14,
         "final": 4,
         "winner": 1,
         "source": "market"
@@ -4587,7 +4587,7 @@
         "r32": 100,
         "r16": 100,
         "qf": 14,
-        "sf": 4,
+        "sf": 5,
         "final": 1,
         "winner": 0,
         "source": "market"
@@ -5530,7 +5530,7 @@
         "r16": 100,
         "qf": 93,
         "sf": 78,
-        "final": 54,
+        "final": 55,
         "winner": 35,
         "source": "market"
       },
@@ -6653,8 +6653,8 @@
         "r32": 100,
         "r16": 100,
         "qf": 35,
-        "sf": 23,
-        "final": 13,
+        "sf": 24,
+        "final": 14,
         "winner": 6,
         "source": "market"
       },
@@ -9476,7 +9476,7 @@
         "polymarket": {
           "homeId": "portugal",
           "awayId": "spain",
-          "homeWinPct": 23,
+          "homeWinPct": 24,
           "awayWinPct": 52,
           "drawPct": 27,
           "eventSlug": "fifwc-prt-esp-2026-07-06"
@@ -9532,7 +9532,7 @@
         "polymarket": {
           "homeId": "argentina",
           "awayId": "egypt",
-          "homeWinPct": 73,
+          "homeWinPct": 72,
           "awayWinPct": 10,
           "drawPct": 20,
           "eventSlug": "fifwc-arg-egy-2026-07-07"
@@ -9559,7 +9559,7 @@
         "polymarket": {
           "homeId": "switzerland",
           "awayId": "colombia",
-          "homeWinPct": 28,
+          "homeWinPct": 27,
           "awayWinPct": 44,
           "drawPct": 31,
           "eventSlug": "fifwc-che-col-2026-07-07"
