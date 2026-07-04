@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-04T19:11:59.500Z",
+  "lastUpdated": "2026-07-04T20:57:08.168Z",
   "snapshotDate": "2026-07-04",
   "isHistorical": false,
   "sourceSummary": {
@@ -1775,7 +1775,7 @@
         "r32": 100,
         "r16": 100,
         "qf": 41,
-        "sf": 13,
+        "sf": 12,
         "final": 4,
         "winner": 1,
         "source": "market"
@@ -1947,9 +1947,9 @@
         "r32": 100,
         "r16": 100,
         "qf": 67,
-        "sf": 36,
+        "sf": 35,
         "final": 19,
-        "winner": 7,
+        "winner": 6,
         "source": "market"
       },
       "path": {
@@ -2117,9 +2117,9 @@
         "r32": 100,
         "r16": 100,
         "qf": 100,
-        "sf": 22,
+        "sf": 23,
         "final": 8,
-        "winner": 3,
+        "winner": 2,
         "source": "market"
       },
       "path": {
@@ -2704,9 +2704,9 @@
       "advanceProbabilities": {
         "r32": 100,
         "r16": 100,
-        "qf": 8,
-        "sf": 3,
-        "final": 1,
+        "qf": 6,
+        "sf": 2,
+        "final": 0,
         "winner": 0,
         "source": "market"
       },
@@ -4360,7 +4360,7 @@
         "r16": 100,
         "qf": 50,
         "sf": 14,
-        "final": 3,
+        "final": 4,
         "winner": 1,
         "source": "market"
       },
@@ -4940,9 +4940,9 @@
       "advanceProbabilities": {
         "r32": 100,
         "r16": 100,
-        "qf": 66,
+        "qf": 67,
         "sf": 50,
-        "final": 23,
+        "final": 24,
         "winner": 12,
         "source": "market"
       },
@@ -5474,10 +5474,10 @@
       "advanceProbabilities": {
         "r32": 100,
         "r16": 100,
-        "qf": 93,
+        "qf": 94,
         "sf": 78,
-        "final": 56,
-        "winner": 35,
+        "final": 54,
+        "winner": 36,
         "source": "market"
       },
       "path": {
@@ -5879,7 +5879,7 @@
         "r32": 100,
         "r16": 100,
         "qf": 34,
-        "sf": 16,
+        "sf": 14,
         "final": 5,
         "winner": 2,
         "source": "market"
@@ -6055,10 +6055,10 @@
       "advanceProbabilities": {
         "r32": 100,
         "r16": 100,
-        "qf": 85,
-        "sf": 62,
+        "qf": 86,
+        "sf": 63,
         "final": 39,
-        "winner": 17,
+        "winner": 16,
         "source": "market"
       },
       "path": {
@@ -7161,7 +7161,7 @@
         "r32": 100,
         "r16": 100,
         "qf": 54,
-        "sf": 32,
+        "sf": 31,
         "final": 19,
         "winner": 7,
         "source": "market"
@@ -9329,8 +9329,8 @@
         "polymarket": {
           "homeId": "paraguay",
           "awayId": "france",
-          "homeWinPct": 5,
-          "awayWinPct": 83,
+          "homeWinPct": 6,
+          "awayWinPct": 82,
           "drawPct": 14,
           "eventSlug": "fifwc-par-fra-2026-07-04"
         }
@@ -9499,7 +9499,7 @@
           "awayId": "colombia",
           "homeWinPct": 27,
           "awayWinPct": 44,
-          "drawPct": 31,
+          "drawPct": 32,
           "eventSlug": "fifwc-che-col-2026-07-07"
         }
       }
