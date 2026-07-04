@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-04T15:05:01.626Z",
+  "lastUpdated": "2026-07-04T17:04:58.184Z",
   "snapshotDate": "2026-07-04",
   "isHistorical": false,
   "sourceSummary": {
@@ -1427,7 +1427,7 @@
       "advanceProbabilities": {
         "r32": 100,
         "r16": 100,
-        "qf": 27,
+        "qf": 28,
         "sf": 4,
         "final": 1,
         "winner": 0,
@@ -2171,7 +2171,7 @@
         "r32": 100,
         "r16": 100,
         "qf": 73,
-        "sf": 19,
+        "sf": 17,
         "final": 8,
         "winner": 3,
         "source": "market"
@@ -2758,7 +2758,7 @@
       "advanceProbabilities": {
         "r32": 100,
         "r16": 100,
-        "qf": 8,
+        "qf": 7,
         "sf": 3,
         "final": 1,
         "winner": 0,
@@ -4587,7 +4587,7 @@
         "r32": 100,
         "r16": 100,
         "qf": 14,
-        "sf": 5,
+        "sf": 4,
         "final": 1,
         "winner": 0,
         "source": "market"
@@ -4995,9 +4995,9 @@
         "r32": 100,
         "r16": 100,
         "qf": 66,
-        "sf": 51,
+        "sf": 50,
         "final": 24,
-        "winner": 13,
+        "winner": 12,
         "source": "market"
       },
       "path": {
@@ -5934,7 +5934,7 @@
         "r16": 100,
         "qf": 34,
         "sf": 16,
-        "final": 4,
+        "final": 5,
         "winner": 2,
         "source": "market"
       },
@@ -6110,7 +6110,7 @@
         "r32": 100,
         "r16": 100,
         "qf": 85,
-        "sf": 65,
+        "sf": 62,
         "final": 38,
         "winner": 17,
         "source": "market"
@@ -6653,7 +6653,7 @@
         "r32": 100,
         "r16": 100,
         "qf": 35,
-        "sf": 24,
+        "sf": 23,
         "final": 14,
         "winner": 6,
         "source": "market"
@@ -7043,7 +7043,7 @@
         "r32": 100,
         "r16": 100,
         "qf": 61,
-        "sf": 25,
+        "sf": 24,
         "final": 12,
         "winner": 3,
         "source": "market"
@@ -7216,7 +7216,7 @@
         "r16": 100,
         "qf": 54,
         "sf": 32,
-        "final": 18,
+        "final": 19,
         "winner": 7,
         "source": "market"
       },
@@ -9352,8 +9352,9 @@
         "awayId": "morocco",
         "homeScore": 0,
         "awayScore": 0,
-        "status": "SCHEDULED",
+        "status": "IN_PROGRESS",
         "date": "2026-07-04",
+        "clock": "3'",
         "broadcasts": [
           "FOX",
           "Tele",
@@ -9364,9 +9365,9 @@
         "polymarket": {
           "homeId": "canada",
           "awayId": "morocco",
-          "homeWinPct": 16,
-          "awayWinPct": 56,
-          "drawPct": 28,
+          "homeWinPct": 19,
+          "awayWinPct": 53,
+          "drawPct": 30,
           "eventSlug": "fifwc-can-mar-2026-07-04"
         }
       },
@@ -9503,7 +9504,7 @@
         "polymarket": {
           "homeId": "usa",
           "awayId": "belgium",
-          "homeWinPct": 34,
+          "homeWinPct": 35,
           "awayWinPct": 38,
           "drawPct": 30,
           "eventSlug": "fifwc-usa-bel-2026-07-06"
