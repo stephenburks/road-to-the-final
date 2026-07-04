@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-04T20:57:08.168Z",
+  "lastUpdated": "2026-07-04T22:02:07.072Z",
   "snapshotDate": "2026-07-04",
   "isHistorical": false,
   "sourceSummary": {
@@ -2704,9 +2704,9 @@
       "advanceProbabilities": {
         "r32": 100,
         "r16": 100,
-        "qf": 6,
-        "sf": 2,
-        "final": 0,
+        "qf": 10,
+        "sf": 3,
+        "final": 1,
         "winner": 0,
         "source": "market"
       },
@@ -4942,8 +4942,8 @@
         "r16": 100,
         "qf": 67,
         "sf": 50,
-        "final": 24,
-        "winner": 12,
+        "final": 23,
+        "winner": 13,
         "source": "market"
       },
       "path": {
@@ -5474,10 +5474,10 @@
       "advanceProbabilities": {
         "r32": 100,
         "r16": 100,
-        "qf": 94,
-        "sf": 78,
+        "qf": 90,
+        "sf": 77,
         "final": 54,
-        "winner": 36,
+        "winner": 35,
         "source": "market"
       },
       "path": {
@@ -5879,7 +5879,7 @@
         "r32": 100,
         "r16": 100,
         "qf": 34,
-        "sf": 14,
+        "sf": 15,
         "final": 5,
         "winner": 2,
         "source": "market"
@@ -6056,9 +6056,9 @@
         "r32": 100,
         "r16": 100,
         "qf": 86,
-        "sf": 63,
-        "final": 39,
-        "winner": 16,
+        "sf": 62,
+        "final": 40,
+        "winner": 17,
         "source": "market"
       },
       "path": {
@@ -9317,8 +9317,9 @@
         "awayId": "france",
         "homeScore": 0,
         "awayScore": 0,
-        "status": "SCHEDULED",
+        "status": "IN_PROGRESS",
         "date": "2026-07-04",
+        "clock": "HT",
         "broadcasts": [
           "FOX",
           "Tele",
@@ -9329,9 +9330,9 @@
         "polymarket": {
           "homeId": "paraguay",
           "awayId": "france",
-          "homeWinPct": 6,
-          "awayWinPct": 82,
-          "drawPct": 14,
+          "homeWinPct": 5,
+          "awayWinPct": 72,
+          "drawPct": 25,
           "eventSlug": "fifwc-par-fra-2026-07-04"
         }
       }
@@ -9472,7 +9473,7 @@
           "awayId": "egypt",
           "homeWinPct": 72,
           "awayWinPct": 10,
-          "drawPct": 20,
+          "drawPct": 21,
           "eventSlug": "fifwc-arg-egy-2026-07-07"
         }
       },
