@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-04T02:51:31.850Z",
+  "lastUpdated": "2026-07-04T06:20:00.042Z",
   "snapshotDate": "2026-07-04",
   "isHistorical": false,
   "sourceSummary": {
@@ -1427,7 +1427,7 @@
       "advanceProbabilities": {
         "r32": 100,
         "r16": 100,
-        "qf": 28,
+        "qf": 29,
         "sf": 4,
         "final": 1,
         "winner": 0,
@@ -1828,8 +1828,8 @@
       "advanceProbabilities": {
         "r32": 100,
         "r16": 100,
-        "qf": 42,
-        "sf": 14,
+        "qf": 41,
+        "sf": 13,
         "final": 6,
         "winner": 1,
         "source": "market"
@@ -2001,7 +2001,7 @@
         "r32": 100,
         "r16": 100,
         "qf": 67,
-        "sf": 35,
+        "sf": 36,
         "final": 19,
         "winner": 6,
         "source": "market"
@@ -2570,7 +2570,7 @@
       "advanceProbabilities": {
         "r32": 100,
         "r16": 100,
-        "qf": 51,
+        "qf": 50,
         "sf": 18,
         "final": 6,
         "winner": 2,
@@ -2981,7 +2981,7 @@
           "date": "2026-07-07",
           "venue": "TBD",
           "city": "TBD",
-          "opponentDesc": "Colombia or Ghana",
+          "opponentDesc": "Colombia",
           "conditional": true,
           "conditionNote": "Predicted from bracket pairing — venue confirmed once previous match settles"
         },
@@ -3034,18 +3034,8 @@
             "difficulty": 4,
             "label": "Tough",
             "color": "#FB923C",
-            "note": "Predicted (if they win their match)",
-            "pct": 50
-          },
-          {
-            "likelyTeam": "Ghana",
-            "flag": "🇬🇭",
-            "fifaRank": 60,
-            "difficulty": 1,
-            "label": "Favorable",
-            "color": "#22C55E",
-            "note": "Predicted (if they win their match)",
-            "pct": 50
+            "note": "Predicted (winner of paired match)",
+            "pct": 100
           }
         ]
       },
@@ -4596,9 +4586,9 @@
       "advanceProbabilities": {
         "r32": 100,
         "r16": 100,
-        "qf": 16,
+        "qf": 14,
         "sf": 5,
-        "final": 2,
+        "final": 1,
         "winner": 0,
         "source": "market"
       },
@@ -4623,7 +4613,7 @@
           "date": "2026-07-07",
           "venue": "TBD",
           "city": "TBD",
-          "opponentDesc": "Colombia or Ghana",
+          "opponentDesc": "Colombia",
           "conditional": true,
           "conditionNote": "Predicted from bracket pairing — venue confirmed once previous match settles"
         },
@@ -4676,18 +4666,8 @@
             "difficulty": 4,
             "label": "Tough",
             "color": "#FB923C",
-            "note": "Predicted (if they win their match)",
-            "pct": 50
-          },
-          {
-            "likelyTeam": "Ghana",
-            "flag": "🇬🇭",
-            "fifaRank": 60,
-            "difficulty": 1,
-            "label": "Favorable",
-            "color": "#22C55E",
-            "note": "Predicted (if they win their match)",
-            "pct": 50
+            "note": "Predicted (winner of paired match)",
+            "pct": 100
           }
         ]
       },
@@ -5015,9 +4995,9 @@
         "r32": 100,
         "r16": 100,
         "qf": 66,
-        "sf": 51,
+        "sf": 52,
         "final": 24,
-        "winner": 13,
+        "winner": 12,
         "source": "market"
       },
       "path": {
@@ -5550,8 +5530,8 @@
         "r16": 100,
         "qf": 93,
         "sf": 78,
-        "final": 55,
-        "winner": 35,
+        "final": 53,
+        "winner": 34,
         "source": "market"
       },
       "path": {
@@ -5954,7 +5934,7 @@
         "r16": 100,
         "qf": 34,
         "sf": 16,
-        "final": 5,
+        "final": 6,
         "winner": 2,
         "source": "market"
       },
@@ -6129,9 +6109,9 @@
       "advanceProbabilities": {
         "r32": 100,
         "r16": 100,
-        "qf": 83,
-        "sf": 62,
-        "final": 37,
+        "qf": 85,
+        "sf": 60,
+        "final": 38,
         "winner": 17,
         "source": "market"
       },
@@ -6989,7 +6969,7 @@
       "confederation": "CONMEBOL",
       "fifaRank": 13,
       "eliminated": false,
-      "currentStage": "r32",
+      "currentStage": "r16",
       "groupResults": [
         {
           "matchday": 1,
@@ -7061,9 +7041,9 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 91,
-        "qf": 59,
-        "sf": 25,
+        "r16": 100,
+        "qf": 61,
+        "sf": 23,
         "final": 13,
         "winner": 3,
         "source": "market"
@@ -7077,7 +7057,7 @@
           "detail": "7pts after MD3"
         },
         "r32": {
-          "status": "active",
+          "status": "done",
           "date": "2026-07-03",
           "venue": "GEHA Field at Arrowhead Stadium",
           "city": "Kansas City, Missouri",
@@ -7147,7 +7127,7 @@
           }
         ]
       },
-      "totalGoals": 4
+      "totalGoals": 5
     },
     {
       "id": "england",
@@ -7234,8 +7214,8 @@
       "advanceProbabilities": {
         "r32": 100,
         "r16": 100,
-        "qf": 53,
-        "sf": 34,
+        "qf": 54,
+        "sf": 32,
         "final": 18,
         "winner": 7,
         "source": "market"
@@ -7438,7 +7418,7 @@
       "group": "L",
       "confederation": "CAF",
       "fifaRank": 60,
-      "eliminated": false,
+      "eliminated": true,
       "currentStage": "r32",
       "groupResults": [
         {
@@ -7502,10 +7482,10 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 9,
-        "qf": 5,
-        "sf": 1,
-        "final": 1,
+        "r16": 0,
+        "qf": 0,
+        "sf": 0,
+        "final": 0,
         "winner": 0,
         "source": "market"
       },
@@ -7518,75 +7498,21 @@
           "detail": "4pts after MD3"
         },
         "r32": {
-          "status": "active",
+          "status": "done",
           "date": "2026-07-03",
           "venue": "GEHA Field at Arrowhead Stadium",
           "city": "Kansas City, Missouri",
           "opponentDesc": "Colombia",
           "conditional": false
         },
-        "r16": {
-          "status": "future",
-          "date": "2026-07-06",
-          "venue": "TBD",
-          "city": "TBD",
-          "opponentDesc": "Egypt",
-          "conditional": true,
-          "conditionNote": "Predicted from bracket pairing — venue confirmed once previous match settles"
-        },
-        "qf": {
-          "status": "future",
-          "date": "2026-07-10",
-          "venue": "TBD",
-          "city": "TBD",
-          "opponentDesc": "Opponent TBD",
-          "conditional": true,
-          "conditionNote": "Venue + opponent confirmed once bracket is drawn"
-        },
-        "sf": {
-          "status": "future",
-          "date": "2026-07-15",
-          "venue": "TBD",
-          "city": "TBD",
-          "opponentDesc": "Opponent TBD",
-          "conditional": true,
-          "conditionNote": "Venue + opponent confirmed once bracket is drawn"
-        },
-        "final": {
-          "status": "future",
-          "date": "2026-07-19",
-          "venue": "TBD",
-          "city": "TBD",
-          "opponentDesc": "Opponent TBD",
-          "conditional": true,
-          "conditionNote": "Venue + opponent confirmed once bracket is drawn"
-        }
+        "r16": null,
+        "qf": null,
+        "sf": null,
+        "final": null
       },
       "possibleOpponents": {
-        "r32": [
-          {
-            "likelyTeam": "Colombia",
-            "flag": "🇨🇴",
-            "fifaRank": 13,
-            "difficulty": 4,
-            "label": "Tough",
-            "color": "#FB923C",
-            "note": "Confirmed opponent",
-            "pct": 100
-          }
-        ],
-        "r16": [
-          {
-            "likelyTeam": "Egypt",
-            "flag": "🇪🇬",
-            "fifaRank": 34,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "Predicted (winner of paired match)",
-            "pct": 100
-          }
-        ]
+        "r32": [],
+        "r16": []
       },
       "totalGoals": 2
     },
@@ -9405,24 +9331,15 @@
         "awayId": "ghana",
         "homeScore": 1,
         "awayScore": 0,
-        "status": "IN_PROGRESS",
+        "status": "FINISHED",
         "date": "2026-07-03",
-        "clock": "58'",
         "broadcasts": [
           "FOX",
           "Tele",
           "FOX One"
         ],
         "time": "2026-07-04T01:30Z",
-        "venue": "GEHA Field at Arrowhead Stadium, Kansas City, Missouri",
-        "polymarket": {
-          "homeId": "colombia",
-          "awayId": "ghana",
-          "homeWinPct": 84,
-          "awayWinPct": 3,
-          "drawPct": 14,
-          "eventSlug": "fifwc-col-gha-2026-07-03"
-        }
+        "venue": "GEHA Field at Arrowhead Stadium, Kansas City, Missouri"
       }
     ],
     "2026-07-04": [
@@ -9447,8 +9364,8 @@
         "polymarket": {
           "homeId": "canada",
           "awayId": "morocco",
-          "homeWinPct": 20,
-          "awayWinPct": 52,
+          "homeWinPct": 18,
+          "awayWinPct": 54,
           "drawPct": 28,
           "eventSlug": "fifwc-can-mar-2026-07-04"
         }
@@ -9475,7 +9392,7 @@
           "homeId": "paraguay",
           "awayId": "france",
           "homeWinPct": 5,
-          "awayWinPct": 83,
+          "awayWinPct": 84,
           "drawPct": 13,
           "eventSlug": "fifwc-par-fra-2026-07-04"
         }
@@ -9531,7 +9448,7 @@
           "homeId": "mexico",
           "awayId": "england",
           "homeWinPct": 31,
-          "awayWinPct": 39,
+          "awayWinPct": 40,
           "drawPct": 31,
           "eventSlug": "fifwc-mex-eng-2026-07-05"
         }
@@ -9612,6 +9529,25 @@
         ],
         "time": "2026-07-07T16:00Z",
         "venue": "Mercedes-Benz Stadium, Atlanta, Georgia"
+      },
+      {
+        "homeTeam": "Switzerland",
+        "homeFlag": "🇨🇭",
+        "homeId": "switzerland",
+        "awayTeam": "Colombia",
+        "awayFlag": "🇨🇴",
+        "awayId": "colombia",
+        "homeScore": 0,
+        "awayScore": 0,
+        "status": "SCHEDULED",
+        "date": "2026-07-07",
+        "broadcasts": [
+          "FOX",
+          "Tele",
+          "FOX One"
+        ],
+        "time": "2026-07-07T20:00Z",
+        "venue": "BC Place, Vancouver"
       }
     ]
   },
@@ -9808,11 +9744,12 @@
         "bracketLocation": 16,
         "date": "2026-07-03",
         "venue": "GEHA Field at Arrowhead Stadium, Kansas City, Missouri",
-        "status": "IN_PROGRESS",
+        "status": "FINISHED",
         "homeScore": 1,
         "awayScore": 0,
         "homeId": "colombia",
-        "awayId": "ghana"
+        "awayId": "ghana",
+        "winnerId": "colombia"
       }
     ],
     "r16": [
