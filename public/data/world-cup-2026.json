@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-04T13:24:12.413Z",
+  "lastUpdated": "2026-07-04T15:05:01.626Z",
   "snapshotDate": "2026-07-04",
   "isHistorical": false,
   "sourceSummary": {
@@ -927,7 +927,7 @@
       "advanceProbabilities": {
         "r32": 100,
         "r16": 100,
-        "qf": 48,
+        "qf": 47,
         "sf": 23,
         "final": 11,
         "winner": 3,
@@ -1427,7 +1427,7 @@
       "advanceProbabilities": {
         "r32": 100,
         "r16": 100,
-        "qf": 28,
+        "qf": 27,
         "sf": 4,
         "final": 1,
         "winner": 0,
@@ -2003,7 +2003,7 @@
         "qf": 67,
         "sf": 36,
         "final": 19,
-        "winner": 6,
+        "winner": 7,
         "source": "market"
       },
       "path": {
@@ -2171,7 +2171,7 @@
         "r32": 100,
         "r16": 100,
         "qf": 73,
-        "sf": 20,
+        "sf": 19,
         "final": 8,
         "winner": 3,
         "source": "market"
@@ -2758,7 +2758,7 @@
       "advanceProbabilities": {
         "r32": 100,
         "r16": 100,
-        "qf": 7,
+        "qf": 8,
         "sf": 3,
         "final": 1,
         "winner": 0,
@@ -4414,7 +4414,7 @@
         "r16": 100,
         "qf": 50,
         "sf": 14,
-        "final": 4,
+        "final": 3,
         "winner": 1,
         "source": "market"
       },
@@ -4997,7 +4997,7 @@
         "qf": 66,
         "sf": 51,
         "final": 24,
-        "winner": 12,
+        "winner": 13,
         "source": "market"
       },
       "path": {
@@ -5530,7 +5530,7 @@
         "r16": 100,
         "qf": 93,
         "sf": 78,
-        "final": 55,
+        "final": 54,
         "winner": 35,
         "source": "market"
       },
@@ -5934,7 +5934,7 @@
         "r16": 100,
         "qf": 34,
         "sf": 16,
-        "final": 5,
+        "final": 4,
         "winner": 2,
         "source": "market"
       },
@@ -6110,7 +6110,7 @@
         "r32": 100,
         "r16": 100,
         "qf": 85,
-        "sf": 61,
+        "sf": 65,
         "final": 38,
         "winner": 17,
         "source": "market"
@@ -7043,7 +7043,7 @@
         "r32": 100,
         "r16": 100,
         "qf": 61,
-        "sf": 24,
+        "sf": 25,
         "final": 12,
         "winner": 3,
         "source": "market"
@@ -7215,7 +7215,7 @@
         "r32": 100,
         "r16": 100,
         "qf": 54,
-        "sf": 33,
+        "sf": 32,
         "final": 18,
         "winner": 7,
         "source": "market"
@@ -9364,7 +9364,7 @@
         "polymarket": {
           "homeId": "canada",
           "awayId": "morocco",
-          "homeWinPct": 17,
+          "homeWinPct": 16,
           "awayWinPct": 56,
           "drawPct": 28,
           "eventSlug": "fifwc-can-mar-2026-07-04"
