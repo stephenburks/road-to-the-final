@@ -1,6 +1,6 @@
 {
-  "lastUpdated": "2026-07-03T23:03:05.105Z",
-  "snapshotDate": "2026-07-03",
+  "lastUpdated": "2026-07-04T02:51:31.850Z",
+  "snapshotDate": "2026-07-04",
   "isHistorical": false,
   "sourceSummary": {
     "dataSource": "ESPN",
@@ -1828,9 +1828,9 @@
       "advanceProbabilities": {
         "r32": 100,
         "r16": 100,
-        "qf": 44,
-        "sf": 12,
-        "final": 5,
+        "qf": 42,
+        "sf": 14,
+        "final": 6,
         "winner": 1,
         "source": "market"
       },
@@ -1855,7 +1855,7 @@
           "date": "2026-07-07",
           "venue": "TBD",
           "city": "TBD",
-          "opponentDesc": "Argentina or Cape Verde",
+          "opponentDesc": "Argentina",
           "conditional": true,
           "conditionNote": "Predicted from bracket pairing — venue confirmed once previous match settles"
         },
@@ -1908,18 +1908,8 @@
             "difficulty": 5,
             "label": "Danger",
             "color": "#EF4444",
-            "note": "Predicted (if they win their match)",
-            "pct": 50
-          },
-          {
-            "likelyTeam": "Cape Verde",
-            "flag": "🇨🇻",
-            "fifaRank": 62,
-            "difficulty": 1,
-            "label": "Favorable",
-            "color": "#22C55E",
-            "note": "Predicted (if they win their match)",
-            "pct": 50
+            "note": "Predicted (winner of paired match)",
+            "pct": 100
           }
         ]
       },
@@ -2013,7 +2003,7 @@
         "qf": 67,
         "sf": 35,
         "final": 19,
-        "winner": 7,
+        "winner": 6,
         "source": "market"
       },
       "path": {
@@ -2181,7 +2171,7 @@
         "r32": 100,
         "r16": 100,
         "qf": 72,
-        "sf": 19,
+        "sf": 20,
         "final": 8,
         "winner": 3,
         "source": "market"
@@ -2769,7 +2759,7 @@
         "r32": 100,
         "r16": 100,
         "qf": 8,
-        "sf": 4,
+        "sf": 3,
         "final": 0,
         "winner": 0,
         "source": "market"
@@ -4432,7 +4422,7 @@
       "advanceProbabilities": {
         "r32": 100,
         "r16": 100,
-        "qf": 49,
+        "qf": 50,
         "sf": 14,
         "final": 4,
         "winner": 1,
@@ -4606,9 +4596,9 @@
       "advanceProbabilities": {
         "r32": 100,
         "r16": 100,
-        "qf": 13,
-        "sf": 6,
-        "final": 1,
+        "qf": 16,
+        "sf": 5,
+        "final": 2,
         "winner": 0,
         "source": "market"
       },
@@ -5027,7 +5017,7 @@
         "qf": 66,
         "sf": 51,
         "final": 24,
-        "winner": 12,
+        "winner": 13,
         "source": "market"
       },
       "path": {
@@ -5118,7 +5108,7 @@
       "group": "H",
       "confederation": "CAF",
       "fifaRank": 62,
-      "eliminated": false,
+      "eliminated": true,
       "currentStage": "r32",
       "groupResults": [
         {
@@ -5189,9 +5179,9 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 2,
-        "qf": 2,
-        "sf": 1,
+        "r16": 0,
+        "qf": 0,
+        "sf": 0,
         "final": 0,
         "winner": 0,
         "source": "market"
@@ -5205,77 +5195,23 @@
           "detail": "3pts after MD3"
         },
         "r32": {
-          "status": "active",
+          "status": "done",
           "date": "2026-07-03",
           "venue": "Hard Rock Stadium",
           "city": "Miami Gardens, Florida",
           "opponentDesc": "Argentina",
           "conditional": false
         },
-        "r16": {
-          "status": "future",
-          "date": "2026-07-06",
-          "venue": "TBD",
-          "city": "TBD",
-          "opponentDesc": "Switzerland",
-          "conditional": true,
-          "conditionNote": "Predicted from bracket pairing — venue confirmed once previous match settles"
-        },
-        "qf": {
-          "status": "future",
-          "date": "2026-07-10",
-          "venue": "TBD",
-          "city": "TBD",
-          "opponentDesc": "Opponent TBD",
-          "conditional": true,
-          "conditionNote": "Venue + opponent confirmed once bracket is drawn"
-        },
-        "sf": {
-          "status": "future",
-          "date": "2026-07-15",
-          "venue": "TBD",
-          "city": "TBD",
-          "opponentDesc": "Opponent TBD",
-          "conditional": true,
-          "conditionNote": "Venue + opponent confirmed once bracket is drawn"
-        },
-        "final": {
-          "status": "future",
-          "date": "2026-07-19",
-          "venue": "TBD",
-          "city": "TBD",
-          "opponentDesc": "Opponent TBD",
-          "conditional": true,
-          "conditionNote": "Venue + opponent confirmed once bracket is drawn"
-        }
+        "r16": null,
+        "qf": null,
+        "sf": null,
+        "final": null
       },
       "possibleOpponents": {
-        "r32": [
-          {
-            "likelyTeam": "Argentina",
-            "flag": "🇦🇷",
-            "fifaRank": 2,
-            "difficulty": 5,
-            "label": "Danger",
-            "color": "#EF4444",
-            "note": "Confirmed opponent",
-            "pct": 100
-          }
-        ],
-        "r16": [
-          {
-            "likelyTeam": "Switzerland",
-            "flag": "🇨🇭",
-            "fifaRank": 17,
-            "difficulty": 4,
-            "label": "Tough",
-            "color": "#FB923C",
-            "note": "Predicted (winner of paired match)",
-            "pct": 100
-          }
-        ]
+        "r32": [],
+        "r16": []
       },
-      "totalGoals": 2
+      "totalGoals": 4
     },
     {
       "id": "saudiarabia",
@@ -5615,7 +5551,7 @@
         "qf": 93,
         "sf": 78,
         "final": 55,
-        "winner": 33,
+        "winner": 35,
         "source": "market"
       },
       "path": {
@@ -6018,7 +5954,7 @@
         "r16": 100,
         "qf": 34,
         "sf": 16,
-        "final": 6,
+        "final": 5,
         "winner": 2,
         "source": "market"
       },
@@ -6110,7 +6046,7 @@
       "confederation": "CONMEBOL",
       "fifaRank": 2,
       "eliminated": false,
-      "currentStage": "r32",
+      "currentStage": "r16",
       "groupResults": [
         {
           "matchday": 1,
@@ -6192,11 +6128,11 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 98,
+        "r16": 100,
         "qf": 83,
-        "sf": 68,
-        "final": 43,
-        "winner": 21,
+        "sf": 62,
+        "final": 37,
+        "winner": 17,
         "source": "market"
       },
       "path": {
@@ -6208,7 +6144,7 @@
           "detail": "9pts after MD3"
         },
         "r32": {
-          "status": "active",
+          "status": "done",
           "date": "2026-07-03",
           "venue": "Hard Rock Stadium",
           "city": "Miami Gardens, Florida",
@@ -6278,7 +6214,7 @@
           }
         ]
       },
-      "totalGoals": 8
+      "totalGoals": 11
     },
     {
       "id": "algeria",
@@ -7125,11 +7061,11 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 82,
-        "qf": 52,
-        "sf": 23,
-        "final": 10,
-        "winner": 2,
+        "r16": 91,
+        "qf": 59,
+        "sf": 25,
+        "final": 13,
+        "winner": 3,
         "source": "market"
       },
       "path": {
@@ -7141,7 +7077,7 @@
           "detail": "7pts after MD3"
         },
         "r32": {
-          "status": "upcoming",
+          "status": "active",
           "date": "2026-07-03",
           "venue": "GEHA Field at Arrowhead Stadium",
           "city": "Kansas City, Missouri",
@@ -7298,8 +7234,8 @@
       "advanceProbabilities": {
         "r32": 100,
         "r16": 100,
-        "qf": 54,
-        "sf": 32,
+        "qf": 53,
+        "sf": 34,
         "final": 18,
         "winner": 7,
         "source": "market"
@@ -7566,10 +7502,10 @@
       ],
       "advanceProbabilities": {
         "r32": 100,
-        "r16": 19,
-        "qf": 4,
-        "sf": 3,
-        "final": 0,
+        "r16": 9,
+        "qf": 5,
+        "sf": 1,
+        "final": 1,
         "winner": 0,
         "source": "market"
       },
@@ -7582,7 +7518,7 @@
           "detail": "4pts after MD3"
         },
         "r32": {
-          "status": "upcoming",
+          "status": "active",
           "date": "2026-07-03",
           "venue": "GEHA Field at Arrowhead Stadium",
           "city": "Kansas City, Missouri",
@@ -9448,26 +9384,17 @@
         "awayTeam": "Cape Verde",
         "awayFlag": "🇨🇻",
         "awayId": "capeverde",
-        "homeScore": 1,
-        "awayScore": 0,
-        "status": "IN_PROGRESS",
+        "homeScore": 3,
+        "awayScore": 2,
+        "status": "FINISHED",
         "date": "2026-07-03",
-        "clock": "HT",
         "broadcasts": [
           "FOX",
           "Tele",
           "FOX One"
         ],
         "time": "2026-07-03T22:00Z",
-        "venue": "Hard Rock Stadium, Miami Gardens, Florida",
-        "polymarket": {
-          "homeId": "argentina",
-          "awayId": "capeverde",
-          "homeWinPct": 95,
-          "awayWinPct": 1,
-          "drawPct": 6,
-          "eventSlug": "fifwc-arg-cvi-2026-07-03"
-        }
+        "venue": "Hard Rock Stadium, Miami Gardens, Florida"
       },
       {
         "homeTeam": "Colombia",
@@ -9476,10 +9403,11 @@
         "awayTeam": "Ghana",
         "awayFlag": "🇬🇭",
         "awayId": "ghana",
-        "homeScore": 0,
+        "homeScore": 1,
         "awayScore": 0,
-        "status": "SCHEDULED",
+        "status": "IN_PROGRESS",
         "date": "2026-07-03",
+        "clock": "58'",
         "broadcasts": [
           "FOX",
           "Tele",
@@ -9490,9 +9418,9 @@
         "polymarket": {
           "homeId": "colombia",
           "awayId": "ghana",
-          "homeWinPct": 69,
-          "awayWinPct": 11,
-          "drawPct": 22,
+          "homeWinPct": 84,
+          "awayWinPct": 3,
+          "drawPct": 14,
           "eventSlug": "fifwc-col-gha-2026-07-03"
         }
       }
@@ -9519,7 +9447,7 @@
         "polymarket": {
           "homeId": "canada",
           "awayId": "morocco",
-          "homeWinPct": 21,
+          "homeWinPct": 20,
           "awayWinPct": 52,
           "drawPct": 28,
           "eventSlug": "fifwc-can-mar-2026-07-04"
@@ -9663,6 +9591,27 @@
           "drawPct": 30,
           "eventSlug": "fifwc-usa-bel-2026-07-06"
         }
+      }
+    ],
+    "2026-07-07": [
+      {
+        "homeTeam": "Argentina",
+        "homeFlag": "🇦🇷",
+        "homeId": "argentina",
+        "awayTeam": "Egypt",
+        "awayFlag": "🇪🇬",
+        "awayId": "egypt",
+        "homeScore": 0,
+        "awayScore": 0,
+        "status": "SCHEDULED",
+        "date": "2026-07-07",
+        "broadcasts": [
+          "FOX",
+          "Tele",
+          "FOX One"
+        ],
+        "time": "2026-07-07T16:00Z",
+        "venue": "Mercedes-Benz Stadium, Atlanta, Georgia"
       }
     ]
   },
@@ -9821,11 +9770,12 @@
         "bracketLocation": 13,
         "date": "2026-07-03",
         "venue": "Hard Rock Stadium, Miami Gardens, Florida",
-        "status": "IN_PROGRESS",
-        "homeScore": 1,
-        "awayScore": 0,
+        "status": "FINISHED",
+        "homeScore": 3,
+        "awayScore": 2,
         "homeId": "argentina",
-        "awayId": "capeverde"
+        "awayId": "capeverde",
+        "winnerId": "argentina"
       },
       {
         "eventId": "760499",
@@ -9858,8 +9808,8 @@
         "bracketLocation": 16,
         "date": "2026-07-03",
         "venue": "GEHA Field at Arrowhead Stadium, Kansas City, Missouri",
-        "status": "SCHEDULED",
-        "homeScore": 0,
+        "status": "IN_PROGRESS",
+        "homeScore": 1,
         "awayScore": 0,
         "homeId": "colombia",
         "awayId": "ghana"
