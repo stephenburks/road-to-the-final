@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-05T00:00:44.663Z",
+  "lastUpdated": "2026-07-05T04:56:06.532Z",
   "snapshotDate": "2026-07-05",
   "isHistorical": false,
   "sourceSummary": {
@@ -929,7 +929,7 @@
         "r16": 100,
         "qf": 47,
         "sf": 23,
-        "final": 10,
+        "final": 9,
         "winner": 3,
         "source": "market"
       },
@@ -1774,7 +1774,7 @@
       "advanceProbabilities": {
         "r32": 100,
         "r16": 100,
-        "qf": 41,
+        "qf": 40,
         "sf": 12,
         "final": 4,
         "winner": 1,
@@ -1946,10 +1946,10 @@
       "advanceProbabilities": {
         "r32": 100,
         "r16": 100,
-        "qf": 68,
+        "qf": 70,
         "sf": 36,
         "final": 19,
-        "winner": 6,
+        "winner": 7,
         "source": "market"
       },
       "path": {
@@ -2117,9 +2117,9 @@
         "r32": 100,
         "r16": 100,
         "qf": 100,
-        "sf": 23,
-        "final": 9,
-        "winner": 2,
+        "sf": 22,
+        "final": 10,
+        "winner": 3,
         "source": "market"
       },
       "path": {
@@ -4886,9 +4886,9 @@
         "r32": 100,
         "r16": 100,
         "qf": 67,
-        "sf": 51,
+        "sf": 50,
         "final": 23,
-        "winner": 13,
+        "winner": 12,
         "source": "market"
       },
       "path": {
@@ -5822,7 +5822,7 @@
       "advanceProbabilities": {
         "r32": 100,
         "r16": 100,
-        "qf": 33,
+        "qf": 32,
         "sf": 16,
         "final": 5,
         "winner": 2,
@@ -5999,10 +5999,10 @@
       "advanceProbabilities": {
         "r32": 100,
         "r16": 100,
-        "qf": 85,
-        "sf": 65,
-        "final": 40,
-        "winner": 16,
+        "qf": 86,
+        "sf": 63,
+        "final": 39,
+        "winner": 17,
         "source": "market"
       },
       "path": {
@@ -6542,9 +6542,9 @@
       "advanceProbabilities": {
         "r32": 100,
         "r16": 100,
-        "qf": 35,
+        "qf": 34,
         "sf": 22,
-        "final": 14,
+        "final": 13,
         "winner": 6,
         "source": "market"
       },
@@ -6933,7 +6933,7 @@
         "r32": 100,
         "r16": 100,
         "qf": 61,
-        "sf": 24,
+        "sf": 23,
         "final": 12,
         "winner": 3,
         "source": "market"
@@ -7105,7 +7105,7 @@
         "r32": 100,
         "r16": 100,
         "qf": 54,
-        "sf": 30,
+        "sf": 31,
         "final": 18,
         "winner": 7,
         "source": "market"
@@ -9378,7 +9378,7 @@
           "homeId": "usa",
           "awayId": "belgium",
           "homeWinPct": 35,
-          "awayWinPct": 38,
+          "awayWinPct": 37,
           "drawPct": 30,
           "eventSlug": "fifwc-usa-bel-2026-07-06"
         }
