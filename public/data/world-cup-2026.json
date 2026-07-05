@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-05T04:56:06.532Z",
+  "lastUpdated": "2026-07-05T07:57:33.430Z",
   "snapshotDate": "2026-07-05",
   "isHistorical": false,
   "sourceSummary": {
@@ -929,7 +929,7 @@
         "r16": 100,
         "qf": 47,
         "sf": 23,
-        "final": 9,
+        "final": 11,
         "winner": 3,
         "source": "market"
       },
@@ -4305,7 +4305,7 @@
         "r16": 100,
         "qf": 50,
         "sf": 14,
-        "final": 3,
+        "final": 4,
         "winner": 1,
         "source": "market"
       },
@@ -4886,9 +4886,9 @@
         "r32": 100,
         "r16": 100,
         "qf": 67,
-        "sf": 50,
+        "sf": 51,
         "final": 23,
-        "winner": 12,
+        "winner": 13,
         "source": "market"
       },
       "path": {
@@ -5420,7 +5420,7 @@
         "r32": 100,
         "r16": 100,
         "qf": 100,
-        "sf": 78,
+        "sf": 79,
         "final": 55,
         "winner": 36,
         "source": "market"
@@ -5822,8 +5822,8 @@
       "advanceProbabilities": {
         "r32": 100,
         "r16": 100,
-        "qf": 32,
-        "sf": 16,
+        "qf": 31,
+        "sf": 13,
         "final": 5,
         "winner": 2,
         "source": "market"
@@ -6001,7 +6001,7 @@
         "r16": 100,
         "qf": 86,
         "sf": 63,
-        "final": 39,
+        "final": 38,
         "winner": 17,
         "source": "market"
       },
@@ -7105,7 +7105,7 @@
         "r32": 100,
         "r16": 100,
         "qf": 54,
-        "sf": 31,
+        "sf": 30,
         "final": 18,
         "winner": 7,
         "source": "market"
@@ -9294,8 +9294,8 @@
         "polymarket": {
           "homeId": "brazil",
           "awayId": "norway",
-          "homeWinPct": 54,
-          "awayWinPct": 21,
+          "homeWinPct": 55,
+          "awayWinPct": 20,
           "drawPct": 27,
           "eventSlug": "fifwc-bra-nor-2026-07-05"
         }
@@ -9321,7 +9321,7 @@
         "polymarket": {
           "homeId": "mexico",
           "awayId": "england",
-          "homeWinPct": 31,
+          "homeWinPct": 30,
           "awayWinPct": 40,
           "drawPct": 31,
           "eventSlug": "fifwc-mex-eng-2026-07-05"
@@ -9379,7 +9379,7 @@
           "awayId": "belgium",
           "homeWinPct": 35,
           "awayWinPct": 37,
-          "drawPct": 30,
+          "drawPct": 28,
           "eventSlug": "fifwc-usa-bel-2026-07-06"
         }
       }
