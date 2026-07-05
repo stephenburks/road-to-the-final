@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-05T18:02:10.169Z",
+  "lastUpdated": "2026-07-05T20:13:21.904Z",
   "snapshotDate": "2026-07-05",
   "isHistorical": false,
   "sourceSummary": {
@@ -928,9 +928,9 @@
         "r32": 100,
         "r16": 100,
         "qf": 48,
-        "sf": 22,
+        "sf": 21,
         "final": 11,
-        "winner": 3,
+        "winner": 4,
         "source": "market"
       },
       "path": {
@@ -1946,7 +1946,7 @@
       "advanceProbabilities": {
         "r32": 100,
         "r16": 100,
-        "qf": 71,
+        "qf": 74,
         "sf": 37,
         "final": 19,
         "winner": 7,
@@ -1969,7 +1969,7 @@
           "conditional": false
         },
         "r16": {
-          "status": "upcoming",
+          "status": "active",
           "date": "2026-07-05",
           "venue": "MetLife Stadium",
           "city": "East Rutherford, New Jersey",
@@ -4887,7 +4887,7 @@
         "r16": 100,
         "qf": 67,
         "sf": 51,
-        "final": 23,
+        "final": 25,
         "winner": 12,
         "source": "market"
       },
@@ -5421,8 +5421,8 @@
         "r16": 100,
         "qf": 100,
         "sf": 79,
-        "final": 55,
-        "winner": 35,
+        "final": 54,
+        "winner": 34,
         "source": "market"
       },
       "path": {
@@ -5822,9 +5822,9 @@
       "advanceProbabilities": {
         "r32": 100,
         "r16": 100,
-        "qf": 31,
-        "sf": 15,
-        "final": 3,
+        "qf": 26,
+        "sf": 16,
+        "final": 4,
         "winner": 2,
         "source": "market"
       },
@@ -5845,7 +5845,7 @@
           "conditional": false
         },
         "r16": {
-          "status": "upcoming",
+          "status": "active",
           "date": "2026-07-05",
           "venue": "MetLife Stadium",
           "city": "East Rutherford, New Jersey",
@@ -6000,7 +6000,7 @@
         "r32": 100,
         "r16": 100,
         "qf": 86,
-        "sf": 63,
+        "sf": 62,
         "final": 38,
         "winner": 17,
         "source": "market"
@@ -9282,8 +9282,9 @@
         "awayId": "norway",
         "homeScore": 0,
         "awayScore": 0,
-        "status": "SCHEDULED",
+        "status": "IN_PROGRESS",
         "date": "2026-07-05",
+        "clock": "13'",
         "broadcasts": [
           "FOX",
           "Tele",
@@ -9294,8 +9295,8 @@
         "polymarket": {
           "homeId": "brazil",
           "awayId": "norway",
-          "homeWinPct": 55,
-          "awayWinPct": 20,
+          "homeWinPct": 49,
+          "awayWinPct": 25,
           "drawPct": 27,
           "eventSlug": "fifwc-bra-nor-2026-07-05"
         }
@@ -9321,8 +9322,8 @@
         "polymarket": {
           "homeId": "mexico",
           "awayId": "england",
-          "homeWinPct": 31,
-          "awayWinPct": 39,
+          "homeWinPct": 32,
+          "awayWinPct": 38,
           "drawPct": 31,
           "eventSlug": "fifwc-mex-eng-2026-07-05"
         }
@@ -9351,7 +9352,7 @@
           "homeId": "portugal",
           "awayId": "spain",
           "homeWinPct": 24,
-          "awayWinPct": 52,
+          "awayWinPct": 51,
           "drawPct": 27,
           "eventSlug": "fifwc-prt-esp-2026-07-06"
         }
@@ -9377,8 +9378,8 @@
         "polymarket": {
           "homeId": "usa",
           "awayId": "belgium",
-          "homeWinPct": 39,
-          "awayWinPct": 35,
+          "homeWinPct": 36,
+          "awayWinPct": 37,
           "drawPct": 28,
           "eventSlug": "fifwc-usa-bel-2026-07-06"
         }
@@ -9721,7 +9722,7 @@
         "bracketLocation": 5,
         "date": "2026-07-05",
         "venue": "MetLife Stadium, East Rutherford, New Jersey",
-        "status": "SCHEDULED",
+        "status": "IN_PROGRESS",
         "homeScore": 0,
         "awayScore": 0,
         "homeId": "brazil",
