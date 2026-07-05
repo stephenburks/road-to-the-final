@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-05T20:13:21.904Z",
+  "lastUpdated": "2026-07-05T22:01:10.819Z",
   "snapshotDate": "2026-07-05",
   "isHistorical": false,
   "sourceSummary": {
@@ -927,8 +927,8 @@
       "advanceProbabilities": {
         "r32": 100,
         "r16": 100,
-        "qf": 48,
-        "sf": 21,
+        "qf": 50,
+        "sf": 23,
         "final": 11,
         "winner": 4,
         "source": "market"
@@ -1946,10 +1946,10 @@
       "advanceProbabilities": {
         "r32": 100,
         "r16": 100,
-        "qf": 74,
-        "sf": 37,
-        "final": 19,
-        "winner": 7,
+        "qf": 1,
+        "sf": 1,
+        "final": 0,
+        "winner": 0,
         "source": "market"
       },
       "path": {
@@ -2119,7 +2119,7 @@
         "qf": 100,
         "sf": 22,
         "final": 9,
-        "winner": 2,
+        "winner": 3,
         "source": "market"
       },
       "path": {
@@ -2515,7 +2515,7 @@
       "advanceProbabilities": {
         "r32": 100,
         "r16": 100,
-        "qf": 53,
+        "qf": 52,
         "sf": 18,
         "final": 5,
         "winner": 3,
@@ -4888,7 +4888,7 @@
         "qf": 67,
         "sf": 51,
         "final": 25,
-        "winner": 12,
+        "winner": 13,
         "source": "market"
       },
       "path": {
@@ -5421,8 +5421,8 @@
         "r16": 100,
         "qf": 100,
         "sf": 79,
-        "final": 54,
-        "winner": 34,
+        "final": 53,
+        "winner": 35,
         "source": "market"
       },
       "path": {
@@ -5822,10 +5822,10 @@
       "advanceProbabilities": {
         "r32": 100,
         "r16": 100,
-        "qf": 26,
-        "sf": 16,
-        "final": 4,
-        "winner": 2,
+        "qf": 100,
+        "sf": 42,
+        "final": 15,
+        "winner": 5,
         "source": "market"
       },
       "path": {
@@ -6001,8 +6001,8 @@
         "r16": 100,
         "qf": 86,
         "sf": 62,
-        "final": 38,
-        "winner": 17,
+        "final": 40,
+        "winner": 18,
         "source": "market"
       },
       "path": {
@@ -6544,7 +6544,7 @@
         "r16": 100,
         "qf": 34,
         "sf": 24,
-        "final": 12,
+        "final": 13,
         "winner": 6,
         "source": "market"
       },
@@ -7104,10 +7104,10 @@
       "advanceProbabilities": {
         "r32": 100,
         "r16": 100,
-        "qf": 53,
-        "sf": 32,
-        "final": 18,
-        "winner": 7,
+        "qf": 51,
+        "sf": 33,
+        "final": 19,
+        "winner": 9,
         "source": "market"
       },
       "path": {
@@ -9281,10 +9281,10 @@
         "awayFlag": "🇳🇴",
         "awayId": "norway",
         "homeScore": 0,
-        "awayScore": 0,
+        "awayScore": 2,
         "status": "IN_PROGRESS",
         "date": "2026-07-05",
-        "clock": "13'",
+        "clock": "90'+8'",
         "broadcasts": [
           "FOX",
           "Tele",
@@ -9295,9 +9295,9 @@
         "polymarket": {
           "homeId": "brazil",
           "awayId": "norway",
-          "homeWinPct": 49,
-          "awayWinPct": 25,
-          "drawPct": 27,
+          "homeWinPct": 0,
+          "awayWinPct": 100,
+          "drawPct": 0,
           "eventSlug": "fifwc-bra-nor-2026-07-05"
         }
       },
@@ -9324,7 +9324,7 @@
           "awayId": "england",
           "homeWinPct": 32,
           "awayWinPct": 38,
-          "drawPct": 31,
+          "drawPct": 32,
           "eventSlug": "fifwc-mex-eng-2026-07-05"
         }
       }
@@ -9724,7 +9724,7 @@
         "venue": "MetLife Stadium, East Rutherford, New Jersey",
         "status": "IN_PROGRESS",
         "homeScore": 0,
-        "awayScore": 0,
+        "awayScore": 2,
         "homeId": "brazil",
         "awayId": "norway"
       },
