@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-05T10:22:59.332Z",
+  "lastUpdated": "2026-07-05T12:15:35.352Z",
   "snapshotDate": "2026-07-05",
   "isHistorical": false,
   "sourceSummary": {
@@ -927,7 +927,7 @@
       "advanceProbabilities": {
         "r32": 100,
         "r16": 100,
-        "qf": 47,
+        "qf": 48,
         "sf": 23,
         "final": 10,
         "winner": 3,
@@ -2515,7 +2515,7 @@
       "advanceProbabilities": {
         "r32": 100,
         "r16": 100,
-        "qf": 50,
+        "qf": 51,
         "sf": 17,
         "final": 5,
         "winner": 3,
@@ -4303,7 +4303,7 @@
       "advanceProbabilities": {
         "r32": 100,
         "r16": 100,
-        "qf": 50,
+        "qf": 51,
         "sf": 14,
         "final": 4,
         "winner": 1,
@@ -4888,7 +4888,7 @@
         "qf": 67,
         "sf": 51,
         "final": 23,
-        "winner": 13,
+        "winner": 12,
         "source": "market"
       },
       "path": {
@@ -7105,7 +7105,7 @@
         "r32": 100,
         "r16": 100,
         "qf": 54,
-        "sf": 30,
+        "sf": 31,
         "final": 18,
         "winner": 7,
         "source": "market"
@@ -9295,7 +9295,7 @@
           "homeId": "brazil",
           "awayId": "norway",
           "homeWinPct": 55,
-          "awayWinPct": 20,
+          "awayWinPct": 21,
           "drawPct": 27,
           "eventSlug": "fifwc-bra-nor-2026-07-05"
         }
@@ -9462,7 +9462,7 @@
         "polymarket": {
           "homeId": "france",
           "awayId": "morocco",
-          "homeWinPct": 62,
+          "homeWinPct": 63,
           "awayWinPct": 14,
           "drawPct": 25,
           "eventSlug": "fifwc-fra-mar-2026-07-09"
