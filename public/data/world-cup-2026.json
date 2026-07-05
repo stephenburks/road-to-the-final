@@ -1,6 +1,6 @@
 {
-  "lastUpdated": "2026-07-04T22:02:07.072Z",
-  "snapshotDate": "2026-07-04",
+  "lastUpdated": "2026-07-05T00:00:44.663Z",
+  "snapshotDate": "2026-07-05",
   "isHistorical": false,
   "sourceSummary": {
     "dataSource": "ESPN",
@@ -9,7 +9,7 @@
   },
   "tournament": {
     "name": "FIFA World Cup 2026",
-    "currentStage": "r16",
+    "currentStage": "qf",
     "stages": {
       "group_stage": {
         "status": "done",
@@ -22,12 +22,12 @@
         "date": "Jun 28–Jul 2"
       },
       "r16": {
-        "status": "active",
+        "status": "done",
         "label": "Round of 16",
         "date": "Jul 4–7"
       },
       "qf": {
-        "status": "upcoming",
+        "status": "active",
         "label": "Quarterfinal",
         "date": "Jul 9–11"
       },
@@ -929,7 +929,7 @@
         "r16": 100,
         "qf": 47,
         "sf": 23,
-        "final": 11,
+        "final": 10,
         "winner": 3,
         "source": "market"
       },
@@ -1946,8 +1946,8 @@
       "advanceProbabilities": {
         "r32": 100,
         "r16": 100,
-        "qf": 67,
-        "sf": 35,
+        "qf": 68,
+        "sf": 36,
         "final": 19,
         "winner": 6,
         "source": "market"
@@ -2040,7 +2040,7 @@
       "confederation": "CAF",
       "fifaRank": 14,
       "eliminated": false,
-      "currentStage": "r16",
+      "currentStage": "qf",
       "groupResults": [
         {
           "matchday": 1,
@@ -2118,7 +2118,7 @@
         "r16": 100,
         "qf": 100,
         "sf": 23,
-        "final": 8,
+        "final": 9,
         "winner": 2,
         "source": "market"
       },
@@ -2139,13 +2139,12 @@
           "conditional": false
         },
         "r16": {
-          "status": "future",
+          "status": "done",
+          "match": 95,
           "date": "2026-07-07",
-          "venue": "TBD",
-          "city": "TBD",
-          "opponentDesc": "Spain",
-          "conditional": true,
-          "conditionNote": "Predicted from bracket pairing — venue confirmed once previous match settles"
+          "city": "Atlanta",
+          "venue": "Mercedes-Benz Stadium",
+          "opponentDesc": "Winner Match 87"
         },
         "qf": {
           "status": "future",
@@ -2609,7 +2608,7 @@
       "group": "D",
       "confederation": "CONMEBOL",
       "fifaRank": 39,
-      "eliminated": false,
+      "eliminated": true,
       "currentStage": "r32",
       "groupResults": [
         {
@@ -2704,9 +2703,9 @@
       "advanceProbabilities": {
         "r32": 100,
         "r16": 100,
-        "qf": 10,
-        "sf": 3,
-        "final": 1,
+        "qf": 0,
+        "sf": 0,
+        "final": 0,
         "winner": 0,
         "source": "market"
       },
@@ -2726,68 +2725,14 @@
           "opponentDesc": "Germany",
           "conditional": false
         },
-        "r16": {
-          "status": "future",
-          "date": "2026-07-07",
-          "venue": "TBD",
-          "city": "TBD",
-          "opponentDesc": "Canada",
-          "conditional": true,
-          "conditionNote": "Predicted from bracket pairing — venue confirmed once previous match settles"
-        },
-        "qf": {
-          "status": "future",
-          "date": "2026-07-11",
-          "venue": "TBD",
-          "city": "TBD",
-          "opponentDesc": "Opponent TBD",
-          "conditional": true,
-          "conditionNote": "Venue + opponent confirmed once bracket is drawn"
-        },
-        "sf": {
-          "status": "future",
-          "date": "2026-07-15",
-          "venue": "TBD",
-          "city": "TBD",
-          "opponentDesc": "Opponent TBD",
-          "conditional": true,
-          "conditionNote": "Venue + opponent confirmed once bracket is drawn"
-        },
-        "final": {
-          "status": "future",
-          "date": "2026-07-19",
-          "venue": "TBD",
-          "city": "TBD",
-          "opponentDesc": "Opponent TBD",
-          "conditional": true,
-          "conditionNote": "Venue + opponent confirmed once bracket is drawn"
-        }
+        "r16": null,
+        "qf": null,
+        "sf": null,
+        "final": null
       },
       "possibleOpponents": {
-        "r32": [
-          {
-            "likelyTeam": "Germany",
-            "flag": "🇩🇪",
-            "fifaRank": 9,
-            "difficulty": 5,
-            "label": "Danger",
-            "color": "#EF4444",
-            "note": "Confirmed opponent",
-            "pct": 100
-          }
-        ],
-        "r16": [
-          {
-            "likelyTeam": "Canada",
-            "flag": "🇨🇦",
-            "fifaRank": 27,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "Predicted (winner of paired match)",
-            "pct": 100
-          }
-        ]
+        "r32": [],
+        "r16": []
       },
       "totalGoals": 3
     },
@@ -4360,7 +4305,7 @@
         "r16": 100,
         "qf": 50,
         "sf": 14,
-        "final": 4,
+        "final": 3,
         "winner": 1,
         "source": "market"
       },
@@ -4941,7 +4886,7 @@
         "r32": 100,
         "r16": 100,
         "qf": 67,
-        "sf": 50,
+        "sf": 51,
         "final": 23,
         "winner": 13,
         "source": "market"
@@ -5404,7 +5349,7 @@
       "confederation": "UEFA",
       "fifaRank": 3,
       "eliminated": false,
-      "currentStage": "r32",
+      "currentStage": "qf",
       "groupResults": [
         {
           "matchday": 1,
@@ -5474,10 +5419,10 @@
       "advanceProbabilities": {
         "r32": 100,
         "r16": 100,
-        "qf": 90,
-        "sf": 77,
-        "final": 54,
-        "winner": 35,
+        "qf": 100,
+        "sf": 78,
+        "final": 55,
+        "winner": 36,
         "source": "market"
       },
       "path": {
@@ -5497,13 +5442,12 @@
           "conditional": false
         },
         "r16": {
-          "status": "future",
+          "status": "done",
+          "match": 96,
           "date": "2026-07-07",
-          "venue": "TBD",
-          "city": "TBD",
-          "opponentDesc": "Portugal",
-          "conditional": true,
-          "conditionNote": "Predicted from bracket pairing — venue confirmed once previous match settles"
+          "city": "Vancouver",
+          "venue": "BC Place",
+          "opponentDesc": "Winner Match 85"
         },
         "qf": {
           "status": "future",
@@ -5878,8 +5822,8 @@
       "advanceProbabilities": {
         "r32": 100,
         "r16": 100,
-        "qf": 34,
-        "sf": 15,
+        "qf": 33,
+        "sf": 16,
         "final": 5,
         "winner": 2,
         "source": "market"
@@ -6055,10 +5999,10 @@
       "advanceProbabilities": {
         "r32": 100,
         "r16": 100,
-        "qf": 86,
-        "sf": 62,
+        "qf": 85,
+        "sf": 65,
         "final": 40,
-        "winner": 17,
+        "winner": 16,
         "source": "market"
       },
       "path": {
@@ -7161,8 +7105,8 @@
         "r32": 100,
         "r16": 100,
         "qf": 54,
-        "sf": 31,
-        "final": 19,
+        "sf": 30,
+        "final": 18,
         "winner": 7,
         "source": "market"
       },
@@ -9316,25 +9260,16 @@
         "awayFlag": "🇫🇷",
         "awayId": "france",
         "homeScore": 0,
-        "awayScore": 0,
-        "status": "IN_PROGRESS",
+        "awayScore": 1,
+        "status": "FINISHED",
         "date": "2026-07-04",
-        "clock": "HT",
         "broadcasts": [
           "FOX",
           "Tele",
           "FOX One"
         ],
         "time": "2026-07-04T21:00Z",
-        "venue": "Lincoln Financial Field, Philadelphia, Pennsylvania",
-        "polymarket": {
-          "homeId": "paraguay",
-          "awayId": "france",
-          "homeWinPct": 5,
-          "awayWinPct": 72,
-          "drawPct": 25,
-          "eventSlug": "fifwc-par-fra-2026-07-04"
-        }
+        "venue": "Lincoln Financial Field, Philadelphia, Pennsylvania"
       }
     ],
     "2026-07-05": [
@@ -9503,6 +9438,27 @@
           "drawPct": 32,
           "eventSlug": "fifwc-che-col-2026-07-07"
         }
+      }
+    ],
+    "2026-07-09": [
+      {
+        "homeTeam": "France",
+        "homeFlag": "🇫🇷",
+        "homeId": "france",
+        "awayTeam": "Morocco",
+        "awayFlag": "🇲🇦",
+        "awayId": "morocco",
+        "homeScore": 0,
+        "awayScore": 0,
+        "status": "SCHEDULED",
+        "date": "2026-07-09",
+        "broadcasts": [
+          "FOX",
+          "Tele",
+          "FOX One"
+        ],
+        "time": "2026-07-09T20:00Z",
+        "venue": "Gillette Stadium, Foxborough, Massachusetts"
       }
     ]
   },
