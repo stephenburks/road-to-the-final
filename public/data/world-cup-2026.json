@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-05T12:15:35.352Z",
+  "lastUpdated": "2026-07-05T14:42:26.290Z",
   "snapshotDate": "2026-07-05",
   "isHistorical": false,
   "sourceSummary": {
@@ -927,7 +927,7 @@
       "advanceProbabilities": {
         "r32": 100,
         "r16": 100,
-        "qf": 48,
+        "qf": 47,
         "sf": 23,
         "final": 10,
         "winner": 3,
@@ -1946,8 +1946,8 @@
       "advanceProbabilities": {
         "r32": 100,
         "r16": 100,
-        "qf": 70,
-        "sf": 36,
+        "qf": 71,
+        "sf": 37,
         "final": 19,
         "winner": 7,
         "source": "market"
@@ -2515,10 +2515,10 @@
       "advanceProbabilities": {
         "r32": 100,
         "r16": 100,
-        "qf": 51,
+        "qf": 50,
         "sf": 17,
         "final": 5,
-        "winner": 3,
+        "winner": 2,
         "source": "market"
       },
       "path": {
@@ -4303,7 +4303,7 @@
       "advanceProbabilities": {
         "r32": 100,
         "r16": 100,
-        "qf": 51,
+        "qf": 50,
         "sf": 14,
         "final": 4,
         "winner": 1,
@@ -5422,7 +5422,7 @@
         "qf": 100,
         "sf": 79,
         "final": 55,
-        "winner": 36,
+        "winner": 35,
         "source": "market"
       },
       "path": {
@@ -6543,7 +6543,7 @@
         "r32": 100,
         "r16": 100,
         "qf": 34,
-        "sf": 22,
+        "sf": 23,
         "final": 13,
         "winner": 6,
         "source": "market"
@@ -9295,7 +9295,7 @@
           "homeId": "brazil",
           "awayId": "norway",
           "homeWinPct": 55,
-          "awayWinPct": 21,
+          "awayWinPct": 20,
           "drawPct": 27,
           "eventSlug": "fifwc-bra-nor-2026-07-05"
         }
@@ -9321,7 +9321,7 @@
         "polymarket": {
           "homeId": "mexico",
           "awayId": "england",
-          "homeWinPct": 30,
+          "homeWinPct": 31,
           "awayWinPct": 40,
           "drawPct": 31,
           "eventSlug": "fifwc-mex-eng-2026-07-05"
