@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-05T07:57:33.430Z",
+  "lastUpdated": "2026-07-05T10:22:59.332Z",
   "snapshotDate": "2026-07-05",
   "isHistorical": false,
   "sourceSummary": {
@@ -929,7 +929,7 @@
         "r16": 100,
         "qf": 47,
         "sf": 23,
-        "final": 11,
+        "final": 10,
         "winner": 3,
         "source": "market"
       },
@@ -2518,7 +2518,7 @@
         "qf": 50,
         "sf": 17,
         "final": 5,
-        "winner": 2,
+        "winner": 3,
         "source": "market"
       },
       "path": {
@@ -6933,7 +6933,7 @@
         "r32": 100,
         "r16": 100,
         "qf": 61,
-        "sf": 23,
+        "sf": 24,
         "final": 12,
         "winner": 3,
         "source": "market"
@@ -9434,7 +9434,7 @@
           "homeId": "switzerland",
           "awayId": "colombia",
           "homeWinPct": 27,
-          "awayWinPct": 44,
+          "awayWinPct": 43,
           "drawPct": 32,
           "eventSlug": "fifwc-che-col-2026-07-07"
         }
@@ -9458,7 +9458,15 @@
           "FOX One"
         ],
         "time": "2026-07-09T20:00Z",
-        "venue": "Gillette Stadium, Foxborough, Massachusetts"
+        "venue": "Gillette Stadium, Foxborough, Massachusetts",
+        "polymarket": {
+          "homeId": "france",
+          "awayId": "morocco",
+          "homeWinPct": 62,
+          "awayWinPct": 14,
+          "drawPct": 25,
+          "eventSlug": "fifwc-fra-mar-2026-07-09"
+        }
       }
     ]
   },
