@@ -1,6 +1,6 @@
 {
-  "lastUpdated": "2026-07-05T22:01:10.819Z",
-  "snapshotDate": "2026-07-05",
+  "lastUpdated": "2026-07-06T00:05:11.806Z",
+  "snapshotDate": "2026-07-06",
   "isHistorical": false,
   "sourceSummary": {
     "dataSource": "ESPN",
@@ -928,8 +928,8 @@
         "r32": 100,
         "r16": 100,
         "qf": 50,
-        "sf": 23,
-        "final": 11,
+        "sf": 24,
+        "final": 13,
         "winner": 4,
         "source": "market"
       },
@@ -1776,7 +1776,7 @@
         "r16": 100,
         "qf": 40,
         "sf": 12,
-        "final": 4,
+        "final": 5,
         "winner": 1,
         "source": "market"
       },
@@ -1868,7 +1868,7 @@
       "group": "C",
       "confederation": "CONMEBOL",
       "fifaRank": 4,
-      "eliminated": false,
+      "eliminated": true,
       "currentStage": "r16",
       "groupResults": [
         {
@@ -1946,8 +1946,8 @@
       "advanceProbabilities": {
         "r32": 100,
         "r16": 100,
-        "qf": 1,
-        "sf": 1,
+        "qf": 0,
+        "sf": 0,
         "final": 0,
         "winner": 0,
         "source": "market"
@@ -1969,68 +1969,22 @@
           "conditional": false
         },
         "r16": {
-          "status": "active",
+          "status": "done",
           "date": "2026-07-05",
           "venue": "MetLife Stadium",
           "city": "East Rutherford, New Jersey",
           "opponentDesc": "Norway",
           "conditional": false
         },
-        "qf": {
-          "status": "future",
-          "date": "2026-07-11",
-          "venue": "TBD",
-          "city": "TBD",
-          "opponentDesc": "Opponent TBD",
-          "conditional": true,
-          "conditionNote": "Venue + opponent confirmed once bracket is drawn"
-        },
-        "sf": {
-          "status": "future",
-          "date": "2026-07-14",
-          "venue": "TBD",
-          "city": "TBD",
-          "opponentDesc": "Opponent TBD",
-          "conditional": true,
-          "conditionNote": "Venue + opponent confirmed once bracket is drawn"
-        },
-        "final": {
-          "status": "future",
-          "date": "2026-07-19",
-          "venue": "TBD",
-          "city": "TBD",
-          "opponentDesc": "Opponent TBD",
-          "conditional": true,
-          "conditionNote": "Venue + opponent confirmed once bracket is drawn"
-        }
+        "qf": null,
+        "sf": null,
+        "final": null
       },
       "possibleOpponents": {
-        "r32": [
-          {
-            "likelyTeam": "Japan",
-            "flag": "🇯🇵",
-            "fifaRank": 13,
-            "difficulty": 4,
-            "label": "Tough",
-            "color": "#FB923C",
-            "note": "Confirmed opponent",
-            "pct": 100
-          }
-        ],
-        "r16": [
-          {
-            "likelyTeam": "Norway",
-            "flag": "🇳🇴",
-            "fifaRank": 31,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "Confirmed opponent",
-            "pct": 100
-          }
-        ]
+        "r32": [],
+        "r16": []
       },
-      "totalGoals": 9
+      "totalGoals": 10
     },
     {
       "id": "morocco",
@@ -2517,7 +2471,7 @@
         "r16": 100,
         "qf": 52,
         "sf": 18,
-        "final": 5,
+        "final": 6,
         "winner": 3,
         "source": "market"
       },
@@ -4303,7 +4257,7 @@
       "advanceProbabilities": {
         "r32": 100,
         "r16": 100,
-        "qf": 48,
+        "qf": 49,
         "sf": 14,
         "final": 4,
         "winner": 1,
@@ -5420,9 +5374,9 @@
         "r32": 100,
         "r16": 100,
         "qf": 100,
-        "sf": 79,
+        "sf": 80,
         "final": 53,
-        "winner": 35,
+        "winner": 34,
         "source": "market"
       },
       "path": {
@@ -5744,7 +5698,7 @@
       "confederation": "UEFA",
       "fifaRank": 31,
       "eliminated": false,
-      "currentStage": "r16",
+      "currentStage": "qf",
       "groupResults": [
         {
           "matchday": 1,
@@ -5823,8 +5777,8 @@
         "r32": 100,
         "r16": 100,
         "qf": 100,
-        "sf": 42,
-        "final": 15,
+        "sf": 45,
+        "final": 17,
         "winner": 5,
         "source": "market"
       },
@@ -5845,7 +5799,7 @@
           "conditional": false
         },
         "r16": {
-          "status": "active",
+          "status": "done",
           "date": "2026-07-05",
           "venue": "MetLife Stadium",
           "city": "East Rutherford, New Jersey",
@@ -5906,7 +5860,7 @@
           }
         ]
       },
-      "totalGoals": 10
+      "totalGoals": 12
     },
     {
       "id": "argentina",
@@ -6000,9 +5954,9 @@
         "r32": 100,
         "r16": 100,
         "qf": 86,
-        "sf": 62,
-        "final": 40,
-        "winner": 18,
+        "sf": 63,
+        "final": 38,
+        "winner": 17,
         "source": "market"
       },
       "path": {
@@ -6543,7 +6497,7 @@
         "r32": 100,
         "r16": 100,
         "qf": 34,
-        "sf": 24,
+        "sf": 23,
         "final": 13,
         "winner": 6,
         "source": "market"
@@ -9280,26 +9234,17 @@
         "awayTeam": "Norway",
         "awayFlag": "🇳🇴",
         "awayId": "norway",
-        "homeScore": 0,
+        "homeScore": 1,
         "awayScore": 2,
-        "status": "IN_PROGRESS",
+        "status": "FINISHED",
         "date": "2026-07-05",
-        "clock": "90'+8'",
         "broadcasts": [
           "FOX",
           "Tele",
           "FOX One"
         ],
         "time": "2026-07-05T20:00Z",
-        "venue": "MetLife Stadium, East Rutherford, New Jersey",
-        "polymarket": {
-          "homeId": "brazil",
-          "awayId": "norway",
-          "homeWinPct": 0,
-          "awayWinPct": 100,
-          "drawPct": 0,
-          "eventSlug": "fifwc-bra-nor-2026-07-05"
-        }
+        "venue": "MetLife Stadium, East Rutherford, New Jersey"
       },
       {
         "homeTeam": "Mexico",
@@ -9317,7 +9262,7 @@
           "Tele",
           "FOX One"
         ],
-        "time": "2026-07-06T00:00Z",
+        "time": "2026-07-06T01:00Z",
         "venue": "Estadio Banorte, Mexico City",
         "polymarket": {
           "homeId": "mexico",
@@ -9722,11 +9667,12 @@
         "bracketLocation": 5,
         "date": "2026-07-05",
         "venue": "MetLife Stadium, East Rutherford, New Jersey",
-        "status": "IN_PROGRESS",
-        "homeScore": 0,
+        "status": "FINISHED",
+        "homeScore": 1,
         "awayScore": 2,
         "homeId": "brazil",
-        "awayId": "norway"
+        "awayId": "norway",
+        "winnerId": "norway"
       },
       {
         "eventId": "760505",
