@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-06T05:10:32.059Z",
+  "lastUpdated": "2026-07-06T10:20:01.648Z",
   "snapshotDate": "2026-07-06",
   "isHistorical": false,
   "sourceSummary": {
@@ -1728,8 +1728,8 @@
       "advanceProbabilities": {
         "r32": 100,
         "r16": 100,
-        "qf": 40,
-        "sf": 11,
+        "qf": 41,
+        "sf": 12,
         "final": 5,
         "winner": 1,
         "source": "market"
@@ -2423,7 +2423,7 @@
       "advanceProbabilities": {
         "r32": 100,
         "r16": 100,
-        "qf": 53,
+        "qf": 54,
         "sf": 18,
         "final": 7,
         "winner": 3,
@@ -4211,7 +4211,7 @@
       "advanceProbabilities": {
         "r32": 100,
         "r16": 100,
-        "qf": 48,
+        "qf": 47,
         "sf": 13,
         "final": 3,
         "winner": 1,
@@ -4795,7 +4795,7 @@
         "r16": 100,
         "qf": 67,
         "sf": 51,
-        "final": 25,
+        "final": 23,
         "winner": 13,
         "source": "market"
       },
@@ -5328,8 +5328,8 @@
         "r32": 100,
         "r16": 100,
         "qf": 100,
-        "sf": 80,
-        "final": 54,
+        "sf": 79,
+        "final": 55,
         "winner": 33,
         "source": "market"
       },
@@ -5731,8 +5731,8 @@
         "r32": 100,
         "r16": 100,
         "qf": 100,
-        "sf": 38,
-        "final": 18,
+        "sf": 36,
+        "final": 16,
         "winner": 5,
         "source": "market"
       },
@@ -5761,13 +5761,12 @@
           "conditional": false
         },
         "qf": {
-          "status": "future",
+          "status": "upcoming",
           "date": "2026-07-11",
-          "venue": "TBD",
-          "city": "TBD",
-          "opponentDesc": "Opponent TBD",
-          "conditional": true,
-          "conditionNote": "Venue + opponent confirmed once bracket is drawn"
+          "venue": "Hard Rock Stadium",
+          "city": "Miami Gardens, Florida",
+          "opponentDesc": "England",
+          "conditional": false
         },
         "sf": {
           "status": "future",
@@ -5908,8 +5907,8 @@
         "r32": 100,
         "r16": 100,
         "qf": 86,
-        "sf": 63,
-        "final": 37,
+        "sf": 65,
+        "final": 36,
         "winner": 17,
         "source": "market"
       },
@@ -6451,8 +6450,8 @@
         "r32": 100,
         "r16": 100,
         "qf": 35,
-        "sf": 23,
-        "final": 11,
+        "sf": 22,
+        "final": 14,
         "winner": 6,
         "source": "market"
       },
@@ -7013,8 +7012,8 @@
         "r32": 100,
         "r16": 100,
         "qf": 100,
-        "sf": 65,
-        "final": 33,
+        "sf": 66,
+        "final": 35,
         "winner": 14,
         "source": "market"
       },
@@ -7043,13 +7042,12 @@
           "conditional": false
         },
         "qf": {
-          "status": "future",
+          "status": "upcoming",
           "date": "2026-07-11",
-          "venue": "TBD",
-          "city": "TBD",
-          "opponentDesc": "Opponent TBD",
-          "conditional": true,
-          "conditionNote": "Venue + opponent confirmed once bracket is drawn"
+          "venue": "Hard Rock Stadium",
+          "city": "Miami Gardens, Florida",
+          "opponentDesc": "Norway",
+          "conditional": false
         },
         "sf": {
           "status": "future",
@@ -9242,8 +9240,8 @@
         "polymarket": {
           "homeId": "portugal",
           "awayId": "spain",
-          "homeWinPct": 24,
-          "awayWinPct": 51,
+          "homeWinPct": 23,
+          "awayWinPct": 52,
           "drawPct": 27,
           "eventSlug": "fifwc-prt-esp-2026-07-06"
         }
@@ -9269,8 +9267,8 @@
         "polymarket": {
           "homeId": "usa",
           "awayId": "belgium",
-          "homeWinPct": 37,
-          "awayWinPct": 36,
+          "homeWinPct": 39,
+          "awayWinPct": 35,
           "drawPct": 28,
           "eventSlug": "fifwc-usa-bel-2026-07-06"
         }
@@ -9325,8 +9323,8 @@
         "polymarket": {
           "homeId": "switzerland",
           "awayId": "colombia",
-          "homeWinPct": 27,
-          "awayWinPct": 43,
+          "homeWinPct": 28,
+          "awayWinPct": 42,
           "drawPct": 32,
           "eventSlug": "fifwc-che-col-2026-07-07"
         }
@@ -9379,7 +9377,15 @@
           "FOX One"
         ],
         "time": "2026-07-11T21:00Z",
-        "venue": "Hard Rock Stadium, Miami Gardens, Florida"
+        "venue": "Hard Rock Stadium, Miami Gardens, Florida",
+        "polymarket": {
+          "homeId": "norway",
+          "awayId": "england",
+          "homeWinPct": 23,
+          "awayWinPct": 52,
+          "drawPct": 27,
+          "eventSlug": "fifwc-nor-eng-2026-07-11"
+        }
       }
     ]
   },
@@ -9697,15 +9703,15 @@
         "awayFeederEventId": "760507"
       },
       {
-        "eventId": null,
+        "eventId": "760512",
         "bracketLocation": 3,
-        "date": null,
-        "venue": null,
+        "date": "2026-07-11",
+        "venue": "Hard Rock Stadium, Miami Gardens, Florida",
         "status": "SCHEDULED",
         "homeScore": 0,
         "awayScore": 0,
-        "homeFeederEventId": "760504",
-        "awayFeederEventId": "760505"
+        "homeId": "norway",
+        "awayId": "england"
       },
       {
         "eventId": null,
@@ -9734,7 +9740,8 @@
         "venue": null,
         "status": "SCHEDULED",
         "homeScore": 0,
-        "awayScore": 0
+        "awayScore": 0,
+        "homeFeederEventId": "760512"
       }
     ],
     "final": [
