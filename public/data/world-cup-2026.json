@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-06T21:38:18.972Z",
+  "lastUpdated": "2026-07-06T23:06:59.523Z",
   "snapshotDate": "2026-07-06",
   "isHistorical": false,
   "sourceSummary": {
@@ -2026,7 +2026,7 @@
         "r16": 100,
         "qf": 100,
         "sf": 22,
-        "final": 8,
+        "final": 9,
         "winner": 3,
         "source": "market"
       },
@@ -2424,7 +2424,7 @@
         "r32": 100,
         "r16": 100,
         "qf": 54,
-        "sf": 16,
+        "sf": 14,
         "final": 6,
         "winner": 3,
         "source": "market"
@@ -4212,7 +4212,7 @@
         "r32": 100,
         "r16": 100,
         "qf": 47,
-        "sf": 13,
+        "sf": 12,
         "final": 4,
         "winner": 1,
         "source": "market"
@@ -4386,7 +4386,7 @@
         "r32": 100,
         "r16": 100,
         "qf": 14,
-        "sf": 4,
+        "sf": 3,
         "final": 1,
         "winner": 0,
         "source": "market"
@@ -4795,7 +4795,7 @@
         "r16": 100,
         "qf": 100,
         "sf": 74,
-        "final": 33,
+        "final": 34,
         "winner": 18,
         "source": "market"
       },
@@ -5328,7 +5328,7 @@
         "r16": 100,
         "qf": 100,
         "sf": 79,
-        "final": 57,
+        "final": 55,
         "winner": 33,
         "source": "market"
       },
@@ -5731,7 +5731,7 @@
         "r16": 100,
         "qf": 100,
         "sf": 36,
-        "final": 14,
+        "final": 15,
         "winner": 5,
         "source": "market"
       },
@@ -5906,7 +5906,7 @@
         "r32": 100,
         "r16": 100,
         "qf": 86,
-        "sf": 63,
+        "sf": 64,
         "final": 37,
         "winner": 17,
         "source": "market"
@@ -9212,7 +9212,7 @@
         "polymarket": {
           "homeId": "usa",
           "awayId": "belgium",
-          "homeWinPct": 38,
+          "homeWinPct": 37,
           "awayWinPct": 35,
           "drawPct": 28,
           "eventSlug": "fifwc-usa-bel-2026-07-06"
@@ -9269,7 +9269,7 @@
           "homeId": "switzerland",
           "awayId": "colombia",
           "homeWinPct": 27,
-          "awayWinPct": 43,
+          "awayWinPct": 42,
           "drawPct": 32,
           "eventSlug": "fifwc-che-col-2026-07-07"
         }
