@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-06T17:42:41.821Z",
+  "lastUpdated": "2026-07-06T19:55:53.199Z",
   "snapshotDate": "2026-07-06",
   "isHistorical": false,
   "sourceSummary": {
@@ -2424,7 +2424,7 @@
         "r32": 100,
         "r16": 100,
         "qf": 55,
-        "sf": 18,
+        "sf": 17,
         "final": 6,
         "winner": 3,
         "source": "market"
@@ -4386,7 +4386,7 @@
         "r32": 100,
         "r16": 100,
         "qf": 14,
-        "sf": 3,
+        "sf": 4,
         "final": 1,
         "winner": 0,
         "source": "market"
@@ -4793,10 +4793,10 @@
       "advanceProbabilities": {
         "r32": 100,
         "r16": 100,
-        "qf": 67,
-        "sf": 51,
-        "final": 26,
-        "winner": 13,
+        "qf": 62,
+        "sf": 48,
+        "final": 20,
+        "winner": 12,
         "source": "market"
       },
       "path": {
@@ -5907,9 +5907,9 @@
         "r32": 100,
         "r16": 100,
         "qf": 86,
-        "sf": 63,
-        "final": 39,
-        "winner": 18,
+        "sf": 62,
+        "final": 37,
+        "winner": 17,
         "source": "market"
       },
       "path": {
@@ -6449,9 +6449,9 @@
       "advanceProbabilities": {
         "r32": 100,
         "r16": 100,
-        "qf": 34,
-        "sf": 24,
-        "final": 11,
+        "qf": 39,
+        "sf": 27,
+        "final": 13,
         "winner": 6,
         "source": "market"
       },
@@ -7012,8 +7012,8 @@
         "r32": 100,
         "r16": 100,
         "qf": 100,
-        "sf": 66,
-        "final": 35,
+        "sf": 65,
+        "final": 36,
         "winner": 15,
         "source": "market"
       },
@@ -9228,8 +9228,9 @@
         "awayId": "spain",
         "homeScore": 0,
         "awayScore": 0,
-        "status": "SCHEDULED",
+        "status": "IN_PROGRESS",
         "date": "2026-07-06",
+        "clock": "HT",
         "broadcasts": [
           "FOX",
           "Tele",
@@ -9240,9 +9241,9 @@
         "polymarket": {
           "homeId": "portugal",
           "awayId": "spain",
-          "homeWinPct": 24,
-          "awayWinPct": 51,
-          "drawPct": 28,
+          "homeWinPct": 23,
+          "awayWinPct": 43,
+          "drawPct": 35,
           "eventSlug": "fifwc-prt-esp-2026-07-06"
         }
       },
@@ -9267,8 +9268,8 @@
         "polymarket": {
           "homeId": "usa",
           "awayId": "belgium",
-          "homeWinPct": 40,
-          "awayWinPct": 34,
+          "homeWinPct": 39,
+          "awayWinPct": 35,
           "drawPct": 28,
           "eventSlug": "fifwc-usa-bel-2026-07-06"
         }
@@ -9297,7 +9298,7 @@
           "homeId": "argentina",
           "awayId": "egypt",
           "homeWinPct": 72,
-          "awayWinPct": 10,
+          "awayWinPct": 9,
           "drawPct": 21,
           "eventSlug": "fifwc-arg-egy-2026-07-07"
         }
