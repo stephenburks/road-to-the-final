@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-06T19:55:53.199Z",
+  "lastUpdated": "2026-07-06T21:38:18.972Z",
   "snapshotDate": "2026-07-06",
   "isHistorical": false,
   "sourceSummary": {
@@ -2026,7 +2026,7 @@
         "r16": 100,
         "qf": 100,
         "sf": 22,
-        "final": 9,
+        "final": 8,
         "winner": 3,
         "source": "market"
       },
@@ -2423,8 +2423,8 @@
       "advanceProbabilities": {
         "r32": 100,
         "r16": 100,
-        "qf": 55,
-        "sf": 17,
+        "qf": 54,
+        "sf": 16,
         "final": 6,
         "winner": 3,
         "source": "market"
@@ -4211,7 +4211,7 @@
       "advanceProbabilities": {
         "r32": 100,
         "r16": 100,
-        "qf": 46,
+        "qf": 47,
         "sf": 13,
         "final": 4,
         "winner": 1,
@@ -4718,7 +4718,7 @@
       "confederation": "UEFA",
       "fifaRank": 1,
       "eliminated": false,
-      "currentStage": "r16",
+      "currentStage": "qf",
       "groupResults": [
         {
           "matchday": 1,
@@ -4793,10 +4793,10 @@
       "advanceProbabilities": {
         "r32": 100,
         "r16": 100,
-        "qf": 62,
-        "sf": 48,
-        "final": 20,
-        "winner": 12,
+        "qf": 100,
+        "sf": 74,
+        "final": 33,
+        "winner": 18,
         "source": "market"
       },
       "path": {
@@ -4816,13 +4816,12 @@
           "conditional": false
         },
         "r16": {
-          "status": "future",
+          "status": "done",
+          "match": 96,
           "date": "2026-07-07",
-          "venue": "TBD",
-          "city": "TBD",
-          "opponentDesc": "Morocco",
-          "conditional": true,
-          "conditionNote": "Predicted from bracket pairing — venue confirmed once previous match settles"
+          "city": "Vancouver",
+          "venue": "BC Place",
+          "opponentDesc": "Winner Match 85"
         },
         "qf": {
           "status": "future",
@@ -5329,7 +5328,7 @@
         "r16": 100,
         "qf": 100,
         "sf": 79,
-        "final": 54,
+        "final": 57,
         "winner": 33,
         "source": "market"
       },
@@ -5732,7 +5731,7 @@
         "r16": 100,
         "qf": 100,
         "sf": 36,
-        "final": 15,
+        "final": 14,
         "winner": 5,
         "source": "market"
       },
@@ -5907,7 +5906,7 @@
         "r32": 100,
         "r16": 100,
         "qf": 86,
-        "sf": 62,
+        "sf": 63,
         "final": 37,
         "winner": 17,
         "source": "market"
@@ -6351,7 +6350,7 @@
       "group": "K",
       "confederation": "UEFA",
       "fifaRank": 6,
-      "eliminated": false,
+      "eliminated": true,
       "currentStage": "r16",
       "groupResults": [
         {
@@ -6449,10 +6448,10 @@
       "advanceProbabilities": {
         "r32": 100,
         "r16": 100,
-        "qf": 39,
-        "sf": 27,
-        "final": 13,
-        "winner": 6,
+        "qf": 0,
+        "sf": 0,
+        "final": 0,
+        "winner": 0,
         "source": "market"
       },
       "path": {
@@ -6480,59 +6479,13 @@
           "conditional": true,
           "conditionNote": "Predicted from bracket pairing — venue confirmed once previous match settles"
         },
-        "qf": {
-          "status": "future",
-          "date": "2026-07-11",
-          "venue": "TBD",
-          "city": "TBD",
-          "opponentDesc": "Opponent TBD",
-          "conditional": true,
-          "conditionNote": "Venue + opponent confirmed once bracket is drawn"
-        },
-        "sf": {
-          "status": "future",
-          "date": "2026-07-15",
-          "venue": "TBD",
-          "city": "TBD",
-          "opponentDesc": "Opponent TBD",
-          "conditional": true,
-          "conditionNote": "Venue + opponent confirmed once bracket is drawn"
-        },
-        "final": {
-          "status": "future",
-          "date": "2026-07-19",
-          "venue": "TBD",
-          "city": "TBD",
-          "opponentDesc": "Opponent TBD",
-          "conditional": true,
-          "conditionNote": "Venue + opponent confirmed once bracket is drawn"
-        }
+        "qf": null,
+        "sf": null,
+        "final": null
       },
       "possibleOpponents": {
-        "r32": [
-          {
-            "likelyTeam": "Croatia",
-            "flag": "🇭🇷",
-            "fifaRank": 10,
-            "difficulty": 5,
-            "label": "Danger",
-            "color": "#EF4444",
-            "note": "Confirmed opponent",
-            "pct": 100
-          }
-        ],
-        "r16": [
-          {
-            "likelyTeam": "France",
-            "flag": "🇫🇷",
-            "fifaRank": 3,
-            "difficulty": 5,
-            "label": "Danger",
-            "color": "#EF4444",
-            "note": "Predicted (winner of paired match)",
-            "pct": 100
-          }
-        ]
+        "r32": [],
+        "r16": []
       },
       "totalGoals": 8
     },
@@ -6840,7 +6793,7 @@
         "r32": 100,
         "r16": 100,
         "qf": 61,
-        "sf": 24,
+        "sf": 25,
         "final": 10,
         "winner": 3,
         "source": "market"
@@ -7012,7 +6965,7 @@
         "r32": 100,
         "r16": 100,
         "qf": 100,
-        "sf": 65,
+        "sf": 66,
         "final": 36,
         "winner": 15,
         "source": "market"
@@ -9227,25 +9180,16 @@
         "awayFlag": "🇪🇸",
         "awayId": "spain",
         "homeScore": 0,
-        "awayScore": 0,
-        "status": "IN_PROGRESS",
+        "awayScore": 1,
+        "status": "FINISHED",
         "date": "2026-07-06",
-        "clock": "HT",
         "broadcasts": [
           "FOX",
           "Tele",
           "FOX One"
         ],
         "time": "2026-07-06T19:00Z",
-        "venue": "AT&T Stadium, Arlington, Texas",
-        "polymarket": {
-          "homeId": "portugal",
-          "awayId": "spain",
-          "homeWinPct": 23,
-          "awayWinPct": 43,
-          "drawPct": 35,
-          "eventSlug": "fifwc-prt-esp-2026-07-06"
-        }
+        "venue": "AT&T Stadium, Arlington, Texas"
       },
       {
         "homeTeam": "USA",
@@ -9268,7 +9212,7 @@
         "polymarket": {
           "homeId": "usa",
           "awayId": "belgium",
-          "homeWinPct": 39,
+          "homeWinPct": 38,
           "awayWinPct": 35,
           "drawPct": 28,
           "eventSlug": "fifwc-usa-bel-2026-07-06"
