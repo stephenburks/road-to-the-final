@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-06T00:05:11.806Z",
+  "lastUpdated": "2026-07-06T05:10:32.059Z",
   "snapshotDate": "2026-07-06",
   "isHistorical": false,
   "sourceSummary": {
@@ -845,7 +845,7 @@
       "group": "A",
       "confederation": "CONCACAF",
       "fifaRank": 15,
-      "eliminated": false,
+      "eliminated": true,
       "currentStage": "r16",
       "groupResults": [
         {
@@ -927,10 +927,10 @@
       "advanceProbabilities": {
         "r32": 100,
         "r16": 100,
-        "qf": 50,
-        "sf": 24,
-        "final": 13,
-        "winner": 4,
+        "qf": 0,
+        "sf": 0,
+        "final": 0,
+        "winner": 0,
         "source": "market"
       },
       "path": {
@@ -950,68 +950,22 @@
           "conditional": false
         },
         "r16": {
-          "status": "upcoming",
+          "status": "done",
           "date": "2026-07-05",
           "venue": "Estadio Banorte",
           "city": "Mexico City",
           "opponentDesc": "England",
           "conditional": false
         },
-        "qf": {
-          "status": "future",
-          "date": "2026-07-09",
-          "venue": "TBD",
-          "city": "TBD",
-          "opponentDesc": "Opponent TBD",
-          "conditional": true,
-          "conditionNote": "Venue + opponent confirmed once bracket is drawn"
-        },
-        "sf": {
-          "status": "future",
-          "date": "2026-07-14",
-          "venue": "TBD",
-          "city": "TBD",
-          "opponentDesc": "Opponent TBD",
-          "conditional": true,
-          "conditionNote": "Venue + opponent confirmed once bracket is drawn"
-        },
-        "final": {
-          "status": "future",
-          "date": "2026-07-19",
-          "venue": "TBD",
-          "city": "TBD",
-          "opponentDesc": "Opponent TBD",
-          "conditional": true,
-          "conditionNote": "Venue + opponent confirmed once bracket is drawn"
-        }
+        "qf": null,
+        "sf": null,
+        "final": null
       },
       "possibleOpponents": {
-        "r32": [
-          {
-            "likelyTeam": "Ecuador",
-            "flag": "🇪🇨",
-            "fifaRank": 23,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "Confirmed opponent",
-            "pct": 100
-          }
-        ],
-        "r16": [
-          {
-            "likelyTeam": "England",
-            "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
-            "fifaRank": 5,
-            "difficulty": 5,
-            "label": "Danger",
-            "color": "#EF4444",
-            "note": "Confirmed opponent",
-            "pct": 100
-          }
-        ]
+        "r32": [],
+        "r16": []
       },
-      "totalGoals": 8
+      "totalGoals": 10
     },
     {
       "id": "southafrica",
@@ -1775,7 +1729,7 @@
         "r32": 100,
         "r16": 100,
         "qf": 40,
-        "sf": 12,
+        "sf": 11,
         "final": 5,
         "winner": 1,
         "source": "market"
@@ -2072,7 +2026,7 @@
         "r16": 100,
         "qf": 100,
         "sf": 22,
-        "final": 9,
+        "final": 10,
         "winner": 3,
         "source": "market"
       },
@@ -2469,9 +2423,9 @@
       "advanceProbabilities": {
         "r32": 100,
         "r16": 100,
-        "qf": 52,
+        "qf": 53,
         "sf": 18,
-        "final": 6,
+        "final": 7,
         "winner": 3,
         "source": "market"
       },
@@ -4257,9 +4211,9 @@
       "advanceProbabilities": {
         "r32": 100,
         "r16": 100,
-        "qf": 49,
-        "sf": 14,
-        "final": 4,
+        "qf": 48,
+        "sf": 13,
+        "final": 3,
         "winner": 1,
         "source": "market"
       },
@@ -4432,7 +4386,7 @@
         "r32": 100,
         "r16": 100,
         "qf": 14,
-        "sf": 4,
+        "sf": 3,
         "final": 1,
         "winner": 0,
         "source": "market"
@@ -5375,8 +5329,8 @@
         "r16": 100,
         "qf": 100,
         "sf": 80,
-        "final": 53,
-        "winner": 34,
+        "final": 54,
+        "winner": 33,
         "source": "market"
       },
       "path": {
@@ -5777,8 +5731,8 @@
         "r32": 100,
         "r16": 100,
         "qf": 100,
-        "sf": 45,
-        "final": 17,
+        "sf": 38,
+        "final": 18,
         "winner": 5,
         "source": "market"
       },
@@ -5955,7 +5909,7 @@
         "r16": 100,
         "qf": 86,
         "sf": 63,
-        "final": 38,
+        "final": 37,
         "winner": 17,
         "source": "market"
       },
@@ -6496,9 +6450,9 @@
       "advanceProbabilities": {
         "r32": 100,
         "r16": 100,
-        "qf": 34,
+        "qf": 35,
         "sf": 23,
-        "final": 13,
+        "final": 11,
         "winner": 6,
         "source": "market"
       },
@@ -6981,7 +6935,7 @@
       "confederation": "UEFA",
       "fifaRank": 5,
       "eliminated": false,
-      "currentStage": "r16",
+      "currentStage": "qf",
       "groupResults": [
         {
           "matchday": 1,
@@ -7058,10 +7012,10 @@
       "advanceProbabilities": {
         "r32": 100,
         "r16": 100,
-        "qf": 51,
-        "sf": 33,
-        "final": 19,
-        "winner": 9,
+        "qf": 100,
+        "sf": 65,
+        "final": 33,
+        "winner": 14,
         "source": "market"
       },
       "path": {
@@ -7081,7 +7035,7 @@
           "conditional": false
         },
         "r16": {
-          "status": "upcoming",
+          "status": "done",
           "date": "2026-07-05",
           "venue": "Estadio Banorte",
           "city": "Mexico City",
@@ -7142,7 +7096,7 @@
           }
         ]
       },
-      "totalGoals": 8
+      "totalGoals": 11
     },
     {
       "id": "croatia",
@@ -9253,9 +9207,9 @@
         "awayTeam": "England",
         "awayFlag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "awayId": "england",
-        "homeScore": 0,
-        "awayScore": 0,
-        "status": "SCHEDULED",
+        "homeScore": 2,
+        "awayScore": 3,
+        "status": "FINISHED",
         "date": "2026-07-05",
         "broadcasts": [
           "FOX",
@@ -9263,15 +9217,7 @@
           "FOX One"
         ],
         "time": "2026-07-06T01:00Z",
-        "venue": "Estadio Banorte, Mexico City",
-        "polymarket": {
-          "homeId": "mexico",
-          "awayId": "england",
-          "homeWinPct": 32,
-          "awayWinPct": 38,
-          "drawPct": 32,
-          "eventSlug": "fifwc-mex-eng-2026-07-05"
-        }
+        "venue": "Estadio Banorte, Mexico City"
       }
     ],
     "2026-07-06": [
@@ -9323,8 +9269,8 @@
         "polymarket": {
           "homeId": "usa",
           "awayId": "belgium",
-          "homeWinPct": 36,
-          "awayWinPct": 37,
+          "homeWinPct": 37,
+          "awayWinPct": 36,
           "drawPct": 28,
           "eventSlug": "fifwc-usa-bel-2026-07-06"
         }
@@ -9413,6 +9359,27 @@
           "drawPct": 25,
           "eventSlug": "fifwc-fra-mar-2026-07-09"
         }
+      }
+    ],
+    "2026-07-11": [
+      {
+        "homeTeam": "Norway",
+        "homeFlag": "🇳🇴",
+        "homeId": "norway",
+        "awayTeam": "England",
+        "awayFlag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+        "awayId": "england",
+        "homeScore": 0,
+        "awayScore": 0,
+        "status": "SCHEDULED",
+        "date": "2026-07-11",
+        "broadcasts": [
+          "FOX",
+          "Tele",
+          "FOX One"
+        ],
+        "time": "2026-07-11T21:00Z",
+        "venue": "Hard Rock Stadium, Miami Gardens, Florida"
       }
     ]
   },
@@ -9679,11 +9646,12 @@
         "bracketLocation": 6,
         "date": "2026-07-05",
         "venue": "Estadio Banorte, Mexico City",
-        "status": "SCHEDULED",
-        "homeScore": 0,
-        "awayScore": 0,
+        "status": "FINISHED",
+        "homeScore": 2,
+        "awayScore": 3,
         "homeId": "mexico",
-        "awayId": "england"
+        "awayId": "england",
+        "winnerId": "england"
       },
       {
         "eventId": null,
