@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-07T03:19:25.961Z",
+  "lastUpdated": "2026-07-07T07:37:35.871Z",
   "snapshotDate": "2026-07-07",
   "isHistorical": false,
   "sourceSummary": {
@@ -1729,8 +1729,8 @@
         "r32": 100,
         "r16": 100,
         "qf": 40,
-        "sf": 9,
-        "final": 3,
+        "sf": 10,
+        "final": 4,
         "winner": 1,
         "source": "market"
       },
@@ -4340,7 +4340,7 @@
         "r32": 100,
         "r16": 100,
         "qf": 14,
-        "sf": 3,
+        "sf": 4,
         "final": 1,
         "winner": 0,
         "source": "market"
@@ -4748,7 +4748,7 @@
         "r32": 100,
         "r16": 100,
         "qf": 100,
-        "sf": 75,
+        "sf": 74,
         "final": 34,
         "winner": 18,
         "source": "market"
@@ -5282,7 +5282,7 @@
         "r16": 100,
         "qf": 100,
         "sf": 79,
-        "final": 55,
+        "final": 54,
         "winner": 33,
         "source": "market"
       },
@@ -5686,7 +5686,7 @@
         "qf": 100,
         "sf": 36,
         "final": 15,
-        "winner": 6,
+        "winner": 5,
         "source": "market"
       },
       "path": {
@@ -5862,7 +5862,7 @@
         "qf": 86,
         "sf": 64,
         "final": 38,
-        "winner": 18,
+        "winner": 19,
         "source": "market"
       },
       "path": {
@@ -6747,7 +6747,7 @@
         "r32": 100,
         "r16": 100,
         "qf": 61,
-        "sf": 25,
+        "sf": 24,
         "final": 11,
         "winner": 3,
         "source": "market"
@@ -6920,8 +6920,8 @@
         "r16": 100,
         "qf": 100,
         "sf": 65,
-        "final": 36,
-        "winner": 15,
+        "final": 35,
+        "winner": 14,
         "source": "market"
       },
       "path": {
@@ -9215,7 +9215,7 @@
           "homeId": "switzerland",
           "awayId": "colombia",
           "homeWinPct": 27,
-          "awayWinPct": 42,
+          "awayWinPct": 43,
           "drawPct": 32,
           "eventSlug": "fifwc-che-col-2026-07-07"
         }
@@ -9293,7 +9293,7 @@
         "polymarket": {
           "homeId": "norway",
           "awayId": "england",
-          "homeWinPct": 23,
+          "homeWinPct": 24,
           "awayWinPct": 52,
           "drawPct": 27,
           "eventSlug": "fifwc-nor-eng-2026-07-11"
