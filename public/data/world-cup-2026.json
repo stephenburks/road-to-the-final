@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-07T19:01:41.997Z",
+  "lastUpdated": "2026-07-07T21:23:42.921Z",
   "snapshotDate": "2026-07-07",
   "isHistorical": false,
   "sourceSummary": {
@@ -1728,9 +1728,9 @@
       "advanceProbabilities": {
         "r32": 100,
         "r16": 100,
-        "qf": 39,
-        "sf": 10,
-        "final": 4,
+        "qf": 44,
+        "sf": 13,
+        "final": 5,
         "winner": 1,
         "source": "market"
       },
@@ -2026,7 +2026,7 @@
         "r16": 100,
         "qf": 100,
         "sf": 22,
-        "final": 9,
+        "final": 8,
         "winner": 3,
         "source": "market"
       },
@@ -4166,7 +4166,7 @@
         "r32": 100,
         "r16": 100,
         "qf": 100,
-        "sf": 26,
+        "sf": 25,
         "final": 7,
         "winner": 2,
         "source": "market"
@@ -5236,7 +5236,7 @@
         "r16": 100,
         "qf": 100,
         "sf": 78,
-        "final": 52,
+        "final": 55,
         "winner": 33,
         "source": "market"
       },
@@ -5639,7 +5639,7 @@
         "r16": 100,
         "qf": 100,
         "sf": 35,
-        "final": 15,
+        "final": 14,
         "winner": 6,
         "source": "market"
       },
@@ -5816,7 +5816,7 @@
         "qf": 100,
         "sf": 70,
         "final": 38,
-        "winner": 17,
+        "winner": 18,
         "source": "market"
       },
       "path": {
@@ -6699,10 +6699,10 @@
       "advanceProbabilities": {
         "r32": 100,
         "r16": 100,
-        "qf": 61,
+        "qf": 56,
         "sf": 23,
-        "final": 10,
-        "winner": 4,
+        "final": 11,
+        "winner": 3,
         "source": "market"
       },
       "path": {
@@ -9147,8 +9147,9 @@
         "awayId": "colombia",
         "homeScore": 0,
         "awayScore": 0,
-        "status": "SCHEDULED",
+        "status": "IN_PROGRESS",
         "date": "2026-07-07",
+        "clock": "64'",
         "broadcasts": [
           "FOX",
           "Tele",
@@ -9159,9 +9160,9 @@
         "polymarket": {
           "homeId": "switzerland",
           "awayId": "colombia",
-          "homeWinPct": 27,
-          "awayWinPct": 42,
-          "drawPct": 33,
+          "homeWinPct": 22,
+          "awayWinPct": 28,
+          "drawPct": 50,
           "eventSlug": "fifwc-che-col-2026-07-07"
         }
       }
@@ -9247,7 +9248,7 @@
           "homeId": "norway",
           "awayId": "england",
           "homeWinPct": 23,
-          "awayWinPct": 52,
+          "awayWinPct": 53,
           "drawPct": 27,
           "eventSlug": "fifwc-nor-eng-2026-07-11"
         }
