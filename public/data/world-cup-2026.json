@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-07T16:30:18.938Z",
+  "lastUpdated": "2026-07-07T19:01:41.997Z",
   "snapshotDate": "2026-07-07",
   "isHistorical": false,
   "sourceSummary": {
@@ -1728,8 +1728,8 @@
       "advanceProbabilities": {
         "r32": 100,
         "r16": 100,
-        "qf": 40,
-        "sf": 12,
+        "qf": 39,
+        "sf": 10,
         "final": 4,
         "winner": 1,
         "source": "market"
@@ -4258,7 +4258,7 @@
       "group": "G",
       "confederation": "CAF",
       "fifaRank": 34,
-      "eliminated": false,
+      "eliminated": true,
       "currentStage": "r16",
       "groupResults": [
         {
@@ -4339,10 +4339,10 @@
       "advanceProbabilities": {
         "r32": 100,
         "r16": 100,
-        "qf": 29,
-        "sf": 7,
-        "final": 2,
-        "winner": 1,
+        "qf": 0,
+        "sf": 0,
+        "final": 0,
+        "winner": 0,
         "source": "market"
       },
       "path": {
@@ -4370,59 +4370,13 @@
           "conditional": true,
           "conditionNote": "Predicted from bracket pairing — venue confirmed once previous match settles"
         },
-        "qf": {
-          "status": "future",
-          "date": "2026-07-11",
-          "venue": "TBD",
-          "city": "TBD",
-          "opponentDesc": "Opponent TBD",
-          "conditional": true,
-          "conditionNote": "Venue + opponent confirmed once bracket is drawn"
-        },
-        "sf": {
-          "status": "future",
-          "date": "2026-07-15",
-          "venue": "TBD",
-          "city": "TBD",
-          "opponentDesc": "Opponent TBD",
-          "conditional": true,
-          "conditionNote": "Venue + opponent confirmed once bracket is drawn"
-        },
-        "final": {
-          "status": "future",
-          "date": "2026-07-19",
-          "venue": "TBD",
-          "city": "TBD",
-          "opponentDesc": "Opponent TBD",
-          "conditional": true,
-          "conditionNote": "Venue + opponent confirmed once bracket is drawn"
-        }
+        "qf": null,
+        "sf": null,
+        "final": null
       },
       "possibleOpponents": {
-        "r32": [
-          {
-            "likelyTeam": "Australia",
-            "flag": "🇦🇺",
-            "fifaRank": 26,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "Confirmed opponent",
-            "pct": 100
-          }
-        ],
-        "r16": [
-          {
-            "likelyTeam": "Colombia",
-            "flag": "🇨🇴",
-            "fifaRank": 13,
-            "difficulty": 4,
-            "label": "Tough",
-            "color": "#FB923C",
-            "note": "Predicted (winner of paired match)",
-            "pct": 100
-          }
-        ]
+        "r32": [],
+        "r16": []
       },
       "totalGoals": 6
     },
@@ -4749,7 +4703,7 @@
         "r16": 100,
         "qf": 100,
         "sf": 75,
-        "final": 35,
+        "final": 37,
         "winner": 19,
         "source": "market"
       },
@@ -5282,7 +5236,7 @@
         "r16": 100,
         "qf": 100,
         "sf": 78,
-        "final": 53,
+        "final": 52,
         "winner": 33,
         "source": "market"
       },
@@ -5776,7 +5730,7 @@
       "confederation": "CONMEBOL",
       "fifaRank": 2,
       "eliminated": false,
-      "currentStage": "r16",
+      "currentStage": "qf",
       "groupResults": [
         {
           "matchday": 1,
@@ -5859,10 +5813,10 @@
       "advanceProbabilities": {
         "r32": 100,
         "r16": 100,
-        "qf": 71,
-        "sf": 52,
-        "final": 28,
-        "winner": 14,
+        "qf": 100,
+        "sf": 70,
+        "final": 38,
+        "winner": 17,
         "source": "market"
       },
       "path": {
@@ -5882,13 +5836,12 @@
           "conditional": false
         },
         "r16": {
-          "status": "future",
+          "status": "done",
+          "match": 93,
           "date": "2026-07-05",
-          "venue": "TBD",
-          "city": "TBD",
-          "opponentDesc": "Switzerland",
-          "conditional": true,
-          "conditionNote": "Predicted from bracket pairing — venue confirmed once previous match settles"
+          "city": "Guadalajara",
+          "venue": "Estadio Guadalajara",
+          "opponentDesc": "Winner Match 79"
         },
         "qf": {
           "status": "future",
@@ -6747,8 +6700,8 @@
         "r32": 100,
         "r16": 100,
         "qf": 61,
-        "sf": 28,
-        "final": 11,
+        "sf": 23,
+        "final": 10,
         "winner": 4,
         "source": "market"
       },
@@ -6920,8 +6873,8 @@
         "r16": 100,
         "qf": 100,
         "sf": 66,
-        "final": 39,
-        "winner": 16,
+        "final": 37,
+        "winner": 15,
         "source": "market"
       },
       "path": {
@@ -9173,26 +9126,17 @@
         "awayTeam": "Egypt",
         "awayFlag": "🇪🇬",
         "awayId": "egypt",
-        "homeScore": 0,
-        "awayScore": 1,
-        "status": "IN_PROGRESS",
+        "homeScore": 3,
+        "awayScore": 2,
+        "status": "FINISHED",
         "date": "2026-07-07",
-        "clock": "29'",
         "broadcasts": [
           "FOX",
           "Tele",
           "FOX One"
         ],
         "time": "2026-07-07T16:00Z",
-        "venue": "Mercedes-Benz Stadium, Atlanta, Georgia",
-        "polymarket": {
-          "homeId": "argentina",
-          "awayId": "egypt",
-          "homeWinPct": 48,
-          "awayWinPct": 23,
-          "drawPct": 30,
-          "eventSlug": "fifwc-arg-egy-2026-07-07"
-        }
+        "venue": "Mercedes-Benz Stadium, Atlanta, Georgia"
       },
       {
         "homeTeam": "Switzerland",
@@ -9216,8 +9160,8 @@
           "homeId": "switzerland",
           "awayId": "colombia",
           "homeWinPct": 27,
-          "awayWinPct": 43,
-          "drawPct": 32,
+          "awayWinPct": 42,
+          "drawPct": 33,
           "eventSlug": "fifwc-che-col-2026-07-07"
         }
       }
@@ -9244,7 +9188,7 @@
         "polymarket": {
           "homeId": "france",
           "awayId": "morocco",
-          "homeWinPct": 62,
+          "homeWinPct": 63,
           "awayWinPct": 14,
           "drawPct": 25,
           "eventSlug": "fifwc-fra-mar-2026-07-09"
