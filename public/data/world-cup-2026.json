@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-07T07:37:35.871Z",
+  "lastUpdated": "2026-07-07T10:55:11.155Z",
   "snapshotDate": "2026-07-07",
   "isHistorical": false,
   "sourceSummary": {
@@ -2025,7 +2025,7 @@
         "r32": 100,
         "r16": 100,
         "qf": 100,
-        "sf": 22,
+        "sf": 23,
         "final": 9,
         "winner": 3,
         "source": "market"
@@ -4748,7 +4748,7 @@
         "r32": 100,
         "r16": 100,
         "qf": 100,
-        "sf": 74,
+        "sf": 75,
         "final": 34,
         "winner": 18,
         "source": "market"
@@ -5281,7 +5281,7 @@
         "r32": 100,
         "r16": 100,
         "qf": 100,
-        "sf": 79,
+        "sf": 78,
         "final": 54,
         "winner": 33,
         "source": "market"
@@ -5684,9 +5684,9 @@
         "r32": 100,
         "r16": 100,
         "qf": 100,
-        "sf": 36,
+        "sf": 35,
         "final": 15,
-        "winner": 5,
+        "winner": 6,
         "source": "market"
       },
       "path": {
@@ -5862,7 +5862,7 @@
         "qf": 86,
         "sf": 64,
         "final": 38,
-        "winner": 19,
+        "winner": 18,
         "source": "market"
       },
       "path": {
@@ -6919,7 +6919,7 @@
         "r32": 100,
         "r16": 100,
         "qf": 100,
-        "sf": 65,
+        "sf": 66,
         "final": 35,
         "winner": 14,
         "source": "market"
@@ -9268,7 +9268,15 @@
           "FOX One"
         ],
         "time": "2026-07-10T19:00Z",
-        "venue": "SoFi Stadium, Inglewood, California"
+        "venue": "SoFi Stadium, Inglewood, California",
+        "polymarket": {
+          "homeId": "spain",
+          "awayId": "belgium",
+          "homeWinPct": 61,
+          "awayWinPct": 17,
+          "drawPct": 24,
+          "eventSlug": "fifwc-esp-bel-2026-07-10"
+        }
       }
     ],
     "2026-07-11": [
