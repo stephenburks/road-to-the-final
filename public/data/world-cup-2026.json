@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-07T13:20:43.765Z",
+  "lastUpdated": "2026-07-07T16:30:18.938Z",
   "snapshotDate": "2026-07-07",
   "isHistorical": false,
   "sourceSummary": {
@@ -1729,7 +1729,7 @@
         "r32": 100,
         "r16": 100,
         "qf": 40,
-        "sf": 10,
+        "sf": 12,
         "final": 4,
         "winner": 1,
         "source": "market"
@@ -2025,7 +2025,7 @@
         "r32": 100,
         "r16": 100,
         "qf": 100,
-        "sf": 23,
+        "sf": 22,
         "final": 9,
         "winner": 3,
         "source": "market"
@@ -4339,10 +4339,10 @@
       "advanceProbabilities": {
         "r32": 100,
         "r16": 100,
-        "qf": 14,
-        "sf": 4,
-        "final": 1,
-        "winner": 0,
+        "qf": 29,
+        "sf": 7,
+        "final": 2,
+        "winner": 1,
         "source": "market"
       },
       "path": {
@@ -4749,7 +4749,7 @@
         "r16": 100,
         "qf": 100,
         "sf": 75,
-        "final": 34,
+        "final": 35,
         "winner": 19,
         "source": "market"
       },
@@ -5859,10 +5859,10 @@
       "advanceProbabilities": {
         "r32": 100,
         "r16": 100,
-        "qf": 86,
-        "sf": 63,
-        "final": 37,
-        "winner": 18,
+        "qf": 71,
+        "sf": 52,
+        "final": 28,
+        "winner": 14,
         "source": "market"
       },
       "path": {
@@ -6747,9 +6747,9 @@
         "r32": 100,
         "r16": 100,
         "qf": 61,
-        "sf": 24,
+        "sf": 28,
         "final": 11,
-        "winner": 3,
+        "winner": 4,
         "source": "market"
       },
       "path": {
@@ -6920,8 +6920,8 @@
         "r16": 100,
         "qf": 100,
         "sf": 66,
-        "final": 37,
-        "winner": 15,
+        "final": 39,
+        "winner": 16,
         "source": "market"
       },
       "path": {
@@ -9174,9 +9174,10 @@
         "awayFlag": "🇪🇬",
         "awayId": "egypt",
         "homeScore": 0,
-        "awayScore": 0,
-        "status": "SCHEDULED",
+        "awayScore": 1,
+        "status": "IN_PROGRESS",
         "date": "2026-07-07",
+        "clock": "29'",
         "broadcasts": [
           "FOX",
           "Tele",
@@ -9187,9 +9188,9 @@
         "polymarket": {
           "homeId": "argentina",
           "awayId": "egypt",
-          "homeWinPct": 74,
-          "awayWinPct": 8,
-          "drawPct": 20,
+          "homeWinPct": 48,
+          "awayWinPct": 23,
+          "drawPct": 30,
           "eventSlug": "fifwc-arg-egy-2026-07-07"
         }
       },
