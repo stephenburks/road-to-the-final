@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-07T21:23:42.921Z",
+  "lastUpdated": "2026-07-07T23:00:56.467Z",
   "snapshotDate": "2026-07-07",
   "isHistorical": false,
   "sourceSummary": {
@@ -1661,7 +1661,7 @@
       "confederation": "UEFA",
       "fifaRank": 17,
       "eliminated": false,
-      "currentStage": "r16",
+      "currentStage": "qf",
       "groupResults": [
         {
           "matchday": 1,
@@ -1728,10 +1728,10 @@
       "advanceProbabilities": {
         "r32": 100,
         "r16": 100,
-        "qf": 44,
-        "sf": 13,
-        "final": 5,
-        "winner": 1,
+        "qf": 100,
+        "sf": 24,
+        "final": 7,
+        "winner": 2,
         "source": "market"
       },
       "path": {
@@ -1751,13 +1751,12 @@
           "conditional": false
         },
         "r16": {
-          "status": "future",
+          "status": "done",
+          "match": 96,
           "date": "2026-07-07",
-          "venue": "TBD",
-          "city": "TBD",
-          "opponentDesc": "Argentina",
-          "conditional": true,
-          "conditionNote": "Predicted from bracket pairing — venue confirmed once previous match settles"
+          "city": "Vancouver",
+          "venue": "BC Place",
+          "opponentDesc": "Winner Match 85"
         },
         "qf": {
           "status": "future",
@@ -2026,7 +2025,7 @@
         "r16": 100,
         "qf": 100,
         "sf": 22,
-        "final": 8,
+        "final": 9,
         "winner": 3,
         "source": "market"
       },
@@ -5814,9 +5813,9 @@
         "r32": 100,
         "r16": 100,
         "qf": 100,
-        "sf": 70,
-        "final": 38,
-        "winner": 18,
+        "sf": 75,
+        "final": 43,
+        "winner": 19,
         "source": "market"
       },
       "path": {
@@ -6626,7 +6625,7 @@
       "confederation": "CONMEBOL",
       "fifaRank": 13,
       "eliminated": false,
-      "currentStage": "r16",
+      "currentStage": "qf",
       "groupResults": [
         {
           "matchday": 1,
@@ -6699,10 +6698,10 @@
       "advanceProbabilities": {
         "r32": 100,
         "r16": 100,
-        "qf": 56,
-        "sf": 23,
-        "final": 11,
-        "winner": 3,
+        "qf": 0,
+        "sf": 0,
+        "final": 0,
+        "winner": 0,
         "source": "market"
       },
       "path": {
@@ -6722,13 +6721,12 @@
           "conditional": false
         },
         "r16": {
-          "status": "future",
+          "status": "done",
+          "match": 94,
           "date": "2026-07-06",
-          "venue": "TBD",
-          "city": "TBD",
-          "opponentDesc": "Egypt",
-          "conditional": true,
-          "conditionNote": "Predicted from bracket pairing — venue confirmed once previous match settles"
+          "city": "Seattle",
+          "venue": "Lumen Field",
+          "opponentDesc": "Winner Match 80"
         },
         "qf": {
           "status": "future",
@@ -6874,7 +6872,7 @@
         "qf": 100,
         "sf": 66,
         "final": 37,
-        "winner": 15,
+        "winner": 16,
         "source": "market"
       },
       "path": {
@@ -9147,24 +9145,17 @@
         "awayId": "colombia",
         "homeScore": 0,
         "awayScore": 0,
-        "status": "IN_PROGRESS",
+        "homeShootout": 4,
+        "awayShootout": 3,
+        "status": "FINISHED",
         "date": "2026-07-07",
-        "clock": "64'",
         "broadcasts": [
           "FOX",
           "Tele",
           "FOX One"
         ],
         "time": "2026-07-07T20:00Z",
-        "venue": "BC Place, Vancouver",
-        "polymarket": {
-          "homeId": "switzerland",
-          "awayId": "colombia",
-          "homeWinPct": 22,
-          "awayWinPct": 28,
-          "drawPct": 50,
-          "eventSlug": "fifwc-che-col-2026-07-07"
-        }
+        "venue": "BC Place, Vancouver"
       }
     ],
     "2026-07-09": [
@@ -9252,6 +9243,25 @@
           "drawPct": 27,
           "eventSlug": "fifwc-nor-eng-2026-07-11"
         }
+      },
+      {
+        "homeTeam": "Argentina",
+        "homeFlag": "🇦🇷",
+        "homeId": "argentina",
+        "awayTeam": "Switzerland",
+        "awayFlag": "🇨🇭",
+        "awayId": "switzerland",
+        "homeScore": 0,
+        "awayScore": 0,
+        "status": "SCHEDULED",
+        "date": "2026-07-11",
+        "broadcasts": [
+          "FOX",
+          "Tele",
+          "FOX One"
+        ],
+        "time": "2026-07-12T01:00Z",
+        "venue": "GEHA Field at Arrowhead Stadium, Kansas City, Missouri"
       }
     ]
   },
