@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-07T10:55:11.155Z",
+  "lastUpdated": "2026-07-07T13:20:43.765Z",
   "snapshotDate": "2026-07-07",
   "isHistorical": false,
   "sourceSummary": {
@@ -4750,7 +4750,7 @@
         "qf": 100,
         "sf": 75,
         "final": 34,
-        "winner": 18,
+        "winner": 19,
         "source": "market"
       },
       "path": {
@@ -5282,7 +5282,7 @@
         "r16": 100,
         "qf": 100,
         "sf": 78,
-        "final": 54,
+        "final": 53,
         "winner": 33,
         "source": "market"
       },
@@ -5860,8 +5860,8 @@
         "r32": 100,
         "r16": 100,
         "qf": 86,
-        "sf": 64,
-        "final": 38,
+        "sf": 63,
+        "final": 37,
         "winner": 18,
         "source": "market"
       },
@@ -6920,8 +6920,8 @@
         "r16": 100,
         "qf": 100,
         "sf": 66,
-        "final": 35,
-        "winner": 14,
+        "final": 37,
+        "winner": 15,
         "source": "market"
       },
       "path": {
@@ -9187,8 +9187,8 @@
         "polymarket": {
           "homeId": "argentina",
           "awayId": "egypt",
-          "homeWinPct": 73,
-          "awayWinPct": 9,
+          "homeWinPct": 74,
+          "awayWinPct": 8,
           "drawPct": 20,
           "eventSlug": "fifwc-arg-egy-2026-07-07"
         }
@@ -9274,7 +9274,7 @@
           "awayId": "belgium",
           "homeWinPct": 61,
           "awayWinPct": 17,
-          "drawPct": 24,
+          "drawPct": 25,
           "eventSlug": "fifwc-esp-bel-2026-07-10"
         }
       }
@@ -9301,7 +9301,7 @@
         "polymarket": {
           "homeId": "norway",
           "awayId": "england",
-          "homeWinPct": 24,
+          "homeWinPct": 23,
           "awayWinPct": 52,
           "drawPct": 27,
           "eventSlug": "fifwc-nor-eng-2026-07-11"
