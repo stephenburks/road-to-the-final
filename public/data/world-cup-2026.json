@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-08T08:26:42.131Z",
+  "lastUpdated": "2026-07-08T11:03:33.606Z",
   "snapshotDate": "2026-07-08",
   "isHistorical": false,
   "sourceSummary": {
@@ -4701,7 +4701,7 @@
         "r32": 100,
         "r16": 100,
         "qf": 100,
-        "sf": 75,
+        "sf": 76,
         "final": 37,
         "winner": 19,
         "source": "market"
@@ -5638,7 +5638,7 @@
         "r16": 100,
         "qf": 100,
         "sf": 35,
-        "final": 14,
+        "final": 15,
         "winner": 6,
         "source": "market"
       },
@@ -5813,8 +5813,8 @@
         "r32": 100,
         "r16": 100,
         "qf": 100,
-        "sf": 73,
-        "final": 41,
+        "sf": 74,
+        "final": 40,
         "winner": 19,
         "source": "market"
       },
@@ -9261,7 +9261,15 @@
           "FOX One"
         ],
         "time": "2026-07-12T01:00Z",
-        "venue": "GEHA Field at Arrowhead Stadium, Kansas City, Missouri"
+        "venue": "GEHA Field at Arrowhead Stadium, Kansas City, Missouri",
+        "polymarket": {
+          "homeId": "argentina",
+          "awayId": "switzerland",
+          "homeWinPct": 57,
+          "awayWinPct": 17,
+          "drawPct": 28,
+          "eventSlug": "fifwc-arg-che-2026-07-11"
+        }
       }
     ]
   },
