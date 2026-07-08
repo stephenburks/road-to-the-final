@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-08T02:37:02.164Z",
+  "lastUpdated": "2026-07-08T05:50:30.289Z",
   "snapshotDate": "2026-07-08",
   "isHistorical": false,
   "sourceSummary": {
@@ -5637,7 +5637,7 @@
         "r32": 100,
         "r16": 100,
         "qf": 100,
-        "sf": 35,
+        "sf": 36,
         "final": 14,
         "winner": 6,
         "source": "market"
@@ -5815,7 +5815,7 @@
         "qf": 100,
         "sf": 73,
         "final": 40,
-        "winner": 18,
+        "winner": 19,
         "source": "market"
       },
       "path": {
@@ -6871,7 +6871,7 @@
         "r16": 100,
         "qf": 100,
         "sf": 66,
-        "final": 38,
+        "final": 39,
         "winner": 16,
         "source": "market"
       },
@@ -9180,7 +9180,7 @@
         "polymarket": {
           "homeId": "france",
           "awayId": "morocco",
-          "homeWinPct": 63,
+          "homeWinPct": 62,
           "awayWinPct": 14,
           "drawPct": 25,
           "eventSlug": "fifwc-fra-mar-2026-07-09"
