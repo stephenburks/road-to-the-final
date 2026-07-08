@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-08T11:03:33.606Z",
+  "lastUpdated": "2026-07-08T14:04:10.246Z",
   "snapshotDate": "2026-07-08",
   "isHistorical": false,
   "sourceSummary": {
@@ -1729,7 +1729,7 @@
         "r32": 100,
         "r16": 100,
         "qf": 100,
-        "sf": 27,
+        "sf": 26,
         "final": 7,
         "winner": 2,
         "source": "market"
@@ -4702,7 +4702,7 @@
         "r16": 100,
         "qf": 100,
         "sf": 76,
-        "final": 37,
+        "final": 36,
         "winner": 19,
         "source": "market"
       },
@@ -5638,7 +5638,7 @@
         "r16": 100,
         "qf": 100,
         "sf": 35,
-        "final": 15,
+        "final": 14,
         "winner": 6,
         "source": "market"
       },
