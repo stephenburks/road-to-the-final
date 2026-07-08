@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-08T14:04:10.246Z",
+  "lastUpdated": "2026-07-08T16:38:14.469Z",
   "snapshotDate": "2026-07-08",
   "isHistorical": false,
   "sourceSummary": {
@@ -5234,8 +5234,8 @@
         "r32": 100,
         "r16": 100,
         "qf": 100,
-        "sf": 78,
-        "final": 54,
+        "sf": 79,
+        "final": 55,
         "winner": 33,
         "source": "market"
       },
@@ -9265,7 +9265,7 @@
         "polymarket": {
           "homeId": "argentina",
           "awayId": "switzerland",
-          "homeWinPct": 57,
+          "homeWinPct": 56,
           "awayWinPct": 17,
           "drawPct": 28,
           "eventSlug": "fifwc-arg-che-2026-07-11"
