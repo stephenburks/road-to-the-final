@@ -1,6 +1,6 @@
 {
-  "lastUpdated": "2026-07-07T23:00:56.467Z",
-  "snapshotDate": "2026-07-07",
+  "lastUpdated": "2026-07-08T02:37:02.164Z",
+  "snapshotDate": "2026-07-08",
   "isHistorical": false,
   "sourceSummary": {
     "dataSource": "ESPN",
@@ -1729,8 +1729,8 @@
         "r32": 100,
         "r16": 100,
         "qf": 100,
-        "sf": 24,
-        "final": 7,
+        "sf": 26,
+        "final": 8,
         "winner": 2,
         "source": "market"
       },
@@ -2025,7 +2025,7 @@
         "r16": 100,
         "qf": 100,
         "sf": 22,
-        "final": 9,
+        "final": 8,
         "winner": 3,
         "source": "market"
       },
@@ -5235,7 +5235,7 @@
         "r16": 100,
         "qf": 100,
         "sf": 78,
-        "final": 55,
+        "final": 54,
         "winner": 33,
         "source": "market"
       },
@@ -5813,9 +5813,9 @@
         "r32": 100,
         "r16": 100,
         "qf": 100,
-        "sf": 75,
-        "final": 43,
-        "winner": 19,
+        "sf": 73,
+        "final": 40,
+        "winner": 18,
         "source": "market"
       },
       "path": {
@@ -6871,7 +6871,7 @@
         "r16": 100,
         "qf": 100,
         "sf": 66,
-        "final": 37,
+        "final": 38,
         "winner": 16,
         "source": "market"
       },
