@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-09T15:19:54.378Z",
+  "lastUpdated": "2026-07-09T17:55:02.178Z",
   "snapshotDate": "2026-07-09",
   "isHistorical": false,
   "sourceSummary": {
@@ -4165,7 +4165,7 @@
         "r32": 100,
         "r16": 100,
         "qf": 100,
-        "sf": 25,
+        "sf": 26,
         "final": 7,
         "winner": 2,
         "source": "market"
@@ -5235,7 +5235,7 @@
         "r16": 100,
         "qf": 100,
         "sf": 78,
-        "final": 52,
+        "final": 53,
         "winner": 32,
         "source": "market"
       },
@@ -5638,7 +5638,7 @@
         "r16": 100,
         "qf": 100,
         "sf": 35,
-        "final": 14,
+        "final": 15,
         "winner": 6,
         "source": "market"
       },
@@ -9180,7 +9180,7 @@
         "polymarket": {
           "homeId": "france",
           "awayId": "morocco",
-          "homeWinPct": 61,
+          "homeWinPct": 60,
           "awayWinPct": 14,
           "drawPct": 25,
           "eventSlug": "fifwc-fra-mar-2026-07-09"
@@ -9238,7 +9238,7 @@
         "polymarket": {
           "homeId": "norway",
           "awayId": "england",
-          "homeWinPct": 22,
+          "homeWinPct": 23,
           "awayWinPct": 52,
           "drawPct": 26,
           "eventSlug": "fifwc-nor-eng-2026-07-11"
