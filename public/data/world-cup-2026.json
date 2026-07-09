@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-09T00:08:33.545Z",
+  "lastUpdated": "2026-07-09T04:52:00.335Z",
   "snapshotDate": "2026-07-09",
   "isHistorical": false,
   "sourceSummary": {
@@ -5236,7 +5236,7 @@
         "qf": 100,
         "sf": 78,
         "final": 54,
-        "winner": 33,
+        "winner": 32,
         "source": "market"
       },
       "path": {
@@ -9180,7 +9180,7 @@
         "polymarket": {
           "homeId": "france",
           "awayId": "morocco",
-          "homeWinPct": 63,
+          "homeWinPct": 62,
           "awayWinPct": 14,
           "drawPct": 25,
           "eventSlug": "fifwc-fra-mar-2026-07-09"
@@ -9209,7 +9209,7 @@
         "polymarket": {
           "homeId": "spain",
           "awayId": "belgium",
-          "homeWinPct": 61,
+          "homeWinPct": 60,
           "awayWinPct": 17,
           "drawPct": 25,
           "eventSlug": "fifwc-esp-bel-2026-07-10"
