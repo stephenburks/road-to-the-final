@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-10T20:22:29.110Z",
+  "lastUpdated": "2026-07-10T22:01:41.952Z",
   "snapshotDate": "2026-07-10",
   "isHistorical": false,
   "sourceSummary": {
@@ -4028,7 +4028,7 @@
       "group": "G",
       "confederation": "UEFA",
       "fifaRank": 9,
-      "eliminated": false,
+      "eliminated": true,
       "currentStage": "qf",
       "groupResults": [
         {
@@ -4127,9 +4127,9 @@
         "r32": 100,
         "r16": 100,
         "qf": 100,
-        "sf": 26,
-        "final": 7,
-        "winner": 2,
+        "sf": 0,
+        "final": 0,
+        "winner": 0,
         "source": "market"
       },
       "path": {
@@ -4165,50 +4165,12 @@
           "conditional": true,
           "conditionNote": "Venue + opponent confirmed once bracket is drawn"
         },
-        "sf": {
-          "status": "future",
-          "date": "2026-07-15",
-          "venue": "TBD",
-          "city": "TBD",
-          "opponentDesc": "Opponent TBD",
-          "conditional": true,
-          "conditionNote": "Venue + opponent confirmed once bracket is drawn"
-        },
-        "final": {
-          "status": "future",
-          "date": "2026-07-19",
-          "venue": "TBD",
-          "city": "TBD",
-          "opponentDesc": "Opponent TBD",
-          "conditional": true,
-          "conditionNote": "Venue + opponent confirmed once bracket is drawn"
-        }
+        "sf": null,
+        "final": null
       },
       "possibleOpponents": {
-        "r32": [
-          {
-            "likelyTeam": "Senegal",
-            "flag": "🇸🇳",
-            "fifaRank": 14,
-            "difficulty": 4,
-            "label": "Tough",
-            "color": "#FB923C",
-            "note": "Confirmed opponent",
-            "pct": 100
-          }
-        ],
-        "r16": [
-          {
-            "likelyTeam": "USA",
-            "flag": "🇺🇸",
-            "fifaRank": 14,
-            "difficulty": 4,
-            "label": "Tough",
-            "color": "#FB923C",
-            "note": "Confirmed opponent",
-            "pct": 100
-          }
-        ]
+        "r32": [],
+        "r16": []
       },
       "totalGoals": 13
     },
@@ -4587,7 +4549,7 @@
       "confederation": "UEFA",
       "fifaRank": 1,
       "eliminated": false,
-      "currentStage": "qf",
+      "currentStage": "sf",
       "groupResults": [
         {
           "matchday": 1,
@@ -4663,9 +4625,9 @@
         "r32": 100,
         "r16": 100,
         "qf": 100,
-        "sf": 74,
-        "final": 33,
-        "winner": 15,
+        "sf": 100,
+        "final": 42,
+        "winner": 21,
         "source": "market"
       },
       "path": {
@@ -4693,13 +4655,12 @@
           "opponentDesc": "Winner Match 85"
         },
         "qf": {
-          "status": "future",
+          "status": "done",
+          "match": 100,
           "date": "2026-07-11",
-          "venue": "TBD",
-          "city": "TBD",
-          "opponentDesc": "Opponent TBD",
-          "conditional": true,
-          "conditionNote": "Venue + opponent confirmed once bracket is drawn"
+          "city": "Kansas City",
+          "venue": "Arrowhead Stadium",
+          "opponentDesc": "Winner Match 96"
         },
         "sf": {
           "status": "future",
@@ -5197,8 +5158,8 @@
         "r16": 100,
         "qf": 100,
         "sf": 100,
-        "final": 66,
-        "winner": 40,
+        "final": 59,
+        "winner": 38,
         "source": "market"
       },
       "path": {
@@ -5775,7 +5736,7 @@
         "r16": 100,
         "qf": 100,
         "sf": 75,
-        "final": 39,
+        "final": 40,
         "winner": 18,
         "source": "market"
       },
@@ -9148,26 +9109,17 @@
         "awayTeam": "Belgium",
         "awayFlag": "🇧🇪",
         "awayId": "belgium",
-        "homeScore": 1,
+        "homeScore": 2,
         "awayScore": 1,
-        "status": "IN_PROGRESS",
+        "status": "FINISHED",
         "date": "2026-07-10",
-        "clock": "60'",
         "broadcasts": [
           "FOX",
           "Tele",
           "FOX One"
         ],
         "time": "2026-07-10T19:00Z",
-        "venue": "SoFi Stadium, Inglewood, California",
-        "polymarket": {
-          "homeId": "spain",
-          "awayId": "belgium",
-          "homeWinPct": 52,
-          "awayWinPct": 14,
-          "drawPct": 34,
-          "eventSlug": "fifwc-esp-bel-2026-07-10"
-        }
+        "venue": "SoFi Stadium, Inglewood, California"
       }
     ],
     "2026-07-11": [
@@ -9192,8 +9144,8 @@
         "polymarket": {
           "homeId": "norway",
           "awayId": "england",
-          "homeWinPct": 23,
-          "awayWinPct": 51,
+          "homeWinPct": 24,
+          "awayWinPct": 52,
           "drawPct": 26,
           "eventSlug": "fifwc-nor-eng-2026-07-11"
         }
@@ -9224,6 +9176,27 @@
           "drawPct": 27,
           "eventSlug": "fifwc-arg-che-2026-07-11"
         }
+      }
+    ],
+    "2026-07-14": [
+      {
+        "homeTeam": "France",
+        "homeFlag": "🇫🇷",
+        "homeId": "france",
+        "awayTeam": "Spain",
+        "awayFlag": "🇪🇸",
+        "awayId": "spain",
+        "homeScore": 0,
+        "awayScore": 0,
+        "status": "SCHEDULED",
+        "date": "2026-07-14",
+        "broadcasts": [
+          "FOX",
+          "Tele",
+          "FOX One"
+        ],
+        "time": "2026-07-14T19:00Z",
+        "venue": "AT&T Stadium, Arlington, Texas"
       }
     ]
   },
