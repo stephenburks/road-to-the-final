@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-10T18:22:30.246Z",
+  "lastUpdated": "2026-07-10T20:22:29.110Z",
   "snapshotDate": "2026-07-10",
   "isHistorical": false,
   "sourceSummary": {
@@ -4128,7 +4128,7 @@
         "r16": 100,
         "qf": 100,
         "sf": 26,
-        "final": 5,
+        "final": 7,
         "winner": 2,
         "source": "market"
       },
@@ -4663,9 +4663,9 @@
         "r32": 100,
         "r16": 100,
         "qf": 100,
-        "sf": 75,
-        "final": 31,
-        "winner": 17,
+        "sf": 74,
+        "final": 33,
+        "winner": 15,
         "source": "market"
       },
       "path": {
@@ -5197,8 +5197,8 @@
         "r16": 100,
         "qf": 100,
         "sf": 100,
-        "final": 65,
-        "winner": 39,
+        "final": 66,
+        "winner": 40,
         "source": "market"
       },
       "path": {
@@ -5774,8 +5774,8 @@
         "r32": 100,
         "r16": 100,
         "qf": 100,
-        "sf": 74,
-        "final": 40,
+        "sf": 75,
+        "final": 39,
         "winner": 18,
         "source": "market"
       },
@@ -9148,10 +9148,11 @@
         "awayTeam": "Belgium",
         "awayFlag": "🇧🇪",
         "awayId": "belgium",
-        "homeScore": 0,
-        "awayScore": 0,
-        "status": "SCHEDULED",
+        "homeScore": 1,
+        "awayScore": 1,
+        "status": "IN_PROGRESS",
         "date": "2026-07-10",
+        "clock": "60'",
         "broadcasts": [
           "FOX",
           "Tele",
@@ -9162,9 +9163,9 @@
         "polymarket": {
           "homeId": "spain",
           "awayId": "belgium",
-          "homeWinPct": 60,
-          "awayWinPct": 16,
-          "drawPct": 25,
+          "homeWinPct": 52,
+          "awayWinPct": 14,
+          "drawPct": 34,
           "eventSlug": "fifwc-esp-bel-2026-07-10"
         }
       }
