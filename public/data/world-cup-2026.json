@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-11T22:46:51.407Z",
+  "lastUpdated": "2026-07-11T23:54:10.013Z",
   "snapshotDate": "2026-07-11",
   "isHistorical": false,
   "sourceSummary": {
@@ -1729,8 +1729,8 @@
         "r32": 100,
         "r16": 100,
         "qf": 100,
-        "sf": 24,
-        "final": 7,
+        "sf": 25,
+        "final": 6,
         "winner": 2,
         "source": "market"
       },
@@ -5159,7 +5159,7 @@
         "qf": 100,
         "sf": 100,
         "final": 60,
-        "winner": 38,
+        "winner": 39,
         "source": "market"
       },
       "path": {
@@ -5479,7 +5479,7 @@
       "group": "I",
       "confederation": "UEFA",
       "fifaRank": 31,
-      "eliminated": false,
+      "eliminated": true,
       "currentStage": "qf",
       "groupResults": [
         {
@@ -5559,9 +5559,9 @@
         "r32": 100,
         "r16": 100,
         "qf": 100,
-        "sf": 44,
-        "final": 21,
-        "winner": 7,
+        "sf": 0,
+        "final": 0,
+        "winner": 0,
         "source": "market"
       },
       "path": {
@@ -5589,59 +5589,21 @@
           "conditional": false
         },
         "qf": {
-          "status": "active",
+          "status": "done",
           "date": "2026-07-11",
           "venue": "Hard Rock Stadium",
           "city": "Miami Gardens, Florida",
           "opponentDesc": "England",
           "conditional": false
         },
-        "sf": {
-          "status": "future",
-          "date": "2026-07-14",
-          "venue": "TBD",
-          "city": "TBD",
-          "opponentDesc": "Opponent TBD",
-          "conditional": true,
-          "conditionNote": "Venue + opponent confirmed once bracket is drawn"
-        },
-        "final": {
-          "status": "future",
-          "date": "2026-07-19",
-          "venue": "TBD",
-          "city": "TBD",
-          "opponentDesc": "Opponent TBD",
-          "conditional": true,
-          "conditionNote": "Venue + opponent confirmed once bracket is drawn"
-        }
+        "sf": null,
+        "final": null
       },
       "possibleOpponents": {
-        "r32": [
-          {
-            "likelyTeam": "Ivory Coast",
-            "flag": "🇨🇮",
-            "fifaRank": 42,
-            "difficulty": 2,
-            "label": "Favorable",
-            "color": "#22C55E",
-            "note": "Confirmed opponent",
-            "pct": 100
-          }
-        ],
-        "r16": [
-          {
-            "likelyTeam": "Brazil",
-            "flag": "🇧🇷",
-            "fifaRank": 4,
-            "difficulty": 5,
-            "label": "Danger",
-            "color": "#EF4444",
-            "note": "Confirmed opponent",
-            "pct": 100
-          }
-        ]
+        "r32": [],
+        "r16": []
       },
-      "totalGoals": 12
+      "totalGoals": 13
     },
     {
       "id": "argentina",
@@ -5736,8 +5698,8 @@
         "r16": 100,
         "qf": 100,
         "sf": 76,
-        "final": 43,
-        "winner": 18,
+        "final": 42,
+        "winner": 17,
         "source": "market"
       },
       "path": {
@@ -6714,7 +6676,7 @@
       "confederation": "UEFA",
       "fifaRank": 5,
       "eliminated": false,
-      "currentStage": "qf",
+      "currentStage": "sf",
       "groupResults": [
         {
           "matchday": 1,
@@ -6792,9 +6754,9 @@
         "r32": 100,
         "r16": 100,
         "qf": 100,
-        "sf": 56,
-        "final": 31,
-        "winner": 13,
+        "sf": 100,
+        "final": 52,
+        "winner": 20,
         "source": "market"
       },
       "path": {
@@ -6822,7 +6784,7 @@
           "conditional": false
         },
         "qf": {
-          "status": "active",
+          "status": "done",
           "date": "2026-07-11",
           "venue": "Hard Rock Stadium",
           "city": "Miami Gardens, Florida",
@@ -6874,7 +6836,7 @@
           }
         ]
       },
-      "totalGoals": 11
+      "totalGoals": 13
     },
     {
       "id": "croatia",
@@ -9131,25 +9093,16 @@
         "awayFlag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "awayId": "england",
         "homeScore": 1,
-        "awayScore": 1,
-        "status": "IN_PROGRESS",
+        "awayScore": 2,
+        "status": "FINISHED",
         "date": "2026-07-11",
-        "clock": "84'",
         "broadcasts": [
           "FOX",
           "Tele",
           "FOX One"
         ],
         "time": "2026-07-11T21:00Z",
-        "venue": "Hard Rock Stadium, Miami Gardens, Florida",
-        "polymarket": {
-          "homeId": "norway",
-          "awayId": "england",
-          "homeWinPct": 21,
-          "awayWinPct": 24,
-          "drawPct": 54,
-          "eventSlug": "fifwc-nor-eng-2026-07-11"
-        }
+        "venue": "Hard Rock Stadium, Miami Gardens, Florida"
       },
       {
         "homeTeam": "Argentina",
@@ -9173,7 +9126,7 @@
           "homeId": "argentina",
           "awayId": "switzerland",
           "homeWinPct": 57,
-          "awayWinPct": 16,
+          "awayWinPct": 15,
           "drawPct": 27,
           "eventSlug": "fifwc-arg-che-2026-07-11"
         }
@@ -9528,11 +9481,12 @@
         "bracketLocation": 3,
         "date": "2026-07-11",
         "venue": "Hard Rock Stadium, Miami Gardens, Florida",
-        "status": "IN_PROGRESS",
+        "status": "FINISHED",
         "homeScore": 1,
-        "awayScore": 1,
+        "awayScore": 2,
         "homeId": "norway",
-        "awayId": "england"
+        "awayId": "england",
+        "winnerId": "england"
       },
       {
         "eventId": null,
