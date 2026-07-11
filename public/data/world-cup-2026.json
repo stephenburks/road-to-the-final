@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-11T05:42:11.590Z",
+  "lastUpdated": "2026-07-11T07:54:31.365Z",
   "snapshotDate": "2026-07-11",
   "isHistorical": false,
   "sourceSummary": {
@@ -5159,7 +5159,7 @@
         "qf": 100,
         "sf": 100,
         "final": 60,
-        "winner": 37,
+        "winner": 38,
         "source": "market"
       },
       "path": {
@@ -6793,7 +6793,7 @@
         "r16": 100,
         "qf": 100,
         "sf": 66,
-        "final": 38,
+        "final": 39,
         "winner": 14,
         "source": "market"
       },
@@ -9145,7 +9145,7 @@
           "homeId": "norway",
           "awayId": "england",
           "homeWinPct": 24,
-          "awayWinPct": 51,
+          "awayWinPct": 50,
           "drawPct": 26,
           "eventSlug": "fifwc-nor-eng-2026-07-11"
         }
