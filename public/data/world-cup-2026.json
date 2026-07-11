@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-11T21:48:46.769Z",
+  "lastUpdated": "2026-07-11T22:46:51.407Z",
   "snapshotDate": "2026-07-11",
   "isHistorical": false,
   "sourceSummary": {
@@ -5559,9 +5559,9 @@
         "r32": 100,
         "r16": 100,
         "qf": 100,
-        "sf": 55,
-        "final": 24,
-        "winner": 8,
+        "sf": 44,
+        "final": 21,
+        "winner": 7,
         "source": "market"
       },
       "path": {
@@ -6792,9 +6792,9 @@
         "r32": 100,
         "r16": 100,
         "qf": 100,
-        "sf": 45,
+        "sf": 56,
         "final": 31,
-        "winner": 10,
+        "winner": 13,
         "source": "market"
       },
       "path": {
@@ -9134,7 +9134,7 @@
         "awayScore": 1,
         "status": "IN_PROGRESS",
         "date": "2026-07-11",
-        "clock": "45'+2'",
+        "clock": "84'",
         "broadcasts": [
           "FOX",
           "Tele",
@@ -9145,9 +9145,9 @@
         "polymarket": {
           "homeId": "norway",
           "awayId": "england",
-          "homeWinPct": 44,
-          "awayWinPct": 28,
-          "drawPct": 29,
+          "homeWinPct": 21,
+          "awayWinPct": 24,
+          "drawPct": 54,
           "eventSlug": "fifwc-nor-eng-2026-07-11"
         }
       },
