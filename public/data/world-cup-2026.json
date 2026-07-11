@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-11T13:17:15.773Z",
+  "lastUpdated": "2026-07-11T14:52:38.660Z",
   "snapshotDate": "2026-07-11",
   "isHistorical": false,
   "sourceSummary": {
@@ -4626,7 +4626,7 @@
         "r16": 100,
         "qf": 100,
         "sf": 100,
-        "final": 42,
+        "final": 41,
         "winner": 21,
         "source": "market"
       },
@@ -5737,7 +5737,7 @@
         "qf": 100,
         "sf": 76,
         "final": 41,
-        "winner": 17,
+        "winner": 18,
         "source": "market"
       },
       "path": {
@@ -9202,7 +9202,7 @@
           "awayId": "spain",
           "homeWinPct": 43,
           "awayWinPct": 30,
-          "drawPct": 31,
+          "drawPct": 30,
           "eventSlug": "fifwc-fra-esp-2026-07-14"
         }
       }
