@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-11T09:28:30.206Z",
+  "lastUpdated": "2026-07-11T11:05:01.019Z",
   "snapshotDate": "2026-07-11",
   "isHistorical": false,
   "sourceSummary": {
@@ -1729,7 +1729,7 @@
         "r32": 100,
         "r16": 100,
         "qf": 100,
-        "sf": 26,
+        "sf": 25,
         "final": 7,
         "winner": 2,
         "source": "market"
@@ -5159,7 +5159,7 @@
         "qf": 100,
         "sf": 100,
         "final": 60,
-        "winner": 39,
+        "winner": 38,
         "source": "market"
       },
       "path": {
@@ -9144,7 +9144,7 @@
         "polymarket": {
           "homeId": "norway",
           "awayId": "england",
-          "homeWinPct": 24,
+          "homeWinPct": 25,
           "awayWinPct": 50,
           "drawPct": 26,
           "eventSlug": "fifwc-nor-eng-2026-07-11"
@@ -9196,7 +9196,15 @@
           "FOX One"
         ],
         "time": "2026-07-14T19:00Z",
-        "venue": "AT&T Stadium, Arlington, Texas"
+        "venue": "AT&T Stadium, Arlington, Texas",
+        "polymarket": {
+          "homeId": "france",
+          "awayId": "spain",
+          "homeWinPct": 42,
+          "awayWinPct": 30,
+          "drawPct": 30,
+          "eventSlug": "fifwc-fra-esp-2026-07-14"
+        }
       }
     ]
   },
