@@ -1,6 +1,6 @@
 {
-  "lastUpdated": "2026-07-10T23:57:01.684Z",
-  "snapshotDate": "2026-07-10",
+  "lastUpdated": "2026-07-11T02:55:53.056Z",
+  "snapshotDate": "2026-07-11",
   "isHistorical": false,
   "sourceSummary": {
     "dataSource": "ESPN",
@@ -4627,7 +4627,7 @@
         "qf": 100,
         "sf": 100,
         "final": 42,
-        "winner": 21,
+        "winner": 22,
         "source": "market"
       },
       "path": {
@@ -5736,7 +5736,7 @@
         "r16": 100,
         "qf": 100,
         "sf": 76,
-        "final": 40,
+        "final": 41,
         "winner": 18,
         "source": "market"
       },
@@ -9145,7 +9145,7 @@
           "homeId": "norway",
           "awayId": "england",
           "homeWinPct": 24,
-          "awayWinPct": 52,
+          "awayWinPct": 51,
           "drawPct": 26,
           "eventSlug": "fifwc-nor-eng-2026-07-11"
         }
