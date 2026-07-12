@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-12T08:26:31.786Z",
+  "lastUpdated": "2026-07-12T10:27:28.613Z",
   "snapshotDate": "2026-07-12",
   "isHistorical": false,
   "sourceSummary": {
@@ -5660,7 +5660,7 @@
         "r16": 100,
         "qf": 100,
         "sf": 100,
-        "final": 46,
+        "final": 45,
         "winner": 19,
         "source": "market"
       },
@@ -9132,7 +9132,15 @@
           "FOX One"
         ],
         "time": "2026-07-15T19:00Z",
-        "venue": "Mercedes-Benz Stadium, Atlanta, Georgia"
+        "venue": "Mercedes-Benz Stadium, Atlanta, Georgia",
+        "polymarket": {
+          "homeId": "england",
+          "awayId": "argentina",
+          "homeWinPct": 38,
+          "awayWinPct": 31,
+          "drawPct": 33,
+          "eventSlug": "fifwc-eng-arg-2026-07-15"
+        }
       }
     ]
   },
