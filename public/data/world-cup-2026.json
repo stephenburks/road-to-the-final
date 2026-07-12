@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-12T20:46:48.254Z",
+  "lastUpdated": "2026-07-12T21:49:37.668Z",
   "snapshotDate": "2026-07-12",
   "isHistorical": false,
   "sourceSummary": {
@@ -4588,7 +4588,7 @@
         "r16": 100,
         "qf": 100,
         "sf": 100,
-        "final": 40,
+        "final": 41,
         "winner": 20,
         "source": "market"
       },
@@ -9136,9 +9136,9 @@
         "polymarket": {
           "homeId": "england",
           "awayId": "argentina",
-          "homeWinPct": 38,
+          "homeWinPct": 37,
           "awayWinPct": 31,
-          "drawPct": 32,
+          "drawPct": 33,
           "eventSlug": "fifwc-eng-arg-2026-07-15"
         }
       }
