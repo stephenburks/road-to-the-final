@@ -1,6 +1,6 @@
 {
-  "lastUpdated": "2026-07-11T23:54:10.013Z",
-  "snapshotDate": "2026-07-11",
+  "lastUpdated": "2026-07-12T02:41:56.121Z",
+  "snapshotDate": "2026-07-12",
   "isHistorical": false,
   "sourceSummary": {
     "dataSource": "ESPN",
@@ -1729,9 +1729,9 @@
         "r32": 100,
         "r16": 100,
         "qf": 100,
-        "sf": 25,
-        "final": 6,
-        "winner": 2,
+        "sf": 15,
+        "final": 4,
+        "winner": 1,
         "source": "market"
       },
       "path": {
@@ -4627,7 +4627,7 @@
         "qf": 100,
         "sf": 100,
         "final": 41,
-        "winner": 21,
+        "winner": 20,
         "source": "market"
       },
       "path": {
@@ -5697,9 +5697,9 @@
         "r32": 100,
         "r16": 100,
         "qf": 100,
-        "sf": 76,
-        "final": 42,
-        "winner": 17,
+        "sf": 84,
+        "final": 43,
+        "winner": 19,
         "source": "market"
       },
       "path": {
@@ -6755,8 +6755,8 @@
         "r16": 100,
         "qf": 100,
         "sf": 100,
-        "final": 52,
-        "winner": 20,
+        "final": 54,
+        "winner": 22,
         "source": "market"
       },
       "path": {
@@ -9111,10 +9111,11 @@
         "awayTeam": "Switzerland",
         "awayFlag": "🇨🇭",
         "awayId": "switzerland",
-        "homeScore": 0,
-        "awayScore": 0,
-        "status": "SCHEDULED",
+        "homeScore": 1,
+        "awayScore": 1,
+        "status": "IN_PROGRESS",
         "date": "2026-07-11",
+        "clock": "80'",
         "broadcasts": [
           "FOX",
           "Tele",
@@ -9125,9 +9126,9 @@
         "polymarket": {
           "homeId": "argentina",
           "awayId": "switzerland",
-          "homeWinPct": 57,
-          "awayWinPct": 15,
-          "drawPct": 27,
+          "homeWinPct": 49,
+          "awayWinPct": 5,
+          "drawPct": 46,
           "eventSlug": "fifwc-arg-che-2026-07-11"
         }
       }
