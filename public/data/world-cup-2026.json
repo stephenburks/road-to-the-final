@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-12T17:11:07.074Z",
+  "lastUpdated": "2026-07-12T19:04:55.049Z",
   "snapshotDate": "2026-07-12",
   "isHistorical": false,
   "sourceSummary": {
@@ -5661,7 +5661,7 @@
         "qf": 100,
         "sf": 100,
         "final": 45,
-        "winner": 19,
+        "winner": 18,
         "source": "market"
       },
       "path": {
@@ -6717,7 +6717,7 @@
         "qf": 100,
         "sf": 100,
         "final": 55,
-        "winner": 22,
+        "winner": 21,
         "source": "market"
       },
       "path": {
@@ -9138,7 +9138,7 @@
           "awayId": "argentina",
           "homeWinPct": 38,
           "awayWinPct": 31,
-          "drawPct": 33,
+          "drawPct": 32,
           "eventSlug": "fifwc-eng-arg-2026-07-15"
         }
       }
