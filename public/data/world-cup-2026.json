@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-12T02:41:56.121Z",
+  "lastUpdated": "2026-07-12T05:57:42.683Z",
   "snapshotDate": "2026-07-12",
   "isHistorical": false,
   "sourceSummary": {
@@ -1660,7 +1660,7 @@
       "group": "B",
       "confederation": "UEFA",
       "fifaRank": 17,
-      "eliminated": false,
+      "eliminated": true,
       "currentStage": "qf",
       "groupResults": [
         {
@@ -1729,9 +1729,9 @@
         "r32": 100,
         "r16": 100,
         "qf": 100,
-        "sf": 15,
-        "final": 4,
-        "winner": 1,
+        "sf": 0,
+        "final": 0,
+        "winner": 0,
         "source": "market"
       },
       "path": {
@@ -1767,50 +1767,12 @@
           "conditional": true,
           "conditionNote": "Venue + opponent confirmed once bracket is drawn"
         },
-        "sf": {
-          "status": "future",
-          "date": "2026-07-14",
-          "venue": "TBD",
-          "city": "TBD",
-          "opponentDesc": "Opponent TBD",
-          "conditional": true,
-          "conditionNote": "Venue + opponent confirmed once bracket is drawn"
-        },
-        "final": {
-          "status": "future",
-          "date": "2026-07-19",
-          "venue": "TBD",
-          "city": "TBD",
-          "opponentDesc": "Opponent TBD",
-          "conditional": true,
-          "conditionNote": "Venue + opponent confirmed once bracket is drawn"
-        }
+        "sf": null,
+        "final": null
       },
       "possibleOpponents": {
-        "r32": [
-          {
-            "likelyTeam": "Algeria",
-            "flag": "🇩🇿",
-            "fifaRank": 35,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "Confirmed opponent",
-            "pct": 100
-          }
-        ],
-        "r16": [
-          {
-            "likelyTeam": "Argentina",
-            "flag": "🇦🇷",
-            "fifaRank": 2,
-            "difficulty": 5,
-            "label": "Danger",
-            "color": "#EF4444",
-            "note": "Predicted (winner of paired match)",
-            "pct": 100
-          }
-        ]
+        "r32": [],
+        "r16": []
       },
       "totalGoals": 9
     },
@@ -5158,7 +5120,7 @@
         "r16": 100,
         "qf": 100,
         "sf": 100,
-        "final": 60,
+        "final": 61,
         "winner": 39,
         "source": "market"
       },
@@ -5613,7 +5575,7 @@
       "confederation": "CONMEBOL",
       "fifaRank": 2,
       "eliminated": false,
-      "currentStage": "qf",
+      "currentStage": "sf",
       "groupResults": [
         {
           "matchday": 1,
@@ -5697,8 +5659,8 @@
         "r32": 100,
         "r16": 100,
         "qf": 100,
-        "sf": 84,
-        "final": 43,
+        "sf": 100,
+        "final": 47,
         "winner": 19,
         "source": "market"
       },
@@ -5727,13 +5689,12 @@
           "opponentDesc": "Winner Match 79"
         },
         "qf": {
-          "status": "future",
+          "status": "done",
+          "match": 97,
           "date": "2026-07-09",
-          "venue": "TBD",
-          "city": "TBD",
-          "opponentDesc": "Opponent TBD",
-          "conditional": true,
-          "conditionNote": "Venue + opponent confirmed once bracket is drawn"
+          "city": "Guadalajara",
+          "venue": "Estadio Guadalajara",
+          "opponentDesc": "Winner Match 93"
         },
         "sf": {
           "status": "future",
@@ -6755,8 +6716,8 @@
         "r16": 100,
         "qf": 100,
         "sf": 100,
-        "final": 54,
-        "winner": 22,
+        "final": 55,
+        "winner": 21,
         "source": "market"
       },
       "path": {
@@ -9111,26 +9072,17 @@
         "awayTeam": "Switzerland",
         "awayFlag": "🇨🇭",
         "awayId": "switzerland",
-        "homeScore": 1,
+        "homeScore": 3,
         "awayScore": 1,
-        "status": "IN_PROGRESS",
+        "status": "FINISHED",
         "date": "2026-07-11",
-        "clock": "80'",
         "broadcasts": [
           "FOX",
           "Tele",
           "FOX One"
         ],
         "time": "2026-07-12T01:00Z",
-        "venue": "GEHA Field at Arrowhead Stadium, Kansas City, Missouri",
-        "polymarket": {
-          "homeId": "argentina",
-          "awayId": "switzerland",
-          "homeWinPct": 49,
-          "awayWinPct": 5,
-          "drawPct": 46,
-          "eventSlug": "fifwc-arg-che-2026-07-11"
-        }
+        "venue": "GEHA Field at Arrowhead Stadium, Kansas City, Missouri"
       }
     ],
     "2026-07-14": [
@@ -9156,10 +9108,31 @@
           "homeId": "france",
           "awayId": "spain",
           "homeWinPct": 43,
-          "awayWinPct": 30,
+          "awayWinPct": 28,
           "drawPct": 30,
           "eventSlug": "fifwc-fra-esp-2026-07-14"
         }
+      }
+    ],
+    "2026-07-15": [
+      {
+        "homeTeam": "England",
+        "homeFlag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+        "homeId": "england",
+        "awayTeam": "Argentina",
+        "awayFlag": "🇦🇷",
+        "awayId": "argentina",
+        "homeScore": 0,
+        "awayScore": 0,
+        "status": "SCHEDULED",
+        "date": "2026-07-15",
+        "broadcasts": [
+          "FOX",
+          "Tele",
+          "FOX One"
+        ],
+        "time": "2026-07-15T19:00Z",
+        "venue": "Mercedes-Benz Stadium, Atlanta, Georgia"
       }
     ]
   },
