@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-13T21:55:50.739Z",
+  "lastUpdated": "2026-07-13T22:56:38.549Z",
   "snapshotDate": "2026-07-13",
   "isHistorical": false,
   "sourceSummary": {
@@ -9107,7 +9107,7 @@
         "polymarket": {
           "homeId": "france",
           "awayId": "spain",
-          "homeWinPct": 41,
+          "homeWinPct": 40,
           "awayWinPct": 30,
           "drawPct": 30,
           "eventSlug": "fifwc-fra-esp-2026-07-14"
