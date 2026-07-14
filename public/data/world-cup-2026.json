@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-14T18:02:30.842Z",
+  "lastUpdated": "2026-07-14T20:10:44.808Z",
   "snapshotDate": "2026-07-14",
   "isHistorical": false,
   "sourceSummary": {
@@ -4588,8 +4588,8 @@
         "r16": 100,
         "qf": 100,
         "sf": 100,
-        "final": 43,
-        "winner": 23,
+        "final": 66,
+        "winner": 37,
         "source": "market"
       },
       "path": {
@@ -5120,8 +5120,8 @@
         "r16": 100,
         "qf": 100,
         "sf": 100,
-        "final": 57,
-        "winner": 37,
+        "final": 36,
+        "winner": 20,
         "source": "market"
       },
       "path": {
@@ -5660,8 +5660,8 @@
         "r16": 100,
         "qf": 100,
         "sf": 100,
-        "final": 45,
-        "winner": 18,
+        "final": 46,
+        "winner": 19,
         "source": "market"
       },
       "path": {
@@ -6717,7 +6717,7 @@
         "qf": 100,
         "sf": 100,
         "final": 55,
-        "winner": 21,
+        "winner": 23,
         "source": "market"
       },
       "path": {
@@ -9094,9 +9094,10 @@
         "awayFlag": "🇪🇸",
         "awayId": "spain",
         "homeScore": 0,
-        "awayScore": 0,
-        "status": "SCHEDULED",
+        "awayScore": 1,
+        "status": "IN_PROGRESS",
         "date": "2026-07-14",
+        "clock": "49'",
         "broadcasts": [
           "FOX",
           "Tele",
@@ -9107,9 +9108,9 @@
         "polymarket": {
           "homeId": "france",
           "awayId": "spain",
-          "homeWinPct": 38,
-          "awayWinPct": 30,
-          "drawPct": 32,
+          "homeWinPct": 18,
+          "awayWinPct": 55,
+          "drawPct": 28,
           "eventSlug": "fifwc-fra-esp-2026-07-14"
         }
       }
@@ -9136,8 +9137,8 @@
         "polymarket": {
           "homeId": "england",
           "awayId": "argentina",
-          "homeWinPct": 36,
-          "awayWinPct": 31,
+          "homeWinPct": 35,
+          "awayWinPct": 32,
           "drawPct": 33,
           "eventSlug": "fifwc-eng-arg-2026-07-15"
         }
