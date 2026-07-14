@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-14T21:57:00.446Z",
+  "lastUpdated": "2026-07-14T22:59:38.647Z",
   "snapshotDate": "2026-07-14",
   "isHistorical": false,
   "sourceSummary": {
@@ -6686,7 +6686,7 @@
         "qf": 100,
         "sf": 100,
         "final": 55,
-        "winner": 22,
+        "winner": 23,
         "source": "market"
       },
       "path": {
