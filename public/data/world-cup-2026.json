@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-14T16:14:13.292Z",
+  "lastUpdated": "2026-07-14T18:02:30.842Z",
   "snapshotDate": "2026-07-14",
   "isHistorical": false,
   "sourceSummary": {
@@ -4588,7 +4588,7 @@
         "r16": 100,
         "qf": 100,
         "sf": 100,
-        "final": 42,
+        "final": 43,
         "winner": 23,
         "source": "market"
       },
@@ -5120,8 +5120,8 @@
         "r16": 100,
         "qf": 100,
         "sf": 100,
-        "final": 59,
-        "winner": 39,
+        "final": 57,
+        "winner": 37,
         "source": "market"
       },
       "path": {
@@ -5661,7 +5661,7 @@
         "qf": 100,
         "sf": 100,
         "final": 45,
-        "winner": 17,
+        "winner": 18,
         "source": "market"
       },
       "path": {
@@ -9107,9 +9107,9 @@
         "polymarket": {
           "homeId": "france",
           "awayId": "spain",
-          "homeWinPct": 39,
-          "awayWinPct": 29,
-          "drawPct": 31,
+          "homeWinPct": 38,
+          "awayWinPct": 30,
+          "drawPct": 32,
           "eventSlug": "fifwc-fra-esp-2026-07-14"
         }
       }
