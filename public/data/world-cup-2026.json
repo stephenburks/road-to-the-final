@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-14T20:10:44.808Z",
+  "lastUpdated": "2026-07-14T21:57:00.446Z",
   "snapshotDate": "2026-07-14",
   "isHistorical": false,
   "sourceSummary": {
@@ -9,7 +9,7 @@
   },
   "tournament": {
     "name": "FIFA World Cup 2026",
-    "currentStage": "qf",
+    "currentStage": "final",
     "stages": {
       "group_stage": {
         "status": "done",
@@ -27,17 +27,17 @@
         "date": "Jul 4–7"
       },
       "qf": {
-        "status": "active",
+        "status": "done",
         "label": "Quarterfinal",
         "date": "Jul 9–11"
       },
       "sf": {
-        "status": "upcoming",
+        "status": "done",
         "label": "Semifinal",
         "date": "Jul 14–15"
       },
       "final": {
-        "status": "upcoming",
+        "status": "active",
         "label": "The Final",
         "date": "Jul 19"
       }
@@ -4511,7 +4511,7 @@
       "confederation": "UEFA",
       "fifaRank": 1,
       "eliminated": false,
-      "currentStage": "sf",
+      "currentStage": "final",
       "groupResults": [
         {
           "matchday": 1,
@@ -4588,8 +4588,8 @@
         "r16": 100,
         "qf": 100,
         "sf": 100,
-        "final": 66,
-        "winner": 37,
+        "final": 100,
+        "winner": 58,
         "source": "market"
       },
       "path": {
@@ -4625,13 +4625,12 @@
           "opponentDesc": "Winner Match 96"
         },
         "sf": {
-          "status": "future",
+          "status": "done",
+          "match": 101,
           "date": "2026-07-14",
-          "venue": "TBD",
-          "city": "TBD",
-          "opponentDesc": "Opponent TBD",
-          "conditional": true,
-          "conditionNote": "Venue + opponent confirmed once bracket is drawn"
+          "city": "Dallas",
+          "venue": "AT&T Stadium",
+          "opponentDesc": "Winner QF bracket"
         },
         "final": {
           "status": "future",
@@ -5047,7 +5046,7 @@
       "group": "I",
       "confederation": "UEFA",
       "fifaRank": 3,
-      "eliminated": false,
+      "eliminated": true,
       "currentStage": "sf",
       "groupResults": [
         {
@@ -5120,8 +5119,8 @@
         "r16": 100,
         "qf": 100,
         "sf": 100,
-        "final": 36,
-        "winner": 20,
+        "final": 0,
+        "winner": 0,
         "source": "market"
       },
       "path": {
@@ -5165,41 +5164,11 @@
           "conditional": true,
           "conditionNote": "Venue + opponent confirmed once bracket is drawn"
         },
-        "final": {
-          "status": "future",
-          "date": "2026-07-19",
-          "venue": "TBD",
-          "city": "TBD",
-          "opponentDesc": "Opponent TBD",
-          "conditional": true,
-          "conditionNote": "Venue + opponent confirmed once bracket is drawn"
-        }
+        "final": null
       },
       "possibleOpponents": {
-        "r32": [
-          {
-            "likelyTeam": "Sweden",
-            "flag": "🇸🇪",
-            "fifaRank": 29,
-            "difficulty": 3,
-            "label": "Moderate",
-            "color": "#F59E0B",
-            "note": "Confirmed opponent",
-            "pct": 100
-          }
-        ],
-        "r16": [
-          {
-            "likelyTeam": "Portugal",
-            "flag": "🇵🇹",
-            "fifaRank": 6,
-            "difficulty": 5,
-            "label": "Danger",
-            "color": "#EF4444",
-            "note": "Predicted (winner of paired match)",
-            "pct": 100
-          }
-        ]
+        "r32": [],
+        "r16": []
       },
       "totalGoals": 13
     },
@@ -6717,7 +6686,7 @@
         "qf": 100,
         "sf": 100,
         "final": 55,
-        "winner": 23,
+        "winner": 22,
         "source": "market"
       },
       "path": {
@@ -9094,25 +9063,16 @@
         "awayFlag": "🇪🇸",
         "awayId": "spain",
         "homeScore": 0,
-        "awayScore": 1,
-        "status": "IN_PROGRESS",
+        "awayScore": 2,
+        "status": "FINISHED",
         "date": "2026-07-14",
-        "clock": "49'",
         "broadcasts": [
           "FOX",
           "Tele",
           "FOX One"
         ],
         "time": "2026-07-14T19:00Z",
-        "venue": "AT&T Stadium, Arlington, Texas",
-        "polymarket": {
-          "homeId": "france",
-          "awayId": "spain",
-          "homeWinPct": 18,
-          "awayWinPct": 55,
-          "drawPct": 28,
-          "eventSlug": "fifwc-fra-esp-2026-07-14"
-        }
+        "venue": "AT&T Stadium, Arlington, Texas"
       }
     ],
     "2026-07-15": [
