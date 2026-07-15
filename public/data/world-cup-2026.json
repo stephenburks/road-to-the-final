@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-15T17:16:43.580Z",
+  "lastUpdated": "2026-07-15T19:09:35.090Z",
   "snapshotDate": "2026-07-15",
   "isHistorical": false,
   "sourceSummary": {
@@ -5630,7 +5630,7 @@
         "qf": 100,
         "sf": 100,
         "final": 47,
-        "winner": 20,
+        "winner": 19,
         "source": "market"
       },
       "path": {
@@ -9085,8 +9085,9 @@
         "awayId": "argentina",
         "homeScore": 0,
         "awayScore": 0,
-        "status": "SCHEDULED",
+        "status": "IN_PROGRESS",
         "date": "2026-07-15",
+        "clock": "9'",
         "broadcasts": [
           "FOX",
           "Tele",
@@ -9098,8 +9099,8 @@
           "homeId": "england",
           "awayId": "argentina",
           "homeWinPct": 36,
-          "awayWinPct": 31,
-          "drawPct": 33,
+          "awayWinPct": 30,
+          "drawPct": 34,
           "eventSlug": "fifwc-eng-arg-2026-07-15"
         }
       }
