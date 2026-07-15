@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-15T20:59:22.607Z",
+  "lastUpdated": "2026-07-15T22:09:16.479Z",
   "snapshotDate": "2026-07-15",
   "isHistorical": false,
   "sourceSummary": {
@@ -5544,7 +5544,7 @@
       "confederation": "CONMEBOL",
       "fifaRank": 2,
       "eliminated": false,
-      "currentStage": "sf",
+      "currentStage": "final",
       "groupResults": [
         {
           "matchday": 1,
@@ -5629,8 +5629,8 @@
         "r16": 100,
         "qf": 100,
         "sf": 100,
-        "final": 95,
-        "winner": 41,
+        "final": 100,
+        "winner": 42,
         "source": "market"
       },
       "path": {
@@ -5666,13 +5666,12 @@
           "opponentDesc": "Winner Match 93"
         },
         "sf": {
-          "status": "future",
+          "status": "done",
+          "match": 101,
           "date": "2026-07-14",
-          "venue": "TBD",
-          "city": "TBD",
-          "opponentDesc": "Opponent TBD",
-          "conditional": true,
-          "conditionNote": "Venue + opponent confirmed once bracket is drawn"
+          "city": "Dallas",
+          "venue": "AT&T Stadium",
+          "opponentDesc": "Winner QF bracket"
         },
         "final": {
           "status": "future",
@@ -6605,7 +6604,7 @@
       "group": "L",
       "confederation": "UEFA",
       "fifaRank": 5,
-      "eliminated": false,
+      "eliminated": true,
       "currentStage": "sf",
       "groupResults": [
         {
@@ -6685,8 +6684,8 @@
         "r16": 100,
         "qf": 100,
         "sf": 100,
-        "final": 5,
-        "winner": 3,
+        "final": 0,
+        "winner": 0,
         "source": "market"
       },
       "path": {
@@ -6730,41 +6729,11 @@
           "conditional": true,
           "conditionNote": "Venue + opponent confirmed once bracket is drawn"
         },
-        "final": {
-          "status": "future",
-          "date": "2026-07-19",
-          "venue": "TBD",
-          "city": "TBD",
-          "opponentDesc": "Opponent TBD",
-          "conditional": true,
-          "conditionNote": "Venue + opponent confirmed once bracket is drawn"
-        }
+        "final": null
       },
       "possibleOpponents": {
-        "r32": [
-          {
-            "likelyTeam": "DR Congo",
-            "flag": "🇨🇩",
-            "fifaRank": 56,
-            "difficulty": 1,
-            "label": "Favorable",
-            "color": "#22C55E",
-            "note": "Confirmed opponent",
-            "pct": 100
-          }
-        ],
-        "r16": [
-          {
-            "likelyTeam": "Mexico",
-            "flag": "🇲🇽",
-            "fifaRank": 15,
-            "difficulty": 4,
-            "label": "Tough",
-            "color": "#FB923C",
-            "note": "Confirmed opponent",
-            "pct": 100
-          }
-        ]
+        "r32": [],
+        "r16": []
       },
       "totalGoals": 13
     },
@@ -9085,24 +9054,57 @@
         "awayId": "argentina",
         "homeScore": 1,
         "awayScore": 2,
-        "status": "IN_PROGRESS",
+        "status": "FINISHED",
         "date": "2026-07-15",
-        "clock": "90'+7'",
         "broadcasts": [
           "FOX",
           "Tele",
           "FOX One"
         ],
         "time": "2026-07-15T19:00Z",
-        "venue": "Mercedes-Benz Stadium, Atlanta, Georgia",
-        "polymarket": {
-          "homeId": "england",
-          "awayId": "argentina",
-          "homeWinPct": 1,
-          "awayWinPct": 88,
-          "drawPct": 11,
-          "eventSlug": "fifwc-eng-arg-2026-07-15"
-        }
+        "venue": "Mercedes-Benz Stadium, Atlanta, Georgia"
+      }
+    ],
+    "2026-07-18": [
+      {
+        "homeTeam": "France",
+        "homeFlag": "🇫🇷",
+        "homeId": "france",
+        "awayTeam": "England",
+        "awayFlag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+        "awayId": "england",
+        "homeScore": 0,
+        "awayScore": 0,
+        "status": "SCHEDULED",
+        "date": "2026-07-18",
+        "broadcasts": [
+          "FOX",
+          "Tele",
+          "FOX One"
+        ],
+        "time": "2026-07-18T21:00Z",
+        "venue": "Hard Rock Stadium, Miami Gardens, Florida"
+      }
+    ],
+    "2026-07-19": [
+      {
+        "homeTeam": "Spain",
+        "homeFlag": "🇪🇸",
+        "homeId": "spain",
+        "awayTeam": "Argentina",
+        "awayFlag": "🇦🇷",
+        "awayId": "argentina",
+        "homeScore": 0,
+        "awayScore": 0,
+        "status": "SCHEDULED",
+        "date": "2026-07-19",
+        "broadcasts": [
+          "FOX",
+          "Tele",
+          "FOX One"
+        ],
+        "time": "2026-07-19T19:00Z",
+        "venue": "MetLife Stadium, East Rutherford, New Jersey"
       }
     ]
   },
