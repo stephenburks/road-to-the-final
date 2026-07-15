@@ -1,6 +1,6 @@
 {
-  "lastUpdated": "2026-07-14T23:59:49.751Z",
-  "snapshotDate": "2026-07-14",
+  "lastUpdated": "2026-07-15T03:21:31.044Z",
+  "snapshotDate": "2026-07-15",
   "isHistorical": false,
   "sourceSummary": {
     "dataSource": "ESPN",
@@ -5629,7 +5629,7 @@
         "r16": 100,
         "qf": 100,
         "sf": 100,
-        "final": 46,
+        "final": 47,
         "winner": 19,
         "source": "market"
       },
@@ -6685,8 +6685,8 @@
         "r16": 100,
         "qf": 100,
         "sf": 100,
-        "final": 55,
-        "winner": 23,
+        "final": 54,
+        "winner": 22,
         "source": "market"
       },
       "path": {
