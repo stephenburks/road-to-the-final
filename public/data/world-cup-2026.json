@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-15T11:28:02.206Z",
+  "lastUpdated": "2026-07-15T13:41:54.879Z",
   "snapshotDate": "2026-07-15",
   "isHistorical": false,
   "sourceSummary": {
@@ -9097,7 +9097,7 @@
         "polymarket": {
           "homeId": "england",
           "awayId": "argentina",
-          "homeWinPct": 35,
+          "homeWinPct": 36,
           "awayWinPct": 32,
           "drawPct": 33,
           "eventSlug": "fifwc-eng-arg-2026-07-15"
