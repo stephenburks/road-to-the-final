@@ -1,6 +1,6 @@
 {
-  "lastUpdated": "2026-07-15T23:57:18.043Z",
-  "snapshotDate": "2026-07-15",
+  "lastUpdated": "2026-07-16T03:12:10.888Z",
+  "snapshotDate": "2026-07-16",
   "isHistorical": false,
   "sourceSummary": {
     "dataSource": "ESPN",
@@ -9083,7 +9083,15 @@
           "FOX One"
         ],
         "time": "2026-07-18T21:00Z",
-        "venue": "Hard Rock Stadium, Miami Gardens, Florida"
+        "venue": "Hard Rock Stadium, Miami Gardens, Florida",
+        "polymarket": {
+          "homeId": "france",
+          "awayId": "england",
+          "homeWinPct": 49,
+          "awayWinPct": 26,
+          "drawPct": 25,
+          "eventSlug": "fifwc-fra-eng-2026-07-18"
+        }
       }
     ],
     "2026-07-19": [
@@ -9104,7 +9112,15 @@
           "FOX One"
         ],
         "time": "2026-07-19T19:00Z",
-        "venue": "MetLife Stadium, East Rutherford, New Jersey"
+        "venue": "MetLife Stadium, East Rutherford, New Jersey",
+        "polymarket": {
+          "homeId": "spain",
+          "awayId": "argentina",
+          "homeWinPct": 42,
+          "awayWinPct": 27,
+          "drawPct": 33,
+          "eventSlug": "fifwc-esp-arg-2026-07-19"
+        }
       }
     ]
   },
