@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-17T15:12:43.264Z",
+  "lastUpdated": "2026-07-17T17:10:38.988Z",
   "snapshotDate": "2026-07-17",
   "isHistorical": false,
   "sourceSummary": {
@@ -9089,7 +9089,7 @@
           "awayId": "england",
           "homeWinPct": 50,
           "awayWinPct": 25,
-          "drawPct": 26,
+          "drawPct": 25,
           "eventSlug": "fifwc-fra-eng-2026-07-18"
         }
       }
