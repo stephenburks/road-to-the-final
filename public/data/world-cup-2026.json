@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-17T17:10:38.988Z",
+  "lastUpdated": "2026-07-17T19:06:37.376Z",
   "snapshotDate": "2026-07-17",
   "isHistorical": false,
   "sourceSummary": {
@@ -9087,7 +9087,7 @@
         "polymarket": {
           "homeId": "france",
           "awayId": "england",
-          "homeWinPct": 50,
+          "homeWinPct": 51,
           "awayWinPct": 25,
           "drawPct": 25,
           "eventSlug": "fifwc-fra-eng-2026-07-18"
