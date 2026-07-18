@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-18T21:50:28.095Z",
+  "lastUpdated": "2026-07-18T22:48:45.078Z",
   "snapshotDate": "2026-07-18",
   "isHistorical": false,
   "sourceSummary": {
@@ -5630,7 +5630,7 @@
         "qf": 100,
         "sf": 100,
         "final": 100,
-        "winner": 40,
+        "winner": 41,
         "source": "market"
       },
       "path": {
@@ -9073,11 +9073,11 @@
         "awayTeam": "England",
         "awayFlag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "awayId": "england",
-        "homeScore": 0,
+        "homeScore": 3,
         "awayScore": 4,
         "status": "IN_PROGRESS",
         "date": "2026-07-18",
-        "clock": "HT",
+        "clock": "85'",
         "broadcasts": [
           "FOX",
           "Tele",
@@ -9088,9 +9088,9 @@
         "polymarket": {
           "homeId": "france",
           "awayId": "england",
-          "homeWinPct": 4,
-          "awayWinPct": 90,
-          "drawPct": 8,
+          "homeWinPct": 13,
+          "awayWinPct": 57,
+          "drawPct": 30,
           "eventSlug": "fifwc-fra-eng-2026-07-18"
         }
       }
