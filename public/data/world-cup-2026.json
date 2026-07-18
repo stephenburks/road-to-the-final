@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-18T16:59:37.533Z",
+  "lastUpdated": "2026-07-18T18:01:29.865Z",
   "snapshotDate": "2026-07-18",
   "isHistorical": false,
   "sourceSummary": {
@@ -9117,7 +9117,7 @@
           "homeId": "spain",
           "awayId": "argentina",
           "homeWinPct": 42,
-          "awayWinPct": 26,
+          "awayWinPct": 27,
           "drawPct": 32,
           "eventSlug": "fifwc-esp-arg-2026-07-19"
         }
