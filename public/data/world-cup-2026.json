@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-18T15:56:21.058Z",
+  "lastUpdated": "2026-07-18T16:59:37.533Z",
   "snapshotDate": "2026-07-18",
   "isHistorical": false,
   "sourceSummary": {
@@ -9087,7 +9087,7 @@
         "polymarket": {
           "homeId": "france",
           "awayId": "england",
-          "homeWinPct": 52,
+          "homeWinPct": 53,
           "awayWinPct": 25,
           "drawPct": 24,
           "eventSlug": "fifwc-fra-eng-2026-07-18"
@@ -9116,8 +9116,8 @@
         "polymarket": {
           "homeId": "spain",
           "awayId": "argentina",
-          "homeWinPct": 43,
-          "awayWinPct": 27,
+          "homeWinPct": 42,
+          "awayWinPct": 26,
           "drawPct": 32,
           "eventSlug": "fifwc-esp-arg-2026-07-19"
         }
