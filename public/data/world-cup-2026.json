@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-18T20:03:03.578Z",
+  "lastUpdated": "2026-07-18T21:50:28.095Z",
   "snapshotDate": "2026-07-18",
   "isHistorical": false,
   "sourceSummary": {
@@ -9074,9 +9074,10 @@
         "awayFlag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "awayId": "england",
         "homeScore": 0,
-        "awayScore": 0,
-        "status": "SCHEDULED",
+        "awayScore": 4,
+        "status": "IN_PROGRESS",
         "date": "2026-07-18",
+        "clock": "HT",
         "broadcasts": [
           "FOX",
           "Tele",
@@ -9087,9 +9088,9 @@
         "polymarket": {
           "homeId": "france",
           "awayId": "england",
-          "homeWinPct": 56,
-          "awayWinPct": 23,
-          "drawPct": 23,
+          "homeWinPct": 4,
+          "awayWinPct": 90,
+          "drawPct": 8,
           "eventSlug": "fifwc-fra-eng-2026-07-18"
         }
       }
@@ -9117,7 +9118,7 @@
           "homeId": "spain",
           "awayId": "argentina",
           "homeWinPct": 42,
-          "awayWinPct": 27,
+          "awayWinPct": 26,
           "drawPct": 32,
           "eventSlug": "fifwc-esp-arg-2026-07-19"
         }
