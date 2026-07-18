@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-18T22:48:45.078Z",
+  "lastUpdated": "2026-07-18T23:52:54.568Z",
   "snapshotDate": "2026-07-18",
   "isHistorical": false,
   "sourceSummary": {
@@ -9073,26 +9073,17 @@
         "awayTeam": "England",
         "awayFlag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "awayId": "england",
-        "homeScore": 3,
-        "awayScore": 4,
-        "status": "IN_PROGRESS",
+        "homeScore": 4,
+        "awayScore": 6,
+        "status": "FINISHED",
         "date": "2026-07-18",
-        "clock": "85'",
         "broadcasts": [
           "FOX",
           "Tele",
           "FOX One"
         ],
         "time": "2026-07-18T21:00Z",
-        "venue": "Hard Rock Stadium, Miami Gardens, Florida",
-        "polymarket": {
-          "homeId": "france",
-          "awayId": "england",
-          "homeWinPct": 13,
-          "awayWinPct": 57,
-          "drawPct": 30,
-          "eventSlug": "fifwc-fra-eng-2026-07-18"
-        }
+        "venue": "Hard Rock Stadium, Miami Gardens, Florida"
       }
     ],
     "2026-07-19": [
@@ -9118,7 +9109,7 @@
           "homeId": "spain",
           "awayId": "argentina",
           "homeWinPct": 42,
-          "awayWinPct": 26,
+          "awayWinPct": 27,
           "drawPct": 32,
           "eventSlug": "fifwc-esp-arg-2026-07-19"
         }
