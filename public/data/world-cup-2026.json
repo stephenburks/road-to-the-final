@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-19T13:36:39.463Z",
+  "lastUpdated": "2026-07-19T14:55:00.901Z",
   "snapshotDate": "2026-07-19",
   "isHistorical": false,
   "sourceSummary": {
@@ -9108,7 +9108,7 @@
         "polymarket": {
           "homeId": "spain",
           "awayId": "argentina",
-          "homeWinPct": 42,
+          "homeWinPct": 43,
           "awayWinPct": 27,
           "drawPct": 32,
           "eventSlug": "fifwc-esp-arg-2026-07-19"
