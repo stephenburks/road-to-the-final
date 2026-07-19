@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-19T19:04:35.646Z",
+  "lastUpdated": "2026-07-19T20:46:44.828Z",
   "snapshotDate": "2026-07-19",
   "isHistorical": false,
   "sourceSummary": {
@@ -4589,7 +4589,7 @@
         "qf": 100,
         "sf": 100,
         "final": 100,
-        "winner": 58,
+        "winner": 60,
         "source": "market"
       },
       "path": {
@@ -5630,7 +5630,7 @@
         "qf": 100,
         "sf": 100,
         "final": 100,
-        "winner": 42,
+        "winner": 40,
         "source": "market"
       },
       "path": {
@@ -9096,8 +9096,9 @@
         "awayId": "argentina",
         "homeScore": 0,
         "awayScore": 0,
-        "status": "SCHEDULED",
+        "status": "IN_PROGRESS",
         "date": "2026-07-19",
+        "clock": "68'",
         "broadcasts": [
           "FOX",
           "Tele",
@@ -9108,9 +9109,9 @@
         "polymarket": {
           "homeId": "spain",
           "awayId": "argentina",
-          "homeWinPct": 43,
-          "awayWinPct": 25,
-          "drawPct": 32,
+          "homeWinPct": 37,
+          "awayWinPct": 16,
+          "drawPct": 47,
           "eventSlug": "fifwc-esp-arg-2026-07-19"
         }
       }
