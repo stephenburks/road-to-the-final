@@ -1,6 +1,6 @@
 {
-  "lastUpdated": "2026-07-22T23:02:33.079Z",
-  "snapshotDate": "2026-07-22",
+  "lastUpdated": "2026-07-23T02:40:30.695Z",
+  "snapshotDate": "2026-07-23",
   "isHistorical": false,
   "sourceSummary": {
     "dataSource": "ESPN",
@@ -1099,7 +1099,7 @@
       "group": "A",
       "confederation": "AFC",
       "fifaRank": 22,
-      "eliminated": true,
+      "eliminated": false,
       "currentStage": "group_stage",
       "groupResults": [
         {
@@ -1185,11 +1185,51 @@
           "date": "Jun 11–24",
           "detail": "3pts after MD3"
         },
-        "r32": null,
-        "r16": null,
-        "qf": null,
-        "sf": null,
-        "final": null
+        "r32": {
+          "status": "future",
+          "date": "2026-06-29",
+          "venue": "TBD",
+          "city": "TBD",
+          "opponentDesc": "Opponent TBD",
+          "conditional": true,
+          "conditionNote": "Venue + opponent confirmed once bracket is drawn"
+        },
+        "r16": {
+          "status": "future",
+          "date": "2026-07-06",
+          "venue": "TBD",
+          "city": "TBD",
+          "opponentDesc": "Opponent TBD",
+          "conditional": true,
+          "conditionNote": "Venue + opponent confirmed once bracket is drawn"
+        },
+        "qf": {
+          "status": "future",
+          "date": "2026-07-10",
+          "venue": "TBD",
+          "city": "TBD",
+          "opponentDesc": "Opponent TBD",
+          "conditional": true,
+          "conditionNote": "Venue + opponent confirmed once bracket is drawn"
+        },
+        "sf": {
+          "status": "future",
+          "date": "2026-07-15",
+          "venue": "TBD",
+          "city": "TBD",
+          "opponentDesc": "Opponent TBD",
+          "conditional": true,
+          "conditionNote": "Venue + opponent confirmed once bracket is drawn"
+        },
+        "final": {
+          "status": "future",
+          "date": "2026-07-19",
+          "venue": "TBD",
+          "city": "TBD",
+          "opponentDesc": "Opponent TBD",
+          "conditional": true,
+          "conditionNote": "Venue + opponent confirmed once bracket is drawn"
+        }
       },
       "possibleOpponents": {
         "r32": [],
@@ -2160,7 +2200,7 @@
       "group": "C",
       "confederation": "UEFA",
       "fifaRank": 39,
-      "eliminated": true,
+      "eliminated": false,
       "currentStage": "group_stage",
       "groupResults": [
         {
@@ -2248,11 +2288,51 @@
           "date": "Jun 13–24",
           "detail": "3pts after MD3"
         },
-        "r32": null,
-        "r16": null,
-        "qf": null,
-        "sf": null,
-        "final": null
+        "r32": {
+          "status": "future",
+          "date": "2026-07-03",
+          "venue": "TBD",
+          "city": "TBD",
+          "opponentDesc": "Opponent TBD",
+          "conditional": true,
+          "conditionNote": "Venue + opponent confirmed once bracket is drawn"
+        },
+        "r16": {
+          "status": "future",
+          "date": "2026-07-07",
+          "venue": "TBD",
+          "city": "TBD",
+          "opponentDesc": "Opponent TBD",
+          "conditional": true,
+          "conditionNote": "Venue + opponent confirmed once bracket is drawn"
+        },
+        "qf": {
+          "status": "future",
+          "date": "2026-07-11",
+          "venue": "TBD",
+          "city": "TBD",
+          "opponentDesc": "Opponent TBD",
+          "conditional": true,
+          "conditionNote": "Venue + opponent confirmed once bracket is drawn"
+        },
+        "sf": {
+          "status": "future",
+          "date": "2026-07-15",
+          "venue": "TBD",
+          "city": "TBD",
+          "opponentDesc": "Opponent TBD",
+          "conditional": true,
+          "conditionNote": "Venue + opponent confirmed once bracket is drawn"
+        },
+        "final": {
+          "status": "future",
+          "date": "2026-07-19",
+          "venue": "TBD",
+          "city": "TBD",
+          "opponentDesc": "Opponent TBD",
+          "conditional": true,
+          "conditionNote": "Venue + opponent confirmed once bracket is drawn"
+        }
       },
       "possibleOpponents": {
         "r32": [],
@@ -4272,7 +4352,7 @@
       "group": "G",
       "confederation": "AFC",
       "fifaRank": 21,
-      "eliminated": true,
+      "eliminated": false,
       "currentStage": "group_stage",
       "groupResults": [
         {
@@ -4368,11 +4448,51 @@
           "date": "Jun 15–26",
           "detail": "3pts after MD3"
         },
-        "r32": null,
-        "r16": null,
-        "qf": null,
-        "sf": null,
-        "final": null
+        "r32": {
+          "status": "future",
+          "date": "2026-07-03",
+          "venue": "TBD",
+          "city": "TBD",
+          "opponentDesc": "Opponent TBD",
+          "conditional": true,
+          "conditionNote": "Venue + opponent confirmed once bracket is drawn"
+        },
+        "r16": {
+          "status": "future",
+          "date": "2026-07-07",
+          "venue": "TBD",
+          "city": "TBD",
+          "opponentDesc": "Opponent TBD",
+          "conditional": true,
+          "conditionNote": "Venue + opponent confirmed once bracket is drawn"
+        },
+        "qf": {
+          "status": "future",
+          "date": "2026-07-11",
+          "venue": "TBD",
+          "city": "TBD",
+          "opponentDesc": "Opponent TBD",
+          "conditional": true,
+          "conditionNote": "Venue + opponent confirmed once bracket is drawn"
+        },
+        "sf": {
+          "status": "future",
+          "date": "2026-07-15",
+          "venue": "TBD",
+          "city": "TBD",
+          "opponentDesc": "Opponent TBD",
+          "conditional": true,
+          "conditionNote": "Venue + opponent confirmed once bracket is drawn"
+        },
+        "final": {
+          "status": "future",
+          "date": "2026-07-19",
+          "venue": "TBD",
+          "city": "TBD",
+          "opponentDesc": "Opponent TBD",
+          "conditional": true,
+          "conditionNote": "Venue + opponent confirmed once bracket is drawn"
+        }
       },
       "possibleOpponents": {
         "r32": [],
@@ -4901,7 +5021,7 @@
       "group": "H",
       "confederation": "CONMEBOL",
       "fifaRank": 18,
-      "eliminated": true,
+      "eliminated": false,
       "currentStage": "group_stage",
       "groupResults": [
         {
@@ -5027,11 +5147,51 @@
           "date": "Jun 15–26",
           "detail": "2pts after MD3"
         },
-        "r32": null,
-        "r16": null,
-        "qf": null,
-        "sf": null,
-        "final": null
+        "r32": {
+          "status": "future",
+          "date": "2026-06-29",
+          "venue": "TBD",
+          "city": "TBD",
+          "opponentDesc": "Opponent TBD",
+          "conditional": true,
+          "conditionNote": "Venue + opponent confirmed once bracket is drawn"
+        },
+        "r16": {
+          "status": "future",
+          "date": "2026-07-06",
+          "venue": "TBD",
+          "city": "TBD",
+          "opponentDesc": "Opponent TBD",
+          "conditional": true,
+          "conditionNote": "Venue + opponent confirmed once bracket is drawn"
+        },
+        "qf": {
+          "status": "future",
+          "date": "2026-07-10",
+          "venue": "TBD",
+          "city": "TBD",
+          "opponentDesc": "Opponent TBD",
+          "conditional": true,
+          "conditionNote": "Venue + opponent confirmed once bracket is drawn"
+        },
+        "sf": {
+          "status": "future",
+          "date": "2026-07-15",
+          "venue": "TBD",
+          "city": "TBD",
+          "opponentDesc": "Opponent TBD",
+          "conditional": true,
+          "conditionNote": "Venue + opponent confirmed once bracket is drawn"
+        },
+        "final": {
+          "status": "future",
+          "date": "2026-07-19",
+          "venue": "TBD",
+          "city": "TBD",
+          "opponentDesc": "Opponent TBD",
+          "conditional": true,
+          "conditionNote": "Venue + opponent confirmed once bracket is drawn"
+        }
       },
       "possibleOpponents": {
         "r32": [],
