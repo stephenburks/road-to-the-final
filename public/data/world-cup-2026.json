@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-24T20:18:24.137Z",
+  "lastUpdated": "2026-07-24T22:03:44.901Z",
   "snapshotDate": "2026-07-24",
   "isHistorical": false,
   "sourceSummary": {
@@ -6582,8 +6582,8 @@
       "group": "L",
       "confederation": "UEFA",
       "fifaRank": 5,
-      "eliminated": true,
-      "currentStage": "sf",
+      "eliminated": false,
+      "currentStage": "final",
       "groupResults": [
         {
           "matchday": 1,
@@ -6699,19 +6699,48 @@
           "conditional": false
         },
         "sf": {
-          "status": "future",
+          "status": "done",
+          "match": 102,
           "date": "2026-07-15",
+          "city": "Atlanta",
+          "venue": "Mercedes-Benz Stadium",
+          "opponentDesc": "Winner QF bracket"
+        },
+        "final": {
+          "status": "future",
+          "date": "2026-07-19",
           "venue": "TBD",
           "city": "TBD",
           "opponentDesc": "Opponent TBD",
           "conditional": true,
           "conditionNote": "Venue + opponent confirmed once bracket is drawn"
-        },
-        "final": null
+        }
       },
       "possibleOpponents": {
-        "r32": [],
-        "r16": []
+        "r32": [
+          {
+            "likelyTeam": "DR Congo",
+            "flag": "🇨🇩",
+            "fifaRank": 56,
+            "difficulty": 1,
+            "label": "Favorable",
+            "color": "#22C55E",
+            "note": "Confirmed opponent",
+            "pct": 100
+          }
+        ],
+        "r16": [
+          {
+            "likelyTeam": "Mexico",
+            "flag": "🇲🇽",
+            "fifaRank": 15,
+            "difficulty": 4,
+            "label": "Tough",
+            "color": "#FB923C",
+            "note": "Confirmed opponent",
+            "pct": 100
+          }
+        ]
       },
       "totalGoals": 13
     },
@@ -9020,27 +9049,6 @@
         ],
         "time": "2026-07-14T19:00Z",
         "venue": "AT&T Stadium, Arlington, Texas"
-      }
-    ],
-    "2026-07-15": [
-      {
-        "homeTeam": "England",
-        "homeFlag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
-        "homeId": "england",
-        "awayTeam": "Argentina",
-        "awayFlag": "🇦🇷",
-        "awayId": "argentina",
-        "homeScore": 1,
-        "awayScore": 2,
-        "status": "FINISHED",
-        "date": "2026-07-15",
-        "broadcasts": [
-          "FOX",
-          "Tele",
-          "FOX One"
-        ],
-        "time": "2026-07-15T19:00Z",
-        "venue": "Mercedes-Benz Stadium, Atlanta, Georgia"
       }
     ],
     "2026-07-18": [
