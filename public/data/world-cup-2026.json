@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-08-04T07:38:41.225Z",
+  "lastUpdated": "2026-08-04T10:44:05.861Z",
   "snapshotDate": "2026-08-04",
   "isHistorical": false,
   "sourceSummary": {
@@ -9,35 +9,35 @@
   },
   "tournament": {
     "name": "FIFA World Cup 2026",
-    "currentStage": "final",
+    "currentStage": "group_stage",
     "stages": {
       "group_stage": {
-        "status": "done",
+        "status": "active",
         "label": "Group Stage",
         "date": "Jun 11–27"
       },
       "r32": {
-        "status": "done",
+        "status": "upcoming",
         "label": "Round of 32",
         "date": "Jun 28–Jul 2"
       },
       "r16": {
-        "status": "done",
+        "status": "upcoming",
         "label": "Round of 16",
         "date": "Jul 4–7"
       },
       "qf": {
-        "status": "done",
+        "status": "upcoming",
         "label": "Quarterfinal",
         "date": "Jul 9–11"
       },
       "sf": {
-        "status": "done",
+        "status": "upcoming",
         "label": "Semifinal",
         "date": "Jul 14–15"
       },
       "final": {
-        "status": "active",
+        "status": "upcoming",
         "label": "The Final",
         "date": "Jul 19"
       }
@@ -845,15 +845,15 @@
       "group": "A",
       "confederation": "CONCACAF",
       "fifaRank": 15,
-      "eliminated": true,
-      "currentStage": "r16",
+      "eliminated": false,
+      "currentStage": "group_stage",
       "groupResults": [
         {
           "matchday": 1,
           "opponent": "South Africa",
           "opponentFlag": "🇿🇦",
-          "result": "W",
-          "score": "2-0",
+          "result": null,
+          "score": null,
           "date": "2026-06-11",
           "venue": "Estadio Azteca, Mexico City",
           "scorers": [
@@ -877,8 +877,8 @@
           "matchday": 2,
           "opponent": "South Korea",
           "opponentFlag": "🇰🇷",
-          "result": "W",
-          "score": "1-0",
+          "result": null,
+          "score": null,
           "date": "2026-06-18",
           "venue": "Estadio Akron, Zapopan",
           "scorers": [
@@ -906,8 +906,8 @@
           "matchday": 3,
           "opponent": "Czechia",
           "opponentFlag": "🇨🇿",
-          "result": "W",
-          "score": "3-0",
+          "result": null,
+          "score": null,
           "date": "2026-06-24",
           "venue": "Estadio Akron, Zapopan",
           "scorers": [
@@ -939,7 +939,7 @@
           "city": "Mexico City · Zapopan",
           "venue": "Various venues",
           "date": "Jun 11–24",
-          "detail": "9pts after MD3"
+          "detail": "0pts after MD0"
         },
         "r32": {
           "status": "done",
@@ -957,15 +957,61 @@
           "opponentDesc": "England",
           "conditional": false
         },
-        "qf": null,
-        "sf": null,
-        "final": null
+        "qf": {
+          "status": "future",
+          "date": "2026-07-09",
+          "venue": "TBD",
+          "city": "TBD",
+          "opponentDesc": "Opponent TBD",
+          "conditional": true,
+          "conditionNote": "Venue + opponent confirmed once bracket is drawn"
+        },
+        "sf": {
+          "status": "future",
+          "date": "2026-07-14",
+          "venue": "TBD",
+          "city": "TBD",
+          "opponentDesc": "Opponent TBD",
+          "conditional": true,
+          "conditionNote": "Venue + opponent confirmed once bracket is drawn"
+        },
+        "final": {
+          "status": "future",
+          "date": "2026-07-19",
+          "venue": "TBD",
+          "city": "TBD",
+          "opponentDesc": "Opponent TBD",
+          "conditional": true,
+          "conditionNote": "Venue + opponent confirmed once bracket is drawn"
+        }
       },
       "possibleOpponents": {
-        "r32": [],
-        "r16": []
+        "r32": [
+          {
+            "likelyTeam": "Ecuador",
+            "flag": "🇪🇨",
+            "fifaRank": 23,
+            "difficulty": 3,
+            "label": "Moderate",
+            "color": "#F59E0B",
+            "note": "Confirmed opponent",
+            "pct": 100
+          }
+        ],
+        "r16": [
+          {
+            "likelyTeam": "England",
+            "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+            "fifaRank": 5,
+            "difficulty": 5,
+            "label": "Danger",
+            "color": "#EF4444",
+            "note": "Confirmed opponent",
+            "pct": 100
+          }
+        ]
       },
-      "totalGoals": 10
+      "totalGoals": 4
     },
     {
       "id": "southafrica",
@@ -975,14 +1021,14 @@
       "confederation": "CAF",
       "fifaRank": 58,
       "eliminated": true,
-      "currentStage": "r32",
+      "currentStage": "group_stage",
       "groupResults": [
         {
           "matchday": 1,
           "opponent": "Mexico",
           "opponentFlag": "🇲🇽",
-          "result": "L",
-          "score": "0-2",
+          "result": null,
+          "score": null,
           "date": "2026-06-11",
           "venue": "Estadio Azteca, Mexico City",
           "scorers": [
@@ -1016,8 +1062,8 @@
           "matchday": 2,
           "opponent": "Czechia",
           "opponentFlag": "🇨🇿",
-          "result": "D",
-          "score": "1-1",
+          "result": null,
+          "score": null,
           "date": "2026-06-18",
           "venue": "Mercedes-Benz Stadium, Atlanta",
           "scorers": [
@@ -1040,8 +1086,8 @@
           "matchday": 3,
           "opponent": "South Korea",
           "opponentFlag": "🇰🇷",
-          "result": "W",
-          "score": "1-0",
+          "result": null,
+          "score": null,
           "date": "2026-06-24",
           "venue": "Estadio Akron, Zapopan",
           "scorers": [
@@ -1071,7 +1117,7 @@
           "city": "Mexico City · Atlanta · Zapopan",
           "venue": "Various venues",
           "date": "Jun 11–24",
-          "detail": "4pts after MD3"
+          "detail": "0pts after MD0"
         },
         "r32": {
           "status": "done",
@@ -1090,7 +1136,7 @@
         "r32": [],
         "r16": []
       },
-      "totalGoals": 2
+      "totalGoals": 0
     },
     {
       "id": "southkorea",
@@ -1106,8 +1152,8 @@
           "matchday": 1,
           "opponent": "Czechia",
           "opponentFlag": "🇨🇿",
-          "result": "W",
-          "score": "2-1",
+          "result": null,
+          "score": null,
           "date": "2026-06-11",
           "venue": "Estadio Akron, Zapopan",
           "scorers": [
@@ -1126,8 +1172,8 @@
           "matchday": 2,
           "opponent": "Mexico",
           "opponentFlag": "🇲🇽",
-          "result": "L",
-          "score": "0-1",
+          "result": null,
+          "score": null,
           "date": "2026-06-18",
           "venue": "Estadio Akron, Zapopan",
           "scorers": [
@@ -1151,8 +1197,8 @@
           "matchday": 3,
           "opponent": "South Africa",
           "opponentFlag": "🇿🇦",
-          "result": "L",
-          "score": "0-1",
+          "result": null,
+          "score": null,
           "date": "2026-06-24",
           "venue": "Estadio Akron, Zapopan",
           "scorers": [
@@ -1183,7 +1229,7 @@
           "city": "Zapopan",
           "venue": "Various venues",
           "date": "Jun 11–24",
-          "detail": "3pts after MD3"
+          "detail": "0pts after MD0"
         },
         "r32": null,
         "r16": null,
@@ -1195,7 +1241,7 @@
         "r32": [],
         "r16": []
       },
-      "totalGoals": 2
+      "totalGoals": 0
     },
     {
       "id": "czechia",
@@ -1211,8 +1257,8 @@
           "matchday": 1,
           "opponent": "South Korea",
           "opponentFlag": "🇰🇷",
-          "result": "L",
-          "score": "1-2",
+          "result": null,
+          "score": null,
           "date": "2026-06-11",
           "venue": "Estadio Akron, Zapopan",
           "scorers": [
@@ -1230,8 +1276,8 @@
           "matchday": 2,
           "opponent": "South Africa",
           "opponentFlag": "🇿🇦",
-          "result": "D",
-          "score": "1-1",
+          "result": null,
+          "score": null,
           "date": "2026-06-18",
           "venue": "Mercedes-Benz Stadium, Atlanta",
           "scorers": [
@@ -1249,8 +1295,8 @@
           "matchday": 3,
           "opponent": "Mexico",
           "opponentFlag": "🇲🇽",
-          "result": "L",
-          "score": "0-3",
+          "result": null,
+          "score": null,
           "date": "2026-06-24",
           "venue": "Estadio Akron, Zapopan",
           "scorers": [
@@ -1281,7 +1327,7 @@
           "city": "Zapopan · Atlanta",
           "venue": "Various venues",
           "date": "Jun 11–24",
-          "detail": "1pt after MD3"
+          "detail": "0pts after MD0"
         },
         "r32": null,
         "r16": null,
@@ -1293,7 +1339,7 @@
         "r32": [],
         "r16": []
       },
-      "totalGoals": 2
+      "totalGoals": 0
     },
     {
       "id": "canada",
@@ -1302,15 +1348,15 @@
       "group": "B",
       "confederation": "CONCACAF",
       "fifaRank": 27,
-      "eliminated": true,
-      "currentStage": "r32",
+      "eliminated": false,
+      "currentStage": "group_stage",
       "groupResults": [
         {
           "matchday": 1,
           "opponent": "Bosnia & Herz.",
           "opponentFlag": "🇧🇦",
-          "result": "D",
-          "score": "1-1",
+          "result": null,
+          "score": null,
           "date": "2026-06-12",
           "venue": "BMO Field, Toronto",
           "scorers": [
@@ -1333,8 +1379,8 @@
           "matchday": 2,
           "opponent": "Qatar",
           "opponentFlag": "🇶🇦",
-          "result": "W",
-          "score": "6-0",
+          "result": null,
+          "score": null,
           "date": "2026-06-18",
           "venue": "BC Place, Vancouver",
           "scorers": [
@@ -1357,8 +1403,8 @@
           "matchday": 3,
           "opponent": "Switzerland",
           "opponentFlag": "🇨🇭",
-          "result": "L",
-          "score": "1-2",
+          "result": null,
+          "score": null,
           "date": "2026-06-24",
           "venue": "BC Place, Vancouver",
           "scorers": [
@@ -1393,7 +1439,7 @@
           "city": "Toronto · Vancouver",
           "venue": "Various venues",
           "date": "Jun 12–24",
-          "detail": "4pts after MD3"
+          "detail": "0pts after MD0"
         },
         "r32": {
           "status": "done",
@@ -1403,16 +1449,70 @@
           "opponentDesc": "South Africa",
           "conditional": false
         },
-        "r16": null,
-        "qf": null,
-        "sf": null,
-        "final": null
+        "r16": {
+          "status": "future",
+          "date": "2026-07-07",
+          "venue": "TBD",
+          "city": "TBD",
+          "opponentDesc": "Paraguay",
+          "conditional": true,
+          "conditionNote": "Predicted from bracket pairing — venue confirmed once previous match settles"
+        },
+        "qf": {
+          "status": "future",
+          "date": "2026-07-11",
+          "venue": "TBD",
+          "city": "TBD",
+          "opponentDesc": "Opponent TBD",
+          "conditional": true,
+          "conditionNote": "Venue + opponent confirmed once bracket is drawn"
+        },
+        "sf": {
+          "status": "future",
+          "date": "2026-07-14",
+          "venue": "TBD",
+          "city": "TBD",
+          "opponentDesc": "Opponent TBD",
+          "conditional": true,
+          "conditionNote": "Venue + opponent confirmed once bracket is drawn"
+        },
+        "final": {
+          "status": "future",
+          "date": "2026-07-19",
+          "venue": "TBD",
+          "city": "TBD",
+          "opponentDesc": "Opponent TBD",
+          "conditional": true,
+          "conditionNote": "Venue + opponent confirmed once bracket is drawn"
+        }
       },
       "possibleOpponents": {
-        "r32": [],
-        "r16": []
+        "r32": [
+          {
+            "likelyTeam": "South Africa",
+            "flag": "🇿🇦",
+            "fifaRank": 58,
+            "difficulty": 1,
+            "label": "Favorable",
+            "color": "#22C55E",
+            "note": "Confirmed opponent",
+            "pct": 100
+          }
+        ],
+        "r16": [
+          {
+            "likelyTeam": "Paraguay",
+            "flag": "🇵🇾",
+            "fifaRank": 39,
+            "difficulty": 2,
+            "label": "Favorable",
+            "color": "#22C55E",
+            "note": "Predicted (winner of paired match)",
+            "pct": 100
+          }
+        ]
       },
-      "totalGoals": 9
+      "totalGoals": 1
     },
     {
       "id": "bosnia",
@@ -1422,14 +1522,14 @@
       "confederation": "UEFA",
       "fifaRank": 71,
       "eliminated": true,
-      "currentStage": "r32",
+      "currentStage": "group_stage",
       "groupResults": [
         {
           "matchday": 1,
           "opponent": "Canada",
           "opponentFlag": "🇨🇦",
-          "result": "D",
-          "score": "1-1",
+          "result": null,
+          "score": null,
           "date": "2026-06-12",
           "venue": "BMO Field, Toronto",
           "scorers": [
@@ -1457,8 +1557,8 @@
           "matchday": 2,
           "opponent": "Switzerland",
           "opponentFlag": "🇨🇭",
-          "result": "L",
-          "score": "1-4",
+          "result": null,
+          "score": null,
           "date": "2026-06-18",
           "venue": "Levi's Stadium, San Francisco",
           "scorers": [
@@ -1486,8 +1586,8 @@
           "matchday": 3,
           "opponent": "Qatar",
           "opponentFlag": "🇶🇦",
-          "result": "W",
-          "score": "3-1",
+          "result": null,
+          "score": null,
           "date": "2026-06-24",
           "venue": "Lumen Field, Seattle",
           "scorers": [
@@ -1519,7 +1619,7 @@
           "city": "Toronto · San Francisco · Seattle",
           "venue": "Various venues",
           "date": "Jun 12–24",
-          "detail": "4pts after MD3"
+          "detail": "0pts after MD0"
         },
         "r32": {
           "status": "done",
@@ -1538,7 +1638,7 @@
         "r32": [],
         "r16": []
       },
-      "totalGoals": 5
+      "totalGoals": 0
     },
     {
       "id": "qatar",
@@ -1554,8 +1654,8 @@
           "matchday": 1,
           "opponent": "Switzerland",
           "opponentFlag": "🇨🇭",
-          "result": "D",
-          "score": "1-1",
+          "result": null,
+          "score": null,
           "date": "2026-06-13",
           "venue": "Levi's Stadium, San Francisco",
           "scorers": [
@@ -1578,8 +1678,8 @@
           "matchday": 2,
           "opponent": "Canada",
           "opponentFlag": "🇨🇦",
-          "result": "L",
-          "score": "0-6",
+          "result": null,
+          "score": null,
           "date": "2026-06-18",
           "venue": "BC Place, Vancouver",
           "scorers": [
@@ -1608,8 +1708,8 @@
           "matchday": 3,
           "opponent": "Bosnia & Herz.",
           "opponentFlag": "🇧🇦",
-          "result": "L",
-          "score": "1-3",
+          "result": null,
+          "score": null,
           "date": "2026-06-24",
           "venue": "Lumen Field, Seattle",
           "scorers": [
@@ -1639,7 +1739,7 @@
           "city": "San Francisco · Vancouver · Seattle",
           "venue": "Various venues",
           "date": "Jun 13–24",
-          "detail": "1pt after MD3"
+          "detail": "0pts after MD0"
         },
         "r32": null,
         "r16": null,
@@ -1651,7 +1751,7 @@
         "r32": [],
         "r16": []
       },
-      "totalGoals": 2
+      "totalGoals": 0
     },
     {
       "id": "switzerland",
@@ -1660,15 +1760,15 @@
       "group": "B",
       "confederation": "UEFA",
       "fifaRank": 17,
-      "eliminated": true,
-      "currentStage": "qf",
+      "eliminated": false,
+      "currentStage": "group_stage",
       "groupResults": [
         {
           "matchday": 1,
           "opponent": "Qatar",
           "opponentFlag": "🇶🇦",
-          "result": "D",
-          "score": "1-1",
+          "result": null,
+          "score": null,
           "date": "2026-06-13",
           "venue": "Levi's Stadium, San Francisco",
           "scorers": [
@@ -1686,8 +1786,8 @@
           "matchday": 2,
           "opponent": "Bosnia & Herz.",
           "opponentFlag": "🇧🇦",
-          "result": "W",
-          "score": "4-1",
+          "result": null,
+          "score": null,
           "date": "2026-06-18",
           "venue": "Levi's Stadium, San Francisco",
           "scorers": [
@@ -1708,8 +1808,8 @@
           "matchday": 3,
           "opponent": "Canada",
           "opponentFlag": "🇨🇦",
-          "result": "W",
-          "score": "2-1",
+          "result": null,
+          "score": null,
           "date": "2026-06-24",
           "venue": "BC Place, Vancouver",
           "scorers": [
@@ -1740,7 +1840,7 @@
           "city": "San Francisco · Vancouver",
           "venue": "Various venues",
           "date": "Jun 13–24",
-          "detail": "7pts after MD3"
+          "detail": "0pts after MD0"
         },
         "r32": {
           "status": "done",
@@ -1751,30 +1851,69 @@
           "conditional": false
         },
         "r16": {
-          "status": "done",
-          "match": 96,
-          "date": "2026-07-07",
-          "city": "Vancouver",
-          "venue": "BC Place",
-          "opponentDesc": "Winner Match 85"
+          "status": "future",
+          "date": "2026-07-06",
+          "venue": "TBD",
+          "city": "TBD",
+          "opponentDesc": "Argentina",
+          "conditional": true,
+          "conditionNote": "Predicted from bracket pairing — venue confirmed once previous match settles"
         },
         "qf": {
           "status": "future",
-          "date": "2026-07-11",
+          "date": "2026-07-10",
           "venue": "TBD",
           "city": "TBD",
           "opponentDesc": "Opponent TBD",
           "conditional": true,
           "conditionNote": "Venue + opponent confirmed once bracket is drawn"
         },
-        "sf": null,
-        "final": null
+        "sf": {
+          "status": "future",
+          "date": "2026-07-15",
+          "venue": "TBD",
+          "city": "TBD",
+          "opponentDesc": "Opponent TBD",
+          "conditional": true,
+          "conditionNote": "Venue + opponent confirmed once bracket is drawn"
+        },
+        "final": {
+          "status": "future",
+          "date": "2026-07-19",
+          "venue": "TBD",
+          "city": "TBD",
+          "opponentDesc": "Opponent TBD",
+          "conditional": true,
+          "conditionNote": "Venue + opponent confirmed once bracket is drawn"
+        }
       },
       "possibleOpponents": {
-        "r32": [],
-        "r16": []
+        "r32": [
+          {
+            "likelyTeam": "Algeria",
+            "flag": "🇩🇿",
+            "fifaRank": 35,
+            "difficulty": 3,
+            "label": "Moderate",
+            "color": "#F59E0B",
+            "note": "Confirmed opponent",
+            "pct": 100
+          }
+        ],
+        "r16": [
+          {
+            "likelyTeam": "Argentina",
+            "flag": "🇦🇷",
+            "fifaRank": 2,
+            "difficulty": 5,
+            "label": "Danger",
+            "color": "#EF4444",
+            "note": "Predicted (winner of paired match)",
+            "pct": 100
+          }
+        ]
       },
-      "totalGoals": 9
+      "totalGoals": 2
     },
     {
       "id": "brazil",
@@ -1783,15 +1922,15 @@
       "group": "C",
       "confederation": "CONMEBOL",
       "fifaRank": 4,
-      "eliminated": true,
-      "currentStage": "r16",
+      "eliminated": false,
+      "currentStage": "group_stage",
       "groupResults": [
         {
           "matchday": 1,
           "opponent": "Morocco",
           "opponentFlag": "🇲🇦",
-          "result": "D",
-          "score": "1-1",
+          "result": null,
+          "score": null,
           "date": "2026-06-13",
           "venue": "MetLife Stadium, New Jersey",
           "scorers": [
@@ -1814,8 +1953,8 @@
           "matchday": 2,
           "opponent": "Haiti",
           "opponentFlag": "🇭🇹",
-          "result": "W",
-          "score": "3-0",
+          "result": null,
+          "score": null,
           "date": "2026-06-19",
           "venue": "Lincoln Financial Field, Philadelphia",
           "scorers": [
@@ -1835,8 +1974,8 @@
           "matchday": 3,
           "opponent": "Scotland",
           "opponentFlag": "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
-          "result": "W",
-          "score": "3-0",
+          "result": null,
+          "score": null,
           "date": "2026-06-24",
           "venue": "Hard Rock Stadium, Miami",
           "scorers": [
@@ -1873,7 +2012,7 @@
           "city": "New Jersey · Philadelphia · Miami",
           "venue": "Various venues",
           "date": "Jun 13–24",
-          "detail": "7pts after MD3"
+          "detail": "0pts after MD0"
         },
         "r32": {
           "status": "done",
@@ -1891,15 +2030,61 @@
           "opponentDesc": "Norway",
           "conditional": false
         },
-        "qf": null,
-        "sf": null,
-        "final": null
+        "qf": {
+          "status": "future",
+          "date": "2026-07-11",
+          "venue": "TBD",
+          "city": "TBD",
+          "opponentDesc": "Opponent TBD",
+          "conditional": true,
+          "conditionNote": "Venue + opponent confirmed once bracket is drawn"
+        },
+        "sf": {
+          "status": "future",
+          "date": "2026-07-14",
+          "venue": "TBD",
+          "city": "TBD",
+          "opponentDesc": "Opponent TBD",
+          "conditional": true,
+          "conditionNote": "Venue + opponent confirmed once bracket is drawn"
+        },
+        "final": {
+          "status": "future",
+          "date": "2026-07-19",
+          "venue": "TBD",
+          "city": "TBD",
+          "opponentDesc": "Opponent TBD",
+          "conditional": true,
+          "conditionNote": "Venue + opponent confirmed once bracket is drawn"
+        }
       },
       "possibleOpponents": {
-        "r32": [],
-        "r16": []
+        "r32": [
+          {
+            "likelyTeam": "Japan",
+            "flag": "🇯🇵",
+            "fifaRank": 13,
+            "difficulty": 4,
+            "label": "Tough",
+            "color": "#FB923C",
+            "note": "Confirmed opponent",
+            "pct": 100
+          }
+        ],
+        "r16": [
+          {
+            "likelyTeam": "Norway",
+            "flag": "🇳🇴",
+            "fifaRank": 31,
+            "difficulty": 3,
+            "label": "Moderate",
+            "color": "#F59E0B",
+            "note": "Confirmed opponent",
+            "pct": 100
+          }
+        ]
       },
-      "totalGoals": 10
+      "totalGoals": 3
     },
     {
       "id": "morocco",
@@ -1909,14 +2094,14 @@
       "confederation": "CAF",
       "fifaRank": 14,
       "eliminated": true,
-      "currentStage": "qf",
+      "currentStage": "group_stage",
       "groupResults": [
         {
           "matchday": 1,
           "opponent": "Brazil",
           "opponentFlag": "🇧🇷",
-          "result": "D",
-          "score": "1-1",
+          "result": null,
+          "score": null,
           "date": "2026-06-13",
           "venue": "MetLife Stadium, New Jersey",
           "scorers": [
@@ -1939,8 +2124,8 @@
           "matchday": 2,
           "opponent": "Scotland",
           "opponentFlag": "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
-          "result": "W",
-          "score": "1-0",
+          "result": null,
+          "score": null,
           "date": "2026-06-19",
           "venue": "Gillette Stadium, Boston",
           "scorers": [
@@ -1958,8 +2143,8 @@
           "matchday": 3,
           "opponent": "Haiti",
           "opponentFlag": "🇭🇹",
-          "result": "W",
-          "score": "4-2",
+          "result": null,
+          "score": null,
           "date": "2026-06-24",
           "venue": "Mercedes-Benz Stadium, Atlanta",
           "scorers": [
@@ -1997,7 +2182,7 @@
           "city": "New Jersey · Boston · Atlanta",
           "venue": "Various venues",
           "date": "Jun 13–24",
-          "detail": "7pts after MD3"
+          "detail": "0pts after MD0"
         },
         "r32": {
           "status": "done",
@@ -2007,23 +2192,8 @@
           "opponentDesc": "Netherlands",
           "conditional": false
         },
-        "r16": {
-          "status": "done",
-          "match": 95,
-          "date": "2026-07-07",
-          "city": "Atlanta",
-          "venue": "Mercedes-Benz Stadium",
-          "opponentDesc": "Winner Match 87"
-        },
-        "qf": {
-          "status": "future",
-          "date": "2026-07-11",
-          "venue": "TBD",
-          "city": "TBD",
-          "opponentDesc": "Opponent TBD",
-          "conditional": true,
-          "conditionNote": "Venue + opponent confirmed once bracket is drawn"
-        },
+        "r16": null,
+        "qf": null,
         "sf": null,
         "final": null
       },
@@ -2031,7 +2201,7 @@
         "r32": [],
         "r16": []
       },
-      "totalGoals": 7
+      "totalGoals": 1
     },
     {
       "id": "haiti",
@@ -2047,8 +2217,8 @@
           "matchday": 1,
           "opponent": "Scotland",
           "opponentFlag": "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
-          "result": "L",
-          "score": "0-1",
+          "result": null,
+          "score": null,
           "date": "2026-06-13",
           "venue": "Gillette Stadium, Boston",
           "scorers": [
@@ -2067,8 +2237,8 @@
           "matchday": 2,
           "opponent": "Brazil",
           "opponentFlag": "🇧🇷",
-          "result": "L",
-          "score": "0-3",
+          "result": null,
+          "score": null,
           "date": "2026-06-19",
           "venue": "Lincoln Financial Field, Philadelphia",
           "scorers": [
@@ -2097,8 +2267,8 @@
           "matchday": 3,
           "opponent": "Morocco",
           "opponentFlag": "🇲🇦",
-          "result": "L",
-          "score": "2-4",
+          "result": null,
+          "score": null,
           "date": "2026-06-24",
           "venue": "Mercedes-Benz Stadium, Atlanta",
           "scorers": [
@@ -2139,7 +2309,7 @@
           "city": "Boston · Philadelphia · Atlanta",
           "venue": "Various venues",
           "date": "Jun 13–24",
-          "detail": "0pts after MD3"
+          "detail": "0pts after MD0"
         },
         "r32": null,
         "r16": null,
@@ -2151,7 +2321,7 @@
         "r32": [],
         "r16": []
       },
-      "totalGoals": 2
+      "totalGoals": 0
     },
     {
       "id": "scotland",
@@ -2167,8 +2337,8 @@
           "matchday": 1,
           "opponent": "Haiti",
           "opponentFlag": "🇭🇹",
-          "result": "W",
-          "score": "1-0",
+          "result": null,
+          "score": null,
           "date": "2026-06-13",
           "venue": "Gillette Stadium, Boston",
           "scorers": [
@@ -2196,8 +2366,8 @@
           "matchday": 2,
           "opponent": "Morocco",
           "opponentFlag": "🇲🇦",
-          "result": "L",
-          "score": "0-1",
+          "result": null,
+          "score": null,
           "date": "2026-06-19",
           "venue": "Gillette Stadium, Boston",
           "scorers": [
@@ -2215,8 +2385,8 @@
           "matchday": 3,
           "opponent": "Brazil",
           "opponentFlag": "🇧🇷",
-          "result": "L",
-          "score": "0-3",
+          "result": null,
+          "score": null,
           "date": "2026-06-24",
           "venue": "Hard Rock Stadium, Miami",
           "scorers": [
@@ -2246,7 +2416,7 @@
           "city": "Boston · Miami",
           "venue": "Various venues",
           "date": "Jun 13–24",
-          "detail": "3pts after MD3"
+          "detail": "0pts after MD0"
         },
         "r32": null,
         "r16": null,
@@ -2258,7 +2428,7 @@
         "r32": [],
         "r16": []
       },
-      "totalGoals": 1
+      "totalGoals": 0
     },
     {
       "id": "usa",
@@ -2267,15 +2437,15 @@
       "group": "D",
       "confederation": "CONCACAF",
       "fifaRank": 14,
-      "eliminated": true,
-      "currentStage": "r16",
+      "eliminated": false,
+      "currentStage": "group_stage",
       "groupResults": [
         {
           "matchday": 1,
           "opponent": "Paraguay",
           "opponentFlag": "🇵🇾",
-          "result": "W",
-          "score": "4-1",
+          "result": null,
+          "score": null,
           "date": "2026-06-12",
           "venue": "SoFi Stadium, Los Angeles",
           "scorers": [
@@ -2296,8 +2466,8 @@
           "matchday": 2,
           "opponent": "Australia",
           "opponentFlag": "🇦🇺",
-          "result": "W",
-          "score": "2-0",
+          "result": null,
+          "score": null,
           "date": "2026-06-19",
           "venue": "Lumen Field, Seattle",
           "scorers": [
@@ -2326,8 +2496,8 @@
           "matchday": 3,
           "opponent": "Türkiye",
           "opponentFlag": "🇹🇷",
-          "result": "L",
-          "score": "2-3",
+          "result": null,
+          "score": null,
           "date": "2026-06-25",
           "venue": "SoFi Stadium, Los Angeles",
           "scorers": [
@@ -2358,7 +2528,7 @@
           "city": "Los Angeles · Seattle",
           "venue": "Various venues",
           "date": "Jun 12–25",
-          "detail": "6pts after MD3"
+          "detail": "0pts after MD0"
         },
         "r32": {
           "status": "done",
@@ -2376,15 +2546,61 @@
           "opponentDesc": "Belgium",
           "conditional": false
         },
-        "qf": null,
-        "sf": null,
-        "final": null
+        "qf": {
+          "status": "future",
+          "date": "2026-07-10",
+          "venue": "TBD",
+          "city": "TBD",
+          "opponentDesc": "Opponent TBD",
+          "conditional": true,
+          "conditionNote": "Venue + opponent confirmed once bracket is drawn"
+        },
+        "sf": {
+          "status": "future",
+          "date": "2026-07-15",
+          "venue": "TBD",
+          "city": "TBD",
+          "opponentDesc": "Opponent TBD",
+          "conditional": true,
+          "conditionNote": "Venue + opponent confirmed once bracket is drawn"
+        },
+        "final": {
+          "status": "future",
+          "date": "2026-07-19",
+          "venue": "TBD",
+          "city": "TBD",
+          "opponentDesc": "Opponent TBD",
+          "conditional": true,
+          "conditionNote": "Venue + opponent confirmed once bracket is drawn"
+        }
       },
       "possibleOpponents": {
-        "r32": [],
-        "r16": []
+        "r32": [
+          {
+            "likelyTeam": "Bosnia & Herz.",
+            "flag": "🇧🇦",
+            "fifaRank": 71,
+            "difficulty": 1,
+            "label": "Favorable",
+            "color": "#22C55E",
+            "note": "Confirmed opponent",
+            "pct": 100
+          }
+        ],
+        "r16": [
+          {
+            "likelyTeam": "Belgium",
+            "flag": "🇧🇪",
+            "fifaRank": 9,
+            "difficulty": 5,
+            "label": "Danger",
+            "color": "#EF4444",
+            "note": "Confirmed opponent",
+            "pct": 100
+          }
+        ]
       },
-      "totalGoals": 11
+      "totalGoals": 3
     },
     {
       "id": "paraguay",
@@ -2394,14 +2610,14 @@
       "confederation": "CONMEBOL",
       "fifaRank": 39,
       "eliminated": true,
-      "currentStage": "r32",
+      "currentStage": "group_stage",
       "groupResults": [
         {
           "matchday": 1,
           "opponent": "USA",
           "opponentFlag": "🇺🇸",
-          "result": "L",
-          "score": "1-4",
+          "result": null,
+          "score": null,
           "date": "2026-06-12",
           "venue": "SoFi Stadium, Los Angeles",
           "scorers": [
@@ -2439,8 +2655,8 @@
           "matchday": 2,
           "opponent": "Türkiye",
           "opponentFlag": "🇹🇷",
-          "result": "W",
-          "score": "1-0",
+          "result": null,
+          "score": null,
           "date": "2026-06-19",
           "venue": "Levi's Stadium, San Francisco",
           "scorers": [
@@ -2463,8 +2679,8 @@
           "matchday": 3,
           "opponent": "Australia",
           "opponentFlag": "🇦🇺",
-          "result": "D",
-          "score": "0-0",
+          "result": null,
+          "score": null,
           "date": "2026-06-25",
           "venue": "Levi's Stadium, San Francisco",
           "scorers": [
@@ -2500,7 +2716,7 @@
           "city": "Los Angeles · San Francisco",
           "venue": "Various venues",
           "date": "Jun 12–25",
-          "detail": "4pts after MD3"
+          "detail": "0pts after MD0"
         },
         "r32": {
           "status": "done",
@@ -2519,7 +2735,7 @@
         "r32": [],
         "r16": []
       },
-      "totalGoals": 3
+      "totalGoals": 1
     },
     {
       "id": "australia",
@@ -2529,14 +2745,14 @@
       "confederation": "AFC",
       "fifaRank": 26,
       "eliminated": false,
-      "currentStage": "r16",
+      "currentStage": "group_stage",
       "groupResults": [
         {
           "matchday": 1,
           "opponent": "Türkiye",
           "opponentFlag": "🇹🇷",
-          "result": "W",
-          "score": "2-0",
+          "result": null,
+          "score": null,
           "date": "2026-06-13",
           "venue": "BC Place, Vancouver",
           "scorers": [
@@ -2575,8 +2791,8 @@
           "matchday": 2,
           "opponent": "USA",
           "opponentFlag": "🇺🇸",
-          "result": "L",
-          "score": "0-2",
+          "result": null,
+          "score": null,
           "date": "2026-06-19",
           "venue": "Lumen Field, Seattle",
           "scorers": [
@@ -2610,8 +2826,8 @@
           "matchday": 3,
           "opponent": "Paraguay",
           "opponentFlag": "🇵🇾",
-          "result": "D",
-          "score": "0-0",
+          "result": null,
+          "score": null,
           "date": "2026-06-25",
           "venue": "Levi's Stadium, San Francisco",
           "scorers": [
@@ -2642,7 +2858,7 @@
           "city": "Vancouver · Seattle · San Francisco",
           "venue": "Various venues",
           "date": "Jun 13–25",
-          "detail": "4pts after MD3"
+          "detail": "0pts after MD0"
         },
         "r32": {
           "status": "done",
@@ -2715,7 +2931,7 @@
           }
         ]
       },
-      "totalGoals": 3
+      "totalGoals": 1
     },
     {
       "id": "turkey",
@@ -2731,8 +2947,8 @@
           "matchday": 1,
           "opponent": "Australia",
           "opponentFlag": "🇦🇺",
-          "result": "L",
-          "score": "0-2",
+          "result": null,
+          "score": null,
           "date": "2026-06-13",
           "venue": "BC Place, Vancouver",
           "scorers": [
@@ -2752,8 +2968,8 @@
           "matchday": 2,
           "opponent": "Paraguay",
           "opponentFlag": "🇵🇾",
-          "result": "L",
-          "score": "0-1",
+          "result": null,
+          "score": null,
           "date": "2026-06-19",
           "venue": "Levi's Stadium, San Francisco",
           "scorers": [
@@ -2773,8 +2989,8 @@
           "matchday": 3,
           "opponent": "USA",
           "opponentFlag": "🇺🇸",
-          "result": "W",
-          "score": "3-2",
+          "result": null,
+          "score": null,
           "date": "2026-06-25",
           "venue": "SoFi Stadium, Los Angeles",
           "scorers": [
@@ -2811,7 +3027,7 @@
           "city": "Vancouver · San Francisco · Los Angeles",
           "venue": "Various venues",
           "date": "Jun 13–25",
-          "detail": "3pts after MD3"
+          "detail": "0pts after MD0"
         },
         "r32": null,
         "r16": null,
@@ -2823,7 +3039,7 @@
         "r32": [],
         "r16": []
       },
-      "totalGoals": 3
+      "totalGoals": 0
     },
     {
       "id": "germany",
@@ -2833,14 +3049,14 @@
       "confederation": "UEFA",
       "fifaRank": 9,
       "eliminated": false,
-      "currentStage": "r16",
+      "currentStage": "group_stage",
       "groupResults": [
         {
           "matchday": 1,
           "opponent": "Curaçao",
           "opponentFlag": "🇨🇼",
-          "result": "W",
-          "score": "7-1",
+          "result": null,
+          "score": null,
           "date": "2026-06-14",
           "venue": "NRG Stadium, Houston",
           "scorers": [
@@ -2874,8 +3090,8 @@
           "matchday": 2,
           "opponent": "Ivory Coast",
           "opponentFlag": "🇨🇮",
-          "result": "W",
-          "score": "2-1",
+          "result": null,
+          "score": null,
           "date": "2026-06-20",
           "venue": "Mercedes-Benz Stadium, Atlanta",
           "scorers": [
@@ -2904,8 +3120,8 @@
           "matchday": 3,
           "opponent": "Ecuador",
           "opponentFlag": "🇪🇨",
-          "result": "L",
-          "score": "1-2",
+          "result": null,
+          "score": null,
           "date": "2026-06-25",
           "venue": "MetLife Stadium, New Jersey",
           "scorers": [
@@ -2935,7 +3151,7 @@
           "city": "Houston · Atlanta · New Jersey",
           "venue": "Various venues",
           "date": "Jun 14–25",
-          "detail": "6pts after MD3"
+          "detail": "0pts after MD0"
         },
         "r32": {
           "status": "done",
@@ -3008,7 +3224,7 @@
           }
         ]
       },
-      "totalGoals": 11
+      "totalGoals": 1
     },
     {
       "id": "curacao",
@@ -3024,8 +3240,8 @@
           "matchday": 1,
           "opponent": "Germany",
           "opponentFlag": "🇩🇪",
-          "result": "L",
-          "score": "1-7",
+          "result": null,
+          "score": null,
           "date": "2026-06-14",
           "venue": "NRG Stadium, Houston",
           "scorers": [
@@ -3073,8 +3289,8 @@
           "matchday": 2,
           "opponent": "Ecuador",
           "opponentFlag": "🇪🇨",
-          "result": "D",
-          "score": "0-0",
+          "result": null,
+          "score": null,
           "date": "2026-06-20",
           "venue": "MetLife Stadium, New Jersey",
           "scorers": [
@@ -3112,8 +3328,8 @@
           "matchday": 3,
           "opponent": "Ivory Coast",
           "opponentFlag": "🇨🇮",
-          "result": "L",
-          "score": "0-2",
+          "result": null,
+          "score": null,
           "date": "2026-06-25",
           "venue": "Lincoln Financial Field, Philadelphia",
           "scorers": [
@@ -3148,7 +3364,7 @@
           "city": "Houston · New Jersey · Philadelphia",
           "venue": "Various venues",
           "date": "Jun 14–25",
-          "detail": "1pt after MD3"
+          "detail": "0pts after MD0"
         },
         "r32": null,
         "r16": null,
@@ -3160,7 +3376,7 @@
         "r32": [],
         "r16": []
       },
-      "totalGoals": 1
+      "totalGoals": 0
     },
     {
       "id": "ivorycoast",
@@ -3169,15 +3385,15 @@
       "group": "E",
       "confederation": "CAF",
       "fifaRank": 42,
-      "eliminated": true,
-      "currentStage": "r32",
+      "eliminated": false,
+      "currentStage": "group_stage",
       "groupResults": [
         {
           "matchday": 1,
           "opponent": "Ecuador",
           "opponentFlag": "🇪🇨",
-          "result": "W",
-          "score": "1-0",
+          "result": null,
+          "score": null,
           "date": "2026-06-14",
           "venue": "Lincoln Financial Field, Philadelphia",
           "scorers": [
@@ -3205,8 +3421,8 @@
           "matchday": 2,
           "opponent": "Germany",
           "opponentFlag": "🇩🇪",
-          "result": "L",
-          "score": "1-2",
+          "result": null,
+          "score": null,
           "date": "2026-06-20",
           "venue": "Mercedes-Benz Stadium, Atlanta",
           "scorers": [
@@ -3239,8 +3455,8 @@
           "matchday": 3,
           "opponent": "Curaçao",
           "opponentFlag": "🇨🇼",
-          "result": "W",
-          "score": "2-0",
+          "result": null,
+          "score": null,
           "date": "2026-06-25",
           "venue": "Lincoln Financial Field, Philadelphia",
           "scorers": [
@@ -3271,7 +3487,7 @@
           "city": "Philadelphia · Atlanta",
           "venue": "Various venues",
           "date": "Jun 14–25",
-          "detail": "6pts after MD3"
+          "detail": "0pts after MD0"
         },
         "r32": {
           "status": "done",
@@ -3281,16 +3497,59 @@
           "opponentDesc": "Norway",
           "conditional": false
         },
-        "r16": null,
-        "qf": null,
-        "sf": null,
-        "final": null
+        "r16": {
+          "status": "future",
+          "date": "2026-07-07",
+          "venue": "TBD",
+          "city": "TBD",
+          "opponentDesc": "Opponent TBD",
+          "conditional": true,
+          "conditionNote": "Venue + opponent confirmed once bracket is drawn"
+        },
+        "qf": {
+          "status": "future",
+          "date": "2026-07-11",
+          "venue": "TBD",
+          "city": "TBD",
+          "opponentDesc": "Opponent TBD",
+          "conditional": true,
+          "conditionNote": "Venue + opponent confirmed once bracket is drawn"
+        },
+        "sf": {
+          "status": "future",
+          "date": "2026-07-14",
+          "venue": "TBD",
+          "city": "TBD",
+          "opponentDesc": "Opponent TBD",
+          "conditional": true,
+          "conditionNote": "Venue + opponent confirmed once bracket is drawn"
+        },
+        "final": {
+          "status": "future",
+          "date": "2026-07-19",
+          "venue": "TBD",
+          "city": "TBD",
+          "opponentDesc": "Opponent TBD",
+          "conditional": true,
+          "conditionNote": "Venue + opponent confirmed once bracket is drawn"
+        }
       },
       "possibleOpponents": {
-        "r32": [],
+        "r32": [
+          {
+            "likelyTeam": "Norway",
+            "flag": "🇳🇴",
+            "fifaRank": 31,
+            "difficulty": 3,
+            "label": "Moderate",
+            "color": "#F59E0B",
+            "note": "Confirmed opponent",
+            "pct": 100
+          }
+        ],
         "r16": []
       },
-      "totalGoals": 5
+      "totalGoals": 1
     },
     {
       "id": "ecuador",
@@ -3299,15 +3558,15 @@
       "group": "E",
       "confederation": "CONMEBOL",
       "fifaRank": 23,
-      "eliminated": true,
-      "currentStage": "r32",
+      "eliminated": false,
+      "currentStage": "group_stage",
       "groupResults": [
         {
           "matchday": 1,
           "opponent": "Ivory Coast",
           "opponentFlag": "🇨🇮",
-          "result": "L",
-          "score": "0-1",
+          "result": null,
+          "score": null,
           "date": "2026-06-14",
           "venue": "Lincoln Financial Field, Philadelphia",
           "scorers": [
@@ -3326,8 +3585,8 @@
           "matchday": 2,
           "opponent": "Curaçao",
           "opponentFlag": "🇨🇼",
-          "result": "D",
-          "score": "0-0",
+          "result": null,
+          "score": null,
           "date": "2026-06-20",
           "venue": "MetLife Stadium, New Jersey",
           "scorers": [
@@ -3346,8 +3605,8 @@
           "matchday": 3,
           "opponent": "Germany",
           "opponentFlag": "🇩🇪",
-          "result": "W",
-          "score": "2-1",
+          "result": null,
+          "score": null,
           "date": "2026-06-25",
           "venue": "MetLife Stadium, New Jersey",
           "scorers": [
@@ -3388,7 +3647,7 @@
           "city": "Philadelphia · New Jersey",
           "venue": "Various venues",
           "date": "Jun 14–25",
-          "detail": "4pts after MD3"
+          "detail": "0pts after MD0"
         },
         "r32": {
           "status": "done",
@@ -3398,16 +3657,59 @@
           "opponentDesc": "Mexico",
           "conditional": false
         },
-        "r16": null,
-        "qf": null,
-        "sf": null,
-        "final": null
+        "r16": {
+          "status": "future",
+          "date": "2026-07-07",
+          "venue": "TBD",
+          "city": "TBD",
+          "opponentDesc": "Opponent TBD",
+          "conditional": true,
+          "conditionNote": "Venue + opponent confirmed once bracket is drawn"
+        },
+        "qf": {
+          "status": "future",
+          "date": "2026-07-11",
+          "venue": "TBD",
+          "city": "TBD",
+          "opponentDesc": "Opponent TBD",
+          "conditional": true,
+          "conditionNote": "Venue + opponent confirmed once bracket is drawn"
+        },
+        "sf": {
+          "status": "future",
+          "date": "2026-07-14",
+          "venue": "TBD",
+          "city": "TBD",
+          "opponentDesc": "Opponent TBD",
+          "conditional": true,
+          "conditionNote": "Venue + opponent confirmed once bracket is drawn"
+        },
+        "final": {
+          "status": "future",
+          "date": "2026-07-19",
+          "venue": "TBD",
+          "city": "TBD",
+          "opponentDesc": "Opponent TBD",
+          "conditional": true,
+          "conditionNote": "Venue + opponent confirmed once bracket is drawn"
+        }
       },
       "possibleOpponents": {
-        "r32": [],
+        "r32": [
+          {
+            "likelyTeam": "Mexico",
+            "flag": "🇲🇽",
+            "fifaRank": 15,
+            "difficulty": 4,
+            "label": "Tough",
+            "color": "#FB923C",
+            "note": "Confirmed opponent",
+            "pct": 100
+          }
+        ],
         "r16": []
       },
-      "totalGoals": 2
+      "totalGoals": 0
     },
     {
       "id": "netherlands",
@@ -3417,14 +3719,14 @@
       "confederation": "UEFA",
       "fifaRank": 7,
       "eliminated": false,
-      "currentStage": "r16",
+      "currentStage": "group_stage",
       "groupResults": [
         {
           "matchday": 1,
           "opponent": "Japan",
           "opponentFlag": "🇯🇵",
-          "result": "D",
-          "score": "2-2",
+          "result": null,
+          "score": null,
           "date": "2026-06-14",
           "venue": "Arrowhead Stadium, Kansas City",
           "scorers": [
@@ -3453,8 +3755,8 @@
           "matchday": 2,
           "opponent": "Sweden",
           "opponentFlag": "🇸🇪",
-          "result": "W",
-          "score": "5-1",
+          "result": null,
+          "score": null,
           "date": "2026-06-20",
           "venue": "Arrowhead Stadium, Kansas City",
           "scorers": [
@@ -3486,8 +3788,8 @@
           "matchday": 3,
           "opponent": "Tunisia",
           "opponentFlag": "🇹🇳",
-          "result": "W",
-          "score": "3-1",
+          "result": null,
+          "score": null,
           "date": "2026-06-25",
           "venue": "Arrowhead Stadium, Kansas City",
           "scorers": [
@@ -3529,7 +3831,7 @@
           "city": "Kansas City",
           "venue": "Various venues",
           "date": "Jun 14–25",
-          "detail": "7pts after MD3"
+          "detail": "0pts after MD0"
         },
         "r32": {
           "status": "done",
@@ -3602,7 +3904,7 @@
           }
         ]
       },
-      "totalGoals": 11
+      "totalGoals": 1
     },
     {
       "id": "japan",
@@ -3612,14 +3914,14 @@
       "confederation": "AFC",
       "fifaRank": 13,
       "eliminated": true,
-      "currentStage": "r32",
+      "currentStage": "group_stage",
       "groupResults": [
         {
           "matchday": 1,
           "opponent": "Netherlands",
           "opponentFlag": "🇳🇱",
-          "result": "D",
-          "score": "2-2",
+          "result": null,
+          "score": null,
           "date": "2026-06-14",
           "venue": "Arrowhead Stadium, Kansas City",
           "scorers": [
@@ -3653,8 +3955,8 @@
           "matchday": 2,
           "opponent": "Tunisia",
           "opponentFlag": "🇹🇳",
-          "result": "W",
-          "score": "4-0",
+          "result": null,
+          "score": null,
           "date": "2026-06-20",
           "venue": "Arrowhead Stadium, Kansas City",
           "scorers": [
@@ -3690,8 +3992,8 @@
           "matchday": 3,
           "opponent": "Sweden",
           "opponentFlag": "🇸🇪",
-          "result": "D",
-          "score": "1-1",
+          "result": null,
+          "score": null,
           "date": "2026-06-25",
           "venue": "AT&T Stadium, Dallas",
           "scorers": [
@@ -3721,7 +4023,7 @@
           "city": "Kansas City · Dallas",
           "venue": "Various venues",
           "date": "Jun 14–25",
-          "detail": "5pts after MD3"
+          "detail": "0pts after MD0"
         },
         "r32": {
           "status": "done",
@@ -3740,7 +4042,7 @@
         "r32": [],
         "r16": []
       },
-      "totalGoals": 8
+      "totalGoals": 1
     },
     {
       "id": "sweden",
@@ -3749,15 +4051,15 @@
       "group": "F",
       "confederation": "UEFA",
       "fifaRank": 29,
-      "eliminated": true,
-      "currentStage": "r32",
+      "eliminated": false,
+      "currentStage": "group_stage",
       "groupResults": [
         {
           "matchday": 1,
           "opponent": "Tunisia",
           "opponentFlag": "🇹🇳",
-          "result": "W",
-          "score": "5-1",
+          "result": null,
+          "score": null,
           "date": "2026-06-14",
           "venue": "Arrowhead Stadium, Kansas City",
           "scorers": [
@@ -3799,8 +4101,8 @@
           "matchday": 2,
           "opponent": "Netherlands",
           "opponentFlag": "🇳🇱",
-          "result": "L",
-          "score": "1-5",
+          "result": null,
+          "score": null,
           "date": "2026-06-20",
           "venue": "Arrowhead Stadium, Kansas City",
           "scorers": [
@@ -3828,8 +4130,8 @@
           "matchday": 3,
           "opponent": "Japan",
           "opponentFlag": "🇯🇵",
-          "result": "D",
-          "score": "1-1",
+          "result": null,
+          "score": null,
           "date": "2026-06-25",
           "venue": "AT&T Stadium, Dallas",
           "scorers": [
@@ -3864,7 +4166,7 @@
           "city": "Kansas City · Dallas",
           "venue": "Various venues",
           "date": "Jun 14–25",
-          "detail": "4pts after MD3"
+          "detail": "0pts after MD0"
         },
         "r32": {
           "status": "done",
@@ -3874,16 +4176,70 @@
           "opponentDesc": "France",
           "conditional": false
         },
-        "r16": null,
-        "qf": null,
-        "sf": null,
-        "final": null
+        "r16": {
+          "status": "future",
+          "date": "2026-07-07",
+          "venue": "TBD",
+          "city": "TBD",
+          "opponentDesc": "Portugal",
+          "conditional": true,
+          "conditionNote": "Predicted from bracket pairing — venue confirmed once previous match settles"
+        },
+        "qf": {
+          "status": "future",
+          "date": "2026-07-11",
+          "venue": "TBD",
+          "city": "TBD",
+          "opponentDesc": "Opponent TBD",
+          "conditional": true,
+          "conditionNote": "Venue + opponent confirmed once bracket is drawn"
+        },
+        "sf": {
+          "status": "future",
+          "date": "2026-07-14",
+          "venue": "TBD",
+          "city": "TBD",
+          "opponentDesc": "Opponent TBD",
+          "conditional": true,
+          "conditionNote": "Venue + opponent confirmed once bracket is drawn"
+        },
+        "final": {
+          "status": "future",
+          "date": "2026-07-19",
+          "venue": "TBD",
+          "city": "TBD",
+          "opponentDesc": "Opponent TBD",
+          "conditional": true,
+          "conditionNote": "Venue + opponent confirmed once bracket is drawn"
+        }
       },
       "possibleOpponents": {
-        "r32": [],
-        "r16": []
+        "r32": [
+          {
+            "likelyTeam": "France",
+            "flag": "🇫🇷",
+            "fifaRank": 3,
+            "difficulty": 5,
+            "label": "Danger",
+            "color": "#EF4444",
+            "note": "Confirmed opponent",
+            "pct": 100
+          }
+        ],
+        "r16": [
+          {
+            "likelyTeam": "Portugal",
+            "flag": "🇵🇹",
+            "fifaRank": 6,
+            "difficulty": 5,
+            "label": "Danger",
+            "color": "#EF4444",
+            "note": "Predicted (winner of paired match)",
+            "pct": 100
+          }
+        ]
       },
-      "totalGoals": 7
+      "totalGoals": 0
     },
     {
       "id": "tunisia",
@@ -3899,8 +4255,8 @@
           "matchday": 1,
           "opponent": "Sweden",
           "opponentFlag": "🇸🇪",
-          "result": "L",
-          "score": "1-5",
+          "result": null,
+          "score": null,
           "date": "2026-06-14",
           "venue": "Arrowhead Stadium, Kansas City",
           "scorers": [
@@ -3918,8 +4274,8 @@
           "matchday": 2,
           "opponent": "Japan",
           "opponentFlag": "🇯🇵",
-          "result": "L",
-          "score": "0-4",
+          "result": null,
+          "score": null,
           "date": "2026-06-20",
           "venue": "Arrowhead Stadium, Kansas City",
           "scorers": [
@@ -3938,8 +4294,8 @@
           "matchday": 3,
           "opponent": "Netherlands",
           "opponentFlag": "🇳🇱",
-          "result": "L",
-          "score": "1-3",
+          "result": null,
+          "score": null,
           "date": "2026-06-25",
           "venue": "Arrowhead Stadium, Kansas City",
           "scorers": [
@@ -3969,7 +4325,7 @@
           "city": "Kansas City",
           "venue": "Various venues",
           "date": "Jun 14–25",
-          "detail": "0pts after MD3"
+          "detail": "0pts after MD0"
         },
         "r32": null,
         "r16": null,
@@ -3981,7 +4337,7 @@
         "r32": [],
         "r16": []
       },
-      "totalGoals": 2
+      "totalGoals": 0
     },
     {
       "id": "belgium",
@@ -3990,15 +4346,15 @@
       "group": "G",
       "confederation": "UEFA",
       "fifaRank": 9,
-      "eliminated": true,
-      "currentStage": "qf",
+      "eliminated": false,
+      "currentStage": "group_stage",
       "groupResults": [
         {
           "matchday": 1,
           "opponent": "Egypt",
           "opponentFlag": "🇪🇬",
-          "result": "D",
-          "score": "1-1",
+          "result": null,
+          "score": null,
           "date": "2026-06-15",
           "venue": "Lumen Field, Seattle",
           "scorers": [
@@ -4021,8 +4377,8 @@
           "matchday": 2,
           "opponent": "Iran",
           "opponentFlag": "🇮🇷",
-          "result": "D",
-          "score": "0-0",
+          "result": null,
+          "score": null,
           "date": "2026-06-21",
           "venue": "SoFi Stadium, Los Angeles",
           "scorers": [
@@ -4050,8 +4406,8 @@
           "matchday": 3,
           "opponent": "New Zealand",
           "opponentFlag": "🇳🇿",
-          "result": "W",
-          "score": "5-1",
+          "result": null,
+          "score": null,
           "date": "2026-06-26",
           "venue": "BC Place, Vancouver",
           "scorers": [
@@ -4100,7 +4456,7 @@
           "city": "Seattle · Los Angeles · Vancouver",
           "venue": "Various venues",
           "date": "Jun 15–26",
-          "detail": "5pts after MD3"
+          "detail": "0pts after MD0"
         },
         "r32": {
           "status": "done",
@@ -4127,14 +4483,52 @@
           "conditional": true,
           "conditionNote": "Venue + opponent confirmed once bracket is drawn"
         },
-        "sf": null,
-        "final": null
+        "sf": {
+          "status": "future",
+          "date": "2026-07-15",
+          "venue": "TBD",
+          "city": "TBD",
+          "opponentDesc": "Opponent TBD",
+          "conditional": true,
+          "conditionNote": "Venue + opponent confirmed once bracket is drawn"
+        },
+        "final": {
+          "status": "future",
+          "date": "2026-07-19",
+          "venue": "TBD",
+          "city": "TBD",
+          "opponentDesc": "Opponent TBD",
+          "conditional": true,
+          "conditionNote": "Venue + opponent confirmed once bracket is drawn"
+        }
       },
       "possibleOpponents": {
-        "r32": [],
-        "r16": []
+        "r32": [
+          {
+            "likelyTeam": "Senegal",
+            "flag": "🇸🇳",
+            "fifaRank": 14,
+            "difficulty": 4,
+            "label": "Tough",
+            "color": "#FB923C",
+            "note": "Confirmed opponent",
+            "pct": 100
+          }
+        ],
+        "r16": [
+          {
+            "likelyTeam": "USA",
+            "flag": "🇺🇸",
+            "fifaRank": 14,
+            "difficulty": 4,
+            "label": "Tough",
+            "color": "#FB923C",
+            "note": "Confirmed opponent",
+            "pct": 100
+          }
+        ]
       },
-      "totalGoals": 13
+      "totalGoals": 7
     },
     {
       "id": "egypt",
@@ -4144,14 +4538,14 @@
       "confederation": "CAF",
       "fifaRank": 34,
       "eliminated": true,
-      "currentStage": "r16",
+      "currentStage": "group_stage",
       "groupResults": [
         {
           "matchday": 1,
           "opponent": "Belgium",
           "opponentFlag": "🇧🇪",
-          "result": "D",
-          "score": "1-1",
+          "result": null,
+          "score": null,
           "date": "2026-06-15",
           "venue": "Lumen Field, Seattle",
           "scorers": [
@@ -4174,8 +4568,8 @@
           "matchday": 2,
           "opponent": "New Zealand",
           "opponentFlag": "🇳🇿",
-          "result": "W",
-          "score": "3-1",
+          "result": null,
+          "score": null,
           "date": "2026-06-21",
           "venue": "BC Place, Vancouver",
           "scorers": [
@@ -4195,8 +4589,8 @@
           "matchday": 3,
           "opponent": "Iran",
           "opponentFlag": "🇮🇷",
-          "result": "D",
-          "score": "1-1",
+          "result": null,
+          "score": null,
           "date": "2026-06-26",
           "venue": "Lumen Field, Seattle",
           "scorers": [
@@ -4236,7 +4630,7 @@
           "city": "Seattle · Vancouver",
           "venue": "Various venues",
           "date": "Jun 15–26",
-          "detail": "5pts after MD3"
+          "detail": "0pts after MD0"
         },
         "r32": {
           "status": "done",
@@ -4246,15 +4640,7 @@
           "opponentDesc": "Australia",
           "conditional": false
         },
-        "r16": {
-          "status": "future",
-          "date": "2026-07-07",
-          "venue": "TBD",
-          "city": "TBD",
-          "opponentDesc": "Colombia",
-          "conditional": true,
-          "conditionNote": "Predicted from bracket pairing — venue confirmed once previous match settles"
-        },
+        "r16": null,
         "qf": null,
         "sf": null,
         "final": null
@@ -4263,7 +4649,7 @@
         "r32": [],
         "r16": []
       },
-      "totalGoals": 6
+      "totalGoals": 1
     },
     {
       "id": "iran",
@@ -4279,8 +4665,8 @@
           "matchday": 1,
           "opponent": "New Zealand",
           "opponentFlag": "🇳🇿",
-          "result": "D",
-          "score": "2-2",
+          "result": null,
+          "score": null,
           "date": "2026-06-15",
           "venue": "SoFi Stadium, Los Angeles",
           "scorers": [
@@ -4299,8 +4685,8 @@
           "matchday": 2,
           "opponent": "Belgium",
           "opponentFlag": "🇧🇪",
-          "result": "D",
-          "score": "0-0",
+          "result": null,
+          "score": null,
           "date": "2026-06-21",
           "venue": "SoFi Stadium, Los Angeles",
           "scorers": [
@@ -4320,8 +4706,8 @@
           "matchday": 3,
           "opponent": "Egypt",
           "opponentFlag": "🇪🇬",
-          "result": "D",
-          "score": "1-1",
+          "result": null,
+          "score": null,
           "date": "2026-06-26",
           "venue": "Lumen Field, Seattle",
           "scorers": [
@@ -4366,7 +4752,7 @@
           "city": "Los Angeles · Seattle",
           "venue": "Various venues",
           "date": "Jun 15–26",
-          "detail": "3pts after MD3"
+          "detail": "0pts after MD0"
         },
         "r32": null,
         "r16": null,
@@ -4378,7 +4764,7 @@
         "r32": [],
         "r16": []
       },
-      "totalGoals": 3
+      "totalGoals": 0
     },
     {
       "id": "newzealand",
@@ -4394,8 +4780,8 @@
           "matchday": 1,
           "opponent": "Iran",
           "opponentFlag": "🇮🇷",
-          "result": "D",
-          "score": "2-2",
+          "result": null,
+          "score": null,
           "date": "2026-06-15",
           "venue": "SoFi Stadium, Los Angeles",
           "scorers": [
@@ -4429,8 +4815,8 @@
           "matchday": 2,
           "opponent": "Egypt",
           "opponentFlag": "🇪🇬",
-          "result": "L",
-          "score": "1-3",
+          "result": null,
+          "score": null,
           "date": "2026-06-21",
           "venue": "BC Place, Vancouver",
           "scorers": [
@@ -4453,8 +4839,8 @@
           "matchday": 3,
           "opponent": "Belgium",
           "opponentFlag": "🇧🇪",
-          "result": "L",
-          "score": "1-5",
+          "result": null,
+          "score": null,
           "date": "2026-06-26",
           "venue": "BC Place, Vancouver",
           "scorers": [
@@ -4489,7 +4875,7 @@
           "city": "Los Angeles · Vancouver",
           "venue": "Various venues",
           "date": "Jun 15–26",
-          "detail": "1pt after MD3"
+          "detail": "0pts after MD0"
         },
         "r32": null,
         "r16": null,
@@ -4501,7 +4887,7 @@
         "r32": [],
         "r16": []
       },
-      "totalGoals": 4
+      "totalGoals": 0
     },
     {
       "id": "spain",
@@ -4511,14 +4897,14 @@
       "confederation": "UEFA",
       "fifaRank": 1,
       "eliminated": false,
-      "currentStage": "final",
+      "currentStage": "group_stage",
       "groupResults": [
         {
           "matchday": 1,
           "opponent": "Cape Verde",
           "opponentFlag": "🇨🇻",
-          "result": "D",
-          "score": "0-0",
+          "result": null,
+          "score": null,
           "date": "2026-06-15",
           "venue": "Mercedes-Benz Stadium, Atlanta",
           "scorers": [
@@ -4540,8 +4926,8 @@
           "matchday": 2,
           "opponent": "Saudi Arabia",
           "opponentFlag": "🇸🇦",
-          "result": "W",
-          "score": "4-0",
+          "result": null,
+          "score": null,
           "date": "2026-06-21",
           "venue": "Mercedes-Benz Stadium, Atlanta",
           "scorers": [
@@ -4567,8 +4953,8 @@
           "matchday": 3,
           "opponent": "Uruguay",
           "opponentFlag": "🇺🇾",
-          "result": "W",
-          "score": "1-0",
+          "result": null,
+          "score": null,
           "date": "2026-06-26",
           "venue": "Estadio Guadalajara, Guadalajara",
           "scorers": [
@@ -4598,7 +4984,7 @@
           "city": "Atlanta · Guadalajara",
           "venue": "Various venues",
           "date": "Jun 15–26",
-          "detail": "7pts after MD3"
+          "detail": "0pts after MD0"
         },
         "r32": {
           "status": "done",
@@ -4609,28 +4995,31 @@
           "conditional": false
         },
         "r16": {
-          "status": "done",
-          "match": 96,
+          "status": "future",
           "date": "2026-07-07",
-          "city": "Vancouver",
-          "venue": "BC Place",
-          "opponentDesc": "Winner Match 85"
+          "venue": "TBD",
+          "city": "TBD",
+          "opponentDesc": "Morocco",
+          "conditional": true,
+          "conditionNote": "Predicted from bracket pairing — venue confirmed once previous match settles"
         },
         "qf": {
-          "status": "done",
-          "match": 100,
+          "status": "future",
           "date": "2026-07-11",
-          "city": "Kansas City",
-          "venue": "Arrowhead Stadium",
-          "opponentDesc": "Winner Match 96"
+          "venue": "TBD",
+          "city": "TBD",
+          "opponentDesc": "Opponent TBD",
+          "conditional": true,
+          "conditionNote": "Venue + opponent confirmed once bracket is drawn"
         },
         "sf": {
-          "status": "done",
-          "match": 101,
+          "status": "future",
           "date": "2026-07-14",
-          "city": "Dallas",
-          "venue": "AT&T Stadium",
-          "opponentDesc": "Winner QF bracket"
+          "venue": "TBD",
+          "city": "TBD",
+          "opponentDesc": "Opponent TBD",
+          "conditional": true,
+          "conditionNote": "Venue + opponent confirmed once bracket is drawn"
         },
         "final": {
           "status": "future",
@@ -4668,7 +5057,7 @@
           }
         ]
       },
-      "totalGoals": 8
+      "totalGoals": 3
     },
     {
       "id": "capeverde",
@@ -4678,14 +5067,14 @@
       "confederation": "CAF",
       "fifaRank": 62,
       "eliminated": true,
-      "currentStage": "r32",
+      "currentStage": "group_stage",
       "groupResults": [
         {
           "matchday": 1,
           "opponent": "Spain",
           "opponentFlag": "🇪🇸",
-          "result": "D",
-          "score": "0-0",
+          "result": null,
+          "score": null,
           "date": "2026-06-15",
           "venue": "Mercedes-Benz Stadium, Atlanta",
           "scorers": [
@@ -4704,8 +5093,8 @@
           "matchday": 2,
           "opponent": "Uruguay",
           "opponentFlag": "🇺🇾",
-          "result": "D",
-          "score": "2-2",
+          "result": null,
+          "score": null,
           "date": "2026-06-21",
           "venue": "Hard Rock Stadium, Miami",
           "scorers": [
@@ -4729,8 +5118,8 @@
           "matchday": 3,
           "opponent": "Saudi Arabia",
           "opponentFlag": "🇸🇦",
-          "result": "D",
-          "score": "0-0",
+          "result": null,
+          "score": null,
           "date": "2026-06-26",
           "venue": "NRG Stadium, Houston",
           "scorers": [
@@ -4761,7 +5150,7 @@
           "city": "Atlanta · Miami · Houston",
           "venue": "Various venues",
           "date": "Jun 15–26",
-          "detail": "3pts after MD3"
+          "detail": "0pts after MD0"
         },
         "r32": {
           "status": "done",
@@ -4780,7 +5169,7 @@
         "r32": [],
         "r16": []
       },
-      "totalGoals": 4
+      "totalGoals": 2
     },
     {
       "id": "saudiarabia",
@@ -4796,8 +5185,8 @@
           "matchday": 1,
           "opponent": "Uruguay",
           "opponentFlag": "🇺🇾",
-          "result": "D",
-          "score": "1-1",
+          "result": null,
+          "score": null,
           "date": "2026-06-15",
           "venue": "Hard Rock Stadium, Miami",
           "scorers": [
@@ -4815,8 +5204,8 @@
           "matchday": 2,
           "opponent": "Spain",
           "opponentFlag": "🇪🇸",
-          "result": "L",
-          "score": "0-4",
+          "result": null,
+          "score": null,
           "date": "2026-06-21",
           "venue": "Mercedes-Benz Stadium, Atlanta",
           "scorers": [
@@ -4839,8 +5228,8 @@
           "matchday": 3,
           "opponent": "Cape Verde",
           "opponentFlag": "🇨🇻",
-          "result": "D",
-          "score": "0-0",
+          "result": null,
+          "score": null,
           "date": "2026-06-26",
           "venue": "NRG Stadium, Houston",
           "scorers": [
@@ -4880,7 +5269,7 @@
           "city": "Miami · Atlanta · Houston",
           "venue": "Various venues",
           "date": "Jun 15–26",
-          "detail": "2pts after MD3"
+          "detail": "0pts after MD0"
         },
         "r32": null,
         "r16": null,
@@ -4892,7 +5281,7 @@
         "r32": [],
         "r16": []
       },
-      "totalGoals": 1
+      "totalGoals": 0
     },
     {
       "id": "uruguay",
@@ -4908,8 +5297,8 @@
           "matchday": 1,
           "opponent": "Saudi Arabia",
           "opponentFlag": "🇸🇦",
-          "result": "D",
-          "score": "1-1",
+          "result": null,
+          "score": null,
           "date": "2026-06-15",
           "venue": "Hard Rock Stadium, Miami",
           "scorers": [
@@ -4952,8 +5341,8 @@
           "matchday": 2,
           "opponent": "Cape Verde",
           "opponentFlag": "🇨🇻",
-          "result": "D",
-          "score": "2-2",
+          "result": null,
+          "score": null,
           "date": "2026-06-21",
           "venue": "Hard Rock Stadium, Miami",
           "scorers": [
@@ -4977,8 +5366,8 @@
           "matchday": 3,
           "opponent": "Spain",
           "opponentFlag": "🇪🇸",
-          "result": "L",
-          "score": "0-1",
+          "result": null,
+          "score": null,
           "date": "2026-06-26",
           "venue": "Estadio Guadalajara, Guadalajara",
           "scorers": [
@@ -5025,7 +5414,7 @@
           "city": "Miami · Guadalajara",
           "venue": "Various venues",
           "date": "Jun 15–26",
-          "detail": "2pts after MD3"
+          "detail": "0pts after MD0"
         },
         "r32": null,
         "r16": null,
@@ -5037,7 +5426,7 @@
         "r32": [],
         "r16": []
       },
-      "totalGoals": 3
+      "totalGoals": 0
     },
     {
       "id": "france",
@@ -5046,15 +5435,15 @@
       "group": "I",
       "confederation": "UEFA",
       "fifaRank": 3,
-      "eliminated": true,
-      "currentStage": "sf",
+      "eliminated": false,
+      "currentStage": "group_stage",
       "groupResults": [
         {
           "matchday": 1,
           "opponent": "Senegal",
           "opponentFlag": "🇸🇳",
-          "result": "W",
-          "score": "3-1",
+          "result": null,
+          "score": null,
           "date": "2026-06-16",
           "venue": "MetLife Stadium, New Jersey",
           "scorers": [
@@ -5074,8 +5463,8 @@
           "matchday": 2,
           "opponent": "Iraq",
           "opponentFlag": "🇮🇶",
-          "result": "W",
-          "score": "3-0",
+          "result": null,
+          "score": null,
           "date": "2026-06-22",
           "venue": "Lincoln Financial Field, Philadelphia",
           "scorers": [
@@ -5095,8 +5484,8 @@
           "matchday": 3,
           "opponent": "Norway",
           "opponentFlag": "🇳🇴",
-          "result": "W",
-          "score": "4-1",
+          "result": null,
+          "score": null,
           "date": "2026-06-26",
           "venue": "Gillette Stadium, Boston",
           "scorers": [
@@ -5129,7 +5518,7 @@
           "city": "New Jersey · Philadelphia · Boston",
           "venue": "Various venues",
           "date": "Jun 16–26",
-          "detail": "9pts after MD3"
+          "detail": "0pts after MD0"
         },
         "r32": {
           "status": "done",
@@ -5140,20 +5529,22 @@
           "conditional": false
         },
         "r16": {
-          "status": "done",
-          "match": 96,
+          "status": "future",
           "date": "2026-07-07",
-          "city": "Vancouver",
-          "venue": "BC Place",
-          "opponentDesc": "Winner Match 85"
+          "venue": "TBD",
+          "city": "TBD",
+          "opponentDesc": "Portugal",
+          "conditional": true,
+          "conditionNote": "Predicted from bracket pairing — venue confirmed once previous match settles"
         },
         "qf": {
-          "status": "done",
-          "match": 100,
+          "status": "future",
           "date": "2026-07-11",
-          "city": "Kansas City",
-          "venue": "Arrowhead Stadium",
-          "opponentDesc": "Winner Match 96"
+          "venue": "TBD",
+          "city": "TBD",
+          "opponentDesc": "Opponent TBD",
+          "conditional": true,
+          "conditionNote": "Venue + opponent confirmed once bracket is drawn"
         },
         "sf": {
           "status": "future",
@@ -5164,13 +5555,43 @@
           "conditional": true,
           "conditionNote": "Venue + opponent confirmed once bracket is drawn"
         },
-        "final": null
+        "final": {
+          "status": "future",
+          "date": "2026-07-19",
+          "venue": "TBD",
+          "city": "TBD",
+          "opponentDesc": "Opponent TBD",
+          "conditional": true,
+          "conditionNote": "Venue + opponent confirmed once bracket is drawn"
+        }
       },
       "possibleOpponents": {
-        "r32": [],
-        "r16": []
+        "r32": [
+          {
+            "likelyTeam": "Sweden",
+            "flag": "🇸🇪",
+            "fifaRank": 29,
+            "difficulty": 3,
+            "label": "Moderate",
+            "color": "#F59E0B",
+            "note": "Confirmed opponent",
+            "pct": 100
+          }
+        ],
+        "r16": [
+          {
+            "likelyTeam": "Portugal",
+            "flag": "🇵🇹",
+            "fifaRank": 6,
+            "difficulty": 5,
+            "label": "Danger",
+            "color": "#EF4444",
+            "note": "Predicted (winner of paired match)",
+            "pct": 100
+          }
+        ]
       },
-      "totalGoals": 13
+      "totalGoals": 3
     },
     {
       "id": "senegal",
@@ -5180,14 +5601,14 @@
       "confederation": "CAF",
       "fifaRank": 14,
       "eliminated": true,
-      "currentStage": "r32",
+      "currentStage": "group_stage",
       "groupResults": [
         {
           "matchday": 1,
           "opponent": "France",
           "opponentFlag": "🇫🇷",
-          "result": "L",
-          "score": "1-3",
+          "result": null,
+          "score": null,
           "date": "2026-06-16",
           "venue": "MetLife Stadium, New Jersey",
           "scorers": [
@@ -5210,8 +5631,8 @@
           "matchday": 2,
           "opponent": "Norway",
           "opponentFlag": "🇳🇴",
-          "result": "L",
-          "score": "2-3",
+          "result": null,
+          "score": null,
           "date": "2026-06-22",
           "venue": "MetLife Stadium, New Jersey",
           "scorers": [
@@ -5235,8 +5656,8 @@
           "matchday": 3,
           "opponent": "Iraq",
           "opponentFlag": "🇮🇶",
-          "result": "W",
-          "score": "5-0",
+          "result": null,
+          "score": null,
           "date": "2026-06-26",
           "venue": "BMO Field, Toronto",
           "scorers": [
@@ -5275,7 +5696,7 @@
           "city": "New Jersey · Toronto",
           "venue": "Various venues",
           "date": "Jun 16–26",
-          "detail": "3pts after MD3"
+          "detail": "0pts after MD0"
         },
         "r32": {
           "status": "done",
@@ -5294,7 +5715,7 @@
         "r32": [],
         "r16": []
       },
-      "totalGoals": 10
+      "totalGoals": 2
     },
     {
       "id": "iraq",
@@ -5310,8 +5731,8 @@
           "matchday": 1,
           "opponent": "Norway",
           "opponentFlag": "🇳🇴",
-          "result": "L",
-          "score": "1-4",
+          "result": null,
+          "score": null,
           "date": "2026-06-16",
           "venue": "Gillette Stadium, Boston",
           "scorers": [
@@ -5329,8 +5750,8 @@
           "matchday": 2,
           "opponent": "France",
           "opponentFlag": "🇫🇷",
-          "result": "L",
-          "score": "0-3",
+          "result": null,
+          "score": null,
           "date": "2026-06-22",
           "venue": "Lincoln Financial Field, Philadelphia",
           "scorers": [
@@ -5348,8 +5769,8 @@
           "matchday": 3,
           "opponent": "Senegal",
           "opponentFlag": "🇸🇳",
-          "result": "L",
-          "score": "0-5",
+          "result": null,
+          "score": null,
           "date": "2026-06-26",
           "venue": "BMO Field, Toronto",
           "scorers": [
@@ -5389,7 +5810,7 @@
           "city": "Boston · Philadelphia · Toronto",
           "venue": "Various venues",
           "date": "Jun 16–26",
-          "detail": "0pts after MD3"
+          "detail": "0pts after MD0"
         },
         "r32": null,
         "r16": null,
@@ -5401,7 +5822,7 @@
         "r32": [],
         "r16": []
       },
-      "totalGoals": 1
+      "totalGoals": 0
     },
     {
       "id": "norway",
@@ -5410,15 +5831,15 @@
       "group": "I",
       "confederation": "UEFA",
       "fifaRank": 31,
-      "eliminated": true,
-      "currentStage": "qf",
+      "eliminated": false,
+      "currentStage": "group_stage",
       "groupResults": [
         {
           "matchday": 1,
           "opponent": "Iraq",
           "opponentFlag": "🇮🇶",
-          "result": "W",
-          "score": "4-1",
+          "result": null,
+          "score": null,
           "date": "2026-06-16",
           "venue": "Gillette Stadium, Boston",
           "scorers": [
@@ -5444,8 +5865,8 @@
           "matchday": 2,
           "opponent": "Senegal",
           "opponentFlag": "🇸🇳",
-          "result": "W",
-          "score": "3-2",
+          "result": null,
+          "score": null,
           "date": "2026-06-22",
           "venue": "MetLife Stadium, New Jersey",
           "scorers": [
@@ -5470,8 +5891,8 @@
           "matchday": 3,
           "opponent": "France",
           "opponentFlag": "🇫🇷",
-          "result": "L",
-          "score": "1-4",
+          "result": null,
+          "score": null,
           "date": "2026-06-26",
           "venue": "Gillette Stadium, Boston",
           "scorers": [
@@ -5501,7 +5922,7 @@
           "city": "Boston · New Jersey",
           "venue": "Various venues",
           "date": "Jun 16–26",
-          "detail": "6pts after MD3"
+          "detail": "0pts after MD0"
         },
         "r32": {
           "status": "done",
@@ -5527,14 +5948,52 @@
           "opponentDesc": "England",
           "conditional": false
         },
-        "sf": null,
-        "final": null
+        "sf": {
+          "status": "future",
+          "date": "2026-07-14",
+          "venue": "TBD",
+          "city": "TBD",
+          "opponentDesc": "Opponent TBD",
+          "conditional": true,
+          "conditionNote": "Venue + opponent confirmed once bracket is drawn"
+        },
+        "final": {
+          "status": "future",
+          "date": "2026-07-19",
+          "venue": "TBD",
+          "city": "TBD",
+          "opponentDesc": "Opponent TBD",
+          "conditional": true,
+          "conditionNote": "Venue + opponent confirmed once bracket is drawn"
+        }
       },
       "possibleOpponents": {
-        "r32": [],
-        "r16": []
+        "r32": [
+          {
+            "likelyTeam": "Ivory Coast",
+            "flag": "🇨🇮",
+            "fifaRank": 42,
+            "difficulty": 2,
+            "label": "Favorable",
+            "color": "#22C55E",
+            "note": "Confirmed opponent",
+            "pct": 100
+          }
+        ],
+        "r16": [
+          {
+            "likelyTeam": "Brazil",
+            "flag": "🇧🇷",
+            "fifaRank": 4,
+            "difficulty": 5,
+            "label": "Danger",
+            "color": "#EF4444",
+            "note": "Confirmed opponent",
+            "pct": 100
+          }
+        ]
       },
-      "totalGoals": 13
+      "totalGoals": 5
     },
     {
       "id": "argentina",
@@ -5543,15 +6002,15 @@
       "group": "J",
       "confederation": "CONMEBOL",
       "fifaRank": 2,
-      "eliminated": true,
-      "currentStage": "final",
+      "eliminated": false,
+      "currentStage": "group_stage",
       "groupResults": [
         {
           "matchday": 1,
           "opponent": "Algeria",
           "opponentFlag": "🇩🇿",
-          "result": "W",
-          "score": "3-0",
+          "result": null,
+          "score": null,
           "date": "2026-06-16",
           "venue": "Arrowhead Stadium, Kansas City",
           "scorers": [
@@ -5576,8 +6035,8 @@
           "matchday": 2,
           "opponent": "Austria",
           "opponentFlag": "🇦🇹",
-          "result": "W",
-          "score": "2-0",
+          "result": null,
+          "score": null,
           "date": "2026-06-22",
           "venue": "SoFi Stadium, Los Angeles",
           "scorers": [
@@ -5601,8 +6060,8 @@
           "matchday": 3,
           "opponent": "Jordan",
           "opponentFlag": "🇯🇴",
-          "result": "W",
-          "score": "3-1",
+          "result": null,
+          "score": null,
           "date": "2026-06-27",
           "venue": "AT&T Stadium, Dallas",
           "scorers": [
@@ -5639,7 +6098,7 @@
           "city": "Kansas City · Los Angeles · Dallas",
           "venue": "Various venues",
           "date": "Jun 16–27",
-          "detail": "9pts after MD3"
+          "detail": "0pts after MD0"
         },
         "r32": {
           "status": "done",
@@ -5650,28 +6109,31 @@
           "conditional": false
         },
         "r16": {
-          "status": "done",
-          "match": 93,
+          "status": "future",
           "date": "2026-07-05",
-          "city": "Guadalajara",
-          "venue": "Estadio Guadalajara",
-          "opponentDesc": "Winner Match 79"
+          "venue": "TBD",
+          "city": "TBD",
+          "opponentDesc": "Switzerland",
+          "conditional": true,
+          "conditionNote": "Predicted from bracket pairing — venue confirmed once previous match settles"
         },
         "qf": {
-          "status": "done",
-          "match": 97,
+          "status": "future",
           "date": "2026-07-09",
-          "city": "Guadalajara",
-          "venue": "Estadio Guadalajara",
-          "opponentDesc": "Winner Match 93"
+          "venue": "TBD",
+          "city": "TBD",
+          "opponentDesc": "Opponent TBD",
+          "conditional": true,
+          "conditionNote": "Venue + opponent confirmed once bracket is drawn"
         },
         "sf": {
-          "status": "done",
-          "match": 101,
+          "status": "future",
           "date": "2026-07-14",
-          "city": "Dallas",
-          "venue": "AT&T Stadium",
-          "opponentDesc": "Winner QF bracket"
+          "venue": "TBD",
+          "city": "TBD",
+          "opponentDesc": "Opponent TBD",
+          "conditional": true,
+          "conditionNote": "Venue + opponent confirmed once bracket is drawn"
         },
         "final": {
           "status": "future",
@@ -5684,10 +6146,32 @@
         }
       },
       "possibleOpponents": {
-        "r32": [],
-        "r16": []
+        "r32": [
+          {
+            "likelyTeam": "Cape Verde",
+            "flag": "🇨🇻",
+            "fifaRank": 62,
+            "difficulty": 1,
+            "label": "Favorable",
+            "color": "#22C55E",
+            "note": "Confirmed opponent",
+            "pct": 100
+          }
+        ],
+        "r16": [
+          {
+            "likelyTeam": "Switzerland",
+            "flag": "🇨🇭",
+            "fifaRank": 17,
+            "difficulty": 4,
+            "label": "Tough",
+            "color": "#FB923C",
+            "note": "Predicted (winner of paired match)",
+            "pct": 100
+          }
+        ]
       },
-      "totalGoals": 11
+      "totalGoals": 3
     },
     {
       "id": "algeria",
@@ -5697,14 +6181,14 @@
       "confederation": "CAF",
       "fifaRank": 35,
       "eliminated": true,
-      "currentStage": "r32",
+      "currentStage": "group_stage",
       "groupResults": [
         {
           "matchday": 1,
           "opponent": "Argentina",
           "opponentFlag": "🇦🇷",
-          "result": "L",
-          "score": "0-3",
+          "result": null,
+          "score": null,
           "date": "2026-06-16",
           "venue": "Arrowhead Stadium, Kansas City",
           "scorers": [
@@ -5726,8 +6210,8 @@
           "matchday": 2,
           "opponent": "Jordan",
           "opponentFlag": "🇯🇴",
-          "result": "W",
-          "score": "2-1",
+          "result": null,
+          "score": null,
           "date": "2026-06-22",
           "venue": "Arrowhead Stadium, Kansas City",
           "scorers": [
@@ -5746,8 +6230,8 @@
           "matchday": 3,
           "opponent": "Austria",
           "opponentFlag": "🇦🇹",
-          "result": "D",
-          "score": "3-3",
+          "result": null,
+          "score": null,
           "date": "2026-06-27",
           "venue": "Arrowhead Stadium, Kansas City",
           "scorers": [
@@ -5779,7 +6263,7 @@
           "city": "Kansas City",
           "venue": "Various venues",
           "date": "Jun 16–27",
-          "detail": "4pts after MD3"
+          "detail": "0pts after MD0"
         },
         "r32": {
           "status": "done",
@@ -5798,7 +6282,7 @@
         "r32": [],
         "r16": []
       },
-      "totalGoals": 5
+      "totalGoals": 0
     },
     {
       "id": "austria",
@@ -5807,15 +6291,15 @@
       "group": "J",
       "confederation": "UEFA",
       "fifaRank": 24,
-      "eliminated": true,
-      "currentStage": "r32",
+      "eliminated": false,
+      "currentStage": "group_stage",
       "groupResults": [
         {
           "matchday": 1,
           "opponent": "Jordan",
           "opponentFlag": "🇯🇴",
-          "result": "W",
-          "score": "3-1",
+          "result": null,
+          "score": null,
           "date": "2026-06-16",
           "venue": "Levi's Stadium, San Francisco",
           "scorers": [
@@ -5835,8 +6319,8 @@
           "matchday": 2,
           "opponent": "Argentina",
           "opponentFlag": "🇦🇷",
-          "result": "L",
-          "score": "0-2",
+          "result": null,
+          "score": null,
           "date": "2026-06-22",
           "venue": "SoFi Stadium, Los Angeles",
           "scorers": [
@@ -5864,8 +6348,8 @@
           "matchday": 3,
           "opponent": "Algeria",
           "opponentFlag": "🇩🇿",
-          "result": "D",
-          "score": "3-3",
+          "result": null,
+          "score": null,
           "date": "2026-06-27",
           "venue": "Arrowhead Stadium, Kansas City",
           "scorers": [
@@ -5897,7 +6381,7 @@
           "city": "San Francisco · Los Angeles · Kansas City",
           "venue": "Various venues",
           "date": "Jun 16–27",
-          "detail": "4pts after MD3"
+          "detail": "0pts after MD0"
         },
         "r32": {
           "status": "done",
@@ -5907,16 +6391,70 @@
           "opponentDesc": "Spain",
           "conditional": false
         },
-        "r16": null,
-        "qf": null,
-        "sf": null,
-        "final": null
+        "r16": {
+          "status": "future",
+          "date": "2026-07-07",
+          "venue": "TBD",
+          "city": "TBD",
+          "opponentDesc": "Morocco",
+          "conditional": true,
+          "conditionNote": "Predicted from bracket pairing — venue confirmed once previous match settles"
+        },
+        "qf": {
+          "status": "future",
+          "date": "2026-07-11",
+          "venue": "TBD",
+          "city": "TBD",
+          "opponentDesc": "Opponent TBD",
+          "conditional": true,
+          "conditionNote": "Venue + opponent confirmed once bracket is drawn"
+        },
+        "sf": {
+          "status": "future",
+          "date": "2026-07-14",
+          "venue": "TBD",
+          "city": "TBD",
+          "opponentDesc": "Opponent TBD",
+          "conditional": true,
+          "conditionNote": "Venue + opponent confirmed once bracket is drawn"
+        },
+        "final": {
+          "status": "future",
+          "date": "2026-07-19",
+          "venue": "TBD",
+          "city": "TBD",
+          "opponentDesc": "Opponent TBD",
+          "conditional": true,
+          "conditionNote": "Venue + opponent confirmed once bracket is drawn"
+        }
       },
       "possibleOpponents": {
-        "r32": [],
-        "r16": []
+        "r32": [
+          {
+            "likelyTeam": "Spain",
+            "flag": "🇪🇸",
+            "fifaRank": 1,
+            "difficulty": 5,
+            "label": "Danger",
+            "color": "#EF4444",
+            "note": "Confirmed opponent",
+            "pct": 100
+          }
+        ],
+        "r16": [
+          {
+            "likelyTeam": "Morocco",
+            "flag": "🇲🇦",
+            "fifaRank": 14,
+            "difficulty": 4,
+            "label": "Tough",
+            "color": "#FB923C",
+            "note": "Predicted (winner of paired match)",
+            "pct": 100
+          }
+        ]
       },
-      "totalGoals": 6
+      "totalGoals": 0
     },
     {
       "id": "jordan",
@@ -5932,8 +6470,8 @@
           "matchday": 1,
           "opponent": "Austria",
           "opponentFlag": "🇦🇹",
-          "result": "L",
-          "score": "1-3",
+          "result": null,
+          "score": null,
           "date": "2026-06-16",
           "venue": "Levi's Stadium, San Francisco",
           "scorers": [
@@ -5966,8 +6504,8 @@
           "matchday": 2,
           "opponent": "Algeria",
           "opponentFlag": "🇩🇿",
-          "result": "L",
-          "score": "1-2",
+          "result": null,
+          "score": null,
           "date": "2026-06-22",
           "venue": "Arrowhead Stadium, Kansas City",
           "scorers": [
@@ -5985,8 +6523,8 @@
           "matchday": 3,
           "opponent": "Argentina",
           "opponentFlag": "🇦🇷",
-          "result": "L",
-          "score": "1-3",
+          "result": null,
+          "score": null,
           "date": "2026-06-27",
           "venue": "AT&T Stadium, Dallas",
           "scorers": [
@@ -6026,7 +6564,7 @@
           "city": "San Francisco · Kansas City · Dallas",
           "venue": "Various venues",
           "date": "Jun 16–27",
-          "detail": "0pts after MD3"
+          "detail": "0pts after MD0"
         },
         "r32": null,
         "r16": null,
@@ -6038,7 +6576,7 @@
         "r32": [],
         "r16": []
       },
-      "totalGoals": 3
+      "totalGoals": 0
     },
     {
       "id": "portugal",
@@ -6047,15 +6585,15 @@
       "group": "K",
       "confederation": "UEFA",
       "fifaRank": 6,
-      "eliminated": true,
-      "currentStage": "r16",
+      "eliminated": false,
+      "currentStage": "group_stage",
       "groupResults": [
         {
           "matchday": 1,
           "opponent": "DR Congo",
           "opponentFlag": "🇨🇩",
-          "result": "D",
-          "score": "1-1",
+          "result": null,
+          "score": null,
           "date": "2026-06-17",
           "venue": "NRG Stadium, Houston",
           "scorers": [
@@ -6083,8 +6621,8 @@
           "matchday": 2,
           "opponent": "Uzbekistan",
           "opponentFlag": "🇺🇿",
-          "result": "W",
-          "score": "5-0",
+          "result": null,
+          "score": null,
           "date": "2026-06-23",
           "venue": "NRG Stadium, Houston",
           "scorers": [
@@ -6106,8 +6644,8 @@
           "matchday": 3,
           "opponent": "Colombia",
           "opponentFlag": "🇨🇴",
-          "result": "D",
-          "score": "0-0",
+          "result": null,
+          "score": null,
           "date": "2026-06-27",
           "venue": "Hard Rock Stadium, Miami",
           "scorers": [
@@ -6157,7 +6695,7 @@
           "city": "Houston · Miami",
           "venue": "Various venues",
           "date": "Jun 17–27",
-          "detail": "5pts after MD3"
+          "detail": "0pts after MD0"
         },
         "r32": {
           "status": "done",
@@ -6169,22 +6707,68 @@
         },
         "r16": {
           "status": "future",
-          "date": "2026-07-07",
+          "date": "2026-07-06",
           "venue": "TBD",
           "city": "TBD",
           "opponentDesc": "France",
           "conditional": true,
           "conditionNote": "Predicted from bracket pairing — venue confirmed once previous match settles"
         },
-        "qf": null,
-        "sf": null,
-        "final": null
+        "qf": {
+          "status": "future",
+          "date": "2026-07-10",
+          "venue": "TBD",
+          "city": "TBD",
+          "opponentDesc": "Opponent TBD",
+          "conditional": true,
+          "conditionNote": "Venue + opponent confirmed once bracket is drawn"
+        },
+        "sf": {
+          "status": "future",
+          "date": "2026-07-15",
+          "venue": "TBD",
+          "city": "TBD",
+          "opponentDesc": "Opponent TBD",
+          "conditional": true,
+          "conditionNote": "Venue + opponent confirmed once bracket is drawn"
+        },
+        "final": {
+          "status": "future",
+          "date": "2026-07-19",
+          "venue": "TBD",
+          "city": "TBD",
+          "opponentDesc": "Opponent TBD",
+          "conditional": true,
+          "conditionNote": "Venue + opponent confirmed once bracket is drawn"
+        }
       },
       "possibleOpponents": {
-        "r32": [],
-        "r16": []
+        "r32": [
+          {
+            "likelyTeam": "Croatia",
+            "flag": "🇭🇷",
+            "fifaRank": 10,
+            "difficulty": 5,
+            "label": "Danger",
+            "color": "#EF4444",
+            "note": "Confirmed opponent",
+            "pct": 100
+          }
+        ],
+        "r16": [
+          {
+            "likelyTeam": "France",
+            "flag": "🇫🇷",
+            "fifaRank": 3,
+            "difficulty": 5,
+            "label": "Danger",
+            "color": "#EF4444",
+            "note": "Predicted (winner of paired match)",
+            "pct": 100
+          }
+        ]
       },
-      "totalGoals": 8
+      "totalGoals": 2
     },
     {
       "id": "drcongo",
@@ -6194,14 +6778,14 @@
       "confederation": "CAF",
       "fifaRank": 56,
       "eliminated": true,
-      "currentStage": "r32",
+      "currentStage": "group_stage",
       "groupResults": [
         {
           "matchday": 1,
           "opponent": "Portugal",
           "opponentFlag": "🇵🇹",
-          "result": "D",
-          "score": "1-1",
+          "result": null,
+          "score": null,
           "date": "2026-06-17",
           "venue": "NRG Stadium, Houston",
           "scorers": [
@@ -6219,8 +6803,8 @@
           "matchday": 2,
           "opponent": "Colombia",
           "opponentFlag": "🇨🇴",
-          "result": "L",
-          "score": "0-1",
+          "result": null,
+          "score": null,
           "date": "2026-06-23",
           "venue": "Estadio Azteca, Mexico City",
           "scorers": [
@@ -6241,8 +6825,8 @@
           "matchday": 3,
           "opponent": "Uzbekistan",
           "opponentFlag": "🇺🇿",
-          "result": "W",
-          "score": "3-1",
+          "result": null,
+          "score": null,
           "date": "2026-06-27",
           "venue": "Mercedes-Benz Stadium, Atlanta",
           "scorers": [
@@ -6284,7 +6868,7 @@
           "city": "Houston · Mexico City · Atlanta",
           "venue": "Various venues",
           "date": "Jun 17–27",
-          "detail": "4pts after MD3"
+          "detail": "0pts after MD0"
         },
         "r32": {
           "status": "done",
@@ -6303,7 +6887,7 @@
         "r32": [],
         "r16": []
       },
-      "totalGoals": 5
+      "totalGoals": 1
     },
     {
       "id": "uzbekistan",
@@ -6319,8 +6903,8 @@
           "matchday": 1,
           "opponent": "Colombia",
           "opponentFlag": "🇨🇴",
-          "result": "L",
-          "score": "1-3",
+          "result": null,
+          "score": null,
           "date": "2026-06-17",
           "venue": "Estadio Azteca, Mexico City",
           "scorers": [
@@ -6338,8 +6922,8 @@
           "matchday": 2,
           "opponent": "Portugal",
           "opponentFlag": "🇵🇹",
-          "result": "L",
-          "score": "0-5",
+          "result": null,
+          "score": null,
           "date": "2026-06-23",
           "venue": "NRG Stadium, Houston",
           "scorers": [
@@ -6358,8 +6942,8 @@
           "matchday": 3,
           "opponent": "DR Congo",
           "opponentFlag": "🇨🇩",
-          "result": "L",
-          "score": "1-3",
+          "result": null,
+          "score": null,
           "date": "2026-06-27",
           "venue": "Mercedes-Benz Stadium, Atlanta",
           "scorers": [
@@ -6394,7 +6978,7 @@
           "city": "Mexico City · Houston · Atlanta",
           "venue": "Various venues",
           "date": "Jun 17–27",
-          "detail": "0pts after MD3"
+          "detail": "0pts after MD0"
         },
         "r32": null,
         "r16": null,
@@ -6406,7 +6990,7 @@
         "r32": [],
         "r16": []
       },
-      "totalGoals": 2
+      "totalGoals": 0
     },
     {
       "id": "colombia",
@@ -6416,14 +7000,14 @@
       "confederation": "CONMEBOL",
       "fifaRank": 13,
       "eliminated": false,
-      "currentStage": "qf",
+      "currentStage": "group_stage",
       "groupResults": [
         {
           "matchday": 1,
           "opponent": "Uzbekistan",
           "opponentFlag": "🇺🇿",
-          "result": "W",
-          "score": "3-1",
+          "result": null,
+          "score": null,
           "date": "2026-06-17",
           "venue": "Estadio Azteca, Mexico City",
           "scorers": [
@@ -6443,8 +7027,8 @@
           "matchday": 2,
           "opponent": "DR Congo",
           "opponentFlag": "🇨🇩",
-          "result": "W",
-          "score": "1-0",
+          "result": null,
+          "score": null,
           "date": "2026-06-23",
           "venue": "Estadio Azteca, Mexico City",
           "scorers": [
@@ -6467,8 +7051,8 @@
           "matchday": 3,
           "opponent": "Portugal",
           "opponentFlag": "🇵🇹",
-          "result": "D",
-          "score": "0-0",
+          "result": null,
+          "score": null,
           "date": "2026-06-27",
           "venue": "Hard Rock Stadium, Miami",
           "scorers": [
@@ -6501,7 +7085,7 @@
           "city": "Mexico City · Miami",
           "venue": "Various venues",
           "date": "Jun 17–27",
-          "detail": "7pts after MD3"
+          "detail": "0pts after MD0"
         },
         "r32": {
           "status": "done",
@@ -6512,16 +7096,17 @@
           "conditional": false
         },
         "r16": {
-          "status": "done",
-          "match": 94,
-          "date": "2026-07-06",
-          "city": "Seattle",
-          "venue": "Lumen Field",
-          "opponentDesc": "Winner Match 80"
+          "status": "future",
+          "date": "2026-07-07",
+          "venue": "TBD",
+          "city": "TBD",
+          "opponentDesc": "Egypt",
+          "conditional": true,
+          "conditionNote": "Predicted from bracket pairing — venue confirmed once previous match settles"
         },
         "qf": {
           "status": "future",
-          "date": "2026-07-10",
+          "date": "2026-07-11",
           "venue": "TBD",
           "city": "TBD",
           "opponentDesc": "Opponent TBD",
@@ -6573,7 +7158,7 @@
           }
         ]
       },
-      "totalGoals": 5
+      "totalGoals": 1
     },
     {
       "id": "england",
@@ -6582,15 +7167,15 @@
       "group": "L",
       "confederation": "UEFA",
       "fifaRank": 5,
-      "eliminated": true,
-      "currentStage": "sf",
+      "eliminated": false,
+      "currentStage": "group_stage",
       "groupResults": [
         {
           "matchday": 1,
           "opponent": "Croatia",
           "opponentFlag": "🇭🇷",
-          "result": "W",
-          "score": "4-2",
+          "result": null,
+          "score": null,
           "date": "2026-06-17",
           "venue": "AT&T Stadium, Dallas",
           "scorers": [
@@ -6616,8 +7201,8 @@
           "matchday": 2,
           "opponent": "Ghana",
           "opponentFlag": "🇬🇭",
-          "result": "D",
-          "score": "0-0",
+          "result": null,
+          "score": null,
           "date": "2026-06-23",
           "venue": "Lincoln Financial Field, Philadelphia",
           "scorers": [
@@ -6640,8 +7225,8 @@
           "matchday": 3,
           "opponent": "Panama",
           "opponentFlag": "🇵🇦",
-          "result": "W",
-          "score": "2-0",
+          "result": null,
+          "score": null,
           "date": "2026-06-27",
           "venue": "MetLife Stadium, New Jersey",
           "scorers": [
@@ -6672,7 +7257,7 @@
           "city": "Dallas · Philadelphia · New Jersey",
           "venue": "Various venues",
           "date": "Jun 17–27",
-          "detail": "7pts after MD3"
+          "detail": "0pts after MD0"
         },
         "r32": {
           "status": "done",
@@ -6707,13 +7292,43 @@
           "conditional": true,
           "conditionNote": "Venue + opponent confirmed once bracket is drawn"
         },
-        "final": null
+        "final": {
+          "status": "future",
+          "date": "2026-07-19",
+          "venue": "TBD",
+          "city": "TBD",
+          "opponentDesc": "Opponent TBD",
+          "conditional": true,
+          "conditionNote": "Venue + opponent confirmed once bracket is drawn"
+        }
       },
       "possibleOpponents": {
-        "r32": [],
-        "r16": []
+        "r32": [
+          {
+            "likelyTeam": "DR Congo",
+            "flag": "🇨🇩",
+            "fifaRank": 56,
+            "difficulty": 1,
+            "label": "Favorable",
+            "color": "#22C55E",
+            "note": "Confirmed opponent",
+            "pct": 100
+          }
+        ],
+        "r16": [
+          {
+            "likelyTeam": "Mexico",
+            "flag": "🇲🇽",
+            "fifaRank": 15,
+            "difficulty": 4,
+            "label": "Tough",
+            "color": "#FB923C",
+            "note": "Confirmed opponent",
+            "pct": 100
+          }
+        ]
       },
-      "totalGoals": 13
+      "totalGoals": 7
     },
     {
       "id": "croatia",
@@ -6723,14 +7338,14 @@
       "confederation": "UEFA",
       "fifaRank": 10,
       "eliminated": true,
-      "currentStage": "r32",
+      "currentStage": "group_stage",
       "groupResults": [
         {
           "matchday": 1,
           "opponent": "England",
           "opponentFlag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
-          "result": "L",
-          "score": "2-4",
+          "result": null,
+          "score": null,
           "date": "2026-06-17",
           "venue": "AT&T Stadium, Dallas",
           "scorers": [
@@ -6754,8 +7369,8 @@
           "matchday": 2,
           "opponent": "Panama",
           "opponentFlag": "🇵🇦",
-          "result": "W",
-          "score": "1-0",
+          "result": null,
+          "score": null,
           "date": "2026-06-23",
           "venue": "BMO Field, Toronto",
           "scorers": [
@@ -6773,8 +7388,8 @@
           "matchday": 3,
           "opponent": "Ghana",
           "opponentFlag": "🇬🇭",
-          "result": "W",
-          "score": "2-1",
+          "result": null,
+          "score": null,
           "date": "2026-06-27",
           "venue": "Lincoln Financial Field, Philadelphia",
           "scorers": [
@@ -6805,7 +7420,7 @@
           "city": "Dallas · Toronto · Philadelphia",
           "venue": "Various venues",
           "date": "Jun 17–27",
-          "detail": "6pts after MD3"
+          "detail": "0pts after MD0"
         },
         "r32": {
           "status": "done",
@@ -6824,7 +7439,7 @@
         "r32": [],
         "r16": []
       },
-      "totalGoals": 6
+      "totalGoals": 1
     },
     {
       "id": "ghana",
@@ -6833,15 +7448,15 @@
       "group": "L",
       "confederation": "CAF",
       "fifaRank": 60,
-      "eliminated": true,
-      "currentStage": "r32",
+      "eliminated": false,
+      "currentStage": "group_stage",
       "groupResults": [
         {
           "matchday": 1,
           "opponent": "Panama",
           "opponentFlag": "🇵🇦",
-          "result": "W",
-          "score": "1-0",
+          "result": null,
+          "score": null,
           "date": "2026-06-17",
           "venue": "BMO Field, Toronto",
           "scorers": [
@@ -6859,8 +7474,8 @@
           "matchday": 2,
           "opponent": "England",
           "opponentFlag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
-          "result": "D",
-          "score": "0-0",
+          "result": null,
+          "score": null,
           "date": "2026-06-23",
           "venue": "Lincoln Financial Field, Philadelphia",
           "scorers": [
@@ -6879,8 +7494,8 @@
           "matchday": 3,
           "opponent": "Croatia",
           "opponentFlag": "🇭🇷",
-          "result": "L",
-          "score": "1-2",
+          "result": null,
+          "score": null,
           "date": "2026-06-27",
           "venue": "Lincoln Financial Field, Philadelphia",
           "scorers": [
@@ -6910,7 +7525,7 @@
           "city": "Toronto · Philadelphia",
           "venue": "Various venues",
           "date": "Jun 17–27",
-          "detail": "4pts after MD3"
+          "detail": "0pts after MD0"
         },
         "r32": {
           "status": "done",
@@ -6920,16 +7535,70 @@
           "opponentDesc": "Colombia",
           "conditional": false
         },
-        "r16": null,
-        "qf": null,
-        "sf": null,
-        "final": null
+        "r16": {
+          "status": "future",
+          "date": "2026-07-06",
+          "venue": "TBD",
+          "city": "TBD",
+          "opponentDesc": "Egypt",
+          "conditional": true,
+          "conditionNote": "Predicted from bracket pairing — venue confirmed once previous match settles"
+        },
+        "qf": {
+          "status": "future",
+          "date": "2026-07-10",
+          "venue": "TBD",
+          "city": "TBD",
+          "opponentDesc": "Opponent TBD",
+          "conditional": true,
+          "conditionNote": "Venue + opponent confirmed once bracket is drawn"
+        },
+        "sf": {
+          "status": "future",
+          "date": "2026-07-15",
+          "venue": "TBD",
+          "city": "TBD",
+          "opponentDesc": "Opponent TBD",
+          "conditional": true,
+          "conditionNote": "Venue + opponent confirmed once bracket is drawn"
+        },
+        "final": {
+          "status": "future",
+          "date": "2026-07-19",
+          "venue": "TBD",
+          "city": "TBD",
+          "opponentDesc": "Opponent TBD",
+          "conditional": true,
+          "conditionNote": "Venue + opponent confirmed once bracket is drawn"
+        }
       },
       "possibleOpponents": {
-        "r32": [],
-        "r16": []
+        "r32": [
+          {
+            "likelyTeam": "Colombia",
+            "flag": "🇨🇴",
+            "fifaRank": 13,
+            "difficulty": 4,
+            "label": "Tough",
+            "color": "#FB923C",
+            "note": "Confirmed opponent",
+            "pct": 100
+          }
+        ],
+        "r16": [
+          {
+            "likelyTeam": "Egypt",
+            "flag": "🇪🇬",
+            "fifaRank": 34,
+            "difficulty": 3,
+            "label": "Moderate",
+            "color": "#F59E0B",
+            "note": "Predicted (winner of paired match)",
+            "pct": 100
+          }
+        ]
       },
-      "totalGoals": 2
+      "totalGoals": 0
     },
     {
       "id": "panama",
@@ -6945,8 +7614,8 @@
           "matchday": 1,
           "opponent": "Ghana",
           "opponentFlag": "🇬🇭",
-          "result": "L",
-          "score": "0-1",
+          "result": null,
+          "score": null,
           "date": "2026-06-17",
           "venue": "BMO Field, Toronto",
           "scorers": [],
@@ -6967,8 +7636,8 @@
           "matchday": 2,
           "opponent": "Croatia",
           "opponentFlag": "🇭🇷",
-          "result": "L",
-          "score": "0-1",
+          "result": null,
+          "score": null,
           "date": "2026-06-23",
           "venue": "BMO Field, Toronto",
           "scorers": [],
@@ -6984,8 +7653,8 @@
           "matchday": 3,
           "opponent": "England",
           "opponentFlag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
-          "result": "L",
-          "score": "0-2",
+          "result": null,
+          "score": null,
           "date": "2026-06-27",
           "venue": "MetLife Stadium, New Jersey",
           "scorers": [],
@@ -7018,7 +7687,7 @@
           "city": "Toronto · New Jersey",
           "venue": "Various venues",
           "date": "Jun 17–27",
-          "detail": "0pts after MD3"
+          "detail": "0pts after MD0"
         },
         "r32": null,
         "r16": null,
@@ -7033,2059 +7702,7 @@
       "totalGoals": 0
     }
   ],
-  "dailyMatches": {
-    "2026-06-11": [
-      {
-        "homeTeam": "Mexico",
-        "homeFlag": "🇲🇽",
-        "homeId": "mexico",
-        "awayTeam": "South Africa",
-        "awayFlag": "🇿🇦",
-        "awayId": "southafrica",
-        "homeScore": 2,
-        "awayScore": 0,
-        "status": "FINISHED",
-        "date": "2026-06-11",
-        "broadcasts": [
-          "FOX",
-          "Tele",
-          "Peacock"
-        ],
-        "time": "2026-06-11T19:00Z",
-        "venue": "Estadio Banorte, Mexico City"
-      },
-      {
-        "homeTeam": "South Korea",
-        "homeFlag": "🇰🇷",
-        "homeId": "southkorea",
-        "awayTeam": "Czechia",
-        "awayFlag": "🇨🇿",
-        "awayId": "czechia",
-        "homeScore": 2,
-        "awayScore": 1,
-        "status": "FINISHED",
-        "date": "2026-06-11",
-        "broadcasts": [
-          "FS1",
-          "Tele",
-          "Peacock"
-        ],
-        "time": "2026-06-12T02:00Z",
-        "venue": "Estadio Akron, Guadalajara"
-      }
-    ],
-    "2026-06-12": [
-      {
-        "homeTeam": "Canada",
-        "homeFlag": "🇨🇦",
-        "homeId": "canada",
-        "awayTeam": "Bosnia & Herz.",
-        "awayFlag": "🇧🇦",
-        "awayId": "bosnia",
-        "homeScore": 1,
-        "awayScore": 1,
-        "status": "FINISHED",
-        "date": "2026-06-12",
-        "broadcasts": [
-          "FOX",
-          "Tele",
-          "Peacock"
-        ],
-        "time": "2026-06-12T19:00Z",
-        "venue": "BMO Field, Toronto"
-      },
-      {
-        "homeTeam": "USA",
-        "homeFlag": "🇺🇸",
-        "homeId": "usa",
-        "awayTeam": "Paraguay",
-        "awayFlag": "🇵🇾",
-        "awayId": "paraguay",
-        "homeScore": 4,
-        "awayScore": 1,
-        "status": "FINISHED",
-        "date": "2026-06-12",
-        "broadcasts": [
-          "FOX",
-          "Tele",
-          "Peacock"
-        ],
-        "time": "2026-06-13T01:00Z",
-        "venue": "SoFi Stadium, Inglewood, California"
-      }
-    ],
-    "2026-06-13": [
-      {
-        "homeTeam": "Qatar",
-        "homeFlag": "🇶🇦",
-        "homeId": "qatar",
-        "awayTeam": "Switzerland",
-        "awayFlag": "🇨🇭",
-        "awayId": "switzerland",
-        "homeScore": 1,
-        "awayScore": 1,
-        "status": "FINISHED",
-        "date": "2026-06-13",
-        "broadcasts": [
-          "FOX",
-          "Tele",
-          "Peacock"
-        ],
-        "time": "2026-06-13T19:00Z",
-        "venue": "Levi's Stadium, Santa Clara, California"
-      },
-      {
-        "homeTeam": "Brazil",
-        "homeFlag": "🇧🇷",
-        "homeId": "brazil",
-        "awayTeam": "Morocco",
-        "awayFlag": "🇲🇦",
-        "awayId": "morocco",
-        "homeScore": 1,
-        "awayScore": 1,
-        "status": "FINISHED",
-        "date": "2026-06-13",
-        "broadcasts": [
-          "FOX",
-          "Tele",
-          "Peacock"
-        ],
-        "time": "2026-06-13T22:00Z",
-        "venue": "MetLife Stadium, East Rutherford, New Jersey"
-      },
-      {
-        "homeTeam": "Haiti",
-        "homeFlag": "🇭🇹",
-        "homeId": "haiti",
-        "awayTeam": "Scotland",
-        "awayFlag": "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
-        "awayId": "scotland",
-        "homeScore": 0,
-        "awayScore": 1,
-        "status": "FINISHED",
-        "date": "2026-06-13",
-        "broadcasts": [
-          "FOX",
-          "Tele",
-          "Peacock"
-        ],
-        "time": "2026-06-14T01:00Z",
-        "venue": "Gillette Stadium, Foxborough, Massachusetts"
-      },
-      {
-        "homeTeam": "Australia",
-        "homeFlag": "🇦🇺",
-        "homeId": "australia",
-        "awayTeam": "Türkiye",
-        "awayFlag": "🇹🇷",
-        "awayId": "turkey",
-        "homeScore": 2,
-        "awayScore": 0,
-        "status": "FINISHED",
-        "date": "2026-06-13",
-        "broadcasts": [
-          "FS1",
-          "Tele",
-          "Peacock"
-        ],
-        "time": "2026-06-14T04:00Z",
-        "venue": "BC Place, Vancouver"
-      }
-    ],
-    "2026-06-14": [
-      {
-        "homeTeam": "Germany",
-        "homeFlag": "🇩🇪",
-        "homeId": "germany",
-        "awayTeam": "Curaçao",
-        "awayFlag": "🇨🇼",
-        "awayId": "curacao",
-        "homeScore": 7,
-        "awayScore": 1,
-        "status": "FINISHED",
-        "date": "2026-06-14",
-        "broadcasts": [
-          "FOX",
-          "Tele",
-          "Peacock"
-        ],
-        "time": "2026-06-14T17:00Z",
-        "venue": "NRG Stadium, Houston, Texas"
-      },
-      {
-        "homeTeam": "Netherlands",
-        "homeFlag": "🇳🇱",
-        "homeId": "netherlands",
-        "awayTeam": "Japan",
-        "awayFlag": "🇯🇵",
-        "awayId": "japan",
-        "homeScore": 2,
-        "awayScore": 2,
-        "status": "FINISHED",
-        "date": "2026-06-14",
-        "broadcasts": [
-          "FOX",
-          "Tele",
-          "Peacock"
-        ],
-        "time": "2026-06-14T20:00Z",
-        "venue": "AT&T Stadium, Arlington, Texas"
-      },
-      {
-        "homeTeam": "Ivory Coast",
-        "homeFlag": "🇨🇮",
-        "homeId": "ivorycoast",
-        "awayTeam": "Ecuador",
-        "awayFlag": "🇪🇨",
-        "awayId": "ecuador",
-        "homeScore": 1,
-        "awayScore": 0,
-        "status": "FINISHED",
-        "date": "2026-06-14",
-        "broadcasts": [
-          "FS1",
-          "Tele",
-          "Peacock"
-        ],
-        "time": "2026-06-14T23:00Z",
-        "venue": "Lincoln Financial Field, Philadelphia, Pennsylvania"
-      },
-      {
-        "homeTeam": "Sweden",
-        "homeFlag": "🇸🇪",
-        "homeId": "sweden",
-        "awayTeam": "Tunisia",
-        "awayFlag": "🇹🇳",
-        "awayId": "tunisia",
-        "homeScore": 5,
-        "awayScore": 1,
-        "status": "FINISHED",
-        "date": "2026-06-14",
-        "broadcasts": [
-          "FS1",
-          "Tele",
-          "Peacock"
-        ],
-        "time": "2026-06-15T02:00Z",
-        "venue": "Estadio BBVA, Guadalupe"
-      }
-    ],
-    "2026-06-15": [
-      {
-        "homeTeam": "Spain",
-        "homeFlag": "🇪🇸",
-        "homeId": "spain",
-        "awayTeam": "Cape Verde",
-        "awayFlag": "🇨🇻",
-        "awayId": "capeverde",
-        "homeScore": 0,
-        "awayScore": 0,
-        "status": "FINISHED",
-        "date": "2026-06-15",
-        "broadcasts": [
-          "FOX",
-          "Tele",
-          "Peacock"
-        ],
-        "time": "2026-06-15T16:00Z",
-        "venue": "Mercedes-Benz Stadium, Atlanta, Georgia"
-      },
-      {
-        "homeTeam": "Belgium",
-        "homeFlag": "🇧🇪",
-        "homeId": "belgium",
-        "awayTeam": "Egypt",
-        "awayFlag": "🇪🇬",
-        "awayId": "egypt",
-        "homeScore": 1,
-        "awayScore": 1,
-        "status": "FINISHED",
-        "date": "2026-06-15",
-        "broadcasts": [
-          "FOX",
-          "Tele",
-          "Peacock"
-        ],
-        "time": "2026-06-15T19:00Z",
-        "venue": "Lumen Field, Seattle, Washington"
-      },
-      {
-        "homeTeam": "Saudi Arabia",
-        "homeFlag": "🇸🇦",
-        "homeId": "saudiarabia",
-        "awayTeam": "Uruguay",
-        "awayFlag": "🇺🇾",
-        "awayId": "uruguay",
-        "homeScore": 1,
-        "awayScore": 1,
-        "status": "FINISHED",
-        "date": "2026-06-15",
-        "broadcasts": [
-          "FS1",
-          "Tele",
-          "Peacock"
-        ],
-        "time": "2026-06-15T22:00Z",
-        "venue": "Hard Rock Stadium, Miami Gardens, Florida"
-      },
-      {
-        "homeTeam": "Iran",
-        "homeFlag": "🇮🇷",
-        "homeId": "iran",
-        "awayTeam": "New Zealand",
-        "awayFlag": "🇳🇿",
-        "awayId": "newzealand",
-        "homeScore": 2,
-        "awayScore": 2,
-        "status": "FINISHED",
-        "date": "2026-06-15",
-        "broadcasts": [
-          "FS1",
-          "Tele",
-          "Peacock"
-        ],
-        "time": "2026-06-16T01:00Z",
-        "venue": "SoFi Stadium, Inglewood, California"
-      }
-    ],
-    "2026-06-16": [
-      {
-        "homeTeam": "France",
-        "homeFlag": "🇫🇷",
-        "homeId": "france",
-        "awayTeam": "Senegal",
-        "awayFlag": "🇸🇳",
-        "awayId": "senegal",
-        "homeScore": 3,
-        "awayScore": 1,
-        "status": "FINISHED",
-        "date": "2026-06-16",
-        "broadcasts": [
-          "FOX",
-          "Tele",
-          "Peacock"
-        ],
-        "time": "2026-06-16T19:00Z",
-        "venue": "MetLife Stadium, East Rutherford, New Jersey"
-      },
-      {
-        "homeTeam": "Iraq",
-        "homeFlag": "🇮🇶",
-        "homeId": "iraq",
-        "awayTeam": "Norway",
-        "awayFlag": "🇳🇴",
-        "awayId": "norway",
-        "homeScore": 1,
-        "awayScore": 4,
-        "status": "FINISHED",
-        "date": "2026-06-16",
-        "broadcasts": [
-          "FOX",
-          "Tele",
-          "Peacock"
-        ],
-        "time": "2026-06-16T22:00Z",
-        "venue": "Gillette Stadium, Foxborough, Massachusetts"
-      },
-      {
-        "homeTeam": "Argentina",
-        "homeFlag": "🇦🇷",
-        "homeId": "argentina",
-        "awayTeam": "Algeria",
-        "awayFlag": "🇩🇿",
-        "awayId": "algeria",
-        "homeScore": 3,
-        "awayScore": 0,
-        "status": "FINISHED",
-        "date": "2026-06-16",
-        "broadcasts": [
-          "FOX",
-          "Tele",
-          "Peacock"
-        ],
-        "time": "2026-06-17T01:00Z",
-        "venue": "GEHA Field at Arrowhead Stadium, Kansas City, Missouri"
-      },
-      {
-        "homeTeam": "Austria",
-        "homeFlag": "🇦🇹",
-        "homeId": "austria",
-        "awayTeam": "Jordan",
-        "awayFlag": "🇯🇴",
-        "awayId": "jordan",
-        "homeScore": 3,
-        "awayScore": 1,
-        "status": "FINISHED",
-        "date": "2026-06-16",
-        "broadcasts": [
-          "FS1",
-          "Tele"
-        ],
-        "time": "2026-06-17T04:00Z",
-        "venue": "Levi's Stadium, Santa Clara, California"
-      }
-    ],
-    "2026-06-17": [
-      {
-        "homeTeam": "Portugal",
-        "homeFlag": "🇵🇹",
-        "homeId": "portugal",
-        "awayTeam": "DR Congo",
-        "awayFlag": "🇨🇩",
-        "awayId": "drcongo",
-        "homeScore": 1,
-        "awayScore": 1,
-        "status": "FINISHED",
-        "date": "2026-06-17",
-        "broadcasts": [
-          "FOX",
-          "Tele",
-          "Peacock"
-        ],
-        "time": "2026-06-17T17:00Z",
-        "venue": "NRG Stadium, Houston, Texas"
-      },
-      {
-        "homeTeam": "England",
-        "homeFlag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
-        "homeId": "england",
-        "awayTeam": "Croatia",
-        "awayFlag": "🇭🇷",
-        "awayId": "croatia",
-        "homeScore": 4,
-        "awayScore": 2,
-        "status": "FINISHED",
-        "date": "2026-06-17",
-        "broadcasts": [
-          "FOX",
-          "Tele",
-          "Peacock"
-        ],
-        "time": "2026-06-17T20:00Z",
-        "venue": "AT&T Stadium, Arlington, Texas"
-      },
-      {
-        "homeTeam": "Ghana",
-        "homeFlag": "🇬🇭",
-        "homeId": "ghana",
-        "awayTeam": "Panama",
-        "awayFlag": "🇵🇦",
-        "awayId": "panama",
-        "homeScore": 1,
-        "awayScore": 0,
-        "status": "FINISHED",
-        "date": "2026-06-17",
-        "broadcasts": [
-          "FS1",
-          "Tele",
-          "FOX One"
-        ],
-        "time": "2026-06-17T23:00Z",
-        "venue": "BMO Field, Toronto"
-      },
-      {
-        "homeTeam": "Uzbekistan",
-        "homeFlag": "🇺🇿",
-        "homeId": "uzbekistan",
-        "awayTeam": "Colombia",
-        "awayFlag": "🇨🇴",
-        "awayId": "colombia",
-        "homeScore": 1,
-        "awayScore": 3,
-        "status": "FINISHED",
-        "date": "2026-06-17",
-        "broadcasts": [
-          "FS1",
-          "Tele",
-          "FOX One"
-        ],
-        "time": "2026-06-18T02:00Z",
-        "venue": "Estadio Banorte, Mexico City"
-      }
-    ],
-    "2026-06-18": [
-      {
-        "homeTeam": "Czechia",
-        "homeFlag": "🇨🇿",
-        "homeId": "czechia",
-        "awayTeam": "South Africa",
-        "awayFlag": "🇿🇦",
-        "awayId": "southafrica",
-        "homeScore": 1,
-        "awayScore": 1,
-        "status": "FINISHED",
-        "date": "2026-06-18",
-        "broadcasts": [
-          "FOX",
-          "Tele",
-          "FOX One"
-        ],
-        "time": "2026-06-18T16:00Z",
-        "venue": "Mercedes-Benz Stadium, Atlanta, Georgia"
-      },
-      {
-        "homeTeam": "Switzerland",
-        "homeFlag": "🇨🇭",
-        "homeId": "switzerland",
-        "awayTeam": "Bosnia & Herz.",
-        "awayFlag": "🇧🇦",
-        "awayId": "bosnia",
-        "homeScore": 4,
-        "awayScore": 1,
-        "status": "FINISHED",
-        "date": "2026-06-18",
-        "broadcasts": [
-          "FOX",
-          "Tele",
-          "FOX One"
-        ],
-        "time": "2026-06-18T19:00Z",
-        "venue": "SoFi Stadium, Inglewood, California"
-      },
-      {
-        "homeTeam": "Canada",
-        "homeFlag": "🇨🇦",
-        "homeId": "canada",
-        "awayTeam": "Qatar",
-        "awayFlag": "🇶🇦",
-        "awayId": "qatar",
-        "homeScore": 6,
-        "awayScore": 0,
-        "status": "FINISHED",
-        "date": "2026-06-18",
-        "broadcasts": [
-          "FS1",
-          "Tele",
-          "FOX One"
-        ],
-        "time": "2026-06-18T22:00Z",
-        "venue": "BC Place, Vancouver"
-      },
-      {
-        "homeTeam": "Mexico",
-        "homeFlag": "🇲🇽",
-        "homeId": "mexico",
-        "awayTeam": "South Korea",
-        "awayFlag": "🇰🇷",
-        "awayId": "southkorea",
-        "homeScore": 1,
-        "awayScore": 0,
-        "status": "FINISHED",
-        "date": "2026-06-18",
-        "broadcasts": [
-          "FOX",
-          "Tele",
-          "FOX One"
-        ],
-        "time": "2026-06-19T01:00Z",
-        "venue": "Estadio Akron, Guadalajara"
-      }
-    ],
-    "2026-06-19": [
-      {
-        "homeTeam": "USA",
-        "homeFlag": "🇺🇸",
-        "homeId": "usa",
-        "awayTeam": "Australia",
-        "awayFlag": "🇦🇺",
-        "awayId": "australia",
-        "homeScore": 2,
-        "awayScore": 0,
-        "status": "FINISHED",
-        "date": "2026-06-19",
-        "broadcasts": [
-          "FOX",
-          "Tele",
-          "FOX One"
-        ],
-        "time": "2026-06-19T19:00Z",
-        "venue": "Lumen Field, Seattle, Washington"
-      },
-      {
-        "homeTeam": "Scotland",
-        "homeFlag": "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
-        "homeId": "scotland",
-        "awayTeam": "Morocco",
-        "awayFlag": "🇲🇦",
-        "awayId": "morocco",
-        "homeScore": 0,
-        "awayScore": 1,
-        "status": "FINISHED",
-        "date": "2026-06-19",
-        "broadcasts": [
-          "FOX",
-          "Tele",
-          "FOX One"
-        ],
-        "time": "2026-06-19T22:00Z",
-        "venue": "Gillette Stadium, Foxborough, Massachusetts"
-      },
-      {
-        "homeTeam": "Brazil",
-        "homeFlag": "🇧🇷",
-        "homeId": "brazil",
-        "awayTeam": "Haiti",
-        "awayFlag": "🇭🇹",
-        "awayId": "haiti",
-        "homeScore": 3,
-        "awayScore": 0,
-        "status": "FINISHED",
-        "date": "2026-06-19",
-        "broadcasts": [
-          "FOX",
-          "Tele",
-          "FOX One"
-        ],
-        "time": "2026-06-20T00:30Z",
-        "venue": "Lincoln Financial Field, Philadelphia, Pennsylvania"
-      },
-      {
-        "homeTeam": "Türkiye",
-        "homeFlag": "🇹🇷",
-        "homeId": "turkey",
-        "awayTeam": "Paraguay",
-        "awayFlag": "🇵🇾",
-        "awayId": "paraguay",
-        "homeScore": 0,
-        "awayScore": 1,
-        "status": "FINISHED",
-        "date": "2026-06-19",
-        "broadcasts": [
-          "FS1",
-          "Tele",
-          "FOX One"
-        ],
-        "time": "2026-06-20T03:00Z",
-        "venue": "Levi's Stadium, Santa Clara, California"
-      }
-    ],
-    "2026-06-20": [
-      {
-        "homeTeam": "Netherlands",
-        "homeFlag": "🇳🇱",
-        "homeId": "netherlands",
-        "awayTeam": "Sweden",
-        "awayFlag": "🇸🇪",
-        "awayId": "sweden",
-        "homeScore": 5,
-        "awayScore": 1,
-        "status": "FINISHED",
-        "date": "2026-06-20",
-        "broadcasts": [
-          "FOX",
-          "Tele",
-          "FOX One"
-        ],
-        "time": "2026-06-20T17:00Z",
-        "venue": "NRG Stadium, Houston, Texas"
-      },
-      {
-        "homeTeam": "Germany",
-        "homeFlag": "🇩🇪",
-        "homeId": "germany",
-        "awayTeam": "Ivory Coast",
-        "awayFlag": "🇨🇮",
-        "awayId": "ivorycoast",
-        "homeScore": 2,
-        "awayScore": 1,
-        "status": "FINISHED",
-        "date": "2026-06-20",
-        "broadcasts": [
-          "FOX",
-          "Tele",
-          "FOX One"
-        ],
-        "time": "2026-06-20T20:00Z",
-        "venue": "BMO Field, Toronto"
-      },
-      {
-        "homeTeam": "Ecuador",
-        "homeFlag": "🇪🇨",
-        "homeId": "ecuador",
-        "awayTeam": "Curaçao",
-        "awayFlag": "🇨🇼",
-        "awayId": "curacao",
-        "homeScore": 0,
-        "awayScore": 0,
-        "status": "FINISHED",
-        "date": "2026-06-20",
-        "broadcasts": [
-          "FS1",
-          "Tele",
-          "FOX One"
-        ],
-        "time": "2026-06-21T00:00Z",
-        "venue": "GEHA Field at Arrowhead Stadium, Kansas City, Missouri"
-      },
-      {
-        "homeTeam": "Tunisia",
-        "homeFlag": "🇹🇳",
-        "homeId": "tunisia",
-        "awayTeam": "Japan",
-        "awayFlag": "🇯🇵",
-        "awayId": "japan",
-        "homeScore": 0,
-        "awayScore": 4,
-        "status": "FINISHED",
-        "date": "2026-06-20",
-        "broadcasts": [
-          "FS1",
-          "Tele",
-          "FOX One"
-        ],
-        "time": "2026-06-21T04:00Z",
-        "venue": "Estadio BBVA, Guadalupe"
-      }
-    ],
-    "2026-06-21": [
-      {
-        "homeTeam": "Spain",
-        "homeFlag": "🇪🇸",
-        "homeId": "spain",
-        "awayTeam": "Saudi Arabia",
-        "awayFlag": "🇸🇦",
-        "awayId": "saudiarabia",
-        "homeScore": 4,
-        "awayScore": 0,
-        "status": "FINISHED",
-        "date": "2026-06-21",
-        "broadcasts": [
-          "FOX",
-          "Tele",
-          "FOX One"
-        ],
-        "time": "2026-06-21T16:00Z",
-        "venue": "Mercedes-Benz Stadium, Atlanta, Georgia"
-      },
-      {
-        "homeTeam": "Belgium",
-        "homeFlag": "🇧🇪",
-        "homeId": "belgium",
-        "awayTeam": "Iran",
-        "awayFlag": "🇮🇷",
-        "awayId": "iran",
-        "homeScore": 0,
-        "awayScore": 0,
-        "status": "FINISHED",
-        "date": "2026-06-21",
-        "broadcasts": [
-          "FS1",
-          "Tele",
-          "FOX One"
-        ],
-        "time": "2026-06-21T19:00Z",
-        "venue": "SoFi Stadium, Inglewood, California"
-      },
-      {
-        "homeTeam": "Uruguay",
-        "homeFlag": "🇺🇾",
-        "homeId": "uruguay",
-        "awayTeam": "Cape Verde",
-        "awayFlag": "🇨🇻",
-        "awayId": "capeverde",
-        "homeScore": 2,
-        "awayScore": 2,
-        "status": "FINISHED",
-        "date": "2026-06-21",
-        "broadcasts": [
-          "FS1",
-          "Tele",
-          "FOX One"
-        ],
-        "time": "2026-06-21T22:00Z",
-        "venue": "Hard Rock Stadium, Miami Gardens, Florida"
-      },
-      {
-        "homeTeam": "New Zealand",
-        "homeFlag": "🇳🇿",
-        "homeId": "newzealand",
-        "awayTeam": "Egypt",
-        "awayFlag": "🇪🇬",
-        "awayId": "egypt",
-        "homeScore": 1,
-        "awayScore": 3,
-        "status": "FINISHED",
-        "date": "2026-06-21",
-        "broadcasts": [
-          "FS1",
-          "Tele",
-          "FOX One"
-        ],
-        "time": "2026-06-22T01:00Z",
-        "venue": "BC Place, Vancouver"
-      }
-    ],
-    "2026-06-22": [
-      {
-        "homeTeam": "Argentina",
-        "homeFlag": "🇦🇷",
-        "homeId": "argentina",
-        "awayTeam": "Austria",
-        "awayFlag": "🇦🇹",
-        "awayId": "austria",
-        "homeScore": 2,
-        "awayScore": 0,
-        "status": "FINISHED",
-        "date": "2026-06-22",
-        "broadcasts": [
-          "FOX",
-          "Tele",
-          "FOX One"
-        ],
-        "time": "2026-06-22T17:00Z",
-        "venue": "AT&T Stadium, Arlington, Texas"
-      },
-      {
-        "homeTeam": "France",
-        "homeFlag": "🇫🇷",
-        "homeId": "france",
-        "awayTeam": "Iraq",
-        "awayFlag": "🇮🇶",
-        "awayId": "iraq",
-        "homeScore": 3,
-        "awayScore": 0,
-        "status": "FINISHED",
-        "date": "2026-06-22",
-        "broadcasts": [
-          "FOX",
-          "Tele",
-          "FOX One"
-        ],
-        "time": "2026-06-22T21:00Z",
-        "venue": "Lincoln Financial Field, Philadelphia, Pennsylvania"
-      },
-      {
-        "homeTeam": "Norway",
-        "homeFlag": "🇳🇴",
-        "homeId": "norway",
-        "awayTeam": "Senegal",
-        "awayFlag": "🇸🇳",
-        "awayId": "senegal",
-        "homeScore": 3,
-        "awayScore": 2,
-        "status": "FINISHED",
-        "date": "2026-06-22",
-        "broadcasts": [
-          "FOX",
-          "Tele",
-          "FOX One"
-        ],
-        "time": "2026-06-23T00:00Z",
-        "venue": "MetLife Stadium, East Rutherford, New Jersey"
-      },
-      {
-        "homeTeam": "Jordan",
-        "homeFlag": "🇯🇴",
-        "homeId": "jordan",
-        "awayTeam": "Algeria",
-        "awayFlag": "🇩🇿",
-        "awayId": "algeria",
-        "homeScore": 1,
-        "awayScore": 2,
-        "status": "FINISHED",
-        "date": "2026-06-22",
-        "broadcasts": [
-          "FS1",
-          "Tele",
-          "FOX One"
-        ],
-        "time": "2026-06-23T03:00Z",
-        "venue": "Levi's Stadium, Santa Clara, California"
-      }
-    ],
-    "2026-06-23": [
-      {
-        "homeTeam": "Portugal",
-        "homeFlag": "🇵🇹",
-        "homeId": "portugal",
-        "awayTeam": "Uzbekistan",
-        "awayFlag": "🇺🇿",
-        "awayId": "uzbekistan",
-        "homeScore": 5,
-        "awayScore": 0,
-        "status": "FINISHED",
-        "date": "2026-06-23",
-        "broadcasts": [
-          "FOX",
-          "Tele",
-          "FOX One"
-        ],
-        "time": "2026-06-23T17:00Z",
-        "venue": "NRG Stadium, Houston, Texas"
-      },
-      {
-        "homeTeam": "England",
-        "homeFlag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
-        "homeId": "england",
-        "awayTeam": "Ghana",
-        "awayFlag": "🇬🇭",
-        "awayId": "ghana",
-        "homeScore": 0,
-        "awayScore": 0,
-        "status": "FINISHED",
-        "date": "2026-06-23",
-        "broadcasts": [
-          "FOX",
-          "Tele",
-          "FOX One"
-        ],
-        "time": "2026-06-23T20:00Z",
-        "venue": "Gillette Stadium, Foxborough, Massachusetts"
-      },
-      {
-        "homeTeam": "Panama",
-        "homeFlag": "🇵🇦",
-        "homeId": "panama",
-        "awayTeam": "Croatia",
-        "awayFlag": "🇭🇷",
-        "awayId": "croatia",
-        "homeScore": 0,
-        "awayScore": 1,
-        "status": "FINISHED",
-        "date": "2026-06-23",
-        "broadcasts": [
-          "FOX",
-          "Tele",
-          "FOX One"
-        ],
-        "time": "2026-06-23T23:00Z",
-        "venue": "BMO Field, Toronto"
-      },
-      {
-        "homeTeam": "Colombia",
-        "homeFlag": "🇨🇴",
-        "homeId": "colombia",
-        "awayTeam": "DR Congo",
-        "awayFlag": "🇨🇩",
-        "awayId": "drcongo",
-        "homeScore": 1,
-        "awayScore": 0,
-        "status": "FINISHED",
-        "date": "2026-06-23",
-        "broadcasts": [
-          "FS1",
-          "Tele",
-          "FOX One"
-        ],
-        "time": "2026-06-24T02:00Z",
-        "venue": "Estadio Akron, Guadalajara"
-      }
-    ],
-    "2026-06-24": [
-      {
-        "homeTeam": "Bosnia & Herz.",
-        "homeFlag": "🇧🇦",
-        "homeId": "bosnia",
-        "awayTeam": "Qatar",
-        "awayFlag": "🇶🇦",
-        "awayId": "qatar",
-        "homeScore": 3,
-        "awayScore": 1,
-        "status": "FINISHED",
-        "date": "2026-06-24",
-        "broadcasts": [
-          "FS1",
-          "Universo",
-          "FOX One"
-        ],
-        "time": "2026-06-24T19:00Z",
-        "venue": "Lumen Field, Seattle, Washington"
-      },
-      {
-        "homeTeam": "Switzerland",
-        "homeFlag": "🇨🇭",
-        "homeId": "switzerland",
-        "awayTeam": "Canada",
-        "awayFlag": "🇨🇦",
-        "awayId": "canada",
-        "homeScore": 2,
-        "awayScore": 1,
-        "status": "FINISHED",
-        "date": "2026-06-24",
-        "broadcasts": [
-          "FOX",
-          "Tele",
-          "FOX One"
-        ],
-        "time": "2026-06-24T19:00Z",
-        "venue": "BC Place, Vancouver"
-      },
-      {
-        "homeTeam": "Morocco",
-        "homeFlag": "🇲🇦",
-        "homeId": "morocco",
-        "awayTeam": "Haiti",
-        "awayFlag": "🇭🇹",
-        "awayId": "haiti",
-        "homeScore": 4,
-        "awayScore": 2,
-        "status": "FINISHED",
-        "date": "2026-06-24",
-        "broadcasts": [
-          "FS1",
-          "Universo",
-          "FOX One"
-        ],
-        "time": "2026-06-24T22:00Z",
-        "venue": "Mercedes-Benz Stadium, Atlanta, Georgia"
-      },
-      {
-        "homeTeam": "Scotland",
-        "homeFlag": "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
-        "homeId": "scotland",
-        "awayTeam": "Brazil",
-        "awayFlag": "🇧🇷",
-        "awayId": "brazil",
-        "homeScore": 0,
-        "awayScore": 3,
-        "status": "FINISHED",
-        "date": "2026-06-24",
-        "broadcasts": [
-          "FOX",
-          "Tele",
-          "FOX One"
-        ],
-        "time": "2026-06-24T22:00Z",
-        "venue": "Hard Rock Stadium, Miami Gardens, Florida"
-      },
-      {
-        "homeTeam": "Czechia",
-        "homeFlag": "🇨🇿",
-        "homeId": "czechia",
-        "awayTeam": "Mexico",
-        "awayFlag": "🇲🇽",
-        "awayId": "mexico",
-        "homeScore": 0,
-        "awayScore": 3,
-        "status": "FINISHED",
-        "date": "2026-06-24",
-        "broadcasts": [
-          "FOX",
-          "Tele",
-          "FOX One"
-        ],
-        "time": "2026-06-25T01:00Z",
-        "venue": "Estadio Banorte, Mexico City"
-      },
-      {
-        "homeTeam": "South Africa",
-        "homeFlag": "🇿🇦",
-        "homeId": "southafrica",
-        "awayTeam": "South Korea",
-        "awayFlag": "🇰🇷",
-        "awayId": "southkorea",
-        "homeScore": 1,
-        "awayScore": 0,
-        "status": "FINISHED",
-        "date": "2026-06-24",
-        "broadcasts": [
-          "FS1",
-          "Universo",
-          "FOX One"
-        ],
-        "time": "2026-06-25T01:00Z",
-        "venue": "Estadio BBVA, Guadalupe"
-      }
-    ],
-    "2026-06-25": [
-      {
-        "homeTeam": "Curaçao",
-        "homeFlag": "🇨🇼",
-        "homeId": "curacao",
-        "awayTeam": "Ivory Coast",
-        "awayFlag": "🇨🇮",
-        "awayId": "ivorycoast",
-        "homeScore": 0,
-        "awayScore": 2,
-        "status": "FINISHED",
-        "date": "2026-06-25",
-        "broadcasts": [
-          "FS1",
-          "Universo",
-          "FOX One"
-        ],
-        "time": "2026-06-25T20:00Z",
-        "venue": "Lincoln Financial Field, Philadelphia, Pennsylvania"
-      },
-      {
-        "homeTeam": "Ecuador",
-        "homeFlag": "🇪🇨",
-        "homeId": "ecuador",
-        "awayTeam": "Germany",
-        "awayFlag": "🇩🇪",
-        "awayId": "germany",
-        "homeScore": 2,
-        "awayScore": 1,
-        "status": "FINISHED",
-        "date": "2026-06-25",
-        "broadcasts": [
-          "FOX",
-          "Tele",
-          "FOX One"
-        ],
-        "time": "2026-06-25T20:00Z",
-        "venue": "MetLife Stadium, East Rutherford, New Jersey"
-      },
-      {
-        "homeTeam": "Japan",
-        "homeFlag": "🇯🇵",
-        "homeId": "japan",
-        "awayTeam": "Sweden",
-        "awayFlag": "🇸🇪",
-        "awayId": "sweden",
-        "homeScore": 1,
-        "awayScore": 1,
-        "status": "FINISHED",
-        "date": "2026-06-25",
-        "broadcasts": [
-          "FOX",
-          "Universo",
-          "FOX One"
-        ],
-        "time": "2026-06-25T23:00Z",
-        "venue": "AT&T Stadium, Arlington, Texas"
-      },
-      {
-        "homeTeam": "Tunisia",
-        "homeFlag": "🇹🇳",
-        "homeId": "tunisia",
-        "awayTeam": "Netherlands",
-        "awayFlag": "🇳🇱",
-        "awayId": "netherlands",
-        "homeScore": 1,
-        "awayScore": 3,
-        "status": "FINISHED",
-        "date": "2026-06-25",
-        "broadcasts": [
-          "FS1",
-          "Tele",
-          "FOX One"
-        ],
-        "time": "2026-06-25T23:00Z",
-        "venue": "GEHA Field at Arrowhead Stadium, Kansas City, Missouri"
-      },
-      {
-        "homeTeam": "Paraguay",
-        "homeFlag": "🇵🇾",
-        "homeId": "paraguay",
-        "awayTeam": "Australia",
-        "awayFlag": "🇦🇺",
-        "awayId": "australia",
-        "homeScore": 0,
-        "awayScore": 0,
-        "status": "FINISHED",
-        "date": "2026-06-25",
-        "broadcasts": [
-          "FS1",
-          "Universo",
-          "FOX One"
-        ],
-        "time": "2026-06-26T02:00Z",
-        "venue": "Levi's Stadium, Santa Clara, California"
-      },
-      {
-        "homeTeam": "Türkiye",
-        "homeFlag": "🇹🇷",
-        "homeId": "turkey",
-        "awayTeam": "USA",
-        "awayFlag": "🇺🇸",
-        "awayId": "usa",
-        "homeScore": 3,
-        "awayScore": 2,
-        "status": "FINISHED",
-        "date": "2026-06-25",
-        "broadcasts": [
-          "FOX",
-          "Tele",
-          "FOX One"
-        ],
-        "time": "2026-06-26T02:00Z",
-        "venue": "SoFi Stadium, Inglewood, California"
-      }
-    ],
-    "2026-06-26": [
-      {
-        "homeTeam": "Norway",
-        "homeFlag": "🇳🇴",
-        "homeId": "norway",
-        "awayTeam": "France",
-        "awayFlag": "🇫🇷",
-        "awayId": "france",
-        "homeScore": 1,
-        "awayScore": 4,
-        "status": "FINISHED",
-        "date": "2026-06-26",
-        "broadcasts": [
-          "FOX",
-          "Tele",
-          "FOX One"
-        ],
-        "time": "2026-06-26T19:00Z",
-        "venue": "Gillette Stadium, Foxborough, Massachusetts"
-      },
-      {
-        "homeTeam": "Senegal",
-        "homeFlag": "🇸🇳",
-        "homeId": "senegal",
-        "awayTeam": "Iraq",
-        "awayFlag": "🇮🇶",
-        "awayId": "iraq",
-        "homeScore": 5,
-        "awayScore": 0,
-        "status": "FINISHED",
-        "date": "2026-06-26",
-        "broadcasts": [
-          "FS1",
-          "Universo",
-          "FOX One"
-        ],
-        "time": "2026-06-26T19:00Z",
-        "venue": "BMO Field, Toronto"
-      },
-      {
-        "homeTeam": "Cape Verde",
-        "homeFlag": "🇨🇻",
-        "homeId": "capeverde",
-        "awayTeam": "Saudi Arabia",
-        "awayFlag": "🇸🇦",
-        "awayId": "saudiarabia",
-        "homeScore": 0,
-        "awayScore": 0,
-        "status": "FINISHED",
-        "date": "2026-06-26",
-        "broadcasts": [
-          "FS1",
-          "Universo",
-          "FOX One"
-        ],
-        "time": "2026-06-27T00:00Z",
-        "venue": "NRG Stadium, Houston, Texas"
-      },
-      {
-        "homeTeam": "Uruguay",
-        "homeFlag": "🇺🇾",
-        "homeId": "uruguay",
-        "awayTeam": "Spain",
-        "awayFlag": "🇪🇸",
-        "awayId": "spain",
-        "homeScore": 0,
-        "awayScore": 1,
-        "status": "FINISHED",
-        "date": "2026-06-26",
-        "broadcasts": [
-          "FOX",
-          "Tele",
-          "FOX One"
-        ],
-        "time": "2026-06-27T00:00Z",
-        "venue": "Estadio Akron, Guadalajara"
-      },
-      {
-        "homeTeam": "Egypt",
-        "homeFlag": "🇪🇬",
-        "homeId": "egypt",
-        "awayTeam": "Iran",
-        "awayFlag": "🇮🇷",
-        "awayId": "iran",
-        "homeScore": 1,
-        "awayScore": 1,
-        "status": "FINISHED",
-        "date": "2026-06-26",
-        "broadcasts": [
-          "FS1",
-          "Tele",
-          "FOX One"
-        ],
-        "time": "2026-06-27T03:00Z",
-        "venue": "Lumen Field, Seattle, Washington"
-      },
-      {
-        "homeTeam": "New Zealand",
-        "homeFlag": "🇳🇿",
-        "homeId": "newzealand",
-        "awayTeam": "Belgium",
-        "awayFlag": "🇧🇪",
-        "awayId": "belgium",
-        "homeScore": 1,
-        "awayScore": 5,
-        "status": "FINISHED",
-        "date": "2026-06-26",
-        "broadcasts": [
-          "FOX",
-          "Universo",
-          "FOX One"
-        ],
-        "time": "2026-06-27T03:00Z",
-        "venue": "BC Place, Vancouver"
-      }
-    ],
-    "2026-06-27": [
-      {
-        "homeTeam": "Croatia",
-        "homeFlag": "🇭🇷",
-        "homeId": "croatia",
-        "awayTeam": "Ghana",
-        "awayFlag": "🇬🇭",
-        "awayId": "ghana",
-        "homeScore": 2,
-        "awayScore": 1,
-        "status": "FINISHED",
-        "date": "2026-06-27",
-        "broadcasts": [
-          "FS1",
-          "Universo",
-          "FOX One"
-        ],
-        "time": "2026-06-27T21:00Z",
-        "venue": "Lincoln Financial Field, Philadelphia, Pennsylvania"
-      },
-      {
-        "homeTeam": "Panama",
-        "homeFlag": "🇵🇦",
-        "homeId": "panama",
-        "awayTeam": "England",
-        "awayFlag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
-        "awayId": "england",
-        "homeScore": 0,
-        "awayScore": 2,
-        "status": "FINISHED",
-        "date": "2026-06-27",
-        "broadcasts": [
-          "FOX",
-          "Tele",
-          "FOX One"
-        ],
-        "time": "2026-06-27T21:00Z",
-        "venue": "MetLife Stadium, East Rutherford, New Jersey"
-      },
-      {
-        "homeTeam": "Colombia",
-        "homeFlag": "🇨🇴",
-        "homeId": "colombia",
-        "awayTeam": "Portugal",
-        "awayFlag": "🇵🇹",
-        "awayId": "portugal",
-        "homeScore": 0,
-        "awayScore": 0,
-        "status": "FINISHED",
-        "date": "2026-06-27",
-        "broadcasts": [
-          "FOX",
-          "Tele",
-          "FOX One"
-        ],
-        "time": "2026-06-27T23:30Z",
-        "venue": "Hard Rock Stadium, Miami Gardens, Florida"
-      },
-      {
-        "homeTeam": "DR Congo",
-        "homeFlag": "🇨🇩",
-        "homeId": "drcongo",
-        "awayTeam": "Uzbekistan",
-        "awayFlag": "🇺🇿",
-        "awayId": "uzbekistan",
-        "homeScore": 3,
-        "awayScore": 1,
-        "status": "FINISHED",
-        "date": "2026-06-27",
-        "broadcasts": [
-          "FS1",
-          "Universo",
-          "FOX One"
-        ],
-        "time": "2026-06-27T23:30Z",
-        "venue": "Mercedes-Benz Stadium, Atlanta, Georgia"
-      },
-      {
-        "homeTeam": "Algeria",
-        "homeFlag": "🇩🇿",
-        "homeId": "algeria",
-        "awayTeam": "Austria",
-        "awayFlag": "🇦🇹",
-        "awayId": "austria",
-        "homeScore": 3,
-        "awayScore": 3,
-        "status": "FINISHED",
-        "date": "2026-06-27",
-        "broadcasts": [
-          "FS1",
-          "Universo",
-          "FOX One"
-        ],
-        "time": "2026-06-28T02:00Z",
-        "venue": "GEHA Field at Arrowhead Stadium, Kansas City, Missouri"
-      },
-      {
-        "homeTeam": "Jordan",
-        "homeFlag": "🇯🇴",
-        "homeId": "jordan",
-        "awayTeam": "Argentina",
-        "awayFlag": "🇦🇷",
-        "awayId": "argentina",
-        "homeScore": 1,
-        "awayScore": 3,
-        "status": "FINISHED",
-        "date": "2026-06-27",
-        "broadcasts": [
-          "FOX",
-          "Tele",
-          "FOX One"
-        ],
-        "time": "2026-06-28T02:00Z",
-        "venue": "AT&T Stadium, Arlington, Texas"
-      }
-    ],
-    "2026-06-28": [
-      {
-        "homeTeam": "South Africa",
-        "homeFlag": "🇿🇦",
-        "homeId": "southafrica",
-        "awayTeam": "Canada",
-        "awayFlag": "🇨🇦",
-        "awayId": "canada",
-        "homeScore": 0,
-        "awayScore": 1,
-        "status": "FINISHED",
-        "date": "2026-06-28",
-        "broadcasts": [
-          "FOX",
-          "Tele",
-          "FOX One"
-        ],
-        "time": "2026-06-28T19:00Z",
-        "venue": "SoFi Stadium, Inglewood, California"
-      }
-    ],
-    "2026-06-29": [
-      {
-        "homeTeam": "Brazil",
-        "homeFlag": "🇧🇷",
-        "homeId": "brazil",
-        "awayTeam": "Japan",
-        "awayFlag": "🇯🇵",
-        "awayId": "japan",
-        "homeScore": 2,
-        "awayScore": 1,
-        "status": "FINISHED",
-        "date": "2026-06-29",
-        "broadcasts": [
-          "FOX",
-          "Tele",
-          "FOX One"
-        ],
-        "time": "2026-06-29T17:00Z",
-        "venue": "NRG Stadium, Houston, Texas"
-      },
-      {
-        "homeTeam": "Germany",
-        "homeFlag": "🇩🇪",
-        "homeId": "germany",
-        "awayTeam": "Paraguay",
-        "awayFlag": "🇵🇾",
-        "awayId": "paraguay",
-        "homeScore": 1,
-        "awayScore": 1,
-        "homeShootout": 3,
-        "awayShootout": 4,
-        "status": "FINISHED",
-        "date": "2026-06-29",
-        "broadcasts": [
-          "FOX",
-          "Tele",
-          "FOX One"
-        ],
-        "time": "2026-06-29T20:30Z",
-        "venue": "Gillette Stadium, Foxborough, Massachusetts"
-      },
-      {
-        "homeTeam": "Netherlands",
-        "homeFlag": "🇳🇱",
-        "homeId": "netherlands",
-        "awayTeam": "Morocco",
-        "awayFlag": "🇲🇦",
-        "awayId": "morocco",
-        "homeScore": 1,
-        "awayScore": 1,
-        "homeShootout": 2,
-        "awayShootout": 3,
-        "status": "FINISHED",
-        "date": "2026-06-29",
-        "broadcasts": [
-          "FOX",
-          "Tele",
-          "FOX One"
-        ],
-        "time": "2026-06-30T01:00Z",
-        "venue": "Estadio BBVA, Guadalupe"
-      }
-    ],
-    "2026-06-30": [
-      {
-        "homeTeam": "Ivory Coast",
-        "homeFlag": "🇨🇮",
-        "homeId": "ivorycoast",
-        "awayTeam": "Norway",
-        "awayFlag": "🇳🇴",
-        "awayId": "norway",
-        "homeScore": 1,
-        "awayScore": 2,
-        "status": "FINISHED",
-        "date": "2026-06-30",
-        "broadcasts": [
-          "FOX",
-          "Tele",
-          "FOX One"
-        ],
-        "time": "2026-06-30T17:00Z",
-        "venue": "AT&T Stadium, Arlington, Texas"
-      },
-      {
-        "homeTeam": "France",
-        "homeFlag": "🇫🇷",
-        "homeId": "france",
-        "awayTeam": "Sweden",
-        "awayFlag": "🇸🇪",
-        "awayId": "sweden",
-        "homeScore": 3,
-        "awayScore": 0,
-        "status": "FINISHED",
-        "date": "2026-06-30",
-        "broadcasts": [
-          "FOX",
-          "Tele",
-          "FOX One"
-        ],
-        "time": "2026-06-30T21:00Z",
-        "venue": "MetLife Stadium, East Rutherford, New Jersey"
-      },
-      {
-        "homeTeam": "Mexico",
-        "homeFlag": "🇲🇽",
-        "homeId": "mexico",
-        "awayTeam": "Ecuador",
-        "awayFlag": "🇪🇨",
-        "awayId": "ecuador",
-        "homeScore": 2,
-        "awayScore": 0,
-        "status": "FINISHED",
-        "date": "2026-06-30",
-        "broadcasts": [
-          "FOX",
-          "Tele",
-          "FOX One"
-        ],
-        "time": "2026-07-01T02:00Z",
-        "venue": "Estadio Banorte, Mexico City"
-      }
-    ],
-    "2026-07-01": [
-      {
-        "homeTeam": "England",
-        "homeFlag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
-        "homeId": "england",
-        "awayTeam": "DR Congo",
-        "awayFlag": "🇨🇩",
-        "awayId": "drcongo",
-        "homeScore": 2,
-        "awayScore": 1,
-        "status": "FINISHED",
-        "date": "2026-07-01",
-        "broadcasts": [
-          "FOX",
-          "Tele",
-          "FOX One"
-        ],
-        "time": "2026-07-01T16:00Z",
-        "venue": "Mercedes-Benz Stadium, Atlanta, Georgia"
-      },
-      {
-        "homeTeam": "Belgium",
-        "homeFlag": "🇧🇪",
-        "homeId": "belgium",
-        "awayTeam": "Senegal",
-        "awayFlag": "🇸🇳",
-        "awayId": "senegal",
-        "homeScore": 3,
-        "awayScore": 2,
-        "status": "FINISHED",
-        "date": "2026-07-01",
-        "broadcasts": [
-          "FS1",
-          "Tele",
-          "FOX One"
-        ],
-        "time": "2026-07-01T20:00Z",
-        "venue": "Lumen Field, Seattle, Washington"
-      },
-      {
-        "homeTeam": "USA",
-        "homeFlag": "🇺🇸",
-        "homeId": "usa",
-        "awayTeam": "Bosnia & Herz.",
-        "awayFlag": "🇧🇦",
-        "awayId": "bosnia",
-        "homeScore": 2,
-        "awayScore": 0,
-        "status": "FINISHED",
-        "date": "2026-07-01",
-        "broadcasts": [
-          "FOX",
-          "Tele",
-          "FOX One"
-        ],
-        "time": "2026-07-02T00:00Z",
-        "venue": "Levi's Stadium, Santa Clara, California"
-      }
-    ],
-    "2026-07-02": [
-      {
-        "homeTeam": "Spain",
-        "homeFlag": "🇪🇸",
-        "homeId": "spain",
-        "awayTeam": "Austria",
-        "awayFlag": "🇦🇹",
-        "awayId": "austria",
-        "homeScore": 3,
-        "awayScore": 0,
-        "status": "FINISHED",
-        "date": "2026-07-02",
-        "broadcasts": [
-          "FOX",
-          "Tele",
-          "FOX One"
-        ],
-        "time": "2026-07-02T19:00Z",
-        "venue": "SoFi Stadium, Inglewood, California"
-      },
-      {
-        "homeTeam": "Portugal",
-        "homeFlag": "🇵🇹",
-        "homeId": "portugal",
-        "awayTeam": "Croatia",
-        "awayFlag": "🇭🇷",
-        "awayId": "croatia",
-        "homeScore": 2,
-        "awayScore": 1,
-        "status": "FINISHED",
-        "date": "2026-07-02",
-        "broadcasts": [
-          "FOX",
-          "Tele",
-          "FOX One"
-        ],
-        "time": "2026-07-02T23:00Z",
-        "venue": "BMO Field, Toronto"
-      },
-      {
-        "homeTeam": "Switzerland",
-        "homeFlag": "🇨🇭",
-        "homeId": "switzerland",
-        "awayTeam": "Algeria",
-        "awayFlag": "🇩🇿",
-        "awayId": "algeria",
-        "homeScore": 2,
-        "awayScore": 0,
-        "status": "FINISHED",
-        "date": "2026-07-02",
-        "broadcasts": [
-          "FS1",
-          "Tele",
-          "FOX One"
-        ],
-        "time": "2026-07-03T03:00Z",
-        "venue": "BC Place, Vancouver"
-      }
-    ],
-    "2026-07-03": [
-      {
-        "homeTeam": "Australia",
-        "homeFlag": "🇦🇺",
-        "homeId": "australia",
-        "awayTeam": "Egypt",
-        "awayFlag": "🇪🇬",
-        "awayId": "egypt",
-        "homeScore": 1,
-        "awayScore": 1,
-        "homeShootout": 2,
-        "awayShootout": 4,
-        "status": "FINISHED",
-        "date": "2026-07-03",
-        "broadcasts": [
-          "FOX",
-          "Tele",
-          "FOX One"
-        ],
-        "time": "2026-07-03T18:00Z",
-        "venue": "AT&T Stadium, Arlington, Texas"
-      },
-      {
-        "homeTeam": "Argentina",
-        "homeFlag": "🇦🇷",
-        "homeId": "argentina",
-        "awayTeam": "Cape Verde",
-        "awayFlag": "🇨🇻",
-        "awayId": "capeverde",
-        "homeScore": 3,
-        "awayScore": 2,
-        "status": "FINISHED",
-        "date": "2026-07-03",
-        "broadcasts": [
-          "FOX",
-          "Tele",
-          "FOX One"
-        ],
-        "time": "2026-07-03T22:00Z",
-        "venue": "Hard Rock Stadium, Miami Gardens, Florida"
-      },
-      {
-        "homeTeam": "Colombia",
-        "homeFlag": "🇨🇴",
-        "homeId": "colombia",
-        "awayTeam": "Ghana",
-        "awayFlag": "🇬🇭",
-        "awayId": "ghana",
-        "homeScore": 1,
-        "awayScore": 0,
-        "status": "FINISHED",
-        "date": "2026-07-03",
-        "broadcasts": [
-          "FOX",
-          "Tele",
-          "FOX One"
-        ],
-        "time": "2026-07-04T01:30Z",
-        "venue": "GEHA Field at Arrowhead Stadium, Kansas City, Missouri"
-      }
-    ],
-    "2026-07-04": [
-      {
-        "homeTeam": "Canada",
-        "homeFlag": "🇨🇦",
-        "homeId": "canada",
-        "awayTeam": "Morocco",
-        "awayFlag": "🇲🇦",
-        "awayId": "morocco",
-        "homeScore": 0,
-        "awayScore": 3,
-        "status": "FINISHED",
-        "date": "2026-07-04",
-        "broadcasts": [
-          "FOX",
-          "Tele",
-          "FOX One"
-        ],
-        "time": "2026-07-04T17:00Z",
-        "venue": "NRG Stadium, Houston, Texas"
-      },
-      {
-        "homeTeam": "Paraguay",
-        "homeFlag": "🇵🇾",
-        "homeId": "paraguay",
-        "awayTeam": "France",
-        "awayFlag": "🇫🇷",
-        "awayId": "france",
-        "homeScore": 0,
-        "awayScore": 1,
-        "status": "FINISHED",
-        "date": "2026-07-04",
-        "broadcasts": [
-          "FOX",
-          "Tele",
-          "FOX One"
-        ],
-        "time": "2026-07-04T21:00Z",
-        "venue": "Lincoln Financial Field, Philadelphia, Pennsylvania"
-      }
-    ],
-    "2026-07-05": [
-      {
-        "homeTeam": "Brazil",
-        "homeFlag": "🇧🇷",
-        "homeId": "brazil",
-        "awayTeam": "Norway",
-        "awayFlag": "🇳🇴",
-        "awayId": "norway",
-        "homeScore": 1,
-        "awayScore": 2,
-        "status": "FINISHED",
-        "date": "2026-07-05",
-        "broadcasts": [
-          "FOX",
-          "Tele",
-          "FOX One"
-        ],
-        "time": "2026-07-05T20:00Z",
-        "venue": "MetLife Stadium, East Rutherford, New Jersey"
-      },
-      {
-        "homeTeam": "Mexico",
-        "homeFlag": "🇲🇽",
-        "homeId": "mexico",
-        "awayTeam": "England",
-        "awayFlag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
-        "awayId": "england",
-        "homeScore": 2,
-        "awayScore": 3,
-        "status": "FINISHED",
-        "date": "2026-07-05",
-        "broadcasts": [
-          "FOX",
-          "Tele",
-          "FOX One"
-        ],
-        "time": "2026-07-06T01:00Z",
-        "venue": "Estadio Banorte, Mexico City"
-      }
-    ],
-    "2026-07-06": [
-      {
-        "homeTeam": "Portugal",
-        "homeFlag": "🇵🇹",
-        "homeId": "portugal",
-        "awayTeam": "Spain",
-        "awayFlag": "🇪🇸",
-        "awayId": "spain",
-        "homeScore": 0,
-        "awayScore": 1,
-        "status": "FINISHED",
-        "date": "2026-07-06",
-        "broadcasts": [
-          "FOX",
-          "Tele",
-          "FOX One"
-        ],
-        "time": "2026-07-06T19:00Z",
-        "venue": "AT&T Stadium, Arlington, Texas"
-      },
-      {
-        "homeTeam": "USA",
-        "homeFlag": "🇺🇸",
-        "homeId": "usa",
-        "awayTeam": "Belgium",
-        "awayFlag": "🇧🇪",
-        "awayId": "belgium",
-        "homeScore": 1,
-        "awayScore": 4,
-        "status": "FINISHED",
-        "date": "2026-07-06",
-        "broadcasts": [
-          "FOX",
-          "Tele",
-          "FOX One"
-        ],
-        "time": "2026-07-07T00:00Z",
-        "venue": "Lumen Field, Seattle, Washington"
-      }
-    ],
-    "2026-07-07": [
-      {
-        "homeTeam": "Argentina",
-        "homeFlag": "🇦🇷",
-        "homeId": "argentina",
-        "awayTeam": "Egypt",
-        "awayFlag": "🇪🇬",
-        "awayId": "egypt",
-        "homeScore": 3,
-        "awayScore": 2,
-        "status": "FINISHED",
-        "date": "2026-07-07",
-        "broadcasts": [
-          "FOX",
-          "Tele",
-          "FOX One"
-        ],
-        "time": "2026-07-07T16:00Z",
-        "venue": "Mercedes-Benz Stadium, Atlanta, Georgia"
-      },
-      {
-        "homeTeam": "Switzerland",
-        "homeFlag": "🇨🇭",
-        "homeId": "switzerland",
-        "awayTeam": "Colombia",
-        "awayFlag": "🇨🇴",
-        "awayId": "colombia",
-        "homeScore": 0,
-        "awayScore": 0,
-        "homeShootout": 4,
-        "awayShootout": 3,
-        "status": "FINISHED",
-        "date": "2026-07-07",
-        "broadcasts": [
-          "FOX",
-          "Tele",
-          "FOX One"
-        ],
-        "time": "2026-07-07T20:00Z",
-        "venue": "BC Place, Vancouver"
-      }
-    ],
-    "2026-07-09": [
-      {
-        "homeTeam": "France",
-        "homeFlag": "🇫🇷",
-        "homeId": "france",
-        "awayTeam": "Morocco",
-        "awayFlag": "🇲🇦",
-        "awayId": "morocco",
-        "homeScore": 2,
-        "awayScore": 0,
-        "status": "FINISHED",
-        "date": "2026-07-09",
-        "broadcasts": [
-          "FOX",
-          "Tele",
-          "FOX One"
-        ],
-        "time": "2026-07-09T20:00Z",
-        "venue": "Gillette Stadium, Foxborough, Massachusetts"
-      }
-    ],
-    "2026-07-10": [
-      {
-        "homeTeam": "Spain",
-        "homeFlag": "🇪🇸",
-        "homeId": "spain",
-        "awayTeam": "Belgium",
-        "awayFlag": "🇧🇪",
-        "awayId": "belgium",
-        "homeScore": 2,
-        "awayScore": 1,
-        "status": "FINISHED",
-        "date": "2026-07-10",
-        "broadcasts": [
-          "FOX",
-          "Tele",
-          "FOX One"
-        ],
-        "time": "2026-07-10T19:00Z",
-        "venue": "SoFi Stadium, Inglewood, California"
-      }
-    ],
-    "2026-07-11": [
-      {
-        "homeTeam": "Norway",
-        "homeFlag": "🇳🇴",
-        "homeId": "norway",
-        "awayTeam": "England",
-        "awayFlag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
-        "awayId": "england",
-        "homeScore": 1,
-        "awayScore": 2,
-        "status": "FINISHED",
-        "date": "2026-07-11",
-        "broadcasts": [
-          "FOX",
-          "Tele",
-          "FOX One"
-        ],
-        "time": "2026-07-11T21:00Z",
-        "venue": "Hard Rock Stadium, Miami Gardens, Florida"
-      },
-      {
-        "homeTeam": "Argentina",
-        "homeFlag": "🇦🇷",
-        "homeId": "argentina",
-        "awayTeam": "Switzerland",
-        "awayFlag": "🇨🇭",
-        "awayId": "switzerland",
-        "homeScore": 3,
-        "awayScore": 1,
-        "status": "FINISHED",
-        "date": "2026-07-11",
-        "broadcasts": [
-          "FOX",
-          "Tele",
-          "FOX One"
-        ],
-        "time": "2026-07-12T01:00Z",
-        "venue": "GEHA Field at Arrowhead Stadium, Kansas City, Missouri"
-      }
-    ],
-    "2026-07-14": [
-      {
-        "homeTeam": "France",
-        "homeFlag": "🇫🇷",
-        "homeId": "france",
-        "awayTeam": "Spain",
-        "awayFlag": "🇪🇸",
-        "awayId": "spain",
-        "homeScore": 0,
-        "awayScore": 2,
-        "status": "FINISHED",
-        "date": "2026-07-14",
-        "broadcasts": [
-          "FOX",
-          "Tele",
-          "FOX One"
-        ],
-        "time": "2026-07-14T19:00Z",
-        "venue": "AT&T Stadium, Arlington, Texas"
-      }
-    ],
-    "2026-07-15": [
-      {
-        "homeTeam": "England",
-        "homeFlag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
-        "homeId": "england",
-        "awayTeam": "Argentina",
-        "awayFlag": "🇦🇷",
-        "awayId": "argentina",
-        "homeScore": 1,
-        "awayScore": 2,
-        "status": "FINISHED",
-        "date": "2026-07-15",
-        "broadcasts": [
-          "FOX",
-          "Tele",
-          "FOX One"
-        ],
-        "time": "2026-07-15T19:00Z",
-        "venue": "Mercedes-Benz Stadium, Atlanta, Georgia"
-      }
-    ],
-    "2026-07-18": [
-      {
-        "homeTeam": "France",
-        "homeFlag": "🇫🇷",
-        "homeId": "france",
-        "awayTeam": "England",
-        "awayFlag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
-        "awayId": "england",
-        "homeScore": 4,
-        "awayScore": 6,
-        "status": "FINISHED",
-        "date": "2026-07-18",
-        "broadcasts": [
-          "FOX",
-          "Tele",
-          "FOX One"
-        ],
-        "time": "2026-07-18T21:00Z",
-        "venue": "Hard Rock Stadium, Miami Gardens, Florida"
-      }
-    ],
-    "2026-07-19": [
-      {
-        "homeTeam": "Spain",
-        "homeFlag": "🇪🇸",
-        "homeId": "spain",
-        "awayTeam": "Argentina",
-        "awayFlag": "🇦🇷",
-        "awayId": "argentina",
-        "homeScore": 1,
-        "awayScore": 0,
-        "status": "FINISHED",
-        "date": "2026-07-19",
-        "broadcasts": [
-          "FOX",
-          "Tele",
-          "FOX One"
-        ],
-        "time": "2026-07-19T19:00Z",
-        "venue": "MetLife Stadium, East Rutherford, New Jersey"
-      }
-    ]
-  },
+  "dailyMatches": {},
   "actualBracket": {
     "r32": [
       {
